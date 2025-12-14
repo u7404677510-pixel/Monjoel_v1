@@ -2,7 +2,8 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Phone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import PhoneButton from "@/components/PhoneButton";
 
 export default function FinalCTA() {
   const ref = useRef(null);
@@ -25,15 +26,7 @@ export default function FinalCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <motion.a
-              href="tel:0189470556"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all"
-            >
-              <Phone size={24} />
-              <span>01 89 47 05 56</span>
-            </motion.a>
+            <PhoneButton variant="primary" />
 
             <motion.a
               href="https://app.monjoel.com"
@@ -50,4 +43,3 @@ export default function FinalCTA() {
     </section>
   );
 }
-

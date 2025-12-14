@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, ArrowRight, Shield, Clock, Euro } from "lucide-react";
+import { ArrowRight, Shield, Clock, Euro } from "lucide-react";
+import PhoneButton from "@/components/PhoneButton";
 
 export default function Hero() {
   return (
@@ -46,13 +47,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
-            <a
-              href="tel:0189470556"
-              className="flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl hover:shadow-joel-violet/40 transition-all hover:-translate-y-1"
-            >
-              <Phone size={24} />
-              <span>01 89 47 05 56</span>
-            </a>
+            <PhoneButton variant="primary" />
 
             <a
               href="https://app.monjoel.com"
@@ -88,4 +83,3 @@ export default function Hero() {
     </section>
   );
 }
-

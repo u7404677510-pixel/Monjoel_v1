@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "./Logo";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
+import PhoneButton from "@/components/PhoneButton";
 
 const footerLinks = {
   services: [
@@ -12,13 +12,13 @@ const footerLinks = {
   ],
   company: [
     { href: "/stop-arnaques", label: "Anti-arnaque" },
-    { href: "#", label: "À propos" },
-    { href: "#", label: "Contact" },
+    { href: "/a-propos", label: "À propos" },
+    { href: "/contact", label: "Contact" },
   ],
   legal: [
-    { href: "#", label: "Mentions légales" },
-    { href: "#", label: "CGU" },
-    { href: "#", label: "Politique de confidentialité" },
+    { href: "/mentions-legales", label: "Mentions légales" },
+    { href: "/cgu", label: "CGU" },
+    { href: "/confidentialite", label: "Politique de confidentialité" },
   ],
 };
 
@@ -41,10 +41,7 @@ export default function Footer() {
               Le dépannage d'urgence sans arnaques. Prix fixes, artisans vérifiés, intervention rapide.
             </p>
             <div className="space-y-3">
-              <a href="tel:0189470556" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
-                <Phone size={18} />
-                <span>01 89 47 05 56</span>
-              </a>
+              <PhoneButton variant="footer" />
               <a href="mailto:contact@monjoel.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                 <Mail size={18} />
                 <span>contact@monjoel.com</span>
@@ -112,4 +109,3 @@ export default function Footer() {
     </footer>
   );
 }
-

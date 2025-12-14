@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, ArrowRight, Droplets, Zap, Key } from "lucide-react";
+import { ArrowRight, Droplets, Zap, Key } from "lucide-react";
+import PhoneButton from "@/components/PhoneButton";
 
 interface ServiceHeroProps {
   title: string;
@@ -50,13 +51,7 @@ export default function ServiceHero({
             <p className="text-lg text-gray-600 mb-8">{description}</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:0189470556"
-                className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all"
-              >
-                <Phone size={20} />
-                <span>01 89 47 05 56</span>
-              </a>
+              <PhoneButton variant="primary" />
               <a
                 href="https://app.monjoel.com"
                 className="flex items-center justify-center gap-3 px-8 py-4 bg-white text-joel-violet font-bold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 transition-all"
@@ -95,4 +90,3 @@ export default function ServiceHero({
     </section>
   );
 }
-
