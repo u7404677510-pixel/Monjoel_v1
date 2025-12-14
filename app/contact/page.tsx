@@ -56,7 +56,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div>
                   <h3 className="font-semibold mb-2">Urgence dépannage</h3>
-                  <PhoneButton variant="footer" className="text-white hover:text-white/80" />
+                  <PhoneButton variant="text" className="text-white hover:text-white/80" />
                   <p className="text-white/70 text-sm mt-1">Disponible 24h/24, 7j/7</p>
                 </div>
                 
