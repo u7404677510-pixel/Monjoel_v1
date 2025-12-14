@@ -32,11 +32,11 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link
-          href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+          href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600,700&display=swap"
           rel="stylesheet"
         />
         <link
-          href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

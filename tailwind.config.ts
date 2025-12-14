@@ -16,8 +16,8 @@ const config: Config = {
         "gradient-joel": "linear-gradient(135deg, #7055A7 0%, #9E76EC 100%)",
       },
       fontFamily: {
-        sans: ["Satoshi", "system-ui", "sans-serif"],
-        display: ["Cabinet Grotesk", "system-ui", "sans-serif"],
+        sans: ["Poppins", "system-ui", "sans-serif"],
+        display: ["Chillax", "system-ui", "sans-serif"],
       },
     },
   },
