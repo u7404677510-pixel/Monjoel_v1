@@ -10,24 +10,28 @@ const steps = [
     title: "Prenez une photo.",
     description: "Montrez le problème. Une porte, une fuite, une panne… en 5 secondes.",
     icon: Camera,
+    accent: false,
   },
   {
     number: "02",
     title: "Répondez à quelques questions.",
     description: "Joël comprend la situation avec 3–6 questions simples. Pas de blabla.",
     icon: MessageCircleQuestion,
+    accent: false,
   },
   {
     number: "03",
     title: "Recevez un devis immédiat.",
     description: "Un prix clair, fixe, avant intervention. Ce prix ne bouge plus.",
     icon: FileText,
+    accent: true, // Yellow accent for the key step
   },
   {
     number: "04",
     title: "Payez une seule fois. On intervient.",
     description: "Vous payez au prix annoncé. Ensuite, Joël géolocalise et envoie un artisan qualifié.",
     icon: CreditCard,
+    accent: false,
   },
 ];
 
@@ -46,7 +50,8 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Comment ça <span className="gradient-text">marche ?</span>
+            Comment ça <span className="gradient-text">marche</span>
+            <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Un processus simple et transparent, de votre demande à l'intervention.
@@ -56,7 +61,7 @@ export default function HowItWorks() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-joel opacity-20 hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-joel-violet via-joel-mauve to-joel-yellow opacity-20 hidden md:block" />
 
           {/* Steps */}
           <div className="space-y-12 md:space-y-24">
@@ -72,9 +77,9 @@ export default function HowItWorks() {
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50">
+                  <div className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border ${step.accent ? 'border-joel-yellow/30' : 'border-white/50'}`}>
                     <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
-                      <span className="text-5xl font-bold gradient-text">{step.number}</span>
+                      <span className={`text-5xl font-bold ${step.accent ? 'text-joel-yellow' : 'gradient-text'}`}>{step.number}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
@@ -87,7 +92,11 @@ export default function HowItWorks() {
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                    className="w-20 h-20 bg-gradient-joel rounded-full flex items-center justify-center shadow-xl shadow-joel-violet/30"
+                    className={`w-20 h-20 rounded-full flex items-center justify-center shadow-xl ${
+                      step.accent 
+                        ? 'bg-joel-yellow shadow-joel-yellow/30' 
+                        : 'bg-gradient-joel shadow-joel-violet/30'
+                    }`}
                   >
                     <step.icon size={32} className="text-white" />
                   </motion.div>

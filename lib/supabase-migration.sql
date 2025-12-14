@@ -19,3 +19,15 @@ SET
   cta_devis_url = COALESCE(cta_devis_url, 'https://app.monjoel.com')
 WHERE id = 1;
 
+-- =====================================================
+-- Migration: Ajouter gtag_id à analytics_config
+-- =====================================================
+
+ALTER TABLE analytics_config 
+ADD COLUMN IF NOT EXISTS gtag_id VARCHAR(50);
+
+-- Mettre à jour avec l'ID Google Tag par défaut (vide)
+UPDATE analytics_config 
+SET gtag_id = COALESCE(gtag_id, '')
+WHERE id = 1;
+

@@ -48,11 +48,39 @@ export default function AnimatedBackground() {
         }}
       />
 
-      {/* Small floating dots */}
+      {/* Yellow accent circles */}
+      <motion.div
+        className="absolute top-1/4 right-1/3 w-48 h-48 bg-joel-yellow/10 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-joel-yellow/15 rounded-full blur-2xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          y: [0, -20, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 3,
+        }}
+      />
+
+      {/* Small floating dots - mix of violet and yellow */}
       {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-joel-violet/30 rounded-full"
+          className={`absolute w-2 h-2 rounded-full ${i % 3 === 0 ? 'bg-joel-yellow/40' : 'bg-joel-violet/30'}`}
           style={{
             top: `${15 + i * 12}%`,
             left: `${10 + (i % 4) * 25}%`,
@@ -86,4 +114,3 @@ export default function AnimatedBackground() {
     </div>
   );
 }
-

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import GoogleTag from "@/components/GoogleTag";
 
 export const metadata: Metadata = {
   title: "Joël | Dépannage sans arnaques - Plomberie, Serrurerie, Électricité",
@@ -41,9 +42,9 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white min-h-screen">
+        <GoogleTag />
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );
 }
-

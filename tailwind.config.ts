@@ -11,9 +11,12 @@ const config: Config = {
       colors: {
         "joel-violet": "#7055A7",
         "joel-mauve": "#9E76EC",
+        "joel-yellow": "#F5D547",
+        "joel-yellow-light": "#FFF8DC",
       },
       backgroundImage: {
         "gradient-joel": "linear-gradient(135deg, #7055A7 0%, #9E76EC 100%)",
+        "gradient-joel-warm": "linear-gradient(135deg, #7055A7 0%, #9E76EC 70%, #F5D547 100%)",
       },
       fontFamily: {
         sans: ["Poppins", "system-ui", "sans-serif"],
@@ -24,4 +27,3 @@ const config: Config = {
   plugins: [],
 };
 export default config;
-

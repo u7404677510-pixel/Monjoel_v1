@@ -5,6 +5,8 @@
 :root {
   --joel-violet: #7055A7;
   --joel-mauve: #9E76EC;
+  --joel-yellow: #F5D547;
+  --joel-yellow-light: #FFF8DC;
 }
 
 html {
@@ -47,6 +49,19 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
+/* Gradient text with yellow accent */
+.gradient-text-warm {
+  background: linear-gradient(135deg, #7055A7 0%, #9E76EC 60%, #F5D547 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Yellow highlight */
+.highlight-yellow {
+  background: linear-gradient(transparent 60%, rgba(245, 213, 71, 0.3) 60%);
+}
+
 /* Glassmorphism */
 .glass {
   background: rgba(255, 255, 255, 0.8);
@@ -72,6 +87,11 @@ h1, h2, h3, h4, h5, h6 {
   75% { transform: translate(10px, 10px); }
 }
 
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -84,6 +104,12 @@ h1, h2, h3, h4, h5, h6 {
   animation: drift 15s ease-in-out infinite;
 }
 
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(245, 213, 71, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
 /* Button styles */
 .btn-primary {
   @apply inline-flex items-center justify-center px-6 py-3 bg-gradient-joel text-white font-semibold rounded-full shadow-lg shadow-joel-violet/30 hover:shadow-xl hover:shadow-joel-violet/40 transition-all duration-300 hover:-translate-y-0.5;
@@ -93,3 +119,14 @@ h1, h2, h3, h4, h5, h6 {
   @apply inline-flex items-center justify-center px-6 py-3 bg-white text-joel-violet font-semibold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 hover:bg-joel-violet/5 transition-all duration-300;
 }
 
+/* Yellow accent dot */
+.accent-dot::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #F5D547;
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: super;
+}

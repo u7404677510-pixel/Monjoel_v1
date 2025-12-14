@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Clock, Euro } from "lucide-react";
+import { Shield, Clock, Euro, Sparkles } from "lucide-react";
 import CTAButtons from "@/components/CTAButtons";
 
 export default function Hero() {
@@ -9,16 +9,28 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-joel-yellow/20 border border-joel-yellow/30 rounded-full mb-6"
+          >
+            <Sparkles size={16} className="text-joel-yellow" />
+            <span className="text-sm font-medium text-gray-700">Nouveau : Devis instantané en ligne</span>
+          </motion.div>
+
           {/* Main title */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
           >
             Dépannage d'Urgence à Prix Fixes
             <br />
-            <span className="gradient-text">Fini les Arnaques !</span>
+            <span className="gradient-text">Fini les Arnaques</span>
+            <span className="text-joel-yellow">.</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -57,15 +69,15 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-wrap items-center justify-center gap-6"
           >
-            <div className="flex items-center gap-2 text-gray-600">
+            <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full">
               <Shield className="text-joel-violet" size={20} />
               <span>Artisans vérifiés</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <Euro className="text-joel-violet" size={20} />
+            <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full">
+              <Euro className="text-joel-yellow" size={20} />
               <span>Prix fixes garantis</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-600">
+            <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full">
               <Clock className="text-joel-violet" size={20} />
               <span>Intervention en 30min</span>
             </div>

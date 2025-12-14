@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import Logo from "./Logo";
+import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -17,6 +18,7 @@ const navLinks = [
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { config } = useSiteConfig();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,13 +55,14 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - Phone only in header */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://app.monjoel.com"
-              className="btn-primary"
+              href={`tel:${formatPhoneForTel(config.phone_number)}`}
+              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-joel text-white font-semibold rounded-full hover:shadow-lg transition-all"
             >
-              Obtenir mon devis
+              <Phone size={18} />
+              <span>{config.phone_number}</span>
             </a>
           </div>
 
@@ -93,10 +96,11 @@ export default function Navigation() {
                   </Link>
                 ))}
                 <a
-                  href="https://app.monjoel.com"
-                  className="btn-primary text-center mt-2"
+                  href={`tel:${formatPhoneForTel(config.phone_number)}`}
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-gradient-joel text-white font-semibold rounded-full mt-2"
                 >
-                  Obtenir mon devis
+                  <Phone size={18} />
+                  <span>{config.phone_number}</span>
                 </a>
               </div>
             </motion.div>
@@ -106,4 +110,3 @@ export default function Navigation() {
     </motion.header>
   );
 }
-
