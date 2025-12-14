@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Save, Globe, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import { supabase, SEOPage } from "@/lib/supabase";
+import { supabase, SEOPage as SEOPageType } from "@/lib/supabase";
 
-export default function SEOPage() {
-  const [pages, setPages] = useState<SEOPage[]>([]);
+export default function SEOPageAdmin() {
+  const [pages, setPages] = useState<SEOPageType[]>([]);
   const [loading, setLoading] = useState(true);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [editData, setEditData] = useState<Partial<SEOPage>>({});
+  const [editData, setEditData] = useState<Partial<SEOPageType>>({});
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
 
@@ -32,7 +32,7 @@ export default function SEOPage() {
     loadPages();
   }, []);
 
-  const handleEdit = (page: SEOPage) => {
+  const handleEdit = (page: SEOPageType) => {
     setEditingId(page.id);
     setEditData(page);
   };
@@ -54,7 +54,7 @@ export default function SEOPage() {
 
       if (error) throw error;
 
-      setPages(pages.map(p => p.id === editingId ? { ...p, ...editData } as SEOPage : p));
+      setPages(pages.map(p => p.id === editingId ? { ...p, ...editData } as SEOPageType : p));
       setEditingId(null);
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
