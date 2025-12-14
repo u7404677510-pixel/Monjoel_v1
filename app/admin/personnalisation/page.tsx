@@ -2,12 +2,19 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Save, Palette, Layout, Loader2, CheckCircle } from "lucide-react";
+import { Save, Palette, Layout, Loader2, CheckCircle, MousePointer, ExternalLink } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function PersonnalisationPage() {
   const [colors, setColors] = useState({ primary: "#7055A7", secondary: "#9E76EC" });
-  const [options, setOptions] = useState({ show_testimonials: true, show_quiz: true, show_phone: true });
+  const [options, setOptions] = useState({ 
+    show_testimonials: true, 
+    show_quiz: true, 
+    show_phone: true,
+    show_cta_phone: true,
+    show_cta_devis: true,
+  });
+  const [ctaDevisUrl, setCtaDevisUrl] = useState("https://app.monjoel.com");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -29,8 +36,11 @@ export default function PersonnalisationPage() {
           setOptions({
             show_testimonials: data.show_testimonials ?? true,
             show_quiz: data.show_quiz ?? true,
-            show_phone: data.show_phone ?? true
+            show_phone: data.show_phone ?? true,
+            show_cta_phone: data.show_cta_phone ?? true,
+            show_cta_devis: data.show_cta_devis ?? true,
           });
+          setCtaDevisUrl(data.cta_devis_url || "https://app.monjoel.com");
         }
       } catch (err) {
         console.error("Error loading config:", err);
@@ -52,6 +62,9 @@ export default function PersonnalisationPage() {
           show_testimonials: options.show_testimonials,
           show_quiz: options.show_quiz,
           show_phone: options.show_phone,
+          show_cta_phone: options.show_cta_phone,
+          show_cta_devis: options.show_cta_devis,
+          cta_devis_url: ctaDevisUrl,
           updated_at: new Date().toISOString()
         })
         .eq("id", 1);
@@ -79,7 +92,7 @@ export default function PersonnalisationPage() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Personnalisation</h2>
-          <p className="text-gray-600">Personnalisez l'apparence du site</p>
+          <p className="text-gray-600">Personnalisez l'apparence et les fonctionnalités du site</p>
         </div>
         <button 
           onClick={handleSave}
@@ -94,11 +107,12 @@ export default function PersonnalisationPage() {
       {saved && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="bg-green-100 text-green-700 px-4 py-3 rounded-xl flex items-center gap-2">
           <CheckCircle size={18} />
-          Modifications enregistrées dans Supabase !
+          Modifications enregistrées !
         </motion.div>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Colors */}
         <div className="bg-white rounded-2xl p-6 shadow-sm">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-joel-violet/10 rounded-xl flex items-center justify-center">
@@ -151,16 +165,79 @@ export default function PersonnalisationPage() {
           </div>
         </div>
 
+        {/* CTA Configuration */}
         <div className="bg-white rounded-2xl p-6 shadow-sm">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-joel-violet/10 rounded-xl flex items-center justify-center">
+              <MousePointer size={20} className="text-joel-violet" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900">Boutons d'action (CTA)</h3>
+          </div>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+              <div>
+                <span className="text-gray-700 font-medium">Afficher le bouton téléphone</span>
+                <p className="text-sm text-gray-500">Bouton "Appeler" avec le numéro</p>
+              </div>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input 
+                  type="checkbox" 
+                  className="sr-only peer" 
+                  checked={options.show_cta_phone}
+                  onChange={(e) => setOptions({ ...options, show_cta_phone: e.target.checked })}
+                />
+                <div className="w-11 h-6 bg-gray-300 peer-checked:bg-joel-violet rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+              </label>
+            </div>
+            
+            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+              <div>
+                <span className="text-gray-700 font-medium">Afficher le bouton devis</span>
+                <p className="text-sm text-gray-500">Bouton "Demander un devis"</p>
+              </div>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input 
+                  type="checkbox" 
+                  className="sr-only peer" 
+                  checked={options.show_cta_devis}
+                  onChange={(e) => setOptions({ ...options, show_cta_devis: e.target.checked })}
+                />
+                <div className="w-11 h-6 bg-gray-300 peer-checked:bg-joel-violet rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+              </label>
+            </div>
+
+            <div className="pt-4 border-t">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                <div className="flex items-center gap-2">
+                  <ExternalLink size={16} />
+                  Lien du bouton "Demander un devis"
+                </div>
+              </label>
+              <input 
+                type="url" 
+                value={ctaDevisUrl}
+                onChange={(e) => setCtaDevisUrl(e.target.value)}
+                placeholder="https://app.monjoel.com"
+                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none" 
+              />
+              <p className="text-xs text-gray-500 mt-2">
+                URL vers laquelle le bouton redirige (ex: votre application, formulaire, etc.)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Display Options */}
+        <div className="bg-white rounded-2xl p-6 shadow-sm lg:col-span-2">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-joel-violet/10 rounded-xl flex items-center justify-center">
               <Layout size={20} className="text-joel-violet" />
             </div>
             <h3 className="text-lg font-bold text-gray-900">Options d'affichage</h3>
           </div>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
-              <span className="text-gray-700">Afficher le téléphone</span>
+              <span className="text-gray-700">Afficher le téléphone dans le footer</span>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input 
                   type="checkbox" 
@@ -199,7 +276,7 @@ export default function PersonnalisationPage() {
         </div>
       </div>
 
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-4 flex items-start gap-3">
+      <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-start gap-3">
         <CheckCircle className="text-green-500 flex-shrink-0 mt-0.5" size={20} />
         <div className="text-sm text-green-700">
           <p className="font-medium">Connecté à Supabase ✓</p>

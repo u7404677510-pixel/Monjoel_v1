@@ -2,8 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
-import PhoneButton from "@/components/PhoneButton";
+import CTAButtons from "@/components/CTAButtons";
 
 export default function FinalCTA() {
   const ref = useRef(null);
@@ -25,19 +24,7 @@ export default function FinalCTA() {
             Obtenez un devis instantané et transparent pour votre dépannage d'urgence.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <PhoneButton variant="primary" />
-
-            <motion.a
-              href="https://app.monjoel.com"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="flex items-center gap-3 px-8 py-4 bg-white text-joel-violet font-bold text-lg rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 transition-all"
-            >
-              <span>Demander un devis</span>
-              <ArrowRight size={20} />
-            </motion.a>
-          </div>
+          <CTAButtons variant="hero" />
         </motion.div>
       </div>
     </section>

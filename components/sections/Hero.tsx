@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Clock, Euro } from "lucide-react";
-import PhoneButton from "@/components/PhoneButton";
+import { Shield, Clock, Euro } from "lucide-react";
+import CTAButtons from "@/components/CTAButtons";
 
 export default function Hero() {
   return (
@@ -45,17 +45,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            className="mb-12"
           >
-            <PhoneButton variant="primary" />
-
-            <a
-              href="https://app.monjoel.com"
-              className="flex items-center gap-3 px-8 py-4 bg-white text-joel-violet font-bold text-lg rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 hover:bg-joel-violet/5 transition-all"
-            >
-              <span>Demander un devis</span>
-              <ArrowRight size={20} />
-            </a>
+            <CTAButtons variant="hero" />
           </motion.div>
 
           {/* Trust badges */}

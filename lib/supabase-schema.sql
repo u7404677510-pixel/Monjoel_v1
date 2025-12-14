@@ -12,12 +12,15 @@ CREATE TABLE IF NOT EXISTS site_config (
   show_testimonials BOOLEAN DEFAULT true,
   show_quiz BOOLEAN DEFAULT true,
   show_phone BOOLEAN DEFAULT true,
+  show_cta_phone BOOLEAN DEFAULT true,
+  show_cta_devis BOOLEAN DEFAULT true,
+  cta_devis_url VARCHAR(255) DEFAULT 'https://app.monjoel.com',
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Insérer la configuration par défaut
-INSERT INTO site_config (phone_number, primary_color, secondary_color)
-VALUES ('01 89 47 05 56', '#7055A7', '#9E76EC')
+INSERT INTO site_config (phone_number, primary_color, secondary_color, cta_devis_url)
+VALUES ('01 89 47 05 56', '#7055A7', '#9E76EC', 'https://app.monjoel.com')
 ON CONFLICT DO NOTHING;
 
 -- Table du contenu éditable

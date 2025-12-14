@@ -10,6 +10,9 @@ interface SiteConfig {
   show_testimonials: boolean;
   show_quiz: boolean;
   show_phone: boolean;
+  show_cta_phone: boolean;
+  show_cta_devis: boolean;
+  cta_devis_url: string;
 }
 
 const defaultConfig: SiteConfig = {
@@ -19,6 +22,9 @@ const defaultConfig: SiteConfig = {
   show_testimonials: true,
   show_quiz: true,
   show_phone: true,
+  show_cta_phone: true,
+  show_cta_devis: true,
+  cta_devis_url: "https://app.monjoel.com",
 };
 
 export function useSiteConfig() {
@@ -42,6 +48,9 @@ export function useSiteConfig() {
             show_testimonials: data.show_testimonials ?? defaultConfig.show_testimonials,
             show_quiz: data.show_quiz ?? defaultConfig.show_quiz,
             show_phone: data.show_phone ?? defaultConfig.show_phone,
+            show_cta_phone: data.show_cta_phone ?? defaultConfig.show_cta_phone,
+            show_cta_devis: data.show_cta_devis ?? defaultConfig.show_cta_devis,
+            cta_devis_url: data.cta_devis_url || defaultConfig.cta_devis_url,
           });
         }
       } catch (err) {
@@ -60,4 +69,3 @@ export function useSiteConfig() {
 export function formatPhoneForTel(phone: string): string {
   return phone.replace(/\s/g, "");
 }
-

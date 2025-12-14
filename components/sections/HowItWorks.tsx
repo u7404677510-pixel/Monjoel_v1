@@ -2,32 +2,32 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MousePointer, FileText, UserCheck, Wrench } from "lucide-react";
+import { Camera, MessageCircleQuestion, FileText, CreditCard } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "Décrivez votre problème",
-    description: "En quelques clics, indiquez-nous votre urgence et votre localisation.",
-    icon: MousePointer,
+    title: "Prenez une photo.",
+    description: "Montrez le problème. Une porte, une fuite, une panne… en 5 secondes.",
+    icon: Camera,
   },
   {
     number: "02",
-    title: "Recevez un devis instantané",
-    description: "Prix fixe affiché immédiatement. Pas de surprise, pas de négociation.",
-    icon: FileText,
+    title: "Répondez à quelques questions.",
+    description: "Joël comprend la situation avec 3–6 questions simples. Pas de blabla.",
+    icon: MessageCircleQuestion,
   },
   {
     number: "03",
-    title: "Un artisan vérifié vous contacte",
-    description: "Professionnel qualifié, proche de chez vous, disponible maintenant.",
-    icon: UserCheck,
+    title: "Recevez un devis immédiat.",
+    description: "Un prix clair, fixe, avant intervention. Ce prix ne bouge plus.",
+    icon: FileText,
   },
   {
     number: "04",
-    title: "Intervention rapide",
-    description: "Votre problème est résolu. Vous payez le prix annoncé, rien de plus.",
-    icon: Wrench,
+    title: "Payez une seule fois. On intervient.",
+    description: "Vous payez au prix annoncé. Ensuite, Joël géolocalise et envoie un artisan qualifié.",
+    icon: CreditCard,
   },
 ];
 
@@ -103,4 +103,3 @@ export default function HowItWorks() {
     </section>
   );
 }
-

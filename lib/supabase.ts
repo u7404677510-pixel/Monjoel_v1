@@ -14,6 +14,9 @@ export interface SiteConfig {
   show_testimonials: boolean;
   show_quiz: boolean;
   show_phone: boolean;
+  show_cta_phone: boolean;
+  show_cta_devis: boolean;
+  cta_devis_url: string;
   updated_at: string;
 }
 

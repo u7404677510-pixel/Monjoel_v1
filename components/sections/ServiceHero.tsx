@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Droplets, Zap, Key } from "lucide-react";
-import PhoneButton from "@/components/PhoneButton";
+import { Droplets, Zap, Key } from "lucide-react";
+import CTAButtons from "@/components/CTAButtons";
 
 interface ServiceHeroProps {
   title: string;
@@ -50,16 +50,7 @@ export default function ServiceHero({
 
             <p className="text-lg text-gray-600 mb-8">{description}</p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <PhoneButton variant="primary" />
-              <a
-                href="https://app.monjoel.com"
-                className="flex items-center justify-center gap-3 px-8 py-4 bg-white text-joel-violet font-bold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 transition-all"
-              >
-                <span>Devis gratuit</span>
-                <ArrowRight size={20} />
-              </a>
-            </div>
+            <CTAButtons variant="hero" />
           </motion.div>
 
           {/* Right - Problems list */}

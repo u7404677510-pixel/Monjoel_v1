@@ -41,7 +41,7 @@ export default function Footer() {
               Le dépannage d'urgence sans arnaques. Prix fixes, artisans vérifiés, intervention rapide.
             </p>
             <div className="space-y-3">
-              <PhoneButton variant="footer" />
+              <PhoneButton variant="text" />
               <a href="mailto:contact@monjoel.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                 <Mail size={18} />
                 <span>contact@monjoel.com</span>

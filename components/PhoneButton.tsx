@@ -4,38 +4,56 @@ import { Phone } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
 interface PhoneButtonProps {
-  variant?: "primary" | "secondary" | "footer";
+  variant?: "button" | "text" | "compact";
   className?: string;
 }
 
-export default function PhoneButton({ variant = "primary", className = "" }: PhoneButtonProps) {
+export default function PhoneButton({ variant = "button", className = "" }: PhoneButtonProps) {
   const { config, loading } = useSiteConfig();
 
   if (loading) {
+    return <span className="animate-pulse bg-gray-200 h-6 w-32 rounded-full" />;
+  }
+
+  // Check if phone CTA should be hidden
+  if (!config.show_phone && variant === "text") {
+    return null;
+  }
+
+  const phone = config.phone_number;
+  const telLink = `tel:${formatPhoneForTel(phone)}`;
+
+  if (variant === "text") {
     return (
-      <span className={`inline-flex items-center gap-2 px-6 py-3 bg-gray-200 animate-pulse rounded-full ${className}`}>
-        <Phone size={20} />
-        <span className="w-28 h-5 bg-gray-300 rounded" />
-      </span>
+      <a
+        href={telLink}
+        className={`flex items-center gap-2 text-joel-violet hover:underline ${className}`}
+      >
+        <Phone size={18} />
+        <span>{phone}</span>
+      </a>
     );
   }
 
-  const baseStyles = "inline-flex items-center gap-2 transition-all";
-  
-  const variants = {
-    primary: "px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl hover:shadow-joel-violet/40 hover:-translate-y-1",
-    secondary: "px-8 py-4 bg-white text-joel-violet font-bold text-lg rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40",
-    footer: "text-gray-400 hover:text-white",
-  };
+  if (variant === "compact") {
+    return (
+      <a
+        href={telLink}
+        className={`flex items-center gap-2 px-4 py-2 bg-gradient-joel text-white font-medium rounded-full hover:shadow-lg transition-all ${className}`}
+      >
+        <Phone size={18} />
+        <span>{phone}</span>
+      </a>
+    );
+  }
 
   return (
     <a
-      href={`tel:${formatPhoneForTel(config.phone_number)}`}
-      className={`${baseStyles} ${variants[variant]} ${className}`}
+      href={telLink}
+      className={`flex items-center gap-3 px-6 py-3 bg-gradient-joel text-white font-bold rounded-full shadow-lg shadow-joel-violet/30 hover:shadow-xl transition-all ${className}`}
     >
-      <Phone size={variant === "footer" ? 18 : 24} />
-      <span>{config.phone_number}</span>
+      <Phone size={22} />
+      <span>{phone}</span>
     </a>
   );
 }
-
