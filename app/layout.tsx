@@ -1,7 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import GoogleTag from "@/components/GoogleTag";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   title: "Joël | Dépannage sans arnaques - Plomberie, Serrurerie, Électricité",
@@ -41,7 +48,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-white min-h-screen">
+      <body className="bg-white min-h-screen overflow-x-hidden">
         <GoogleTag />
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

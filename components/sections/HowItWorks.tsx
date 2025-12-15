@@ -29,7 +29,7 @@ const steps = [
   {
     number: "04",
     title: "Payez, puis on intervient.",
-    description: "Vous payez au prix annoncé. Ensuite, Joël envoie un artisan qualifié près de chez vous.",
+    description: "Vous payez au prix annoncé. Un artisan arrive chez vous en ~30min.",
     icon: CreditCard,
     accent: false,
   },
@@ -40,45 +40,69 @@ export default function HowItWorks() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={ref} className="py-16 sm:py-24 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Comment ça <span className="gradient-text">marche</span>
             <span className="text-joel-yellow"> ?</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Un processus simple et transparent, de votre demande à l'intervention.
           </p>
         </motion.div>
 
-        {/* Timeline */}
-        <div className="relative">
+        {/* Mobile: Vertical stack */}
+        <div className="md:hidden space-y-6">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border ${step.accent ? 'border-joel-yellow/30' : 'border-white/50'}`}
+            >
+              <div className="flex items-center gap-4 mb-3">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                  step.accent ? 'bg-joel-yellow' : 'bg-gradient-joel'
+                }`}>
+                  <step.icon size={24} className="text-white" />
+                </div>
+                <span className={`text-3xl font-bold ${step.accent ? 'text-joel-yellow' : 'gradient-text'}`}>{step.number}</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
+              <p className="text-sm text-gray-600">{step.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Desktop: Timeline */}
+        <div className="hidden md:block relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-joel-violet via-joel-mauve to-joel-yellow opacity-20 hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-joel-violet via-joel-mauve to-joel-yellow opacity-20" />
 
           {/* Steps */}
-          <div className="space-y-12 md:space-y-24">
+          <div className="space-y-24">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                className={`flex items-center gap-8 ${
+                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
               >
                 {/* Content */}
-                <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                <div className={`flex-1 ${index % 2 === 0 ? "text-right" : "text-left"}`}>
                   <div className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border ${step.accent ? 'border-joel-yellow/30' : 'border-white/50'}`}>
-                    <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                    <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "justify-end" : ""}`}>
                       <span className={`text-5xl font-bold ${step.accent ? 'text-joel-yellow' : 'gradient-text'}`}>{step.number}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
@@ -103,7 +127,7 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Spacer */}
-                <div className="flex-1 hidden md:block" />
+                <div className="flex-1" />
               </motion.div>
             ))}
           </div>
