@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, X, ArrowRight, RotateCcw, Trophy } from "lucide-react";
+import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
 
 interface Question {
   id: number;
@@ -66,6 +67,7 @@ export default function ScamQuiz() {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+  const { config } = useSiteConfig();
 
   const question = questions[currentQuestion];
 
@@ -151,14 +153,7 @@ export default function ScamQuiz() {
 
               {!showResult ? (
                 <div className="flex justify-center gap-6">
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => handleAnswer("plus")}
-                    className="w-24 h-24 bg-gradient-joel text-white font-bold text-4xl rounded-2xl shadow-xl"
-                  >
-                    +
-                  </motion.button>
+                  {/* MOINS à gauche */}
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -166,6 +161,15 @@ export default function ScamQuiz() {
                     className="w-24 h-24 bg-gradient-joel text-white font-bold text-4xl rounded-2xl shadow-xl"
                   >
                     −
+                  </motion.button>
+                  {/* PLUS à droite */}
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => handleAnswer("plus")}
+                    className="w-24 h-24 bg-gradient-joel text-white font-bold text-4xl rounded-2xl shadow-xl"
+                  >
+                    +
                   </motion.button>
                 </div>
               ) : (
@@ -216,15 +220,15 @@ export default function ScamQuiz() {
               <p className="text-white/80 mb-8">
                 {score >= questions.length / 2
                   ? "Bien joué ! Vous connaissez les risques."
-                  : "Les arnaques sont plus fréquentes que vous ne le pensez !"}
+                  : "Les pratiques douteuses sont plus fréquentes que vous ne le pensez !"}
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button onClick={resetQuiz} className="flex items-center justify-center gap-2 px-6 py-3 bg-white/20 rounded-full">
                   <RotateCcw size={18} />
                   Recommencer
                 </button>
-                <a href="https://app.monjoel.com" className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-joel-violet font-semibold rounded-full">
-                  Me protéger
+                <a href={config.cta_devis_url} className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-joel-violet font-semibold rounded-full">
+                  Obtenir mon devis
                   <ArrowRight size={18} />
                 </a>
               </div>
@@ -235,4 +239,3 @@ export default function ScamQuiz() {
     </section>
   );
 }
-

@@ -9,7 +9,6 @@ interface ServiceHeroProps {
   subtitle: string;
   description: string;
   iconName: "droplets" | "zap" | "key";
-  iconBgColor: string;
   problems: string[];
 }
 
@@ -24,7 +23,6 @@ export default function ServiceHero({
   subtitle,
   description,
   iconName,
-  iconBgColor,
   problems,
 }: ServiceHeroProps) {
   const Icon = iconMap[iconName];
@@ -39,7 +37,7 @@ export default function ServiceHero({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className={`inline-flex items-center gap-3 px-4 py-2 ${iconBgColor} rounded-full mb-6`}>
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-joel rounded-full mb-6">
               <Icon size={20} className="text-white" />
               <span className="text-white font-medium">{subtitle}</span>
             </div>
@@ -70,7 +68,7 @@ export default function ServiceHero({
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
                 >
-                  <div className={`w-2 h-2 ${iconBgColor} rounded-full`} />
+                  <div className="w-2 h-2 bg-joel-violet rounded-full" />
                   <span className="text-gray-700">{problem}</span>
                 </motion.div>
               ))}

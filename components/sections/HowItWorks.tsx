@@ -15,7 +15,7 @@ const steps = [
   {
     number: "02",
     title: "Répondez à quelques questions.",
-    description: "Joël comprend la situation avec 3–6 questions simples. Pas de blabla.",
+    description: "Joël comprend la situation en quelques questions simples.",
     icon: MessageCircleQuestion,
     accent: false,
   },
@@ -24,12 +24,12 @@ const steps = [
     title: "Recevez un devis immédiat.",
     description: "Un prix clair, fixe, avant intervention. Ce prix ne bouge plus.",
     icon: FileText,
-    accent: true, // Yellow accent for the key step
+    accent: true,
   },
   {
     number: "04",
-    title: "Payez une seule fois. On intervient.",
-    description: "Vous payez au prix annoncé. Ensuite, Joël géolocalise et envoie un artisan qualifié.",
+    title: "Payez, puis on intervient.",
+    description: "Vous payez au prix annoncé. Ensuite, Joël envoie un artisan qualifié près de chez vous.",
     icon: CreditCard,
     accent: false,
   },

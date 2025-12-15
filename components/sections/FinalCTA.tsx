@@ -18,10 +18,11 @@ export default function FinalCTA() {
           className="text-center"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-            Prêt à en finir avec les <span className="gradient-text">arnaques ?</span>
+            Besoin d'un <span className="gradient-text">dépannage</span>
+            <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Obtenez un devis instantané et transparent pour votre dépannage d'urgence.
+            Obtenez un devis instantané et transparent. Prix fixe garanti avant intervention.
           </p>
 
           <CTAButtons variant="hero" />

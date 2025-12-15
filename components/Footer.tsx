@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Mail } from "lucide-react";
-import PhoneButton from "@/components/PhoneButton";
+import { Mail, Phone } from "lucide-react";
+import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
 const footerLinks = {
   services: [
@@ -23,6 +23,8 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const { config, loading } = useSiteConfig();
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
@@ -38,10 +40,24 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 mb-6">
-              Le dépannage d'urgence sans arnaques. Prix fixes, artisans vérifiés, intervention rapide.
+              Le dépannage d'urgence sans surprises. Prix fixes, artisans vérifiés, paiement avant intervention.
             </p>
             <div className="space-y-3">
-              <PhoneButton variant="text" />
+              {/* Phone dynamique depuis Supabase */}
+              {loading ? (
+                <span className="flex items-center gap-3 text-gray-400">
+                  <Phone size={18} />
+                  <span className="animate-pulse bg-gray-700 h-4 w-24 rounded" />
+                </span>
+              ) : (
+                <a 
+                  href={`tel:${formatPhoneForTel(config.phone_number)}`} 
+                  className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                >
+                  <Phone size={18} />
+                  <span>{config.phone_number}</span>
+                </a>
+              )}
               <a href="mailto:contact@monjoel.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                 <Mail size={18} />
                 <span>contact@monjoel.com</span>

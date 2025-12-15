@@ -28,14 +28,26 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Fermer le menu mobile quand on scroll
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-lg shadow-lg"
-          : "bg-transparent"
+        isScrolled || isMobileMenuOpen
+          ? "bg-white/95 backdrop-blur-lg shadow-lg"
+          : "bg-white/80 backdrop-blur-sm"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4">
@@ -82,7 +94,7 @@ export default function Navigation() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 pb-4"
+              className="md:hidden mt-4 pb-4 bg-white"
             >
               <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (

@@ -19,9 +19,8 @@ export default function PlomberiePage() {
       <ServiceHero
         title="Plombier d'urgence à prix fixe"
         subtitle="Plomberie"
-        description="Fuite d'eau, canalisation bouchée, chauffe-eau en panne... Nos plombiers vérifiés interviennent rapidement avec un prix annoncé à l'avance."
+        description="Fuite d'eau, canalisation bouchée, chauffe-eau en panne... Nos plombiers vérifiés interviennent rapidement. Prix fixe annoncé et payé avant intervention."
         iconName="droplets"
-        iconBgColor="bg-blue-500"
         problems={plomberieProblems}
       />
       <ServiceGuarantees />
@@ -29,4 +28,3 @@ export default function PlomberiePage() {
     </>
   );
 }
-

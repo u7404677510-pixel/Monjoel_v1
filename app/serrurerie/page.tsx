@@ -19,9 +19,8 @@ export default function SerrureriePage() {
       <ServiceHero
         title="Serrurier d'urgence à prix fixe"
         subtitle="Serrurerie"
-        description="Porte claquée, serrure bloquée, clé cassée... Nos serruriers qualifiés vous dépannent sans dégâts avec un prix transparent."
+        description="Porte claquée, serrure bloquée, clé cassée... Nos serruriers qualifiés vous dépannent sans dégâts. Prix fixe annoncé et payé avant intervention."
         iconName="key"
-        iconBgColor="bg-green-500"
         problems={serrurerieProblems}
       />
       <ServiceGuarantees />
@@ -29,4 +28,3 @@ export default function SerrureriePage() {
     </>
   );
 }
-

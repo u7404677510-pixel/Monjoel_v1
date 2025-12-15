@@ -19,9 +19,8 @@ export default function ElectricitePage() {
       <ServiceHero
         title="Électricien d'urgence à prix fixe"
         subtitle="Électricité"
-        description="Panne de courant, court-circuit, disjoncteur... Nos électriciens agréés sécurisent votre installation avec un prix fixe garanti."
+        description="Panne de courant, court-circuit, disjoncteur... Nos électriciens agréés sécurisent votre installation. Prix fixe annoncé et payé avant intervention."
         iconName="zap"
-        iconBgColor="bg-amber-500"
         problems={electriciteProblems}
       />
       <ServiceGuarantees />
@@ -29,4 +28,3 @@ export default function ElectricitePage() {
     </>
   );
 }
-

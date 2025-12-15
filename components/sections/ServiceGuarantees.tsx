@@ -9,6 +9,7 @@ const guarantees = [
     icon: Euro,
     title: "Prix fixe annoncé",
     description: "Vous connaissez le prix exact avant l'intervention. Pas de surprise.",
+    accent: true,
   },
   {
     icon: Shield,
@@ -18,7 +19,7 @@ const guarantees = [
   {
     icon: Clock,
     title: "Intervention rapide",
-    description: "Un professionnel disponible près de chez vous en moins de 30 minutes.",
+    description: "Un professionnel disponible en moyenne en 30 minutes près de chez vous.",
   },
   {
     icon: Award,
@@ -33,7 +34,7 @@ const guarantees = [
   {
     icon: CheckCircle,
     title: "Paiement sécurisé",
-    description: "Paiement après intervention, par carte ou en espèces.",
+    description: "Paiement avant intervention. Vous payez, on intervient.",
   },
 ];
 
@@ -65,9 +66,13 @@ export default function ServiceGuarantees() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50"
+              className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border ${
+                guarantee.accent ? 'border-joel-yellow/30' : 'border-white/50'
+              }`}
             >
-              <div className="w-12 h-12 bg-gradient-joel rounded-xl flex items-center justify-center mb-4">
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
+                guarantee.accent ? 'bg-joel-yellow' : 'bg-gradient-joel'
+              }`}>
                 <guarantee.icon size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">{guarantee.title}</h3>
@@ -79,4 +84,3 @@ export default function ServiceGuarantees() {
     </section>
   );
 }
-
