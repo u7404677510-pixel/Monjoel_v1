@@ -78,11 +78,10 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 pt-8 border-t border-white/20">
-                <h3 className="font-semibold mb-2">Horaires du service client</h3>
-                <p className="text-white/80">Lundi - Vendredi : 9h - 19h</p>
-                <p className="text-white/80">Samedi : 10h - 17h</p>
+                <h3 className="font-semibold mb-2">Service client</h3>
+                <p className="text-white/80 text-lg font-medium">Disponible 24h/24, 7j/7</p>
                 <p className="text-white/70 text-sm mt-2">
-                  Pour les urgences, appelez notre ligne 24h/24.
+                  Une équipe à votre écoute à tout moment.
                 </p>
               </div>
             </div>

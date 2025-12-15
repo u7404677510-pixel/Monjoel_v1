@@ -13,7 +13,7 @@ const services = [
     description: "Fuite d'eau, canalisation bouchée, chauffe-eau en panne... Nos plombiers interviennent en urgence pour tous vos problèmes.",
     stats: [
       { label: "Interv. moy.", value: "30min", icon: Clock },
-      { label: "Prix moy.", value: "89€", icon: Euro },
+      { label: "Prix moy.", value: "129€", icon: Euro },
       { label: "Satisf.", value: "98%", icon: Shield },
     ],
     problems: [
@@ -32,7 +32,7 @@ const services = [
     description: "Porte claquée, serrure bloquée, effraction... Nos serruriers qualifiés vous dépannent rapidement et sans dégâts.",
     stats: [
       { label: "Interv. moy.", value: "20min", icon: Clock },
-      { label: "Prix moy.", value: "99€", icon: Euro },
+      { label: "Prix moy.", value: "119€", icon: Euro },
       { label: "Satisf.", value: "97%", icon: Shield },
     ],
     problems: [
@@ -51,7 +51,7 @@ const services = [
     description: "Panne de courant, court-circuit, installation défaillante... Nos électriciens agréés sécurisent votre installation.",
     stats: [
       { label: "Interv. moy.", value: "25min", icon: Clock },
-      { label: "Prix moy.", value: "79€", icon: Euro },
+      { label: "Prix moy.", value: "109€", icon: Euro },
       { label: "Satisf.", value: "99%", icon: Shield },
     ],
     problems: [
