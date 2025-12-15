@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
 
 const solutions = [
   {
@@ -23,7 +24,7 @@ const solutions = [
   },
   {
     title: "Paiement sécurisé",
-    description: "Payez après l'intervention, par le moyen de votre choix.",
+    description: "Payez avant l'intervention, l'artisan intervient ensuite.",
   },
   {
     title: "Support client réactif",
@@ -34,35 +35,36 @@ const solutions = [
 export default function StopArnaquesSolution() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { config } = useSiteConfig();
 
   return (
     <section ref={ref} className="py-16">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             La <span className="gradient-text">solution Joël</span>
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
             Comment nous garantissons votre sécurité à chaque intervention.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1 }}
-              className="bg-green-50/80 backdrop-blur-sm rounded-2xl p-6 border border-green-100"
+              className="bg-green-50/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-green-100"
             >
-              <CheckCircle className="text-green-500 mb-4" size={32} />
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{solution.title}</h3>
-              <p className="text-gray-600">{solution.description}</p>
+              <CheckCircle className="text-green-500 mb-3 sm:mb-4" size={28} />
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{solution.title}</h3>
+              <p className="text-sm sm:text-base text-gray-600">{solution.description}</p>
             </motion.div>
           ))}
         </div>
@@ -74,10 +76,10 @@ export default function StopArnaquesSolution() {
           className="text-center"
         >
           <a
-            href="https://app.monjoel.com"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all"
+            href={config.cta_devis_url}
+            className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold text-base sm:text-lg rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all"
           >
-            Me protéger maintenant
+            Obtenir mon devis
             <ArrowRight size={20} />
           </a>
         </motion.div>
@@ -85,4 +87,3 @@ export default function StopArnaquesSolution() {
     </section>
   );
 }
-
