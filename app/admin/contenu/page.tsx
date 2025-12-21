@@ -15,6 +15,10 @@ export default function ContenuPage() {
 
   useEffect(() => {
     async function loadContent() {
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
       try {
         const { data, error } = await supabase
           .from("content")
@@ -43,6 +47,7 @@ export default function ContenuPage() {
   };
 
   const handleSave = async (id: string) => {
+    if (!supabase) return;
     setSaving(true);
     try {
       const { error } = await supabase
