@@ -29,6 +29,12 @@ async function fetchConversionId(): Promise<string | null> {
     // Dynamic import to avoid issues with SSR
     const { supabase } = await import("@/lib/supabase");
     
+    // If supabase is not configured, return null
+    if (!supabase) {
+      debugLog('Supabase not configured, skipping conversion ID fetch');
+      return null;
+    }
+    
     const { data, error } = await supabase
       .from("analytics_config")
       .select("google_ads_conversion_id")

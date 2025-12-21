@@ -25,6 +25,10 @@ export default function GoogleTag() {
 
   useEffect(() => {
     async function loadConfig() {
+      if (!supabase) {
+        debugLog('Supabase not configured, skipping analytics config load');
+        return;
+      }
       try {
         const { data, error } = await supabase
           .from("analytics_config")
