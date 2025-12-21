@@ -1,88 +1,149 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Clock, Euro, Sparkles } from "lucide-react";
-import CTAButtons from "@/components/CTAButtons";
-import { yellowPunctuation } from "@/components/ui/Title";
+import { Phone, Star, MapPin, Clock, Shield, BadgeCheck } from "lucide-react";
+import Image from "next/image";
+import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
 export default function Hero() {
+  const { config } = useSiteConfig();
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
-        <div className="text-center">
-          {/* Badge */}
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          {/* Left side - Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-joel-yellow/20 border border-joel-yellow/30 rounded-full mb-4 sm:mb-6"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="order-2 lg:order-1"
           >
-            <Sparkles size={14} className="text-joel-yellow" />
-            <span className="text-xs sm:text-sm font-medium text-gray-700">
-              Nouveau : Devis instantané en ligne
-            </span>
+            {/* Google Reviews - Trust Signal */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex items-center gap-2 mb-4"
+            >
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} className="text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-gray-700">4.9/5</span>
+              <span className="text-sm text-gray-500">sur Google (847 avis vérifiés)</span>
+            </motion.div>
+
+            {/* Main title - SEO optimized */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 leading-[1.1]">
+              Plombier, Serrurier
+              <br />
+              & Électricien
+              <br />
+              <span className="gradient-text">Paris & Île-de-France</span>
+            </h1>
+
+            {/* Subtitle - Value proposition */}
+            <p className="text-lg sm:text-xl text-gray-600 mb-6 font-medium">
+              Intervention en 30 min • Prix Fixes & Transparents • Agréé Assurances
+            </p>
+
+            {/* Location badge */}
+            <div className="flex items-center gap-2 text-sm text-gray-600 mb-8 bg-gray-50 px-4 py-3 rounded-xl inline-flex">
+              <MapPin size={18} className="text-joel-violet" />
+              <span>
+                <strong>Zone d'intervention :</strong> Toute l'Île-de-France (75, 77, 78, 91, 92, 93, 94, 95)
+              </span>
+            </div>
+
+            {/* CTA Button - High contrast */}
+            <div className="mb-8">
+              <a
+                href={`tel:${formatPhoneForTel(config.phone_number)}`}
+                data-placement="hero-main"
+                className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+              >
+                <Phone size={24} className="animate-pulse" />
+                <span>APPELER LE {config.phone_number}</span>
+              </a>
+              <p className="text-sm text-gray-500 mt-3 ml-1">
+                Devis gratuit • Sans engagement
+              </p>
+            </div>
+
+            {/* Trust badges - Brands */}
+            <div className="border-t border-gray-100 pt-6">
+              <p className="text-xs text-gray-400 uppercase tracking-wide mb-3">Artisans certifiés</p>
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
+                  <BadgeCheck size={16} className="text-joel-violet" />
+                  <span className="text-sm font-medium">Vachette</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
+                  <BadgeCheck size={16} className="text-joel-violet" />
+                  <span className="text-sm font-medium">Grohe</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
+                  <BadgeCheck size={16} className="text-joel-violet" />
+                  <span className="text-sm font-medium">Legrand</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
+                  <Shield size={16} className="text-emerald-500" />
+                  <span className="text-sm font-medium">Artisan Confiance</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Main title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight"
-          >
-            {yellowPunctuation("Dépannage d'Urgence à Prix Fixes")}
-            <br />
-            <span className="gradient-text">{yellowPunctuation("Fini les Arnaques")}</span>
-            <span className="text-joel-yellow">.</span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          {/* Right side - Illustration */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-2 sm:mb-4"
+            className="order-1 lg:order-2 relative"
           >
-            Serrurier • Plombier • Électricien
-          </motion.p>
+            <div className="relative max-w-lg mx-auto lg:max-w-none">
+              {/* Main illustration */}
+              <div className="relative rounded-3xl overflow-hidden">
+                <Image
+                  src="/hero-illustration-f.png"
+                  alt="Artisan dépannage à domicile - Plombier Serrurier Électricien"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10"
-          >
-            Disponible 7j/7 • 24h/24
-          </motion.p>
+              {/* Floating badge - Availability */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+                    <Clock className="text-white" size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500">Disponible</p>
+                    <p className="font-bold text-gray-900">24h/24 • 7j/7</p>
+                  </div>
+                </div>
+              </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-8 sm:mb-12"
-          >
-            <CTAButtons variant="hero" />
-          </motion.div>
-
-          {/* Trust badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-6"
-          >
-            <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full text-sm">
-              <Shield className="text-joel-violet" size={18} />
-              <span>Artisans vérifiés</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full text-sm">
-              <Euro className="text-joel-yellow" size={18} />
-              <span>Prix fixes garantis</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full text-sm">
-              <Clock className="text-joel-violet" size={18} />
-              <span>Chez vous en ~30min</span>
+              {/* Floating badge - Price */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2 shadow-lg"
+              >
+                <p className="text-xs font-medium">À partir de</p>
+                <p className="font-bold text-xl">89€</p>
+              </motion.div>
             </div>
           </motion.div>
         </div>

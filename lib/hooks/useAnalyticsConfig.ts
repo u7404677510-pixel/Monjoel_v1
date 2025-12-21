@@ -31,6 +31,11 @@ async function fetchAnalyticsConfig(): Promise<AnalyticsConfig> {
   }
 
   fetchPromise = (async () => {
+    // If supabase is not configured, return default config
+    if (!supabase) {
+      return defaultConfig;
+    }
+
     try {
       const { data, error } = await supabase
         .from("analytics_config")
