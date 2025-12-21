@@ -14,6 +14,9 @@ interface ElectriciteHeroProps {
 export default function ElectriciteHero({ title, subtitle, description }: ElectriciteHeroProps) {
   const { config } = useSiteConfig();
 
+  const showPhone = config.show_cta_phone;
+  const showDevis = config.show_cta_devis;
+
   return (
     <section className="pt-28 sm:pt-32 pb-12 sm:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -48,32 +51,37 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
             {description}
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
-          >
-            <a
-              href={`tel:${formatPhoneForTel(config.phone_number)}`}
-              data-placement="electricite-hero"
-              className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all w-full sm:w-auto justify-center"
+          {/* CTAs - Conditionally rendered based on backoffice settings */}
+          {(showPhone || showDevis) && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
             >
-              <Phone size={20} />
-              <span>{config.phone_number}</span>
-            </a>
-            <a
-              href={config.cta_devis_url}
-              className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-joel-violet font-bold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 transition-all w-full sm:w-auto justify-center"
-            >
-              <span>Obtenir mon devis</span>
-              <ArrowRight size={18} />
-            </a>
-          </motion.div>
+              {showPhone && (
+                <a
+                  href={`tel:${formatPhoneForTel(config.phone_number)}`}
+                  data-placement="electricite-hero"
+                  className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all w-full sm:w-auto justify-center"
+                >
+                  <Phone size={20} />
+                  <span>{config.phone_number}</span>
+                </a>
+              )}
+              {showDevis && (
+                <a
+                  href={config.cta_devis_url}
+                  className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-joel-violet font-bold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 transition-all w-full sm:w-auto justify-center"
+                >
+                  <span>Obtenir mon devis</span>
+                  <ArrowRight size={18} />
+                </a>
+              )}
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
   );
 }
-
