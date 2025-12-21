@@ -2,34 +2,41 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { Shield, Euro, Clock, FileCheck, Users, Star, ArrowRight } from "lucide-react";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
 import { yellowPunctuation } from "@/components/ui/Title";
 
 const solutions = [
   {
-    title: "Prix fixe avant intervention",
-    description: "Vous connaissez le montant exact avant que l'artisan n'arrive.",
+    icon: FileCheck,
+    title: "Devis instantané",
+    description: "Recevez un prix fixe avant toute intervention. Ce prix ne changera jamais.",
   },
   {
-    title: "Artisans 100% vérifiés",
-    description: "Identité, qualifications et assurances contrôlées.",
+    icon: Euro,
+    title: "Paiement avant intervention",
+    description: "Payez avant l'intervention, l'artisan intervient ensuite. Un seul paiement, zéro surprise.",
+    accent: true,
   },
   {
-    title: "Devis écrit et détaillé",
-    description: "Tout est transparent, vous savez exactement ce que vous payez.",
+    icon: Users,
+    title: "Artisans vérifiés",
+    description: "Chaque professionnel est vérifié : identité, diplômes, assurances, avis clients.",
   },
   {
-    title: "Garantie sur l'intervention",
-    description: "Un problème ? Nous intervenons de nouveau gratuitement.",
+    icon: Clock,
+    title: "Intervention rapide",
+    description: "Un artisan disponible en moins de 30 minutes en moyenne près de chez vous.",
   },
   {
-    title: "Paiement sécurisé",
-    description: "Payez avant l'intervention, l'artisan intervient ensuite.",
+    icon: Star,
+    title: "Satisfaction garantie",
+    description: "Si vous n'êtes pas satisfait, nous trouvons une solution. Toujours.",
   },
   {
-    title: "Support client réactif",
-    description: "Une équipe disponible 24h/24 pour vous accompagner.",
+    icon: Shield,
+    title: "Protection totale",
+    description: "Joël vous accompagne avant, pendant et après l'intervention.",
   },
 ];
 
@@ -39,54 +46,67 @@ export default function StopArnaquesSolution() {
   const { config } = useSiteConfig();
 
   return (
-    <section ref={ref} className="py-16">
+    <section ref={ref} className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          className="text-center mb-12"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("La ")}
-            <span className="gradient-text">{yellowPunctuation("solution Joël")}</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-joel-violet/10 border border-joel-violet/20 rounded-full mb-4 sm:mb-6">
+            <Shield size={16} className="text-joel-violet" />
+            <span className="text-joel-violet font-medium text-sm sm:text-base">La solution Joël</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            {yellowPunctuation("Comment Joël vous protège")}
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
-            {yellowPunctuation("Comment nous garantissons votre sécurité à chaque intervention.")}
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            Des garanties concrètes pour un dépannage en toute confiance.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
+        {/* Solutions Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-16">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: index * 0.1 }}
-              className="bg-green-50/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-green-100"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`bg-white/80 backdrop-blur-sm rounded-2xl p-5 sm:p-6 shadow-lg border hover:shadow-xl transition-all ${
+                solution.accent ? 'border-joel-yellow/30' : 'border-white/50'
+              }`}
             >
-              <CheckCircle className="text-green-500 mb-3 sm:mb-4" size={28} />
-              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
+                solution.accent ? 'bg-joel-yellow' : 'bg-gradient-joel'
+              }`}>
+                <solution.icon size={24} className="text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {yellowPunctuation(solution.title)}
               </h3>
-              <p className="text-sm sm:text-base text-gray-600">
-                {yellowPunctuation(solution.description)}
+              <p className="text-sm text-gray-600">
+                {solution.description}
               </p>
             </motion.div>
           ))}
         </div>
 
+        {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
           <a
             href={config.cta_devis_url}
-            className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold text-base sm:text-lg rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl hover:-translate-y-1 transition-all"
           >
-            {yellowPunctuation("Obtenir mon devis")}
-            <ArrowRight size={20} />
+            <span>Obtenir mon devis</span>
+            <ArrowRight size={18} />
           </a>
         </motion.div>
       </div>

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Droplets, Zap, Key, ArrowRight, Clock, Euro, Shield, CheckCircle } from "lucide-react";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
-import { yellowPunctuation } from "@/components/ui/Title";
 
 const services = [
   {
@@ -81,12 +80,10 @@ export default function ServicesExplorer() {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("Nos ")}
-            <span className="gradient-text">{yellowPunctuation("domaines")}</span>
-            {yellowPunctuation(" d'expertise")}
+            Nos <span className="gradient-text">domaines</span> d'expertise
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            {yellowPunctuation("Découvrez nos services et trouvez la solution à votre problème.")}
+            Découvrez nos services et trouvez la solution à votre problème.
           </p>
         </motion.div>
 
@@ -135,12 +132,12 @@ export default function ServicesExplorer() {
                     <activeService.icon size={32} className="text-white hidden sm:block" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                    {yellowPunctuation(activeService.name)}
+                    {activeService.name}
                   </h3>
                 </div>
 
                 <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
-                  {yellowPunctuation(activeService.description)}
+                  {activeService.description}
                 </p>
 
                 {/* Stats - Responsive */}
@@ -160,8 +157,8 @@ export default function ServicesExplorer() {
                     href={config.cta_devis_url}
                     className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 bg-gradient-joel text-white font-semibold text-sm rounded-full shadow-lg shadow-joel-violet/30 hover:shadow-xl transition-all"
                   >
-                    <span className="hidden sm:inline">{yellowPunctuation("Obtenir un devis instantané")}</span>
-                    <span className="sm:hidden">{yellowPunctuation("Devis instantané")}</span>
+                    <span className="hidden sm:inline">Obtenir un devis instantané</span>
+                    <span className="sm:hidden">Devis instantané</span>
                     <ArrowRight size={16} />
                   </a>
                 </div>
@@ -170,7 +167,7 @@ export default function ServicesExplorer() {
               {/* Right: Problems */}
               <div>
                 <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-4 sm:mb-6">
-                  {yellowPunctuation("Problèmes courants")}
+                  Problèmes courants
                 </h4>
                 <div className="grid grid-cols-2 gap-2 sm:gap-4">
                   {activeService.problems.map((problem, index) => (
@@ -183,7 +180,7 @@ export default function ServicesExplorer() {
                     >
                       <CheckCircle size={16} className="text-joel-violet flex-shrink-0" />
                       <span className="text-gray-700 text-sm sm:text-base truncate">
-                        {yellowPunctuation(problem)}
+                        {problem}
                       </span>
                     </motion.div>
                   ))}

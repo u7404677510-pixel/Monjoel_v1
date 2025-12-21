@@ -57,6 +57,7 @@ export default function SerrurerieHero({ title, subtitle, description }: Serrure
           >
             <a
               href={`tel:${formatPhoneForTel(config.phone_number)}`}
+              data-placement="serrurerie-hero"
               className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all w-full sm:w-auto justify-center"
             >
               <Phone size={20} />

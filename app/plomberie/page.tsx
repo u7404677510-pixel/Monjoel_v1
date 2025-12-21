@@ -1,20 +1,13 @@
+"use client";
+
+import { Droplets } from "lucide-react";
 import ServiceHero from "@/components/sections/ServiceHero";
+import PlomberieServicesGrid from "@/components/sections/PlomberieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
-
-const plomberieProblems = [
-  "Fuite d'eau urgente",
-  "Canalisation bouchée",
-  "Chauffe-eau en panne",
-  "WC bouché",
-  "Robinet qui fuit",
-  "Ballon d'eau chaude",
-  "Fuite sous évier",
-  "Dégât des eaux",
-];
 
 const plomberieFAQs = [
   {
@@ -46,9 +39,9 @@ export default function PlomberiePage() {
         title="Plombier d'urgence à prix fixe"
         subtitle="Plomberie"
         description="Fuite d'eau, canalisation bouchée, chauffe-eau en panne... Nos plombiers vérifiés interviennent rapidement. Prix fixe annoncé et payé avant intervention."
-        iconName="droplets"
-        problems={plomberieProblems}
+        icon={Droplets}
       />
+      <PlomberieServicesGrid />
       <ServiceProcess />
       <ServiceGuarantees />
       <ServiceZones />

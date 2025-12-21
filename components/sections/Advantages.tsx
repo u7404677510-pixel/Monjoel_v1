@@ -54,12 +54,11 @@ export default function Advantages() {
           className="text-center mb-10 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("Pourquoi choisir ")}
-            <span className="gradient-text">{yellowPunctuation("Joël")}</span>
+            Pourquoi choisir <span className="gradient-text">Joël</span>
             <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            {yellowPunctuation("Une solution complète pour tous vos dépannages d'urgence.")}
+            Une solution complète pour tous vos dépannages d'urgence.
           </p>
         </motion.div>
 
@@ -84,7 +83,7 @@ export default function Advantages() {
                 {yellowPunctuation(advantage.title)}
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                {yellowPunctuation(advantage.description)}
+                {advantage.description}
               </p>
             </motion.div>
           ))}

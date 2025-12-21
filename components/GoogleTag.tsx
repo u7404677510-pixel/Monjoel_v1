@@ -4,9 +4,24 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 
+// Debug mode
+const DEBUG = process.env.NODE_ENV === 'development';
+
+function debugLog(message: string, data?: Record<string, unknown>) {
+  if (DEBUG) {
+    console.log(
+      `%c[GoogleTag]%c ${message}`,
+      'background: #ea4335; color: white; padding: 2px 6px; border-radius: 3px;',
+      'color: inherit;',
+      data ? data : ''
+    );
+  }
+}
+
 export default function GoogleTag() {
   const [gtagId, setGtagId] = useState<string | null>(null);
   const [gaId, setGaId] = useState<string | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     async function loadConfig() {
@@ -18,38 +33,73 @@ export default function GoogleTag() {
 
         if (error) throw error;
         if (data) {
-          setGtagId(data.gtag_id || null);
-          setGaId(data.google_analytics_id || null);
+          const gtag = data.gtag_id || null;
+          const ga = data.google_analytics_id || null;
+          
+          setGtagId(gtag);
+          setGaId(ga);
+          
+          debugLog('Config loaded from Supabase', {
+            gtagId: gtag || '(not set)',
+            gaId: ga || '(not set)',
+          });
         }
       } catch (err) {
         console.error("Error loading analytics config:", err);
+        debugLog('Error loading config', { 
+          error: err instanceof Error ? err.message : String(err) 
+        });
       }
     }
     loadConfig();
   }, []);
 
   // Don't render anything if no tracking ID is configured
-  if (!gtagId && !gaId) return null;
+  if (!gtagId && !gaId) {
+    debugLog('No tracking IDs configured, not rendering scripts');
+    return null;
+  }
 
   const primaryId = gtagId || gaId;
+
+  const handleScriptLoad = () => {
+    setIsLoaded(true);
+    debugLog('✅ gtag.js script loaded successfully', {
+      primaryId,
+      gtagAvailable: typeof window !== 'undefined' && typeof window.gtag === 'function',
+    });
+  };
+
+  const handleScriptError = () => {
+    debugLog('❌ Failed to load gtag.js script');
+  };
 
   return (
     <>
       <Script
+        id="gtag-base"
         src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`}
         strategy="afterInteractive"
+        onLoad={handleScriptLoad}
+        onError={handleScriptError}
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="gtag-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           ${gtagId ? `gtag('config', '${gtagId}');` : ''}
           ${gaId && gaId !== gtagId ? `gtag('config', '${gaId}');` : ''}
+          
+          ${DEBUG ? `
+          console.log('%c[GoogleTag]%c gtag initialized', 'background: #ea4335; color: white; padding: 2px 6px; border-radius: 3px;', 'color: inherit;', {
+            gtagId: '${gtagId || ""}',
+            gaId: '${gaId || ""}',
+            dataLayerLength: window.dataLayer.length
+          });
+          ` : ''}
         `}
       </Script>
     </>
   );
 }
-
-

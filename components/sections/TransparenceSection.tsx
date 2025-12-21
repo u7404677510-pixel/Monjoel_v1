@@ -38,19 +38,18 @@ export default function TransparenceSection({
               </div>
               <h2 className="text-xl sm:text-2xl font-bold">
                 {yellowPunctuation(title)}
-                <span className="text-joel-yellow">.</span>
               </h2>
             </div>
             
             <p className="text-white/90 mb-6 text-sm sm:text-base">
-              {yellowPunctuation(description)}
+              {description}
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               {points.map((point, i) => (
                 <div key={i} className="flex items-center gap-2 bg-white/10 rounded-xl px-4 py-3">
                   <ShieldCheck size={18} className="text-joel-yellow flex-shrink-0" />
-                  <span className="text-sm text-white/90">{yellowPunctuation(point)}</span>
+                  <span className="text-sm text-white/90">{point}</span>
                 </div>
               ))}
             </div>

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ShieldAlert, AlertTriangle } from "lucide-react";
-import { yellowPunctuation } from "@/components/ui/Title";
 
 export default function StopArnaquesHero() {
   return (
@@ -18,7 +17,7 @@ export default function StopArnaquesHero() {
           className="inline-flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-full mb-8"
         >
           <AlertTriangle size={18} />
-          <span className="font-medium">{yellowPunctuation("Sensibilisation")}</span>
+          <span className="font-medium">Sensibilisation</span>
         </motion.div>
 
         <motion.h1
@@ -27,9 +26,9 @@ export default function StopArnaquesHero() {
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
         >
-          {yellowPunctuation("Les arnaques au dépannage,")}
+          Les arnaques au dépannage,
           <br />
-          <span className="gradient-text">{yellowPunctuation("c'est terminé.")}</span>
+          <span className="gradient-text">c'est terminé.</span>
         </motion.h1>
 
         <motion.p
@@ -38,7 +37,8 @@ export default function StopArnaquesHero() {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
         >
-          {yellowPunctuation("Chaque année, des milliers de Français sont victimes de faux artisans. Découvrez leurs pratiques et comment vous protéger.")}
+          Chaque année, des milliers de Français sont victimes de faux artisans.
+          Découvrez leurs pratiques et comment vous protéger.
         </motion.p>
 
         <motion.div

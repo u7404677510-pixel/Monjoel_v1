@@ -51,12 +51,11 @@ export default function HowItWorks() {
           className="text-center mb-10 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("Comment ça ")}
-            <span className="gradient-text">{yellowPunctuation("marche")}</span>
+            Comment ça <span className="gradient-text">marche</span>
             <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            {yellowPunctuation("Un processus simple et transparent, de votre demande à l'intervention.")}
+            Un processus simple et transparent, de votre demande à l'intervention.
           </p>
         </motion.div>
 
@@ -79,7 +78,7 @@ export default function HowItWorks() {
                 <span className={`text-3xl font-bold ${step.accent ? 'text-joel-yellow' : 'gradient-text'}`}>{step.number}</span>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">{yellowPunctuation(step.title)}</h3>
-              <p className="text-sm text-gray-600">{yellowPunctuation(step.description)}</p>
+              <p className="text-sm text-gray-600">{step.description}</p>
             </motion.div>
           ))}
         </div>
@@ -108,7 +107,7 @@ export default function HowItWorks() {
                       <span className={`text-5xl font-bold ${step.accent ? 'text-joel-yellow' : 'gradient-text'}`}>{step.number}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{yellowPunctuation(step.title)}</h3>
-                    <p className="text-gray-600">{yellowPunctuation(step.description)}</p>
+                    <p className="text-gray-600">{step.description}</p>
                   </div>
                 </div>
 

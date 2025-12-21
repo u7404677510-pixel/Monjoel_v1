@@ -27,6 +27,7 @@ export default function PhoneButton({ variant = "button", className = "" }: Phon
     return (
       <a
         href={telLink}
+        data-placement="phone-button-text"
         className={`flex items-center gap-2 text-joel-violet hover:underline ${className}`}
       >
         <Phone size={18} />
@@ -39,6 +40,7 @@ export default function PhoneButton({ variant = "button", className = "" }: Phon
     return (
       <a
         href={telLink}
+        data-placement="phone-button-compact"
         className={`flex items-center gap-2 px-4 py-2 bg-gradient-joel text-white font-medium rounded-full hover:shadow-lg transition-all ${className}`}
       >
         <Phone size={18} />
@@ -50,6 +52,7 @@ export default function PhoneButton({ variant = "button", className = "" }: Phon
   return (
     <a
       href={telLink}
+      data-placement="phone-button"
       className={`flex items-center gap-3 px-6 py-3 bg-gradient-joel text-white font-bold rounded-full shadow-lg shadow-joel-violet/30 hover:shadow-xl transition-all ${className}`}
     >
       <Phone size={22} />

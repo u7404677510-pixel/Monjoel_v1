@@ -1,83 +1,90 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Droplets, Zap, Key } from "lucide-react";
-import CTAButtons from "@/components/CTAButtons";
+import { LucideIcon, Phone, ArrowRight } from "lucide-react";
+import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import { yellowPunctuation } from "@/components/ui/Title";
 
 interface ServiceHeroProps {
   title: string;
   subtitle: string;
   description: string;
-  iconName: "droplets" | "zap" | "key";
-  problems: string[];
+  icon: LucideIcon;
 }
 
-const iconMap = {
-  droplets: Droplets,
-  zap: Zap,
-  key: Key,
-};
-
-export default function ServiceHero({
-  title,
-  subtitle,
-  description,
-  iconName,
-  problems,
-}: ServiceHeroProps) {
-  const Icon = iconMap[iconName];
+export default function ServiceHero({ title, subtitle, description, icon: Icon }: ServiceHeroProps) {
+  const { config } = useSiteConfig();
 
   return (
-    <section className="pt-32 pb-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
+    <section className="pt-28 sm:pt-32 pb-12 sm:pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Icon */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-gradient-joel rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-xl shadow-joel-violet/30"
           >
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-joel rounded-full mb-6">
-              <Icon size={20} className="text-white" />
-              <span className="text-white font-medium">{subtitle}</span>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {yellowPunctuation(title)}
-            </h1>
-
-            <p className="text-lg text-gray-600 mb-8">
-              {yellowPunctuation(description)}
-            </p>
-
-            <CTAButtons variant="hero" />
+            <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </motion.div>
 
-          {/* Right - Problems list */}
+          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-joel-violet/10 border border-joel-violet/20 rounded-full mb-4 sm:mb-6"
           >
-            <h2 className="text-xl font-bold text-gray-900 mb-6">
-              {yellowPunctuation("Nous intervenons pour :")}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {problems.map((problem, index) => (
-                <motion.div
-                  key={problem}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
-                >
-                  <div className="w-2 h-2 bg-joel-violet rounded-full" />
-                  <span className="text-gray-700">{yellowPunctuation(problem)}</span>
-                </motion.div>
-              ))}
-            </div>
+            <span className="text-joel-violet font-medium text-sm sm:text-base">{subtitle}</span>
+          </motion.div>
+
+          {/* Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6"
+          >
+            {yellowPunctuation(title)}
+          </motion.h1>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-base sm:text-lg text-gray-600 mb-8"
+          >
+            {description}
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+          >
+            {config.show_cta_phone && (
+              <a
+                href={`tel:${formatPhoneForTel(config.phone_number)}`}
+                data-placement="service-hero"
+                className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all w-full sm:w-auto justify-center"
+              >
+                <Phone size={20} />
+                <span>{config.phone_number}</span>
+              </a>
+            )}
+            {config.show_cta_devis && (
+              <a
+                href={config.cta_devis_url}
+                className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-joel-violet font-bold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet/40 transition-all w-full sm:w-auto justify-center"
+              >
+                <span>Obtenir mon devis</span>
+                <ArrowRight size={18} />
+              </a>
+            )}
           </motion.div>
         </div>
       </div>

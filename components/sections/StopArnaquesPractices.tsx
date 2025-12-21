@@ -3,7 +3,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { XCircle } from "lucide-react";
-import { yellowPunctuation } from "@/components/ui/Title";
 
 const practices = [
   {
@@ -45,11 +44,10 @@ export default function StopArnaquesPractices() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("Les ")}
-            <span className="text-red-500">{yellowPunctuation("pratiques douteuses")}</span>
+            Les <span className="text-red-500">pratiques douteuses</span>
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            {yellowPunctuation("Apprenez à reconnaître les techniques des faux artisans.")}
+            Apprenez à reconnaître les techniques des faux artisans.
           </p>
         </motion.div>
 
@@ -64,10 +62,10 @@ export default function StopArnaquesPractices() {
             >
               <XCircle className="text-red-500 mb-4" size={32} />
               <h3 className="text-lg font-bold text-gray-900 mb-2">
-                {yellowPunctuation(practice.title)}
+                {practice.title}
               </h3>
               <p className="text-gray-600">
-                {yellowPunctuation(practice.description)}
+                {practice.description}
               </p>
             </motion.div>
           ))}

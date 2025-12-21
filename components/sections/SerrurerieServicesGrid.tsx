@@ -19,7 +19,7 @@ const services = [
     icon: DoorOpen,
     title: "Ouverture sans perçage",
     description: "On tente toujours sans dégâts. Ta porte reste intacte.",
-    price: "À partir de 119€",
+    price: "119€",
     highlight: true,
   },
   {
@@ -27,7 +27,7 @@ const services = [
     icon: Drill,
     title: "Ouverture avec perçage",
     description: "Perçage uniquement si nécessaire. Cylindre neuf inclus.",
-    price: "À partir de 149€",
+    price: "149€",
     highlight: false,
   },
   {
@@ -35,7 +35,7 @@ const services = [
     icon: KeyRound,
     title: "Perte de clés",
     description: "Urgence perte de clés. Ouverture + changement cylindre.",
-    price: "À partir de 119€",
+    price: "119€",
     highlight: false,
   },
   {
@@ -43,7 +43,7 @@ const services = [
     icon: Wrench,
     title: "Clé cassée dans serrure",
     description: "Extraction sans dégâts. Ne force pas, appelle-nous.",
-    price: "À partir de 99€",
+    price: "99€",
     highlight: false,
   },
   {
@@ -51,7 +51,7 @@ const services = [
     icon: Shield,
     title: "Blindage de porte",
     description: "Sécurise ta porte. Diagnostic gratuit, devis transparent.",
-    price: "À partir de 590€",
+    price: "590€",
     highlight: false,
   },
 ];
@@ -69,11 +69,10 @@ export default function SerrurerieServicesGrid() {
           className="text-center mb-10 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("Nos interventions ")}
-            <span className="gradient-text">{yellowPunctuation("serrurerie")}</span>
+            Nos interventions <span className="gradient-text">serrurerie</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
-            {yellowPunctuation("Chaque situation est différente.")} {yellowPunctuation("Découvrez nos solutions adaptées à votre problème.")}
+            {yellowPunctuation("Chaque situation est différente. Découvrez nos solutions adaptées à votre problème.")}
           </p>
         </motion.div>
 
@@ -102,13 +101,13 @@ export default function SerrurerieServicesGrid() {
                 <h3 className={`text-lg font-bold mb-2 ${
                   service.highlight ? "text-white" : "text-gray-900"
                 }`}>
-                  {yellowPunctuation(service.title)}
+                  {service.title}
                 </h3>
                 
                 <p className={`text-sm mb-4 ${
                   service.highlight ? "text-white/80" : "text-gray-600"
                 }`}>
-                  {yellowPunctuation(service.description)}
+                  {service.description}
                 </p>
                 
                 <div className="flex items-center justify-between">

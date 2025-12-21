@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const doList = [
-  "Tentative systématique sans perçage",
+  "Ouverture radio si porte claquée (non verrouillée)",
   "Techniques non destructives en priorité",
   "Prix fixe annoncé avant intervention",
   "Intervention en ~30 min en moyenne",
@@ -35,11 +35,15 @@ const benefitsList = [
 const faqs = [
   {
     question: "Quand l'ouverture sans perçage est-elle possible ?",
-    answer: "Dans 80% des cas, nos serruriers réussissent l'ouverture sans perçage. Cela dépend du type de serrure et de la situation. On essaie toujours en premier.",
+    answer: "L'ouverture sans perçage (technique radio/crochetage) est possible uniquement si la porte est claquée mais non verrouillée à clé. Si la porte est fermée à clé, d'autres techniques seront nécessaires.",
+  },
+  {
+    question: "Quelle est la différence entre porte claquée et porte fermée à clé ?",
+    answer: "Une porte claquée = le pêne demi-tour s'est enclenché mais la serrure n'est pas verrouillée. Une porte fermée à clé = un ou plusieurs tours de clé ont été donnés. Dans le second cas, l'ouverture radio n'est pas possible.",
   },
   {
     question: "Combien ça coûte ?",
-    answer: "Le prix est fixe et annoncé avant l'intervention : 119€ en moyenne. Tu payes ce prix, pas un euro de plus.",
+    answer: "Le prix est fixe et annoncé avant l'intervention : 119€ en moyenne pour une porte claquée. Tu payes ce prix, pas un euro de plus.",
   },
   {
     question: "Vous intervenez la nuit ?",
@@ -47,7 +51,7 @@ const faqs = [
   },
   {
     question: "Et si le perçage devient nécessaire ?",
-    answer: "Si après évaluation le perçage est inévitable, on t'informe AVANT et on te donne un nouveau devis. Tu décides, pas nous.",
+    answer: "Si après évaluation le perçage est inévitable (porte fermée à clé, serrure haute sécurité...), on t'informe AVANT et on te donne un nouveau devis. Tu décides, pas nous.",
   },
   {
     question: "Combien de temps dure l'intervention ?",
@@ -59,9 +63,9 @@ export default function OuvertureSansPercagePage() {
   return (
     <>
       <SerrurerieHero
-        title="Ouverture de porte sans perçage."
+        title="Ouverture de porte sans perçage"
         subtitle="Serrurerie"
-        description="On tente toujours sans dégâts. Ta porte reste intacte, ton budget aussi. Prix fixe, intervention rapide, artisan vérifié."
+        description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe, intervention rapide."
       />
       <SerrurerieServiceCards
         doList={doList}
@@ -70,7 +74,7 @@ export default function OuvertureSansPercagePage() {
       />
       <ServiceProcess />
       <TransparenceSection
-        description="Chez Joël, on ne perce pas par défaut. On utilise d'abord toutes les techniques non destructives. Le perçage, c'est uniquement quand il n'y a pas d'autre solution — et tu es prévenu avant."
+        description="L'ouverture radio fonctionne uniquement sur les portes claquées (pêne demi-tour enclenché, mais non verrouillée à clé). Si ta porte est fermée à clé, on t'informe des autres solutions disponibles avant d'intervenir."
         points={["Prix annoncé = prix payé", "Pas de majoration surprise", "Devis avant intervention"]}
       />
       <ServiceFAQ faqs={faqs} serviceName="Ouverture sans perçage" />
@@ -78,4 +82,3 @@ export default function OuvertureSansPercagePage() {
     </>
   );
 }
-

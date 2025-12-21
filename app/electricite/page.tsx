@@ -1,20 +1,13 @@
+"use client";
+
+import { Zap } from "lucide-react";
 import ServiceHero from "@/components/sections/ServiceHero";
+import ElectriciteServicesGrid from "@/components/sections/ElectriciteServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
-
-const electriciteProblems = [
-  "Panne de courant",
-  "Court-circuit",
-  "Disjoncteur qui saute",
-  "Prise défectueuse",
-  "Tableau électrique",
-  "Installation aux normes",
-  "Câblage défaillant",
-  "Éclairage en panne",
-];
 
 const electriciteFAQs = [
   {
@@ -46,9 +39,9 @@ export default function ElectricitePage() {
         title="Électricien d'urgence à prix fixe"
         subtitle="Électricité"
         description="Panne de courant, court-circuit, disjoncteur... Nos électriciens agréés sécurisent votre installation. Prix fixe annoncé et payé avant intervention."
-        iconName="zap"
-        problems={electriciteProblems}
+        icon={Zap}
       />
+      <ElectriciteServicesGrid />
       <ServiceProcess />
       <ServiceGuarantees />
       <ServiceZones />

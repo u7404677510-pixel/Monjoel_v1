@@ -41,8 +41,7 @@ export default function ServiceProcess() {
           className="text-center mb-10 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("Comment ça ")}
-            <span className="gradient-text">{yellowPunctuation("marche")}</span>
+            Comment ça <span className="gradient-text">marche</span>
             <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
@@ -68,7 +67,7 @@ export default function ServiceProcess() {
                 {yellowPunctuation(step.title)}
               </h3>
               <p className="text-xs sm:text-sm text-gray-600">
-                {yellowPunctuation(step.description)}
+                {step.description}
               </p>
             </motion.div>
           ))}

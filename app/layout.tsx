@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import GoogleTag from "@/components/GoogleTag";
+import TelClickTracker from "@/components/TelClickTracker";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -50,6 +51,7 @@ export default function RootLayout({
       </head>
       <body className="bg-white min-h-screen overflow-x-hidden">
         <GoogleTag />
+        <TelClickTracker />
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

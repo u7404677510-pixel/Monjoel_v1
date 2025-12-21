@@ -27,7 +27,7 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
             <span className="text-sm font-medium text-joel-violet">FAQ</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-            {yellowPunctuation("Questions fréquentes")}
+            Questions fréquentes
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
             {yellowPunctuation(`Tout ce que vous devez savoir sur nos services de ${serviceName.toLowerCase()}`)}
@@ -67,7 +67,7 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-gray-600 text-sm sm:text-base">
-                      {yellowPunctuation(faq.answer)}
+                      {faq.answer}
                     </div>
                   </motion.div>
                 )}

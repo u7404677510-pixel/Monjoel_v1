@@ -41,6 +41,7 @@ export default function CTAButtons({ variant = "hero", className = "" }: CTAButt
       {showPhone && (
         <a
           href={`tel:${formatPhoneForTel(config.phone_number)}`}
+          data-placement="cta-section"
           className={phoneStyles}
         >
           <Phone size={variant === "compact" ? 18 : 20} />

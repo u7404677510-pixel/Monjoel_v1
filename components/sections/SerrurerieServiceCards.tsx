@@ -38,7 +38,7 @@ export default function SerrurerieServiceCards({ doList, dontList, benefitsList 
               {doList.map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                   <CheckCircle size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
-                  <span>{yellowPunctuation(item)}</span>
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
@@ -63,7 +63,7 @@ export default function SerrurerieServiceCards({ doList, dontList, benefitsList 
               {dontList.map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                   <XCircle size={16} className="text-red-500 mt-0.5 flex-shrink-0" />
-                  <span>{yellowPunctuation(item)}</span>
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
@@ -88,7 +88,7 @@ export default function SerrurerieServiceCards({ doList, dontList, benefitsList 
               {benefitsList.map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                   <Gift size={16} className="text-joel-yellow mt-0.5 flex-shrink-0" />
-                  <span>{yellowPunctuation(item)}</span>
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>

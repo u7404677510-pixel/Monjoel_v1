@@ -19,7 +19,7 @@ export default function Hero() {
           >
             <Sparkles size={14} className="text-joel-yellow" />
             <span className="text-xs sm:text-sm font-medium text-gray-700">
-              {yellowPunctuation("Nouveau : Devis instantané en ligne")}
+              Nouveau : Devis instantané en ligne
             </span>
           </motion.div>
 
@@ -32,9 +32,7 @@ export default function Hero() {
           >
             {yellowPunctuation("Dépannage d'Urgence à Prix Fixes")}
             <br />
-            <span className="gradient-text">
-              {yellowPunctuation("Fini les Arnaques")}
-            </span>
+            <span className="gradient-text">{yellowPunctuation("Fini les Arnaques")}</span>
             <span className="text-joel-yellow">.</span>
           </motion.h1>
 
@@ -45,7 +43,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-2 sm:mb-4"
           >
-            {yellowPunctuation("Serrurier • Plombier • Électricien")}
+            Serrurier • Plombier • Électricien
           </motion.p>
 
           <motion.p
@@ -54,7 +52,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10"
           >
-            {yellowPunctuation("Disponible 7j/7 • 24h/24")}
+            Disponible 7j/7 • 24h/24
           </motion.p>
 
           {/* CTA Buttons */}
@@ -76,15 +74,15 @@ export default function Hero() {
           >
             <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full text-sm">
               <Shield className="text-joel-violet" size={18} />
-              <span>{yellowPunctuation("Artisans vérifiés")}</span>
+              <span>Artisans vérifiés</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full text-sm">
               <Euro className="text-joel-yellow" size={18} />
-              <span>{yellowPunctuation("Prix fixes garantis")}</span>
+              <span>Prix fixes garantis</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600 bg-white/60 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full text-sm">
               <Clock className="text-joel-violet" size={18} />
-              <span>{yellowPunctuation("Chez vous en ~30min")}</span>
+              <span>Chez vous en ~30min</span>
             </div>
           </motion.div>
         </div>

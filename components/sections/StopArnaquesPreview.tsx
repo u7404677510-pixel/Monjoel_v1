@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ShieldAlert, ArrowRight } from "lucide-react";
+import { Shield, ArrowRight, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import { yellowPunctuation } from "@/components/ui/Title";
 
@@ -17,35 +17,47 @@ export default function StopArnaquesPreview() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="relative bg-gradient-joel rounded-2xl sm:rounded-3xl p-6 sm:p-12 md:p-16 overflow-hidden"
+          className="relative bg-gradient-joel rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-16 overflow-hidden"
         >
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-white/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-32 sm:w-64 h-32 sm:h-64 bg-joel-yellow/20 rounded-full blur-2xl" />
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-joel-yellow blur-3xl" />
+            <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-white blur-3xl" />
+          </div>
 
-          <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+          {/* Content */}
+          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
             {/* Icon */}
-            <div className="w-16 h-16 sm:w-24 sm:h-24 bg-joel-yellow/30 rounded-2xl sm:rounded-3xl flex items-center justify-center flex-shrink-0">
-              <ShieldAlert size={32} className="text-white sm:hidden" />
-              <ShieldAlert size={48} className="text-white hidden sm:block" />
-            </div>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={isInView ? { scale: 1 } : {}}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-joel-yellow to-amber-500 rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-2xl shadow-joel-yellow/30 flex-shrink-0"
+            >
+              <Shield className="w-8 h-8 sm:w-12 sm:h-12 text-white" />
+            </motion.div>
 
-            {/* Content */}
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4">
-                {yellowPunctuation("Arrêtez de vous faire avoir")}
+            {/* Text */}
+            <div className="flex-1 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-3 sm:mb-4">
+                <AlertTriangle size={16} className="text-joel-yellow sm:w-5 sm:h-5" />
+                <span className="text-joel-yellow font-medium text-sm sm:text-base">Protection anti-arnaque</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
+                {yellowPunctuation("Arrêtez de vous faire arnaquer")}
               </h2>
-              <p className="text-white/80 text-sm sm:text-lg max-w-xl">
-                {yellowPunctuation("Découvrez les pratiques douteuses des faux artisans et comment Joël vous protège.")}
+              <p className="text-sm sm:text-base text-gray-300 mb-6 lg:mb-0">
+                Joël vous protège contre les mauvaises pratiques du secteur.
+                Découvrez comment nous garantissons votre tranquillité.
               </p>
             </div>
 
             {/* CTA */}
             <Link
               href="/stop-arnaques"
-              className="flex items-center gap-2 px-5 sm:px-8 py-3 sm:py-4 bg-white text-joel-violet font-bold text-sm sm:text-base rounded-full hover:shadow-xl transition-all flex-shrink-0"
+              className="inline-flex items-center gap-2 px-5 sm:px-8 py-3 sm:py-4 bg-joel-yellow text-gray-900 font-bold rounded-full shadow-xl shadow-joel-yellow/30 hover:shadow-2xl hover:-translate-y-1 transition-all text-sm sm:text-base"
             >
-              {yellowPunctuation("En savoir plus")}
+              <span>Se protéger</span>
               <ArrowRight size={18} />
             </Link>
           </div>
