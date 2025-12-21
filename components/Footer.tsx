@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
@@ -51,20 +52,17 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
-            <div className="mb-6">
-              <Link href="/" className="inline-block">
-                {/* Logo jaune pour fond foncé */}
-                <div className="flex flex-col items-start">
-                  <div className="relative">
-                    <div className="w-3 h-3 bg-joel-yellow rounded-full mb-1 ml-1"></div>
-                    <span className="text-5xl font-bold text-joel-yellow" style={{ fontFamily: 'Chillax, sans-serif' }}>J</span>
-                  </div>
-                </div>
+            <div className="mb-4">
+              <Link href="/">
+                <Image
+                  src="/logo-white.png"
+                  alt="Joël"
+                  width={200}
+                  height={80}
+                  className="h-auto w-auto max-h-20"
+                />
               </Link>
             </div>
-            <p className="text-joel-yellow text-lg font-medium mb-4" style={{ fontFamily: 'Chillax, sans-serif' }}>
-              Comment je peux vous aider ?
-            </p>
             <div className="space-y-2">
               {loading ? (
                 <span className="flex items-center gap-2 text-gray-400 text-sm">
