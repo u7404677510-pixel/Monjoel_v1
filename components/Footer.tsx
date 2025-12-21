@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
@@ -52,19 +51,19 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
-            <div className="mb-4">
-              <Link href="/">
-                <Image
-                  src="/logo.png"
-                  alt="Joël"
-                  width={180}
-                  height={60}
-                  className="h-auto w-auto max-h-14"
-                />
+            <div className="mb-6">
+              <Link href="/" className="inline-block">
+                {/* Logo jaune pour fond foncé */}
+                <div className="flex flex-col items-start">
+                  <div className="relative">
+                    <div className="w-3 h-3 bg-joel-yellow rounded-full mb-1 ml-1"></div>
+                    <span className="text-5xl font-bold text-joel-yellow" style={{ fontFamily: 'Chillax, sans-serif' }}>J</span>
+                  </div>
+                </div>
               </Link>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
-              Dépannage d'urgence sans surprises. Prix fixes, artisans vérifiés.
+            <p className="text-joel-yellow text-lg font-medium mb-4" style={{ fontFamily: 'Chillax, sans-serif' }}>
+              Comment je peux vous aider ?
             </p>
             <div className="space-y-2">
               {loading ? (
