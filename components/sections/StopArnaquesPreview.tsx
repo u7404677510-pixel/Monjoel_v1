@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ShieldAlert, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 export default function StopArnaquesPreview() {
   const ref = useRef(null);
@@ -32,10 +33,10 @@ export default function StopArnaquesPreview() {
             {/* Content */}
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4">
-                Arrêtez de vous faire avoir
+                {yellowPunctuation("Arrêtez de vous faire avoir")}
               </h2>
               <p className="text-white/80 text-sm sm:text-lg max-w-xl">
-                Découvrez les pratiques douteuses des faux artisans et comment Joël vous protège.
+                {yellowPunctuation("Découvrez les pratiques douteuses des faux artisans et comment Joël vous protège.")}
               </p>
             </div>
 
@@ -44,7 +45,7 @@ export default function StopArnaquesPreview() {
               href="/stop-arnaques"
               className="flex items-center gap-2 px-5 sm:px-8 py-3 sm:py-4 bg-white text-joel-violet font-bold text-sm sm:text-base rounded-full hover:shadow-xl transition-all flex-shrink-0"
             >
-              En savoir plus
+              {yellowPunctuation("En savoir plus")}
               <ArrowRight size={18} />
             </Link>
           </div>

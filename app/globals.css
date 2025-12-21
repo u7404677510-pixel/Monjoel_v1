@@ -130,3 +130,68 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 4px;
   vertical-align: super;
 }
+
+/* Yellow tittle (dot) on i and j letters in titles */
+.joel-yellow-tittle {
+  position: relative;
+  display: inline-block;
+}
+
+.joel-yellow-tittle::before {
+  content: '';
+  position: absolute;
+  background: #F5D547;
+  border-radius: 50%;
+  /* Position for lowercase i/j */
+  width: 0.14em;
+  height: 0.14em;
+  top: 0.08em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* For h1 titles - larger dot */
+h1 .joel-yellow-tittle::before {
+  width: 0.12em;
+  height: 0.12em;
+  top: 0.06em;
+}
+
+/* For h2 titles */
+h2 .joel-yellow-tittle::before {
+  width: 0.13em;
+  height: 0.13em;
+  top: 0.07em;
+}
+
+/* For h3 titles */
+h3 .joel-yellow-tittle::before {
+  width: 0.14em;
+  height: 0.14em;
+  top: 0.08em;
+}
+
+/* Yellow dot letter classes for direct use */
+.yellow-dot-letter {
+  position: relative;
+  display: inline-block;
+}
+
+.yellow-dot-letter::before {
+  content: '';
+  position: absolute;
+  background: #F5D547;
+  border-radius: 50%;
+  width: 0.13em;
+  height: 0.13em;
+  top: 0.08em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Uppercase I/J don't have dots, so no styling needed */
+.yellow-dot-letter-upper {
+  /* No dot for uppercase */
+}

@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Camera, MessageCircleQuestion, FileText, CreditCard } from "lucide-react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 const steps = [
   {
@@ -50,11 +51,12 @@ export default function HowItWorks() {
           className="text-center mb-10 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Comment ça <span className="gradient-text">marche</span>
+            {yellowPunctuation("Comment ça ")}
+            <span className="gradient-text">{yellowPunctuation("marche")}</span>
             <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Un processus simple et transparent, de votre demande à l'intervention.
+            {yellowPunctuation("Un processus simple et transparent, de votre demande à l'intervention.")}
           </p>
         </motion.div>
 
@@ -76,8 +78,8 @@ export default function HowItWorks() {
                 </div>
                 <span className={`text-3xl font-bold ${step.accent ? 'text-joel-yellow' : 'gradient-text'}`}>{step.number}</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
-              <p className="text-sm text-gray-600">{step.description}</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">{yellowPunctuation(step.title)}</h3>
+              <p className="text-sm text-gray-600">{yellowPunctuation(step.description)}</p>
             </motion.div>
           ))}
         </div>
@@ -105,8 +107,8 @@ export default function HowItWorks() {
                     <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "justify-end" : ""}`}>
                       <span className={`text-5xl font-bold ${step.accent ? 'text-joel-yellow' : 'gradient-text'}`}>{step.number}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{yellowPunctuation(step.title)}</h3>
+                    <p className="text-gray-600">{yellowPunctuation(step.description)}</p>
                   </div>
                 </div>
 

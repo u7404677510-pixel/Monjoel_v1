@@ -1,9 +1,16 @@
+import { Metadata } from "next";
 import ServiceHero from "@/components/sections/ServiceHero";
+import SerrurerieServicesGrid from "@/components/sections/SerrurerieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
+
+export const metadata: Metadata = {
+  title: "Serrurier d'Urgence | Joël - Prix Fixe Garanti",
+  description: "Serrurier disponible 24h/24, 7j/7. Ouverture de porte, changement de serrure, blindage. Prix fixe annoncé avant intervention. Intervention en 30 min.",
+};
 
 const serrurerieProblems = [
   "Porte claquée",
@@ -49,6 +56,7 @@ export default function SerrureriePage() {
         iconName="key"
         problems={serrurerieProblems}
       />
+      <SerrurerieServicesGrid />
       <ServiceProcess />
       <ServiceGuarantees />
       <ServiceZones />

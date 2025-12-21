@@ -2,27 +2,14 @@
 
 import { motion } from "framer-motion";
 import { ShieldAlert, AlertTriangle } from "lucide-react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 export default function StopArnaquesHero() {
   return (
     <section className="relative pt-32 pb-16 overflow-hidden">
-      {/* Animated violet elements */}
-      <motion.div
-        className="absolute top-20 right-10 w-64 h-64 bg-joel-violet/20 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 20, 0],
-        }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
-      <motion.div
-        className="absolute bottom-0 left-10 w-48 h-48 bg-joel-mauve/15 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.1, 1],
-          y: [0, -15, 0],
-        }}
-        transition={{ duration: 6, repeat: Infinity, delay: 1 }}
-      />
+      {/* Static violet elements */}
+      <div className="absolute top-20 right-10 w-64 h-64 bg-joel-violet/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-10 w-48 h-48 bg-joel-mauve/15 rounded-full blur-3xl" />
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <motion.div
@@ -31,7 +18,7 @@ export default function StopArnaquesHero() {
           className="inline-flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-full mb-8"
         >
           <AlertTriangle size={18} />
-          <span className="font-medium">Sensibilisation</span>
+          <span className="font-medium">{yellowPunctuation("Sensibilisation")}</span>
         </motion.div>
 
         <motion.h1
@@ -40,9 +27,9 @@ export default function StopArnaquesHero() {
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
         >
-          Les arnaques au dépannage,
+          {yellowPunctuation("Les arnaques au dépannage,")}
           <br />
-          <span className="gradient-text">c'est terminé.</span>
+          <span className="gradient-text">{yellowPunctuation("c'est terminé.")}</span>
         </motion.h1>
 
         <motion.p
@@ -51,8 +38,7 @@ export default function StopArnaquesHero() {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
         >
-          Chaque année, des milliers de Français sont victimes de faux artisans.
-          Découvrez leurs pratiques et comment vous protéger.
+          {yellowPunctuation("Chaque année, des milliers de Français sont victimes de faux artisans. Découvrez leurs pratiques et comment vous protéger.")}
         </motion.p>
 
         <motion.div
@@ -69,4 +55,3 @@ export default function StopArnaquesHero() {
     </section>
   );
 }
-

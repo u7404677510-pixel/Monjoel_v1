@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 const solutions = [
   {
@@ -46,10 +47,11 @@ export default function StopArnaquesSolution() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            La <span className="gradient-text">solution Joël</span>
+            {yellowPunctuation("La ")}
+            <span className="gradient-text">{yellowPunctuation("solution Joël")}</span>
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
-            Comment nous garantissons votre sécurité à chaque intervention.
+            {yellowPunctuation("Comment nous garantissons votre sécurité à chaque intervention.")}
           </p>
         </motion.div>
 
@@ -63,8 +65,12 @@ export default function StopArnaquesSolution() {
               className="bg-green-50/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-green-100"
             >
               <CheckCircle className="text-green-500 mb-3 sm:mb-4" size={28} />
-              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{solution.title}</h3>
-              <p className="text-sm sm:text-base text-gray-600">{solution.description}</p>
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
+                {yellowPunctuation(solution.title)}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                {yellowPunctuation(solution.description)}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -79,7 +85,7 @@ export default function StopArnaquesSolution() {
             href={config.cta_devis_url}
             className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold text-base sm:text-lg rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl transition-all"
           >
-            Obtenir mon devis
+            {yellowPunctuation("Obtenir mon devis")}
             <ArrowRight size={20} />
           </a>
         </motion.div>

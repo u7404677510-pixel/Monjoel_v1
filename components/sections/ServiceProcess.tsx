@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Smartphone, MessageSquare, CreditCard, Wrench } from "lucide-react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 const steps = [
   {
@@ -40,10 +41,12 @@ export default function ServiceProcess() {
           className="text-center mb-10 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-            Comment ça <span className="gradient-text">marche</span> ?
+            {yellowPunctuation("Comment ça ")}
+            <span className="gradient-text">{yellowPunctuation("marche")}</span>
+            <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
-            Un processus simple en 4 étapes
+            {yellowPunctuation("Un processus simple en 4 étapes")}
           </p>
         </motion.div>
 
@@ -61,8 +64,12 @@ export default function ServiceProcess() {
               }`}>
                 <step.icon size={28} className="text-white" />
               </div>
-              <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1 sm:mb-2">{step.title}</h3>
-              <p className="text-xs sm:text-sm text-gray-600">{step.description}</p>
+              <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1 sm:mb-2">
+                {yellowPunctuation(step.title)}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600">
+                {yellowPunctuation(step.description)}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -70,4 +77,3 @@ export default function ServiceProcess() {
     </section>
   );
 }
-

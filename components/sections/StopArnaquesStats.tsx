@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 const stats = [
   { value: "15K+", label: "Plaintes/an", color: "bg-red-500" },
@@ -23,10 +24,12 @@ export default function StopArnaquesStats() {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Les <span className="text-red-500">chiffres</span> alarmants
+            {yellowPunctuation("Les ")}
+            <span className="text-red-500">{yellowPunctuation("chiffres")}</span>
+            {yellowPunctuation(" alarmants")}
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
-            Les arnaques au dépannage sont un fléau en France.
+            {yellowPunctuation("Les arnaques au dépannage sont un fléau en France.")}
           </p>
         </motion.div>
 
@@ -43,7 +46,9 @@ export default function StopArnaquesStats() {
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2 whitespace-nowrap">
                 {stat.value}
               </div>
-              <div className="text-gray-600 text-xs sm:text-sm leading-tight">{stat.label}</div>
+              <div className="text-gray-600 text-xs sm:text-sm leading-tight">
+                {yellowPunctuation(stat.label)}
+              </div>
             </motion.div>
           ))}
         </div>

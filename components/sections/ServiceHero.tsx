@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Droplets, Zap, Key } from "lucide-react";
 import CTAButtons from "@/components/CTAButtons";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 interface ServiceHeroProps {
   title: string;
@@ -43,10 +44,12 @@ export default function ServiceHero({
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {title}
+              {yellowPunctuation(title)}
             </h1>
 
-            <p className="text-lg text-gray-600 mb-8">{description}</p>
+            <p className="text-lg text-gray-600 mb-8">
+              {yellowPunctuation(description)}
+            </p>
 
             <CTAButtons variant="hero" />
           </motion.div>
@@ -58,7 +61,9 @@ export default function ServiceHero({
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50"
           >
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Nous intervenons pour :</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-6">
+              {yellowPunctuation("Nous intervenons pour :")}
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {problems.map((problem, index) => (
                 <motion.div
@@ -69,7 +74,7 @@ export default function ServiceHero({
                   className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
                 >
                   <div className="w-2 h-2 bg-joel-violet rounded-full" />
-                  <span className="text-gray-700">{problem}</span>
+                  <span className="text-gray-700">{yellowPunctuation(problem)}</span>
                 </motion.div>
               ))}
             </div>

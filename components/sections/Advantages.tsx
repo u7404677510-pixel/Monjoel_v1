@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Shield, Euro, Clock, Star, Phone, CheckCircle } from "lucide-react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 const advantages = [
   {
@@ -53,11 +54,12 @@ export default function Advantages() {
           className="text-center mb-10 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Pourquoi choisir <span className="gradient-text">Joël</span>
+            {yellowPunctuation("Pourquoi choisir ")}
+            <span className="gradient-text">{yellowPunctuation("Joël")}</span>
             <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Une solution complète pour tous vos dépannages d'urgence.
+            {yellowPunctuation("Une solution complète pour tous vos dépannages d'urgence.")}
           </p>
         </motion.div>
 
@@ -78,8 +80,12 @@ export default function Advantages() {
               }`}>
                 <advantage.icon size={24} className="text-white" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{advantage.title}</h3>
-              <p className="text-sm sm:text-base text-gray-600">{advantage.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                {yellowPunctuation(advantage.title)}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                {yellowPunctuation(advantage.description)}
+              </p>
             </motion.div>
           ))}
         </div>

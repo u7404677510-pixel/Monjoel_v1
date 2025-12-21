@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 interface FAQItem {
   question: string;
@@ -26,10 +27,10 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
             <span className="text-sm font-medium text-joel-violet">FAQ</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-            Questions fréquentes
+            {yellowPunctuation("Questions fréquentes")}
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
-            Tout ce que vous devez savoir sur nos services de {serviceName.toLowerCase()}
+            {yellowPunctuation(`Tout ce que vous devez savoir sur nos services de ${serviceName.toLowerCase()}`)}
           </p>
         </div>
 
@@ -47,7 +48,9 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-4 sm:p-5 text-left"
               >
-                <span className="font-semibold text-gray-900 text-sm sm:text-base pr-4">{faq.question}</span>
+                <span className="font-semibold text-gray-900 text-sm sm:text-base pr-4">
+                  {yellowPunctuation(faq.question)}
+                </span>
                 <ChevronDown
                   size={20}
                   className={`text-joel-violet flex-shrink-0 transition-transform ${
@@ -64,7 +67,7 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-gray-600 text-sm sm:text-base">
-                      {faq.answer}
+                      {yellowPunctuation(faq.answer)}
                     </div>
                   </motion.div>
                 )}
@@ -76,4 +79,3 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
     </section>
   );
 }
-

@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, Clock, Shield } from "lucide-react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 const zones = [
   "Paris", "Lyon", "Marseille", "Bordeaux", "Toulouse",
@@ -25,11 +26,10 @@ export default function ServiceZones() {
             className="text-white"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-              Intervention dans toute la France
+              {yellowPunctuation("Intervention dans toute la France")}
             </h2>
             <p className="text-white/80 text-sm sm:text-base mb-6 sm:mb-8">
-              Nos artisans sont disponibles dans les principales villes françaises. 
-              Intervention rapide garantie, 24h/24 et 7j/7.
+              {yellowPunctuation("Nos artisans sont disponibles dans les principales villes françaises. Intervention rapide garantie, 24h/24 et 7j/7.")}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
@@ -39,7 +39,7 @@ export default function ServiceZones() {
                 </div>
                 <div>
                   <div className="text-xl sm:text-2xl font-bold">12+</div>
-                  <div className="text-white/70 text-xs sm:text-sm">Villes couvertes</div>
+                  <div className="text-white/70 text-xs sm:text-sm">{yellowPunctuation("Villes couvertes")}</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -48,7 +48,7 @@ export default function ServiceZones() {
                 </div>
                 <div>
                   <div className="text-xl sm:text-2xl font-bold">~30min</div>
-                  <div className="text-white/70 text-xs sm:text-sm">Délai moyen</div>
+                  <div className="text-white/70 text-xs sm:text-sm">{yellowPunctuation("Délai moyen")}</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -57,7 +57,7 @@ export default function ServiceZones() {
                 </div>
                 <div>
                   <div className="text-xl sm:text-2xl font-bold">24/7</div>
-                  <div className="text-white/70 text-xs sm:text-sm">Disponibilité</div>
+                  <div className="text-white/70 text-xs sm:text-sm">{yellowPunctuation("Disponibilité")}</div>
                 </div>
               </div>
             </div>
@@ -70,7 +70,9 @@ export default function ServiceZones() {
             transition={{ delay: 0.2 }}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8">
-              <h3 className="text-white font-bold mb-4 sm:mb-6 text-base sm:text-lg">Principales zones d'intervention</h3>
+              <h3 className="text-white font-bold mb-4 sm:mb-6 text-base sm:text-lg">
+                {yellowPunctuation("Principales zones d'intervention")}
+              </h3>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {zones.map((zone, index) => (
                   <motion.span
@@ -85,7 +87,7 @@ export default function ServiceZones() {
                 ))}
               </div>
               <p className="text-white/60 text-xs sm:text-sm mt-4 sm:mt-6">
-                Et bien d'autres villes... Contactez-nous pour vérifier la disponibilité dans votre zone.
+                {yellowPunctuation("Et bien d'autres villes... Contactez-nous pour vérifier la disponibilité dans votre zone.")}
               </p>
             </div>
           </motion.div>
@@ -94,4 +96,3 @@ export default function ServiceZones() {
     </section>
   );
 }
-

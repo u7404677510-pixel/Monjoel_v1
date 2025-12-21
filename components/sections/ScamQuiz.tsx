@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, X, ArrowRight, RotateCcw, Trophy } from "lucide-react";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 interface Question {
   id: number;
@@ -110,18 +111,19 @@ export default function ScamQuiz() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-joel-violet/10 text-joel-violet text-sm font-medium mb-4">
             <Trophy size={16} />
-            Quiz interactif
+            {yellowPunctuation("Quiz interactif")}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Testez vos <span className="gradient-text">connaissances</span>
+            {yellowPunctuation("Testez vos ")}
+            <span className="gradient-text">{yellowPunctuation("connaissances")}</span>
           </h2>
         </motion.div>
 
         {/* Progress */}
         <div className="mb-8">
           <div className="flex justify-between text-sm text-gray-500 mb-2">
-            <span>Question {currentQuestion + 1} / {questions.length}</span>
-            <span>Score : {score}</span>
+            <span>{yellowPunctuation(`Question ${currentQuestion + 1} / ${questions.length}`)}</span>
+            <span>{yellowPunctuation(`Score : ${score}`)}</span>
           </div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
             <motion.div
@@ -141,8 +143,10 @@ export default function ScamQuiz() {
               className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50"
             >
               <div className="text-center mb-8">
-                <p className="text-gray-600 mb-4">À votre avis...</p>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">{question.question}</h3>
+                <p className="text-gray-600 mb-4">{yellowPunctuation("À votre avis...")}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-6">
+                  {yellowPunctuation(question.question)}
+                </h3>
                 <div className="inline-flex items-baseline gap-2 px-6 py-3 bg-gray-100 rounded-2xl">
                   <span className="text-4xl font-bold text-joel-violet">
                     {question.value.toLocaleString()}
@@ -180,19 +184,21 @@ export default function ScamQuiz() {
                     {isCorrect ? (
                       <>
                         <Check size={24} />
-                        <span className="font-semibold">Bonne réponse !</span>
+                        <span className="font-semibold">{yellowPunctuation("Bonne réponse !")}</span>
                       </>
                     ) : (
                       <>
                         <X size={24} />
-                        <span className="font-semibold">C'était "{question.answer}"</span>
+                        <span className="font-semibold">{yellowPunctuation(`C'était "${question.answer}"`)}</span>
                       </>
                     )}
                   </div>
                   <div className="p-5 bg-gray-50 rounded-2xl">
-                    <p className="text-gray-700">{question.explanation}</p>
+                    <p className="text-gray-700">{yellowPunctuation(question.explanation)}</p>
                     {question.source && (
-                      <p className="mt-2 text-sm text-gray-500">Source : {question.source}</p>
+                      <p className="mt-2 text-sm text-gray-500">
+                        {yellowPunctuation(`Source : ${question.source}`)}
+                      </p>
                     )}
                   </div>
                   <div className="flex justify-center">
@@ -201,7 +207,7 @@ export default function ScamQuiz() {
                       onClick={nextQuestion}
                       className="flex items-center gap-2 px-8 py-3 bg-gradient-joel text-white font-semibold rounded-full"
                     >
-                      {currentQuestion < questions.length - 1 ? "Question suivante" : "Voir le résultat"}
+                      {yellowPunctuation(currentQuestion < questions.length - 1 ? "Question suivante" : "Voir le résultat")}
                       <ArrowRight size={18} />
                     </motion.button>
                   </div>
@@ -215,20 +221,22 @@ export default function ScamQuiz() {
               className="bg-gradient-joel rounded-3xl p-12 text-center text-white"
             >
               <Trophy size={48} className="mx-auto mb-6" />
-              <h3 className="text-3xl font-bold mb-4">Quiz terminé !</h3>
+              <h3 className="text-3xl font-bold mb-4">{yellowPunctuation("Quiz terminé !")}</h3>
               <div className="text-6xl font-bold mb-4">{score} / {questions.length}</div>
               <p className="text-white/80 mb-8">
-                {score >= questions.length / 2
-                  ? "Bien joué ! Vous connaissez les risques."
-                  : "Les pratiques douteuses sont plus fréquentes que vous ne le pensez !"}
+                {yellowPunctuation(
+                  score >= questions.length / 2
+                    ? "Bien joué ! Vous connaissez les risques."
+                    : "Les pratiques douteuses sont plus fréquentes que vous ne le pensez !"
+                )}
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button onClick={resetQuiz} className="flex items-center justify-center gap-2 px-6 py-3 bg-white/20 rounded-full">
                   <RotateCcw size={18} />
-                  Recommencer
+                  {yellowPunctuation("Recommencer")}
                 </button>
                 <a href={config.cta_devis_url} className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-joel-violet font-semibold rounded-full">
-                  Obtenir mon devis
+                  {yellowPunctuation("Obtenir mon devis")}
                   <ArrowRight size={18} />
                 </a>
               </div>

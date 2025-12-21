@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Shield, Euro, Clock, Award, Phone, CheckCircle } from "lucide-react";
+import { yellowPunctuation } from "@/components/ui/Title";
 
 const guarantees = [
   {
@@ -52,10 +53,11 @@ export default function ServiceGuarantees() {
           className="text-center mb-10 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Les garanties <span className="gradient-text">Joël</span>
+            {yellowPunctuation("Les garanties ")}
+            <span className="gradient-text">{yellowPunctuation("Joël")}</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600">
-            Tout ce qui fait la différence avec les autres.
+            {yellowPunctuation("Tout ce qui fait la différence avec les autres.")}
           </p>
         </motion.div>
 
@@ -75,8 +77,12 @@ export default function ServiceGuarantees() {
               }`}>
                 <guarantee.icon size={20} className="text-white" />
               </div>
-              <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">{guarantee.title}</h3>
-              <p className="text-xs sm:text-sm text-gray-600 leading-tight">{guarantee.description}</p>
+              <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">
+                {yellowPunctuation(guarantee.title)}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 leading-tight">
+                {yellowPunctuation(guarantee.description)}
+              </p>
             </motion.div>
           ))}
         </div>
