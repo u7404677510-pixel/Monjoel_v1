@@ -18,6 +18,10 @@ export default function PartenairesPage() {
   }, []);
 
   async function loadPartners() {
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
     try {
       const { data, error } = await supabase
         .from("partners")
@@ -34,6 +38,7 @@ export default function PartenairesPage() {
   }
 
   const toggleActive = async (id: string, currentState: boolean) => {
+    if (!supabase) return;
     try {
       await supabase
         .from("partners")
@@ -47,6 +52,7 @@ export default function PartenairesPage() {
   };
 
   const deletePartner = async (id: string) => {
+    if (!supabase) return;
     try {
       await supabase.from("partners").delete().eq("id", id);
       setPartners(partners.filter(p => p.id !== id));
@@ -56,7 +62,7 @@ export default function PartenairesPage() {
   };
 
   const addPartner = async () => {
-    if (!newName) return;
+    if (!newName || !supabase) return;
     setSaving(true);
 
     try {

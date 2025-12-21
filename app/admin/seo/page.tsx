@@ -15,6 +15,10 @@ export default function SEOPageAdmin() {
 
   useEffect(() => {
     async function loadPages() {
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
       try {
         const { data, error } = await supabase
           .from("seo_pages")
@@ -38,7 +42,7 @@ export default function SEOPageAdmin() {
   };
 
   const handleSave = async () => {
-    if (!editingId || !editData) return;
+    if (!editingId || !editData || !supabase) return;
     setSaving(true);
 
     try {

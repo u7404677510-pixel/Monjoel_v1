@@ -21,6 +21,10 @@ export default function PersonnalisationPage() {
 
   useEffect(() => {
     async function loadConfig() {
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
       try {
         const { data, error } = await supabase
           .from("site_config")
@@ -52,6 +56,7 @@ export default function PersonnalisationPage() {
   }, []);
 
   const handleSave = async () => {
+    if (!supabase) return;
     setSaving(true);
     try {
       const { error } = await supabase
