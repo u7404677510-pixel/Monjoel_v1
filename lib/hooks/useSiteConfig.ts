@@ -33,6 +33,12 @@ export function useSiteConfig() {
 
   useEffect(() => {
     async function fetchConfig() {
+      // If supabase is not configured, use default config
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
+
       try {
         const { data, error } = await supabase
           .from("site_config")

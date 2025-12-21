@@ -3,6 +3,7 @@ import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import GoogleTag from "@/components/GoogleTag";
 import TelClickTracker from "@/components/TelClickTracker";
+import StickyCallButton from "@/components/StickyCallButton";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -53,6 +54,7 @@ export default function RootLayout({
         <GoogleTag />
         <TelClickTracker />
         <LayoutWrapper>{children}</LayoutWrapper>
+        <StickyCallButton />
       </body>
     </html>
   );

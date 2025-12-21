@@ -15,6 +15,11 @@ export default function TelephonePage() {
   // Load phone number from Supabase
   useEffect(() => {
     async function loadConfig() {
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
+      
       try {
         const { data, error } = await supabase
           .from("site_config")
@@ -59,6 +64,12 @@ export default function TelephonePage() {
 
     setSaving(true);
     setError("");
+
+    if (!supabase) {
+      setError("Base de données non configurée");
+      setSaving(false);
+      return;
+    }
 
     try {
       const { error } = await supabase
