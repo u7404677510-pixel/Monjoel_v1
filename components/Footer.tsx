@@ -45,7 +45,7 @@ export default function Footer() {
   const { config, loading } = useSiteConfig();
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-[#2D1F4E] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
@@ -184,7 +184,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        <div className="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
           <p>© {new Date().getFullYear()} Joël. Tous droits réservés.</p>
         </div>
       </div>
