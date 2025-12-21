@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
@@ -52,12 +53,15 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-4">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-joel rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">J</span>
-                </div>
-                <span className="text-2xl font-bold">Joël</span>
-              </div>
+              <Link href="/">
+                <Image
+                  src="/logo.png"
+                  alt="Joël"
+                  width={180}
+                  height={60}
+                  className="h-auto w-auto max-h-14"
+                />
+              </Link>
             </div>
             <p className="text-gray-400 text-sm mb-4">
               Dépannage d'urgence sans surprises. Prix fixes, artisans vérifiés.
