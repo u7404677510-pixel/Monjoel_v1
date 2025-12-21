@@ -5,9 +5,9 @@ import { useRef } from "react";
 import { MapPin, Clock, Shield } from "lucide-react";
 
 const zones = [
-  "Paris", "Lyon", "Marseille", "Bordeaux", "Toulouse",
-  "Nantes", "Nice", "Lille", "Strasbourg", "Montpellier",
-  "Rennes", "Grenoble"
+  "Paris", "Boulogne-Billancourt", "Saint-Denis", "Argenteuil", "Montreuil",
+  "Nanterre", "Créteil", "Versailles", "Vitry-sur-Seine", "Colombes",
+  "Asnières-sur-Seine", "Courbevoie"
 ];
 
 export default function ServiceZones() {
@@ -25,10 +25,10 @@ export default function ServiceZones() {
             className="text-white"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-              Intervention dans toute la France
+              Intervention dans toute l'Île-de-France
             </h2>
             <p className="text-white/80 text-sm sm:text-base mb-6 sm:mb-8">
-              Nos artisans sont disponibles dans les principales villes françaises. 
+              Nos artisans sont disponibles dans toute la région Île-de-France. 
               Intervention rapide garantie, 24h/24 et 7j/7.
             </p>
 
@@ -38,7 +38,7 @@ export default function ServiceZones() {
                   <MapPin size={20} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl font-bold">12+</div>
+                  <div className="text-xl sm:text-2xl font-bold">1200+</div>
                   <div className="text-white/70 text-xs sm:text-sm">Villes couvertes</div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function ServiceZones() {
                 ))}
               </div>
               <p className="text-white/60 text-xs sm:text-sm mt-4 sm:mt-6">
-                Et bien d'autres villes... Contactez-nous pour vérifier la disponibilité dans votre zone.
+                Et plus de 1200 villes en Île-de-France... Nous intervenons partout dans la région.
               </p>
             </div>
           </motion.div>

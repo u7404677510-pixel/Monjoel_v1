@@ -39,7 +39,7 @@ export default function AProposPage() {
             À propos de <span className="gradient-text">Joël</span>
           </h1>
           <p className="text-xl text-gray-600">
-            Notre mission : mettre fin aux arnaques au dépannage en France.
+            Notre mission : mettre fin aux arnaques au dépannage en Île-de-France.
           </p>
         </motion.div>
 

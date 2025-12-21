@@ -72,7 +72,7 @@ export default function ContactPage() {
                   <h3 className="font-semibold mb-2">Adresse</h3>
                   <div className="flex items-start gap-2">
                     <MapPin size={18} className="flex-shrink-0 mt-1" />
-                    <span>Paris, France</span>
+                    <span>Île-de-France</span>
                   </div>
                 </div>
               </div>
