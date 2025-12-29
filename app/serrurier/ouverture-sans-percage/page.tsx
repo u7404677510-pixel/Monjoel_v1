@@ -7,8 +7,8 @@ import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Ouverture de Porte Sans Perçage | Serrurier Joël - Prix Fixe",
-  description: "Ouverture de porte sans dégâts, sans perçage. Prix fixe annoncé avant intervention. Serrurier disponible 24h/24, intervention en 30 min.",
+  title: "Ouverture Porte Claquée | Serrurier Joël - Prix Fixe",
+  description: "Porte claquée ? Ouverture sans dégâts. Prix fixe annoncé avant intervention. Serrurier disponible 24h/24, intervention en 30 min.",
 };
 
 const doList = [
@@ -34,8 +34,8 @@ const benefitsList = [
 
 const faqs = [
   {
-    question: "Quand l'ouverture sans perçage est-elle possible ?",
-    answer: "L'ouverture sans perçage (technique radio/crochetage) est possible uniquement si la porte est claquée mais non verrouillée à clé. Si la porte est fermée à clé, d'autres techniques seront nécessaires.",
+    question: "Quand l'ouverture porte claquée est-elle possible ?",
+    answer: "L'ouverture porte claquée (technique radio/crochetage) est possible uniquement si la porte est claquée mais non verrouillée à clé. Si la porte est fermée à clé, d'autres techniques seront nécessaires.",
   },
   {
     question: "Quelle est la différence entre porte claquée et porte fermée à clé ?",
@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     question: "Combien de temps dure l'intervention ?",
-    answer: "Une ouverture sans perçage prend généralement 5 à 20 minutes selon la complexité de la serrure.",
+    answer: "Une ouverture porte claquée prend généralement 5 à 20 minutes selon la complexité de la serrure.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function OuvertureSansPercagePage() {
   return (
     <>
       <SerrurerieHero
-        title="Ouverture de porte sans perçage"
+        title="Ouverture porte claquée"
         subtitle="Serrurerie"
         description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe, intervention rapide."
       />
@@ -77,7 +77,7 @@ export default function OuvertureSansPercagePage() {
         description="L'ouverture radio fonctionne uniquement sur les portes claquées (pêne demi-tour enclenché, mais non verrouillée à clé). Si ta porte est fermée à clé, on t'informe des autres solutions disponibles avant d'intervenir."
         points={["Prix annoncé = prix payé", "Pas de majoration surprise", "Devis avant intervention"]}
       />
-      <ServiceFAQ faqs={faqs} serviceName="Ouverture sans perçage" />
+      <ServiceFAQ faqs={faqs} serviceName="Ouverture porte claquée" />
       <FinalCTA />
     </>
   );

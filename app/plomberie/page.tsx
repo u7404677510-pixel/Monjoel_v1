@@ -1,7 +1,6 @@
 "use client";
 
-import { Droplets } from "lucide-react";
-import ServiceHero from "@/components/sections/ServiceHero";
+import PlomberieHero from "@/components/sections/PlomberieHero";
 import PlomberieServicesGrid from "@/components/sections/PlomberieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
@@ -35,11 +34,10 @@ const plomberieFAQs = [
 export default function PlomberiePage() {
   return (
     <>
-      <ServiceHero
+      <PlomberieHero
         title="Plombier d'urgence à prix fixe"
         subtitle="Plomberie"
-        description="Fuite d'eau, canalisation bouchée, chauffe-eau en panne... Nos plombiers vérifiés interviennent rapidement. Prix fixe annoncé et payé avant intervention."
-        icon={Droplets}
+        description="Intervention en 30 min • Prix Fixes & Transparents • Agréé Assurances"
       />
       <PlomberieServicesGrid />
       <ServiceProcess />

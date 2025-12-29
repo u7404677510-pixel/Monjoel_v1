@@ -24,7 +24,7 @@ const footerLinks = {
   ],
   serrurerie: [
     { href: "/serrurerie", label: "Serrurerie", isMain: true },
-    { href: "/serrurier/ouverture-sans-percage", label: "Ouverture sans perçage" },
+    { href: "/serrurier/ouverture-sans-percage", label: "Ouverture porte claquée" },
     { href: "/serrurier/ouverture-avec-percage", label: "Ouverture avec perçage" },
     { href: "/serrurier/perte-cles", label: "Perte de clés" },
     { href: "/serrurier/cle-cassee-serrure", label: "Clé cassée" },
