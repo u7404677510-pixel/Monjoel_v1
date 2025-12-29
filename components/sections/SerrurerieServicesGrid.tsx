@@ -17,7 +17,7 @@ const services = [
   {
     href: "/serrurier/ouverture-sans-percage",
     icon: DoorOpen,
-    title: "Ouverture sans perçage",
+    title: "Ouverture porte claquée",
     description: "On tente toujours sans dégâts. Ta porte reste intacte.",
     price: "119€",
     highlight: true,

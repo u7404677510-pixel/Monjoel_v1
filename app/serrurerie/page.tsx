@@ -1,7 +1,6 @@
 "use client";
 
-import { Key } from "lucide-react";
-import ServiceHero from "@/components/sections/ServiceHero";
+import SerrurerieHero from "@/components/sections/SerrurerieHero";
 import SerrurerieServicesGrid from "@/components/sections/SerrurerieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
@@ -35,11 +34,10 @@ const serrurerieFAQs = [
 export default function SerrureriePage() {
   return (
     <>
-      <ServiceHero
+      <SerrurerieHero
         title="Serrurier d'urgence à prix fixe"
         subtitle="Serrurerie"
-        description="Porte claquée, serrure bloquée, clé cassée... Nos serruriers qualifiés vous dépannent sans dégâts. Prix fixe annoncé et payé avant intervention."
-        icon={Key}
+        description="Intervention en 30 min • Prix Fixes & Transparents • Agréé Assurances"
       />
       <SerrurerieServicesGrid />
       <ServiceProcess />

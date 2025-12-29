@@ -88,3 +88,5 @@ export default function NearbyAreas({ trade, city }: NearbyAreasProps) {
   );
 }
 
+
+

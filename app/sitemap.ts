@@ -99,3 +99,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 //
 // Pour plus de 50k URLs, il faudrait créer un sitemap index.
 
+
+

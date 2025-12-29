@@ -92,14 +92,14 @@ export const plomberieServices: Service[] = [
 export const serrurerieServices: Service[] = [
   {
     slug: "ouverture-sans-percage",
-    name: "Ouverture sans perçage",
+    name: "Ouverture porte claquée",
     shortName: "Sans perçage",
     description: "Ouverture de porte claquée sans dégâts. Technique radio ou crochetage, votre serrure reste intacte.",
     icon: "KeyRound",
     priceFrom: 89,
     urgencyLevel: "high",
     keywords: ["ouverture porte", "porte claquée", "ouverture sans dégât", "serrurier ouverture"],
-    metaDescription: "Porte claquée à {city} ? Ouverture sans perçage dès 89€. Intervention 30 min, serrure intacte. Artisan vérifié.",
+    metaDescription: "Porte claquée à {city} ? Ouverture porte claquée dès 89€. Intervention 30 min, serrure intacte. Artisan vérifié.",
   },
   {
     slug: "ouverture-avec-percage",
@@ -287,4 +287,6 @@ export function getTotalPages(totalCities: number): number {
   // Pages métier par ville + pages service par ville
   return totalCities * trades.length + totalCities * totalServices;
 }
+
+
 
