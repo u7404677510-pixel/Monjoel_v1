@@ -8,7 +8,12 @@ import {
   KeyRound, 
   Wrench, 
   Shield,
-  ArrowRight
+  ArrowRight,
+  LockKeyhole,
+  DoorClosed,
+  Cylinder,
+  Replace,
+  ShieldAlert
 } from "lucide-react";
 import Link from "next/link";
 import { yellowPunctuation } from "@/components/ui/Title";
@@ -21,6 +26,22 @@ const services = [
     description: "On tente toujours sans dégâts. Ta porte reste intacte.",
     price: "119€",
     highlight: true,
+  },
+  {
+    href: "/serrurier/porte-fermee-a-cle",
+    icon: DoorClosed,
+    title: "Porte fermée à clé",
+    description: "Clés à l'intérieur ? On ouvre selon ta serrure.",
+    price: "139€",
+    highlight: false,
+  },
+  {
+    href: "/serrurier/serrure-bloquee",
+    icon: LockKeyhole,
+    title: "Serrure bloquée",
+    description: "Déblocage sans forcer. Diagnostic avant action.",
+    price: "99€",
+    highlight: false,
   },
   {
     href: "/serrurier/ouverture-avec-percage",
@@ -44,6 +65,30 @@ const services = [
     title: "Clé cassée dans serrure",
     description: "Extraction sans dégâts. Ne force pas, appelle-nous.",
     price: "99€",
+    highlight: false,
+  },
+  {
+    href: "/serrurier/changement-cylindre",
+    icon: Cylinder,
+    title: "Changement de cylindre",
+    description: "Cylindre standard ou A2P haute sécurité.",
+    price: "119€",
+    highlight: false,
+  },
+  {
+    href: "/serrurier/changement-serrure",
+    icon: Replace,
+    title: "Changement de serrure",
+    description: "Serrure simple ou multipoints. Installation garantie.",
+    price: "149€",
+    highlight: false,
+  },
+  {
+    href: "/serrurier/apres-effraction",
+    icon: ShieldAlert,
+    title: "Après effraction",
+    description: "Sécurisation urgente. Facture pour assurance.",
+    price: "149€",
     highlight: false,
   },
   {
