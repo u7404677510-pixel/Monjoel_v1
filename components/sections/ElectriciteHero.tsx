@@ -5,6 +5,10 @@ import { Zap, Phone, Star, MapPin, Clock, Shield, BadgeCheck } from "lucide-reac
 import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
+// Numéro de téléphone statique pour Google Ads detection
+const STATIC_PHONE = "01 89 47 05 56";
+const STATIC_PHONE_TEL = "+33189470556";
+
 interface ElectriciteHeroProps {
   title: string;
   subtitle: string;
@@ -13,6 +17,8 @@ interface ElectriciteHeroProps {
 
 export default function ElectriciteHero({ title, subtitle, description }: ElectriciteHeroProps) {
   const { config } = useSiteConfig();
+  const phoneNumber = config.phone_number || STATIC_PHONE;
+  const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
@@ -72,22 +78,31 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
               </span>
             </div>
 
-            {/* CTA Button - High contrast */}
-            {config.show_cta_phone && (
-              <div className="mb-8">
-                <a
-                  href={`tel:${formatPhoneForTel(config.phone_number)}`}
-                  data-placement="electricite-hero"
-                  className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-                >
-                  <Phone size={24} className="animate-pulse" />
-                  <span>APPELER LE {config.phone_number}</span>
-                </a>
-                <p className="text-sm text-gray-500 mt-3 ml-1">
-                  Devis gratuit • Sans engagement
-                </p>
-              </div>
-            )}
+            {/* CTA Button - High contrast + Static phone for Google Ads */}
+            <div className="mb-8">
+              <a
+                href={`tel:${phoneTel}`}
+                data-placement="electricite-hero"
+                className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+              >
+                <Phone size={24} className="animate-pulse" />
+                <span>APPELER LE {phoneNumber}</span>
+              </a>
+              <p className="text-sm text-gray-500 mt-3 ml-1">
+                Devis gratuit • Sans engagement
+              </p>
+            </div>
+            
+            {/* Static phone number for Google Ads crawler detection */}
+            <div className="text-sm text-gray-600 mb-4">
+              <span className="font-semibold">Appelez-nous : </span>
+              <a 
+                href={`tel:${STATIC_PHONE_TEL}`} 
+                className="font-bold text-joel-violet hover:underline"
+              >
+                {STATIC_PHONE}
+              </a>
+            </div>
 
             {/* Trust badges - Brands */}
             <div className="border-t border-gray-100 pt-6">
