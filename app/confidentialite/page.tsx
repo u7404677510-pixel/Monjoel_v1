@@ -15,87 +15,191 @@ export default function ConfidentialitePage() {
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
             <h2>1. Introduction</h2>
             <p>
-              Joël SAS s'engage à protéger la vie privée des utilisateurs de son site 
-              et de son application. Cette politique de confidentialité explique 
-              comment nous collectons, utilisons et protégeons vos données personnelles.
+              La société Joël SAS (ci-après "Joël", "nous", "notre") s'engage à protéger 
+              la vie privée des utilisateurs de son site monjoel.fr et de son application 
+              mobile (ci-après "la Plateforme").
             </p>
-
-            <h2>2. Données collectées</h2>
-            <p>Nous collectons les données suivantes :</p>
-            <ul>
-              <li><strong>Données d'identification</strong> : nom, prénom, email, téléphone</li>
-              <li><strong>Données de localisation</strong> : adresse pour l'intervention</li>
-              <li><strong>Données de navigation</strong> : cookies, adresse IP, pages visitées</li>
-              <li><strong>Données de transaction</strong> : historique des interventions</li>
-            </ul>
-
-            <h2>3. Finalités du traitement</h2>
-            <p>Vos données sont utilisées pour :</p>
-            <ul>
-              <li>Fournir nos services de mise en relation</li>
-              <li>Établir les devis et factures</li>
-              <li>Améliorer nos services</li>
-              <li>Vous envoyer des communications (avec votre consentement)</li>
-              <li>Respecter nos obligations légales</li>
-            </ul>
-
-            <h2>4. Base légale</h2>
             <p>
-              Le traitement de vos données repose sur : l'exécution du contrat, 
-              votre consentement, nos intérêts légitimes et le respect de nos 
-              obligations légales.
+              Cette politique de confidentialité explique comment nous collectons, utilisons, 
+              partageons et protégeons vos données personnelles, conformément au Règlement 
+              Général sur la Protection des Données (RGPD) et à la loi Informatique et 
+              Libertés.
             </p>
 
-            <h2>5. Destinataires des données</h2>
+            <h2>2. Responsable du traitement</h2>
+            <p>
+              Le responsable du traitement de vos données personnelles est :<br />
+              <strong>Joël SAS</strong><br />
+              45 Rue Boursault, 75017 Paris<br />
+              SIRET : 993 221 878 00016<br />
+              Email : contact@monjoel.fr<br />
+              Téléphone : 01 72 68 22 02
+            </p>
+
+            <h2>3. Données collectées</h2>
+            <p>Nous collectons les catégories de données suivantes :</p>
+            
+            <h3>3.1 Données d'identification</h3>
+            <ul>
+              <li>Nom et prénom</li>
+              <li>Adresse email</li>
+              <li>Numéro de téléphone</li>
+              <li>Adresse postale (lieu d'intervention)</li>
+            </ul>
+
+            <h3>3.2 Données de transaction</h3>
+            <ul>
+              <li>Historique des demandes et interventions</li>
+              <li>Devis et factures</li>
+              <li>Informations de paiement (traitées de manière sécurisée)</li>
+            </ul>
+
+            <h3>3.3 Données de navigation</h3>
+            <ul>
+              <li>Adresse IP</li>
+              <li>Type de navigateur et appareil</li>
+              <li>Pages visitées et temps passé</li>
+              <li>Données de cookies (voir section 8)</li>
+            </ul>
+
+            <h2>4. Finalités du traitement</h2>
+            <p>Vos données personnelles sont utilisées pour :</p>
+            <ul>
+              <li><strong>Fournir nos services</strong> : traitement de vos demandes, mise en relation avec un artisan, suivi d'intervention</li>
+              <li><strong>Facturation</strong> : établissement des devis et factures</li>
+              <li><strong>Communication</strong> : répondre à vos questions, notifications sur l'état de votre demande</li>
+              <li><strong>Amélioration des services</strong> : analyse statistique, amélioration de l'expérience utilisateur</li>
+              <li><strong>Marketing</strong> : envoi d'offres et actualités (avec votre consentement)</li>
+              <li><strong>Obligations légales</strong> : respect de nos obligations comptables et fiscales</li>
+            </ul>
+
+            <h2>5. Bases légales du traitement</h2>
+            <p>Nous traitons vos données sur les bases légales suivantes :</p>
+            <ul>
+              <li><strong>Exécution du contrat</strong> : pour fournir les services que vous avez demandés</li>
+              <li><strong>Consentement</strong> : pour l'envoi de communications marketing</li>
+              <li><strong>Intérêt légitime</strong> : pour améliorer nos services et prévenir la fraude</li>
+              <li><strong>Obligation légale</strong> : pour la conservation des factures et documents comptables</li>
+            </ul>
+
+            <h2>6. Destinataires des données</h2>
             <p>Vos données peuvent être partagées avec :</p>
             <ul>
-              <li>Les artisans partenaires (pour l'intervention)</li>
-              <li>Nos prestataires techniques (hébergement, paiement)</li>
-              <li>Les autorités (en cas d'obligation légale)</li>
+              <li><strong>Artisans partenaires</strong> : uniquement les informations nécessaires à l'intervention (nom, adresse, téléphone, description du problème)</li>
+              <li><strong>Prestataires techniques</strong> :
+                <ul>
+                  <li>Vercel (hébergement du site)</li>
+                  <li>Supabase (base de données)</li>
+                  <li>Prestataires de paiement sécurisé</li>
+                </ul>
+              </li>
+              <li><strong>Outils d'analyse</strong> : Google Analytics, Google Ads, Ahrefs (données anonymisées)</li>
+              <li><strong>Autorités</strong> : en cas d'obligation légale uniquement</li>
             </ul>
-
-            <h2>6. Durée de conservation</h2>
             <p>
-              Vos données sont conservées pendant la durée nécessaire aux finalités 
-              pour lesquelles elles ont été collectées, et au maximum 3 ans après 
-              votre dernière interaction avec nous.
+              Nous ne vendons jamais vos données personnelles à des tiers.
             </p>
 
-            <h2>7. Vos droits</h2>
-            <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+            <h2>7. Durée de conservation</h2>
+            <p>Vos données sont conservées pendant :</p>
             <ul>
-              <li><strong>Droit d'accès</strong> : obtenir une copie de vos données</li>
-              <li><strong>Droit de rectification</strong> : corriger vos données</li>
-              <li><strong>Droit à l'effacement</strong> : supprimer vos données</li>
-              <li><strong>Droit à la portabilité</strong> : récupérer vos données</li>
-              <li><strong>Droit d'opposition</strong> : refuser certains traitements</li>
+              <li><strong>Données clients actifs</strong> : pendant toute la durée de la relation commerciale</li>
+              <li><strong>Données prospects</strong> : 3 ans après le dernier contact</li>
+              <li><strong>Factures et documents comptables</strong> : 10 ans (obligation légale)</li>
+              <li><strong>Données de navigation</strong> : 13 mois maximum</li>
             </ul>
-            <p>
-              Pour exercer vos droits, contactez-nous à : contact@monjoel.com
-            </p>
 
             <h2>8. Cookies</h2>
+            <p>Notre Plateforme utilise des cookies pour :</p>
+            
+            <h3>8.1 Cookies strictement nécessaires</h3>
+            <p>Indispensables au fonctionnement du site (session, authentification).</p>
+            
+            <h3>8.2 Cookies analytiques</h3>
+            <ul>
+              <li><strong>Google Analytics</strong> : mesure d'audience, analyse du comportement des visiteurs</li>
+              <li><strong>Ahrefs</strong> : analyse des performances SEO</li>
+            </ul>
+            
+            <h3>8.3 Cookies publicitaires</h3>
+            <ul>
+              <li><strong>Google Ads</strong> : suivi des conversions, remarketing</li>
+            </ul>
+            
             <p>
-              Nous utilisons des cookies pour améliorer votre expérience et analyser 
-              le trafic. Vous pouvez gérer vos préférences via les paramètres de 
-              votre navigateur.
+              Vous pouvez gérer vos préférences de cookies via les paramètres de votre 
+              navigateur ou en nous contactant.
             </p>
 
-            <h2>9. Sécurité</h2>
+            <h2>9. Vos droits</h2>
+            <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+            <ul>
+              <li><strong>Droit d'accès</strong> : obtenir une copie de vos données personnelles</li>
+              <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes</li>
+              <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+              <li><strong>Droit à la limitation</strong> : limiter le traitement de vos données</li>
+              <li><strong>Droit à la portabilité</strong> : récupérer vos données dans un format structuré</li>
+              <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
+              <li><strong>Droit de retirer votre consentement</strong> : à tout moment pour les traitements basés sur le consentement</li>
+            </ul>
             <p>
-              Nous mettons en œuvre des mesures techniques et organisationnelles 
+              Pour exercer vos droits, contactez-nous par email à <strong>contact@monjoel.fr</strong> ou 
+              par courrier à : Joël SAS - 45 Rue Boursault, 75017 Paris.
+            </p>
+            <p>
+              Nous répondrons à votre demande dans un délai d'un mois. Vous avez également 
+              le droit d'introduire une réclamation auprès de la CNIL (Commission Nationale 
+              de l'Informatique et des Libertés).
+            </p>
+
+            <h2>10. Sécurité des données</h2>
+            <p>
+              Nous mettons en œuvre des mesures techniques et organisationnelles appropriées 
               pour protéger vos données contre tout accès non autorisé, modification, 
-              divulgation ou destruction.
+              divulgation ou destruction :
+            </p>
+            <ul>
+              <li>Chiffrement des données sensibles (SSL/TLS)</li>
+              <li>Accès restreint aux données personnelles</li>
+              <li>Sauvegardes régulières</li>
+              <li>Audits de sécurité</li>
+            </ul>
+
+            <h2>11. Transferts hors UE</h2>
+            <p>
+              Certains de nos prestataires (Vercel, Google) peuvent être situés en dehors 
+              de l'Union Européenne. Dans ce cas, nous nous assurons que des garanties 
+              appropriées sont en place (Clauses Contractuelles Types, décision d'adéquation, 
+              etc.) pour assurer un niveau de protection équivalent.
             </p>
 
-            <h2>10. Contact</h2>
+            <h2>12. Mineurs</h2>
             <p>
-              Pour toute question relative à cette politique, contactez notre 
-              Délégué à la Protection des Données (DPO) à : contact@monjoel.com
+              Nos services ne sont pas destinés aux personnes de moins de 18 ans. Nous ne 
+              collectons pas sciemment de données personnelles de mineurs.
+            </p>
+
+            <h2>13. Modifications</h2>
+            <p>
+              Nous nous réservons le droit de modifier cette politique de confidentialité 
+              à tout moment. Les modifications seront publiées sur cette page avec une 
+              date de mise à jour.
+            </p>
+
+            <h2>14. Contact</h2>
+            <p>
+              Pour toute question relative à cette politique ou à vos données personnelles, 
+              contactez-nous :
+            </p>
+            <p>
+              <strong>Joël SAS</strong><br />
+              45 Rue Boursault, 75017 Paris<br />
+              Email : contact@monjoel.fr<br />
+              Téléphone : 01 72 68 22 02
             </p>
 
             <p className="text-gray-500 text-sm mt-8">
-              Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
+              Dernière mise à jour : Janvier 2026
             </p>
           </div>
         </motion.div>
@@ -103,5 +207,3 @@ export default function ConfidentialitePage() {
     </div>
   );
 }
-
-
