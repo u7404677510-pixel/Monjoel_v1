@@ -1,8 +1,21 @@
 "use client";
 
-import Script from "next/script";
-import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
+/**
+ * GoogleTag Component - DÉSACTIVÉ
+ * 
+ * Ce composant était utilisé pour charger gtag.js directement.
+ * 
+ * MAINTENANT : Le tracking est géré par GTM (Google Tag Manager) qui est
+ * chargé dans app/layout.tsx avec Consent Mode v2 et Cookiebot.
+ * 
+ * Ce composant est conservé mais désactivé pour éviter :
+ * - Double chargement de gtag.js
+ * - Conflits avec Consent Mode v2
+ * - Tags qui tirent avant consentement
+ * 
+ * Si tu as besoin de revenir à gtag.js direct (sans GTM),
+ * décommente le code ci-dessous et retire GTM de layout.tsx.
+ */
 
 // Debug mode
 const DEBUG = process.env.NODE_ENV === 'development';
@@ -19,6 +32,24 @@ function debugLog(message: string, data?: Record<string, unknown>) {
 }
 
 export default function GoogleTag() {
+  // GTM est maintenant utilisé à la place de gtag.js direct
+  // Ce composant ne rend plus rien pour éviter les doublons
+  
+  if (DEBUG) {
+    debugLog('GoogleTag component disabled - GTM is now handling all tracking via layout.tsx');
+  }
+  
+  return null;
+  
+  /* 
+  ============================================
+  CODE ORIGINAL (désactivé) - Ne pas supprimer
+  ============================================
+  
+  import Script from "next/script";
+  import { useEffect, useState } from "react";
+  import { supabase } from "@/lib/supabase";
+  
   const [gtagId, setGtagId] = useState<string | null>(null);
   const [gaId, setGaId] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -88,22 +119,15 @@ export default function GoogleTag() {
         onError={handleScriptError}
       />
       <Script id="gtag-init" strategy="afterInteractive">
-        {`
+        {\`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          ${gtagId ? `gtag('config', '${gtagId}');` : ''}
-          ${gaId && gaId !== gtagId ? `gtag('config', '${gaId}');` : ''}
-          
-          ${DEBUG ? `
-          console.log('%c[GoogleTag]%c gtag initialized', 'background: #ea4335; color: white; padding: 2px 6px; border-radius: 3px;', 'color: inherit;', {
-            gtagId: '${gtagId || ""}',
-            gaId: '${gaId || ""}',
-            dataLayerLength: window.dataLayer.length
-          });
-          ` : ''}
-        `}
+          \${gtagId ? \`gtag('config', '\${gtagId}');\` : ''}
+          \${gaId && gaId !== gtagId ? \`gtag('config', '\${gaId}');\` : ''}
+        \`}
       </Script>
     </>
   );
+  */
 }
