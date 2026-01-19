@@ -24,7 +24,7 @@ const defaultConfig: SiteConfig = {
   show_phone: true,
   show_cta_phone: true,
   show_cta_devis: true,
-  cta_devis_url: "https://app.monjoel.com",
+  cta_devis_url: "https://app.monjoel.fr",
 };
 
 export function useSiteConfig() {

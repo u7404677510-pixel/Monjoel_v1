@@ -62,9 +62,9 @@ export default function ContactPage() {
                 
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <a href="mailto:contact@monjoel.com" className="flex items-center gap-2 hover:text-white/80">
+                  <a href="mailto:contact@monjoel.fr" className="flex items-center gap-2 hover:text-white/80">
                     <Mail size={18} />
-                    contact@monjoel.com
+                    contact@monjoel.fr
                   </a>
                 </div>
                 

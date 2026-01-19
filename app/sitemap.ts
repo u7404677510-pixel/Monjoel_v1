@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { citiesIDF } from "@/lib/data/cities-idf";
 import { trades } from "@/lib/data/services-definition";
 
-const BASE_URL = "https://monjoel.com";
+const BASE_URL = "https://monjoel.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

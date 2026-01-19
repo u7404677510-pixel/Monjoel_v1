@@ -6,10 +6,10 @@ import { City } from "@/lib/data/cities-idf";
 import { Trade, Service } from "@/lib/data/services-definition";
 import { FAQItem } from "./city-content";
 
-const BASE_URL = "https://monjoel.com";
+const BASE_URL = "https://monjoel.fr";
 const COMPANY_NAME = "Joël";
 const COMPANY_PHONE = "+33184800966";
-const COMPANY_EMAIL = "contact@monjoel.com";
+const COMPANY_EMAIL = "contact@monjoel.fr";
 
 // ============================================
 // TYPES SCHEMA.ORG

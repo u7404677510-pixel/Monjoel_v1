@@ -9,14 +9,14 @@ ALTER TABLE site_config
 ADD COLUMN IF NOT EXISTS show_cta_devis BOOLEAN DEFAULT true;
 
 ALTER TABLE site_config 
-ADD COLUMN IF NOT EXISTS cta_devis_url VARCHAR(255) DEFAULT 'https://app.monjoel.com';
+ADD COLUMN IF NOT EXISTS cta_devis_url VARCHAR(255) DEFAULT 'https://app.monjoel.fr';
 
 -- Mettre à jour la ligne existante avec les valeurs par défaut
 UPDATE site_config 
 SET 
   show_cta_phone = COALESCE(show_cta_phone, true),
   show_cta_devis = COALESCE(show_cta_devis, true),
-  cta_devis_url = COALESCE(cta_devis_url, 'https://app.monjoel.com')
+  cta_devis_url = COALESCE(cta_devis_url, 'https://app.monjoel.fr')
 WHERE id = 1;
 
 -- =====================================================

@@ -223,7 +223,7 @@ export default function ScamQuiz() {
                   <RotateCcw size={18} />
                   Recommencer
                 </button>
-                <a href="https://app.monjoel.com" className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-joel-violet font-semibold rounded-full">
+                <a href="https://app.monjoel.fr" className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-joel-violet font-semibold rounded-full">
                   Me protéger
                   <ArrowRight size={18} />
                 </a>

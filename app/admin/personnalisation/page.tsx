@@ -14,7 +14,7 @@ export default function PersonnalisationPage() {
     show_cta_phone: true,
     show_cta_devis: true,
   });
-  const [ctaDevisUrl, setCtaDevisUrl] = useState("https://app.monjoel.com");
+  const [ctaDevisUrl, setCtaDevisUrl] = useState("https://app.monjoel.fr");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -44,7 +44,7 @@ export default function PersonnalisationPage() {
             show_cta_phone: data.show_cta_phone ?? true,
             show_cta_devis: data.show_cta_devis ?? true,
           });
-          setCtaDevisUrl(data.cta_devis_url || "https://app.monjoel.com");
+          setCtaDevisUrl(data.cta_devis_url || "https://app.monjoel.fr");
         }
       } catch (err) {
         console.error("Error loading config:", err);
@@ -222,7 +222,7 @@ export default function PersonnalisationPage() {
                 type="url" 
                 value={ctaDevisUrl}
                 onChange={(e) => setCtaDevisUrl(e.target.value)}
-                placeholder="https://app.monjoel.com"
+                placeholder="https://app.monjoel.fr"
                 className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none" 
               />
               <p className="text-xs text-gray-500 mt-2">
