@@ -1,0 +1,240 @@
+# Règles de Codage - Projet Joël (monjoel.fr)
+
+## Stack Technique
+
+- **Framework** : Next.js 14 avec App Router
+- **Language** : TypeScript (strict mode)
+- **Styling** : Tailwind CSS
+- **Database** : Supabase (optionnel, config admin)
+- **Déploiement** : Vercel
+
+## Conventions de Code
+
+### Structure des Fichiers
+
+```
+app/                    # Pages et routes (App Router)
+├── page.tsx           # Page principale
+├── layout.tsx         # Layout racine
+├── [metier]/          # Routes dynamiques par métier
+│   └── [ville]/       # Routes dynamiques par ville
+components/            # Composants React
+├── sections/          # Sections de page (Hero, FAQ, etc.)
+├── seo/               # Composants SEO (Schema, CityHero, etc.)
+├── ui/                # Composants UI réutilisables
+lib/                   # Logique métier et utilitaires
+├── data/              # Données statiques (villes, services)
+├── seo/               # Générateurs SEO (content, schema)
+├── hooks/             # Custom React hooks
+docs/                  # Documentation
+public/                # Assets statiques
+```
+
+### Naming Conventions
+
+- **Fichiers composants** : PascalCase (`CityHero.tsx`, `ServiceFAQ.tsx`)
+- **Fichiers utilitaires** : kebab-case (`city-content.ts`, `schema-generator.ts`)
+- **URLs/Slugs** : kebab-case (`serrurier-urgence`, `paris-15`)
+- **Variables CSS** : kebab-case (`joel-violet`, `joel-mauve`)
+
+### TypeScript
+
+- Toujours typer les props des composants
+- Utiliser `interface` pour les props, `type` pour les unions/intersections
+- Exporter les types depuis les fichiers de données
+
+```typescript
+// Bon
+interface ServiceCardProps {
+  service: Service;
+  city: City;
+}
+
+// Éviter
+const ServiceCard = ({ service, city }: any) => {}
+```
+
+### Server vs Client Components
+
+- **Par défaut** : Server Components (pas de "use client")
+- **Client uniquement** : Composants avec interactivité, hooks React, events
+- **Pattern** : Extraire la logique client dans des composants séparés
+
+```typescript
+// Page serveur avec composant client pour Schema
+// app/serrurerie/page.tsx (Server Component)
+import ClientSchema from "@/components/ClientSchema";
+
+export const metadata = { ... }; // Fonctionne car Server Component
+
+export default function Page() {
+  return (
+    <>
+      <ClientSchema schema={localBusinessSchema} />
+      <Content />
+    </>
+  );
+}
+```
+
+## Design System
+
+### Couleurs
+
+```typescript
+// tailwind.config.ts
+colors: {
+  "joel-violet": "#7055A7",    // Couleur principale
+  "joel-mauve": "#9E76EC",     // Couleur secondaire
+  "joel-yellow": "#F5D547",    // Accent
+  "joel-yellow-light": "#FFF8DC",
+}
+```
+
+### Typographie
+
+- **Display** : Chillax (titres, H1, H2)
+- **Body** : Poppins (texte courant)
+
+```tsx
+<h1 className="font-display text-4xl font-bold">Titre</h1>
+<p className="font-sans text-base">Paragraphe</p>
+```
+
+### Gradients
+
+```tsx
+// Gradient principal
+<div className="bg-gradient-joel" />
+
+// Gradient chaud (avec jaune)
+<div className="bg-gradient-joel-warm" />
+```
+
+## SEO - Règles Obligatoires
+
+### Metadata
+
+Chaque page DOIT avoir des metadata via `generateMetadata` ou `export const metadata`:
+
+```typescript
+export const metadata: Metadata = {
+  title: "Titre optimisé avec mots-clés",
+  description: "Description 150-160 caractères avec CTA",
+  alternates: {
+    canonical: "https://monjoel.fr/page",
+  },
+  openGraph: {
+    title: "...",
+    description: "...",
+    images: [{ url: "/og-default.jpg" }],
+  },
+};
+```
+
+### Schema.org JSON-LD
+
+Utiliser les générateurs dans `lib/seo/schema-generator.ts`:
+
+- `generateLocalBusinessSchema()` - Pour pages métier/ville
+- `generateFAQSchema()` - Pour les FAQ
+- `generateBreadcrumbSchema()` - Pour le fil d'Ariane
+
+### URLs Canoniques
+
+```typescript
+alternates: {
+  canonical: `https://monjoel.fr/${trade}/${city}`,
+}
+```
+
+### Pages Dynamiques
+
+Toujours implémenter `generateStaticParams` pour les routes dynamiques:
+
+```typescript
+export async function generateStaticParams() {
+  return citiesIDF.map((city) => ({
+    ville: city.slug,
+  }));
+}
+```
+
+## Tracking & Consentement
+
+### Architecture
+
+1. **Consent Mode v2** (defaults) → Premier script dans `<head>`
+2. **Cookiebot CMP** → Bannière de consentement
+3. **GTM** → Gestion centralisée des tags
+
+### IDs de Tracking
+
+| Service | ID |
+|---------|-----|
+| GTM | `GTM-NFKDT6QC` |
+| Google Ads | `AW-17805011663` |
+| Google Tag | `GT-5MCRKCLP` |
+| Cookiebot | `c1addd46-5bcb-4d18-835f-4db63cde7755` |
+| GA4 | `G-77JMV6XZ63` |
+
+### Règles
+
+- **NE PAS** utiliser `gtag()` directement (sauf dans TelClickTracker)
+- **TOUT** passe par GTM
+- **RESPECTER** le consentement (Cookiebot gère les signaux)
+
+## Numéro de Téléphone
+
+**Numéro officiel** : `01 72 68 22 02`
+
+### Formats
+
+- **Affichage** : `01 72 68 22 02`
+- **tel: link** : `tel:+33172682202`
+- **Schema.org** : `+33172682202`
+
+### Utilisation
+
+```tsx
+// Lien cliquable
+<a href="tel:+33172682202">01 72 68 22 02</a>
+
+// Schema.org
+"telephone": "+33172682202"
+```
+
+## Bonnes Pratiques
+
+### Images
+
+- Utiliser `next/image` pour l'optimisation
+- Toujours inclure l'attribut `alt` descriptif
+- Formats recommandés : WebP, JPEG
+
+### Performance
+
+- Éviter les imports de bibliothèques lourdes côté client
+- Utiliser `dynamic()` pour le code splitting si nécessaire
+- Préférer les Server Components
+
+### Accessibilité
+
+- Structure HTML sémantique (header, main, nav, section)
+- Labels sur les formulaires
+- Contraste suffisant (WCAG AA)
+
+### Git
+
+- Commits en français ou anglais, format conventionnel
+- `feat:` pour nouvelles fonctionnalités
+- `fix:` pour corrections
+- `docs:` pour documentation
+- `refactor:` pour refactoring
+
+## Ressources
+
+- [Next.js App Router](https://nextjs.org/docs/app)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Schema.org](https://schema.org/)
+- [Google Consent Mode](https://developers.google.com/tag-platform/security/guides/consent)
