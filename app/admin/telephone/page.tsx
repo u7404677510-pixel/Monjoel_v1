@@ -6,7 +6,7 @@ import { Save, Phone, AlertCircle, CheckCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function TelephonePage() {
-  const [phoneNumber, setPhoneNumber] = useState("01 89 47 05 56");
+  const [phoneNumber, setPhoneNumber] = useState("01 72 68 22 02");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -143,7 +143,7 @@ export default function TelephonePage() {
                 type="tel"
                 value={phoneNumber}
                 onChange={handleChange}
-                placeholder="01 89 47 05 56"
+                placeholder="01 72 68 22 02"
                 className={`w-full px-4 py-4 text-2xl font-bold border rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none ${
                   error ? "border-red-300" : "border-gray-300"
                 }`}

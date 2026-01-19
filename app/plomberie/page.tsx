@@ -10,7 +10,7 @@ import ClientSchema from "@/components/ClientSchema";
 
 export const metadata: Metadata = {
   title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-  description: "Plombier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Fuite d'eau, WC bouchés, chauffe-eau. Appelez le 01 89 47 05 56.",
+  description: "Plombier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Fuite d'eau, WC bouchés, chauffe-eau. Appelez le 01 72 68 22 02.",
   keywords: [
     "plombier urgence Paris",
     "plombier Île-de-France",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://monjoel.fr/plomberie",
     siteName: "Joël",
     title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-    description: "Plombier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 89 47 05 56.",
+    description: "Plombier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 72 68 22 02.",
     images: [
       {
         url: "/og-default.jpg",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Plombier d'urgence Paris & Île-de-France | Joël",
-    description: "Plombier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 89 47 05 56.",
+    description: "Plombier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 72 68 22 02.",
     images: ["/og-default.jpg"],
   },
 };
@@ -56,7 +56,7 @@ const localBusinessSchema = {
   "name": "Joël - Plombier d'urgence Paris & Île-de-France",
   "description": "Service de plomberie d'urgence à prix fixe. Intervention en 30 minutes sur Paris et toute l'Île-de-France.",
   "url": "https://monjoel.fr/plomberie",
-  "telephone": "+33189470556",
+  "telephone": "+33172682202",
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
