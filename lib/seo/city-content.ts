@@ -298,7 +298,7 @@ export interface CityPageContent {
 export function generateCityPageContent(
   trade: Trade,
   city: City,
-  baseUrl: string = "https://monjoel.com"
+  baseUrl: string = "https://monjoel.fr"
 ): CityPageContent {
   return {
     title: generateHeroTitle(trade, city),
@@ -325,7 +325,7 @@ export function generateServicePageContent(
   trade: Trade,
   service: Service,
   city: City,
-  baseUrl: string = "https://monjoel.com"
+  baseUrl: string = "https://monjoel.fr"
 ): ServicePageContent {
   const baseContent = generateCityPageContent(trade, city, baseUrl);
   

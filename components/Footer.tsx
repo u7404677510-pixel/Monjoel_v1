@@ -79,9 +79,9 @@ export default function Footer() {
                   <span>{config.phone_number}</span>
                 </a>
               )}
-              <a href="mailto:contact@monjoel.com" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm">
+              <a href="mailto:contact@monjoel.fr" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm">
                 <Mail size={16} />
-                <span>contact@monjoel.com</span>
+                <span>contact@monjoel.fr</span>
               </a>
             </div>
           </div>
