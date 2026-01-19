@@ -1,5 +1,4 @@
-"use client";
-
+import { Metadata } from "next";
 import PlomberieHero from "@/components/sections/PlomberieHero";
 import PlomberieServicesGrid from "@/components/sections/PlomberieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
@@ -7,7 +6,48 @@ import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
-import Script from "next/script";
+import ClientSchema from "@/components/ClientSchema";
+
+export const metadata: Metadata = {
+  title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
+  description: "Plombier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Fuite d'eau, WC bouchés, chauffe-eau. Appelez le 01 89 47 05 56.",
+  keywords: [
+    "plombier urgence Paris",
+    "plombier Île-de-France",
+    "fuite d'eau",
+    "WC bouchés",
+    "chauffe-eau panne",
+    "plombier pas cher",
+    "plombier 24h/24",
+    "dépannage plomberie",
+    "dégât des eaux"
+  ],
+  alternates: {
+    canonical: "https://monjoel.fr/plomberie",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://monjoel.fr/plomberie",
+    siteName: "Joël",
+    title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
+    description: "Plombier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 89 47 05 56.",
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Joël - Plombier d'urgence Paris & Île-de-France",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Plombier d'urgence Paris & Île-de-France | Joël",
+    description: "Plombier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 89 47 05 56.",
+    images: ["/og-default.jpg"],
+  },
+};
 
 // Schema.org LocalBusiness pour Google Ads detection
 const localBusinessSchema = {
@@ -20,7 +60,9 @@ const localBusinessSchema = {
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "45 Rue Boursault",
     "addressLocality": "Paris",
+    "postalCode": "75017",
     "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
@@ -78,11 +120,7 @@ export default function PlomberiePage() {
   return (
     <>
       {/* Schema.org pour Google Ads phone detection */}
-      <Script
-        id="local-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
+      <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
       <PlomberieHero
         title="Plombier d'urgence à prix fixe"
         subtitle="Plomberie"

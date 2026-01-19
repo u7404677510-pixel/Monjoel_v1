@@ -1,5 +1,4 @@
-"use client";
-
+import { Metadata } from "next";
 import SerrurerieHero from "@/components/sections/SerrurerieHero";
 import SerrurerieServicesGrid from "@/components/sections/SerrurerieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
@@ -7,7 +6,48 @@ import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
-import Script from "next/script";
+import ClientSchema from "@/components/ClientSchema";
+
+export const metadata: Metadata = {
+  title: "Serrurier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
+  description: "Serrurier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Ouverture de porte, changement de serrure, blindage. Appelez le 01 89 47 05 56.",
+  keywords: [
+    "serrurier urgence Paris",
+    "serrurier Île-de-France",
+    "ouverture de porte",
+    "changement serrure",
+    "serrurier pas cher",
+    "serrurier 24h/24",
+    "dépannage serrurerie",
+    "porte claquée",
+    "serrure bloquée"
+  ],
+  alternates: {
+    canonical: "https://monjoel.fr/serrurerie",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://monjoel.fr/serrurerie",
+    siteName: "Joël",
+    title: "Serrurier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
+    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 89 47 05 56.",
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Joël - Serrurier d'urgence Paris & Île-de-France",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Serrurier d'urgence Paris & Île-de-France | Joël",
+    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 89 47 05 56.",
+    images: ["/og-default.jpg"],
+  },
+};
 
 // Schema.org LocalBusiness pour Google Ads detection
 const localBusinessSchema = {
@@ -20,7 +60,9 @@ const localBusinessSchema = {
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "45 Rue Boursault",
     "addressLocality": "Paris",
+    "postalCode": "75017",
     "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
@@ -78,11 +120,7 @@ export default function SerrureriePage() {
   return (
     <>
       {/* Schema.org pour Google Ads phone detection */}
-      <Script
-        id="local-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
+      <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
       <SerrurerieHero
         title="Serrurier d'urgence à prix fixe"
         subtitle="Serrurerie"

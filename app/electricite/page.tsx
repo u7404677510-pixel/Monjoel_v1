@@ -1,5 +1,4 @@
-"use client";
-
+import { Metadata } from "next";
 import ElectriciteHero from "@/components/sections/ElectriciteHero";
 import ElectriciteServicesGrid from "@/components/sections/ElectriciteServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
@@ -7,7 +6,48 @@ import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
-import Script from "next/script";
+import ClientSchema from "@/components/ClientSchema";
+
+export const metadata: Metadata = {
+  title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe | Joël",
+  description: "Électricien d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Panne électrique, disjoncteur, tableau électrique. Appelez le 01 89 47 05 56.",
+  keywords: [
+    "électricien urgence Paris",
+    "électricien Île-de-France",
+    "panne électrique",
+    "disjoncteur saute",
+    "tableau électrique",
+    "électricien pas cher",
+    "électricien 24h/24",
+    "dépannage électricité",
+    "court-circuit"
+  ],
+  alternates: {
+    canonical: "https://monjoel.fr/electricite",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://monjoel.fr/electricite",
+    siteName: "Joël",
+    title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe | Joël",
+    description: "Électricien d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 89 47 05 56.",
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Joël - Électricien d'urgence Paris & Île-de-France",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Électricien d'urgence Paris & Île-de-France | Joël",
+    description: "Électricien d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 89 47 05 56.",
+    images: ["/og-default.jpg"],
+  },
+};
 
 // Schema.org LocalBusiness pour Google Ads detection
 const localBusinessSchema = {
@@ -20,7 +60,9 @@ const localBusinessSchema = {
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "45 Rue Boursault",
     "addressLocality": "Paris",
+    "postalCode": "75017",
     "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
@@ -78,11 +120,7 @@ export default function ElectricitePage() {
   return (
     <>
       {/* Schema.org pour Google Ads phone detection */}
-      <Script
-        id="local-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
+      <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
       <ElectriciteHero
         title="Électricien d'urgence à prix fixe"
         subtitle="Électricité"

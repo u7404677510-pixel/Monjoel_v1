@@ -16,9 +16,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Joël | Dépannage sans arnaques - Plomberie, Serrurerie, Électricité",
+  metadataBase: new URL("https://monjoel.fr"),
+  title: {
+    default: "Joël | Dépannage sans arnaques - Plomberie, Serrurerie, Électricité",
+    template: "%s | Joël",
+  },
   description:
-    "Trouvez en quelques clics un artisan de confiance en plomberie, électricité ou serrurerie. Devis instantané, prix fixe, zéro arnaque.",
+    "Trouvez en quelques clics un artisan de confiance en plomberie, électricité ou serrurerie. Devis instantané, prix fixe, zéro arnaque. Appelez le 01 89 47 05 56.",
   keywords: [
     "dépannage",
     "plomberie",
@@ -27,12 +31,46 @@ export const metadata: Metadata = {
     "artisan",
     "urgence",
     "sans arnaque",
+    "Paris",
+    "Île-de-France",
+    "prix fixe",
   ],
+  authors: [{ name: "Joël" }],
+  creator: "Joël",
+  publisher: "Joël",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://monjoel.fr",
+    siteName: "Joël",
     title: "Joël | Dépannage sans arnaques",
     description:
-      "Trouvez un artisan de confiance. Devis instantané, prix fixe.",
-    type: "website",
+      "Trouvez un artisan de confiance. Devis instantané, prix fixe. Appelez le 01 89 47 05 56.",
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Joël - Dépannage d'urgence Paris & Île-de-France",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Joël | Dépannage sans arnaques",
+    description: "Trouvez un artisan de confiance. Devis instantané, prix fixe.",
+    images: ["/og-default.jpg"],
   },
 };
 

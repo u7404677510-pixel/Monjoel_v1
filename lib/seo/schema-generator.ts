@@ -8,7 +8,7 @@ import { FAQItem } from "./city-content";
 
 const BASE_URL = "https://monjoel.fr";
 const COMPANY_NAME = "Joël";
-const COMPANY_PHONE = "+33184800966";
+const COMPANY_PHONE = "+33189470556";
 const COMPANY_EMAIL = "contact@monjoel.fr";
 
 // ============================================
