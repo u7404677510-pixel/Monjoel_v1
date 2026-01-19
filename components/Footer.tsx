@@ -42,6 +42,18 @@ const footerLinks = {
   ],
 };
 
+// Zones d'intervention par département
+const departmentLinks = [
+  { code: "75", name: "Paris" },
+  { code: "92", name: "Hauts-de-Seine" },
+  { code: "93", name: "Seine-Saint-Denis" },
+  { code: "94", name: "Val-de-Marne" },
+  { code: "95", name: "Val-d'Oise" },
+  { code: "77", name: "Seine-et-Marne" },
+  { code: "78", name: "Yvelines" },
+  { code: "91", name: "Essonne" },
+];
+
 export default function Footer() {
   const { config, loading } = useSiteConfig();
 
@@ -181,6 +193,41 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* Zones d'intervention */}
+        <div className="border-t border-white/10 pt-8 mb-8">
+          <h4 className="font-bold text-sm mb-4 text-joel-yellow">Zones d&apos;intervention</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+            {departmentLinks.map((dept) => (
+              <div key={dept.code} className="text-center">
+                <p className="text-xs text-gray-500 mb-1">{dept.name}</p>
+                <div className="flex flex-wrap justify-center gap-1">
+                  <Link
+                    href={`/plombier-${dept.code}`}
+                    className="text-xs text-gray-400 hover:text-joel-yellow transition-colors"
+                    title={`Plombier ${dept.name}`}
+                  >
+                    🔧
+                  </Link>
+                  <Link
+                    href={`/serrurier-${dept.code}`}
+                    className="text-xs text-gray-400 hover:text-joel-yellow transition-colors"
+                    title={`Serrurier ${dept.name}`}
+                  >
+                    🔐
+                  </Link>
+                  <Link
+                    href={`/electricien-${dept.code}`}
+                    className="text-xs text-gray-400 hover:text-joel-yellow transition-colors"
+                    title={`Électricien ${dept.name}`}
+                  >
+                    ⚡
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

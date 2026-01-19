@@ -237,6 +237,97 @@ export function generateLocalBusinessSchema(
 }
 
 /**
+ * Génère le schema LocalBusiness pour une page département
+ */
+export function generateDepartmentSchema(
+  tradeSlug: string,
+  departmentName: string,
+  departmentCode: string,
+  services: { name: string; description: string; priceFrom: number }[]
+): LocalBusiness {
+  const businessTypes: Record<string, string> = {
+    plombier: "Plumber",
+    serrurier: "Locksmith",
+    electricien: "Electrician",
+  };
+
+  const tradeNames: Record<string, string> = {
+    plombier: "Plomberie",
+    serrurier: "Serrurerie",
+    electricien: "Électricité",
+  };
+
+  const tradeName = tradeNames[tradeSlug] || "Dépannage";
+
+  return {
+    "@context": "https://schema.org",
+    "@type": businessTypes[tradeSlug] || "LocalBusiness",
+    name: `${COMPANY_NAME} - ${tradeName} ${departmentName} (${departmentCode})`,
+    description: `${tradeName} dans le ${departmentName} (${departmentCode}). Intervention rapide 24h/24. Prix fixe garanti. Artisans certifiés.`,
+    url: `${BASE_URL}/${tradeSlug}-${departmentCode}`,
+    telephone: COMPANY_PHONE,
+    email: COMPANY_EMAIL,
+    priceRange: "€€",
+    image: `${BASE_URL}/logo.png`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: departmentName,
+      addressRegion: "Île-de-France",
+      postalCode: departmentCode + "000",
+      addressCountry: "FR",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: departmentName,
+      containedIn: {
+        "@type": "AdministrativeArea",
+        name: "Île-de-France",
+      },
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "2847",
+      bestRating: "5",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Services ${tradeName}`,
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.name,
+          description: service.description,
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: service.priceFrom,
+          priceCurrency: "EUR",
+          priceType: "MinimumPrice",
+        },
+      })),
+    },
+  };
+}
+
+/**
  * Génère le schema FAQPage
  */
 export function generateFAQSchema(faqItems: FAQItem[]): FAQPage {

@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { citiesIDF } from "@/lib/data/cities-idf";
 import { trades } from "@/lib/data/services-definition";
+import { departmentsIDF, trades as deptTrades } from "@/lib/data/departments-idf";
 
 const BASE_URL = "https://monjoel.fr";
 
@@ -62,6 +63,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     });
+  }
+
+  // Pages départements (24 pages: 3 métiers × 8 départements)
+  for (const trade of deptTrades) {
+    for (const dept of departmentsIDF) {
+      entries.push({
+        url: `${BASE_URL}/${trade.slug}-${dept.code}`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.85, // Priorité haute car pages de niveau département
+      });
+    }
   }
 
   // Pages dynamiques par ville et métier
