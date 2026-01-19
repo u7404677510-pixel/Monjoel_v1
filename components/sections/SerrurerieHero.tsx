@@ -6,8 +6,8 @@ import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
 // Numéro de téléphone statique pour Google Ads detection
-const STATIC_PHONE = "01 89 47 05 56";
-const STATIC_PHONE_TEL = "+33189470556";
+const STATIC_PHONE = "01 72 68 22 02";
+const STATIC_PHONE_TEL = "+33172682202";
 
 interface SerrurerieHeroProps {
   title: string;
