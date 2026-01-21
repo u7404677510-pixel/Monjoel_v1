@@ -21,6 +21,17 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleCallClick = () => {
+    // Track call click
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "click_to_call",
+        phone_number: config.phone_number,
+        placement: "hero_main",
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 w-full">
@@ -89,6 +100,7 @@ export default function Hero() {
             <div className="mb-8">
               <a
                 href={`tel:${formatPhoneForTel(config.phone_number)}`}
+                onClick={handleCallClick}
                 data-placement="hero-main"
                 className="group relative inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
