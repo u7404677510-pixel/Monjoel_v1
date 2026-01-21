@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, MessageCircle } from "lucide-react";
 
 // Numéro WhatsApp Business (format international sans +)
-const WHATSAPP_NUMBER = "33172682202";
+const WHATSAPP_NUMBER = "33756996726";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Bonjour, j'ai besoin d'un dépannage urgent. Pouvez-vous m'aider ?"
 );
@@ -30,6 +30,14 @@ export default function WhatsAppButton() {
   const handleClick = () => {
     setHasInteracted(true);
     setIsTooltipVisible(false);
+    
+    // Track WhatsApp click
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "click_whatsapp",
+        placement: "floating_button",
+      });
+    }
   };
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
@@ -52,7 +60,7 @@ export default function WhatsAppButton() {
               <X size={14} className="text-gray-500" />
             </button>
             <p className="text-sm text-gray-700">
-              <span className="font-semibold">Pas envie d'appeler ?</span>
+              <span className="font-semibold">Pas envie d&apos;appeler ?</span>
               <br />
               Envoyez-nous un message WhatsApp !
             </p>

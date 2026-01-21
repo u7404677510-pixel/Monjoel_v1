@@ -18,6 +18,17 @@ export default function StickyCallButton() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleCallClick = () => {
+    // Track call click
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "click_to_call",
+        phone_number: config.phone_number,
+        placement: "sticky_mobile",
+      });
+    }
+  };
+
   if (!config.show_cta_phone) return null;
 
   return (
@@ -33,6 +44,7 @@ export default function StickyCallButton() {
       <div className="bg-white border-t border-gray-200 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
         <a
           href={`tel:${formatPhoneForTel(config.phone_number)}`}
+          onClick={handleCallClick}
           data-placement="sticky-mobile"
           className="relative flex items-center justify-center gap-3 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all"
         >
@@ -50,8 +62,3 @@ export default function StickyCallButton() {
     </div>
   );
 }
-
-
-
-
-

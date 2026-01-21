@@ -2,20 +2,8 @@
  * Google Ads Conversion Tracking Utility
  * 
  * This module handles tracking of Google Ads conversions for tel: link clicks.
- * It works with gtag.js (NOT GTM) and ensures the dialer opens reliably on mobile.
+ * It works with GTM/gtag.js and ensures the dialer opens reliably on mobile.
  */
-
-// Type declarations for gtag
-declare global {
-  interface Window {
-    gtag?: (
-      command: 'event' | 'config' | 'js' | 'set',
-      targetId: string,
-      config?: Record<string, unknown>
-    ) => void;
-    dataLayer?: unknown[];
-  }
-}
 
 export interface TrackingOptions {
   sendTo: string | null;

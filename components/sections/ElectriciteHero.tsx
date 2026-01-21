@@ -20,6 +20,16 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
   const phoneNumber = config.phone_number || STATIC_PHONE;
   const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
 
+  const handleCallClick = () => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "click_to_call",
+        phone_number: phoneNumber,
+        placement: "electricite_hero",
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 w-full">
@@ -82,6 +92,7 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
             <div className="mb-8">
               <a
                 href={`tel:${phoneTel}`}
+                onClick={handleCallClick}
                 data-placement="electricite-hero"
                 className="group relative inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >

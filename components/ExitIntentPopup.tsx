@@ -7,7 +7,7 @@ import { X, Phone, MessageCircle, Clock, Gift } from "lucide-react";
 // Configuration
 const PHONE_NUMBER = "01 72 68 22 02";
 const PHONE_TEL = "+33172682202";
-const WHATSAPP_NUMBER = "33172682202";
+const WHATSAPP_NUMBER = "33756996726";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Bonjour, j'ai besoin d'un dépannage urgent. Pouvez-vous m'aider ?"
 );
@@ -18,7 +18,7 @@ export default function ExitIntentPopup() {
 
   useEffect(() => {
     // Ne pas afficher sur mobile
-    if (window.innerWidth < 768) return;
+    if (typeof window === "undefined" || window.innerWidth < 768) return;
 
     // Vérifier si déjà affiché cette session
     if (sessionStorage.getItem("exit-intent-shown")) {
@@ -32,6 +32,13 @@ export default function ExitIntentPopup() {
         setIsVisible(true);
         setHasShown(true);
         sessionStorage.setItem("exit-intent-shown", "true");
+        
+        // Track popup view
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: "view_exit_popup",
+          });
+        }
       }
     };
 
@@ -48,6 +55,35 @@ export default function ExitIntentPopup() {
 
   const handleClose = () => {
     setIsVisible(false);
+    // Track close
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "close_exit_popup",
+      });
+    }
+  };
+
+  const handleCallClick = () => {
+    // Track call click
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "click_to_call",
+        phone_number: PHONE_NUMBER,
+        placement: "exit_popup",
+      });
+    }
+    handleClose();
+  };
+
+  const handleWhatsAppClick = () => {
+    // Track WhatsApp click
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "click_whatsapp",
+        placement: "exit_popup",
+      });
+    }
+    handleClose();
   };
 
   return (
@@ -77,6 +113,7 @@ export default function ExitIntentPopup() {
                 <button
                   onClick={handleClose}
                   className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+                  aria-label="Fermer"
                 >
                   <X size={24} />
                 </button>
@@ -122,7 +159,7 @@ export default function ExitIntentPopup() {
                   {/* Phone */}
                   <a
                     href={`tel:${PHONE_TEL}`}
-                    onClick={handleClose}
+                    onClick={handleCallClick}
                     className="flex items-center justify-center gap-3 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition-colors"
                   >
                     <Phone size={20} />
@@ -134,7 +171,7 @@ export default function ExitIntentPopup() {
                     href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={handleClose}
+                    onClick={handleWhatsAppClick}
                     className="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-4 rounded-xl transition-colors"
                   >
                     <MessageCircle size={20} fill="white" strokeWidth={0} />
