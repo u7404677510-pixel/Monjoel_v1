@@ -1,12 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Star, MapPin, Clock, Shield, BadgeCheck } from "lucide-react";
+import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users } from "lucide-react";
 import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
   const { config } = useSiteConfig();
+  
+  // Compteur artisans disponibles (varie entre 2-5)
+  const [artisansCount, setArtisansCount] = useState(3);
+  
+  useEffect(() => {
+    // Variation aléatoire toutes les 30 secondes
+    const interval = setInterval(() => {
+      setArtisansCount(Math.floor(Math.random() * 4) + 2); // 2-5
+    }, 30000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
@@ -19,6 +32,21 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
+            {/* Artisans disponibles - Urgence */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-3"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <Users size={14} />
+              <span>{artisansCount} artisans disponibles maintenant</span>
+            </motion.div>
+            
             {/* Google Reviews - Trust Signal */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -62,13 +90,17 @@ export default function Hero() {
               <a
                 href={`tel:${formatPhoneForTel(config.phone_number)}`}
                 data-placement="hero-main"
-                className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="group relative inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
+                {/* Badge GRATUIT */}
+                <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
+                  GRATUIT
+                </span>
                 <Phone size={24} className="animate-pulse" />
                 <span>APPELER LE {config.phone_number}</span>
               </a>
               <p className="text-sm text-gray-500 mt-3 ml-1">
-                Devis gratuit • Sans engagement
+                Appel gratuit • Devis instantané • Sans engagement
               </p>
             </div>
 

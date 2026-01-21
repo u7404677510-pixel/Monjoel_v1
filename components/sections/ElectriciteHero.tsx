@@ -83,13 +83,17 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
               <a
                 href={`tel:${phoneTel}`}
                 data-placement="electricite-hero"
-                className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="group relative inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
+                {/* Badge GRATUIT */}
+                <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
+                  GRATUIT
+                </span>
                 <Phone size={24} className="animate-pulse" />
                 <span>APPELER LE {phoneNumber}</span>
               </a>
               <p className="text-sm text-gray-500 mt-3 ml-1">
-                Devis gratuit • Sans engagement
+                Appel gratuit • Devis instantané • Sans engagement
               </p>
             </div>
             
