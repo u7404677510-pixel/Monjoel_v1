@@ -34,13 +34,17 @@ export default function StickyCallButton() {
         <a
           href={`tel:${formatPhoneForTel(config.phone_number)}`}
           data-placement="sticky-mobile"
-          className="flex items-center justify-center gap-3 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all"
+          className="relative flex items-center justify-center gap-3 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all"
         >
+          {/* Badge GRATUIT */}
+          <span className="absolute -top-2 right-4 bg-joel-yellow text-gray-900 text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
+            GRATUIT
+          </span>
           <Phone size={22} className="animate-pulse" />
           <span>Appeler maintenant</span>
         </a>
         <p className="text-center text-xs text-gray-500 mt-2">
-          Disponible 24h/24 • Devis gratuit
+          Appel gratuit • Disponible 24h/24
         </p>
       </div>
     </div>
