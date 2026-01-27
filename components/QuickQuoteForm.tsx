@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, Phone, MapPin, Wrench, Loader2, X } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
@@ -38,6 +39,19 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Track when component is mounted (for portal)
+  useEffect(() => {
+    setIsMounted(true);
+    // Lock body scroll when modal is open
+    if (variant === "modal") {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [variant]);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -116,42 +130,40 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
     }
   };
 
-  // Success state
-  if (isSuccess) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className={`bg-white rounded-2xl p-6 sm:p-8 ${variant === "modal" ? "max-w-md mx-auto" : ""}`}
-      >
-        <div className="text-center">
-          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle size={32} className="text-emerald-500" />
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Demande envoyée !</h3>
-          <p className="text-gray-600 mb-6">
-            Nous vous rappelons dans les 2 minutes pour vous communiquer votre devis gratuit.
-          </p>
-          <a
-            href={`tel:${formatPhoneForTel(config.phone_number)}`}
-            onClick={handleCallClick}
-            className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
-          >
-            <Phone size={18} />
-            <span>Ou appelez maintenant</span>
-          </a>
+  // Success state content
+  const successContent = (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className="bg-white rounded-2xl p-6 sm:p-8"
+    >
+      <div className="text-center">
+        <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <CheckCircle size={32} className="text-emerald-500" />
         </div>
-        {variant === "modal" && onClose && (
-          <button
-            onClick={onClose}
-            className="mt-4 w-full text-gray-500 hover:text-gray-700 text-sm"
-          >
-            Fermer
-          </button>
-        )}
-      </motion.div>
-    );
-  }
+        <h3 className="text-xl font-bold text-gray-900 mb-2">Demande envoyée !</h3>
+        <p className="text-gray-600 mb-6">
+          Nous vous rappelons dans les 2 minutes pour vous communiquer votre devis gratuit.
+        </p>
+        <a
+          href={`tel:${formatPhoneForTel(config.phone_number)}`}
+          onClick={handleCallClick}
+          className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+        >
+          <Phone size={18} />
+          <span>Ou appelez maintenant</span>
+        </a>
+      </div>
+      {variant === "modal" && onClose && (
+        <button
+          onClick={onClose}
+          className="mt-4 w-full text-gray-500 hover:text-gray-700 text-sm"
+        >
+          Fermer
+        </button>
+      )}
+    </motion.div>
+  );
 
   const formContent = (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -281,41 +293,51 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
     </form>
   );
 
-  // Modal variant
+  // Modal variant - Rendered via Portal
   if (variant === "modal") {
-    return (
+    const modalContent = (
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-start lg:items-center justify-center p-4 pt-20 lg:pt-4 overflow-y-auto"
           onClick={onClose}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative"
+            className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative my-4"
             onClick={(e) => e.stopPropagation()}
           >
             {onClose && (
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
                 aria-label="Fermer"
               >
                 <X size={24} />
               </button>
             )}
-            {formContent}
+            {isSuccess ? successContent : formContent}
           </motion.div>
         </motion.div>
       </AnimatePresence>
     );
+
+    // Render via portal to document.body
+    if (isMounted) {
+      return createPortal(modalContent, document.body);
+    }
+    return null;
   }
 
   // Inline variant
+  if (isSuccess) {
+    return successContent;
+  }
+
   return (
     <div id="quote-form" className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-100">
       {formContent}

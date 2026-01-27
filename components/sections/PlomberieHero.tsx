@@ -44,22 +44,34 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Left side - Content */}
+    <section className="relative min-h-[100svh] lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
+      {/* Mobile Background Illustration */}
+      <div className="absolute inset-0 lg:hidden">
+        <Image
+          src="/hero-plomberie.jpg"
+          alt=""
+          fill
+          className="object-cover object-center opacity-15"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center">
+          {/* Content - Always first on mobile */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="order-2 lg:order-1"
+            className="order-1"
           >
             {/* Artisans disponibles - Urgence */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-3"
+              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-2"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -74,9 +86,9 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-joel rounded-full mb-4"
+              className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-joel rounded-full mb-2 ml-2"
             >
-              <Droplets size={16} className="text-white" />
+              <Droplets size={14} className="text-white" />
               <span className="text-white text-sm font-medium">{subtitle}</span>
             </motion.div>
 
@@ -85,31 +97,31 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="flex items-center gap-2 mb-4"
+              className="flex items-center gap-2 mb-3"
             >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={18} className="text-yellow-400 fill-yellow-400" />
+                  <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
               <span className="text-sm font-semibold text-gray-700">4.9/5</span>
-              <span className="text-sm text-gray-500">sur Google (847 avis vérifiés)</span>
+              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (847 avis vérifiés)</span>
             </motion.div>
 
             {/* Main title */}
-            <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 leading-[1.1]">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 lg:mb-4 leading-[1.15]">
               {title}
               <br />
               <span className="gradient-text">Paris & Île-de-France</span>
             </h1>
 
             {/* Subtitle - Value proposition */}
-            <p className="text-lg sm:text-xl text-gray-600 mb-6 font-medium">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 lg:mb-6 font-medium">
               {description}
             </p>
 
-            {/* Location badge */}
-            <div className="flex items-center gap-2 text-sm text-gray-600 mb-8 bg-gray-50 px-4 py-3 rounded-xl inline-flex">
+            {/* Location badge - Hidden on mobile */}
+            <div className="hidden lg:inline-flex items-center gap-2 text-sm text-gray-600 mb-8 bg-gray-50 px-4 py-3 rounded-xl">
               <MapPin size={18} className="text-joel-violet" />
               <span>
                 <strong>Zone d'intervention :</strong> Toute l'Île-de-France (75, 77, 78, 91, 92, 93, 94, 95)
@@ -117,30 +129,30 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
             </div>
 
             {/* CTA Buttons */}
-            <div className="mb-8 flex flex-col sm:flex-row gap-4">
+            <div className="mb-4 lg:mb-8 flex flex-col sm:flex-row gap-3 lg:gap-4">
               <a
                 href={`tel:${phoneTel}`}
                 onClick={handleCallClick}
                 data-placement="plomberie-hero"
-                className="group relative inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 {/* Badge GRATUIT */}
                 <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
                   GRATUIT
                 </span>
-                <Phone size={24} className="animate-pulse" />
+                <Phone size={22} className="animate-pulse" />
                 <span>APPELER LE {phoneNumber}</span>
               </a>
               
               <button
                 onClick={() => setShowQuoteModal(true)}
-                className="inline-flex items-center justify-center gap-2 bg-white text-joel-violet font-bold text-lg px-8 py-5 rounded-2xl border-2 border-joel-violet/30 hover:border-joel-violet hover:bg-joel-violet/5 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-white text-joel-violet font-bold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-5 rounded-2xl border-2 border-joel-violet/30 hover:border-joel-violet hover:bg-joel-violet/5 transition-all"
               >
                 <span>Demander un devis</span>
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </button>
             </div>
-            <p className="text-sm text-gray-500 ml-1">
+            <p className="text-sm text-gray-500 mb-4 lg:mb-0">
               Appel gratuit • Devis instantané • Sans engagement
             </p>
 
@@ -152,8 +164,8 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
               />
             )}
             
-            {/* Static phone number for Google Ads crawler detection */}
-            <div className="text-sm text-gray-600 mb-4">
+            {/* Static phone number for Google Ads crawler detection - Hidden on mobile */}
+            <div className="hidden lg:block text-sm text-gray-600 mb-4">
               <span className="font-semibold">Appelez-nous : </span>
               <a 
                 href={`tel:${STATIC_PHONE_TEL}`} 
@@ -163,8 +175,8 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
               </a>
             </div>
 
-            {/* Trust badges - Brands */}
-            <div className="border-t border-gray-100 pt-6">
+            {/* Trust badges - Brands - Hidden on mobile */}
+            <div className="hidden lg:block border-t border-gray-100 pt-6">
               <p className="text-xs text-gray-400 uppercase tracking-wide mb-3">Marques partenaires</p>
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
@@ -187,12 +199,12 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
             </div>
           </motion.div>
 
-          {/* Right side - Illustration */}
+          {/* Right side - Illustration - Desktop only */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="order-1 lg:order-2 relative"
+            className="hidden lg:block order-2 relative"
           >
             <div className="relative max-w-lg mx-auto lg:max-w-none">
               {/* Main illustration */}
