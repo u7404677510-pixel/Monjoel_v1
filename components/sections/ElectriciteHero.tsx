@@ -51,10 +51,8 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center">
-          {/* Content - Always first on mobile */}
-          <div
-            className="order-1 animate-fade-in-up"
-          >
+          {/* Content - Always first on mobile - No animation to ensure LCP element is visible */}
+          <div className="order-1">
             {/* Artisans disponibles - Urgence */}
             <div
               className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-2"

@@ -219,7 +219,7 @@ export default function ScamQuiz() {
                   : "Les arnaques sont plus fréquentes que vous ne le pensez !"}
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button onClick={resetQuiz} className="flex items-center justify-center gap-2 px-6 py-3 bg-white/20 rounded-full">
+                <button onClick={resetQuiz} className="flex items-center justify-center gap-2 px-6 py-3 bg-white/20 rounded-full" aria-label="Recommencer le quiz">
                   <RotateCcw size={18} />
                   Recommencer
                 </button>

@@ -267,6 +267,7 @@ export default function ChatBot() {
                   <button
                     type="submit"
                     className="px-4 py-3 bg-joel-violet text-white rounded-xl hover:bg-joel-violet/90 transition-colors"
+                    aria-label="Envoyer"
                   >
                     <Send size={18} />
                   </button>
@@ -295,6 +296,7 @@ export default function ChatBot() {
                     <button
                       type="submit"
                       className="px-4 py-3 bg-joel-violet text-white rounded-xl hover:bg-joel-violet/90 transition-colors"
+                      aria-label="Envoyer mon numéro"
                     >
                       <Send size={18} />
                     </button>
