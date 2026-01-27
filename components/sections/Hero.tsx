@@ -150,7 +150,7 @@ export default function Hero() {
           {/* Right side - Illustration - Desktop only */}
           <div className="hidden lg:block order-2 relative animate-fade-in-right delay-200">
             <div className="relative max-w-lg mx-auto lg:max-w-none">
-              {/* Main illustration - Optimized WebP */}
+              {/* Main illustration - No priority to avoid LCP on mobile where it's hidden */}
               <div className="relative rounded-3xl overflow-hidden">
                 <Image
                   src="/hero-illustration-f.webp"
@@ -159,8 +159,7 @@ export default function Hero() {
                   height={600}
                   sizes="(max-width: 1024px) 100vw, 600px"
                   className="w-full h-auto object-cover"
-                  priority
-                  fetchPriority="high"
+                  loading="lazy"
                 />
               </div>
 

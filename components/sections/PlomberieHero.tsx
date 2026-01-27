@@ -170,8 +170,7 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
                   height={600}
                   sizes="(max-width: 1024px) 100vw, 600px"
                   className="w-full h-auto object-cover"
-                  priority
-                  fetchPriority="high"
+                  loading="lazy"
                 />
               </div>
               {/* Floating badge - Availability */}
