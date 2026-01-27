@@ -220,8 +220,11 @@ async function sendEmailNotification(leadData: LeadData): Promise<void> {
 </html>
   `;
 
+  // Utilise le domaine vérifié si disponible, sinon fallback sur resend.dev
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "Joël <onboarding@resend.dev>";
+  
   const { error } = await resend.emails.send({
-    from: "Joël <notifications@monjoel.com>",
+    from: fromEmail,
     to: NOTIFICATION_EMAIL,
     subject: `🚨 Nouvelle demande ${leadData.trade} - ${leadData.postalCode}`,
     html: emailHtml,
