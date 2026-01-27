@@ -36,14 +36,16 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
-      {/* Mobile Background Illustration */}
+      {/* Mobile Background Illustration - Optimized WebP */}
       <div className="absolute inset-0 lg:hidden">
         <Image
-          src="/hero-illustration-f.png"
+          src="/hero-illustration-f-mobile.webp"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover object-center opacity-15"
           priority
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
       </div>
@@ -178,15 +180,17 @@ export default function Hero() {
             className="hidden lg:block order-2 relative"
           >
             <div className="relative max-w-lg mx-auto lg:max-w-none">
-              {/* Main illustration */}
+              {/* Main illustration - Optimized WebP */}
               <div className="relative rounded-3xl overflow-hidden">
                 <Image
-                  src="/hero-illustration-f.png"
+                  src="/hero-illustration-f.webp"
                   alt="Artisan dépannage à domicile - Plombier Serrurier Électricien"
                   width={600}
                   height={600}
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="w-full h-auto object-cover"
                   priority
+                  fetchPriority="high"
                 />
               </div>
 

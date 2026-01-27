@@ -22,7 +22,7 @@ const config: Config = {
         "gradient-joel-warm": "linear-gradient(135deg, #7055A7 0%, #9E76EC 70%, #F5D547 100%)",
       },
       fontFamily: {
-        sans: ["Poppins", "system-ui", "sans-serif"],
+        sans: ["var(--font-poppins)", "Poppins", "system-ui", "sans-serif"],
         display: ["Chillax", "system-ui", "sans-serif"],
       },
     },

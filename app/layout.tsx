@@ -1,13 +1,26 @@
 import type { Metadata, Viewport } from "next";
+import { Poppins } from "next/font/google";
+import Script from "next/script";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import TelClickTracker from "@/components/TelClickTracker";
 import StickyCallButton from "@/components/StickyCallButton";
-import ArtisanToast from "@/components/ArtisanToast";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import SocialProofNotifications from "@/components/SocialProofNotifications";
-import ChatBot from "@/components/ChatBot";
+
+// Lazy load non-critical components (they appear with delay anyway)
+const ArtisanToast = dynamic(() => import("@/components/ArtisanToast"), { ssr: false });
+const SocialProofNotifications = dynamic(() => import("@/components/SocialProofNotifications"), { ssr: false });
+const ChatBot = dynamic(() => import("@/components/ChatBot"), { ssr: false });
 // ExitIntentPopup retiré - trop agressif pour l'UX
+
+// Optimized font loading with next/font
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 
 // Environment variables for tracking
 const COOKIEBOT_ID = process.env.NEXT_PUBLIC_COOKIEBOT_ID || "c1addd46-5bcb-4d18-835f-4db63cde7755";
@@ -87,7 +100,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={poppins.variable}>
       <head>
         {/* ========================================
             1. CONSENT MODE V2 - DEFAULTS (AVANT TOUT)
@@ -123,61 +136,29 @@ export default function RootLayout({
           async
         />
 
-        {/* ========================================
-            3. GOOGLE TAG MANAGER - Head
-            Chargé après Cookiebot pour respecter le consentement
-            ======================================== */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
-          }}
-        />
+        {/* GTM is loaded via Script component in body with afterInteractive strategy */}
 
-        {/* Fonts */}
+        {/* Fonts - Preconnect for Chillax (Fontshare) */}
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
         <link
           href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600,700&display=swap"
           rel="stylesheet"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-
-        {/* Ahrefs Analytics */}
-        <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="Fz7aiNvYMBOmjjdZVqaa5w"
-          async
-        />
-
-        {/* ========================================
-            MICROSOFT CLARITY - Heatmaps & Session Recording
-            Gratuit - https://clarity.microsoft.com
-            ======================================== */}
-        {CLARITY_ID && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY_ID}");`
-            }}
-          />
-        )}
-
-        {/* ========================================
-            GOOGLE RECAPTCHA V3 - Spam protection
-            https://www.google.com/recaptcha/admin
-            ======================================== */}
-        {RECAPTCHA_SITE_KEY && (
-          <script
-            src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
-            async
-          />
-        )}
+        {/* Poppins is loaded via next/font - no external request needed */}
+        {/* Analytics scripts are loaded in body with lazyOnload strategy */}
       </head>
       <body className="bg-white min-h-screen overflow-x-hidden">
         {/* ========================================
-            GOOGLE TAG MANAGER - noscript fallback
-            Pour les navigateurs sans JavaScript
+            GOOGLE TAG MANAGER - afterInteractive for better LCP
             ======================================== */}
+        <Script
+          id="gtm"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
+          }}
+        />
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -186,6 +167,32 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+
+        {/* Analytics scripts - lazyOnload for minimal impact on LCP */}
+        <Script
+          id="ahrefs"
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="Fz7aiNvYMBOmjjdZVqaa5w"
+          strategy="lazyOnload"
+        />
+        
+        {CLARITY_ID && (
+          <Script
+            id="clarity"
+            strategy="lazyOnload"
+            dangerouslySetInnerHTML={{
+              __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY_ID}");`
+            }}
+          />
+        )}
+        
+        {RECAPTCHA_SITE_KEY && (
+          <Script
+            id="recaptcha"
+            src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+            strategy="lazyOnload"
+          />
+        )}
 
         {/* Tel Click Tracker pour conversions Google Ads */}
         <TelClickTracker />
