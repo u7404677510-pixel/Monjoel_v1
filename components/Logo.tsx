@@ -11,12 +11,13 @@ export default function Logo({ className = "" }: LogoProps) {
   return (
     <Link href="/" className={`flex items-center ${className}`}>
       <Image
-        src="/logo.png"
-        alt="Joël"
-        width={250}
-        height={80}
+        src="/logo.webp"
+        alt="Joël - Dépannage d'urgence"
+        width={224}
+        height={72}
         className="h-auto w-auto max-h-16"
         priority
+        fetchPriority="high"
       />
     </Link>
   );

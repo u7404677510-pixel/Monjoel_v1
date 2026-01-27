@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
@@ -82,33 +81,27 @@ function DropdownMenu({ link, onClose }: { link: NavLinkWithDropdown; onClose: (
         className="flex items-center gap-1 text-gray-700 hover:text-joel-violet font-medium transition-colors"
       >
         {link.label}
-        <ChevronDown size={16} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown size={16} className={`transition-transform duration-150 ${isOpen ? "rotate-180" : ""}`} />
       </Link>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.15 }}
-            className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50"
-          >
-            <div className="py-2">
-              {link.subLinks.map((subLink) => (
-                <Link
-                  key={subLink.href}
-                  href={subLink.href}
-                  onClick={onClose}
-                  className="block px-4 py-2.5 text-sm text-gray-600 hover:text-joel-violet hover:bg-joel-violet/5 transition-colors"
-                >
-                  {subLink.label}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 transition-all duration-150 ${
+          isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
+        }`}
+      >
+        <div className="py-2">
+          {link.subLinks.map((subLink) => (
+            <Link
+              key={subLink.href}
+              href={subLink.href}
+              onClick={onClose}
+              className="block px-4 py-2.5 text-sm text-gray-600 hover:text-joel-violet hover:bg-joel-violet/5 transition-colors"
+            >
+              {subLink.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
@@ -141,34 +134,30 @@ function MobileDropdown({ link, onClose }: { link: NavLinkWithDropdown; onClose:
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-2 text-gray-500 hover:text-joel-violet"
+          aria-label={isOpen ? "Fermer le sous-menu" : "Ouvrir le sous-menu"}
         >
-          <ChevronDown size={18} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+          <ChevronDown size={18} className={`transition-transform duration-150 ${isOpen ? "rotate-180" : ""}`} />
         </button>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden"
-          >
-            <div className="pl-4 border-l-2 border-joel-violet/20 ml-2 space-y-1">
-              {link.subLinks.map((subLink) => (
-                <Link
-                  key={subLink.href}
-                  href={subLink.href}
-                  onClick={onClose}
-                  className="block py-2 text-sm text-gray-500 hover:text-joel-violet transition-colors"
-                >
-                  {subLink.label}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`overflow-hidden transition-all duration-200 ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="pl-4 border-l-2 border-joel-violet/20 ml-2 space-y-1">
+          {link.subLinks.map((subLink) => (
+            <Link
+              key={subLink.href}
+              href={subLink.href}
+              onClick={onClose}
+              className="block py-2 text-sm text-gray-500 hover:text-joel-violet transition-colors"
+            >
+              {subLink.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
@@ -201,10 +190,8 @@ export default function Navigation() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down ${
         isScrolled || isMobileMenuOpen
           ? "bg-white/95 backdrop-blur-lg shadow-lg"
           : "bg-white/80 backdrop-blur-sm"
@@ -244,46 +231,43 @@ export default function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-gray-700"
+            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 pb-4 bg-white"
+        <div
+          className={`md:hidden mt-4 pb-4 bg-white overflow-hidden transition-all duration-200 ${
+            isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <MobileDropdown key={link.href} link={link} onClose={closeMobileMenu} />
+            ))}
+            <a
+              href={`tel:${formatPhoneForTel(config.phone_number)}`}
+              data-placement="header-mobile"
+              className="flex items-center justify-center gap-2 px-5 py-3 bg-gradient-joel text-white font-semibold rounded-full mt-4"
             >
-              <div className="flex flex-col gap-2">
-                {navLinks.map((link) => (
-                  <MobileDropdown key={link.href} link={link} onClose={closeMobileMenu} />
-                ))}
-                <a
-                  href={`tel:${formatPhoneForTel(config.phone_number)}`}
-                  data-placement="header-mobile"
-                  className="flex items-center justify-center gap-2 px-5 py-3 bg-gradient-joel text-white font-semibold rounded-full mt-4"
-                >
-                  <Phone size={18} />
-                  <span>{config.phone_number}</span>
-                </a>
-                <button
-                  onClick={() => {
-                    setShowQuoteModal(true);
-                    closeMobileMenu();
-                  }}
-                  className="flex items-center justify-center gap-2 px-5 py-3 bg-white text-joel-violet font-semibold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet mt-2"
-                >
-                  <span>Demander un devis</span>
-                  <ArrowRight size={16} />
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              <Phone size={18} />
+              <span>{config.phone_number}</span>
+            </a>
+            <button
+              onClick={() => {
+                setShowQuoteModal(true);
+                closeMobileMenu();
+              }}
+              className="flex items-center justify-center gap-2 px-5 py-3 bg-white text-joel-violet font-semibold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet mt-2"
+            >
+              <span>Demander un devis</span>
+              <ArrowRight size={16} />
+            </button>
+          </div>
+        </div>
       </nav>
 
       {/* Quote Modal */}
@@ -293,6 +277,6 @@ export default function Navigation() {
           onClose={() => setShowQuoteModal(false)}
         />
       )}
-    </motion.header>
+    </header>
   );
 }

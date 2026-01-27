@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import dynamic from "next/dynamic";
 import "./globals.css";
@@ -22,6 +23,18 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+// Self-hosted Chillax font (no render-blocking external request)
+const chillax = localFont({
+  src: [
+    { path: "../public/fonts/Chillax-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/Chillax-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/Chillax-Semibold.woff2", weight: "600", style: "normal" },
+    { path: "../public/fonts/Chillax-Bold.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-chillax",
+  display: "swap",
+});
+
 // Environment variables for tracking
 const COOKIEBOT_ID = process.env.NEXT_PUBLIC_COOKIEBOT_ID || "c1addd46-5bcb-4d18-835f-4db63cde7755";
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-NFKDT6QC";
@@ -31,8 +44,7 @@ const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""; // 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  // Removed maximumScale and userScalable for accessibility (allows zoom for visually impaired users)
 };
 
 export const metadata: Metadata = {
@@ -100,7 +112,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={poppins.variable}>
+    <html lang="fr" className={`${poppins.variable} ${chillax.variable}`}>
       <head>
         {/* ========================================
             1. CONSENT MODE V2 - DEFAULTS (AVANT TOUT)
@@ -137,16 +149,7 @@ export default function RootLayout({
         />
 
         {/* GTM is loaded via Script component in body with afterInteractive strategy */}
-
-        {/* Fonts - Preconnect for Chillax (Fontshare) */}
-        <link rel="preconnect" href="https://api.fontshare.com" />
-        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600,700&display=swap"
-          rel="stylesheet"
-        />
-        {/* Poppins is loaded via next/font - no external request needed */}
-        {/* Analytics scripts are loaded in body with lazyOnload strategy */}
+        {/* Both Poppins and Chillax are self-hosted via next/font - no render-blocking external requests */}
       </head>
       <body className="bg-white min-h-screen overflow-x-hidden">
         {/* ========================================

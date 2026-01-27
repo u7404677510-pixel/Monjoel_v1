@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
@@ -53,34 +52,19 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center">
           {/* Content - Always first on mobile */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="order-1"
-          >
+          <div className="order-1 animate-fade-in-up">
             {/* Artisans disponibles - Urgence */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-2"
-            >
+            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <Users size={14} />
               <span>{artisansCount} artisans disponibles maintenant</span>
-            </motion.div>
+            </div>
             
             {/* Google Reviews - Trust Signal */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="flex items-center gap-2 mb-3"
-            >
+            <div className="flex items-center gap-2 mb-3">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
@@ -170,15 +154,10 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right side - Illustration - Desktop only */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden lg:block order-2 relative"
-          >
+          <div className="hidden lg:block order-2 relative animate-fade-in-right delay-200">
             <div className="relative max-w-lg mx-auto lg:max-w-none">
               {/* Main illustration - Optimized WebP */}
               <div className="relative rounded-3xl overflow-hidden">
@@ -195,12 +174,7 @@ export default function Hero() {
               </div>
 
               {/* Floating badge - Availability */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100"
-              >
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100 animate-scale-in delay-600">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
                     <Clock className="text-white" size={20} />
@@ -210,20 +184,15 @@ export default function Hero() {
                     <p className="font-bold text-gray-900">24h/24 • 7j/7</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Floating badge - Price */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2 shadow-lg"
-              >
+              <div className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2 shadow-lg animate-scale-in delay-800">
                 <p className="text-xs font-medium">À partir de</p>
                 <p className="font-bold text-xl">89€</p>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "Poppins", "system-ui", "sans-serif"],
-        display: ["Chillax", "system-ui", "sans-serif"],
+        display: ["var(--font-chillax)", "Chillax", "system-ui", "sans-serif"],
       },
     },
   },

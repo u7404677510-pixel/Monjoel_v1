@@ -67,10 +67,10 @@ export default function Footer() {
             <div className="mb-4">
               <Link href="/">
                 <Image
-                  src="/logo-white.png"
-                  alt="Joël"
+                  src="/logo-white.webp"
+                  alt="Joël - Dépannage d'urgence"
                   width={200}
-                  height={80}
+                  height={64}
                   className="h-auto w-auto max-h-20"
                 />
               </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Plomberie */}
           <div>
-            <h4 className="font-bold text-sm mb-3 text-joel-yellow">Plomberie</h4>
+            <p className="font-bold text-sm mb-3 text-joel-yellow">Plomberie</p>
             <ul className="space-y-2">
               {footerLinks.plomberie.map((link) => (
                 <li key={link.href}>
@@ -121,7 +121,7 @@ export default function Footer() {
 
           {/* Électricité */}
           <div>
-            <h4 className="font-bold text-sm mb-3 text-joel-yellow">Électricité</h4>
+            <p className="font-bold text-sm mb-3 text-joel-yellow">Électricité</p>
             <ul className="space-y-2">
               {footerLinks.electricite.map((link) => (
                 <li key={link.href}>
@@ -142,7 +142,7 @@ export default function Footer() {
 
           {/* Serrurerie */}
           <div>
-            <h4 className="font-bold text-sm mb-3 text-joel-yellow">Serrurerie</h4>
+            <p className="font-bold text-sm mb-3 text-joel-yellow">Serrurerie</p>
             <ul className="space-y-2">
               {footerLinks.serrurerie.map((link) => (
                 <li key={link.href}>
@@ -163,7 +163,7 @@ export default function Footer() {
 
           {/* Entreprise */}
           <div>
-            <h4 className="font-bold text-sm mb-3 text-white">Entreprise</h4>
+            <p className="font-bold text-sm mb-3 text-white">Entreprise</p>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -180,7 +180,7 @@ export default function Footer() {
 
           {/* Légal */}
           <div>
-            <h4 className="font-bold text-sm mb-3 text-white">Légal</h4>
+            <p className="font-bold text-sm mb-3 text-white">Légal</p>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
@@ -198,30 +198,33 @@ export default function Footer() {
 
         {/* Zones d'intervention */}
         <div className="border-t border-white/10 pt-8 mb-8">
-          <h4 className="font-bold text-sm mb-4 text-joel-yellow">Zones d&apos;intervention</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+          <p className="font-bold text-sm mb-4 text-joel-yellow">Zones d&apos;intervention</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
             {departmentLinks.map((dept) => (
               <div key={dept.code} className="text-center">
-                <p className="text-xs text-gray-500 mb-1">{dept.name}</p>
-                <div className="flex flex-wrap justify-center gap-1">
+                <p className="text-xs text-gray-300 mb-2">{dept.name}</p>
+                <div className="flex flex-wrap justify-center gap-2">
                   <Link
                     href={`/plombier-${dept.code}`}
-                    className="text-xs text-gray-400 hover:text-joel-yellow transition-colors"
+                    className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
                     title={`Plombier ${dept.name}`}
+                    aria-label={`Plombier ${dept.name}`}
                   >
                     🔧
                   </Link>
                   <Link
                     href={`/serrurier-${dept.code}`}
-                    className="text-xs text-gray-400 hover:text-joel-yellow transition-colors"
+                    className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
                     title={`Serrurier ${dept.name}`}
+                    aria-label={`Serrurier ${dept.name}`}
                   >
                     🔐
                   </Link>
                   <Link
                     href={`/electricien-${dept.code}`}
-                    className="text-xs text-gray-400 hover:text-joel-yellow transition-colors"
+                    className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
                     title={`Électricien ${dept.name}`}
+                    aria-label={`Électricien ${dept.name}`}
                   >
                     ⚡
                   </Link>
