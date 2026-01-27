@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { Phone, ArrowRight } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
+import QuickQuoteForm from "@/components/QuickQuoteForm";
 
 interface CTAButtonsProps {
   variant?: "hero" | "section" | "compact";
@@ -10,6 +12,7 @@ interface CTAButtonsProps {
 
 export default function CTAButtons({ variant = "hero", className = "" }: CTAButtonsProps) {
   const { config, loading } = useSiteConfig();
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
 
   if (loading) {
     return (
@@ -50,13 +53,21 @@ export default function CTAButtons({ variant = "hero", className = "" }: CTAButt
       )}
 
       {showDevis && (
-        <a
-          href={config.cta_devis_url}
+        <button
+          onClick={() => setShowQuoteModal(true)}
           className={devisStyles}
         >
           <span>Demander un devis</span>
           <ArrowRight size={variant === "compact" ? 16 : 18} />
-        </a>
+        </button>
+      )}
+
+      {/* Quote Modal */}
+      {showQuoteModal && (
+        <QuickQuoteForm
+          variant="modal"
+          onClose={() => setShowQuoteModal(false)}
+        />
       )}
     </div>
   );

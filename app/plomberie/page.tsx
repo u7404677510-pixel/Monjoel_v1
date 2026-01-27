@@ -3,6 +3,7 @@ import PlomberieHero from "@/components/sections/PlomberieHero";
 import PlomberieServicesGrid from "@/components/sections/PlomberieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
+import Testimonials from "@/components/sections/Testimonials";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -129,6 +130,7 @@ export default function PlomberiePage() {
       <PlomberieServicesGrid />
       <ServiceProcess />
       <ServiceGuarantees />
+      <Testimonials />
       <ServiceZones />
       <ServiceFAQ faqs={plomberieFAQs} serviceName="Plomberie" />
       <FinalCTA />

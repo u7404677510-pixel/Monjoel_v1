@@ -24,7 +24,7 @@ const defaultConfig: SiteConfig = {
   show_phone: true,
   show_cta_phone: true,
   show_cta_devis: true,
-  cta_devis_url: "https://app.monjoel.fr",
+  cta_devis_url: "#quote-form", // Ancre vers le formulaire de devis (sera créé)
 };
 
 export function useSiteConfig() {

@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Camera, MessageCircleQuestion, FileText, CreditCard } from "lucide-react";
 import { yellowPunctuation } from "@/components/ui/Title";
+import SectionCTA from "@/components/SectionCTA";
 
 const steps = [
   {
@@ -133,6 +134,12 @@ export default function HowItWorks() {
             ))}
           </div>
         </div>
+
+        {/* CTA */}
+        <SectionCTA 
+          text="Prêt à démarrer ?" 
+          placement="howitworks" 
+        />
       </div>
     </section>
   );

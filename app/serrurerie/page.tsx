@@ -3,6 +3,7 @@ import SerrurerieHero from "@/components/sections/SerrurerieHero";
 import SerrurerieServicesGrid from "@/components/sections/SerrurerieServicesGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
+import Testimonials from "@/components/sections/Testimonials";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import ServiceZones from "@/components/sections/ServiceZones";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -129,6 +130,7 @@ export default function SerrureriePage() {
       <SerrurerieServicesGrid />
       <ServiceProcess />
       <ServiceGuarantees />
+      <Testimonials />
       <ServiceZones />
       <ServiceFAQ faqs={serrurerieFAQs} serviceName="Serrurerie" />
       <FinalCTA />

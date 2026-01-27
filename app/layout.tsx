@@ -5,7 +5,7 @@ import TelClickTracker from "@/components/TelClickTracker";
 import StickyCallButton from "@/components/StickyCallButton";
 import ArtisanToast from "@/components/ArtisanToast";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
+// ExitIntentPopup retiré - trop agressif pour l'UX
 
 // Environment variables for tracking
 const COOKIEBOT_ID = process.env.NEXT_PUBLIC_COOKIEBOT_ID || "c1addd46-5bcb-4d18-835f-4db63cde7755";
@@ -174,9 +174,6 @@ export default function RootLayout({
         
         {/* Toast notification artisan disponible */}
         <ArtisanToast />
-        
-        {/* Exit intent popup (desktop only) */}
-        <ExitIntentPopup />
       </body>
     </html>
   );

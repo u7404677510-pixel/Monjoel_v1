@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Droplets, Zap, Key, ArrowRight, Clock, Euro, Shield, CheckCircle } from "lucide-react";
-import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
+import QuickQuoteForm from "@/components/QuickQuoteForm";
 
 const services = [
   {
@@ -67,7 +67,7 @@ const services = [
 
 export default function ServicesExplorer() {
   const [activeService, setActiveService] = useState(services[0]);
-  const { config } = useSiteConfig();
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
 
   return (
     <section className="py-16 sm:py-24">
@@ -153,14 +153,14 @@ export default function ServicesExplorer() {
 
                 {/* CTA */}
                 <div className="mt-6 sm:mt-12">
-                  <a
-                    href={config.cta_devis_url}
-                    className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 bg-gradient-joel text-white font-semibold text-sm rounded-full shadow-lg shadow-joel-violet/30 hover:shadow-xl transition-all"
+                  <button
+                    onClick={() => setShowQuoteModal(true)}
+                    className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 bg-gradient-joel text-white font-semibold text-sm rounded-full shadow-lg shadow-joel-violet/30 hover:shadow-xl transition-all hover:scale-105"
                   >
                     <span className="hidden sm:inline">Obtenir un devis instantané</span>
                     <span className="sm:hidden">Devis instantané</span>
                     <ArrowRight size={16} />
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -189,6 +189,14 @@ export default function ServicesExplorer() {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {/* Quote Modal */}
+        {showQuoteModal && (
+          <QuickQuoteForm
+            variant="modal"
+            onClose={() => setShowQuoteModal(false)}
+          />
+        )}
       </div>
     </section>
   );

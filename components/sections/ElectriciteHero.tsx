@@ -1,7 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Zap, Phone, Star, MapPin, Clock, Shield, BadgeCheck } from "lucide-react";
+import { Zap, Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users } from "lucide-react";
 import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
@@ -19,6 +20,16 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
   const { config } = useSiteConfig();
   const phoneNumber = config.phone_number || STATIC_PHONE;
   const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
+
+  // Compteur artisans disponibles
+  const [artisansCount, setArtisansCount] = useState(3);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setArtisansCount(Math.floor(Math.random() * 4) + 2); // 2-5
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleCallClick = () => {
     if (typeof window !== "undefined" && window.dataLayer) {
@@ -41,7 +52,22 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
-            {/* Badge */}
+            {/* Artisans disponibles - Urgence */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-3"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <Users size={14} />
+              <span>{artisansCount} électriciens disponibles maintenant</span>
+            </motion.div>
+
+            {/* Badge métier */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}

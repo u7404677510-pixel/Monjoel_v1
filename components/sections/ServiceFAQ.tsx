@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { yellowPunctuation } from "@/components/ui/Title";
+import SectionCTA from "@/components/SectionCTA";
 
 interface FAQItem {
   question: string;
@@ -75,6 +76,12 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <SectionCTA 
+          text="Vous avez une autre question ?" 
+          placement="faq" 
+        />
       </div>
     </section>
   );

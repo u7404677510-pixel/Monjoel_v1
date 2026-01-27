@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Shield, Euro, Clock, Star, Phone, CheckCircle } from "lucide-react";
 import { yellowPunctuation } from "@/components/ui/Title";
+import SectionCTA from "@/components/SectionCTA";
 
 const advantages = [
   {
@@ -88,6 +89,12 @@ export default function Advantages() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <SectionCTA 
+          text="Besoin d'un dépannage ?" 
+          placement="advantages" 
+        />
       </div>
     </section>
   );

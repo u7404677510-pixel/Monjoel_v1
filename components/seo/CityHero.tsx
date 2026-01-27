@@ -1,7 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Phone, ArrowRight, Clock, Shield, Euro, MapPin } from "lucide-react";
+import { Phone, ArrowRight, Clock, Shield, Euro, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 import { City } from "@/lib/data/cities-idf";
 import { Trade, Service } from "@/lib/data/services-definition";
@@ -18,6 +19,16 @@ interface CityHeroProps {
 export default function CityHero({ trade, city, content, service }: CityHeroProps) {
   const { config } = useSiteConfig();
   
+  // Compteur artisans disponibles
+  const [artisansCount, setArtisansCount] = useState(3);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setArtisansCount(Math.floor(Math.random() * 4) + 2); // 2-5
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
   const isServicePage = "serviceTitle" in content;
   const priceFrom = isServicePage 
     ? (content as ServicePageContent).priceFrom 
@@ -69,8 +80,18 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
               )}
             </div>
 
+            {/* Artisans disponibles - Urgence */}
+            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-3">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <Users size={14} />
+              <span>{artisansCount} {trade.slug === "plombier" ? "plombiers" : trade.slug === "electricien" ? "électriciens" : "serruriers"} disponibles</span>
+            </div>
+
             {/* Location badge */}
-            <div className="inline-flex items-center gap-2 bg-joel-violet/10 text-joel-violet px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-joel-violet/10 text-joel-violet px-4 py-2 rounded-full text-sm font-medium mb-6 ml-2">
               <MapPin size={16} />
               <span>{city.name} ({city.postalCodes[0]})</span>
             </div>
