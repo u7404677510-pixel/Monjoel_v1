@@ -44,8 +44,7 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
           fill
           sizes="100vw"
           className="object-cover object-center opacity-15"
-          priority
-          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
       </div>

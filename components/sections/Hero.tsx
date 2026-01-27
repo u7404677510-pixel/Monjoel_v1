@@ -35,7 +35,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
-      {/* Mobile Background Illustration - Optimized WebP */}
+      {/* Mobile Background Illustration - Decorative, no priority to avoid LCP conflict */}
       <div className="absolute inset-0 lg:hidden">
         <Image
           src="/hero-illustration-f-mobile.webp"
@@ -43,8 +43,7 @@ export default function Hero() {
           fill
           sizes="100vw"
           className="object-cover object-center opacity-15"
-          priority
-          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
       </div>
