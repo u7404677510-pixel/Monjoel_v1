@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Phone, ChevronRight, Bot, User } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
-type Step = "welcome" | "problem" | "location" | "quote" | "contact";
+type Step = "welcome" | "trade" | "problem" | "location" | "quote" | "contact";
+type Trade = "serrurerie" | "plomberie" | "electricite";
 
 interface Message {
   id: number;
@@ -13,14 +14,23 @@ interface Message {
   content: string;
 }
 
+const trades = [
+  { id: "serrurerie" as Trade, label: "🔐 Serrurerie", description: "Porte, serrure, clé..." },
+  { id: "plomberie" as Trade, label: "🔧 Plomberie", description: "Fuite, WC, chauffe-eau..." },
+  { id: "electricite" as Trade, label: "⚡ Électricité", description: "Panne, disjoncteur..." },
+];
+
 const problems = [
-  { id: "fuite-eau", label: "🔧 Fuite d'eau", category: "plomberie", price: 89 },
-  { id: "wc-bouche", label: "🔧 WC bouché", category: "plomberie", price: 79 },
-  { id: "porte-claquee", label: "🔐 Porte claquée", category: "serrurerie", price: 89 },
-  { id: "serrure-bloquee", label: "🔐 Serrure bloquée", category: "serrurerie", price: 99 },
-  { id: "panne-courant", label: "⚡ Panne électrique", category: "electricite", price: 89 },
-  { id: "disjoncteur", label: "⚡ Disjoncteur qui saute", category: "electricite", price: 79 },
-  { id: "autre", label: "❓ Autre problème", category: "autre", price: 89 },
+  { id: "fuite-eau", label: "Fuite d'eau", category: "plomberie", price: 89 },
+  { id: "wc-bouche", label: "WC bouché", category: "plomberie", price: 79 },
+  { id: "chauffe-eau", label: "Panne chauffe-eau", category: "plomberie", price: 99 },
+  { id: "porte-claquee", label: "Porte claquée", category: "serrurerie", price: 89 },
+  { id: "serrure-bloquee", label: "Serrure bloquée", category: "serrurerie", price: 99 },
+  { id: "cle-cassee", label: "Clé cassée dans serrure", category: "serrurerie", price: 89 },
+  { id: "panne-courant", label: "Panne électrique", category: "electricite", price: 89 },
+  { id: "disjoncteur", label: "Disjoncteur qui saute", category: "electricite", price: 79 },
+  { id: "prise-hs", label: "Prise/interrupteur HS", category: "electricite", price: 69 },
+  { id: "autre", label: "Autre problème", category: "autre", price: 89 },
 ];
 
 export default function ChatBot() {
@@ -28,10 +38,12 @@ export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState<Step>("welcome");
   const [messages, setMessages] = useState<Message[]>([]);
+  const [selectedTrade, setSelectedTrade] = useState<Trade | null>(null);
   const [selectedProblem, setSelectedProblem] = useState<typeof problems[0] | null>(null);
   const [location, setLocation] = useState("");
   const [phone, setPhone] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -65,10 +77,19 @@ export default function ChatBot() {
     if (messages.length === 0) {
       addBotMessage("Bonjour ! 👋 Je suis là pour vous aider à trouver un artisan rapidement.", 300);
       setTimeout(() => {
-        addBotMessage("Quel problème rencontrez-vous ?", 800);
-        setStep("problem");
+        addBotMessage("De quel type de service avez-vous besoin ?", 800);
+        setStep("trade");
       }, 1000);
     }
+  };
+
+  const handleTradeSelect = (trade: typeof trades[0]) => {
+    setSelectedTrade(trade.id);
+    addUserMessage(trade.label);
+    setTimeout(() => {
+      addBotMessage(`Très bien, ${trade.label.split(" ")[1].toLowerCase()}. Quel est votre problème ?`);
+      setStep("problem");
+    }, 300);
   };
 
   const handleClose = () => {
@@ -79,9 +100,9 @@ export default function ChatBot() {
     setSelectedProblem(problem);
     addUserMessage(problem.label);
     setTimeout(() => {
-      addBotMessage(`D'accord, un problème de ${problem.label.split(" ")[1].toLowerCase()}.`);
+      addBotMessage(`D'accord, ${problem.label.toLowerCase()}.`);
       setTimeout(() => {
-        addBotMessage("Dans quelle ville êtes-vous situé(e) ?");
+        addBotMessage("Dans quelle ville ou code postal êtes-vous situé(e) ?");
         setStep("location");
       }, 800);
     }, 300);
@@ -106,16 +127,30 @@ export default function ChatBot() {
     }, 300);
   };
 
-  const handlePhoneSubmit = (e: React.FormEvent) => {
+  const handlePhoneSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!phone.trim()) return;
+    if (!phone.trim() || isSubmitting) return;
 
+    setIsSubmitting(true);
     addUserMessage(`Mon numéro : ${phone}`);
-    setTimeout(() => {
-      addBotMessage("Merci ! Un artisan vous rappelle dans les 2 minutes. 📞");
-      setStep("contact");
-      
-      // Track conversion
+
+    try {
+      // Send lead to API (same as QuickQuoteForm)
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          problem: selectedProblem?.id || "autre",
+          postalCode: location,
+          phone: phone,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur d'envoi");
+      }
+
+      // Track conversion in GTM
       if (typeof window !== "undefined" && window.dataLayer) {
         window.dataLayer.push({
           event: "chatbot_lead",
@@ -123,7 +158,20 @@ export default function ChatBot() {
           location,
         });
       }
-    }, 300);
+
+      setTimeout(() => {
+        addBotMessage("Merci ! Un artisan vous rappelle dans les 2 minutes. 📞");
+        setStep("contact");
+      }, 300);
+    } catch (error) {
+      console.error("ChatBot lead error:", error);
+      setTimeout(() => {
+        addBotMessage("Oups, une erreur s'est produite. Appelez-nous directement !");
+        setStep("contact");
+      }, 300);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCallClick = () => {
@@ -239,9 +287,29 @@ export default function ChatBot() {
 
             {/* Input Area */}
             <div className="p-4 bg-white border-t border-gray-100">
+              {step === "trade" && (
+                <div className="space-y-2">
+                  {trades.map((trade) => (
+                    <button
+                      key={trade.id}
+                      onClick={() => handleTradeSelect(trade)}
+                      className="w-full flex items-center justify-between px-4 py-3 bg-gray-50 hover:bg-joel-violet/5 rounded-xl border border-gray-200 hover:border-joel-violet/30 transition-colors text-left"
+                    >
+                      <div>
+                        <span className="text-sm font-medium text-gray-800">{trade.label}</span>
+                        <p className="text-xs text-gray-500">{trade.description}</p>
+                      </div>
+                      <ChevronRight size={16} className="text-gray-400" />
+                    </button>
+                  ))}
+                </div>
+              )}
+
               {step === "problem" && (
                 <div className="space-y-2">
-                  {problems.map((problem) => (
+                  {problems
+                    .filter((p) => p.category === selectedTrade || p.category === "autre")
+                    .map((problem) => (
                     <button
                       key={problem.id}
                       onClick={() => handleProblemSelect(problem)}
@@ -284,7 +352,7 @@ export default function ChatBot() {
                     <Phone size={18} />
                     Appeler maintenant
                   </a>
-                  <p className="text-center text-xs text-gray-500">ou</p>
+                  <p className="text-center text-xs text-gray-500">ou être rappelé</p>
                   <form onSubmit={handlePhoneSubmit} className="flex gap-2">
                     <input
                       type="tel"
@@ -292,13 +360,19 @@ export default function ChatBot() {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-none text-sm"
+                      disabled={isSubmitting}
                     />
                     <button
                       type="submit"
-                      className="px-4 py-3 bg-joel-violet text-white rounded-xl hover:bg-joel-violet/90 transition-colors"
+                      disabled={isSubmitting}
+                      className="px-4 py-3 bg-joel-violet text-white rounded-xl hover:bg-joel-violet/90 transition-colors disabled:opacity-50"
                       aria-label="Envoyer mon numéro"
                     >
-                      <Send size={18} />
+                      {isSubmitting ? (
+                        <div className="w-[18px] h-[18px] border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      ) : (
+                        <Send size={18} />
+                      )}
                     </button>
                   </form>
                 </div>
