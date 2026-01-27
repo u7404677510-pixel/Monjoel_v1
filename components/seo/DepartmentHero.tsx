@@ -1,179 +1,212 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Star, MapPin, Clock, Users, ArrowRight } from "lucide-react";
-import { useState, useEffect } from "react";
-import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
-import type { Trade } from "@/lib/data/services-definition";
-import type { Department } from "@/lib/data/departments-idf";
+import { Phone, ArrowRight, Clock, Shield, Euro, MapPin, Building2 } from "lucide-react";
+import Link from "next/link";
+import { Department } from "@/lib/data/departments-idf";
+import { DepartmentPageContent } from "@/lib/seo/department-content";
+
+// Numéro statique pour Google Ads et SEO
+const STATIC_PHONE = "01 72 68 22 02";
+const STATIC_PHONE_TEL = "+33172682202";
 
 interface DepartmentHeroProps {
-  trade: Trade;
-  department: Department;
-  tradeName: string;
+  content: DepartmentPageContent;
 }
 
-export default function DepartmentHero({ trade, department, tradeName }: DepartmentHeroProps) {
-  const { config } = useSiteConfig();
-  const [artisansCount, setArtisansCount] = useState(3);
-  const [showQuoteModal, setShowQuoteModal] = useState(false);
+export default function DepartmentHero({ content }: DepartmentHeroProps) {
+  const { department, trade, services } = content;
+  const priceFrom = services[0]?.priceFrom || 89;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setArtisansCount(Math.floor(Math.random() * 4) + 2);
-    }, 30000);
-    return () => clearInterval(interval);
-  }, []);
+  // Déterminer le hub route
+  const hubRoute =
+    trade?.slug === "plombier"
+      ? "/plomberie"
+      : trade?.slug === "electricien"
+      ? "/electricite"
+      : "/serrurerie";
 
-  const handleCallClick = () => {
-    if (typeof window !== "undefined" && window.dataLayer) {
-      window.dataLayer.push({
-        event: "click_to_call",
-        phone_number: config.phone_number,
-        placement: `department_hero_${trade.slug}_${department.code}`,
-      });
-    }
-  };
+  const tradeName =
+    trade?.slug === "plombier"
+      ? "Plomberie"
+      : trade?.slug === "electricien"
+      ? "Électricité"
+      : "Serrurerie";
 
   return (
-    <section className="relative min-h-[80vh] flex items-center pt-24 pb-12 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-joel-violet/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="max-w-4xl">
-          {/* Badges */}
-          <div className="flex flex-wrap gap-3 mb-6">
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <Users size={14} />
-              <span>{artisansCount} {tradeName.toLowerCase()}s disponibles</span>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-2 bg-joel-violet/10 text-joel-violet px-3 py-1.5 rounded-full text-sm font-medium"
-            >
-              <MapPin size={14} />
-              <span>{department.cityCount} communes couvertes</span>
-            </motion.div>
-          </div>
-
-          {/* Rating */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center gap-2 mb-4"
-          >
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={18} className="text-yellow-400 fill-yellow-400" />
-              ))}
-            </div>
-            <span className="text-sm font-semibold text-gray-700">4.9/5</span>
-            <span className="text-sm text-gray-500">sur Google (847 avis vérifiés)</span>
-          </motion.div>
-
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-[1.1]"
-          >
-            {tradeName} en{" "}
-            <span className="gradient-text">{department.name}</span>
-            <br />
-            <span className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 font-medium">
-              Urgence 24h/24 • Intervention rapide
-            </span>
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl"
-          >
-            Besoin d'un {tradeName.toLowerCase()} en urgence en {department.name} ({department.code}) ?
-            Nos artisans interviennent dans les {department.cityCount} communes du département.
-            Prix fixe garanti, sans mauvaise surprise.
-          </motion.p>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="grid grid-cols-3 gap-4 mb-8 max-w-lg"
-          >
-            <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100">
-              <p className="text-2xl font-bold text-joel-violet">30</p>
-              <p className="text-xs text-gray-500">min en moyenne</p>
-            </div>
-            <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100">
-              <p className="text-2xl font-bold text-joel-violet">{department.cityCount}</p>
-              <p className="text-xs text-gray-500">communes</p>
-            </div>
-            <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100">
-              <p className="text-2xl font-bold text-joel-violet">24/7</p>
-              <p className="text-xs text-gray-500">disponibilité</p>
-            </div>
-          </motion.div>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 mb-6"
-          >
-            <a
-              href={`tel:${formatPhoneForTel(config.phone_number)}`}
-              onClick={handleCallClick}
-              className="group relative inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-            >
-              <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
-                GRATUIT
-              </span>
-              <Phone size={22} className="animate-pulse" />
-              <span>APPELER LE {config.phone_number}</span>
-            </a>
-            
-            <button
-              onClick={() => setShowQuoteModal(true)}
-              className="inline-flex items-center justify-center gap-2 bg-white text-joel-violet font-bold text-lg px-8 py-5 rounded-2xl border-2 border-joel-violet/30 hover:border-joel-violet hover:bg-joel-violet/5 transition-all"
-            >
-              <span>Demander un devis</span>
-              <ArrowRight size={20} />
-            </button>
-          </motion.div>
-
-          <p className="text-sm text-gray-500">
-            Appel gratuit • Devis instantané • Sans engagement
-          </p>
-
-          {showQuoteModal && (
-            <QuickQuoteForm
-              variant="modal"
-              onClose={() => setShowQuoteModal(false)}
-            />
-          )}
-        </div>
-      </div>
+    <section className="relative pt-32 pb-20 overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
 
       {/* Decorative elements */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-joel-violet/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-joel-mauve/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-joel-mauve/10 rounded-full blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+              <Link href="/" className="hover:text-joel-violet transition-colors">
+                Accueil
+              </Link>
+              <span>/</span>
+              <Link
+                href={hubRoute}
+                className="hover:text-joel-violet transition-colors"
+              >
+                {tradeName}
+              </Link>
+              <span>/</span>
+              <span className="text-gray-700">{department.name}</span>
+            </div>
+
+            {/* Location badge */}
+            <div className="inline-flex items-center gap-2 bg-joel-violet/10 text-joel-violet px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Building2 size={16} />
+              <span>
+                {department.name} ({department.code}) • {department.cityCount}{" "}
+                villes
+              </span>
+            </div>
+
+            {/* Title */}
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              {content.title}
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              {content.subtitle}
+            </p>
+
+            {/* Trust badges */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex items-center gap-2 text-gray-700">
+                <Clock size={20} className="text-joel-violet" />
+                <span>~30 min en moyenne</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-700">
+                <Euro size={20} className="text-joel-yellow" />
+                <span>Prix fixe garanti</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-700">
+                <Shield size={20} className="text-green-500" />
+                <span>Artisan vérifié</span>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 mb-8 py-4 border-y border-gray-200">
+              <div className="text-center">
+                <p className="text-3xl font-bold text-joel-violet">
+                  {department.cityCount}
+                </p>
+                <p className="text-sm text-gray-500">villes couvertes</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-joel-violet">30</p>
+                <p className="text-sm text-gray-500">min en moyenne</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-joel-violet">24/7</p>
+                <p className="text-sm text-gray-500">disponibilité</p>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={`tel:${STATIC_PHONE_TEL}`}
+                data-placement="department-hero"
+                className="inline-flex items-center justify-center gap-3 bg-gradient-joel text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              >
+                <Phone size={22} />
+                <span>{STATIC_PHONE}</span>
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-3 bg-white text-joel-violet px-8 py-4 rounded-xl font-semibold text-lg border-2 border-joel-violet hover:bg-joel-violet hover:text-white transition-all"
+              >
+                <span>Devis instantané</span>
+                <ArrowRight size={20} />
+              </Link>
+            </div>
+
+            {/* Phone visible for SEO */}
+            <p className="text-sm text-gray-500 mt-4">
+              <MapPin size={14} className="inline mr-1" />
+              Intervention {department.name} : {STATIC_PHONE}
+            </p>
+          </motion.div>
+
+          {/* Right - Price card */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+              {/* Price header */}
+              <div className="text-center mb-8">
+                <p className="text-gray-500 text-sm mb-2">
+                  {tradeName} dans le {department.code}
+                </p>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-lg text-gray-500">à partir de</span>
+                </div>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-5xl font-bold text-gray-900">
+                    {priceFrom}
+                  </span>
+                  <span className="text-2xl text-gray-500">€</span>
+                </div>
+                <p className="text-sm text-gray-400 mt-1">Prix fixe garanti</p>
+              </div>
+
+              {/* Services list */}
+              <div className="space-y-4 mb-8">
+                {services.slice(0, 5).map((service, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0"
+                  >
+                    <span className="text-gray-700">{service.name}</span>
+                    <span className="font-semibold text-joel-violet">
+                      {service.priceFrom}€
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <a
+                href={`tel:${STATIC_PHONE_TEL}`}
+                data-placement="department-hero-card"
+                className="block w-full text-center bg-gradient-joel text-white py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity"
+              >
+                📞 Appeler le {STATIC_PHONE}
+              </a>
+
+              {/* Guarantee */}
+              <p className="text-center text-sm text-gray-500 mt-4">
+                Paiement avant intervention • Prix fixe garanti
+              </p>
+            </div>
+
+            {/* Floating badge */}
+            <div className="absolute -top-4 -right-4 bg-joel-yellow text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              24h/24 • 7j/7
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 }

@@ -1,66 +1,98 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import type { Trade } from "@/lib/data/services-definition";
-import type { Department } from "@/lib/data/departments-idf";
+import { ArrowRight, Clock, Euro } from "lucide-react";
+import { Service } from "@/lib/data/services-definition";
+import { Department } from "@/lib/data/departments-idf";
 
 interface DepartmentServicesProps {
-  trade: Trade;
+  services: Service[];
   department: Department;
+  tradeSlug: string;
 }
 
-export default function DepartmentServices({ trade, department }: DepartmentServicesProps) {
+export default function DepartmentServices({
+  services,
+  department,
+  tradeSlug,
+}: DepartmentServicesProps) {
+  const tradeName =
+    tradeSlug === "plombier"
+      ? "Plomberie"
+      : tradeSlug === "electricien"
+      ? "Électricité"
+      : "Serrurerie";
+
+  // Lien vers le hub métier
+  const hubRoute =
+    tradeSlug === "plombier"
+      ? "/plomberie"
+      : tradeSlug === "electricien"
+      ? "/electricite"
+      : "/serrurerie";
+
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Nos services de {trade.name.toLowerCase()} en {department.name}
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Services {tradeName.toLowerCase()} dans le {department.code}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Intervention rapide pour tous vos besoins en {trade.name.toLowerCase()}
-            dans le département {department.code}.
+            Tous nos services disponibles dans le {department.name}. Prix fixe
+            annoncé avant intervention.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {trade.services.map((service) => (
+        {/* Services grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service) => (
             <Link
               key={service.slug}
-              href={`/${trade.slug}/${department.mainCities[0]?.toLowerCase().replace(/\s+/g, "-").replace(/[éèê]/g, "e") || "paris-15"}/${service.slug}`}
-              className="group bg-gray-50 hover:bg-white rounded-2xl p-6 border border-gray-100 hover:border-joel-violet/30 hover:shadow-lg transition-all"
+              href={`${hubRoute}#${service.slug}`}
+              className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-joel-violet/30 hover:shadow-lg transition-all"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 bg-joel-violet/10 rounded-xl flex items-center justify-center text-joel-violet">
-                  <span className="text-2xl">
-                    {service.urgencyLevel === "high" ? "🚨" : service.urgencyLevel === "medium" ? "⏰" : "🔧"}
-                  </span>
+              {/* Urgency indicator */}
+              {service.urgencyLevel === "high" && (
+                <div className="inline-flex items-center gap-1 bg-red-50 text-red-600 px-3 py-1 rounded-full text-xs font-medium mb-4">
+                  <Clock size={12} />
+                  Urgence 24h/24
                 </div>
-                {service.urgencyLevel === "high" && (
-                  <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-1 rounded-full">
-                    URGENCE
-                  </span>
-                )}
-              </div>
+              )}
 
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-joel-violet transition-colors">
+              {/* Service name */}
+              <h3 className="font-semibold text-lg text-gray-900 group-hover:text-joel-violet transition-colors mb-2">
                 {service.name}
               </h3>
-              
-              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+
+              {/* Description */}
+              <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                 {service.description}
               </p>
 
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-xs text-gray-500">À partir de</span>
-                  <p className="text-xl font-bold text-joel-violet">{service.priceFrom}€</p>
+              {/* Price and CTA */}
+              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                <div className="flex items-center gap-1 text-joel-violet font-semibold">
+                  <Euro size={16} />
+                  <span>Dès {service.priceFrom}€</span>
                 </div>
-                <span className="flex items-center gap-1 text-joel-violet font-medium group-hover:gap-2 transition-all">
-                  Détails <ArrowRight size={16} />
-                </span>
+                <div className="flex items-center gap-1 text-gray-400 group-hover:text-joel-violet transition-colors text-sm">
+                  <span>En savoir +</span>
+                  <ArrowRight size={14} />
+                </div>
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* CTA to hub */}
+        <div className="text-center mt-12">
+          <Link
+            href={hubRoute}
+            className="inline-flex items-center gap-2 bg-joel-violet text-white px-8 py-4 rounded-xl font-semibold hover:bg-joel-mauve transition-colors"
+          >
+            <span>Tous nos services {tradeName.toLowerCase()}</span>
+            <ArrowRight size={20} />
+          </Link>
         </div>
       </div>
     </section>

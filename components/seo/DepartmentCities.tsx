@@ -1,96 +1,104 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { MapPin, ChevronRight } from "lucide-react";
-import type { Trade } from "@/lib/data/services-definition";
-import type { Department } from "@/lib/data/departments-idf";
-import type { City } from "@/lib/data/cities-idf";
+import { MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { City } from "@/lib/data/cities-idf";
+import { Department } from "@/lib/data/departments-idf";
 
 interface DepartmentCitiesProps {
-  trade: Trade;
-  department: Department;
   cities: City[];
+  department: Department;
+  tradeSlug: string;
 }
 
-export default function DepartmentCities({ trade, department, cities }: DepartmentCitiesProps) {
-  // Sort cities by population (descending) and take top ones
-  const sortedCities = [...cities].sort((a, b) => (b.population || 0) - (a.population || 0));
-  const mainCities = sortedCities.slice(0, 20);
-  const remainingCount = cities.length - mainCities.length;
+export default function DepartmentCities({
+  cities,
+  department,
+  tradeSlug,
+}: DepartmentCitiesProps) {
+  const [showAll, setShowAll] = useState(false);
 
-  const tradeName = trade.slug === "serrurier" ? "Serrurier" : trade.slug === "plombier" ? "Plombier" : "Électricien";
+  // Trier par population décroissante
+  const sortedCities = [...cities].sort(
+    (a, b) => (b.population || 0) - (a.population || 0)
+  );
+
+  // Afficher 15 villes par défaut, toutes si showAll
+  const displayedCities = showAll ? sortedCities : sortedCities.slice(0, 15);
+  const hasMore = sortedCities.length > 15;
+
+  const tradeName =
+    tradeSlug === "plombier"
+      ? "Plombier"
+      : tradeSlug === "electricien"
+      ? "Électricien"
+      : "Serrurier";
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-joel-violet/10 text-joel-violet px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <MapPin size={16} />
-            <span>{cities.length} communes couvertes</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            {tradeName} dans toutes les villes du {department.code}
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {tradeName} dans le {department.name} ({department.code})
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Nos artisans interviennent dans l'ensemble du département {department.name}.
-            Sélectionnez votre ville pour un devis personnalisé.
+            Intervention rapide dans les {cities.length} villes du département.
+            Cliquez sur une ville pour voir les détails.
           </p>
         </div>
 
         {/* Cities grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-          {mainCities.map((city) => (
+          {displayedCities.map((city) => (
             <Link
               key={city.slug}
-              href={`/${trade.slug}/${city.slug}`}
-              className="group bg-white hover:bg-joel-violet hover:text-white rounded-xl p-4 border border-gray-100 hover:border-joel-violet transition-all text-center"
+              href={`/${tradeSlug}/${city.slug}`}
+              className="group flex items-center gap-2 bg-gray-50 hover:bg-joel-violet/10 rounded-lg px-4 py-3 transition-all border border-gray-100 hover:border-joel-violet/30"
             >
-              <p className="font-medium text-gray-900 group-hover:text-white truncate">
+              <MapPin
+                size={16}
+                className="text-gray-400 group-hover:text-joel-violet transition-colors flex-shrink-0"
+              />
+              <span className="text-gray-700 group-hover:text-joel-violet transition-colors truncate">
                 {city.name}
-              </p>
-              {city.population && (
-                <p className="text-xs text-gray-500 group-hover:text-white/70 mt-1">
-                  {(city.population / 1000).toFixed(0)}k hab.
-                </p>
-              )}
+              </span>
             </Link>
           ))}
         </div>
 
-        {/* Show more indicator */}
-        {remainingCount > 0 && (
+        {/* Show more button */}
+        {hasMore && (
           <div className="text-center mt-8">
-            <p className="text-gray-600">
-              Et {remainingCount} autres communes en {department.name}
-            </p>
-            <p className="text-sm text-gray-500 mt-2">
-              Appelez-nous pour une intervention dans votre ville
-            </p>
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center gap-2 text-joel-violet hover:text-joel-mauve font-medium transition-colors"
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp size={20} />
+                  Voir moins
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={20} />
+                  Voir les {sortedCities.length - 15} autres villes
+                </>
+              )}
+            </button>
           </div>
         )}
 
-        {/* Main cities highlight */}
-        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-100">
-          <h3 className="text-xl font-bold text-gray-900 mb-6">
-            Villes principales pour {trade.name.toLowerCase()} en {department.name}
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sortedCities.slice(0, 6).map((city) => (
-              <Link
-                key={city.slug}
-                href={`/${trade.slug}/${city.slug}`}
-                className="flex items-center justify-between p-4 bg-gray-50 hover:bg-joel-violet/5 rounded-xl group transition-colors"
-              >
-                <div>
-                  <p className="font-semibold text-gray-900 group-hover:text-joel-violet">
-                    {tradeName} {city.name}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {city.postalCodes[0]} • Intervention 30 min
-                  </p>
-                </div>
-                <ChevronRight size={20} className="text-gray-400 group-hover:text-joel-violet" />
-              </Link>
-            ))}
-          </div>
+        {/* SEO text */}
+        <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
+          <p className="text-gray-600 leading-relaxed">
+            <strong>Zones d&apos;intervention :</strong> Nos {tradeName.toLowerCase()}s
+            interviennent dans tout le {department.name} ({department.code}).
+            Que vous soyez à {department.mainCities.slice(0, 5).join(", ")} ou
+            dans une autre commune du département, un artisan vérifié peut
+            arriver chez vous en ~30 minutes. Service disponible 24h/24 et 7j/7.
+          </p>
         </div>
       </div>
     </section>
