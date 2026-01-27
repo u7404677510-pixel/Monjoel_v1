@@ -72,7 +72,7 @@ export default function Hero() {
               </div>
               <span className="text-sm font-semibold text-gray-700">4.9/5</span>
               <span className="text-sm text-gray-500 hidden xs:inline">sur Google (847 avis vérifiés)</span>
-            </motion.div>
+            </div>
 
             {/* Main title - SEO optimized */}
             <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 lg:mb-4 leading-[1.15]">

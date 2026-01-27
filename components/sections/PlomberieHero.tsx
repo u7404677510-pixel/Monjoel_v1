@@ -169,10 +169,7 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
             </div>
           </div>
           {/* Right side - Illustration - Desktop only */}
-          <div
-            animate={{ opacity: 1, x: 0 }}
-            className="hidden lg:block order-2 relative animate-fade-in-right delay-200"
-          >
+          <div className="hidden lg:block order-2 relative animate-fade-in-right delay-200">
             <div className="relative max-w-lg mx-auto lg:max-w-none">
               {/* Main illustration - Optimized WebP */}
               <div className="relative rounded-3xl overflow-hidden">
