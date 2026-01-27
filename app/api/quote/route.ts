@@ -16,6 +16,33 @@ interface QuoteRequest {
   problem: string;
   postalCode: string;
   phone: string;
+  recaptchaToken?: string;
+}
+
+// reCAPTCHA verification
+async function verifyRecaptcha(token: string): Promise<{ success: boolean; score?: number }> {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  
+  if (!secretKey) {
+    console.warn("⚠️ reCAPTCHA secret key not configured, skipping verification");
+    return { success: true, score: 1 };
+  }
+  
+  try {
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${secretKey}&response=${token}`,
+    });
+    
+    const data = await response.json();
+    console.log("reCAPTCHA verification:", { success: data.success, score: data.score });
+    
+    return { success: data.success, score: data.score };
+  } catch (error) {
+    console.error("reCAPTCHA verification error:", error);
+    return { success: false };
+  }
 }
 
 interface LeadData {
@@ -251,6 +278,28 @@ export async function POST(request: NextRequest) {
         { error: "Tous les champs sont requis" },
         { status: 400 }
       );
+    }
+
+    // reCAPTCHA verification (if token provided)
+    if (body.recaptchaToken) {
+      const recaptchaResult = await verifyRecaptcha(body.recaptchaToken);
+      
+      if (!recaptchaResult.success) {
+        console.warn("❌ reCAPTCHA verification failed");
+        return NextResponse.json(
+          { error: "Vérification de sécurité échouée. Veuillez réessayer." },
+          { status: 400 }
+        );
+      }
+      
+      // Block if score is too low (likely bot) - threshold 0.3
+      if (recaptchaResult.score !== undefined && recaptchaResult.score < 0.3) {
+        console.warn(`❌ reCAPTCHA score too low: ${recaptchaResult.score}`);
+        return NextResponse.json(
+          { error: "Activité suspecte détectée. Veuillez nous appeler directement." },
+          { status: 400 }
+        );
+      }
     }
 
     // Validation code postal IDF

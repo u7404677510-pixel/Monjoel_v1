@@ -76,6 +76,25 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
     return Object.keys(newErrors).length === 0;
   };
 
+  // Get reCAPTCHA token
+  const getRecaptchaToken = async (): Promise<string | null> => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey || typeof window === "undefined" || !window.grecaptcha) {
+      return null;
+    }
+    
+    try {
+      await new Promise<void>((resolve) => {
+        window.grecaptcha.ready(() => resolve());
+      });
+      const token = await window.grecaptcha.execute(siteKey, { action: "quote_form" });
+      return token;
+    } catch (error) {
+      console.warn("reCAPTCHA error:", error);
+      return null;
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -93,10 +112,16 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
     }
 
     try {
+      // Get reCAPTCHA token (optional)
+      const recaptchaToken = await getRecaptchaToken();
+      
       const response = await fetch("/api/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       });
 
       if (response.ok) {

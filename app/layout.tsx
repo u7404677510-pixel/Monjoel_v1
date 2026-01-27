@@ -5,11 +5,15 @@ import TelClickTracker from "@/components/TelClickTracker";
 import StickyCallButton from "@/components/StickyCallButton";
 import ArtisanToast from "@/components/ArtisanToast";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SocialProofNotifications from "@/components/SocialProofNotifications";
+import ChatBot from "@/components/ChatBot";
 // ExitIntentPopup retiré - trop agressif pour l'UX
 
 // Environment variables for tracking
 const COOKIEBOT_ID = process.env.NEXT_PUBLIC_COOKIEBOT_ID || "c1addd46-5bcb-4d18-835f-4db63cde7755";
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-NFKDT6QC";
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || ""; // À configurer sur https://clarity.microsoft.com
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""; // À configurer sur https://www.google.com/recaptcha/admin
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -145,6 +149,29 @@ export default function RootLayout({
           data-key="Fz7aiNvYMBOmjjdZVqaa5w"
           async
         />
+
+        {/* ========================================
+            MICROSOFT CLARITY - Heatmaps & Session Recording
+            Gratuit - https://clarity.microsoft.com
+            ======================================== */}
+        {CLARITY_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY_ID}");`
+            }}
+          />
+        )}
+
+        {/* ========================================
+            GOOGLE RECAPTCHA V3 - Spam protection
+            https://www.google.com/recaptcha/admin
+            ======================================== */}
+        {RECAPTCHA_SITE_KEY && (
+          <script
+            src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+            async
+          />
+        )}
       </head>
       <body className="bg-white min-h-screen overflow-x-hidden">
         {/* ========================================
@@ -174,6 +201,12 @@ export default function RootLayout({
         
         {/* Toast notification artisan disponible */}
         <ArtisanToast />
+        
+        {/* Social proof notifications */}
+        <SocialProofNotifications />
+        
+        {/* ChatBot de qualification */}
+        <ChatBot />
       </body>
     </html>
   );
