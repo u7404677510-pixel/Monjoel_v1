@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '375px',  // iPhone SE, petits Android
+      },
       colors: {
         "joel-violet": "#7055A7",
         "joel-mauve": "#9E76EC",

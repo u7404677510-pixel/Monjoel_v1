@@ -3,9 +3,10 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
+import QuickQuoteForm from "./QuickQuoteForm";
 
 const plomberieSubLinks = [
   { href: "/plombier/fuite-eau", label: "Fuite d'eau" },
@@ -175,6 +176,7 @@ function MobileDropdown({ link, onClose }: { link: NavLinkWithDropdown; onClose:
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
   const { config } = useSiteConfig();
 
   useEffect(() => {
@@ -219,8 +221,8 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button - Phone only in header */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3">
             <a
               href={`tel:${formatPhoneForTel(config.phone_number)}`}
               data-placement="header"
@@ -229,6 +231,13 @@ export default function Navigation() {
               <Phone size={18} />
               <span>{config.phone_number}</span>
             </a>
+            <button
+              onClick={() => setShowQuoteModal(true)}
+              className="flex items-center gap-2 px-4 py-2.5 bg-white text-joel-violet font-semibold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet hover:bg-joel-violet/5 transition-all"
+            >
+              <span>Demander un devis</span>
+              <ArrowRight size={16} />
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -261,11 +270,29 @@ export default function Navigation() {
                   <Phone size={18} />
                   <span>{config.phone_number}</span>
                 </a>
+                <button
+                  onClick={() => {
+                    setShowQuoteModal(true);
+                    closeMobileMenu();
+                  }}
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-white text-joel-violet font-semibold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet mt-2"
+                >
+                  <span>Demander un devis</span>
+                  <ArrowRight size={16} />
+                </button>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
+
+      {/* Quote Modal */}
+      {showQuoteModal && (
+        <QuickQuoteForm
+          variant="modal"
+          onClose={() => setShowQuoteModal(false)}
+        />
+      )}
     </motion.header>
   );
 }

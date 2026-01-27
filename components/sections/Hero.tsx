@@ -36,7 +36,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 w-full">
+      <div className="max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-12 lg:py-16 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left side - Content */}
           <motion.div
@@ -77,7 +77,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Main title - SEO optimized */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 leading-[1.1]">
+            <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 leading-[1.1]">
               Plombier, Serrurier
               <br />
               & Électricien

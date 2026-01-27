@@ -8,6 +8,7 @@ import { City } from "@/lib/data/cities-idf";
 import { Trade, Service } from "@/lib/data/services-definition";
 import { CityPageContent, ServicePageContent } from "@/lib/seo/city-content";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
+import QuickQuoteForm from "@/components/QuickQuoteForm";
 
 interface CityHeroProps {
   trade: Trade;
@@ -21,6 +22,7 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
   
   // Compteur artisans disponibles
   const [artisansCount, setArtisansCount] = useState(3);
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,7 +45,7 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
       <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-joel-mauve/10 rounded-full blur-3xl" />
       
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
@@ -97,7 +99,7 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
             </div>
 
             {/* Title */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="font-display text-3xl xs:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {content.title}
             </h1>
 
@@ -126,22 +128,22 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
             <div className="flex flex-col sm:flex-row gap-4">
               {config.show_cta_phone && (
                 <a
-                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "0184800966"}`}
+                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "+33172682202"}`}
                   data-placement="city-hero"
                   className="inline-flex items-center justify-center gap-3 bg-gradient-joel text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 >
                   <Phone size={22} />
-                  <span>{config.phone_number || "01 84 80 09 66"}</span>
+                  <span>{config.phone_number || "01 72 68 22 02"}</span>
                 </a>
               )}
               {config.show_cta_devis && (
-                <Link
-                  href={config.cta_devis_url || "/contact"}
+                <button
+                  onClick={() => setShowQuoteModal(true)}
                   className="inline-flex items-center justify-center gap-3 bg-white text-joel-violet px-8 py-4 rounded-xl font-semibold text-lg border-2 border-joel-violet hover:bg-joel-violet hover:text-white transition-all"
                 >
                   <span>{content.ctaPhrase}</span>
                   <ArrowRight size={20} />
-                </Link>
+                </button>
               )}
             </div>
           </motion.div>
@@ -179,7 +181,7 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
               {/* CTA */}
               {config.show_cta_phone && (
                 <a
-                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "0184800966"}`}
+                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "+33172682202"}`}
                   data-placement="city-hero-card"
                   className="block w-full text-center bg-gradient-joel text-white py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity"
                 >
@@ -200,6 +202,14 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
           </motion.div>
         </div>
       </div>
+
+      {/* Quote Modal */}
+      {showQuoteModal && (
+        <QuickQuoteForm
+          variant="modal"
+          onClose={() => setShowQuoteModal(false)}
+        />
+      )}
     </section>
   );
 }
