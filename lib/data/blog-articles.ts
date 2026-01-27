@@ -24,7 +24,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Fuite d'eau la nuit ? Voici les gestes d'urgence à faire immédiatement : couper l'eau, limiter les dégâts, appeler un plombier 24h/24. Guide complet.",
     category: "plomberie",
     readTime: 5,
-    publishedAt: "2024-01-15",
+    publishedAt: "2026-01-10",
     keywords: ["fuite eau nuit", "urgence plomberie", "que faire fuite eau", "plombier nuit"],
     content: `
 ## Les premiers réflexes en cas de fuite d'eau la nuit
@@ -93,7 +93,7 @@ En cas de fuite d'eau la nuit, gardez votre calme, coupez l'eau et l'électricit
     metaDescription: "Porte claquée ? 5 méthodes pour essayer d'ouvrir votre porte avant d'appeler un serrurier. Techniques, risques et prix d'une ouverture de porte.",
     category: "serrurerie",
     readTime: 6,
-    publishedAt: "2024-01-20",
+    publishedAt: "2026-01-12",
     keywords: ["porte claquée", "ouvrir porte", "serrurier urgence", "ouverture porte"],
     content: `
 ## Porte claquée : les solutions avant d'appeler un serrurier
@@ -168,7 +168,7 @@ Une porte claquée n'est pas toujours une urgence coûteuse. Mais si vous ne pou
     metaDescription: "Disjoncteur qui saute ? Découvrez les 7 causes principales et les solutions pour résoudre ce problème. Guide complet par un électricien.",
     category: "electricite",
     readTime: 7,
-    publishedAt: "2024-02-01",
+    publishedAt: "2026-01-15",
     keywords: ["disjoncteur saute", "panne électrique", "électricien urgence", "court-circuit"],
     content: `
 ## Pourquoi mon disjoncteur saute-t-il ?
@@ -257,17 +257,17 @@ L'eau et l'électricité ne font pas bon ménage. Une infiltration peut créer d
     `
   },
   {
-    slug: "prix-serrurier-tarifs-2024",
-    title: "Prix serrurier 2024 : tarifs et conseils pour éviter les arnaques",
-    excerpt: "Combien coûte un serrurier en 2024 ? Découvrez les vrais tarifs du marché et nos conseils pour éviter les arnaques.",
-    metaDescription: "Prix serrurier 2024 : ouverture de porte de 89€ à 250€, changement serrure dès 119€. Grille tarifaire complète et conseils anti-arnaque.",
+    slug: "prix-serrurier-tarifs-2026",
+    title: "Prix serrurier 2026 : tarifs et conseils pour éviter les arnaques",
+    excerpt: "Combien coûte un serrurier en 2026 ? Découvrez les vrais tarifs du marché et nos conseils pour éviter les arnaques.",
+    metaDescription: "Prix serrurier 2026 : ouverture de porte de 89€ à 250€, changement serrure dès 119€. Grille tarifaire complète et conseils anti-arnaque.",
     category: "serrurerie",
     readTime: 8,
-    publishedAt: "2024-02-10",
-    updatedAt: "2024-06-01",
+    publishedAt: "2026-01-20",
+    updatedAt: "2026-01-27",
     keywords: ["prix serrurier", "tarif serrurier", "cout ouverture porte", "arnaque serrurier"],
     content: `
-## Prix serrurier 2024 : la grille tarifaire complète
+## Prix serrurier 2026 : la grille tarifaire complète
 
 Vous avez besoin d'un serrurier mais vous craignez les arnaques ? Voici les vrais prix du marché pour vous aider à y voir clair.
 
@@ -355,7 +355,7 @@ Chez Joël, notre engagement est simple :
     metaDescription: "Arnaques plomberie : les 7 techniques des escrocs et nos conseils pour les éviter. Protégez-vous avec ce guide complet.",
     category: "conseils",
     readTime: 6,
-    publishedAt: "2024-02-20",
+    publishedAt: "2026-01-25",
     keywords: ["arnaque plombier", "plombier malhonnête", "éviter arnaques", "dépannage plomberie"],
     content: `
 ## Les arnaques les plus courantes en plomberie
