@@ -7,8 +7,8 @@ import StopArnaquesPreview from "@/components/sections/StopArnaquesPreview";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Joël - Plombier, Serrurier & Électricien | Paris & Île-de-France | Urgence 24h/24",
-  description: "Dépannage d'urgence à prix fixe : plombier, serrurier, électricien sur Paris et toute l'Île-de-France. Intervention en 30 min, devis instantané, artisans vérifiés. Appelez le 01 72 68 22 02.",
+  title: "Joël - Plombier, Serrurier & Électricien Paris | 24h/24",
+  description: "Dépannage urgence prix fixe à Paris et Île-de-France. Plombier, serrurier, électricien. Intervention 30 min, devis gratuit. Appelez le 01 72 68 22 02.",
   keywords: [
     "plombier urgence Paris",
     "serrurier urgence Paris",

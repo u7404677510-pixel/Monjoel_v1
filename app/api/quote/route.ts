@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { getSupabaseClient } from "@/lib/supabase";
 
 // Configuration
-const NOTIFICATION_EMAIL = "contact@monjoel.fr";
+const NOTIFICATION_EMAIL = "contact@monjoel.com";
 const PHONE_NUMBER = "01 72 68 22 02";
 const WHATSAPP_NUMBER = "33756996726"; // Format international sans +
 

@@ -9,7 +9,7 @@ import { FAQItem } from "./city-content";
 const BASE_URL = "https://monjoel.fr";
 const COMPANY_NAME = "Joël";
 const COMPANY_PHONE = "+33172682202";
-const COMPANY_EMAIL = "contact@monjoel.fr";
+const COMPANY_EMAIL = "contact@monjoel.com";
 
 // ============================================
 // TYPES SCHEMA.ORG
@@ -155,9 +155,10 @@ export function generateLocalBusinessSchema(
   trade: Trade,
   city: City
 ): LocalBusiness {
+  // Types Schema.org validés par Google Rich Results
   const businessTypes: Record<string, string> = {
     plombier: "Plumber",
-    serrurier: "Locksmith",
+    serrurier: "HomeAndConstructionBusiness",
     electricien: "Electrician",
   };
 
@@ -245,9 +246,10 @@ export function generateDepartmentSchema(
   departmentCode: string,
   services: { name: string; description: string; priceFrom: number }[]
 ): LocalBusiness {
+  // Types Schema.org validés par Google Rich Results
   const businessTypes: Record<string, string> = {
     plombier: "Plumber",
-    serrurier: "Locksmith",
+    serrurier: "HomeAndConstructionBusiness",
     electricien: "Electrician",
   };
 

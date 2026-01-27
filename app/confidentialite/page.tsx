@@ -32,7 +32,7 @@ export default function ConfidentialitePage() {
               <strong>Joël SAS</strong><br />
               45 Rue Boursault, 75017 Paris<br />
               SIRET : 993 221 878 00016<br />
-              Email : contact@monjoel.fr<br />
+              Email : contact@monjoel.com<br />
               Téléphone : 01 72 68 22 02
             </p>
 
@@ -143,7 +143,7 @@ export default function ConfidentialitePage() {
               <li><strong>Droit de retirer votre consentement</strong> : à tout moment pour les traitements basés sur le consentement</li>
             </ul>
             <p>
-              Pour exercer vos droits, contactez-nous par email à <strong>contact@monjoel.fr</strong> ou 
+              Pour exercer vos droits, contactez-nous par email à <strong>contact@monjoel.com</strong> ou 
               par courrier à : Joël SAS - 45 Rue Boursault, 75017 Paris.
             </p>
             <p>
@@ -194,7 +194,7 @@ export default function ConfidentialitePage() {
             <p>
               <strong>Joël SAS</strong><br />
               45 Rue Boursault, 75017 Paris<br />
-              Email : contact@monjoel.fr<br />
+              Email : contact@monjoel.com<br />
               Téléphone : 01 72 68 22 02
             </p>
 

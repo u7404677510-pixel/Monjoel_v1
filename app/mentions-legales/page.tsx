@@ -23,7 +23,7 @@ export default function MentionsLegalesPage() {
               N° TVA Intracommunautaire : FR52993221878<br />
               Siège social : 45 Rue Boursault, 75017 Paris, France<br />
               Téléphone : 01 72 68 22 02<br />
-              Email : contact@monjoel.fr
+              Email : contact@monjoel.com
             </p>
 
             <h2>2. Directeur de la publication</h2>
@@ -73,7 +73,7 @@ export default function MentionsLegalesPage() {
             </p>
             <p>
               Pour exercer ces droits ou pour toute question relative à vos données 
-              personnelles, contactez-nous à : <strong>contact@monjoel.fr</strong>
+              personnelles, contactez-nous à : <strong>contact@monjoel.com</strong>
             </p>
             <p>
               Pour plus d'informations, consultez notre{" "}
