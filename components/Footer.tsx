@@ -77,7 +77,7 @@ export default function Footer() {
             </div>
             <div className="space-y-2">
               {loading ? (
-                <span className="flex items-center gap-2 text-gray-400 text-sm">
+                <span className="flex items-center gap-2 text-gray-300 text-sm">
                   <Phone size={16} />
                   <span className="animate-pulse bg-gray-700 h-4 w-20 rounded" />
                 </span>
@@ -85,13 +85,13 @@ export default function Footer() {
                 <a 
                   href={`tel:${formatPhoneForTel(config.phone_number)}`}
                   data-placement="footer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   <Phone size={16} />
                   <span>{config.phone_number}</span>
                 </a>
               )}
-              <a href="mailto:contact@monjoel.com" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm">
+              <a href="mailto:contact@monjoel.com" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
                 <Mail size={16} />
                 <span>contact@monjoel.com</span>
               </a>
@@ -109,7 +109,7 @@ export default function Footer() {
                     className={`text-sm transition-colors ${
                       link.isMain 
                         ? "text-white hover:text-joel-yellow font-medium" 
-                        : "text-gray-400 hover:text-white"
+                        : "text-gray-300 hover:text-white"
                     }`}
                   >
                     {link.label}
@@ -130,7 +130,7 @@ export default function Footer() {
                     className={`text-sm transition-colors ${
                       link.isMain 
                         ? "text-white hover:text-joel-yellow font-medium" 
-                        : "text-gray-400 hover:text-white"
+                        : "text-gray-300 hover:text-white"
                     }`}
                   >
                     {link.label}
@@ -151,7 +151,7 @@ export default function Footer() {
                     className={`text-sm transition-colors ${
                       link.isMain 
                         ? "text-white hover:text-joel-yellow font-medium" 
-                        : "text-gray-400 hover:text-white"
+                        : "text-gray-300 hover:text-white"
                     }`}
                   >
                     {link.label}
@@ -169,7 +169,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -186,7 +186,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -235,7 +235,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-white/10 pt-8 text-center text-gray-300 text-sm">
           <p>© {new Date().getFullYear()} Joël. Tous droits réservés.</p>
         </div>
       </div>

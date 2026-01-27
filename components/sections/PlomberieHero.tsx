@@ -137,7 +137,7 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
             </div>
             {/* Trust badges - Brands - Hidden on mobile */}
             <div className="hidden lg:block border-t border-gray-100 pt-6">
-              <p className="text-xs text-gray-400 uppercase tracking-wide mb-3">Marques partenaires</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wide mb-3">Marques partenaires</p>
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
                   <BadgeCheck size={16} className="text-joel-violet" />
