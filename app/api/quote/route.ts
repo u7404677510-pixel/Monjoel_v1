@@ -221,7 +221,7 @@ async function sendEmailNotification(leadData: LeadData): Promise<void> {
   `;
 
   const { error } = await resend.emails.send({
-    from: "Joël <notifications@monjoel.fr>",
+    from: "Joël <notifications@monjoel.com>",
     to: NOTIFICATION_EMAIL,
     subject: `🚨 Nouvelle demande ${leadData.trade} - ${leadData.postalCode}`,
     html: emailHtml,
