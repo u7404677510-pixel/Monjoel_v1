@@ -150,6 +150,9 @@ export default function RootLayout({
 
         {/* GTM is loaded via Script component in body with afterInteractive strategy */}
         {/* Both Poppins and Chillax are self-hosted via next/font - no render-blocking external requests */}
+        
+        {/* Preconnect to Supabase for faster config loading */}
+        <link rel="preconnect" href="https://aylnautzwhiaoeilgzfu.supabase.co" />
       </head>
       <body className="bg-white min-h-screen overflow-x-hidden">
         {/* ========================================

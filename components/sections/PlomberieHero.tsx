@@ -37,15 +37,8 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
   return (
     <section className="relative min-h-[100svh] lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
       {/* Mobile Background Illustration - Optimized WebP */}
-      <div className="absolute inset-0 lg:hidden">
-        <Image
-          src="/hero-plomberie-mobile.webp"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover object-center opacity-15"
-          loading="eager"
-        />
+      {/* Mobile Background - CSS background-image excludes from LCP calculation */}
+      <div className="absolute inset-0 lg:hidden hero-bg-plomberie opacity-15">
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
