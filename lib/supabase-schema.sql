@@ -83,6 +83,25 @@ CREATE TABLE IF NOT EXISTS analytics_config (
 -- Insérer la config analytics par défaut
 INSERT INTO analytics_config (id) VALUES (1) ON CONFLICT DO NOTHING;
 
+-- Table des leads (demandes de devis)
+CREATE TABLE IF NOT EXISTS leads (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  problem VARCHAR(100) NOT NULL,
+  problem_label VARCHAR(255),
+  trade VARCHAR(50),
+  postal_code VARCHAR(10),
+  phone VARCHAR(20) NOT NULL,
+  source VARCHAR(50) DEFAULT 'website_quote_form',
+  status VARCHAR(20) DEFAULT 'new',
+  notes TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Index pour recherche rapide par statut et date
+CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status);
+CREATE INDEX IF NOT EXISTS idx_leads_created_at ON leads(created_at DESC);
+
 -- =============================================
 -- POLITIQUES DE SÉCURITÉ (RLS)
 -- =============================================
@@ -93,6 +112,7 @@ ALTER TABLE content ENABLE ROW LEVEL SECURITY;
 ALTER TABLE partners ENABLE ROW LEVEL SECURITY;
 ALTER TABLE seo_pages ENABLE ROW LEVEL SECURITY;
 ALTER TABLE analytics_config ENABLE ROW LEVEL SECURITY;
+ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
 
 -- Politique pour lecture publique (le site peut lire)
 CREATE POLICY "Allow public read" ON site_config FOR SELECT USING (true);
@@ -107,4 +127,5 @@ CREATE POLICY "Allow anon write" ON content FOR ALL USING (true);
 CREATE POLICY "Allow anon write" ON partners FOR ALL USING (true);
 CREATE POLICY "Allow anon write" ON seo_pages FOR ALL USING (true);
 CREATE POLICY "Allow anon write" ON analytics_config FOR ALL USING (true);
+CREATE POLICY "Allow anon write" ON leads FOR ALL USING (true);
 

@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, Image, Settings, Search, Phone } from "lucide-react";
+import { FileText, Image, Settings, Search, Phone, Users } from "lucide-react";
 import Link from "next/link";
 
 const quickActions = [
+  { href: "/admin/leads", label: "Demandes de devis", icon: Users, color: "bg-emerald-500", description: "Leads du formulaire", priority: true },
   { href: "/admin/telephone", label: "Modifier le téléphone", icon: Phone, color: "bg-joel-violet", description: "Numéro affiché sur le site" },
   { href: "/admin/contenu", label: "Gérer le contenu", icon: FileText, color: "bg-blue-500", description: "Textes et descriptions" },
   { href: "/admin/partenaires", label: "Partenaires", icon: Image, color: "bg-green-500", description: "Logos et marques" },

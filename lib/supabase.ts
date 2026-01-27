@@ -78,3 +78,17 @@ export interface AnalyticsConfig {
   updated_at: string;
 }
 
+export interface Lead {
+  id: string;
+  problem: string;
+  problem_label: string;
+  trade: string;
+  postal_code: string;
+  phone: string;
+  source: string;
+  status: string;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
