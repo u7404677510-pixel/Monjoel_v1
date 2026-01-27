@@ -1,16 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users } from "lucide-react";
+import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import { useState, useEffect } from "react";
+import QuickQuoteForm from "@/components/QuickQuoteForm";
 
 export default function Hero() {
   const { config } = useSiteConfig();
   
   // Compteur artisans disponibles (varie entre 2-5)
   const [artisansCount, setArtisansCount] = useState(3);
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
   
   useEffect(() => {
     // Variation aléatoire toutes les 30 secondes
@@ -96,13 +98,13 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* CTA Button - High contrast */}
-            <div className="mb-8">
+            {/* CTA Buttons */}
+            <div className="mb-8 flex flex-col sm:flex-row gap-4">
               <a
                 href={`tel:${formatPhoneForTel(config.phone_number)}`}
                 onClick={handleCallClick}
                 data-placement="hero-main"
-                className="group relative inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg sm:text-xl px-8 py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 {/* Badge GRATUIT */}
                 <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
@@ -111,10 +113,26 @@ export default function Hero() {
                 <Phone size={24} className="animate-pulse" />
                 <span>APPELER LE {config.phone_number}</span>
               </a>
-              <p className="text-sm text-gray-500 mt-3 ml-1">
-                Appel gratuit • Devis instantané • Sans engagement
-              </p>
+              
+              <button
+                onClick={() => setShowQuoteModal(true)}
+                className="inline-flex items-center justify-center gap-2 bg-white text-joel-violet font-bold text-lg px-8 py-5 rounded-2xl border-2 border-joel-violet/30 hover:border-joel-violet hover:bg-joel-violet/5 transition-all"
+              >
+                <span>Demander un devis</span>
+                <ArrowRight size={20} />
+              </button>
             </div>
+            <p className="text-sm text-gray-500 ml-1">
+              Appel gratuit • Devis instantané • Sans engagement
+            </p>
+
+            {/* Quote Modal */}
+            {showQuoteModal && (
+              <QuickQuoteForm
+                variant="modal"
+                onClose={() => setShowQuoteModal(false)}
+              />
+            )}
 
             {/* Trust badges - Brands */}
             <div className="border-t border-gray-100 pt-6">
