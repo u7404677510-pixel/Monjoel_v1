@@ -16,7 +16,7 @@ interface SiteConfig {
 }
 
 const defaultConfig: SiteConfig = {
-  phone_number: "01 72 68 22 02",
+  phone_number: "01 41 69 10 08",
   primary_color: "#7055A7",
   secondary_color: "#9E76EC",
   show_testimonials: true,

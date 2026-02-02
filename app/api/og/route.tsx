@@ -218,7 +218,7 @@ export async function GET(request: NextRequest) {
               color: config.color,
             }}
           >
-            01 72 68 22 02
+            01 41 69 10 08
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact | Joël - Dépannage Urgence Paris & Île-de-France",
-  description: "Contactez Joël pour vos urgences de dépannage. Disponible 24h/24, 7j/7. Plombier, serrurier, électricien à Paris et Île-de-France. Appelez le 01 72 68 22 02.",
+  description: "Contactez Joël pour vos urgences de dépannage. Disponible 24h/24, 7j/7. Plombier, serrurier, électricien à Paris et Île-de-France. Appelez le 01 41 69 10 08.",
   alternates: {
     canonical: "https://monjoel.fr/contact",
   },

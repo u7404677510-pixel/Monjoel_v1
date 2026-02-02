@@ -6,7 +6,7 @@
 -- Table de configuration générale du site
 CREATE TABLE IF NOT EXISTS site_config (
   id SERIAL PRIMARY KEY,
-  phone_number VARCHAR(20) DEFAULT '01 72 68 22 02',
+  phone_number VARCHAR(20) DEFAULT '01 41 69 10 08',
   primary_color VARCHAR(10) DEFAULT '#7055A7',
   secondary_color VARCHAR(10) DEFAULT '#9E76EC',
   show_testimonials BOOLEAN DEFAULT true,
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS site_config (
 
 -- Insérer la configuration par défaut
 INSERT INTO site_config (phone_number, primary_color, secondary_color, cta_devis_url)
-VALUES ('01 72 68 22 02', '#7055A7', '#9E76EC', 'https://app.monjoel.fr')
+VALUES ('01 41 69 10 08', '#7055A7', '#9E76EC', 'https://app.monjoel.fr')
 ON CONFLICT DO NOTHING;
 
 -- Table du contenu éditable

@@ -138,7 +138,7 @@ Cibler les intentions d'urgence avec appels directs :
 ```
 Serrurier Urgence Paris | Prix Fixe 89€
 Intervention en 30 min - Devis Instantané
-Appelez Maintenant ☎️ 01 72 68 22 02
+Appelez Maintenant ☎️ 01 41 69 10 08
 ```
 
 ### 2. Extensions d'Annonce
@@ -296,7 +296,7 @@ Distribution dans les quartiers à fort potentiel :
 │  ✓ Intervention en 30 min           │
 │  ✓ Artisan vérifié                  │
 │                                     │
-│  📞 01 72 68 22 02                  │
+│  📞 01 41 69 10 08                  │
 │     monjoel.fr                      │
 │                                     │
 │  -10€ avec le code FLYER10          │
@@ -328,7 +328,7 @@ Stickers à coller dans les ascenseurs / halls :
 │  🔑 Serrurier             │
 │  ⚡ Électricien           │
 │                           │
-│  📞 01 72 68 22 02        │
+│  📞 01 41 69 10 08        │
 │     Prix fixe garanti     │
 └───────────────────────────┘
 ```
@@ -340,7 +340,7 @@ Aimants utiles à garder sur le frigo :
 ```
 JOËL - Dépannage Urgence
 Plombier | Serrurier | Électricien
-📞 01 72 68 22 02
+📞 01 41 69 10 08
 ```
 
 **Distribution** : Après chaque intervention, à des événements locaux

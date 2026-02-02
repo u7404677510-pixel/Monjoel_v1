@@ -8,7 +8,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Joël - Plombier, Serrurier & Électricien Paris | 24h/24",
-  description: "Dépannage urgence prix fixe à Paris et Île-de-France. Plombier, serrurier, électricien. Intervention 30 min, devis gratuit. Appelez le 01 72 68 22 02.",
+  description: "Dépannage urgence prix fixe à Paris et Île-de-France. Plombier, serrurier, électricien. Intervention 30 min, devis gratuit. Appelez le 01 41 69 10 08.",
   keywords: [
     "plombier urgence Paris",
     "serrurier urgence Paris",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: "https://monjoel.fr",
     siteName: "Joël",
     title: "Joël - Plombier, Serrurier & Électricien | Paris & Île-de-France",
-    description: "Dépannage d'urgence à prix fixe. Intervention en 30 min, devis instantané, artisans vérifiés. Appelez le 01 72 68 22 02.",
+    description: "Dépannage d'urgence à prix fixe. Intervention en 30 min, devis instantané, artisans vérifiés. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Joël - Plombier, Serrurier & Électricien | Paris & Île-de-France",
-    description: "Dépannage d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 72 68 22 02.",
+    description: "Dépannage d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
   verification: {

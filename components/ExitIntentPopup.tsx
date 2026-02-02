@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Phone, MessageCircle, Clock, Gift } from "lucide-react";
 
 // Configuration
-const PHONE_NUMBER = "01 72 68 22 02";
-const PHONE_TEL = "+33172682202";
+const PHONE_NUMBER = "01 41 69 10 08";
+const PHONE_TEL = "+33141691008";
 const WHATSAPP_NUMBER = "33756996726";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Bonjour, j'ai besoin d'un dépannage urgent. Pouvez-vous m'aider ?"

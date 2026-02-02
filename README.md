@@ -237,7 +237,7 @@ Le sitemap est généré dynamiquement : [monjoel.fr/sitemap.xml](https://monjoe
 
 ## 📞 Contact
 
-- **Téléphone** : 01 72 68 22 02
+- **Téléphone** : 01 41 69 10 08
 - **Email** : contact@monjoel.com
 - **Adresse** : 45 Rue Boursault, 75017 Paris
 

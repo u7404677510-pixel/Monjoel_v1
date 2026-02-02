@@ -20,7 +20,7 @@ import { Trade, getServicesByTrade } from "@/lib/data/services-definition";
 // ============================================
 
 const BASE_URL = "https://monjoel.fr";
-const PHONE_NUMBER = "01 72 68 22 02";
+const PHONE_NUMBER = "01 41 69 10 08";
 
 // ============================================
 // VARIATIONS DE TEXTES PAR MÉTIER

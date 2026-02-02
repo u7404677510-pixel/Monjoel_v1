@@ -5,8 +5,8 @@ import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
 // Numéro de téléphone statique pour Google Ads detection
-const STATIC_PHONE = "01 72 68 22 02";
-const STATIC_PHONE_TEL = "+33172682202";
+const STATIC_PHONE = "01 41 69 10 08";
+const STATIC_PHONE_TEL = "+33141691008";
 interface ElectriciteHeroProps {
   title: string;
   subtitle: string;

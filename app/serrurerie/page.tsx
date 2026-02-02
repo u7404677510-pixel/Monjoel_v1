@@ -11,7 +11,7 @@ import ClientSchema from "@/components/ClientSchema";
 
 export const metadata: Metadata = {
   title: "Serrurier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-  description: "Serrurier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Ouverture de porte, changement de serrure, blindage. Appelez le 01 72 68 22 02.",
+  description: "Serrurier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Ouverture de porte, changement de serrure, blindage. Appelez le 01 41 69 10 08.",
   keywords: [
     "serrurier urgence Paris",
     "serrurier Île-de-France",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://monjoel.fr/serrurerie",
     siteName: "Joël",
     title: "Serrurier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 72 68 22 02.",
+    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Serrurier d'urgence Paris & Île-de-France | Joël",
-    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 72 68 22 02.",
+    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
@@ -57,7 +57,7 @@ const localBusinessSchema = {
   "name": "Joël - Serrurier d'urgence Paris & Île-de-France",
   "description": "Service de serrurerie d'urgence à prix fixe. Intervention en 30 minutes sur Paris et toute l'Île-de-France.",
   "url": "https://monjoel.fr/serrurerie",
-  "telephone": "+33172682202",
+  "telephone": "+33141691008",
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",

@@ -83,7 +83,7 @@ Les tarifs de nuit sont généralement majorés de 30 à 50% par rapport aux tar
 
 En cas de fuite d'eau la nuit, gardez votre calme, coupez l'eau et l'électricité si nécessaire, puis appelez un professionnel. Plus vous agissez vite, moins les dégâts seront importants.
 
-📞 **Besoin d'un plombier maintenant ?** Appelez le 01 72 68 22 02
+📞 **Besoin d'un plombier maintenant ?** Appelez le 01 41 69 10 08
     `
   },
   {
@@ -158,7 +158,7 @@ Chez **Joël**, le prix est fixe et annoncé **avant l'intervention**. Pas de ma
 
 Une porte claquée n'est pas toujours une urgence coûteuse. Mais si vous ne pouvez pas l'ouvrir vous-même, faites appel à un serrurier sérieux qui annonce son prix avant d'intervenir.
 
-📞 **Porte claquée ?** Appelez le 01 72 68 22 02 - Intervention en 30 min
+📞 **Porte claquée ?** Appelez le 01 41 69 10 08 - Intervention en 30 min
     `
   },
   {
@@ -253,7 +253,7 @@ L'eau et l'électricité ne font pas bon ménage. Une infiltration peut créer d
 | Recherche de défaut | 99€ |
 | Mise aux normes tableau | à partir de 199€ |
 
-📞 **Disjoncteur qui saute ?** Appelez le 01 72 68 22 02 - Électricien 24h/24
+📞 **Disjoncteur qui saute ?** Appelez le 01 41 69 10 08 - Électricien 24h/24
     `
   },
   {
@@ -345,7 +345,7 @@ Chez Joël, notre engagement est simple :
 - Devis gratuit avant intervention
 - Facturation transparente
 
-📞 **Besoin d'un serrurier honnête ?** Appelez le 01 72 68 22 02
+📞 **Besoin d'un serrurier honnête ?** Appelez le 01 41 69 10 08
     `
   },
   {
@@ -468,7 +468,7 @@ Chez Joël, nous avons fait de la transparence notre marque de fabrique :
 - Facture détaillée systématique
 - Artisans vérifiés et notés
 
-📞 **Un plombier de confiance ?** Appelez le 01 72 68 22 02
+📞 **Un plombier de confiance ?** Appelez le 01 41 69 10 08
     `
   },
 ];

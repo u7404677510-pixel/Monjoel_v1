@@ -11,7 +11,7 @@ import ClientSchema from "@/components/ClientSchema";
 
 export const metadata: Metadata = {
   title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-  description: "Électricien d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Panne électrique, disjoncteur, tableau électrique. Appelez le 01 72 68 22 02.",
+  description: "Électricien d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Panne électrique, disjoncteur, tableau électrique. Appelez le 01 41 69 10 08.",
   keywords: [
     "électricien urgence Paris",
     "électricien Île-de-France",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://monjoel.fr/electricite",
     siteName: "Joël",
     title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-    description: "Électricien d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 72 68 22 02.",
+    description: "Électricien d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Électricien d'urgence Paris & Île-de-France | Joël",
-    description: "Électricien d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 72 68 22 02.",
+    description: "Électricien d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
@@ -57,7 +57,7 @@ const localBusinessSchema = {
   "name": "Joël - Électricien d'urgence Paris & Île-de-France",
   "description": "Service d'électricité d'urgence à prix fixe. Intervention en 30 minutes sur Paris et toute l'Île-de-France.",
   "url": "https://monjoel.fr/electricite",
-  "telephone": "+33172682202",
+  "telephone": "+33141691008",
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",

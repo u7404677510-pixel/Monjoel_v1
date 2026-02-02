@@ -22,7 +22,7 @@ export default function MentionsLegalesPage() {
               RCS Pontoise : 993 221 878<br />
               N° TVA Intracommunautaire : FR52993221878<br />
               Siège social : 45 Rue Boursault, 75017 Paris, France<br />
-              Téléphone : 01 72 68 22 02<br />
+              Téléphone : 01 41 69 10 08<br />
               Email : contact@monjoel.com
             </p>
 

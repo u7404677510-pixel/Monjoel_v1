@@ -128,12 +128,12 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
             <div className="flex flex-col sm:flex-row gap-4">
               {config.show_cta_phone && (
                 <a
-                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "+33172682202"}`}
+                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "+33141691008"}`}
                   data-placement="city-hero"
                   className="inline-flex items-center justify-center gap-3 bg-gradient-joel text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 >
                   <Phone size={22} />
-                  <span>{config.phone_number || "01 72 68 22 02"}</span>
+                  <span>{config.phone_number || "01 41 69 10 08"}</span>
                 </a>
               )}
               {config.show_cta_devis && (
@@ -181,7 +181,7 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
               {/* CTA */}
               {config.show_cta_phone && (
                 <a
-                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "+33172682202"}`}
+                  href={`tel:${config.phone_number?.replace(/\s/g, "") || "+33141691008"}`}
                   data-placement="city-hero-card"
                   className="block w-full text-center bg-gradient-joel text-white py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity"
                 >

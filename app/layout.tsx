@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     template: "%s | Joël",
   },
   description:
-    "Trouvez en quelques clics un artisan de confiance en plomberie, électricité ou serrurerie. Devis instantané, prix fixe, zéro arnaque. Appelez le 01 72 68 22 02.",
+    "Trouvez en quelques clics un artisan de confiance en plomberie, électricité ou serrurerie. Devis instantané, prix fixe, zéro arnaque. Appelez le 01 41 69 10 08.",
   keywords: [
     "dépannage",
     "plomberie",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     siteName: "Joël",
     title: "Joël | Dépannage sans arnaques",
     description:
-      "Trouvez un artisan de confiance. Devis instantané, prix fixe. Appelez le 01 72 68 22 02.",
+      "Trouvez un artisan de confiance. Devis instantané, prix fixe. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",

@@ -5,8 +5,8 @@ import { X, Clock, CheckCircle, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Configuration
-const PHONE_NUMBER = "01 72 68 22 02";
-const PHONE_TEL = "tel:+33172682202";
+const PHONE_NUMBER = "01 41 69 10 08";
+const PHONE_TEL = "tel:+33141691008";
 
 // Messages variés
 const artisanCounts = [2, 3, 4, 3, 2, 5, 3, 4];

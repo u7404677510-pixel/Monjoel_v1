@@ -186,22 +186,22 @@ export async function generateStaticParams() {
 
 ## Numéro de Téléphone
 
-**Numéro officiel** : `01 72 68 22 02`
+**Numéro officiel** : `01 41 69 10 08`
 
 ### Formats
 
-- **Affichage** : `01 72 68 22 02`
-- **tel: link** : `tel:+33172682202`
-- **Schema.org** : `+33172682202`
+- **Affichage** : `01 41 69 10 08`
+- **tel: link** : `tel:+33141691008`
+- **Schema.org** : `+33141691008`
 
 ### Utilisation
 
 ```tsx
 // Lien cliquable
-<a href="tel:+33172682202">01 72 68 22 02</a>
+<a href="tel:+33141691008">01 41 69 10 08</a>
 
 // Schema.org
-"telephone": "+33172682202"
+"telephone": "+33141691008"
 ```
 
 ## Bonnes Pratiques

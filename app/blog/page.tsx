@@ -123,10 +123,10 @@ export default function BlogPage() {
             Nos artisans interviennent 24h/24 en Île-de-France. Prix fixe garanti.
           </p>
           <a
-            href="tel:+33172682202"
+            href="tel:+33141691008"
             className="inline-flex items-center gap-2 bg-white text-joel-violet font-bold px-8 py-4 rounded-xl hover:shadow-lg transition-shadow"
           >
-            📞 Appeler le 01 72 68 22 02
+            📞 Appeler le 01 41 69 10 08
           </a>
         </div>
       </section>

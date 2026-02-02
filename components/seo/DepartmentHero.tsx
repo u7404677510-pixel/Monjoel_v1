@@ -7,8 +7,8 @@ import { Department } from "@/lib/data/departments-idf";
 import { DepartmentPageContent } from "@/lib/seo/department-content";
 
 // Numéro statique pour Google Ads et SEO
-const STATIC_PHONE = "01 72 68 22 02";
-const STATIC_PHONE_TEL = "+33172682202";
+const STATIC_PHONE = "01 41 69 10 08";
+const STATIC_PHONE_TEL = "+33141691008";
 
 interface DepartmentHeroProps {
   content: DepartmentPageContent;

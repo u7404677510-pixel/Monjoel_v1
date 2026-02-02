@@ -142,7 +142,7 @@ export function generateCityPageContent(trade: Trade, city: City): CityPageConte
 
 **Titre** : `{Métier} à {Ville} | Urgence 24h/24 | Joël`
 
-**Meta description** : `{Métier} d'urgence à {Ville} ({Département}). Intervention en 30 min, prix fixe dès {prix}€. Artisans certifiés. Appelez le 01 72 68 22 02.`
+**Meta description** : `{Métier} d'urgence à {Ville} ({Département}). Intervention en 30 min, prix fixe dès {prix}€. Artisans certifiés. Appelez le 01 41 69 10 08.`
 
 **Introduction** : Texte de 2-3 phrases contextualisant le service dans la ville.
 
@@ -159,7 +159,7 @@ Présent sur chaque page ville/service :
   "@context": "https://schema.org",
   "@type": "Locksmith",
   "name": "Joël - Serrurier d'urgence Paris & Île-de-France",
-  "telephone": "+33172682202",
+  "telephone": "+33141691008",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Boulogne-Billancourt",

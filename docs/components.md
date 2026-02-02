@@ -83,7 +83,7 @@ import StickyCallButton from "@/components/StickyCallButton";
 - Visible uniquement sur mobile (< 768px)
 - Position fixed en bas
 - Gradient Joël
-- Lien `tel:+33172682202`
+- Lien `tel:+33141691008`
 
 ---
 

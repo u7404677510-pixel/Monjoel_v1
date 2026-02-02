@@ -19,7 +19,7 @@ export default function CGUPage() {
               <strong>Joël SAS</strong>, société par actions simplifiée au capital de 1 000 €<br />
               Siège social : 45 Rue Boursault, 75017 Paris<br />
               SIRET : 993 221 878 00016 | RCS Pontoise : 993 221 878<br />
-              Téléphone : 01 72 68 22 02 | Email : contact@monjoel.com<br />
+              Téléphone : 01 41 69 10 08 | Email : contact@monjoel.com<br />
               Directeur de la publication : Yoël Berros
             </p>
 
@@ -83,7 +83,7 @@ export default function CGUPage() {
             </p>
             <p>
               En cas de problème survenant dans les 12 mois suivant l'intervention, 
-              contactez notre service client au 01 72 68 22 02 ou par email à 
+              contactez notre service client au 01 41 69 10 08 ou par email à 
               contact@monjoel.com pour une prise en charge.
             </p>
             <p>La garantie couvre :</p>
@@ -142,7 +142,7 @@ export default function CGUPage() {
             <p>
               Pour toute réclamation, contactez notre service client :<br />
               Email : contact@monjoel.com<br />
-              Téléphone : 01 72 68 22 02<br />
+              Téléphone : 01 41 69 10 08<br />
               Courrier : Joël SAS - 45 Rue Boursault, 75017 Paris
             </p>
             <p>
