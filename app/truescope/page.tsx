@@ -47,23 +47,23 @@ const features = [
 
 export default function TrueScopePage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-joel-violet/5 to-joel-mauve/10">
-        {/* Background decorations */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-joel-mauve/10 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-joel-violet/5 to-transparent rounded-full" />
-        </div>
+    <main className="min-h-screen bg-gradient-to-br from-white via-joel-violet/5 to-joel-mauve/10 relative">
+      {/* Global Background decorations */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-joel-mauve/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-joel-yellow/5 rounded-full blur-3xl" />
+      </div>
 
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-32 text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-joel-violet/10 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-sm"
           >
             <Sparkles size={16} className="text-joel-violet" />
             <span className="text-sm font-semibold text-joel-violet uppercase tracking-wide">
@@ -78,9 +78,9 @@ export default function TrueScopePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-display text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
           >
-            VOTRE URGENCE.
+            VOTRE URGENCE<span className="text-joel-yellow">.</span>
             <br />
-            <span className="bg-gradient-joel bg-clip-text text-transparent">RÉSOLUE EN 3 CLICS.</span>
+            <span className="bg-gradient-joel bg-clip-text text-transparent">RÉSOLUE EN 3 CLICS<span className="text-joel-yellow">.</span></span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -90,9 +90,8 @@ export default function TrueScopePage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Serrurerie. Plomberie. Électricité. TrueScope analyse votre problème, 
-            vous donne le prix exact et la solution immédiate. 
-            <strong className="text-gray-900"> Pas de surprise. Pas d'attente. Juste de l'efficacité pure.</strong>
+            Serrurerie<span className="text-joel-yellow">.</span> Plomberie<span className="text-joel-yellow">.</span> Électricité<span className="text-joel-yellow">.</span> TrueScope analyse votre problème, 
+            vous donne le prix exact et la solution immédiate<span className="text-joel-yellow">.</span>
           </motion.p>
 
           {/* CTA */}
@@ -107,7 +106,6 @@ export default function TrueScopePage() {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
             >
-              {/* Shimmer effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <Zap size={22} className="relative z-10" />
               <span className="relative z-10">Essayer TrueScope Gratuitement</span>
@@ -133,8 +131,64 @@ export default function TrueScopePage() {
         </div>
       </section>
 
+      {/* Manifeste Section - Centered & Clean */}
+      <section className="relative py-32">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-12"
+          >
+            <p className="text-2xl md:text-3xl text-gray-900 leading-relaxed">
+              Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow font-bold">.</span>
+            </p>
+            
+            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto">
+              Des devis qui varient du simple au triple<span className="text-joel-yellow">.</span> Pour le même problème<span className="text-joel-yellow">.</span> Parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <p className="text-3xl md:text-4xl font-display font-bold text-gray-900">
+              Alors on a développé TrueScope<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto">
+              Une IA incorruptible<span className="text-joel-yellow">.</span> Un algorithme qui ne triche pas<span className="text-joel-yellow">.</span> Un système qui analyse votre urgence et fixe le prix<span className="text-joel-yellow">.</span>
+            </p>
+            
+            {/* Highlight box */}
+            <div className="py-10">
+              <p className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-2">
+                Même problème = même prix<span className="text-joel-yellow">.</span>
+              </p>
+              <p className="text-3xl md:text-4xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
+                Toujours<span className="text-joel-yellow">.</span>
+              </p>
+            </div>
+            
+            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto">
+              Pas de négociation à la tête du client<span className="text-joel-yellow">.</span>
+              <br />
+              Pas de tarif "ça dépend"<span className="text-joel-yellow">.</span>
+              <br />
+              Pas de majoration surprise<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <div className="pt-8">
+              <p className="text-2xl md:text-3xl text-gray-900 mb-4">
+                L'ère de l'arnaque est terminée<span className="text-joel-yellow font-bold">.</span>
+              </p>
+              <p className="text-3xl md:text-4xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
+                Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* How it Works Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="relative py-24">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -144,10 +198,10 @@ export default function TrueScopePage() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              COMMENT ÇA MARCHE ?
+              COMMENT ÇA MARCHE<span className="text-joel-yellow"> ?</span>
             </h2>
             <p className="text-xl text-gray-600">
-              Trois étapes. Zéro prise de tête.
+              Trois étapes<span className="text-joel-yellow">.</span> Zéro prise de tête<span className="text-joel-yellow">.</span>
             </p>
           </motion.div>
 
@@ -159,7 +213,7 @@ export default function TrueScopePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-joel-violet/20 hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-joel-violet/30"
+                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-joel-violet/20 hover:-translate-y-2 transition-all duration-300 border border-white/50"
               >
                 {/* Number badge */}
                 <div className="absolute -top-4 -left-4 w-14 h-14 bg-gradient-joel rounded-2xl flex items-center justify-center shadow-lg">
@@ -184,62 +238,8 @@ export default function TrueScopePage() {
         </div>
       </section>
 
-      {/* Manifeste Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-1/2 left-0 w-1 h-32 bg-joel-yellow -translate-y-1/2" />
-        
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            <p className="text-2xl md:text-3xl font-bold text-gray-900 leading-relaxed">
-              Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              Des devis qui varient du simple au triple<span className="text-joel-yellow">.</span> Pour le même problème<span className="text-joel-yellow">.</span> Parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-2xl md:text-3xl font-bold text-gray-900">
-              Alors on a développé TrueScope<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              Une IA incorruptible<span className="text-joel-yellow">.</span> Un algorithme qui ne triche pas<span className="text-joel-yellow">.</span> Un système qui analyse votre urgence et fixe le prix<span className="text-joel-yellow">.</span>
-              <br />
-              <strong className="text-gray-900">Le même, pour tous<span className="text-joel-yellow">.</span></strong>
-            </p>
-            
-            <div className="py-6 border-l-4 border-joel-yellow pl-6 my-8">
-              <p className="text-2xl md:text-3xl font-bold text-gray-900">
-                Même problème = même prix<span className="text-joel-yellow">.</span>
-                <br />
-                <span className="text-joel-violet">Toujours<span className="text-joel-yellow">.</span></span>
-              </p>
-            </div>
-            
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              Pas de négociation à la tête du client<span className="text-joel-yellow">.</span> Pas de tarif "ça dépend"<span className="text-joel-yellow">.</span> Pas de majoration surprise<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-2xl md:text-3xl font-bold text-gray-900">
-              L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-3xl md:text-4xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
-              Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Features Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="relative py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -249,7 +249,7 @@ export default function TrueScopePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="group text-center p-8 rounded-3xl hover:bg-joel-violet/5 transition-colors duration-300"
+                className="group text-center p-8"
               >
                 {/* Icon */}
                 <div className="w-20 h-20 bg-gradient-joel rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -270,50 +270,51 @@ export default function TrueScopePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-gradient-joel relative overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-        </div>
-
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <section className="relative py-24">
+        <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="bg-gradient-joel rounded-[2.5rem] p-12 md:p-16 text-center relative overflow-hidden"
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              PRÊT À RÉSOUDRE VOTRE URGENCE ?
-            </h2>
-            <p className="text-xl text-white/90 mb-10 leading-relaxed">
-              Accédez gratuitement à TrueScope et obtenez votre devis instantané. 
-              <strong className="text-white"> Aucune inscription requise.</strong>
-            </p>
-            <a
-              href={TRUESCOPE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-joel-violet font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
-            >
-              {/* Shimmer effect */}
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-joel-violet/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              <Eye size={22} className="relative z-10" />
-              <span className="relative z-10">Lancer TrueScope</span>
-              <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
-            </a>
+            {/* Background decorations */}
+            <div className="absolute inset-0">
+              <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+            </div>
+
+            <div className="relative z-10">
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-6">
+                PRÊT À RÉSOUDRE VOTRE URGENCE<span className="text-joel-yellow"> ?</span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl mx-auto">
+                Accédez gratuitement à TrueScope et obtenez votre devis instantané<span className="text-joel-yellow">.</span> Aucune inscription requise<span className="text-joel-yellow">.</span>
+              </p>
+              <a
+                href={TRUESCOPE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-joel-violet font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-joel-violet/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <Eye size={22} className="relative z-10" />
+                <span className="relative z-10">Lancer TrueScope</span>
+                <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <section className="py-8 bg-gray-900">
+      <section className="relative py-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} TrueScope. Propulsé par l'intelligence artificielle au service de vos urgences.
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} TrueScope<span className="text-joel-yellow">.</span> Propulsé par l'intelligence artificielle au service de vos urgences<span className="text-joel-yellow">.</span>
           </p>
-          <Link href="/" className="text-joel-mauve hover:text-joel-violet text-sm mt-2 inline-block transition-colors">
+          <Link href="/" className="text-joel-violet hover:text-joel-mauve text-sm mt-2 inline-block transition-colors">
             ← Retour à Joël
           </Link>
         </div>
