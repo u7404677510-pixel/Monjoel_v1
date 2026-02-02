@@ -9,11 +9,9 @@ import TelClickTracker from "@/components/TelClickTracker";
 import StickyCallButton from "@/components/StickyCallButton";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-// Lazy load non-critical components (they appear with delay anyway)
-const ArtisanToast = dynamic(() => import("@/components/ArtisanToast"), { ssr: false });
-const SocialProofNotifications = dynamic(() => import("@/components/SocialProofNotifications"), { ssr: false });
+// Lazy load non-critical components
 const ChatBot = dynamic(() => import("@/components/ChatBot"), { ssr: false });
-// ExitIntentPopup retiré - trop agressif pour l'UX
+// ArtisanToast et SocialProofNotifications retirés - trop de popups
 
 // Optimized font loading with next/font
 const poppins = Poppins({
@@ -211,12 +209,6 @@ export default function RootLayout({
         
         {/* Bouton WhatsApp flottant */}
         <WhatsAppButton />
-        
-        {/* Toast notification artisan disponible */}
-        <ArtisanToast />
-        
-        {/* Social proof notifications */}
-        <SocialProofNotifications />
         
         {/* ChatBot de qualification */}
         <ChatBot />
