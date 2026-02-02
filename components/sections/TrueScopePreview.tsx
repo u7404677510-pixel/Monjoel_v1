@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Sparkles, ArrowRight, Zap } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function TrueScopePreview() {
@@ -10,56 +10,40 @@ export default function TrueScopePreview() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 sm:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section ref={ref} className="py-16 sm:py-24 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-16 overflow-hidden"
+          transition={{ duration: 0.5 }}
+          className="mb-6"
         >
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-joel-violet blur-3xl" />
-            <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-joel-mauve blur-3xl" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-joel-yellow/20 blur-3xl" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-joel-violet/10 rounded-full mb-6">
+            <Sparkles size={16} className="text-joel-violet" />
+            <span className="text-sm font-semibold text-joel-violet">Propulsé par l'IA</span>
           </div>
+          
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Obtenez votre devis en 60 secondes<span className="text-joel-yellow">.</span>
+          </h2>
+          
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            TrueScope analyse votre problème et vous donne le prix exact<span className="text-joel-yellow">.</span> Sans surprise<span className="text-joel-yellow">.</span>
+          </p>
+        </motion.div>
 
-          {/* Content */}
-          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
-            {/* Icon */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={isInView ? { scale: 1 } : {}}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="w-16 h-16 sm:w-24 sm:h-24 bg-gradient-joel rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-2xl shadow-joel-violet/30 flex-shrink-0"
-            >
-              <Sparkles className="w-8 h-8 sm:w-12 sm:h-12 text-white" />
-            </motion.div>
-
-            {/* Text */}
-            <div className="flex-1 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-3 sm:mb-4">
-                <Zap size={16} className="text-joel-yellow sm:w-5 sm:h-5" />
-                <span className="text-joel-yellow font-medium text-sm sm:text-base">Nouveau</span>
-              </div>
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
-                Devis instantané par IA<span className="text-joel-yellow">.</span>
-              </h2>
-              <p className="text-sm sm:text-base text-gray-400 mb-6 lg:mb-0">
-                TrueScope analyse votre problème et vous donne le prix exact en 60 secondes<span className="text-joel-yellow">.</span> Sans surprise<span className="text-joel-yellow">.</span>
-              </p>
-            </div>
-
-            {/* CTA */}
-            <Link
-              href="/truescope"
-              className="group inline-flex items-center gap-2 px-5 sm:px-8 py-3 sm:py-4 bg-gradient-joel text-white font-bold rounded-full shadow-xl shadow-joel-violet/30 hover:shadow-2xl hover:-translate-y-1 transition-all text-sm sm:text-base"
-            >
-              <span>Tester TrueScope</span>
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <Link
+            href="/truescope"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <span>Tester TrueScope</span>
+            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
       </div>
     </section>
