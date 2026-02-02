@@ -64,7 +64,7 @@ function DropdownMenu({ link, onClose }: { link: NavLinkWithDropdown; onClose: (
     return (
       <Link
         href={link.href}
-        className="text-gray-700 hover:text-joel-violet font-medium transition-colors"
+        className="text-sm text-gray-700 hover:text-joel-violet font-medium transition-colors"
       >
         {link.label}
       </Link>
@@ -79,7 +79,7 @@ function DropdownMenu({ link, onClose }: { link: NavLinkWithDropdown; onClose: (
     >
       <Link
         href={link.href}
-        className="flex items-center gap-1 text-gray-700 hover:text-joel-violet font-medium transition-colors"
+        className="flex items-center gap-1 text-sm text-gray-700 hover:text-joel-violet font-medium transition-colors"
       >
         {link.label}
         <ChevronDown size={16} className={`transition-transform duration-150 ${isOpen ? "rotate-180" : ""}`} />
@@ -203,7 +203,7 @@ export default function Navigation() {
           <Logo />
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <DropdownMenu key={link.href} link={link} onClose={closeMobileMenu} />
             ))}
