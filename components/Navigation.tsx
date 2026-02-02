@@ -43,6 +43,7 @@ const navLinks: NavLinkWithDropdown[] = [
   { href: "/plomberie", label: "Plomberie", subLinks: plomberieSubLinks },
   { href: "/electricite", label: "Électricité", subLinks: electriciteSubLinks },
   { href: "/serrurerie", label: "Serrurerie", subLinks: serrurerieSubLinks },
+  { href: "/truescope", label: "TrueScope" },
   { href: "/stop-arnaques", label: "Anti-arnaque" },
 ];
 
