@@ -133,7 +133,7 @@ export default function TrueScopePage() {
 
       {/* Manifeste Section - Centered & Clean */}
       <section className="relative py-32">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,33 +141,33 @@ export default function TrueScopePage() {
             transition={{ duration: 0.6 }}
             className="space-y-12"
           >
-            <p className="text-2xl md:text-3xl text-gray-900 leading-relaxed">
-              Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow font-bold">.</span>
+            <p className="text-3xl md:text-4xl font-bold text-gray-900 leading-relaxed">
+              Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow">.</span>
             </p>
             
-            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
               Des devis qui varient du simple au triple<span className="text-joel-yellow">.</span> Pour le même problème<span className="text-joel-yellow">.</span> Parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow">.</span>
             </p>
             
-            <p className="text-3xl md:text-4xl font-display font-bold text-gray-900">
+            <p className="text-4xl md:text-5xl font-display font-bold text-gray-900">
               Alors on a développé TrueScope<span className="text-joel-yellow">.</span>
             </p>
             
-            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
               Une IA incorruptible<span className="text-joel-yellow">.</span> Un algorithme qui ne triche pas<span className="text-joel-yellow">.</span> Un système qui analyse votre urgence et fixe le prix<span className="text-joel-yellow">.</span>
             </p>
             
             {/* Highlight box */}
             <div className="py-10">
-              <p className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-2">
+              <p className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-4">
                 Même problème = même prix<span className="text-joel-yellow">.</span>
               </p>
-              <p className="text-3xl md:text-4xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
+              <p className="text-4xl md:text-5xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
                 Toujours<span className="text-joel-yellow">.</span>
               </p>
             </div>
             
-            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
               Pas de négociation à la tête du client<span className="text-joel-yellow">.</span>
               <br />
               Pas de tarif "ça dépend"<span className="text-joel-yellow">.</span>
@@ -176,10 +176,10 @@ export default function TrueScopePage() {
             </p>
             
             <div className="pt-8">
-              <p className="text-2xl md:text-3xl text-gray-900 mb-4">
-                L'ère de l'arnaque est terminée<span className="text-joel-yellow font-bold">.</span>
+              <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span>
               </p>
-              <p className="text-3xl md:text-4xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
+              <p className="text-4xl md:text-5xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
                 Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
               </p>
             </div>
