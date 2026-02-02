@@ -170,7 +170,7 @@ export default function TrueScopePage() {
               </p>
               
               <p className="text-xl md:text-2xl font-semibold text-gray-900">
-                L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span> Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
+                L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span> <span className="bg-gradient-joel bg-clip-text text-transparent">Bienvenue sur Joël</span><span className="text-joel-yellow">.</span>
               </p>
             </div>
           </motion.div>
