@@ -131,56 +131,46 @@ export default function TrueScopePage() {
         </div>
       </section>
 
-      {/* Manifeste Section - Centered & Clean */}
-      <section className="relative py-32">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      {/* Manifeste Section */}
+      <section className="relative py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              POURQUOI TRUESCOPE<span className="text-joel-yellow"> ?</span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              Même problème = même prix<span className="text-joel-yellow">.</span> Toujours<span className="text-joel-yellow">.</span>
+            </p>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-12"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-white/50"
           >
-            <p className="text-3xl md:text-4xl font-bold text-gray-900 leading-relaxed">
-              Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Des devis qui varient du simple au triple<span className="text-joel-yellow">.</span> Pour le même problème<span className="text-joel-yellow">.</span> Parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-4xl md:text-5xl font-display font-bold text-gray-900">
-              Alors on a développé TrueScope<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Une IA incorruptible<span className="text-joel-yellow">.</span> Un algorithme qui ne triche pas<span className="text-joel-yellow">.</span> Un système qui analyse votre urgence et fixe le prix<span className="text-joel-yellow">.</span>
-            </p>
-            
-            {/* Highlight box */}
-            <div className="py-10">
-              <p className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-4">
-                Même problème = même prix<span className="text-joel-yellow">.</span>
+            <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
+              <p>
+                Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow font-bold">.</span> Des devis qui varient du simple au triple, pour le même problème, parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow font-bold">.</span>
               </p>
-              <p className="text-4xl md:text-5xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
-                Toujours<span className="text-joel-yellow">.</span>
+              
+              <p>
+                Alors on a développé <strong className="text-gray-900">TrueScope</strong><span className="text-joel-yellow font-bold">.</span> Une IA incorruptible<span className="text-joel-yellow font-bold">.</span> Un algorithme qui ne triche pas<span className="text-joel-yellow font-bold">.</span> Un système qui analyse votre urgence et fixe le prix — le même, pour tous<span className="text-joel-yellow font-bold">.</span>
               </p>
-            </div>
-            
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Pas de négociation à la tête du client<span className="text-joel-yellow">.</span>
-              <br />
-              Pas de tarif "ça dépend"<span className="text-joel-yellow">.</span>
-              <br />
-              Pas de majoration surprise<span className="text-joel-yellow">.</span>
-            </p>
-            
-            <div className="pt-8">
-              <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span>
+              
+              <p>
+                Pas de négociation à la tête du client<span className="text-joel-yellow font-bold">.</span> Pas de tarif "ça dépend"<span className="text-joel-yellow font-bold">.</span> Pas de majoration surprise<span className="text-joel-yellow font-bold">.</span>
               </p>
-              <p className="text-4xl md:text-5xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
-                Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
+              
+              <p className="text-xl font-semibold text-gray-900">
+                L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span> Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
               </p>
             </div>
           </motion.div>
