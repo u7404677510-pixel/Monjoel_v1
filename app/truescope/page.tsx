@@ -132,7 +132,7 @@ export default function TrueScopePage() {
       </section>
 
       {/* Manifeste Section */}
-      <section className="relative py-24">
+      <section className="relative py-16">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,7 +156,7 @@ export default function TrueScopePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-white/50"
           >
-            <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
+            <div className="max-w-none text-gray-600 leading-relaxed space-y-6 text-lg md:text-xl">
               <p>
                 Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow font-bold">.</span> Des devis qui varient du simple au triple, pour le même problème, parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow font-bold">.</span>
               </p>
@@ -169,7 +169,7 @@ export default function TrueScopePage() {
                 Pas de négociation à la tête du client<span className="text-joel-yellow font-bold">.</span> Pas de tarif "ça dépend"<span className="text-joel-yellow font-bold">.</span> Pas de majoration surprise<span className="text-joel-yellow font-bold">.</span>
               </p>
               
-              <p className="text-xl font-semibold text-gray-900">
+              <p className="text-xl md:text-2xl font-semibold text-gray-900">
                 L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span> Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
               </p>
             </div>
