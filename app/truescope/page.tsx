@@ -184,8 +184,62 @@ export default function TrueScopePage() {
         </div>
       </section>
 
+      {/* Manifeste Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-1/2 left-0 w-1 h-32 bg-joel-yellow -translate-y-1/2" />
+        
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
+            <p className="text-2xl md:text-3xl font-bold text-gray-900 leading-relaxed">
+              Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              Des devis qui varient du simple au triple<span className="text-joel-yellow">.</span> Pour le même problème<span className="text-joel-yellow">.</span> Parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <p className="text-2xl md:text-3xl font-bold text-gray-900">
+              Alors on a développé TrueScope<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              Une IA incorruptible<span className="text-joel-yellow">.</span> Un algorithme qui ne triche pas<span className="text-joel-yellow">.</span> Un système qui analyse votre urgence et fixe le prix<span className="text-joel-yellow">.</span>
+              <br />
+              <strong className="text-gray-900">Le même, pour tous<span className="text-joel-yellow">.</span></strong>
+            </p>
+            
+            <div className="py-6 border-l-4 border-joel-yellow pl-6 my-8">
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">
+                Même problème = même prix<span className="text-joel-yellow">.</span>
+                <br />
+                <span className="text-joel-violet">Toujours<span className="text-joel-yellow">.</span></span>
+              </p>
+            </div>
+            
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              Pas de négociation à la tête du client<span className="text-joel-yellow">.</span> Pas de tarif "ça dépend"<span className="text-joel-yellow">.</span> Pas de majoration surprise<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <p className="text-2xl md:text-3xl font-bold text-gray-900">
+              L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span>
+            </p>
+            
+            <p className="text-3xl md:text-4xl font-display font-bold bg-gradient-joel bg-clip-text text-transparent">
+              Bienvenue dans l'ère de la transparence totale<span className="text-joel-yellow">.</span>
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
