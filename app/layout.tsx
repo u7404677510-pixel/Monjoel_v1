@@ -7,7 +7,6 @@ import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import TelClickTracker from "@/components/TelClickTracker";
 import StickyCallButton from "@/components/StickyCallButton";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Lazy load non-critical components
 const ChatBot = dynamic(() => import("@/components/ChatBot"), { ssr: false });
@@ -206,9 +205,6 @@ export default function RootLayout({
         
         {/* Bouton d'appel sticky mobile */}
         <StickyCallButton />
-        
-        {/* Bouton WhatsApp flottant */}
-        <WhatsAppButton />
         
         {/* ChatBot de qualification */}
         <ChatBot />
