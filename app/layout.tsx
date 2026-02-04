@@ -2,15 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
-import dynamic from "next/dynamic";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import TelClickTracker from "@/components/TelClickTracker";
-import StickyCallButton from "@/components/StickyCallButton";
+import ConditionalSticky from "@/components/ConditionalSticky";
 
-// Lazy load non-critical components
-const ChatBot = dynamic(() => import("@/components/ChatBot"), { ssr: false });
-// ArtisanToast et SocialProofNotifications retirés - trop de popups
+// Popups growth hack retirés - trop agressifs (ChatBot, ArtisanToast, SocialProofNotifications, ExitIntentPopup)
 
 // Optimized font loading with next/font
 const poppins = Poppins({
@@ -203,11 +200,8 @@ export default function RootLayout({
         {/* Contenu du site */}
         <LayoutWrapper>{children}</LayoutWrapper>
         
-        {/* Bouton d'appel sticky mobile */}
-        <StickyCallButton />
-        
-        {/* ChatBot de qualification */}
-        <ChatBot />
+        {/* Bouton d'appel sticky mobile (conditionnel - pas sur /test/*) */}
+        <ConditionalSticky />
       </body>
     </html>
   );

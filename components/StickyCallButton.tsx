@@ -33,31 +33,21 @@ export default function StickyCallButton() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 md:hidden transition-transform duration-300 ${
+      className={`fixed bottom-0 left-0 right-0 z-[60] md:hidden transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      {/* Gradient fade at top */}
-      <div className="h-4 bg-gradient-to-t from-white to-transparent" />
-      
-      {/* Button container */}
-      <div className="bg-white border-t border-gray-200 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+      {/* Button container - compact version */}
+      <div className="bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-2 safe-area-bottom">
         <a
           href={`tel:${formatPhoneForTel(config.phone_number)}`}
           onClick={handleCallClick}
           data-placement="sticky-mobile"
-          className="relative flex items-center justify-center gap-3 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all"
+          className="flex items-center justify-center gap-2 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base py-3 rounded-xl shadow-lg active:scale-[0.98] transition-all"
         >
-          {/* Badge GRATUIT */}
-          <span className="absolute -top-2 right-4 bg-joel-yellow text-gray-900 text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
-            GRATUIT
-          </span>
-          <Phone size={22} className="animate-pulse" />
-          <span>Appeler maintenant</span>
+          <Phone size={20} />
+          <span>Appeler le {config.phone_number}</span>
         </a>
-        <p className="text-center text-xs text-gray-500 mt-2">
-          Appel gratuit • Disponible 24h/24
-        </p>
       </div>
     </div>
   );

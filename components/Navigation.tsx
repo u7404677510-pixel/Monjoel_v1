@@ -209,8 +209,12 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center gap-3">
+            {/* Badge SANS MAJORATION */}
+            <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+              SANS MAJORATION
+            </span>
             <a
               href={`tel:${formatPhoneForTel(config.phone_number)}`}
               data-placement="header"
@@ -228,15 +232,27 @@ export default function Navigation() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700"
-            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Right Section */}
+          <div className="md:hidden flex items-center gap-2">
+            {/* Phone CTA Icon - Mobile */}
+            <a
+              href={`tel:${formatPhoneForTel(config.phone_number)}`}
+              data-placement="header-mobile"
+              className="flex items-center justify-center w-10 h-10 bg-emerald-500 text-white rounded-full shadow-lg"
+              aria-label="Appeler"
+            >
+              <Phone size={18} />
+            </a>
+            {/* Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-gray-700"
+              aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -246,25 +262,24 @@ export default function Navigation() {
           }`}
         >
           <div className="flex flex-col gap-2">
+            {/* Badge visible en mobile */}
+            <div className="flex justify-center mb-2">
+              <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+                SANS MAJORATION 24h/24
+              </span>
+            </div>
             {navLinks.map((link) => (
               <MobileDropdown key={link.href} link={link} onClose={closeMobileMenu} />
             ))}
-            <a
-              href={`tel:${formatPhoneForTel(config.phone_number)}`}
-              data-placement="header-mobile"
-              className="flex items-center justify-center gap-2 px-5 py-3 bg-gradient-joel text-white font-semibold rounded-full mt-4"
-            >
-              <Phone size={18} />
-              <span>{config.phone_number}</span>
-            </a>
+            {/* Devis button only - call is handled by sticky button */}
             <button
               onClick={() => {
                 setShowQuoteModal(true);
                 closeMobileMenu();
               }}
-              className="flex items-center justify-center gap-2 px-5 py-3 bg-white text-joel-violet font-semibold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet mt-2"
+              className="flex items-center justify-center gap-2 px-5 py-3 bg-joel-violet text-white font-semibold rounded-full mt-4"
             >
-              <span>Demander un devis</span>
+              <span>Demander un devis gratuit</span>
               <ArrowRight size={16} />
             </button>
           </div>

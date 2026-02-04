@@ -388,3 +388,19 @@ h1, h2, h3, h4, h5, h6 {
     animation: cookiebotSlideUp 0.3s ease-out !important;
   }
 }
+
+/* Safe area for iPhone notch/home indicator */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Phone ring animation for CTA */
+@keyframes ring {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20%, 40% { transform: rotate(-10deg); }
+  50% { transform: rotate(0deg); }
+}
+.animate-ring {
+  animation: ring 2s ease-in-out infinite;
+}

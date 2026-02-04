@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="200" height="80"/>
+  <g id="Calque_1" data-name="Calque 1">
+    <rect class="cls-1" width="200" height="80"/>
+    <image width="900" height="500" transform="translate(28) scale(.16)" xlink:href="../../../Downloads/FICHET-vector-logo.webp"/>
+  </g>
+</svg>
