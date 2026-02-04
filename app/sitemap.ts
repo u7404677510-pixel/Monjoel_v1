@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { citiesIDF } from "@/lib/data/cities-idf";
 import { trades } from "@/lib/data/services-definition";
 import { departmentsIDF, trades as deptTrades } from "@/lib/data/departments-idf";
+import { blogArticles } from "@/lib/data/blog-articles";
 
 const BASE_URL = "https://monjoel.fr";
 
@@ -14,7 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "", priority: 1.0, changeFrequency: "weekly" as const },
     { url: "/plomberie", priority: 0.9, changeFrequency: "weekly" as const },
     { url: "/serrurerie", priority: 0.9, changeFrequency: "weekly" as const },
+    { url: "/serrurerie/tarifs", priority: 0.85, changeFrequency: "weekly" as const },
     { url: "/electricite", priority: 0.9, changeFrequency: "weekly" as const },
+    { url: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
     { url: "/stop-arnaques", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/a-propos", priority: 0.5, changeFrequency: "monthly" as const },
     { url: "/contact", priority: 0.6, changeFrequency: "monthly" as const },
@@ -41,12 +44,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/plombier/degat-des-eaux",
     "/plombier/chauffe-eau-panne",
     "/plombier/remplacement-robinet",
-    // Serrurier
+    // Serrurier - Services originaux
     "/serrurier/ouverture-sans-percage",
     "/serrurier/ouverture-avec-percage",
     "/serrurier/perte-cles",
     "/serrurier/cle-cassee-serrure",
     "/serrurier/blindage-porte",
+    "/serrurier/serrure-bloquee",
+    "/serrurier/porte-fermee-a-cle",
+    "/serrurier/changement-cylindre",
+    "/serrurier/changement-serrure",
+    "/serrurier/apres-effraction",
+    // Serrurier - Nouveaux services Ahrefs
+    "/serrurier/serrure-3-points",
+    "/serrurier/serrure-multipoints",
+    "/serrurier/reproduction-cles",
+    "/serrurier/cylindre-haute-securite",
+    "/serrurier/porte-blindee",
+    "/serrurier/coffre-fort",
+    "/serrurier/rideau-metallique",
     // Electricien
     "/electricien/panne-electrique",
     "/electricien/disjoncteur-saute",
@@ -62,6 +78,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    });
+  }
+
+  // Articles de blog
+  for (const article of blogArticles) {
+    entries.push({
+      url: `${BASE_URL}/blog/${article.slug}`,
+      lastModified: new Date(article.updatedAt || article.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     });
   }
 
@@ -103,12 +129,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return entries;
 }
 
-// Note: Avec ~300 villes et ~16 services, cela génère environ:
-// - 10 pages statiques
-// - 16 pages de services existantes
-// - 300 * 3 = 900 pages métier/ville
-// - 300 * 16 = 4800 pages service/ville
-// Total: ~5726 URLs dans le sitemap
+// Note: Avec ~270 villes et ~26 services (dont 18 serrurerie), cela génère environ:
+// - 12 pages statiques
+// - 28 pages de services existantes  
+// - 10 articles de blog
+// - 24 pages départements
+// - 270 * 3 = 810 pages métier/ville
+// - 270 * 26 = 7020 pages service/ville
+// Total: ~7900 URLs dans le sitemap
 //
 // Pour plus de 50k URLs, il faudrait créer un sitemap index.
 

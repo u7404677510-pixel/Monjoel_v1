@@ -12,34 +12,34 @@ import { Trade, Service } from "@/lib/data/services-definition";
 
 const heroTitleVariations = {
   plombier: [
-    "Plombier à {city} – Intervention rapide 24h/24",
-    "Votre plombier de confiance à {city}",
-    "{city} : Plombier disponible en urgence",
-    "Plomberie à {city} – Prix fixe, sans surprise",
-    "Dépannage plomberie {city} – Artisan certifié",
+    "Plombier {city} | Prix Fixe 79€ | 20 min",
+    "Plombier Urgence {city} – 24h/24 Sans Majoration",
+    "{city} : Plombier dès 79€ | Intervention Express",
+    "Dépannage Plomberie {city} | Prix Fixe Garanti",
+    "Plombier {city} – Fuite, WC, Chauffe-eau | 79€",
   ],
   serrurier: [
-    "Serrurier à {city} – Ouverture de porte 24h/24",
-    "Votre serrurier de confiance à {city}",
-    "{city} : Serrurier disponible en urgence",
-    "Serrurerie à {city} – Prix fixe garanti",
-    "Dépannage serrurerie {city} – Artisan certifié",
+    "Serrurier {city} | Prix Fixe 89€ | 20 min",
+    "Serrurier Urgence {city} – 24h/24 Sans Majoration",
+    "{city} : Serrurier dès 89€ | Ouverture Porte",
+    "Dépannage Serrurerie {city} | Prix Fixe Garanti",
+    "Serrurier {city} – Porte Claquée, Serrure | 89€",
   ],
   electricien: [
-    "Électricien à {city} – Dépannage 24h/24",
-    "Votre électricien de confiance à {city}",
-    "{city} : Électricien disponible en urgence",
-    "Électricité à {city} – Prix fixe, devis instantané",
-    "Dépannage électrique {city} – Artisan certifié",
+    "Électricien {city} | Prix Fixe 59€ | 20 min",
+    "Électricien Urgence {city} – 24h/24 Sans Majoration",
+    "{city} : Électricien dès 59€ | Dépannage Express",
+    "Dépannage Électrique {city} | Prix Fixe Garanti",
+    "Électricien {city} – Panne, Disjoncteur | 59€",
   ],
 };
 
 const heroSubtitleVariations = [
-  "Intervention en ~30 minutes. Prix fixe annoncé avant intervention. Artisan vérifié.",
-  "Un artisan chez vous en moins de 30 min en moyenne. Devis instantané, prix fixe.",
-  "Prix clair avant intervention. Artisan qualifié disponible 24h/24 et 7j/7.",
-  "Fini les mauvaises surprises. Prix fixe, intervention rapide, artisan de confiance.",
-  "Devis en quelques secondes. Prix garanti. Intervention moyenne : 30 minutes.",
+  "⭐ 4.9/5 (947 avis) • Intervention 20 min • Prix fixe, zéro arnaque",
+  "Artisan chez vous en 20 min • Prix annoncé = prix payé • Sans majoration 24h/24",
+  "Prix clair AVANT intervention • 24h/24 7j/7 • Paiement après satisfaction",
+  "Fini les arnaques : prix fixe garanti • Intervention express • Artisan certifié",
+  "⭐ 947 clients satisfaits • Devis instantané • Intervention moyenne : 20 min",
 ];
 
 const urgencyPhrases = [
@@ -118,10 +118,29 @@ export function generateServiceTitle(service: Service, city: City): string {
 
 /**
  * Génère la meta description pour une page métier/ville
+ * Optimisée avec emojis et keywords Ahrefs
  */
 export function generateMetaDescription(trade: Trade, city: City): string {
-  const baseDesc = trade.metaDescription.replace("{city}", city.name);
-  return baseDesc;
+  const metaTemplates: Record<string, string[]> = {
+    serrurier: [
+      `Serrurier ${city.name} ⭐ 4.9/5. Ouverture porte 89€, intervention 20 min. Prix fixe garanti, sans majoration 24h/24. 01 41 69 10 08`,
+      `Serrurier urgence ${city.name} 🔐 Prix fixe dès 89€. Porte claquée, serrure bloquée. 20 min, zéro arnaque. Appelez maintenant !`,
+      `${city.name} : Serrurier prix fixe 89€ ⭐ 947 avis. Ouverture porte, changement serrure. 24h/24 sans majoration.`,
+    ],
+    plombier: [
+      `Plombier ${city.name} ⭐ 4.9/5. Fuite, WC, chauffe-eau dès 79€. Intervention 20 min. Prix fixe, zéro arnaque. 01 41 69 10 08`,
+      `Plombier urgence ${city.name} 💧 Prix fixe dès 79€. Dégât des eaux, débouchage. 20 min, sans majoration. Appelez !`,
+      `${city.name} : Plombier prix fixe 79€ ⭐ 947 avis. Fuite d'eau, WC bouchés. 24h/24 sans majoration.`,
+    ],
+    electricien: [
+      `Électricien ${city.name} ⭐ 4.9/5. Panne, disjoncteur dès 59€. Intervention 20 min. Prix fixe garanti. 01 41 69 10 08`,
+      `Électricien urgence ${city.name} ⚡ Prix fixe dès 59€. Panne électrique, court-circuit. 20 min, zéro arnaque. Appelez !`,
+      `${city.name} : Électricien prix fixe 59€ ⭐ 947 avis. Panne, tableau électrique. 24h/24 sans majoration.`,
+    ],
+  };
+  
+  const templates = metaTemplates[trade.slug] || [trade.metaDescription.replace("{city}", city.name)];
+  return selectByCity(templates, city);
 }
 
 /**
@@ -133,13 +152,32 @@ export function generateServiceMetaDescription(service: Service, city: City): st
 
 /**
  * Génère l'introduction unique pour une ville
+ * Enrichie avec keywords Ahrefs et argumentaire anti-arnaque
  */
 export function generateCityIntroduction(trade: Trade, city: City): string {
-  const intros = [
-    `Vous recherchez un ${trade.name.toLowerCase()} fiable à ${city.name} (${city.postalCodes[0]}) ? Joël vous connecte avec des artisans certifiés, disponibles 24h/24. Prix fixe, intervention rapide, zéro mauvaise surprise.`,
-    `À ${city.name}, les habitants du ${city.departmentName} font confiance à Joël pour leurs urgences en ${trade.name.toLowerCase()}. Un artisan chez vous en ~30 minutes, au prix annoncé.`,
-    `Besoin d'un ${trade.name.toLowerCase()} à ${city.name} ? Joël sélectionne les meilleurs artisans du ${city.departmentName}. Prix clair avant intervention, aucun frais caché.`,
-    `${city.name} : votre ${trade.name.toLowerCase()} arrive en moins de 30 minutes en moyenne. Joël, c'est le dépannage nouvelle génération – transparent, rapide, au juste prix.`,
+  const tradeIntros: Record<string, string[]> = {
+    serrurier: [
+      `Vous cherchez un serrurier pas cher à ${city.name} (${city.postalCodes[0]}) ? Attention aux arnaques ! Chez Joël, le prix annoncé est le prix payé : ouverture de porte dès 89€, sans majoration nuit ni week-end. Nos artisans certifiés interviennent en 20 minutes en moyenne.`,
+      `Porte claquée, serrure bloquée ou clé perdue à ${city.name} ? Joël, c'est le serrurier de confiance du ${city.departmentName}. Prix fixe garanti, zéro arnaque, intervention rapide 24h/24.`,
+      `${city.name} : serrurier urgence à prix réel. Pendant que d'autres annoncent 39€ pour facturer 400€ sur place, Joël affiche ses vrais tarifs. Ouverture porte 89€, changement cylindre 120€. Point.`,
+      `Besoin d'un serrurier à ${city.name} ? Joël sélectionne les meilleurs artisans du ${city.departmentName}. Prix fixe avant intervention, paiement sécurisé, aucune mauvaise surprise. La serrurerie sans le stress.`,
+    ],
+    plombier: [
+      `Fuite d'eau, WC bouchés ou chauffe-eau en panne à ${city.name} (${city.postalCodes[0]}) ? Joël envoie un plombier certifié en 20 minutes. Prix fixe dès 79€, sans majoration 24h/24. Zéro arnaque, zéro stress.`,
+      `Urgence plomberie à ${city.name} ? Les habitants du ${city.departmentName} font confiance à Joël pour un dépannage rapide et transparent. Le prix annoncé est le prix payé, garanti.`,
+      `${city.name} : plombier urgence à prix fixe. Fuite, dégât des eaux, débouchage... Intervention en 20 min, prix clair avant de commencer. Joël, la plomberie sans arnaque.`,
+      `Besoin d'un plombier à ${city.name} ? Joël connecte les meilleurs artisans du ${city.departmentName} avec les habitants. Prix fixe, devis instantané, intervention express.`,
+    ],
+    electricien: [
+      `Panne électrique, disjoncteur qui saute à ${city.name} (${city.postalCodes[0]}) ? Joël envoie un électricien certifié en 20 minutes. Prix fixe dès 59€, diagnostic inclus. Zéro arnaque, zéro majoration.`,
+      `Urgence électrique à ${city.name} ? Les habitants du ${city.departmentName} font confiance à Joël pour un dépannage sécurisé et transparent. Prix fixe, intervention rapide 24h/24.`,
+      `${city.name} : électricien urgence à prix réel. Panne, court-circuit, tableau électrique... On vous dit le prix AVANT d'intervenir. Pas de surprise, jamais.`,
+      `Besoin d'un électricien à ${city.name} ? Joël sélectionne les artisans certifiés du ${city.departmentName}. Prix fixe, diagnostic gratuit, intervention express.`,
+    ],
+  };
+  
+  const intros = tradeIntros[trade.slug] || [
+    `Besoin d'un ${trade.name.toLowerCase()} à ${city.name} ? Joël, c'est le dépannage sans arnaque. Prix fixe, intervention rapide, artisans vérifiés.`
   ];
   
   return selectByCity(intros, city);
@@ -236,40 +274,56 @@ export function generateCityFAQ(trade: Trade, city: City): FAQItem[] {
   const baseFAQ: FAQItem[] = [
     {
       question: `Quel est le délai d'intervention à ${city.name} ?`,
-      answer: `Nos artisans interviennent en moyenne en 30 minutes à ${city.name} et dans tout le ${city.departmentName}. En cas d'urgence, nous privilégions les disponibilités les plus proches.`,
+      answer: `Nos artisans interviennent en moyenne en 20 minutes à ${city.name} et dans tout le ${city.departmentName}. En cas d'urgence, nous envoyons l'artisan le plus proche disponible.`,
     },
     {
-      question: `Les prix sont-ils vraiment fixes ?`,
-      answer: `Oui, le prix annoncé est le prix que vous payez. Aucun frais de déplacement caché, aucune majoration sur place. Vous payez avant l'intervention, au prix exact du devis.`,
+      question: `Les prix sont-ils vraiment fixes à ${city.name} ?`,
+      answer: `Oui, le prix annoncé est le prix payé. Aucun frais de déplacement caché, aucune majoration nuit/week-end. C'est notre engagement anti-arnaque, vérifié par 947 avis clients.`,
     },
     {
-      question: `Comment sont sélectionnés vos artisans ?`,
-      answer: `Tous nos artisans sont certifiés et vérifiés. Nous contrôlons leurs qualifications, leurs assurances et recueillons les avis clients après chaque intervention.`,
+      question: `Comment éviter les arnaques serrurier/plombier ?`,
+      answer: `Méfiez-vous des prix trop bas (39€, 49€). Chez Joël, on affiche nos vrais prix : transparence totale. Le prix au téléphone = le prix payé. Toujours.`,
     },
     {
-      question: `Intervenez-vous les weekends et jours fériés ?`,
-      answer: `Oui, nos artisans sont disponibles 24h/24 et 7j/7, y compris les weekends et jours fériés. Le prix reste fixe, sans majoration.`,
+      question: `Intervenez-vous la nuit et le week-end à ${city.name} ?`,
+      answer: `Oui, 24h/24, 7j/7, jours fériés inclus. Et le prix reste IDENTIQUE. Aucune majoration, c'est notre promesse depuis le premier jour.`,
     },
   ];
   
-  // FAQ spécifiques au métier
+  // FAQ spécifiques au métier avec keywords Ahrefs
   const tradeFAQ: Record<string, FAQItem[]> = {
     plombier: [
       {
-        question: `Puis-je avoir un plombier en urgence à ${city.name} ?`,
-        answer: `Absolument. Nos plombiers à ${city.name} sont disponibles 24h/24 pour toute urgence : fuite, dégât des eaux, WC bouché... Intervention rapide garantie.`,
+        question: `Combien coûte un plombier à ${city.name} ?`,
+        answer: `Chez Joël : fuite d'eau dès 89€, WC bouchés 79€, chauffe-eau en panne 99€. Prix TTC tout compris, sans surprise. Méfiez-vous des prix à 29€ qui explosent sur place.`,
+      },
+      {
+        question: `Plombier urgence ${city.name} : quel délai ?`,
+        answer: `En moyenne 20 minutes. Nos plombiers à ${city.name} et dans le ${city.departmentName} sont disponibles 24h/24 pour fuite, dégât des eaux, WC bouché.`,
       },
     ],
     serrurier: [
       {
-        question: `Ouvrez-vous les portes blindées à ${city.name} ?`,
-        answer: `Oui, nos serruriers à ${city.name} sont équipés pour ouvrir tous types de portes, y compris les portes blindées. Le prix varie selon la méthode nécessaire.`,
+        question: `Combien coûte un serrurier à ${city.name} ?`,
+        answer: `Chez Joël : ouverture porte claquée 89€, avec perçage 150€, changement cylindre 120€. Prix TTC, sans majoration. Les "serruriers à 39€" sont souvent des arnaques.`,
+      },
+      {
+        question: `Serrurier porte claquée ${city.name} : quel prix ?`,
+        answer: `Ouverture de porte claquée sans perçage : 89€ TTC. Si perçage nécessaire (porte blindée, serrure sécurisée) : 150€ TTC. Prix annoncé avant intervention.`,
+      },
+      {
+        question: `Changement serrure à ${city.name} : combien ça coûte ?`,
+        answer: `Changement cylindre : 120€. Changement serrure complète : 180€. Serrure 3 points : dès 189€. Tous prix TTC, fourniture incluse. Devis exact au téléphone.`,
       },
     ],
     electricien: [
       {
-        question: `Faites-vous la mise aux normes à ${city.name} ?`,
-        answer: `Oui, nos électriciens à ${city.name} réalisent des mises aux normes complètes. Demandez un diagnostic gratuit pour connaître les travaux nécessaires.`,
+        question: `Combien coûte un électricien à ${city.name} ?`,
+        answer: `Chez Joël : panne électrique dès 89€, disjoncteur qui saute 79€, tableau électrique 129€. Prix TTC, diagnostic inclus. Zéro surprise.`,
+      },
+      {
+        question: `Électricien urgence ${city.name} : quel délai ?`,
+        answer: `En moyenne 20 minutes. Nos électriciens à ${city.name} sont disponibles 24h/24 pour panne, court-circuit, disjoncteur. Mise en sécurité immédiate si nécessaire.`,
       },
     ],
   };

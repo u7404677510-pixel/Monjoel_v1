@@ -115,7 +115,7 @@ const faqSchema = {
   ]
 };
 
-const services = [
+const servicesUrgence = [
   {
     name: "Ouverture porte claquée",
     price: "89€",
@@ -129,9 +129,42 @@ const services = [
     popular: false,
   },
   {
+    name: "Ouverture porte blindée",
+    price: "180€",
+    description: "Sans perçage si possible",
+    popular: false,
+  },
+  {
+    name: "Clé cassée dans serrure",
+    price: "79€",
+    description: "Extraction délicate",
+    popular: false,
+  },
+  {
+    name: "Serrure bloquée",
+    price: "99€",
+    description: "Déblocage + réparation",
+    popular: false,
+  },
+  {
+    name: "Après effraction",
+    price: "149€",
+    description: "Sécurisation urgente",
+    popular: false,
+  },
+];
+
+const servicesInstallation = [
+  {
     name: "Changement cylindre",
     price: "120€",
     description: "Fourniture standard incluse",
+    popular: false,
+  },
+  {
+    name: "Cylindre haute sécurité A2P",
+    price: "149€",
+    description: "Anti-crochetage, anti-perçage",
     popular: false,
   },
   {
@@ -141,15 +174,54 @@ const services = [
     popular: false,
   },
   {
-    name: "Ouverture porte blindée",
-    price: "180€",
-    description: "Sans perçage si possible",
+    name: "Serrure 3 points",
+    price: "189€",
+    description: "Fourniture + installation",
+    popular: true,
+  },
+  {
+    name: "Serrure multipoints (5-7 pts)",
+    price: "À partir de 249€",
+    description: "Selon modèle choisi",
     popular: false,
   },
   {
-    name: "Blindage de porte",
-    price: "À partir de 350€",
-    description: "Selon modèle et dimensions",
+    name: "Porte blindée",
+    price: "À partir de 1490€",
+    description: "Installation complète",
+    popular: false,
+  },
+];
+
+const servicesAutres = [
+  {
+    name: "Reproduction clé simple",
+    price: "15€",
+    description: "Clé plate standard",
+    popular: false,
+  },
+  {
+    name: "Reproduction clé sécurisée",
+    price: "45€",
+    description: "Clé crantée/protégée",
+    popular: false,
+  },
+  {
+    name: "Ouverture coffre-fort",
+    price: "199€",
+    description: "Code perdu, serrure cassée",
+    popular: false,
+  },
+  {
+    name: "Rideau métallique bloqué",
+    price: "149€",
+    description: "Déblocage + diagnostic",
+    popular: false,
+  },
+  {
+    name: "Blindage de porte existante",
+    price: "À partir de 590€",
+    description: "Selon dimensions",
     popular: false,
   },
 ];
@@ -206,8 +278,13 @@ export default function TarifsSerrureriePage() {
             Prix TTC, tout compris. Aucun frais caché, aucune majoration nuit/week-end.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, i) => (
+          {/* Urgences */}
+          <h3 className="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">
+            <Clock size={20} className="text-red-500" />
+            Urgences 24h/24
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {servicesUrgence.map((service, i) => (
               <div
                 key={i}
                 className={`relative bg-gray-50 rounded-xl p-6 border-2 ${
@@ -219,7 +296,50 @@ export default function TarifsSerrureriePage() {
                     Le plus demandé
                   </span>
                 )}
-                <h3 className="font-bold text-gray-900 mb-2">{service.name}</h3>
+                <h4 className="font-bold text-gray-900 mb-2">{service.name}</h4>
+                <p className="text-3xl font-bold text-joel-violet mb-2">{service.price}</p>
+                <p className="text-gray-500 text-sm">{service.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Installation / Sécurisation */}
+          <h3 className="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">
+            <Shield size={20} className="text-emerald-500" />
+            Installation & Sécurisation
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {servicesInstallation.map((service, i) => (
+              <div
+                key={i}
+                className={`relative bg-gray-50 rounded-xl p-6 border-2 ${
+                  service.popular ? "border-emerald-500 shadow-lg" : "border-transparent"
+                }`}
+              >
+                {service.popular && (
+                  <span className="absolute -top-3 left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    Populaire
+                  </span>
+                )}
+                <h4 className="font-bold text-gray-900 mb-2">{service.name}</h4>
+                <p className="text-3xl font-bold text-joel-violet mb-2">{service.price}</p>
+                <p className="text-gray-500 text-sm">{service.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Autres services */}
+          <h3 className="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">
+            <Star size={20} className="text-amber-500" />
+            Autres services
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {servicesAutres.map((service, i) => (
+              <div
+                key={i}
+                className="relative bg-gray-50 rounded-xl p-6 border-2 border-transparent"
+              >
+                <h4 className="font-bold text-gray-900 mb-2">{service.name}</h4>
                 <p className="text-3xl font-bold text-joel-violet mb-2">{service.price}</p>
                 <p className="text-gray-500 text-sm">{service.description}</p>
               </div>

@@ -24,11 +24,12 @@ const footerLinks = {
   ],
   serrurerie: [
     { href: "/serrurerie", label: "Serrurerie", isMain: true },
-    { href: "/serrurier/ouverture-sans-percage", label: "Ouverture porte claquée" },
-    { href: "/serrurier/ouverture-avec-percage", label: "Ouverture avec perçage" },
-    { href: "/serrurier/perte-cles", label: "Perte de clés" },
-    { href: "/serrurier/cle-cassee-serrure", label: "Clé cassée" },
-    { href: "/serrurier/blindage-porte", label: "Blindage porte" },
+    { href: "/serrurerie/tarifs", label: "Tarifs serrurier" },
+    { href: "/serrurier/ouverture-sans-percage", label: "Porte claquée" },
+    { href: "/serrurier/serrure-3-points", label: "Serrure 3 points" },
+    { href: "/serrurier/cylindre-haute-securite", label: "Cylindre A2P" },
+    { href: "/serrurier/porte-blindee", label: "Porte blindée" },
+    { href: "/serrurier/reproduction-cles", label: "Double de clés" },
   ],
   company: [
     { href: "/stop-arnaques", label: "Anti-arnaque" },

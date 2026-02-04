@@ -10,6 +10,14 @@ const BASE_URL = "https://monjoel.fr";
 const COMPANY_NAME = "Joël";
 const COMPANY_PHONE = "+33141691008";
 const COMPANY_EMAIL = "contact@monjoel.com";
+const COMPANY_ADDRESS = "45 Rue Boursault, 75017 Paris";
+
+// Prix de base par métier pour Schema
+const BASE_PRICES: Record<string, number> = {
+  serrurier: 89,
+  plombier: 79,
+  electricien: 59,
+};
 
 // ============================================
 // TYPES SCHEMA.ORG
@@ -162,18 +170,22 @@ export function generateLocalBusinessSchema(
     electricien: "Electrician",
   };
 
+  const basePrice = BASE_PRICES[trade.slug] || 79;
+  
   return {
     "@context": "https://schema.org",
     "@type": businessTypes[trade.slug] || "LocalBusiness",
     name: `${COMPANY_NAME} - ${trade.name} à ${city.name}`,
-    description: `${trade.name} à ${city.name}. Intervention rapide 24h/24. Prix fixe garanti. Artisans certifiés.`,
+    description: `${trade.name} urgence à ${city.name}. Intervention 20 min, prix fixe dès ${basePrice}€. Sans majoration 24h/24. Zéro arnaque, artisans certifiés.`,
     url: `${BASE_URL}/${trade.slug}/${city.slug}`,
     telephone: COMPANY_PHONE,
     email: COMPANY_EMAIL,
-    priceRange: "€€",
-    image: `${BASE_URL}/logo.png`,
+    priceRange: `€€ (dès ${basePrice}€)`,
+    image: `${BASE_URL}/logo.webp`,
+    logo: `${BASE_URL}/logo.webp`,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "45 Rue Boursault",
       addressLocality: city.name,
       addressRegion: city.departmentName,
       postalCode: city.postalCodes[0],
@@ -186,13 +198,28 @@ export function generateLocalBusinessSchema(
         longitude: city.coordinates.lng,
       },
     }),
-    areaServed: {
-      "@type": "City",
-      name: city.name,
-      containedIn: {
+    areaServed: [
+      {
+        "@type": "City",
+        name: city.name,
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: city.departmentName,
+      },
+      {
         "@type": "AdministrativeArea",
         name: "Île-de-France",
       },
+    ],
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: city.coordinates?.lat || 48.8566,
+        longitude: city.coordinates?.lng || 2.3522,
+      },
+      geoRadius: "30000",
     },
     openingHoursSpecification: [
       {
@@ -212,14 +239,18 @@ export function generateLocalBusinessSchema(
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "2847",
+      ratingValue: "4.9",
+      reviewCount: "947",
       bestRating: "5",
+      worstRating: "1",
     },
+    slogan: "Prix fixe, zéro arnaque",
+    paymentAccepted: "Cash, Credit Card, Debit Card",
+    currenciesAccepted: "EUR",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `Services ${trade.name}`,
-      itemListElement: trade.services.map((service) => ({
+      itemListElement: trade.services.slice(0, 8).map((service) => ({
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
@@ -231,8 +262,23 @@ export function generateLocalBusinessSchema(
           price: service.priceFrom,
           priceCurrency: "EUR",
           priceType: "MinimumPrice",
+          valueAddedTaxIncluded: true,
         },
+        availability: "https://schema.org/InStock",
+        validFrom: new Date().toISOString().split('T')[0],
       })),
+    },
+    potentialAction: {
+      "@type": "OrderAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `tel:${COMPANY_PHONE}`,
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+        ],
+      },
+      deliveryMethod: "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
     },
   };
 }

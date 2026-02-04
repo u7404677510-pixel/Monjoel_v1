@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, BookOpen, Euro } from "lucide-react";
 import Link from "next/link";
 import { City, getNearbyCities } from "@/lib/data/cities-idf";
 import { Trade } from "@/lib/data/services-definition";
@@ -11,8 +11,26 @@ interface NearbyAreasProps {
   city: City;
 }
 
+// Articles de blog par métier pour le maillage interne
+const relatedArticles: Record<string, { href: string; label: string }[]> = {
+  serrurier: [
+    { href: "/blog/comment-ouvrir-porte-claquee", label: "Comment ouvrir une porte claquée ?" },
+    { href: "/blog/prix-serrurier-tarifs-2026", label: "Prix serrurier 2026" },
+    { href: "/blog/eviter-arnaques-serrurier", label: "Éviter les arnaques serrurier" },
+    { href: "/serrurerie/tarifs", label: "Nos tarifs serrurerie" },
+  ],
+  plombier: [
+    { href: "/blog/fuite-eau-nuit-que-faire", label: "Que faire en cas de fuite ?" },
+    { href: "/blog/arnaques-plomberie-comment-eviter", label: "Éviter les arnaques plomberie" },
+  ],
+  electricien: [
+    { href: "/blog/disjoncteur-saute-causes-solutions", label: "Disjoncteur qui saute : solutions" },
+  ],
+};
+
 export default function NearbyAreas({ trade, city }: NearbyAreasProps) {
   const nearbyCities = getNearbyCities(city, 12);
+  const articles = relatedArticles[trade.slug] || [];
   
   return (
     <section className="py-20 bg-gray-50">
@@ -64,6 +82,37 @@ export default function NearbyAreas({ trade, city }: NearbyAreasProps) {
             </motion.div>
           ))}
         </div>
+
+        {/* Liens utiles - Maillage interne */}
+        {articles.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-white rounded-2xl p-6 border border-gray-200"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <BookOpen size={20} className="text-joel-violet" />
+              <h3 className="font-semibold text-gray-900">À lire aussi</h3>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {articles.map((article) => (
+                <Link
+                  key={article.href}
+                  href={article.href}
+                  className="flex items-center gap-2 text-gray-600 hover:text-joel-violet text-sm transition-colors"
+                >
+                  {article.href.includes("tarifs") ? (
+                    <Euro size={14} className="text-joel-violet" />
+                  ) : (
+                    <ArrowRight size={14} />
+                  )}
+                  <span>{article.label}</span>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* Department link */}
         <motion.div
