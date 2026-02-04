@@ -1,17 +1,11 @@
 import { Metadata } from "next";
-import PlomberieHero from "@/components/sections/PlomberieHero";
-import PlomberieServicesGrid from "@/components/sections/PlomberieServicesGrid";
-import ServiceProcess from "@/components/sections/ServiceProcess";
-import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
-import Testimonials from "@/components/sections/Testimonials";
-import ServiceFAQ from "@/components/sections/ServiceFAQ";
-import ServiceZones from "@/components/sections/ServiceZones";
-import FinalCTA from "@/components/sections/FinalCTA";
+import { Suspense } from "react";
 import ClientSchema from "@/components/ClientSchema";
+import { ABTestWrapper, LoadingSkeleton } from "@/components/ab";
 
 export const metadata: Metadata = {
-  title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-  description: "Plombier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Fuite d'eau, WC bouchés, chauffe-eau. Appelez le 01 41 69 10 08.",
+  title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe 79€ | Joël",
+  description: "Plombier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 20 minutes, prix garanti dès 79€ TTC. Zéro arnaque, zéro majoration 24h/24. Appelez le 01 41 69 10 08.",
   keywords: [
     "plombier urgence Paris",
     "plombier Île-de-France",
@@ -21,7 +15,9 @@ export const metadata: Metadata = {
     "plombier pas cher",
     "plombier 24h/24",
     "dépannage plomberie",
-    "dégât des eaux"
+    "dégât des eaux",
+    "plombier prix fixe",
+    "plombier sans arnaque"
   ],
   alternates: {
     canonical: "https://monjoel.fr/plomberie",
@@ -31,8 +27,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr/plomberie",
     siteName: "Joël",
-    title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-    description: "Plombier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 41 69 10 08.",
+    title: "Plombier d'urgence Paris | Prix Fixe 79€ | Intervention 20 min",
+    description: "Plombier d'urgence à prix fixe. Intervention en 20 min, zéro arnaque. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -44,21 +40,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Plombier d'urgence Paris & Île-de-France | Joël",
-    description: "Plombier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
+    title: "Plombier d'urgence Paris | Prix Fixe 79€ | Joël",
+    description: "Plombier d'urgence à prix fixe. Intervention en 20 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
 
-// Schema.org LocalBusiness pour Google Ads detection
+// Schema.org LocalBusiness optimisé pour Google Ads
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "Plumber",
   "name": "Joël - Plombier d'urgence Paris & Île-de-France",
-  "description": "Service de plomberie d'urgence à prix fixe. Intervention en 30 minutes sur Paris et toute l'Île-de-France.",
+  "description": "Service de plomberie d'urgence à prix fixe. Intervention en 20 minutes sur Paris et toute l'Île-de-France. Zéro arnaque, zéro majoration.",
   "url": "https://monjoel.fr/plomberie",
   "telephone": "+33141691008",
   "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "45 Rue Boursault",
@@ -90,50 +88,58 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "847"
+    "reviewCount": "947",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Plomberie",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fuite d'eau",
+          "description": "Réparation durable"
+        },
+        "price": "89",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "WC bouchés",
+          "description": "Débouchage rapide"
+        },
+        "price": "79",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dégât des eaux",
+          "description": "Attestation assurance"
+        },
+        "price": "129",
+        "priceCurrency": "EUR"
+      }
+    ]
   }
 };
-
-const plomberieFAQs = [
-  {
-    question: "Quel est le prix moyen d'une intervention de plomberie ?",
-    answer: "Le prix moyen d'une intervention de plomberie avec Joël est de 129€. Ce prix est fixe et annoncé avant l'intervention, vous n'aurez aucune mauvaise surprise.",
-  },
-  {
-    question: "Combien de temps faut-il pour qu'un plombier arrive ?",
-    answer: "Nos plombiers arrivent en moyenne en 30 minutes. Nous travaillons avec un réseau d'artisans locaux pour garantir une intervention rapide.",
-  },
-  {
-    question: "Intervenez-vous le week-end et les jours fériés ?",
-    answer: "Oui, nos plombiers sont disponibles 24h/24, 7j/7, y compris les week-ends et jours fériés. Le prix reste le même, sans supplément.",
-  },
-  {
-    question: "Comment fonctionne le paiement ?",
-    answer: "Vous recevez un devis instantané avec un prix fixe. Vous payez en ligne de manière sécurisée avant l'intervention. L'artisan intervient ensuite chez vous.",
-  },
-  {
-    question: "Que faire en cas de fuite d'eau urgente ?",
-    answer: "Coupez immédiatement l'arrivée d'eau générale, puis contactez-nous. Un plombier sera chez vous rapidement pour stopper la fuite et effectuer les réparations nécessaires.",
-  },
-];
 
 export default function PlomberiePage() {
   return (
     <>
-      {/* Schema.org pour Google Ads phone detection */}
+      {/* Schema.org pour Google Ads + Rich Snippets */}
       <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
-      <PlomberieHero
-        title="Plombier d'urgence à prix fixe"
-        subtitle="Plomberie"
-        description="Intervention en 30 min • Prix Fixes & Transparents • Agréé Assurances"
-      />
-      <PlomberieServicesGrid />
-      <ServiceProcess />
-      <ServiceGuarantees />
-      <Testimonials />
-      <ServiceZones />
-      <ServiceFAQ faqs={plomberieFAQs} serviceName="Plomberie" />
-      <FinalCTA />
+      
+      {/* A/B Test - Variantes A, B, C */}
+      <Suspense fallback={<LoadingSkeleton />}>
+        <ABTestWrapper trade="plomberie" />
+      </Suspense>
     </>
   );
 }

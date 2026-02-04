@@ -1,17 +1,11 @@
 import { Metadata } from "next";
-import SerrurerieHero from "@/components/sections/SerrurerieHero";
-import SerrurerieServicesGrid from "@/components/sections/SerrurerieServicesGrid";
-import ServiceProcess from "@/components/sections/ServiceProcess";
-import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
-import Testimonials from "@/components/sections/Testimonials";
-import ServiceFAQ from "@/components/sections/ServiceFAQ";
-import ServiceZones from "@/components/sections/ServiceZones";
-import FinalCTA from "@/components/sections/FinalCTA";
+import { Suspense } from "react";
 import ClientSchema from "@/components/ClientSchema";
+import { ABTestWrapper, LoadingSkeleton } from "@/components/ab";
 
 export const metadata: Metadata = {
-  title: "Serrurier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-  description: "Serrurier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Ouverture de porte, changement de serrure, blindage. Appelez le 01 41 69 10 08.",
+  title: "Serrurier d'urgence Paris & Île-de-France | Prix Fixe 89€ | Joël",
+  description: "Serrurier d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 20 minutes, prix garanti dès 89€ TTC. Zéro arnaque, zéro majoration 24h/24. Appelez le 01 41 69 10 08.",
   keywords: [
     "serrurier urgence Paris",
     "serrurier Île-de-France",
@@ -21,7 +15,9 @@ export const metadata: Metadata = {
     "serrurier 24h/24",
     "dépannage serrurerie",
     "porte claquée",
-    "serrure bloquée"
+    "serrure bloquée",
+    "serrurier prix fixe",
+    "serrurier sans arnaque"
   ],
   alternates: {
     canonical: "https://monjoel.fr/serrurerie",
@@ -31,8 +27,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr/serrurerie",
     siteName: "Joël",
-    title: "Serrurier d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 41 69 10 08.",
+    title: "Serrurier d'urgence Paris | Prix Fixe 89€ | Intervention 20 min",
+    description: "Serrurier d'urgence à prix fixe. Intervention en 20 min, zéro arnaque. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -44,21 +40,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Serrurier d'urgence Paris & Île-de-France | Joël",
-    description: "Serrurier d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
+    title: "Serrurier d'urgence Paris | Prix Fixe 89€ | Joël",
+    description: "Serrurier d'urgence à prix fixe. Intervention en 20 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
 
-// Schema.org LocalBusiness pour Google Ads detection
+// Schema.org LocalBusiness optimisé pour Google Ads
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "Locksmith",
   "name": "Joël - Serrurier d'urgence Paris & Île-de-France",
-  "description": "Service de serrurerie d'urgence à prix fixe. Intervention en 30 minutes sur Paris et toute l'Île-de-France.",
+  "description": "Service de serrurerie d'urgence à prix fixe. Intervention en 20 minutes sur Paris et toute l'Île-de-France. Zéro arnaque, zéro majoration.",
   "url": "https://monjoel.fr/serrurerie",
   "telephone": "+33141691008",
   "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "45 Rue Boursault",
@@ -90,50 +88,58 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "947"
+    "reviewCount": "947",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Serrurerie",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ouverture porte claquée",
+          "description": "Ouverture sans perçage"
+        },
+        "price": "89",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ouverture avec perçage",
+          "description": "Cylindre à remplacer"
+        },
+        "price": "150",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Changement cylindre",
+          "description": "Fourniture incluse"
+        },
+        "price": "120",
+        "priceCurrency": "EUR"
+      }
+    ]
   }
 };
-
-const serrurerieFAQs = [
-  {
-    question: "Quel est le prix moyen pour ouvrir une porte claquée ?",
-    answer: "Le prix moyen d'une ouverture de porte avec Joël est de 119€. Ce prix est fixe et garanti, sans frais cachés. Méfiez-vous des serruriers qui annoncent des prix très bas pour ensuite surfacturer.",
-  },
-  {
-    question: "Le serrurier va-t-il abîmer ma porte ?",
-    answer: "Nos serruriers utilisent des techniques non destructives dans la grande majorité des cas. Si un perçage est nécessaire (rare), vous en serez informé avant et c'est inclus dans le devis.",
-  },
-  {
-    question: "Combien de temps pour ouvrir une porte claquée ?",
-    answer: "Une ouverture de porte simple prend généralement 5 à 15 minutes. Pour une porte blindée ou une serrure haute sécurité, cela peut prendre un peu plus de temps.",
-  },
-  {
-    question: "Puis-je avoir une facture pour mon assurance ?",
-    answer: "Oui, vous recevez automatiquement une facture détaillée après l'intervention. Cette facture est acceptée par les assurances pour un remboursement.",
-  },
-  {
-    question: "Intervenez-vous après une effraction ?",
-    answer: "Oui, nous intervenons rapidement après une effraction pour sécuriser votre domicile : changement de serrure, renforcement de porte, installation de verrous supplémentaires.",
-  },
-];
 
 export default function SerrureriePage() {
   return (
     <>
-      {/* Schema.org pour Google Ads phone detection */}
+      {/* Schema.org pour Google Ads + Rich Snippets */}
       <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
-      <SerrurerieHero
-        title="Serrurier d'urgence à prix fixe"
-        subtitle="Serrurerie"
-        description="Intervention en 30 min • Prix Fixes & Transparents • Agréé Assurances"
-      />
-      <SerrurerieServicesGrid />
-      <ServiceProcess />
-      <ServiceGuarantees />
-      <Testimonials />
-      <ServiceZones />
-      <ServiceFAQ faqs={serrurerieFAQs} serviceName="Serrurerie" />
-      <FinalCTA />
+      
+      {/* A/B Test - Variantes A, B, C */}
+      <Suspense fallback={<LoadingSkeleton />}>
+        <ABTestWrapper trade="serrurerie" />
+      </Suspense>
     </>
   );
 }

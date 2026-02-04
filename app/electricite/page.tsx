@@ -1,17 +1,11 @@
 import { Metadata } from "next";
-import ElectriciteHero from "@/components/sections/ElectriciteHero";
-import ElectriciteServicesGrid from "@/components/sections/ElectriciteServicesGrid";
-import ServiceProcess from "@/components/sections/ServiceProcess";
-import ServiceGuarantees from "@/components/sections/ServiceGuarantees";
-import Testimonials from "@/components/sections/Testimonials";
-import ServiceFAQ from "@/components/sections/ServiceFAQ";
-import ServiceZones from "@/components/sections/ServiceZones";
-import FinalCTA from "@/components/sections/FinalCTA";
+import { Suspense } from "react";
 import ClientSchema from "@/components/ClientSchema";
+import { ABTestWrapper, LoadingSkeleton } from "@/components/ab";
 
 export const metadata: Metadata = {
-  title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-  description: "Électricien d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 30 minutes, devis instantané, artisans vérifiés. Panne électrique, disjoncteur, tableau électrique. Appelez le 01 41 69 10 08.",
+  title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe 59€ | Joël",
+  description: "Électricien d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 20 minutes, prix garanti dès 59€ TTC. Zéro arnaque, zéro majoration 24h/24. Appelez le 01 41 69 10 08.",
   keywords: [
     "électricien urgence Paris",
     "électricien Île-de-France",
@@ -21,7 +15,9 @@ export const metadata: Metadata = {
     "électricien pas cher",
     "électricien 24h/24",
     "dépannage électricité",
-    "court-circuit"
+    "court-circuit",
+    "électricien prix fixe",
+    "électricien sans arnaque"
   ],
   alternates: {
     canonical: "https://monjoel.fr/electricite",
@@ -31,8 +27,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr/electricite",
     siteName: "Joël",
-    title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe | Joël",
-    description: "Électricien d'urgence à prix fixe. Intervention en 30 min, devis instantané. Appelez le 01 41 69 10 08.",
+    title: "Électricien d'urgence Paris | Prix Fixe 59€ | Intervention 20 min",
+    description: "Électricien d'urgence à prix fixe. Intervention en 20 min, zéro arnaque. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -44,21 +40,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Électricien d'urgence Paris & Île-de-France | Joël",
-    description: "Électricien d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
+    title: "Électricien d'urgence Paris | Prix Fixe 59€ | Joël",
+    description: "Électricien d'urgence à prix fixe. Intervention en 20 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
 
-// Schema.org LocalBusiness pour Google Ads detection
+// Schema.org LocalBusiness optimisé pour Google Ads
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "Electrician",
   "name": "Joël - Électricien d'urgence Paris & Île-de-France",
-  "description": "Service d'électricité d'urgence à prix fixe. Intervention en 30 minutes sur Paris et toute l'Île-de-France.",
+  "description": "Service d'électricité d'urgence à prix fixe. Intervention en 20 minutes sur Paris et toute l'Île-de-France. Zéro arnaque, zéro majoration.",
   "url": "https://monjoel.fr/electricite",
   "telephone": "+33141691008",
   "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "45 Rue Boursault",
@@ -90,50 +88,58 @@ const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "847"
+    "reviewCount": "947",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Électricité",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Panne électrique",
+          "description": "Rétablissement rapide"
+        },
+        "price": "79",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Disjoncteur qui saute",
+          "description": "Diagnostic + réparation"
+        },
+        "price": "69",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tableau électrique",
+          "description": "Dépannage ou remplacement"
+        },
+        "price": "149",
+        "priceCurrency": "EUR"
+      }
+    ]
   }
 };
-
-const electriciteFAQs = [
-  {
-    question: "Quel est le prix moyen d'une intervention électrique ?",
-    answer: "Le prix moyen d'une intervention électrique avec Joël est de 109€. Ce prix est fixe et garanti, annoncé avant toute intervention.",
-  },
-  {
-    question: "Que faire si mon disjoncteur saute régulièrement ?",
-    answer: "Un disjoncteur qui saute peut indiquer une surcharge ou un court-circuit. Ne tentez pas de le réparer vous-même, contactez-nous pour un diagnostic sécurisé par un électricien qualifié.",
-  },
-  {
-    question: "Vos électriciens sont-ils certifiés ?",
-    answer: "Oui, tous nos électriciens sont certifiés et disposent des habilitations électriques nécessaires (BR, B1V, B2V). Leur identité et qualifications sont vérifiées.",
-  },
-  {
-    question: "Intervenez-vous pour une mise aux normes ?",
-    answer: "Oui, nos électriciens peuvent effectuer des mises aux normes de votre installation électrique. Un devis détaillé vous sera fourni après diagnostic.",
-  },
-  {
-    question: "Combien de temps dure une intervention électrique ?",
-    answer: "La durée dépend du problème. Une panne simple prend généralement 30 minutes à 1 heure. Pour des travaux plus importants, l'électricien vous informera du temps estimé.",
-  },
-];
 
 export default function ElectricitePage() {
   return (
     <>
-      {/* Schema.org pour Google Ads phone detection */}
+      {/* Schema.org pour Google Ads + Rich Snippets */}
       <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
-      <ElectriciteHero
-        title="Électricien d'urgence à prix fixe"
-        subtitle="Électricité"
-        description="Intervention en 30 min • Prix Fixes & Transparents • Agréé Assurances"
-      />
-      <ElectriciteServicesGrid />
-      <ServiceProcess />
-      <ServiceGuarantees />
-      <Testimonials />
-      <ServiceZones />
-      <ServiceFAQ faqs={electriciteFAQs} serviceName="Électricité" />
-      <FinalCTA />
+      
+      {/* A/B Test - Variantes A, B, C */}
+      <Suspense fallback={<LoadingSkeleton />}>
+        <ABTestWrapper trade="electricite" />
+      </Suspense>
     </>
   );
 }
