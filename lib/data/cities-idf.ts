@@ -1,7 +1,10 @@
 /**
  * Base de données des villes d'Île-de-France
- * ~1300 communes réparties sur 8 départements
+ * ~970 communes réparties sur 8 départements
+ * Mise à jour: Février 2026
  */
+
+import { extraCities } from "../../scripts/cities-extra";
 
 export interface City {
   slug: string;
@@ -399,6 +402,7 @@ export const citiesIDF: City[] = [
   ...yvelines,
   ...essonne,
   ...seinEtMarne,
+  ...(extraCities as City[]),
 ];
 
 // ============================================
