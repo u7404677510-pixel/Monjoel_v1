@@ -50,9 +50,18 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
     <main className="min-h-screen">
       <TestHeader badge="SERRURIER DE CONFIANCE" badgeColor="emerald" variant="rassurant" />
 
-      {/* NOUVEAU HERO: Positif d'abord avec photo artisan */}
-      <section className="relative min-h-screen flex items-center bg-gray-50 pt-[56px] md:pt-[64px] 3xl:pt-[72px]">
-        <div className="max-w-7xl 3xl:max-w-8xl 4xl:max-w-9xl 5xl:max-w-10xl mx-auto px-4 sm:px-6 3xl:px-8 5xl:px-12 py-12 3xl:py-16 5xl:py-20 w-full">
+      {/* NOUVEAU HERO: Positif d'abord avec photo artisan + fond mobile */}
+      <section className="relative min-h-screen flex items-center pt-[56px] md:pt-[64px] 3xl:pt-[72px]">
+        {/* Image de fond mobile */}
+        <div 
+          className="absolute inset-0 md:hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${config.heroImage})` }}
+        />
+        <div className="absolute inset-0 md:hidden bg-white/90" />
+        {/* Fond desktop */}
+        <div className="absolute inset-0 hidden md:block bg-gray-50" />
+        
+        <div className="relative z-10 max-w-7xl 3xl:max-w-8xl 4xl:max-w-9xl 5xl:max-w-10xl mx-auto px-4 sm:px-6 3xl:px-8 5xl:px-12 py-12 3xl:py-16 5xl:py-20 w-full">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 3xl:gap-16 5xl:gap-24 items-center">
             {/* Photo artisan - EN PREMIER sur mobile */}
             <div className="relative h-[350px] md:h-[500px] 3xl:h-[600px] 5xl:h-[750px] rounded-2xl 3xl:rounded-3xl overflow-hidden shadow-2xl order-first">
