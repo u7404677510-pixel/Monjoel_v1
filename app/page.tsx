@@ -70,10 +70,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrueScopePreview />
       <HowItWorks />
       <ServicesExplorer />
       <Advantages />
-      <TrueScopePreview />
       <StopArnaquesPreview />
       <FinalCTA />
     </>

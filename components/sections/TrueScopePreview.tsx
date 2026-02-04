@@ -24,11 +24,15 @@ export default function TrueScopePreview() {
           </div>
           
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Obtenez votre devis en 60 secondes<span className="text-joel-yellow">.</span>
+            Calculez votre devis en 60 secondes<span className="text-joel-yellow">.</span>
           </h2>
           
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            TrueScope analyse votre problème et vous donne le prix exact<span className="text-joel-yellow">.</span> Sans surprise<span className="text-joel-yellow">.</span>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-2">
+            Notre IA analyse votre problème et vous donne le prix exact<span className="text-joel-yellow">.</span> Sans surprise<span className="text-joel-yellow">.</span>
+          </p>
+          
+          <p className="text-base text-gray-500">
+            Gratuit, instantané, sans engagement<span className="text-joel-yellow">.</span>
           </p>
         </motion.div>
 
@@ -41,7 +45,7 @@ export default function TrueScopePreview() {
             href="/truescope"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
-            <span>Tester TrueScope</span>
+            <span>Calculer mon devis</span>
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
