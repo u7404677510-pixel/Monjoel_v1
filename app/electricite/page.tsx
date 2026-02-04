@@ -4,8 +4,8 @@ import ClientSchema from "@/components/ClientSchema";
 import { ABTestWrapper, LoadingSkeleton } from "@/components/ab";
 
 export const metadata: Metadata = {
-  title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe 59€ | Joël",
-  description: "Électricien d'urgence à prix fixe sur Paris et toute l'Île-de-France. Intervention en 20 minutes, prix garanti dès 59€ TTC. Zéro arnaque, zéro majoration 24h/24. Appelez le 01 41 69 10 08.",
+  title: "Électricien d'urgence Paris & Île-de-France | Prix Fixe 59€",
+  description: "Électricien d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Panne, disjoncteur, tableau. Intervention 20 min, dès 59€. 01 41 69 10 08",
   keywords: [
     "électricien urgence Paris",
     "électricien Île-de-France",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Électricien d'urgence Paris | Prix Fixe 59€ | Joël",
+    title: "Électricien d'urgence Paris | Prix Fixe 59€ | Intervention 20 min",
     description: "Électricien d'urgence à prix fixe. Intervention en 20 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },

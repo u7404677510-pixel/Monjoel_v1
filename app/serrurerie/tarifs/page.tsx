@@ -4,7 +4,7 @@ import { Phone, Check, AlertTriangle, Clock, Shield, Star, ArrowRight } from "lu
 import ClientSchema from "@/components/ClientSchema";
 
 export const metadata: Metadata = {
-  title: "Tarifs Serrurier Paris 2026 | Prix Réels & Fixes | Joël",
+  title: "Tarifs Serrurier Paris 2026 | Prix Réels & Fixes",
   description: "Découvrez nos vrais tarifs serrurier à Paris. Prix fixes garantis : ouverture porte 89€, changement cylindre 120€, ouverture avec perçage 150€. Sans majoration 24h/24. Zéro arnaque.",
   keywords: [
     "tarif serrurier paris",

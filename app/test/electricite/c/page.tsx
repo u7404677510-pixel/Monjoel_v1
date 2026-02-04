@@ -3,7 +3,7 @@ import { TradeVarianteC } from "@/components/ab";
 import { tradeConfigs } from "@/lib/ab-test/config";
 
 export const metadata: Metadata = {
-  title: "[TEST] Variante C - Électricien anti-arnaque | Joël",
+  title: "[TEST] Variante C - Électricien anti-arnaque",
   description: "Page de test - Variante C (Le Rassurant) pour l'électricité",
   robots: { index: false, follow: false },
 };
