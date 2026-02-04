@@ -7,12 +7,7 @@ import { TradeType, VariantType, abTestConfigs } from "./config";
 const COOKIE_NAME = "joel_ab_variant";
 const COOKIE_EXPIRY_DAYS = 30;
 
-// Déclaration pour TypeScript
-declare global {
-  interface Window {
-    dataLayer?: Record<string, unknown>[];
-  }
-}
+// Note: dataLayer est déclaré dans types/global.d.ts
 
 /**
  * Récupère ou assigne une variante pour un métier donné
