@@ -483,7 +483,7 @@ Chez Joël, nous avons fait de la transparence notre marque de fabrique :
     readTime: 8,
     publishedAt: "2026-02-01",
     keywords: ["porte claquée", "comment ouvrir porte claquée", "ouvrir porte sans clé", "porte fermée clé intérieur"],
-    content: \`
+    content: `
 ## Porte claquée : les 7 méthodes pour l'ouvrir
 
 Vous avez claqué votre porte et vos clés sont restées à l'intérieur ? Pas de panique. Voici toutes les solutions, de la plus simple à l'appel d'un professionnel.
@@ -576,7 +576,7 @@ Si c'est la nuit ou le week-end, les tarifs peuvent être majorés. Chez **Joël
 Une porte claquée n'est pas une fatalité coûteuse. Essayez d'abord les méthodes simples, et si vous devez appeler un serrurier, choisissez-en un qui annonce son prix à l'avance.
 
 📞 **Porte claquée ?** Appelez le 01 41 69 10 08 - Ouverture dès 89€, intervention 20 min
-    \`
+    `
   },
   {
     slug: "changer-serrure-guide-complet",
@@ -587,7 +587,7 @@ Une porte claquée n'est pas une fatalité coûteuse. Essayez d'abord les métho
     readTime: 10,
     publishedAt: "2026-02-02",
     keywords: ["changer serrure", "remplacer serrure", "changer cylindre", "changer barillet", "serrure porte entrée"],
-    content: \`
+    content: `
 ## Changer une serrure : ce que vous pouvez faire vous-même
 
 Changer une serrure n'est pas toujours une tâche complexe. Selon le type de changement, vous pouvez économiser le coût de la main-d'œuvre.
@@ -693,7 +693,7 @@ C'est plus complexe qu'un simple cylindre.
 Changer un cylindre est accessible à tous. Pour une serrure complète ou multipoints, évaluez vos compétences et n'hésitez pas à faire appel à un pro si vous doutez.
 
 📞 **Besoin d'un serrurier ?** Appelez le 01 41 69 10 08 - Changement serrure dès 149€
-    \`
+    `
   },
   {
     slug: "eviter-arnaques-serrurier",
@@ -704,7 +704,7 @@ Changer un cylindre est accessible à tous. Pour une serrure complète ou multip
     readTime: 9,
     publishedAt: "2026-02-03",
     keywords: ["arnaque serrurier", "serrurier malhonnête", "éviter arnaque serrurier", "serrurier escroc"],
-    content: \`
+    content: `
 ## Les arnaques serrurier : un fléau bien réel
 
 Chaque année, des milliers de Français se font arnaquer par de faux serruriers. Voici les techniques les plus courantes et comment vous en protéger.
@@ -808,7 +808,7 @@ Chez Joël, notre modèle repose sur la transparence :
 - 947 avis vérifiés
 
 📞 **Un serrurier de confiance ?** Appelez le 01 41 69 10 08
-    \`
+    `
   },
   {
     slug: "serrure-3-points-vs-5-points",
@@ -819,7 +819,7 @@ Chez Joël, notre modèle repose sur la transparence :
     readTime: 7,
     publishedAt: "2026-02-03",
     keywords: ["serrure 3 points", "serrure 5 points", "serrure multipoints", "serrure 7 points", "sécurité porte"],
-    content: \`
+    content: `
 ## Serrure multipoints : c'est quoi exactement ?
 
 Une serrure multipoints verrouille votre porte à plusieurs endroits simultanément, contrairement à une serrure simple qui ne ferme qu'un point.
@@ -916,7 +916,7 @@ La plupart des assurances demandent :
 **Pour un commerce :** 5 points A2P** minimum
 
 📞 **Besoin d'un conseil personnalisé ?** Appelez le 01 41 69 10 08 - Devis gratuit
-    \`
+    `
   },
   {
     slug: "cylindre-a2p-guide-securite",
@@ -927,7 +927,7 @@ La plupart des assurances demandent :
     readTime: 8,
     publishedAt: "2026-02-04",
     keywords: ["cylindre a2p", "cylindre haute sécurité", "barillet a2p", "serrure anti-effraction", "cylindre sécurisé"],
-    content: \`
+    content: `
 ## C'est quoi un cylindre A2P ?
 
 A2P signifie **Assurance Prévention Protection**. C'est une certification française délivrée par le CNPP qui garantit qu'un cylindre résiste aux tentatives d'effraction.
@@ -1048,7 +1048,7 @@ Certains vendeurs affichent "équivalent A2P" ou "qualité A2P". Ce n'est PAS un
 Un cylindre A2P est un investissement sécurité rentable. Pour un appartement, l'A2P* suffit généralement. Pour une maison ou un rez-de-chaussée, visez l'A2P**.
 
 📞 **Conseil personnalisé ?** Appelez le 01 41 69 10 08 - Cylindre A2P dès 149€ posé
-    \`
+    `
   },
   {
     slug: "serrurier-urgence-nuit-weekend",
@@ -1059,7 +1059,7 @@ Un cylindre A2P est un investissement sécurité rentable. Pour un appartement, 
     readTime: 6,
     publishedAt: "2026-02-04",
     keywords: ["serrurier nuit", "serrurier dimanche", "serrurier 24h/24", "serrurier urgence nuit", "serrurier week-end"],
-    content: \`
+    content: `
 ## Serrurier la nuit : comment ça marche ?
 
 Une porte claquée à 3h du matin, c'est stressant. Voici ce qu'il faut savoir pour trouver un serrurier de confiance en dehors des heures ouvrées.
@@ -1121,7 +1121,7 @@ Notre engagement : le même prix 24h/24, 7j/7.
 Pourquoi ? Parce qu'une urgence ne choisit pas son heure.
 
 📞 **Urgence de nuit ?** Appelez le 01 41 69 10 08 - Même prix 24h/24
-    \`
+    `
   },
   {
     slug: "porte-blindee-guide-achat",
@@ -1132,7 +1132,7 @@ Pourquoi ? Parce qu'une urgence ne choisit pas son heure.
     readTime: 10,
     publishedAt: "2026-02-04",
     keywords: ["porte blindée", "porte blindée prix", "porte blindée A2P", "blindage porte", "bloc porte blindée"],
-    content: \`
+    content: `
 ## Porte blindée ou blindage de porte ?
 
 Avant d'acheter, comprenez la différence :
@@ -1250,7 +1250,7 @@ Vérifiez le règlement de copropriété. Souvent, la face extérieure doit rest
 Une porte blindée est un investissement sécurité durable. Pour un particulier, l'A2P BP1 offre généralement un excellent rapport protection/prix.
 
 📞 **Devis porte blindée ?** Appelez le 01 41 69 10 08 - Installation dès 1490€
-    \`
+    `
   },
   {
     slug: "cle-cassee-serrure-que-faire",
@@ -1261,7 +1261,7 @@ Une porte blindée est un investissement sécurité durable. Pour un particulier
     readTime: 6,
     publishedAt: "2026-02-04",
     keywords: ["clé cassée", "clé cassée serrure", "extraire clé cassée", "clé coincée serrure", "bout de clé serrure"],
-    content: \`
+    content: `
 ## Clé cassée : les premiers réflexes
 
 Votre clé vient de se casser dans la serrure. Pas de panique, voici ce qu'il faut faire.
@@ -1364,7 +1364,7 @@ Parfois, un peu de WD-40 ou huile fine peut aider :
 Une clé cassée n'est pas forcément une urgence coûteuse. Essayez d'abord les méthodes douces. Si ça échoue, un serrurier peut extraire le bout rapidement.
 
 📞 **Clé cassée ?** Appelez le 01 41 69 10 08 - Extraction dès 79€
-    \`
+    `
   },
   {
     slug: "assurance-serrurier-prise-en-charge",
@@ -1375,7 +1375,7 @@ Une clé cassée n'est pas forcément une urgence coûteuse. Essayez d'abord les
     readTime: 7,
     publishedAt: "2026-02-04",
     keywords: ["assurance serrurier", "serrurier pris en charge", "assurance cambriolage", "remboursement serrurier"],
-    content: \`
+    content: `
 ## Assurance habitation et serrurier : ce qu'il faut savoir
 
 Beaucoup de Français ignorent que leur assurance peut couvrir tout ou partie des frais de serrurier. Voici ce qu'il faut savoir.
@@ -1484,7 +1484,7 @@ Toutes nos interventions donnent lieu à une **facture détaillée** :
 Cette facture est acceptée par toutes les assurances.
 
 📞 **Besoin d'une intervention ?** Appelez le 01 41 69 10 08 - Facture assurance fournie
-    \`
+    `
   },
   {
     slug: "serrurier-paris-arrondissements",
@@ -1495,7 +1495,7 @@ Cette facture est acceptée par toutes les assurances.
     readTime: 10,
     publishedAt: "2026-02-04",
     keywords: ["serrurier paris", "serrurier paris 15", "serrurier paris 11", "serrurier paris 18", "serrurier arrondissement"],
-    content: \`
+    content: `
 ## Serrurier à Paris : les spécificités
 
 Paris est une ville dense avec des besoins spécifiques en serrurerie. Voici ce qu'il faut savoir selon votre arrondissement.
@@ -1602,7 +1602,7 @@ Nous intervenons dans **tous les arrondissements** :
 - Disponible **24h/24**
 
 📞 **Serrurier Paris ?** Appelez le 01 41 69 10 08 - 20 min, 89€
-    \`
+    `
   },
 ];
 

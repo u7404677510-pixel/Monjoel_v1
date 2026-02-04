@@ -43,6 +43,7 @@ interface LocalBusiness {
 
 interface PostalAddress {
   "@type": string;
+  streetAddress?: string;
   addressLocality: string;
   addressRegion: string;
   postalCode: string;
@@ -158,11 +159,12 @@ interface ServiceSchema {
 
 /**
  * Génère le schema LocalBusiness pour une page métier/ville
+ * Retourne un objet flexible pour supporter tous les champs Schema.org
  */
 export function generateLocalBusinessSchema(
   trade: Trade,
   city: City
-): LocalBusiness {
+): object {
   // Types Schema.org validés par Google Rich Results
   const businessTypes: Record<string, string> = {
     plombier: "Plumber",
@@ -291,7 +293,7 @@ export function generateDepartmentSchema(
   departmentName: string,
   departmentCode: string,
   services: { name: string; description: string; priceFrom: number }[]
-): LocalBusiness {
+): object {
   // Types Schema.org validés par Google Rich Results
   const businessTypes: Record<string, string> = {
     plombier: "Plumber",
