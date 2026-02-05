@@ -2469,6 +2469,270 @@ Faites appel à un pro si :
 📞 **Canalisation toujours bouchée ?** Appelez le 01 41 69 10 08 - Débouchage dès 99€
     `
   },
+  // ============================================
+  // NOUVEAUX ARTICLES - Scaling Plomberie
+  // ============================================
+  {
+    slug: "evier-bouche-solutions",
+    title: "Évier bouché : 5 solutions efficaces pour le déboucher",
+    excerpt: "Votre évier est bouché ? Découvrez les méthodes simples et efficaces pour déboucher votre évier avant d'appeler un plombier.",
+    metaDescription: "Évier bouché ? 5 solutions efficaces : ventouse, bicarbonate, furet, siphon. Guide pratique pour déboucher votre évier cuisine ou salle de bain.",
+    category: "plomberie",
+    readTime: 6,
+    publishedAt: "2026-02-05",
+    keywords: ["évier bouché", "déboucher évier", "évier cuisine bouché", "évier ne s'écoule pas", "bouchon évier"],
+    content: `
+## Évier bouché : les causes fréquentes
+
+Un évier qui ne s'écoule plus est un problème courant. Avant de paniquer, identifions les causes principales.
+
+### Pourquoi votre évier est bouché ?
+
+**En cuisine :**
+- Accumulation de graisses et huiles
+- Restes alimentaires
+- Marc de café (contrairement aux idées reçues, il bouche !)
+- Calcaire dans les canalisations
+
+**En salle de bain :**
+- Cheveux et poils
+- Savon et dentifrice
+- Petits objets tombés (bouchons, bijoux)
+
+## 5 solutions pour déboucher votre évier
+
+### Solution 1 : L'eau bouillante
+
+**Efficace pour :** Bouchons de graisse légers
+
+1. Faites bouillir 2 litres d'eau
+2. Versez lentement dans l'évier
+3. Attendez 5 minutes
+4. Recommencez si nécessaire
+
+**Attention :** Ne pas utiliser sur des canalisations PVC anciennes (risque de déformation).
+
+### Solution 2 : Bicarbonate + vinaigre
+
+**Efficace pour :** Bouchons organiques
+
+1. Versez 3 cuillères à soupe de bicarbonate dans la bonde
+2. Ajoutez un verre de vinaigre blanc
+3. Laissez agir 20-30 minutes (réaction effervescente)
+4. Rincez à l'eau chaude
+
+**Astuce :** Ajoutez du gros sel pour un effet décapant.
+
+### Solution 3 : La ventouse
+
+**Efficace pour :** Bouchons proches de la bonde
+
+1. Bouchez le trop-plein avec un chiffon humide
+2. Remplissez l'évier de 5 cm d'eau
+3. Placez la ventouse sur la bonde
+4. Effectuez des mouvements de pompage énergiques
+5. Retirez d'un coup sec
+
+### Solution 4 : Le furet manuel
+
+**Efficace pour :** Bouchons plus profonds
+
+1. Insérez le furet dans la bonde
+2. Poussez jusqu'à sentir une résistance
+3. Tournez la manivelle pour accrocher le bouchon
+4. Tirez pour extraire ou poussez pour désagréger
+
+**Prix :** 10-20€ en magasin de bricolage
+
+### Solution 5 : Nettoyer le siphon
+
+**Efficace pour :** Bouchons dans le siphon
+
+1. Placez une bassine sous le siphon
+2. Dévissez le siphon à la main
+3. Videz et nettoyez l'intérieur
+4. Remontez en vérifiant les joints
+
+**Avantage :** Permet aussi de récupérer des objets tombés.
+
+## Quand appeler un plombier ?
+
+Faites appel à un professionnel si :
+- Les méthodes maison ne fonctionnent pas
+- Le bouchon est récurrent
+- Plusieurs évacuations sont bouchées
+- Vous sentez des odeurs d'égout
+
+📞 **Évier toujours bouché ?** Appelez le 01 41 69 10 08 - Débouchage dès 79€
+    `
+  },
+  {
+    slug: "chasse-eau-qui-fuit-reparer",
+    title: "Chasse d'eau qui fuit : comment la réparer soi-même ?",
+    excerpt: "Votre chasse d'eau coule en permanence ? Découvrez comment diagnostiquer et réparer vous-même les problèmes courants.",
+    metaDescription: "Chasse d'eau qui fuit ? Diagnostic et réparation : joint clapet, flotteur, mécanisme. Guide complet pour réparer votre WC sans plombier.",
+    category: "plomberie",
+    readTime: 7,
+    publishedAt: "2026-02-05",
+    keywords: ["chasse eau qui fuit", "réparer chasse eau", "chasse eau coule", "mécanisme wc", "joint chasse eau"],
+    content: `
+## Chasse d'eau qui fuit : pourquoi et comment réparer ?
+
+Une chasse d'eau qui fuit peut gaspiller jusqu'à 100 litres d'eau par jour ! Voici comment diagnostiquer et réparer le problème.
+
+### Les 3 causes principales d'une chasse qui fuit
+
+**1. Le joint de clapet usé**
+- Symptôme : L'eau coule en filet dans la cuvette
+- Cause : Le joint en caoutchouc est durci ou calcifié
+- Solution : Remplacer le joint (2-5€)
+
+**2. Le flotteur mal réglé ou défaillant**
+- Symptôme : L'eau coule par le trop-plein
+- Cause : Flotteur trop haut ou percé
+- Solution : Régler ou remplacer le flotteur
+
+**3. Le mécanisme complet HS**
+- Symptôme : Plusieurs problèmes combinés
+- Cause : Mécanisme vieux de plus de 15 ans
+- Solution : Remplacer le mécanisme complet (15-40€)
+
+## Réparer une chasse d'eau étape par étape
+
+### Étape 1 : Couper l'eau
+
+1. Fermez le robinet d'arrêt (sous ou derrière le WC)
+2. Tirez la chasse pour vider le réservoir
+
+### Étape 2 : Accéder au mécanisme
+
+1. Retirez le couvercle du réservoir
+2. Dévissez le bouton poussoir (tournez à gauche)
+3. Soulevez le couvercle
+
+### Étape 3 : Diagnostiquer
+
+**Test du colorant :**
+1. Mettez quelques gouttes de colorant alimentaire dans le réservoir
+2. Attendez 30 minutes sans tirer la chasse
+3. Si l'eau de la cuvette est colorée → joint de clapet HS
+
+**Test du flotteur :**
+1. Soulevez le flotteur à la main
+2. Si l'eau s'arrête de couler → réglage ou remplacement du flotteur
+
+### Étape 4 : Réparer
+
+**Remplacer le joint de clapet :**
+1. Retirez le mécanisme (tournez à gauche d'un quart de tour)
+2. Enlevez l'ancien joint
+3. Nettoyez le siège
+4. Posez le nouveau joint
+5. Remontez le mécanisme
+
+**Régler le flotteur :**
+1. Abaissez le flotteur de 1-2 cm
+2. Serrez la vis de réglage
+3. Vérifiez que l'eau s'arrête 2 cm sous le trop-plein
+
+## Quand remplacer le mécanisme complet ?
+
+Optez pour un remplacement complet si :
+- Le mécanisme a plus de 15 ans
+- Plusieurs pièces sont défaillantes
+- Les réparations n'ont pas fonctionné
+- Vous voulez passer à un mécanisme économiseur d'eau
+
+**Prix d'un mécanisme :**
+- Entrée de gamme : 15-25€
+- Milieu de gamme (Geberit) : 30-50€
+- Haut de gamme (double chasse) : 50-80€
+
+📞 **Chasse d'eau récalcitrante ?** Appelez le 01 41 69 10 08 - Réparation dès 69€
+    `
+  },
+  {
+    slug: "groupe-securite-chauffe-eau-fuite",
+    title: "Groupe de sécurité qui fuit : causes et solutions",
+    excerpt: "Votre groupe de sécurité coule en permanence ? Découvrez quand c'est normal, quand c'est un problème, et comment le résoudre.",
+    metaDescription: "Groupe de sécurité chauffe-eau qui fuit ? Normal ou problème ? Causes, diagnostic et solutions. Quand le remplacer ? Guide complet.",
+    category: "plomberie",
+    readTime: 6,
+    publishedAt: "2026-02-05",
+    keywords: ["groupe sécurité fuit", "groupe sécurité chauffe-eau", "fuite cumulus", "remplacement groupe sécurité"],
+    content: `
+## Groupe de sécurité : fuite normale ou problème ?
+
+Le groupe de sécurité est une pièce essentielle de votre chauffe-eau. Il régule la pression et évacue l'excès d'eau pendant la chauffe. Mais quand s'inquiéter d'une fuite ?
+
+### Fuite normale vs anormale
+
+**C'est NORMAL si :**
+- Le groupe goutte pendant la chauffe (quelques gouttes)
+- L'eau s'écoule dans le siphon (jusqu'à 3L par chauffe)
+- Le groupe a été purgé récemment
+
+**C'est un PROBLÈME si :**
+- Le groupe coule en permanence (même hors chauffe)
+- L'eau coule en filet continu
+- Vous entendez un sifflement
+- La pression d'eau a baissé
+
+### Les causes d'un groupe de sécurité qui fuit trop
+
+**1. Pression d'eau trop élevée**
+- Cause : Pression réseau > 4 bars
+- Solution : Installer un réducteur de pression
+
+**2. Groupe entartré**
+- Cause : Eau calcaire, groupe jamais purgé
+- Solution : Purger ou remplacer le groupe
+
+**3. Groupe défectueux**
+- Cause : Usure normale (5-7 ans)
+- Solution : Remplacer le groupe
+
+**4. Vase d'expansion défaillant** (si installé)
+- Cause : Membrane percée
+- Solution : Remplacer le vase
+
+### Comment purger le groupe de sécurité ?
+
+La purge régulière (1x/mois) prolonge la durée de vie du groupe.
+
+1. Placez un récipient sous le groupe
+2. Tournez la molette de purge d'un quart de tour
+3. Laissez couler l'eau quelques secondes
+4. Refermez la molette
+
+**Attention :** L'eau peut être très chaude !
+
+### Quand remplacer le groupe de sécurité ?
+
+Remplacez-le si :
+- Il fuit en permanence malgré les purges
+- Il a plus de 5-7 ans
+- La molette de purge est bloquée
+- Il siffle ou fait du bruit
+
+**Prix d'un groupe de sécurité :**
+- Groupe standard : 15-30€
+- Groupe avec siphon intégré : 30-50€
+- Pose par un plombier : 60-90€ (main d'œuvre)
+
+### Étapes du remplacement (pour bricoleurs avertis)
+
+1. Coupez l'eau froide du chauffe-eau
+2. Coupez l'alimentation électrique
+3. Vidangez le chauffe-eau (ou posez un bouchon)
+4. Dévissez l'ancien groupe
+5. Enroulez du téflon sur le nouveau
+6. Vissez le nouveau groupe
+7. Rétablissez l'eau et vérifiez l'étanchéité
+
+📞 **Groupe de sécurité à remplacer ?** Appelez le 01 41 69 10 08 - Remplacement dès 89€
+    `
+  },
 ];
 
 // Helper functions

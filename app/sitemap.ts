@@ -52,6 +52,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/plombier/ballon-eau-chaude",
     "/plombier/chaudiere-panne",
     "/plombier/debouchage-wc",
+    // Plombier - Services supplémentaires scaling
+    "/plombier/evier-bouche",
+    "/plombier/chasse-eau",
+    "/plombier/fuite-tuyau",
+    "/plombier/installation-wc",
+    "/plombier/groupe-securite",
+    "/plombier/lavabo-bouche",
     // Serrurier - Services originaux
     "/serrurier/ouverture-sans-percage",
     "/serrurier/ouverture-avec-percage",
@@ -137,14 +144,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return entries;
 }
 
-// Note: Avec ~970 villes et ~32 services (18 serrurerie + 12 plomberie + 6 électricité), cela génère environ:
+// Note: Avec ~970 villes et ~42 services (18 serrurerie + 18 plomberie + 6 électricité), cela génère environ:
 // - 13 pages statiques (dont tarifs)
-// - 34 pages de services existantes  
+// - 40 pages de services existantes  
 // - 18+ articles de blog (10 serrurerie + 8 plomberie)
 // - 24 pages départements
 // - 970 * 3 = 2910 pages métier/ville
-// - 970 * 32 = 31040 pages service/ville
-// Total: ~34 000+ URLs dans le sitemap
+// - 970 * 42 = 40740 pages service/ville
+// Total: ~43 700+ URLs dans le sitemap
 //
 // Pour plus de 50k URLs, il faudrait créer un sitemap index.
 

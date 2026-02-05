@@ -18,6 +18,12 @@ const footerLinks = {
     { href: "/plombier/ballon-eau-chaude", label: "Ballon eau chaude" },
     { href: "/plombier/urgence-24h", label: "Urgence 24h" },
     { href: "/plombier/recherche-fuite", label: "Recherche fuite" },
+    { href: "/plombier/evier-bouche", label: "Évier bouché" },
+    { href: "/plombier/chasse-eau", label: "Chasse d'eau" },
+    { href: "/plombier/fuite-tuyau", label: "Fuite tuyau" },
+    { href: "/plombier/installation-wc", label: "Installation WC" },
+    { href: "/plombier/groupe-securite", label: "Groupe sécurité" },
+    { href: "/plombier/lavabo-bouche", label: "Lavabo bouché" },
   ],
   electricite: [
     { href: "/electricite", label: "Électricité", isMain: true },
