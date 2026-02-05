@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { citiesIDF, getCityBySlug } from "@/lib/data/cities-idf";
+import { getCityBySlug, getPriorityCities } from "@/lib/data/cities-idf";
 import { getTradeBySlug } from "@/lib/data/services-definition";
 import { generateCityPageContent } from "@/lib/seo/city-content";
 import { CityHero, CityFAQ, CityServices, LocalSchema, NearbyAreas } from "@/components/seo";
@@ -14,9 +14,16 @@ interface Props {
   params: { ville: string };
 }
 
-// Générer les pages statiques pour toutes les villes
+// ISR: Permettre la génération à la demande pour les villes non prioritaires
+export const dynamicParams = true;
+
+// ISR: Revalider les pages toutes les 24 heures
+export const revalidate = 86400;
+
+// Générer les pages statiques uniquement pour les villes prioritaires
 export async function generateStaticParams() {
-  return citiesIDF.map((city) => ({
+  const priorityCities = getPriorityCities();
+  return priorityCities.map((city) => ({
     ville: city.slug,
   }));
 }

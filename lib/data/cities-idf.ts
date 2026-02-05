@@ -470,6 +470,70 @@ export const departments = [
   { code: "95", name: "Val-d'Oise" },
 ];
 
+// ============================================
+// ISR - Villes prioritaires pour le build
+// ============================================
+// Ces villes sont pré-générées au build.
+// Les autres sont générées à la demande (ISR).
+
+/**
+ * Slugs des villes prioritaires à pré-générer au build.
+ * Critères : Paris + petite couronne (92, 93, 94) + grandes villes IDF
+ */
+const priorityCitySlugs = new Set([
+  // Paris - 20 arrondissements
+  "paris-1", "paris-2", "paris-3", "paris-4", "paris-5",
+  "paris-6", "paris-7", "paris-8", "paris-9", "paris-10",
+  "paris-11", "paris-12", "paris-13", "paris-14", "paris-15",
+  "paris-16", "paris-17", "paris-18", "paris-19", "paris-20",
+  // Hauts-de-Seine (92) - Toutes les villes
+  "antony", "asnieres-sur-seine", "bagneux", "bois-colombes",
+  "boulogne-billancourt", "bourg-la-reine", "chatenay-malabry",
+  "chatillon", "chaville", "clamart", "clichy", "colombes",
+  "courbevoie", "fontenay-aux-roses", "garches", "gennevilliers",
+  "issy-les-moulineaux", "la-garenne-colombes", "le-plessis-robinson",
+  "levallois-perret", "malakoff", "meudon", "montrouge", "nanterre",
+  "neuilly-sur-seine", "puteaux", "rueil-malmaison", "saint-cloud",
+  "sceaux", "sevres", "suresnes", "vanves", "vaucresson",
+  "ville-d-avray", "villeneuve-la-garenne",
+  // Seine-Saint-Denis (93) - Principales villes
+  "aubervilliers", "aulnay-sous-bois", "bagnolet", "bobigny", "bondy",
+  "drancy", "epinay-sur-seine", "gagny", "la-courneuve", "le-blanc-mesnil",
+  "le-bourget", "le-pre-saint-gervais", "les-lilas", "livry-gargan",
+  "montreuil", "neuilly-sur-marne", "noisy-le-grand", "noisy-le-sec",
+  "pantin", "romainville", "rosny-sous-bois", "saint-denis",
+  "saint-ouen-sur-seine", "sevran", "stains", "tremblay-en-france",
+  "villepinte",
+  // Val-de-Marne (94) - Principales villes
+  "alfortville", "arcueil", "boissy-saint-leger", "bonneuil-sur-marne",
+  "bry-sur-marne", "cachan", "champigny-sur-marne", "charenton-le-pont",
+  "chennevieres-sur-marne", "chevilly-larue", "choisy-le-roi",
+  "creteil", "fontenay-sous-bois", "fresnes", "gentilly", "ivry-sur-seine",
+  "joinville-le-pont", "le-kremlin-bicetre", "le-perreux-sur-marne",
+  "maisons-alfort", "nogent-sur-marne", "orly", "saint-mande",
+  "saint-maur-des-fosses", "saint-maurice", "thiais", "villejuif",
+  "villeneuve-le-roi", "villeneuve-saint-georges", "villiers-sur-marne",
+  "vincennes", "vitry-sur-seine",
+  // Grandes villes Grande Couronne
+  "versailles", "argenteuil", "cergy", "pontoise", "evry-courcouronnes",
+  "melun", "meaux", "massy", "palaiseau", "saint-germain-en-laye",
+]);
+
+/**
+ * Obtenir les villes prioritaires pour le pré-rendu au build.
+ * ~120 villes = ~5 000 pages au build au lieu de 38 000+
+ */
+export function getPriorityCities(): City[] {
+  return citiesIDF.filter((city) => priorityCitySlugs.has(city.slug));
+}
+
+/**
+ * Vérifie si une ville est prioritaire
+ */
+export function isPriorityCity(slug: string): boolean {
+  return priorityCitySlugs.has(slug);
+}
+
 
 
 
