@@ -1604,6 +1604,871 @@ Nous intervenons dans **tous les arrondissements** :
 📞 **Serrurier Paris ?** Appelez le 01 41 69 10 08 - 20 min, 89€
     `
   },
+  // ============================================
+  // NOUVEAUX ARTICLES SEO PLOMBERIE (Ahrefs)
+  // ============================================
+  {
+    slug: "tarif-plombier-wc-bouche",
+    title: "Tarif plombier WC bouché : prix réels 2026",
+    excerpt: "Combien coûte un débouchage de WC par un plombier ? Découvrez les vrais tarifs 2026 et évitez les arnaques.",
+    metaDescription: "Tarif plombier WC bouché 2026 : prix réels de 79€ à 149€. Débouchage furet, hydrocurage. Évitez les arnaques, comparez les prix.",
+    category: "plomberie",
+    readTime: 6,
+    publishedAt: "2026-02-05",
+    keywords: ["tarif plombier wc bouché", "prix débouchage wc", "wc bouché prix", "combien coute débouchage wc"],
+    content: `
+## Tarif débouchage WC : les vrais prix 2026
+
+Votre WC est bouché et vous vous demandez combien ça va coûter ? Voici les tarifs réels pratiqués par les plombiers en 2026.
+
+### Grille tarifaire débouchage WC
+
+| Type de débouchage | Prix moyen | Durée |
+|-------------------|------------|-------|
+| Débouchage simple (furet manuel) | 79€ - 99€ | 30 min |
+| Débouchage au furet électrique | 99€ - 129€ | 45 min |
+| Hydrocurage haute pression | 149€ - 199€ | 1h |
+| Débouchage + remplacement mécanisme | 129€ - 179€ | 1h |
+
+### Ce qui fait varier le prix
+
+1. **Profondeur du bouchon** : plus il est loin, plus c'est cher
+2. **Méthode utilisée** : furet manuel < furet électrique < hydrocurage
+3. **Heure d'intervention** : nuit et week-end parfois majorés
+4. **Urgence** : intervention dans l'heure = possible supplément
+
+### Prix d'appel trompeurs : attention !
+
+🚨 **Méfiez-vous si on vous annonce :**
+- Débouchage à 29€ ou 39€ (irréaliste)
+- "À partir de 19€" (piège à arnaques)
+
+**Le vrai coût minimum** d'un débouchage professionnel est d'environ 79€ (déplacement + main d'œuvre + matériel).
+
+### Que comprend le tarif ?
+
+Chez un plombier sérieux, le prix inclut :
+- Le déplacement
+- Le diagnostic
+- Le débouchage
+- Le nettoyage après intervention
+- La garantie sur l'intervention
+
+### Majorations légitimes
+
+**Majorations normales :**
+- Nuit (21h-7h) : + 20 à 30%
+- Dimanche/férié : + 20 à 30%
+
+**Chez Joël :** Pas de majoration, même prix 24h/24.
+
+### Comment éviter de payer trop cher ?
+
+1. **Demandez un devis ferme** au téléphone
+2. **Vérifiez les avis Google**
+3. **Refusez les "diagnostics" payants**
+4. **Exigez une facture détaillée**
+
+### WC bouché : que faire avant le plombier ?
+
+Essayez d'abord :
+- La ventouse (technique classique)
+- L'eau bouillante + liquide vaisselle
+- Le furet manuel (si vous en avez un)
+
+Si ça ne marche pas, appelez un pro.
+
+📞 **WC bouchés ?** Appelez le 01 41 69 10 08 - Débouchage dès 79€
+    `
+  },
+  {
+    slug: "wc-bouche-que-faire",
+    title: "WC bouché : 5 solutions avant d'appeler le plombier",
+    excerpt: "WC bouchés ? Découvrez 5 méthodes efficaces pour déboucher vos toilettes vous-même avant de faire appel à un professionnel.",
+    metaDescription: "WC bouché que faire ? 5 solutions maison : ventouse, eau chaude, furet, bicarbonate. Si ça échoue, plombier dès 79€. Guide complet.",
+    category: "plomberie",
+    readTime: 7,
+    publishedAt: "2026-02-05",
+    keywords: ["wc bouché", "wc bouché que faire", "déboucher wc", "toilettes bouchées", "wc bouché remede"],
+    content: `
+## WC bouché : les 5 solutions à essayer
+
+Avant d'appeler un plombier, essayez ces méthodes. Elles fonctionnent dans 70% des cas de bouchons simples.
+
+### Méthode 1 : La ventouse (classique mais efficace)
+
+**Quand ça marche :** Bouchon proche, papier ou matières organiques
+
+1. Remplissez la cuvette d'eau (pas trop)
+2. Placez la ventouse sur l'évacuation
+3. Faites des mouvements de va-et-vient (10-15 fois)
+4. Tirez d'un coup sec
+5. Répétez si nécessaire
+
+**Astuce :** Une ventouse à soufflet (forme de cloche) est plus efficace.
+
+### Méthode 2 : Eau chaude + liquide vaisselle
+
+**Quand ça marche :** Bouchon gras ou savonneux
+
+1. Versez 1/2 bouteille de liquide vaisselle
+2. Attendez 10 minutes
+3. Versez un seau d'eau très chaude (pas bouillante !)
+4. Laissez agir 15-20 minutes
+5. Tirez la chasse
+
+**Attention :** N'utilisez jamais d'eau bouillante, elle peut fissurer la porcelaine.
+
+### Méthode 3 : Bicarbonate + vinaigre
+
+**Quand ça marche :** Bouchon organique, mauvaises odeurs
+
+1. Versez 1 tasse de bicarbonate de soude
+2. Ajoutez 1 tasse de vinaigre blanc
+3. Ça mousse ! Laissez agir 30 minutes
+4. Versez de l'eau chaude
+5. Tirez la chasse
+
+### Méthode 4 : Le furet manuel
+
+**Quand ça marche :** Bouchon profond
+
+1. Insérez le furet dans l'évacuation
+2. Faites-le avancer en tournant la manivelle
+3. Quand vous sentez le bouchon, insistez
+4. Retirez le furet (avec les résidus)
+5. Tirez la chasse pour vérifier
+
+**Où acheter :** Magasin de bricolage, 15-30€
+
+### Méthode 5 : Le déboucheur enzymatique
+
+**Quand ça marche :** Bouchon organique, entretien préventif
+
+Contrairement aux produits chimiques, les enzymes sont :
+- Non corrosifs
+- Écologiques
+- Efficaces sur les bouchons organiques
+
+**Utilisation :** Versez le soir, laissez agir toute la nuit.
+
+## Ce qu'il ne faut SURTOUT PAS faire
+
+🚫 **Évitez :**
+- **Destop et produits chimiques** : corrosifs, dangereux, abîment les canalisations
+- **Continuer à tirer la chasse** : risque de débordement
+- **Utiliser un cintre métallique** : peut rayer la porcelaine
+- **Forcer avec un bâton** : risque d'enfoncer le bouchon
+
+## Quand appeler un plombier ?
+
+Faites appel à un pro si :
+- Aucune méthode ne fonctionne après 1 heure
+- L'eau remonte dans d'autres évacuations
+- Vous sentez une odeur d'égout inhabituelle
+- Le bouchon revient fréquemment
+
+### Prix d'un débouchage professionnel
+
+| Intervention | Prix |
+|-------------|------|
+| Débouchage WC simple | 79€ |
+| Débouchage + nettoyage canalisation | 129€ |
+| Hydrocurage (gros bouchon) | 149€ |
+
+📞 **WC toujours bouchés ?** Appelez le 01 41 69 10 08 - Intervention en 30 min
+    `
+  },
+  {
+    slug: "prix-intervention-plombier-urgence",
+    title: "Prix intervention plombier urgence 2026 : tarifs réels",
+    excerpt: "Plombier en urgence : combien ça coûte vraiment ? Tarifs 2026, majorations nuit/week-end, et conseils pour éviter les arnaques.",
+    metaDescription: "Prix plombier urgence 2026 : tarifs de 89€ à 250€. Majorations nuit/WE, arnaques à éviter. Guide complet des prix réels.",
+    category: "plomberie",
+    readTime: 7,
+    publishedAt: "2026-02-05",
+    keywords: ["prix plombier urgence", "tarif plombier urgence", "plombier urgence prix", "dépannage plomberie prix"],
+    content: `
+## Prix plombier urgence : les vrais tarifs 2026
+
+Une urgence plomberie n'attend pas. Mais combien ça coûte vraiment ? Voici les tarifs réels pratiqués.
+
+### Grille tarifaire urgences plomberie
+
+| Intervention | Prix jour | Prix nuit/WE |
+|-------------|-----------|--------------|
+| Fuite d'eau simple | 89€ - 119€ | 110€ - 150€ |
+| Fuite sur canalisation | 129€ - 179€ | 160€ - 220€ |
+| Débouchage WC | 79€ - 99€ | 99€ - 130€ |
+| Débouchage canalisation | 99€ - 149€ | 130€ - 190€ |
+| Dégât des eaux | 99€ - 179€ | 130€ - 220€ |
+| Panne chauffe-eau | 99€ - 149€ | 130€ - 190€ |
+
+### Les majorations sont-elles normales ?
+
+**Majorations légitimes :**
+- Nuit (21h - 7h) : + 25 à 40%
+- Dimanche et jours fériés : + 25 à 40%
+- Cumul nuit + dimanche : + 50% maximum
+
+**Majorations abusives :**
+- Doublement ou triplement du prix
+- "Frais d'urgence" de 100€+
+- "Déplacement nuit" à 150€
+
+### Chez Joël : pas de majoration
+
+Notre engagement : **même prix 24h/24, 7j/7**.
+
+Une urgence à 3h du matin coûte le même prix qu'à 14h. Pourquoi ? Parce qu'une fuite ne choisit pas son heure.
+
+### Comment éviter les arnaques en urgence ?
+
+Même stressé, gardez vos réflexes :
+
+1. **Demandez le prix total** au téléphone
+2. **Refusez les prix "à partir de"** sans montant final
+3. **Vérifiez les avis Google** (même rapidement)
+4. **N'acceptez pas de travaux** non prévus sans devis
+5. **Gardez une trace écrite** (SMS, email)
+
+### Les signaux d'arnaque
+
+🚨 **Fuyez si :**
+- Prix annoncé de 29€ ou 49€ (irréaliste)
+- Pas de devis avant intervention
+- Paiement en liquide uniquement exigé
+- Le plombier veut tout remplacer
+
+### Que faire en attendant le plombier ?
+
+**Pour une fuite :**
+1. Coupez l'eau au compteur
+2. Coupez l'électricité si l'eau touche des prises
+3. Épongez pour limiter les dégâts
+
+**Pour un WC bouché :**
+1. Ne tirez plus la chasse
+2. Mettez des serpillières autour
+
+**Pour une panne de chauffage :**
+1. Notez le code erreur affiché
+2. Vérifiez le thermostat et le disjoncteur
+
+### Garantie sur intervention d'urgence
+
+Une intervention d'urgence doit être garantie comme une intervention normale :
+- Garantie sur la main d'œuvre
+- Garantie sur les pièces remplacées
+- Facture détaillée fournie
+
+📞 **Urgence plomberie ?** Appelez le 01 41 69 10 08 - Même prix 24h/24
+    `
+  },
+  {
+    slug: "fuite-chauffe-eau-danger-que-faire",
+    title: "Fuite chauffe-eau : danger et que faire ?",
+    excerpt: "Votre chauffe-eau fuit ? Découvrez si c'est dangereux, les causes possibles et comment réagir rapidement.",
+    metaDescription: "Fuite chauffe-eau : est-ce dangereux ? Causes (groupe de sécurité, cuve percée), que faire, prix réparation. Guide complet urgence.",
+    category: "plomberie",
+    readTime: 8,
+    publishedAt: "2026-02-05",
+    keywords: ["fuite chauffe eau", "chauffe eau qui fuit", "fuite ballon eau chaude", "chauffe eau goutte"],
+    content: `
+## Fuite chauffe-eau : est-ce dangereux ?
+
+Une fuite sur votre chauffe-eau peut être bénigne ou grave. Voici comment évaluer la situation.
+
+### Fuite "normale" vs fuite dangereuse
+
+**Fuite normale :**
+- Quelques gouttes au groupe de sécurité (pendant la chauffe)
+- C'est normal ! Le groupe évacue la surpression.
+
+**Fuite anormale :**
+- Eau qui coule en continu du groupe de sécurité
+- Fuite à la base du chauffe-eau
+- Flaque d'eau importante
+- Traces de rouille
+
+### Les causes de fuite
+
+#### 1. Groupe de sécurité défaillant
+
+**Symptômes :** Eau qui coule en continu (pas juste pendant la chauffe)
+
+**Cause :** Le groupe de sécurité est usé et ne ferme plus correctement.
+
+**Prix réparation :** 89€ - 129€ (pièce + main d'œuvre)
+
+#### 2. Cuve percée
+
+**Symptômes :** Fuite à la base, traces de rouille
+
+**Cause :** Corrosion interne (anode usée, calcaire)
+
+**Solution :** Remplacement du chauffe-eau obligatoire
+
+**Prix :** 400€ - 1500€ selon capacité
+
+#### 3. Joint défectueux
+
+**Symptômes :** Fuite au niveau de la platine ou du thermostat
+
+**Cause :** Joint usé ou mal posé
+
+**Prix réparation :** 79€ - 119€
+
+#### 4. Raccords desserrés
+
+**Symptômes :** Fuite aux arrivées/sorties d'eau
+
+**Cause :** Raccords mal serrés ou joints usés
+
+**Prix réparation :** 59€ - 89€
+
+### Que faire immédiatement ?
+
+**Étape 1 : Évaluez le danger**
+- L'eau touche-t-elle des prises électriques ? → Coupez le disjoncteur
+- La fuite est-elle importante ? → Coupez l'eau froide du chauffe-eau
+
+**Étape 2 : Localisez la fuite**
+- Groupe de sécurité (soupape rouge)
+- Base du ballon
+- Raccords entrée/sortie
+- Platine de résistance
+
+**Étape 3 : Limitez les dégâts**
+- Placez une bassine sous la fuite
+- Épongez l'eau stagnante
+- Protégez vos affaires
+
+**Étape 4 : Appelez un plombier**
+Si la fuite est continue ou provient de la cuve, faites intervenir un pro.
+
+### Fuite groupe de sécurité : réparable
+
+Le groupe de sécurité est une pièce d'usure. Son remplacement est :
+- Rapide (30 minutes)
+- Peu coûteux (89€ - 129€)
+- Préventif (évite les surpressions)
+
+### Cuve percée : remplacement obligatoire
+
+Malheureusement, une cuve percée ne se répare pas. Il faut remplacer le chauffe-eau.
+
+**Signes d'une cuve en fin de vie :**
+- Fuite à la base
+- Traces de rouille
+- Eau rougeâtre au robinet
+- Chauffe-eau de plus de 10-15 ans
+
+### Combien coûte un remplacement ?
+
+| Capacité | Prix ballon | Pose | Total |
+|----------|-------------|------|-------|
+| 100L | 250€ - 400€ | 150€ | 400€ - 550€ |
+| 150L | 350€ - 550€ | 150€ | 500€ - 700€ |
+| 200L | 450€ - 700€ | 180€ | 630€ - 880€ |
+| 300L | 600€ - 900€ | 200€ | 800€ - 1100€ |
+
+### Prévention : comment éviter les fuites ?
+
+- **Entretien annuel** : vidange, détartrage, vérification anode
+- **Changement groupe de sécurité** : tous les 5 ans
+- **Remplacement anode** : quand usée à 75%
+
+📞 **Chauffe-eau qui fuit ?** Appelez le 01 41 69 10 08 - Diagnostic dès 89€
+    `
+  },
+  {
+    slug: "degat-des-eaux-demarches-indemnisation",
+    title: "Dégât des eaux : démarches et indemnisation assurance",
+    excerpt: "Victime d'un dégât des eaux ? Découvrez les démarches à suivre, le constat amiable et comment obtenir votre indemnisation.",
+    metaDescription: "Dégât des eaux : démarches complètes. Constat amiable, déclaration assurance, délais, indemnisation. Guide étape par étape.",
+    category: "plomberie",
+    readTime: 9,
+    publishedAt: "2026-02-05",
+    keywords: ["dégât des eaux", "degat des eaux assurance", "constat amiable dégât des eaux", "indemnisation dégât des eaux"],
+    content: `
+## Dégât des eaux : les démarches étape par étape
+
+Un dégât des eaux peut vite devenir un cauchemar administratif. Voici le guide complet pour gérer la situation.
+
+### Étape 1 : Limitez les dégâts (immédiat)
+
+1. **Coupez l'eau** au compteur général
+2. **Coupez l'électricité** si l'eau touche des installations électriques
+3. **Épongez l'eau** pour limiter la propagation
+4. **Protégez vos biens** (surélevez les meubles)
+5. **Prévenez les voisins** concernés (dessus, dessous)
+
+### Étape 2 : Identifiez la cause
+
+La cause détermine qui est responsable :
+
+| Origine | Responsable |
+|---------|-------------|
+| Votre logement (robinet, tuyau) | Vous |
+| Logement du dessus | Votre voisin |
+| Parties communes (colonnes) | Copropriété |
+| Toiture / façade | Propriétaire / Copropriété |
+
+### Étape 3 : Faites intervenir un plombier
+
+Appelez un plombier pour :
+1. **Stopper la fuite** (priorité)
+2. **Identifier précisément l'origine**
+3. **Réparer si possible**
+4. **Fournir une facture** (importante pour l'assurance)
+
+**Prix moyen intervention dégât des eaux :** 99€ - 179€
+
+### Étape 4 : Remplissez le constat amiable
+
+Le **constat amiable de dégât des eaux** est obligatoire. Il doit être rempli :
+- Par vous (partie B)
+- Par le responsable présumé (partie A)
+- Ou par le syndic si parties communes
+
+**Où le trouver ?**
+- Votre assurance (en ligne ou papier)
+- Le syndic de copropriété
+- Téléchargeable sur le site de votre assureur
+
+**Délai :** À remplir dans les 5 jours
+
+### Étape 5 : Déclarez le sinistre
+
+**Délai légal :** 5 jours ouvrés maximum
+
+**Comment déclarer ?**
+- En ligne sur le site de votre assurance
+- Par courrier recommandé
+- Par téléphone (suivi d'un écrit)
+
+**Documents à fournir :**
+- Constat amiable signé
+- Photos des dégâts (avant/après)
+- Facture du plombier
+- Devis de remise en état
+- Liste des biens endommagés
+
+### Étape 6 : L'expertise
+
+Pour les dégâts importants (> 1600€), l'assurance mande un expert :
+- Il évalue les dégâts
+- Il vérifie la cause
+- Il estime le montant d'indemnisation
+
+**Conseil :** Conservez les éléments endommagés jusqu'à l'expertise.
+
+### Les délais d'indemnisation
+
+| Étape | Délai |
+|-------|-------|
+| Déclaration du sinistre | 5 jours |
+| Envoi du constat | 5 jours |
+| Expertise (si nécessaire) | 1-3 semaines |
+| Proposition d'indemnisation | 30-60 jours |
+| Versement | 15 jours après accord |
+
+### Ce qui est couvert par l'assurance
+
+**Généralement pris en charge :**
+- Réparation de la cause (plomberie)
+- Remise en état des locaux (peinture, parquet)
+- Remplacement des biens endommagés
+- Frais de recherche de fuite
+
+**Souvent non couvert :**
+- Vétusté (abattement)
+- Biens non déclarés
+- Dégâts causés par négligence
+
+### Cas particuliers
+
+**Locataire vs Propriétaire :**
+- Le locataire déclare à son assurance
+- Le propriétaire est prévenu
+- Les deux assurances peuvent intervenir
+
+**Copropriété :**
+- Le syndic doit être informé
+- L'assurance de la copropriété peut intervenir
+- Un constat spécifique peut être nécessaire
+
+### Convention IRSI : ce qu'il faut savoir
+
+La convention IRSI (Indemnisation et Recours des Sinistres Immeuble) simplifie les démarches :
+- Votre assurance vous indemnise directement
+- Elle se retourne ensuite contre le responsable
+- Valable pour les sinistres < 5000€ HT
+
+📞 **Dégât des eaux ?** Appelez le 01 41 69 10 08 - Facture assurance fournie
+    `
+  },
+  {
+    slug: "plombier-pas-cher-trouver-bon",
+    title: "Plombier pas cher : comment trouver le bon ?",
+    excerpt: "Comment trouver un plombier pas cher et fiable ? Nos conseils pour comparer les prix sans tomber dans les arnaques.",
+    metaDescription: "Plombier pas cher : comment trouver un bon artisan sans se faire arnaquer. Prix réels, comparaison, aides. Guide pratique.",
+    category: "plomberie",
+    readTime: 6,
+    publishedAt: "2026-02-05",
+    keywords: ["plombier pas cher", "plombier pas cher paris", "plombier moins cher", "tarif plombier économique"],
+    content: `
+## Plombier pas cher : attention aux pièges
+
+Vous cherchez un plombier pas cher ? C'est normal de vouloir économiser, mais attention aux arnaques qui peuvent vous coûter plus cher au final.
+
+### Les vrais tarifs plombier en 2026
+
+| Intervention | Prix minimum réaliste |
+|-------------|----------------------|
+| Remplacement robinet | 69€ |
+| Débouchage WC | 79€ |
+| Réparation fuite | 89€ |
+| Débouchage canalisation | 99€ |
+| Remplacement chasse d'eau | 89€ |
+
+**En dessous de ces prix, méfiance !**
+
+### Pourquoi les prix "trop bas" sont suspects
+
+Un plombier a des coûts incompressibles :
+- Déplacement (essence, temps)
+- Assurance professionnelle
+- Outillage professionnel
+- Charges sociales
+
+**Un "plombier à 29€" ne couvre pas ses frais.** Le piège : le prix augmente une fois sur place.
+
+### Comment vraiment économiser ?
+
+#### 1. Comparez plusieurs devis
+
+Pour les travaux non urgents, demandez 2-3 devis. C'est gratuit et ça vous donne une idée des prix du marché.
+
+#### 2. Regroupez les interventions
+
+Si vous avez plusieurs petits travaux :
+- Un robinet qui goutte
+- Une chasse d'eau qui coule
+- Un joint à changer
+
+Faites tout en une seule intervention : un seul déplacement = moins cher.
+
+#### 3. Achetez les pièces vous-même
+
+Pour certains travaux simples, vous pouvez acheter :
+- Le robinet
+- Le mécanisme de chasse
+- Le siphon
+
+Et payer uniquement la main d'œuvre.
+
+#### 4. Choisissez le bon moment
+
+Les plombiers sont moins demandés :
+- En milieu de semaine (mardi, mercredi)
+- En dehors des heures de pointe (10h-12h, 14h-16h)
+- Hors période hivernale
+
+Vous aurez plus de choix et potentiellement de meilleurs tarifs.
+
+### Les aides pour les travaux de plomberie
+
+#### MaPrimeRénov'
+
+Pour le remplacement de chauffe-eau par un modèle performant (thermodynamique, solaire).
+
+#### TVA réduite (10%)
+
+Pour les travaux de réparation et amélioration dans un logement de plus de 2 ans.
+
+#### Aides locales
+
+Certaines mairies ou départements proposent des aides pour les personnes modestes.
+
+### Les pièges à éviter
+
+🚨 **Méfiez-vous de :**
+
+- **Prix d'appel très bas** (29€, 39€) → arnaque quasi-certaine
+- **"Devis gratuit sur place"** → souvent suivi de pression pour signer
+- **Pas d'entreprise identifiable** → pas de recours possible
+- **Paiement en espèces uniquement** → pas de trace, pas de garantie
+
+### Comment vérifier un plombier ?
+
+✅ **Vérifications de base :**
+
+1. **Numéro SIRET** : vérifiez sur societe.com
+2. **Avis Google** : regardez la moyenne ET les commentaires
+3. **Devis écrit** : obligatoire avant intervention
+4. **Assurance décennale** : demandez l'attestation
+
+### Joël : le bon rapport qualité/prix
+
+Chez Joël, notre engagement :
+- Prix fixes et transparents
+- Pas de frais cachés
+- Artisans vérifiés et formés
+- Satisfaction garantie ou remboursé
+
+📞 **Besoin d'un plombier honnête ?** Appelez le 01 41 69 10 08
+    `
+  },
+  {
+    slug: "fuite-eau-avant-compteur-qui-paye",
+    title: "Fuite d'eau avant compteur : qui paye ?",
+    excerpt: "Fuite sur la canalisation avant le compteur d'eau : qui est responsable ? Propriétaire, locataire ou service des eaux ?",
+    metaDescription: "Fuite eau avant compteur : qui paye ? Responsabilités propriétaire, locataire, service des eaux. Démarches et remboursement. Guide complet.",
+    category: "plomberie",
+    readTime: 7,
+    publishedAt: "2026-02-05",
+    keywords: ["fuite avant compteur", "fuite eau avant compteur qui paye", "responsabilité fuite eau", "canalisation avant compteur"],
+    content: `
+## Fuite avant ou après compteur : la différence cruciale
+
+La position de la fuite par rapport au compteur détermine qui paye les réparations ET la surconsommation d'eau.
+
+### Schéma de l'installation
+
+\`\`\`
+Réseau public → Vanne de branchement → Compteur → Votre installation
+              ← AVANT compteur →      ← APRÈS compteur →
+\`\`\`
+
+### Qui est responsable de quoi ?
+
+| Zone | Responsable | Qui paye |
+|------|-------------|----------|
+| Du réseau au compteur | Service des eaux | Service des eaux |
+| Après le compteur | Propriétaire | Propriétaire (ou locataire selon bail) |
+
+### Fuite AVANT le compteur
+
+**Responsable :** Le service des eaux de votre commune
+
+**Ce qui est pris en charge :**
+- La réparation de la canalisation
+- La main d'œuvre
+- Les éventuels dégâts causés
+
+**Ce que vous devez faire :**
+1. Contacter le service des eaux de votre commune
+2. Signaler la fuite (adresse, description)
+3. Ils envoient une équipe pour réparer
+
+**Délai d'intervention :** Généralement 24-48h
+
+### Fuite APRÈS le compteur
+
+**Responsable :** Le propriétaire du logement
+
+**Ce qui est à votre charge :**
+- La réparation par un plombier
+- La surconsommation d'eau (mais voir ci-dessous)
+
+**Qui paye vraiment ?**
+- **Propriétaire occupant** : vous
+- **Propriétaire bailleur** : vous (les canalisations sont à votre charge)
+- **Locataire** : le propriétaire (sauf si c'est une négligence du locataire)
+
+### Et la facture d'eau en cas de fuite ?
+
+Bonne nouvelle : la loi Warsmann vous protège !
+
+**Conditions pour être remboursé :**
+- Fuite après compteur
+- Sur canalisation (pas robinet ou WC)
+- Consommation anormale détectée par le service des eaux ou par vous
+- Réparation effectuée par un professionnel
+
+**Ce qui est remboursé :**
+Tout ce qui dépasse le double de votre consommation habituelle.
+
+**Exemple :**
+- Consommation normale : 100m³/an
+- Consommation avec fuite : 400m³
+- Remboursé : 400 - (100 x 2) = 200m³
+
+**Démarche :**
+1. Faites réparer par un plombier
+2. Gardez la facture
+3. Envoyez à votre service des eaux dans le mois suivant la réparation
+4. Demandez l'écrêtement de votre facture
+
+### Comment détecter une fuite avant compteur ?
+
+**Signes révélateurs :**
+- Tache humide sur la chaussée ou le trottoir
+- Herbe plus verte à un endroit
+- Bruit d'eau qui coule en permanence
+- Pression anormalement faible chez vous
+
+**Test simple (fuite après compteur) :**
+1. Fermez tous les robinets
+2. Relevez le compteur
+3. Attendez 2 heures sans utiliser d'eau
+4. Re-relevez le compteur
+5. S'il a tourné = fuite !
+
+### Cas particulier : la copropriété
+
+En copropriété :
+- **Parties privatives (après compteur divisionnaire)** : propriétaire du lot
+- **Parties communes (colonnes montantes)** : copropriété
+- **Branchement général avant compteur collectif** : service des eaux
+
+### Que faire en cas de fuite ?
+
+**Fuite avant compteur :**
+1. Appelez le service des eaux (numéro d'urgence 24h/24)
+2. Ils interviendront rapidement
+
+**Fuite après compteur :**
+1. Coupez l'eau au compteur
+2. Appelez un plombier
+3. Gardez la facture
+4. Demandez le remboursement à votre service des eaux
+
+📞 **Fuite d'eau ?** Appelez le 01 41 69 10 08 - Attestation pour service des eaux fournie
+    `
+  },
+  {
+    slug: "deboucher-canalisation-sans-plombier",
+    title: "Déboucher une canalisation soi-même : 6 méthodes",
+    excerpt: "Canalisation bouchée ? Découvrez 6 méthodes efficaces pour déboucher vous-même avant d'appeler un plombier.",
+    metaDescription: "Déboucher canalisation soi-même : 6 méthodes efficaces. Ventouse, furet, bicarbonate, nettoyeur HP. Guide complet avec vidéos.",
+    category: "plomberie",
+    readTime: 8,
+    publishedAt: "2026-02-05",
+    keywords: ["déboucher canalisation", "canalisation bouchée", "deboucher tuyau", "deboucher evacuation"],
+    content: `
+## Canalisation bouchée : 6 méthodes pour déboucher soi-même
+
+Avant d'appeler un plombier, essayez ces techniques. Elles fonctionnent dans 60-70% des cas de bouchons courants.
+
+### Méthode 1 : La ventouse (classique et efficace)
+
+**Idéal pour :** Évier, lavabo, baignoire
+
+**Comment faire :**
+1. Bouchez le trop-plein (avec un chiffon mouillé)
+2. Remplissez d'eau (5 cm au-dessus de la bonde)
+3. Placez la ventouse sur l'évacuation
+4. Faites des mouvements de va-et-vient énergiques
+5. Tirez d'un coup sec
+6. Répétez 10-15 fois
+
+**Astuce :** Enduisez le bord de la ventouse de vaseline pour une meilleure étanchéité.
+
+### Méthode 2 : Le furet manuel
+
+**Idéal pour :** Bouchons profonds (1-5 mètres)
+
+**Comment faire :**
+1. Retirez le siphon (si accessible)
+2. Insérez le furet dans la canalisation
+3. Tournez la manivelle en avançant
+4. Quand vous sentez une résistance, insistez
+5. Reculez et avancez pour casser le bouchon
+6. Retirez le furet et rincez abondamment
+
+**Où acheter :** Magasin de bricolage, 20-40€
+
+### Méthode 3 : Bicarbonate + vinaigre + eau bouillante
+
+**Idéal pour :** Bouchons gras, savonneux
+
+**Comment faire :**
+1. Versez 1/2 tasse de bicarbonate de soude
+2. Ajoutez 1/2 tasse de sel (optionnel)
+3. Versez 1 tasse de vinaigre blanc
+4. Bouchez et laissez agir 30 minutes
+5. Versez 1 litre d'eau bouillante
+6. Rincez à l'eau chaude
+
+**Précaution :** Ne mélangez JAMAIS avec des produits chimiques !
+
+### Méthode 4 : Le nettoyeur haute pression
+
+**Idéal pour :** Canalisations extérieures, gros bouchons
+
+**Comment faire :**
+1. Louez ou achetez un kit débouchage HP
+2. Insérez la buse dans la canalisation
+3. Mettez en marche progressivement
+4. La pression de l'eau casse le bouchon
+5. Continuez jusqu'à écoulement normal
+
+**Location :** 30-50€/jour
+
+### Méthode 5 : Le déboucheur à pompe (ou pompe à pression)
+
+**Idéal pour :** Bouchons résistants à la ventouse
+
+**Comment faire :**
+1. Remplissez le réservoir d'eau
+2. Placez l'embout sur l'évacuation
+3. Pompez pour créer la pression
+4. Libérez d'un coup
+
+**Avantage :** Plus puissant qu'une ventouse classique
+**Prix :** 15-30€
+
+### Méthode 6 : Le démontage du siphon
+
+**Idéal pour :** Bouchons dans le siphon (cheveux, objets)
+
+**Comment faire :**
+1. Placez une bassine sous le siphon
+2. Dévissez les bagues (à la main ou avec une pince)
+3. Retirez le siphon
+4. Nettoyez l'intérieur (brosse, eau)
+5. Remontez avec les joints en place
+6. Vérifiez l'étanchéité
+
+### Ce qu'il ne faut SURTOUT PAS faire
+
+🚫 **À éviter absolument :**
+
+- **Produits chimiques (Destop, etc.)** : corrosifs, dangereux, polluants
+- **Acide chlorhydrique** : détruit les canalisations PVC
+- **Soude caustique** : brûlures graves possibles
+- **Mélanger plusieurs produits** : réactions chimiques dangereuses
+
+### Quand appeler un plombier ?
+
+Faites appel à un pro si :
+- Aucune méthode ne fonctionne après 1-2 heures
+- L'eau remonte par d'autres évacuations
+- Vous sentez des odeurs d'égout
+- Le bouchon est récurrent (problème structurel)
+- La canalisation est enterrée ou inaccessible
+
+### Prix d'un débouchage professionnel
+
+| Intervention | Prix |
+|-------------|------|
+| Débouchage au furet | 99€ |
+| Hydrocurage | 149€ - 199€ |
+| Inspection caméra | 149€ |
+| Débouchage + inspection | 179€ |
+
+### Prévention : éviter les bouchons
+
+- **Cuisine** : ne jetez pas de graisses dans l'évier
+- **Salle de bain** : utilisez une grille attrape-cheveux
+- **Entretien** : versez de l'eau bouillante 1x/semaine
+
+📞 **Canalisation toujours bouchée ?** Appelez le 01 41 69 10 08 - Débouchage dès 99€
+    `
+  },
 ];
 
 // Helper functions

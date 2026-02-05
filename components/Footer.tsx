@@ -8,11 +8,16 @@ import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 const footerLinks = {
   plomberie: [
     { href: "/plomberie", label: "Plomberie", isMain: true },
+    { href: "/plomberie/tarifs", label: "Tarifs plombier" },
     { href: "/plombier/fuite-eau", label: "Fuite d'eau" },
     { href: "/plombier/wc-bouches", label: "WC bouchés" },
+    { href: "/plombier/debouchage-wc", label: "Débouchage WC" },
+    { href: "/plombier/debouchage-canalisation", label: "Débouchage canalisation" },
     { href: "/plombier/degat-des-eaux", label: "Dégât des eaux" },
     { href: "/plombier/chauffe-eau-panne", label: "Chauffe-eau" },
-    { href: "/plombier/remplacement-robinet", label: "Robinet / Siphon" },
+    { href: "/plombier/ballon-eau-chaude", label: "Ballon eau chaude" },
+    { href: "/plombier/urgence-24h", label: "Urgence 24h" },
+    { href: "/plombier/recherche-fuite", label: "Recherche fuite" },
   ],
   electricite: [
     { href: "/electricite", label: "Électricité", isMain: true },

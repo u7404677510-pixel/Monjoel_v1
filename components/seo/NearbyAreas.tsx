@@ -21,7 +21,11 @@ const relatedArticles: Record<string, { href: string; label: string }[]> = {
   ],
   plombier: [
     { href: "/blog/fuite-eau-nuit-que-faire", label: "Que faire en cas de fuite ?" },
-    { href: "/blog/arnaques-plomberie-comment-eviter", label: "Éviter les arnaques plomberie" },
+    { href: "/blog/tarif-plombier-wc-bouche", label: "Tarif plombier WC bouché" },
+    { href: "/blog/wc-bouche-que-faire", label: "WC bouché : 5 solutions" },
+    { href: "/blog/degat-des-eaux-demarches-indemnisation", label: "Dégât des eaux : démarches" },
+    { href: "/blog/plombier-pas-cher-trouver-bon", label: "Plombier pas cher et fiable" },
+    { href: "/plomberie/tarifs", label: "Nos tarifs plomberie" },
   ],
   electricien: [
     { href: "/blog/disjoncteur-saute-causes-solutions", label: "Disjoncteur qui saute : solutions" },

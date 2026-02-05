@@ -14,9 +14,12 @@ const heroTitleVariations = {
   plombier: [
     "Plombier {city} | Prix Fixe 79€ | 20 min",
     "Plombier Urgence {city} – 24h/24 Sans Majoration",
-    "{city} : Plombier dès 79€ | Intervention Express",
+    "{city} : Plombier Autour de Moi | Dès 79€",
     "Dépannage Plomberie {city} | Prix Fixe Garanti",
-    "Plombier {city} – Fuite, WC, Chauffe-eau | 79€",
+    "Plombier {city} – Fuite, WC Bouché, Chauffe-eau | 79€",
+    "Plombier Pas Cher {city} | Prix Réel Dès 69€",
+    "Urgence Plomberie {city} | Intervention 30 min",
+    "{city} : Plombier 24h/24 | Même Prix Nuit & WE",
   ],
   serrurier: [
     "Serrurier {city} | Prix Fixe 89€ | 20 min",
@@ -128,9 +131,10 @@ export function generateMetaDescription(trade: Trade, city: City): string {
       `${city.name} : Serrurier prix fixe 89€ ⭐ 947 avis. Ouverture porte, changement serrure. 24h/24 sans majoration.`,
     ],
     plombier: [
-      `Plombier ${city.name} ⭐ 4.9/5. Fuite, WC, chauffe-eau dès 79€. Intervention 20 min. Prix fixe, zéro arnaque. 01 41 69 10 08`,
-      `Plombier urgence ${city.name} 💧 Prix fixe dès 79€. Dégât des eaux, débouchage. 20 min, sans majoration. Appelez !`,
-      `${city.name} : Plombier prix fixe 79€ ⭐ 947 avis. Fuite d'eau, WC bouchés. 24h/24 sans majoration.`,
+      `Plombier ${city.name} ⭐ 4.9/5. Fuite, WC bouchés, chauffe-eau dès 79€. Intervention 20 min. Prix fixe, zéro arnaque. 01 41 69 10 08`,
+      `Plombier urgence ${city.name} 💧 Prix fixe dès 79€. Dégât des eaux, débouchage WC. 20 min, sans majoration. Appelez !`,
+      `${city.name} : Plombier autour de moi prix fixe 79€ ⭐ 947 avis. Fuite d'eau, débouchage. 24h/24 sans majoration.`,
+      `Plombier pas cher ${city.name} 💧 Tarif réel dès 69€. WC bouché, fuite, ballon. Devis instantané, prix garanti.`,
     ],
     electricien: [
       `Électricien ${city.name} ⭐ 4.9/5. Panne, disjoncteur dès 59€. Intervention 20 min. Prix fixe garanti. 01 41 69 10 08`,
@@ -163,10 +167,11 @@ export function generateCityIntroduction(trade: Trade, city: City): string {
       `Besoin d'un serrurier à ${city.name} ? Joël sélectionne les meilleurs artisans du ${city.departmentName}. Prix fixe avant intervention, paiement sécurisé, aucune mauvaise surprise. La serrurerie sans le stress.`,
     ],
     plombier: [
-      `Fuite d'eau, WC bouchés ou chauffe-eau en panne à ${city.name} (${city.postalCodes[0]}) ? Joël envoie un plombier certifié en 20 minutes. Prix fixe dès 79€, sans majoration 24h/24. Zéro arnaque, zéro stress.`,
-      `Urgence plomberie à ${city.name} ? Les habitants du ${city.departmentName} font confiance à Joël pour un dépannage rapide et transparent. Le prix annoncé est le prix payé, garanti.`,
-      `${city.name} : plombier urgence à prix fixe. Fuite, dégât des eaux, débouchage... Intervention en 20 min, prix clair avant de commencer. Joël, la plomberie sans arnaque.`,
-      `Besoin d'un plombier à ${city.name} ? Joël connecte les meilleurs artisans du ${city.departmentName} avec les habitants. Prix fixe, devis instantané, intervention express.`,
+      `Vous cherchez un plombier autour de vous à ${city.name} (${city.postalCodes[0]}) ? Fuite d'eau, WC bouchés, chauffe-eau en panne : Joël envoie un plombier certifié en 20 minutes. Prix fixe dès 79€, sans majoration 24h/24. Zéro arnaque !`,
+      `Urgence plomberie à ${city.name} ? Les habitants du ${city.departmentName} font confiance à Joël pour un dépannage rapide et transparent. Tarif plombier WC bouché : 79€. Le prix annoncé est le prix payé.`,
+      `${city.name} : plombier urgence 24h à prix fixe. Fuite, dégât des eaux, débouchage canalisation... Intervention en 20 min, prix clair avant de commencer. Joël, le plombier pas cher et honnête.`,
+      `Besoin d'un plombier à ${city.name} ? Joël connecte les meilleurs artisans du ${city.departmentName}. Prix intervention plombier urgence : dès 89€. Devis instantané, zéro mauvaise surprise.`,
+      `Plombier ${city.name} : fuite d'eau, WC qui déborde, ballon en panne. Intervention express, même tarif jour et nuit. Prix réels affichés, pas d'arnaque. Appelez maintenant.`,
     ],
     electricien: [
       `Panne électrique, disjoncteur qui saute à ${city.name} (${city.postalCodes[0]}) ? Joël envoie un électricien certifié en 20 minutes. Prix fixe dès 59€, diagnostic inclus. Zéro arnaque, zéro majoration.`,
@@ -198,8 +203,10 @@ export function generateCityHighlights(trade: Trade, city: City): string[] {
   // Ajouter des highlights spécifiques au métier
   const tradeHighlights: Record<string, string[]> = {
     plombier: [
-      "Détection de fuite avec matériel professionnel",
-      "Tous types d'interventions : fuite, WC, chauffe-eau...",
+      "Détection de fuite avec caméra thermique",
+      "Débouchage WC et canalisation avec furet pro ou hydrocurage",
+      "Urgence 24h/24 : même tarif jour, nuit, week-end",
+      "Tous types d'interventions : fuite, WC bouchés, chauffe-eau, dégât des eaux",
     ],
     serrurier: [
       "Ouverture sans dégât quand c'est possible",
@@ -295,11 +302,19 @@ export function generateCityFAQ(trade: Trade, city: City): FAQItem[] {
     plombier: [
       {
         question: `Combien coûte un plombier à ${city.name} ?`,
-        answer: `Chez Joël : fuite d'eau dès 89€, WC bouchés 79€, chauffe-eau en panne 99€. Prix TTC tout compris, sans surprise. Méfiez-vous des prix à 29€ qui explosent sur place.`,
+        answer: `Chez Joël : remplacement robinet 69€, débouchage WC 79€, fuite d'eau 89€, débouchage canalisation 99€, ballon eau chaude 129€. Prix TTC tout compris. Méfiez-vous des "29€" qui explosent sur place.`,
       },
       {
-        question: `Plombier urgence ${city.name} : quel délai ?`,
-        answer: `En moyenne 20 minutes. Nos plombiers à ${city.name} et dans le ${city.departmentName} sont disponibles 24h/24 pour fuite, dégât des eaux, WC bouché.`,
+        question: `Plombier urgence 24h à ${city.name} : quel délai ?`,
+        answer: `En moyenne 20 à 30 minutes. Nos plombiers à ${city.name} et dans le ${city.departmentName} sont disponibles 24h/24 pour fuite, dégât des eaux, WC bouchés, chauffe-eau. Même tarif nuit et week-end.`,
+      },
+      {
+        question: `Tarif plombier WC bouché à ${city.name} ?`,
+        answer: `Débouchage WC au furet : 79€ TTC. Débouchage avec hydrocurage : 149€ TTC. Prix fixe annoncé avant intervention, pas de surprise sur la facture.`,
+      },
+      {
+        question: `Plombier pas cher à ${city.name}, ça existe ?`,
+        answer: `Un "plombier à 29€" est souvent une arnaque. Nos vrais tarifs : dès 69€ pour un robinet, 79€ pour un WC. Pas cher ET honnête, c'est possible avec Joël.`,
       },
     ],
     serrurier: [

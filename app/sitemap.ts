@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/plomberie", priority: 0.9, changeFrequency: "weekly" as const },
     { url: "/serrurerie", priority: 0.9, changeFrequency: "weekly" as const },
     { url: "/serrurerie/tarifs", priority: 0.85, changeFrequency: "weekly" as const },
+    { url: "/plomberie/tarifs", priority: 0.85, changeFrequency: "weekly" as const },
     { url: "/electricite", priority: 0.9, changeFrequency: "weekly" as const },
     { url: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
     { url: "/stop-arnaques", priority: 0.8, changeFrequency: "monthly" as const },
@@ -38,12 +39,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Sous-pages de services existantes
   const existingServicePages = [
-    // Plombier
+    // Plombier - Services originaux
     "/plombier/fuite-eau",
     "/plombier/wc-bouches",
     "/plombier/degat-des-eaux",
     "/plombier/chauffe-eau-panne",
     "/plombier/remplacement-robinet",
+    // Plombier - Nouveaux services Ahrefs
+    "/plombier/debouchage-canalisation",
+    "/plombier/urgence-24h",
+    "/plombier/recherche-fuite",
+    "/plombier/ballon-eau-chaude",
+    "/plombier/chaudiere-panne",
+    "/plombier/debouchage-wc",
     // Serrurier - Services originaux
     "/serrurier/ouverture-sans-percage",
     "/serrurier/ouverture-avec-percage",
@@ -129,14 +137,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return entries;
 }
 
-// Note: Avec ~270 villes et ~26 services (dont 18 serrurerie), cela génère environ:
-// - 12 pages statiques
-// - 28 pages de services existantes  
-// - 10 articles de blog
+// Note: Avec ~970 villes et ~32 services (18 serrurerie + 12 plomberie + 6 électricité), cela génère environ:
+// - 13 pages statiques (dont tarifs)
+// - 34 pages de services existantes  
+// - 18+ articles de blog (10 serrurerie + 8 plomberie)
 // - 24 pages départements
-// - 270 * 3 = 810 pages métier/ville
-// - 270 * 26 = 7020 pages service/ville
-// Total: ~7900 URLs dans le sitemap
+// - 970 * 3 = 2910 pages métier/ville
+// - 970 * 32 = 31040 pages service/ville
+// Total: ~34 000+ URLs dans le sitemap
 //
 // Pour plus de 50k URLs, il faudrait créer un sitemap index.
 
