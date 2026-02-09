@@ -4,8 +4,8 @@ import ClientSchema from "@/components/ClientSchema";
 import { ABTestWrapper, LoadingSkeleton } from "@/components/ab";
 
 export const metadata: Metadata = {
-  title: "Plombier d'urgence Paris & Île-de-France | Prix Fixe 79€",
-  description: "Plombier d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Fuite, WC, chauffe-eau. Intervention 20 min, dès 79€. Sans majoration. 01 41 69 10 08",
+  title: "Plombier d'urgence Paris & Île-de-France | Dès 29€",
+  description: "Plombier d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Fuite, WC, chauffe-eau. Intervention 20 min, à partir de 29€. Sans majoration. 01 41 69 10 08",
   keywords: [
     "plombier urgence Paris",
     "plombier Île-de-France",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr/plomberie",
     siteName: "Joël",
-    title: "Plombier d'urgence Paris | Prix Fixe 79€ | Intervention 20 min",
-    description: "Plombier d'urgence à prix fixe. Intervention en 20 min, zéro arnaque. Appelez le 01 41 69 10 08.",
+    title: "Plombier d'urgence Paris | Dès 29€ | Intervention 20 min",
+    description: "Plombier d'urgence à partir de 29€. Intervention en 20 min, zéro arnaque. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Plombier d'urgence Paris | Prix Fixe 79€ | Intervention 20 min",
-    description: "Plombier d'urgence à prix fixe. Intervention en 20 min. Appelez le 01 41 69 10 08.",
+    title: "Plombier d'urgence Paris | Dès 29€ | Intervention 20 min",
+    description: "Plombier d'urgence à partir de 29€. Intervention en 20 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
