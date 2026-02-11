@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
@@ -36,6 +37,7 @@ interface NavLinkWithDropdown {
   href: string;
   label: string;
   subLinks?: { href: string; label: string }[];
+  highlight?: boolean;
 }
 
 const navLinks: NavLinkWithDropdown[] = [
@@ -45,6 +47,7 @@ const navLinks: NavLinkWithDropdown[] = [
   { href: "/serrurerie", label: "Serrurerie", subLinks: serrurerieSubLinks },
   { href: "/truescope", label: "TrueScope" },
   { href: "/stop-arnaques", label: "Anti-arnaque" },
+  { href: "/recrutement", label: "Nous recrutons", highlight: true },
 ];
 
 function DropdownMenu({ link, onClose }: { link: NavLinkWithDropdown; onClose: () => void }) {
@@ -64,7 +67,11 @@ function DropdownMenu({ link, onClose }: { link: NavLinkWithDropdown; onClose: (
     return (
       <Link
         href={link.href}
-        className="text-sm text-gray-700 hover:text-joel-violet font-medium transition-colors"
+        className={`text-sm font-medium transition-colors ${
+          link.highlight
+            ? "bg-joel-yellow/20 text-joel-violet hover:bg-joel-yellow/40 px-3 py-1 rounded-full font-bold"
+            : "text-gray-700 hover:text-joel-violet"
+        }`}
       >
         {link.label}
       </Link>
@@ -115,7 +122,11 @@ function MobileDropdown({ link, onClose }: { link: NavLinkWithDropdown; onClose:
       <Link
         href={link.href}
         onClick={onClose}
-        className="text-gray-700 hover:text-joel-violet font-medium transition-colors py-2"
+        className={`font-medium transition-colors py-2 ${
+          link.highlight
+            ? "bg-joel-yellow/20 text-joel-violet hover:bg-joel-yellow/40 px-3 rounded-lg font-bold"
+            : "text-gray-700 hover:text-joel-violet"
+        }`}
       >
         {link.label}
       </Link>
@@ -168,6 +179,8 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const { config } = useSiteConfig();
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -211,10 +224,12 @@ export default function Navigation() {
 
           {/* CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Badge SANS MAJORATION */}
-            <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
-              SANS MAJORATION
-            </span>
+            {/* Badge SANS MAJORATION - masqué sur la homepage */}
+            {!isHomepage && (
+              <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+                SANS MAJORATION
+              </span>
+            )}
             <a
               href={`tel:${formatPhoneForTel(config.phone_number)}`}
               data-placement="header"

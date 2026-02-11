@@ -46,6 +46,7 @@ const footerLinks = {
     { href: "/stop-arnaques", label: "Anti-arnaque" },
     { href: "/a-propos", label: "À propos" },
     { href: "/contact", label: "Contact" },
+    { href: "/recrutement", label: "Recrutement" },
   ],
   legal: [
     { href: "/mentions-legales", label: "Mentions légales" },
