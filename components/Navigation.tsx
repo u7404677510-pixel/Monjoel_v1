@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
@@ -60,17 +59,17 @@ function DropdownMenu({ link, onClose }: { link: NavLinkWithDropdown; onClose: (
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setIsOpen(false), 150);
+    timeoutRef.current = setTimeout(() => setIsOpen(false), 200);
   };
 
   if (!link.subLinks) {
     return (
       <Link
         href={link.href}
-        className={`text-sm font-medium transition-colors ${
+        className={`text-[13px] tracking-wide transition-all duration-200 ${
           link.highlight
-            ? "bg-joel-yellow/20 text-joel-violet hover:bg-joel-yellow/40 px-3 py-1 rounded-full font-bold"
-            : "text-gray-700 hover:text-joel-violet"
+            ? "text-joel-violet font-semibold bg-joel-yellow/25 hover:bg-joel-yellow/40 px-3.5 py-1.5 rounded-full"
+            : "text-gray-600 hover:text-gray-900 font-normal"
         }`}
       >
         {link.label}
@@ -86,24 +85,32 @@ function DropdownMenu({ link, onClose }: { link: NavLinkWithDropdown; onClose: (
     >
       <Link
         href={link.href}
-        className="flex items-center gap-1 text-sm text-gray-700 hover:text-joel-violet font-medium transition-colors"
+        className="flex items-center gap-0.5 text-[13px] text-gray-600 hover:text-gray-900 font-normal tracking-wide transition-all duration-200 py-2"
       >
         {link.label}
-        <ChevronDown size={16} className={`transition-transform duration-150 ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown
+          size={14}
+          className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+        />
       </Link>
 
+      {/* Zone invisible pour garder le hover entre le lien et le dropdown */}
+      <div className="absolute top-full left-0 w-full h-2" />
+
       <div
-        className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50 transition-all duration-150 ${
-          isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
+        className={`absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-52 bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100/80 overflow-hidden z-50 transition-all duration-200 origin-top ${
+          isOpen
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 -translate-y-1 pointer-events-none"
         }`}
       >
-        <div className="py-2">
+        <div className="py-1.5">
           {link.subLinks.map((subLink) => (
             <Link
               key={subLink.href}
               href={subLink.href}
               onClick={onClose}
-              className="block px-4 py-2.5 text-sm text-gray-600 hover:text-joel-violet hover:bg-joel-violet/5 transition-colors"
+              className="block px-4 py-2.5 text-[13px] text-gray-500 hover:text-joel-violet hover:bg-gray-50/80 transition-all duration-150"
             >
               {subLink.label}
             </Link>
@@ -122,10 +129,10 @@ function MobileDropdown({ link, onClose }: { link: NavLinkWithDropdown; onClose:
       <Link
         href={link.href}
         onClick={onClose}
-        className={`font-medium transition-colors py-2 ${
+        className={`transition-all duration-200 py-2.5 ${
           link.highlight
-            ? "bg-joel-yellow/20 text-joel-violet hover:bg-joel-yellow/40 px-3 rounded-lg font-bold"
-            : "text-gray-700 hover:text-joel-violet"
+            ? "text-joel-violet font-semibold bg-joel-yellow/15 hover:bg-joel-yellow/30 px-4 rounded-xl text-[15px]"
+            : "text-gray-800 hover:text-joel-violet font-normal text-[15px] px-1"
         }`}
       >
         {link.label}
@@ -139,31 +146,34 @@ function MobileDropdown({ link, onClose }: { link: NavLinkWithDropdown; onClose:
         <Link
           href={link.href}
           onClick={onClose}
-          className="text-gray-700 hover:text-joel-violet font-medium transition-colors py-2"
+          className="text-gray-800 hover:text-joel-violet font-normal transition-all duration-200 py-2.5 text-[15px] px-1"
         >
           {link.label}
         </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 text-gray-500 hover:text-joel-violet"
+          className="p-2 text-gray-400 hover:text-joel-violet transition-colors"
           aria-label={isOpen ? "Fermer le sous-menu" : "Ouvrir le sous-menu"}
         >
-          <ChevronDown size={18} className={`transition-transform duration-150 ${isOpen ? "rotate-180" : ""}`} />
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          />
         </button>
       </div>
 
       <div
-        className={`overflow-hidden transition-all duration-200 ${
+        className={`overflow-hidden transition-all duration-250 ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="pl-4 border-l-2 border-joel-violet/20 ml-2 space-y-1">
+        <div className="pl-4 border-l border-gray-200 ml-3 space-y-0.5 pb-1">
           {link.subLinks.map((subLink) => (
             <Link
               key={subLink.href}
               href={subLink.href}
               onClick={onClose}
-              className="block py-2 text-sm text-gray-500 hover:text-joel-violet transition-colors"
+              className="block py-2 text-[13px] text-gray-400 hover:text-joel-violet transition-colors"
             >
               {subLink.label}
             </Link>
@@ -179,8 +189,6 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const { config } = useSiteConfig();
-  const pathname = usePathname();
-  const isHomepage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -192,12 +200,12 @@ export default function Navigation() {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [isMobileMenuOpen]);
 
@@ -205,98 +213,90 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled || isMobileMenuOpen
-          ? "bg-white/95 backdrop-blur-lg shadow-lg"
-          : "bg-white/80 backdrop-blur-sm"
+          ? "bg-white/80 backdrop-blur-2xl shadow-[0_1px_3px_rgba(0,0,0,0.05)]"
+          : "bg-white/60 backdrop-blur-xl"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between h-14">
           <Logo />
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          {/* Desktop Navigation - centré */}
+          <div className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <DropdownMenu key={link.href} link={link} onClose={closeMobileMenu} />
             ))}
           </div>
 
           {/* CTA Buttons - Desktop */}
-          <div className="hidden md:flex items-center gap-3">
-            {/* Badge SANS MAJORATION - masqué sur la homepage */}
-            {!isHomepage && (
-              <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
-                SANS MAJORATION
-              </span>
-            )}
+          <div className="hidden lg:flex items-center gap-2.5">
             <a
               href={`tel:${formatPhoneForTel(config.phone_number)}`}
               data-placement="header"
-              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-joel text-white font-semibold rounded-full hover:shadow-lg transition-all"
+              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-joel text-white text-sm font-semibold rounded-full hover:shadow-lg transition-all duration-200"
             >
-              <Phone size={18} />
+              <Phone size={14} />
               <span>{config.phone_number}</span>
             </a>
             <button
               onClick={() => setShowQuoteModal(true)}
-              className="flex items-center gap-2 px-4 py-2.5 bg-white text-joel-violet font-semibold rounded-full border-2 border-joel-violet/20 hover:border-joel-violet hover:bg-joel-violet/5 transition-all"
+              className="flex items-center gap-1.5 px-4 py-2 text-gray-600 text-[13px] font-medium rounded-full border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-200"
             >
-              <span>Demander un devis</span>
-              <ArrowRight size={16} />
+              <span>Devis gratuit</span>
+              <ArrowRight size={13} />
             </button>
           </div>
 
           {/* Mobile Right Section */}
-          <div className="md:hidden flex items-center gap-2">
-            {/* Phone CTA Icon - Mobile */}
+          <div className="lg:hidden flex items-center gap-3">
             <a
               href={`tel:${formatPhoneForTel(config.phone_number)}`}
               data-placement="header-mobile"
-              className="flex items-center justify-center w-10 h-10 bg-emerald-500 text-white rounded-full shadow-lg"
+              className="flex items-center justify-center w-9 h-9 bg-gray-900 text-white rounded-full"
               aria-label="Appeler"
             >
-              <Phone size={18} />
+              <Phone size={15} />
             </a>
-            {/* Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-gray-700"
+              className="p-1.5 text-gray-600 hover:text-gray-900 transition-colors"
               aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden mt-4 pb-4 bg-white overflow-hidden transition-all duration-200 ${
-            isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? "max-h-[600px] opacity-100 pb-6"
+              : "max-h-0 opacity-0"
           }`}
         >
-          <div className="flex flex-col gap-2">
-            {/* Badge visible en mobile */}
-            <div className="flex justify-center mb-2">
-              <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
-                SANS MAJORATION 24h/24
-              </span>
+          <div className="pt-2 border-t border-gray-100">
+            <div className="flex flex-col gap-0.5 mt-2">
+              {navLinks.map((link) => (
+                <MobileDropdown key={link.href} link={link} onClose={closeMobileMenu} />
+              ))}
             </div>
-            {navLinks.map((link) => (
-              <MobileDropdown key={link.href} link={link} onClose={closeMobileMenu} />
-            ))}
-            {/* Devis button only - call is handled by sticky button */}
-            <button
-              onClick={() => {
-                setShowQuoteModal(true);
-                closeMobileMenu();
-              }}
-              className="flex items-center justify-center gap-2 px-5 py-3 bg-joel-violet text-white font-semibold rounded-full mt-4"
-            >
-              <span>Demander un devis gratuit</span>
-              <ArrowRight size={16} />
-            </button>
+
+            <div className="mt-6 flex flex-col gap-2.5">
+              <button
+                onClick={() => {
+                  setShowQuoteModal(true);
+                  closeMobileMenu();
+                }}
+                className="flex items-center justify-center gap-2 py-3 bg-gray-900 text-white text-[15px] font-medium rounded-2xl transition-all duration-200"
+              >
+                <span>Demander un devis gratuit</span>
+                <ArrowRight size={15} />
+              </button>
+            </div>
           </div>
         </div>
       </nav>

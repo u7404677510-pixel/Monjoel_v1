@@ -14,7 +14,7 @@ interface RecruitmentRequest {
   lastName: string;
   email: string;
   phone: string;
-  trade: string;
+  trades: string[];
   zone: string;
   message?: string;
 }
@@ -34,7 +34,7 @@ async function sendEmailNotification(data: RecruitmentRequest): Promise<void> {
     return;
   }
 
-  const tradeLabel = tradeLabels[data.trade] || data.trade;
+  const tradeLabel = data.trades.map((t) => tradeLabels[t] || t).join(", ");
 
   const emailHtml = `
 <!DOCTYPE html>
@@ -107,7 +107,7 @@ async function sendEmailNotification(data: RecruitmentRequest): Promise<void> {
   const { error } = await resend.emails.send({
     from: fromEmail,
     to: NOTIFICATION_EMAIL,
-    subject: `👷 Nouvelle candidature ${tradeLabels[data.trade] || data.trade} - ${data.firstName} ${data.lastName}`,
+    subject: `👷 Nouvelle candidature ${data.trades.map((t) => tradeLabels[t] || t).join(", ")} - ${data.firstName} ${data.lastName}`,
     html: emailHtml,
     replyTo: data.email,
   });
@@ -127,7 +127,7 @@ export async function POST(request: NextRequest) {
     const body: RecruitmentRequest = await request.json();
 
     // Validation des champs requis
-    if (!body.firstName || !body.lastName || !body.email || !body.phone || !body.trade || !body.zone) {
+    if (!body.firstName || !body.lastName || !body.email || !body.phone || !body.trades || !body.trades.length || !body.zone) {
       return NextResponse.json(
         { error: "Tous les champs obligatoires doivent être remplis." },
         { status: 400 }
@@ -155,7 +155,7 @@ export async function POST(request: NextRequest) {
 
     // Validation corps de métier
     const validTrades = ["serrurerie", "plomberie", "electricite"];
-    if (!validTrades.includes(body.trade)) {
+    if (!body.trades.every((t: string) => validTrades.includes(t))) {
       return NextResponse.json(
         { error: "Corps de métier invalide." },
         { status: 400 }
@@ -164,7 +164,7 @@ export async function POST(request: NextRequest) {
 
     console.log("👷 Nouvelle candidature artisan:", {
       name: `${body.firstName} ${body.lastName}`,
-      trade: body.trade,
+      trades: body.trades,
       zone: body.zone,
     });
 

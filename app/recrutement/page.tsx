@@ -55,7 +55,7 @@ export default function RecrutementPage() {
     lastName: "",
     email: "",
     phone: "",
-    trade: "",
+    trades: [] as string[],
     zone: "",
     message: "",
   });
@@ -90,7 +90,7 @@ export default function RecrutementPage() {
         lastName: "",
         email: "",
         phone: "",
-        trade: "",
+        trades: [],
         zone: "",
         message: "",
       });
@@ -101,15 +101,17 @@ export default function RecrutementPage() {
   };
 
   return (
-    <div className="pt-32 pb-16">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-joel-violet/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-joel-mauve/10 rounded-full blur-3xl" />
-        </div>
+    <div className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5 relative overflow-hidden">
+      {/* Background decorations continues */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-joel-violet/8 rounded-full blur-3xl" />
+        <div className="absolute top-[40%] right-0 w-[400px] h-[400px] bg-joel-mauve/8 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-0 w-[450px] h-[450px] bg-joel-violet/6 rounded-full blur-3xl" />
+        <div className="absolute bottom-[30%] right-1/4 w-[350px] h-[350px] bg-joel-yellow/5 rounded-full blur-3xl" />
+      </div>
 
+      {/* Hero Section */}
+      <div className="relative">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -346,21 +348,25 @@ export default function RecrutementPage() {
                     />
                   </div>
 
-                  {/* Corps de métier */}
+                  {/* Corps de métier - sélection multiple */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Corps de métier <span className="text-red-500">*</span>
+                      <span className="text-gray-400 font-normal text-xs ml-1">(un ou plusieurs)</span>
                     </label>
                     <div className="grid grid-cols-3 gap-3">
                       {trades.map((trade) => {
-                        const isSelected = formData.trade === trade.value;
+                        const isSelected = formData.trades.includes(trade.value);
                         return (
                           <button
                             key={trade.value}
                             type="button"
-                            onClick={() =>
-                              setFormData({ ...formData, trade: trade.value })
-                            }
+                            onClick={() => {
+                              const newTrades = isSelected
+                                ? formData.trades.filter((t) => t !== trade.value)
+                                : [...formData.trades, trade.value];
+                              setFormData({ ...formData, trades: newTrades });
+                            }}
                             className={`flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all ${
                               isSelected
                                 ? "border-joel-violet bg-joel-violet/5 text-joel-violet shadow-md"
@@ -384,7 +390,7 @@ export default function RecrutementPage() {
                     <input
                       type="text"
                       required
-                      value={formData.trade}
+                      value={formData.trades.join(",")}
                       onChange={() => {}}
                       className="sr-only"
                       tabIndex={-1}
