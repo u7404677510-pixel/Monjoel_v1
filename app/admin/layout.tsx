@@ -14,6 +14,7 @@ import {
   LogOut,
   ChevronRight,
   Phone,
+  Users,
 } from "lucide-react";
 
 const menuItems = [
@@ -24,6 +25,7 @@ const menuItems = [
   { href: "/admin/personnalisation", label: "Personnalisation", icon: Settings },
   { href: "/admin/seo", label: "SEO", icon: Search },
   { href: "/admin/analytics", label: "Analytics & Ads", icon: BarChart3 },
+  { href: "/admin/recrutement", label: "Recrutement", icon: Users },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {

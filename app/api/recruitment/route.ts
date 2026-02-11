@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getSupabaseClient } from "@/lib/supabase";
 
 // Configuration
 const NOTIFICATION_EMAIL = "contact@monjoel.com";
@@ -120,6 +121,39 @@ async function sendEmailNotification(data: RecruitmentRequest): Promise<void> {
 }
 
 // ============================================
+// Sauvegarde dans Supabase
+// ============================================
+async function saveToSupabase(data: RecruitmentRequest): Promise<void> {
+  const supabase = getSupabaseClient();
+
+  if (!supabase) {
+    console.warn("⚠️ Supabase not configured, skipping database save");
+    return;
+  }
+
+  const cleanPhone = data.phone.replace(/\s/g, "");
+
+  const { error } = await supabase.from("recruitment_applications").insert([
+    {
+      first_name: data.firstName,
+      last_name: data.lastName,
+      email: data.email,
+      phone: cleanPhone,
+      trades: data.trades,
+      zone: data.zone,
+      message: data.message || null,
+      status: "new",
+    },
+  ]);
+
+  if (error) {
+    throw new Error(`Supabase error: ${error.message}`);
+  }
+
+  console.log("✅ Recruitment application saved to Supabase");
+}
+
+// ============================================
 // ROUTE HANDLER
 // ============================================
 export async function POST(request: NextRequest) {
@@ -168,13 +202,19 @@ export async function POST(request: NextRequest) {
       zone: body.zone,
     });
 
-    // Envoyer la notification email
-    try {
-      await sendEmailNotification(body);
-    } catch (emailError) {
-      console.error("❌ Email notification failed:", emailError);
-      // On ne bloque pas la réponse si l'email échoue
-    }
+    // Sauvegarder et envoyer l'email en parallèle
+    const results = await Promise.allSettled([
+      saveToSupabase(body),
+      sendEmailNotification(body),
+    ]);
+
+    // Log des résultats
+    const channels = ["Supabase", "Email"];
+    results.forEach((result, index) => {
+      if (result.status === "rejected") {
+        console.error(`❌ ${channels[index]} failed:`, result.reason);
+      }
+    });
 
     return NextResponse.json({
       success: true,

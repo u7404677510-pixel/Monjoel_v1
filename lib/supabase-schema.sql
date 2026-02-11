@@ -102,6 +102,25 @@ CREATE TABLE IF NOT EXISTS leads (
 CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status);
 CREATE INDEX IF NOT EXISTS idx_leads_created_at ON leads(created_at DESC);
 
+-- Table des candidatures recrutement
+CREATE TABLE IF NOT EXISTS recruitment_applications (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  trades TEXT[] NOT NULL,
+  zone TEXT NOT NULL,
+  message TEXT,
+  status TEXT DEFAULT 'new',
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Index pour recherche rapide
+CREATE INDEX IF NOT EXISTS idx_recruitment_status ON recruitment_applications(status);
+CREATE INDEX IF NOT EXISTS idx_recruitment_created_at ON recruitment_applications(created_at DESC);
+
 -- =============================================
 -- POLITIQUES DE SÉCURITÉ (RLS)
 -- =============================================
@@ -128,4 +147,8 @@ CREATE POLICY "Allow anon write" ON partners FOR ALL USING (true);
 CREATE POLICY "Allow anon write" ON seo_pages FOR ALL USING (true);
 CREATE POLICY "Allow anon write" ON analytics_config FOR ALL USING (true);
 CREATE POLICY "Allow anon write" ON leads FOR ALL USING (true);
+
+ALTER TABLE recruitment_applications ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow public read" ON recruitment_applications FOR SELECT USING (true);
+CREATE POLICY "Allow anon write" ON recruitment_applications FOR ALL USING (true);
 

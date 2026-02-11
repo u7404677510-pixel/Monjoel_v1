@@ -92,3 +92,17 @@ export interface Lead {
   updated_at: string;
 }
 
+export interface RecruitmentApplication {
+  id: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone: string;
+  trades: string[];
+  zone: string;
+  message: string | null;
+  status: string;
+  created_at: string;
+  updated_at: string;
+}
+
