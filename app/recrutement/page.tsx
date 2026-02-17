@@ -85,6 +85,14 @@ export default function RecrutementPage() {
 
       setSending(false);
       setSent(true);
+
+      // Google Ads conversion tracking - Envoi formulaire lead recrutement
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-17805011663/lrrjCIqzkPobEM_Vi6pC',
+        });
+      }
+
       setFormData({
         firstName: "",
         lastName: "",
