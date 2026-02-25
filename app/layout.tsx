@@ -32,7 +32,7 @@ const chillax = localFont({
 // Environment variables for tracking
 const COOKIEBOT_ID = process.env.NEXT_PUBLIC_COOKIEBOT_ID || "c1addd46-5bcb-4d18-835f-4db63cde7755";
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-NFKDT6QC";
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || ""; // À configurer sur https://clarity.microsoft.com
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "vmz6t8rx14";
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""; // À configurer sur https://www.google.com/recaptcha/admin
 
 export const viewport: Viewport = {
