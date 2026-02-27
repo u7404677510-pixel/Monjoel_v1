@@ -66,7 +66,7 @@ export const tradeConfigs: Record<TradeType, TradeConfig> = {
     name: "Électricien",
     namePlural: "électriciens",
     heroTitle: "Électricien d'urgence Paris",
-    heroImage: "/hero-electricite.webp",
+    heroImage: "/hero-electricite.jpg",
     priceFrom: 29,
     mainService: "Panne électrique",
     mainServicePrice: "à partir de 29€",

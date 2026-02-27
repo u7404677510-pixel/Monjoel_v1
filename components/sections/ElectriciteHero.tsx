@@ -164,10 +164,10 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
               {/* Main illustration - Optimized WebP */}
               <div className="relative rounded-3xl overflow-hidden">
                 <Image
-                  src="/hero-electricite.webp"
+                  src="/hero-electricite.jpg"
                   alt="Électricien professionnel - Dépannage électricité Paris Île-de-France"
                   width={600}
-                  height={600}
+                  height={500}
                   sizes="(max-width: 1024px) 100vw, 600px"
                   className="w-full h-auto object-cover"
                   loading="lazy"
