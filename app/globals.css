@@ -9,12 +9,12 @@
   background-position: center;
 }
 .hero-bg-electricite {
-  background-image: url('/hero-electricite.jpg');
+  background-image: url('/hero-electricite.webp');
   background-size: cover;
   background-position: center;
 }
 .hero-bg-plomberie {
-  background-image: url('/hero-plomberie.jpg');
+  background-image: url('/hero-plomberie.webp');
   background-size: cover;
   background-position: center;
 }

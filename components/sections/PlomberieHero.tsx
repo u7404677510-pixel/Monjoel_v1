@@ -164,7 +164,7 @@ export default function PlomberieHero({ title, subtitle, description }: Plomberi
               {/* Main illustration - Optimized WebP */}
               <div className="relative rounded-3xl overflow-hidden">
                 <Image
-                  src="/hero-plomberie.jpg"
+                  src="/hero-plomberie.webp"
                   alt="Plombier professionnel - Dépannage plomberie Paris Île-de-France"
                   width={600}
                   height={500}
