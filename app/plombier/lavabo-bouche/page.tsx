@@ -5,67 +5,62 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Lavabo Bouché Paris & IDF | Débouchage Siphon dès 69€",
-  description: "Lavabo bouché ou siphon encrassé ? Débouchage professionnel rapide. Évacuation lente, eau stagnante. Prix fixe, résultat garanti.",
+  title: "Lavabo Bouché Paris - Débouchage Rapide 69€ | Plombier Joël",
+  description: "Lavabo bouché ? Plombier débouche en 20 min à Paris & IDF. Siphon ou canalisation. Prix fixe 69€ annoncé avant intervention. Résultat garanti. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/lavabo-bouche",
-  },
-  openGraph: {
-    title: "Lavabo Bouché | Débouchage Siphon | Joël",
-    description: "Lavabo bouché ? Débouchage express. Siphon, évacuation lente. Résultat garanti.",
-    url: "https://monjoel.fr/plombier/lavabo-bouche",
   },
 };
 
 const doList = [
-  "Diagnostic de l'origine du bouchon",
-  "Démontage et nettoyage du siphon",
-  "Débouchage par ventouse ou furet",
-  "Vérification de la canalisation",
-  "Remontage et test d'écoulement",
-  "Conseils pour éviter les récidives",
+  "Débouchage siphon ou canalisation",
+  "Nettoyage complet du siphon",
+  "Résultat garanti",
+  "Prix fixe annoncé avant intervention",
 ];
 
 const dontList = [
-  "Verser de l'huile ou de la graisse dans le lavabo",
-  "Laisser tomber des cheveux dans l'évacuation",
-  "Utiliser des produits chimiques agressifs",
-  "Ignorer une évacuation lente",
+  "Forcer sans identifier la cause",
+  "Facturer des frais cachés",
+  "Laisser un siphon mal remonté",
+  "Promettre un prix puis le gonfler",
 ];
 
 const benefitsList = [
-  "Débouchage garanti ou remboursé",
-  "Intervention en 30 minutes",
-  "Méthode propre sans produit chimique",
-  "Prix fixe annoncé avant",
+  "Lavabo qui s'écoule normalement",
+  "Siphon propre et fonctionnel",
+  "Un prix clair, payé une seule fois",
+  "Artisan vérifié et assuré",
 ];
 
 const faqs = [
   {
-    question: "Pourquoi mon lavabo est-il bouché ?",
-    answer: "Les causes principales sont : accumulation de cheveux, savon et dentifrice dans le siphon, objets tombés (bijoux, bouchons), ou calcaire dans la canalisation.",
+    question: "Pourquoi mon lavabo se bouche-t-il ?",
+    answer: "Les causes principales : accumulation de cheveux et de savon dans le siphon, dépôt de calcaire sur les parois, ou bouchon dans la canalisation murale. Le nettoyage régulier du siphon prévient la plupart des bouchons.",
   },
   {
-    question: "Combien coûte un débouchage de lavabo ?",
-    answer: "Le débouchage de lavabo coûte dès 69€ chez Joël. Le prix est fixe et garanti, sans surprise.",
+    question: "Combien coûte le débouchage d'un lavabo ?",
+    answer: "Le prix fixe est de 69€ pour un débouchage siphon ou canalisation standard. Nettoyage complet inclus. Tu connais le prix AVANT notre intervention.",
   },
   {
-    question: "Puis-je déboucher mon lavabo moi-même ?",
-    answer: "Vous pouvez essayer avec une ventouse ou démonter le siphon pour le nettoyer. Si le bouchon est plus profond, faites appel à un professionnel.",
+    question: "Peut-on déboucher un lavabo soi-même ?",
+    answer: "Pour un siphon encombré de cheveux, oui. Mais si l'eau stagne malgré un nettoyage du siphon, le bouchon est plus loin dans la canalisation — appelez un plombier.",
   },
   {
-    question: "L'eau s'écoule très lentement, que faire ?",
-    answer: "C'est le signe d'un bouchon partiel. Mieux vaut intervenir rapidement avant qu'il ne devienne total. Appelez-nous pour un débouchage express.",
+    question: "Le résultat est-il garanti ?",
+    answer: "Oui. Si le siphon ne suffit pas, on intervient sur la canalisation. Résultat garanti avant de partir.",
   },
   {
-    question: "Utilisez-vous des produits chimiques ?",
-    answer: "Non, nous privilégions les méthodes mécaniques (ventouse, furet) qui sont plus efficaces et non polluantes.",
+    question: "Vous intervenez en urgence ?",
+    answer: "Oui, 24h/24, 7j/7. Lavabo bouché qui déborde ? On intervient en 20 min sur Paris et toute l'Île-de-France. Même tarif sans majoration.",
   },
   {
-    question: "Récupérez-vous les objets tombés dans le siphon ?",
-    answer: "Oui, nous pouvons récupérer les objets tombés dans le siphon (bagues, bouchons d'oreilles, etc.) lors du démontage.",
+    question: "Comment éviter les bouchons à l'avenir ?",
+    answer: "Utilisez un filtre de bonde pour retenir les cheveux. Nettoyez le siphon tous les 3 mois avec du vinaigre blanc et du bicarbonate. Évitez de verser des graisses dans le lavabo.",
   },
 ];
 
@@ -73,9 +68,21 @@ export default function LavaboBouchePage() {
   return (
     <>
       <PlomberieHero
-        title="Lavabo bouché : débouchage siphon"
+        title="Lavabo bouché - Débouchage rapide"
         subtitle="Plomberie"
-        description="Lavabo bouché, eau qui stagne, évacuation lente ? Nos plombiers nettoient votre siphon et débouchent la canalisation. Rapide et efficace."
+        description="Lavabo de salle de bain qui ne s'écoule plus ? Nos plombiers débouchent en 20 min à Paris & IDF. Siphon ou canalisation, nettoyage complet inclus. Prix fixe 69€."
+        servicePrice="69€"
+      />
+      <ServicePricingHighlight
+        serviceName="Lavabo bouché"
+        price="69€"
+        trade="plomberie"
+        features={[
+          "Débouchage siphon ou canalisation",
+          "Nettoyage complet inclus",
+          "Résultat garanti",
+          "Prix fixe — zéro surprise",
+        ]}
       />
       <PlomberieServiceCards
         doList={doList}
@@ -83,9 +90,10 @@ export default function LavaboBouchePage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="plomberie" />
       <TransparenceSection
-        description="Un lavabo qui ne se vide pas, c'est agaçant. Chez Joël, on débouche vite et proprement. Prix fixe, résultat garanti."
-        points={["Nettoyage complet du siphon", "Débouchage sans produit chimique", "Intervention en 30 min"]}
+        description="Un lavabo bouché, c'est vite agaçant. Chez Joël, on débouche proprement avec nettoyage complet du siphon. Résultat garanti."
+        points={["Nettoyage complet", "Résultat garanti", "Prix fixe 69€"]}
       />
       <ServiceFAQ faqs={faqs} serviceName="Lavabo bouché" />
       <FinalCTA />

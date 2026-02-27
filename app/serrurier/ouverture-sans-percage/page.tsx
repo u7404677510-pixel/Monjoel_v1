@@ -5,17 +5,22 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Ouverture Porte Claquée | Serrurier Joël - Prix Fixe",
-  description: "Porte claquée ? Ouverture sans dégâts. Prix fixe annoncé avant intervention. Serrurier disponible 24h/24, intervention en 30 min.",
+  title: "Porte Claquée Paris - Ouverture Sans Perçage 89€ | Serrurier Joël",
+  description: "Porte claquée ? Serrurier ouvre sans dégâts en 20 min à Paris & IDF. Prix fixe 89€ annoncé avant intervention. 24h/24, zéro arnaque. 01 41 69 10 08",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/ouverture-sans-percage",
+  },
 };
 
 const doList = [
   "Ouverture radio si porte claquée (non verrouillée)",
   "Techniques non destructives en priorité",
   "Prix fixe annoncé avant intervention",
-  "Intervention en ~30 min en moyenne",
+  "Intervention en ~20 min en moyenne",
 ];
 
 const dontList = [
@@ -43,7 +48,7 @@ const faqs = [
   },
   {
     question: "Combien ça coûte ?",
-    answer: "Le prix est fixe et annoncé avant l'intervention : 119€ en moyenne pour une porte claquée. Tu payes ce prix, pas un euro de plus.",
+    answer: "Le prix fixe est de 89€ pour une ouverture porte claquée sans perçage. Tu payes ce prix, pas un euro de plus.",
   },
   {
     question: "Vous intervenez la nuit ?",
@@ -63,9 +68,21 @@ export default function OuvertureSansPercagePage() {
   return (
     <>
       <SerrurerieHero
-        title="Ouverture porte claquée"
+        title="Porte claquée - Ouverture sans perçage"
         subtitle="Serrurerie"
-        description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe, intervention rapide."
+        description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe 89€, intervention en 20 min."
+        servicePrice="89€"
+      />
+      <ServicePricingHighlight
+        serviceName="Ouverture porte claquée"
+        price="89€"
+        trade="serrurerie"
+        features={[
+          "Ouverture sans perçage en priorité",
+          "Porte intacte garantie",
+          "Intervention en 20 min",
+          "Prix fixe — zéro surprise",
+        ]}
       />
       <SerrurerieServiceCards
         doList={doList}
@@ -73,6 +90,7 @@ export default function OuvertureSansPercagePage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="serrurerie" />
       <TransparenceSection
         description="L'ouverture radio fonctionne uniquement sur les portes claquées (pêne demi-tour enclenché, mais non verrouillée à clé). Si ta porte est fermée à clé, on t'informe des autres solutions disponibles avant d'intervenir."
         points={["Prix annoncé = prix payé", "Pas de majoration surprise", "Devis avant intervention"]}

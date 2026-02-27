@@ -5,67 +5,62 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Fuite Tuyau & Canalisation Paris & IDF | Réparation Urgente dès 99€",
-  description: "Tuyau percé ou fissuré ? Réparation urgente de fuite sur canalisation. Cuivre, PVC, PER. Intervention rapide, prix fixe garanti.",
+  title: "Fuite Tuyau Paris - Réparation Urgente 89€ | Plombier Joël",
+  description: "Tuyau qui fuit ? Plombier intervient en 20 min à Paris & IDF. Cuivre, PVC, multicouche. Arrêt de fuite immédiat. Prix fixe 89€ annoncé avant. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/fuite-tuyau",
-  },
-  openGraph: {
-    title: "Fuite Tuyau | Réparation Canalisation | Joël",
-    description: "Tuyau percé ? Réparation urgente. Cuivre, PVC, PER. Intervention express, prix fixe.",
-    url: "https://monjoel.fr/plombier/fuite-tuyau",
   },
 };
 
 const doList = [
-  "Localisation précise de la fuite",
-  "Coupure de l'arrivée d'eau si urgence",
-  "Réparation par soudure ou raccord",
-  "Remplacement de la section endommagée",
-  "Test d'étanchéité après réparation",
-  "Remise en eau et vérification",
+  "Arrêt de fuite immédiat",
+  "Réparation cuivre, PVC, multicouche",
+  "Diagnostic complet de la canalisation",
+  "Prix fixe annoncé avant intervention",
 ];
 
 const dontList = [
-  "Ignorer une petite fuite (elle va s'aggraver)",
-  "Utiliser du ruban adhésif comme solution",
-  "Forcer sur un tuyau corrodé",
-  "Attendre le dégât des eaux",
+  "Laisser la fuite sans la traiter",
+  "Facturer des frais cachés",
+  "Créer des dégâts supplémentaires",
+  "Promettre un prix puis le gonfler",
 ];
 
 const benefitsList = [
-  "Intervention urgente 24h/24",
-  "Tous types de tuyaux (cuivre, PVC, PER)",
-  "Réparation durable garantie",
-  "Prix fixe annoncé avant travaux",
+  "Fuite stoppée rapidement",
+  "Réparation durable toutes matières",
+  "Un prix clair, payé une seule fois",
+  "Artisan vérifié et assuré",
 ];
 
 const faqs = [
   {
-    question: "Comment savoir si j'ai une fuite sur un tuyau ?",
-    answer: "Signes révélateurs : trace d'humidité sur un mur, compteur d'eau qui tourne sans raison, bruit d'écoulement, baisse de pression, ou flaque d'eau inexpliquée.",
+    question: "Comment identifier un tuyau qui fuit ?",
+    answer: "Traces d'humidité au plafond ou mur, son d'eau qui coule sans robinet ouvert, facture d'eau anormalement élevée, pression d'eau faible, ou tache de calcaire sur un raccord.",
   },
   {
-    question: "Combien coûte la réparation d'un tuyau percé ?",
-    answer: "La réparation d'une fuite sur tuyau coûte dès 99€ chez Joël. Le prix dépend du type de tuyau et de l'accessibilité. Devis précis avant intervention.",
+    question: "Combien coûte la réparation d'un tuyau qui fuit ?",
+    answer: "Le prix fixe est de 89€ pour une réparation de fuite sur tuyau accessible. Pour une canalisation encastrée, vous recevez un devis détaillé AVANT les travaux.",
   },
   {
-    question: "Réparez-vous les tuyaux encastrés ?",
-    answer: "Oui, nous intervenons sur les tuyaux apparents et encastrés. Pour les tuyaux encastrés, nous proposons d'abord une recherche de fuite non destructive.",
+    question: "Vous réparez tous les types de tuyaux ?",
+    answer: "Oui : cuivre, PVC, multicouche, acier galvanisé, PER. Nos plombiers ont les raccords et pièces courants en stock pour une réparation immédiate.",
   },
   {
-    question: "Que faire en attendant le plombier ?",
-    answer: "Coupez l'arrivée d'eau au robinet d'arrêt général. Épongez l'eau pour éviter les dégâts. Coupez l'électricité si l'eau touche des prises ou appareils.",
+    question: "Que faire en urgence pour une fuite de tuyau ?",
+    answer: "Coupez l'eau générale (vanne au compteur). Si la fuite est proche d'une installation électrique, coupez également le courant. Appelez-nous immédiatement.",
   },
   {
-    question: "Un tuyau en cuivre peut-il être réparé ?",
-    answer: "Oui, le cuivre se répare très bien par soudure ou manchon. Si la canalisation est trop corrodée, on remplace la section endommagée.",
+    question: "La réparation est-elle garantie ?",
+    answer: "Oui, 1 an de garantie sur la main d'œuvre, 2 ans sur les pièces installées. Si la fuite reprend, on revient gratuitement.",
   },
   {
-    question: "Proposez-vous un remplacement complet des canalisations ?",
-    answer: "Oui, nous proposons la rénovation complète des canalisations (cuivre vers PER par exemple). Devis gratuit sur demande.",
+    question: "Fournissez-vous une attestation pour l'assurance dégât des eaux ?",
+    answer: "Oui, nous fournissons une facture détaillée et une attestation d'intervention acceptée par les assurances pour votre déclaration de sinistre.",
   },
 ];
 
@@ -73,9 +68,21 @@ export default function FuiteTuyauPage() {
   return (
     <>
       <PlomberieHero
-        title="Fuite tuyau : réparation urgente"
+        title="Tuyau qui fuit - Réparation urgente"
         subtitle="Plomberie"
-        description="Tuyau percé, fissuré ou qui fuit ? Nos plombiers interviennent en urgence pour réparer votre canalisation. Cuivre, PVC, PER : on gère tout."
+        description="Tuyau percé, raccord qui fuit ou canalisation endommagée ? Nos plombiers stoppent la fuite en 20 min à Paris & IDF. Toutes matières. Prix fixe 89€ garanti."
+        servicePrice="89€"
+      />
+      <ServicePricingHighlight
+        serviceName="Fuite tuyau / canalisation"
+        price="89€"
+        trade="plomberie"
+        features={[
+          "Arrêt de fuite immédiat",
+          "Réparation cuivre, PVC, multicouche",
+          "Attestation assurance fournie",
+          "Prix fixe — zéro surprise",
+        ]}
       />
       <PlomberieServiceCards
         doList={doList}
@@ -83,9 +90,10 @@ export default function FuiteTuyauPage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="plomberie" />
       <TransparenceSection
-        description="Une fuite de tuyau, c'est l'urgence. Chaque minute compte pour éviter le dégât des eaux. Chez Joël, on intervient vite avec le bon matériel."
-        points={["Réparation cuivre, PVC, PER", "Intervention 24h/24", "Garantie étanchéité"]}
+        description="Un tuyau qui fuit peut vite provoquer un dégât des eaux. Chez Joël, on stoppe la fuite immédiatement et on répare durablement. Pas de bande adhésive temporaire."
+        points={["Arrêt immédiat", "Réparation durable", "Attestation assurance"]}
       />
       <ServiceFAQ faqs={faqs} serviceName="Fuite tuyau" />
       <FinalCTA />

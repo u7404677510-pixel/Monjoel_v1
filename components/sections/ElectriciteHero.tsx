@@ -11,8 +11,9 @@ interface ElectriciteHeroProps {
   title: string;
   subtitle: string;
   description: string;
+  servicePrice?: string;
 }
-export default function ElectriciteHero({ title, subtitle, description }: ElectriciteHeroProps) {
+export default function ElectriciteHero({ title, subtitle, description, servicePrice }: ElectriciteHeroProps) {
   const { config } = useSiteConfig();
   const phoneNumber = config.phone_number || STATIC_PHONE;
   const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
@@ -191,8 +192,8 @@ export default function ElectriciteHero({ title, subtitle, description }: Electr
               <div
                 className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2 shadow-lg animate-scale-in delay-800"
               >
-                <p className="text-xs font-medium">À partir de</p>
-                <p className="font-bold text-xl">89€</p>
+                <p className="text-xs font-medium">{servicePrice ? "Prix fixe" : "À partir de"}</p>
+                <p className="font-bold text-xl">{servicePrice ?? "59€"}</p>
               </div>
             </div>
           </div>

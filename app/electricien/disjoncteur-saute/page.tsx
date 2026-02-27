@@ -5,29 +5,34 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Disjoncteur qui Saute - Diagnostic Rapide | Électricien Joël - Prix Fixe",
-  description: "Disjoncteur qui saute sans arrêt ? Diagnostic rapide et réparation de la cause. Prix fixe annoncé avant intervention. Électricien 24h/24.",
+  title: "Disjoncteur qui Saute Paris - Diagnostic & Réparation 69€ | Électricien Joël",
+  description: "Disjoncteur qui saute en permanence ? Électricien certifié identifie la cause et répare en 20 min. Prix fixe 69€ à Paris & IDF. 24h/24. 01 41 69 10 08",
+  alternates: {
+    canonical: "https://monjoel.fr/electricien/disjoncteur-saute",
+  },
 };
 
 const doList = [
-  "Diagnostic précis de la cause",
-  "Identification du circuit en surcharge",
-  "Réparation ou remplacement si nécessaire",
+  "Diagnostic de la cause exacte",
+  "Vérification du tableau complet",
+  "Réparation durable et sécurisée",
   "Prix fixe annoncé avant intervention",
 ];
 
 const dontList = [
-  "Remettre le disjoncteur sans trouver la cause",
-  "Facturer des diagnostics supplémentaires",
-  "Laisser le problème récidiver",
-  "Gonfler la facture une fois sur place",
+  "Remplacer sans identifier la cause",
+  "Facturer des frais cachés",
+  "Laisser l'installation en surcharge",
+  "Promettre un prix puis le gonfler",
 ];
 
 const benefitsList = [
-  "Cause identifiée et réparée",
-  "Plus de disjoncteur qui saute",
+  "Disjoncteur stable et fonctionnel",
+  "Cause identifiée et traitée",
   "Un prix clair, payé une seule fois",
   "Artisan certifié et assuré",
 ];
@@ -35,27 +40,27 @@ const benefitsList = [
 const faqs = [
   {
     question: "Pourquoi mon disjoncteur saute-t-il ?",
-    answer: "Les causes fréquentes : surcharge électrique (trop d'appareils), court-circuit, appareil défectueux, humidité, ou disjoncteur vieillissant. Notre électricien identifie la cause exacte.",
+    answer: "Un disjoncteur peut sauter pour trois raisons : surcharge électrique (trop d'appareils branchés), court-circuit (fil dénudé ou mauvais contact), ou défaut d'isolement (humidité ou appareil défectueux). Notre électricien identifie la cause exacte.",
   },
   {
-    question: "Combien coûte un diagnostic de disjoncteur ?",
-    answer: "Le prix moyen est de 69€ pour le diagnostic et la réparation simple. Ce prix est fixe et annoncé avant l'intervention.",
+    question: "Que faire quand le disjoncteur saute ?",
+    answer: "1) Débranchez les appareils sur le circuit concerné. 2) Essayez de remettre le disjoncteur en position ON. 3) Si ça resaute immédiatement, il y a un problème plus profond — appelez-nous.",
   },
   {
-    question: "Puis-je remettre le disjoncteur moi-même ?",
-    answer: "Vous pouvez essayer une fois. Si le disjoncteur saute à nouveau immédiatement, ne le remettez pas et appelez-nous. Cela indique un problème à traiter.",
+    question: "Combien coûte la réparation d'un disjoncteur ?",
+    answer: "Le prix fixe est de 69€ pour un diagnostic et une réparation simple. Si le problème nécessite plus de travail, tu connais le prix AVANT.",
   },
   {
-    question: "Combien de temps pour réparer ?",
-    answer: "Un diagnostic et une réparation simple prennent généralement 30 minutes à 1 heure. Si le problème est plus complexe, l'électricien vous informe.",
+    question: "C'est dangereux un disjoncteur qui saute ?",
+    answer: "Un disjoncteur qui saute régulièrement est un signal d'alerte. Il ne faut pas bloquer ou forcer le disjoncteur. Appelez-nous pour un diagnostic sécurisé.",
   },
   {
-    question: "Faut-il changer le disjoncteur ?",
-    answer: "Pas forcément ! Souvent le problème vient d'un appareil ou d'un circuit, pas du disjoncteur lui-même. Notre électricien te conseille honnêtement.",
+    question: "Vous intervenez en urgence ?",
+    answer: "Oui, nos électriciens interviennent 24h/24, 7j/7. Intervention en 20 min sur Paris et toute l'Île-de-France. Même tarif, sans majoration.",
   },
   {
-    question: "C'est dangereux si le disjoncteur saute souvent ?",
-    answer: "Le disjoncteur fait son travail de protection, mais des déclenchements répétés indiquent un problème à traiter. N'ignorez pas ce signal.",
+    question: "Faut-il remplacer le disjoncteur ?",
+    answer: "Pas toujours. Souvent, la cause est externe (surcharge, appareil défectueux). Notre électricien diagnostique d'abord avant de préconiser un remplacement.",
   },
 ];
 
@@ -63,9 +68,21 @@ export default function DisjoncteurSautePage() {
   return (
     <>
       <ElectriciteHero
-        title="Disjoncteur qui saute - Diagnostic rapide"
+        title="Disjoncteur qui saute - Diagnostic immédiat"
         subtitle="Électricité"
-        description="Disjoncteur qui saute sans arrêt ? On trouve la cause et on répare. Diagnostic précis, solution durable. Prix fixe annoncé avant intervention."
+        description="Votre disjoncteur saute en permanence ? Nos électriciens identifient la cause exacte et réparent en 20 min à Paris & IDF. Prix fixe 69€ garanti."
+        servicePrice="69€"
+      />
+      <ServicePricingHighlight
+        serviceName="Disjoncteur qui saute"
+        price="69€"
+        trade="electricite"
+        features={[
+          "Identification de la cause exacte",
+          "Diagnostic tableau complet inclus",
+          "Réparation durable garantie",
+          "Prix fixe — sans surprise",
+        ]}
       />
       <ElectriciteServiceCards
         doList={doList}
@@ -73,15 +90,13 @@ export default function DisjoncteurSautePage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="electricite" />
       <TransparenceSection
-        description="Un disjoncteur qui saute, c'est un signal à ne pas ignorer. Chez Joël, on trouve la vraie cause et on la traite. Pas de solution temporaire, pas de récidive."
-        points={["Diagnostic inclus", "Cause traitée définitivement", "Prix fixe garanti"]}
+        description="Un disjoncteur qui saute répétitivement n'est pas un problème anodin. Chez Joël, on identifie la vraie cause avant d'intervenir. Pas de travaux inutiles."
+        points={["Diagnostic précis", "Cause traitée définitivement", "Prix fixe garanti"]}
       />
-      <ServiceFAQ faqs={faqs} serviceName="Disjoncteur" />
+      <ServiceFAQ faqs={faqs} serviceName="Disjoncteur qui saute" />
       <FinalCTA />
     </>
   );
 }
-
-
-

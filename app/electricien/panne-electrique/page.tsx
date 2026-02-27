@@ -5,10 +5,15 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Panne Électrique - Intervention Urgente | Électricien Joël - Prix Fixe",
-  description: "Panne électrique ? Intervention urgente pour rétablir le courant. Prix fixe annoncé avant intervention. Électricien disponible 24h/24.",
+  title: "Panne Électrique Paris - Intervention Urgente 20 min | Prix Fixe 79€",
+  description: "Panne électrique ? Électricien certifié intervient en 20 min à Paris & IDF. Prix fixe 79€ annoncé avant intervention. Zéro arnaque, 24h/24. 01 41 69 10 08",
+  alternates: {
+    canonical: "https://monjoel.fr/electricien/panne-electrique",
+  },
 };
 
 const doList = [
@@ -39,7 +44,7 @@ const faqs = [
   },
   {
     question: "Combien coûte un dépannage de panne électrique ?",
-    answer: "Le prix moyen est de 79€ pour un diagnostic et une réparation simple. Si le problème est plus complexe, tu connais le prix AVANT l'intervention.",
+    answer: "Le prix fixe est de 79€ pour un diagnostic et une réparation simple. Si le problème est plus complexe, tu connais le prix AVANT l'intervention.",
   },
   {
     question: "Vous intervenez la nuit ?",
@@ -65,7 +70,19 @@ export default function PanneElectriquePage() {
       <ElectriciteHero
         title="Panne électrique - Intervention urgente"
         subtitle="Électricité"
-        description="Plus de courant ? On intervient rapidement pour diagnostiquer et réparer. Nos électriciens certifiés rétablissent l'électricité en toute sécurité. Prix fixe garanti."
+        description="Plus de courant ? Nos électriciens certifiés interviennent en 20 min à Paris & IDF. Diagnostic complet, réparation sur place. Prix fixe 79€ garanti."
+        servicePrice="79€"
+      />
+      <ServicePricingHighlight
+        serviceName="Panne électrique"
+        price="79€"
+        trade="electricite"
+        features={[
+          "Diagnostic complet inclus",
+          "Réparation sur place garantie",
+          "Prix fixe — zéro surprise",
+          "Électricien certifié BR/B1V",
+        ]}
       />
       <ElectriciteServiceCards
         doList={doList}
@@ -73,6 +90,7 @@ export default function PanneElectriquePage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="electricite" />
       <TransparenceSection
         description="Une panne électrique peut vite devenir stressante. Chez Joël, on intervient rapidement avec un prix fixe annoncé à l'avance. Pas de surprise, pas de facture gonflée."
         points={["Prix annoncé = prix payé", "Électriciens certifiés", "Intervention sécurisée"]}
@@ -82,6 +100,3 @@ export default function PanneElectriquePage() {
     </>
   );
 }
-
-
-

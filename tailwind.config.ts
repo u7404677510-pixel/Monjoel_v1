@@ -25,6 +25,12 @@ const config: Config = {
         "joel-mauve": "#9E76EC",
         "joel-yellow": "#F5D547",
         "joel-yellow-light": "#FFF8DC",
+        // Palette P1 CRO — bleu confiance + rouge urgence (WCAG AA ✓)
+        "p1-blue": "#0B63CE",
+        "p1-blue-dark": "#084C9E",
+        "p1-green": "#166534",
+        "p1-red": "#DC2626",
+        "p1-red-dark": "#B91C1C",
       },
       backgroundImage: {
         "gradient-joel": "linear-gradient(135deg, #7055A7 0%, #9E76EC 100%)",

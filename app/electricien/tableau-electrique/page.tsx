@@ -5,10 +5,15 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Tableau Électrique - Dépannage ou Remplacement | Électricien Joël - Prix Fixe",
-  description: "Problème de tableau électrique ? Dépannage ou remplacement complet. Prix fixe annoncé avant intervention. Électricien certifié 24h/24.",
+  title: "Tableau Électrique Paris - Dépannage ou Remplacement 149€ | Électricien Joël",
+  description: "Tableau électrique en panne ? Électricien certifié intervient en 20 min à Paris & IDF. Prix fixe 149€ annoncé avant intervention. Conformité garantie. 01 41 69 10 08",
+  alternates: {
+    canonical: "https://monjoel.fr/electricien/tableau-electrique",
+  },
 };
 
 const doList = [
@@ -39,7 +44,7 @@ const faqs = [
   },
   {
     question: "Combien coûte une intervention sur tableau électrique ?",
-    answer: "Le prix moyen est de 149€ pour une réparation. Pour un remplacement complet, le prix dépend de la taille du tableau. Tu reçois un devis détaillé AVANT intervention.",
+    answer: "Le prix fixe est de 149€ pour une réparation. Pour un remplacement complet, le prix dépend de la taille du tableau. Tu reçois un devis détaillé AVANT intervention.",
   },
   {
     question: "Combien de temps pour remplacer un tableau ?",
@@ -65,7 +70,19 @@ export default function TableauElectriquePage() {
       <ElectriciteHero
         title="Tableau électrique - Dépannage ou remplacement"
         subtitle="Électricité"
-        description="Problème de tableau électrique ? On diagnostique, répare ou remplace selon le besoin. Travail propre, installation sécurisée. Prix fixe garanti."
+        description="Problème de tableau électrique ? On diagnostique, répare ou remplace selon le besoin. Travail propre, installation sécurisée. Prix fixe 149€ garanti."
+        servicePrice="149€"
+      />
+      <ServicePricingHighlight
+        serviceName="Tableau électrique"
+        price="149€"
+        trade="electricite"
+        features={[
+          "Diagnostic honnête avant travaux",
+          "Réparation ou remplacement selon besoin",
+          "Conformité NF C 15-100 garantie",
+          "Attestation de conformité fournie",
+        ]}
       />
       <ElectriciteServiceCards
         doList={doList}
@@ -73,6 +90,7 @@ export default function TableauElectriquePage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="electricite" />
       <TransparenceSection
         description="Le tableau électrique est le cœur de ton installation. Chez Joël, on privilégie la réparation quand c'est possible. Et si le remplacement est nécessaire, on t'explique pourquoi."
         points={["Diagnostic honnête", "Conformité garantie", "Attestation fournie"]}
@@ -82,6 +100,3 @@ export default function TableauElectriquePage() {
     </>
   );
 }
-
-
-

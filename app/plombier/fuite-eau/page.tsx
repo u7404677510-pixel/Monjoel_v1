@@ -5,10 +5,15 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Fuite d'eau - Intervention Immédiate | Plombier Joël - Prix Fixe",
-  description: "Fuite d'eau urgente ? Intervention immédiate pour stopper la fuite. Prix fixe annoncé avant intervention. Plombier disponible 24h/24.",
+  title: "Fuite d'Eau Paris - Intervention Immédiate 89€ | Plombier Joël",
+  description: "Fuite d'eau urgente ? Plombier intervient en 20 min à Paris & IDF. Réparation durable, attestation assurance. Prix fixe 89€ annoncé avant. 01 41 69 10 08",
+  alternates: {
+    canonical: "https://monjoel.fr/plombier/fuite-eau",
+  },
 };
 
 const doList = [
@@ -39,7 +44,7 @@ const faqs = [
   },
   {
     question: "Combien coûte une réparation de fuite ?",
-    answer: "Le prix moyen est de 89€ pour une fuite simple (joint, raccord). Pour une fuite sur canalisation encastrée, le prix peut varier. Dans tous les cas, tu connais le prix AVANT l'intervention.",
+    answer: "Le prix fixe est de 89€ pour une fuite simple (joint, raccord). Pour une fuite sur canalisation encastrée, le prix peut varier. Dans tous les cas, tu connais le prix AVANT l'intervention.",
   },
   {
     question: "Vous intervenez la nuit et le week-end ?",
@@ -65,7 +70,19 @@ export default function FuiteEauPage() {
       <PlomberieHero
         title="Fuite d'eau - Intervention immédiate"
         subtitle="Plomberie"
-        description="Une fuite d'eau ? Chaque minute compte. Nos plombiers interviennent immédiatement pour stopper la fuite et réparer durablement. Prix fixe, pas de surprise."
+        description="Une fuite d'eau ? Chaque minute compte. Nos plombiers interviennent immédiatement pour stopper la fuite et réparer durablement. Prix fixe 89€, pas de surprise."
+        servicePrice="89€"
+      />
+      <ServicePricingHighlight
+        serviceName="Fuite d'eau"
+        price="89€"
+        trade="plomberie"
+        features={[
+          "Intervention immédiate 20 min",
+          "Réparation durable garantie",
+          "Attestation assurance fournie",
+          "Prix fixe — zéro surprise",
+        ]}
       />
       <PlomberieServiceCards
         doList={doList}
@@ -73,15 +90,13 @@ export default function FuiteEauPage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="plomberie" />
       <TransparenceSection
         description="Une fuite d'eau peut vite devenir un cauchemar. Chez Joël, on intervient rapidement avec un prix fixe annoncé à l'avance. Pas de mauvaise surprise, pas de facture gonflée."
-        points={["Prix annoncé = prix payé", "Intervention en ~30min", "Attestation assurance fournie"]}
+        points={["Prix annoncé = prix payé", "Intervention en ~20 min", "Attestation assurance fournie"]}
       />
       <ServiceFAQ faqs={faqs} serviceName="Fuite d'eau" />
       <FinalCTA />
     </>
   );
 }
-
-
-

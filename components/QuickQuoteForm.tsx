@@ -126,11 +126,17 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
 
       if (response.ok) {
         setIsSuccess(true);
-        // Track conversion
+        // Track conversion GA4 via dataLayer
         if (typeof window !== "undefined" && window.dataLayer) {
           window.dataLayer.push({
             event: "quote_form_success",
             form_problem: formData.problem,
+          });
+        }
+        // Google Ads conversion — Demande de devis
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", "conversion", {
+            send_to: "AW-17805011663/devis_form_success",
           });
         }
       } else {

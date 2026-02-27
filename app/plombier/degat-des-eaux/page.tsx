@@ -5,57 +5,62 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Dégât des Eaux - Que Faire ? | Plombier Joël - Prix Fixe",
-  description: "Dégât des eaux ? Intervention immédiate : recherche de fuite, réparation, attestation assurance. Prix fixe annoncé avant intervention.",
+  title: "Dégât des Eaux Paris - Urgence 20 min | Plombier Joël Prix Fixe",
+  description: "Dégât des eaux ? Plombier stoppe la fuite en 20 min à Paris & IDF. Constat + réparation + aide assurance. Prix fixe 129€ annoncé avant. 01 41 69 10 08",
+  alternates: {
+    canonical: "https://monjoel.fr/plombier/degat-des-eaux",
+  },
 };
 
 const doList = [
-  "Recherche de fuite professionnelle",
-  "Réparation de la source du dégât",
-  "Attestation pour votre assurance",
+  "Arrêt de fuite immédiat",
+  "Constat d'intervention détaillé",
+  "Aide pour déclaration assurance",
   "Prix fixe annoncé avant intervention",
 ];
 
 const dontList = [
-  "Vous laisser sans attestation",
-  "Facturer la recherche de fuite en plus",
-  "Créer des dégâts supplémentaires",
-  "Gonfler la facture une fois sur place",
+  "Laisser sans couper l'eau",
+  "Facturer des frais cachés",
+  "Aggraver les dégâts",
+  "Promettre un prix puis le gonfler",
 ];
 
 const benefitsList = [
-  "Fuite localisée et réparée",
-  "Documents pour l'assurance fournis",
+  "Fuite stoppée immédiatement",
+  "Dossier assurance complet",
   "Un prix clair, payé une seule fois",
   "Artisan vérifié et assuré",
 ];
 
 const faqs = [
   {
-    question: "Que faire immédiatement en cas de dégât des eaux ?",
-    answer: "1) Coupez l'arrivée d'eau générale. 2) Coupez l'électricité si l'eau touche des installations électriques. 3) Prenez des photos pour l'assurance. 4) Prévenez votre assurance dans les 5 jours. 5) Appelez-nous pour l'intervention.",
+    question: "Que faire en premier lors d'un dégât des eaux ?",
+    answer: "1) Coupez l'eau générale au compteur. 2) Coupez l'électricité si des installations sont mouillées. 3) Prenez des photos des dégâts. 4) Appelez-nous pour stopper la fuite. 5) Déclarez le sinistre à votre assurance dans les 5 jours.",
   },
   {
-    question: "Combien coûte une intervention pour dégât des eaux ?",
-    answer: "Le prix moyen est de 129€ incluant la recherche de fuite et la réparation. Ce prix peut varier selon la complexité, mais tu le connais AVANT l'intervention.",
+    question: "Combien coûte l'intervention pour dégât des eaux ?",
+    answer: "Le prix fixe est de 129€ pour l'intervention d'urgence incluant l'arrêt de fuite et le constat. Pour les réparations, vous recevez un devis AVANT les travaux.",
   },
   {
-    question: "Fournissez-vous les documents pour l'assurance ?",
-    answer: "Oui, nous fournissons systématiquement une facture détaillée et une attestation d'intervention. Ces documents sont acceptés par toutes les assurances.",
+    question: "Vous aidez pour la déclaration d'assurance ?",
+    answer: "Oui. Nous fournissons un constat d'intervention détaillé avec photos, localisation de la fuite et description des dégâts — document accepté par toutes les assurances.",
   },
   {
-    question: "Comment localisez-vous la fuite ?",
-    answer: "Nos plombiers utilisent des techniques professionnelles : inspection visuelle, écoute, caméra thermique si nécessaire. L'objectif est de trouver la fuite avec un minimum de dégâts.",
+    question: "Qui prend en charge les frais ?",
+    answer: "En cas de dégât des eaux, votre assurance habitation prend en charge les dommages matériels après franchise. Nos honoraires d'intervention peuvent être remboursés selon votre contrat.",
   },
   {
-    question: "Et si la fuite vient de chez le voisin ?",
-    answer: "Notre attestation permet de prouver l'origine de la fuite. C'est un document essentiel pour les démarches entre assurances (convention IRSI).",
+    question: "Vous intervenez en urgence la nuit ?",
+    answer: "Oui, 24h/24, 7j/7. Un dégât des eaux ne peut pas attendre. On intervient en 20 min sur Paris et toute l'Île-de-France. Même tarif sans majoration.",
   },
   {
-    question: "Intervenez-vous en urgence ?",
-    answer: "Oui, nos plombiers sont disponibles 24h/24, 7j/7 pour les urgences dégât des eaux. Un artisan peut être chez vous en ~30 minutes en moyenne.",
+    question: "Que faire si le dégât vient du voisin ?",
+    answer: "Prévenez votre voisin et votre syndic. Prenez des photos. Déclarez le sinistre à votre assurance. Notre constat d'intervention est valable pour les deux parties.",
   },
 ];
 
@@ -63,9 +68,21 @@ export default function DegatDesEauxPage() {
   return (
     <>
       <PlomberieHero
-        title="Dégât des eaux - Que faire immédiatement ?"
+        title="Dégât des eaux - Urgence et constat"
         subtitle="Plomberie"
-        description="Dégât des eaux ? On localise la fuite, on répare, et on te fournit tous les documents pour ton assurance. Prix fixe, intervention rapide."
+        description="Dégât des eaux ? Nos plombiers stoppent la fuite en 20 min à Paris & IDF. Constat détaillé pour votre assurance, réparation complète. Prix fixe 129€ garanti."
+        servicePrice="129€"
+      />
+      <ServicePricingHighlight
+        serviceName="Dégât des eaux"
+        price="129€"
+        trade="plomberie"
+        features={[
+          "Arrêt de fuite immédiat",
+          "Constat détaillé pour assurance",
+          "Aide déclaration sinistre",
+          "Prix fixe — zéro surprise",
+        ]}
       />
       <PlomberieServiceCards
         doList={doList}
@@ -73,15 +90,13 @@ export default function DegatDesEauxPage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="plomberie" />
       <TransparenceSection
-        description="Un dégât des eaux est toujours stressant. Chez Joël, on gère l'urgence avec un prix fixe et on te fournit tous les documents nécessaires pour ton assurance."
-        points={["Attestation assurance incluse", "Recherche de fuite incluse", "Prix fixe garanti"]}
+        description="Un dégât des eaux mal géré peut ruiner un appartement. Chez Joël, on intervient vite, on stoppe la fuite, et on vous aide avec votre assurance."
+        points={["Arrêt immédiat", "Constat pour assurance", "Prix fixe 129€"]}
       />
       <ServiceFAQ faqs={faqs} serviceName="Dégât des eaux" />
       <FinalCTA />
     </>
   );
 }
-
-
-

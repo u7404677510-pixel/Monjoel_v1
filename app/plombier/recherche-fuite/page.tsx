@@ -5,67 +5,62 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Recherche de Fuite Paris & IDF | Détection Sans Destruction dès 149€",
-  description: "Fuite d'eau cachée ? Détection par caméra thermique, gaz traceur, écoute acoustique. Sans casser, sans détruire. Rapport pour assurance.",
+  title: "Recherche de Fuite Paris - Détection Sans Casse | Plombier Joël",
+  description: "Fuite cachée introuvable ? Détection non destructive en 20 min à Paris & IDF. Caméra thermique, gaz traceur. Prix fixe dès 129€. Rapport détaillé. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/recherche-fuite",
-  },
-  openGraph: {
-    title: "Recherche de Fuite | Caméra Thermique | Joël",
-    description: "Fuite invisible ? On la trouve sans casser. Caméra thermique, gaz traceur, écoute acoustique.",
-    url: "https://monjoel.fr/plombier/recherche-fuite",
   },
 };
 
 const doList = [
-  "Analyse préliminaire (compteur, zones humides)",
-  "Détection par caméra thermique infrarouge",
-  "Écoute acoustique pour fuites sous pression",
-  "Gaz traceur pour fuites enterrées",
-  "Localisation précise sans destruction",
-  "Rapport détaillé avec photos pour assurance",
+  "Détection méthode non destructive",
+  "Caméra thermique et gaz traceur",
+  "Rapport détaillé avec localisation",
+  "Prix fixe annoncé avant intervention",
 ];
 
 const dontList = [
-  "Casser les murs au hasard",
-  "Ignorer une surconsommation d'eau",
-  "Attendre que les dégâts soient visibles",
-  "Payer des destructions inutiles",
+  "Casser mur ou sol sans localiser",
+  "Facturer des frais cachés",
+  "Évaluer sans les bons équipements",
+  "Promettre un prix puis le gonfler",
 ];
 
 const benefitsList = [
-  "Détection précise sans casser",
-  "Technologies de pointe (thermique, acoustique)",
-  "Rapport accepté par les assurances",
-  "Intervention rapide et propre",
+  "Fuite localisée précisément",
+  "Aucune casse inutile",
+  "Rapport pour votre assurance",
+  "Artisan vérifié et assuré",
 ];
 
 const faqs = [
   {
-    question: "Comment savoir si j'ai une fuite cachée ?",
-    answer: "Signes révélateurs : compteur d'eau qui tourne même robinets fermés, taches d'humidité, peinture qui cloque, odeur de moisi, facture d'eau anormalement élevée.",
-  },
-  {
-    question: "Quelles technologies utilisez-vous ?",
-    answer: "Caméra thermique (détecte les variations de température), écoute acoustique (capte le bruit de l'eau sous pression), gaz traceur (pour les fuites enterrées), et caméra endoscopique (inspection des canalisations).",
+    question: "Comment détecter une fuite cachée ?",
+    answer: "Nous utilisons plusieurs méthodes : caméra thermique (détecte les différences de température), gaz traceur (inject un gaz inoffensif dans les canalisations), et corrélateur acoustique (détecte le bruit de la fuite). Zéro casse inutile.",
   },
   {
     question: "Combien coûte une recherche de fuite ?",
-    answer: "La recherche de fuite démarre à 149€. Le prix dépend de la complexité (appartement vs maison, fuite accessible vs enterrée). Devis exact sur place.",
+    answer: "Le prix fixe démarre à 129€ pour une détection complète avec rapport. Vous savez exactement où est la fuite avant tout travaux de réparation.",
   },
   {
-    question: "L'assurance prend-elle en charge ?",
-    answer: "La plupart des assurances habitation couvrent la recherche de fuite suite à un dégât des eaux. Nous fournissons un rapport détaillé avec photos accepté par toutes les compagnies.",
+    question: "Pourquoi ma facture d'eau a augmenté ?",
+    answer: "Une hausse inexpliquée de votre consommation d'eau est souvent le signe d'une fuite sur canalisation encastrée ou enterrée. Notre détection permet de localiser sans casser.",
   },
   {
-    question: "Réparez-vous la fuite une fois trouvée ?",
-    answer: "Oui, nous pouvons réparer la fuite dans la foulée si elle est accessible. Pour les fuites nécessitant des travaux importants, nous établissons un devis séparé.",
+    question: "Le rapport est-il accepté par les assurances ?",
+    answer: "Oui, notre rapport de détection est un document officiel qui précise la localisation et la cause de la fuite. Il est accepté par les compagnies d'assurance pour votre déclaration.",
   },
   {
-    question: "La recherche abîme-t-elle mon logement ?",
-    answer: "Non, c'est tout l'intérêt de nos technologies. La détection est non destructive. On ne casse que si la fuite nécessite une réparation, et uniquement à l'endroit précis.",
+    question: "Réparez-vous la fuite après l'avoir trouvée ?",
+    answer: "Oui. Après la détection, nous vous proposons un devis de réparation. Si vous acceptez, nous réparons immédiatement ou planifions les travaux selon l'ampleur.",
+  },
+  {
+    question: "Combien de temps dure la détection ?",
+    answer: "La recherche de fuite dure en général 1 à 2 heures selon la surface et la complexité. Nous vous remettons le rapport en fin d'intervention.",
   },
 ];
 
@@ -73,9 +68,22 @@ export default function RechercheFuitePage() {
   return (
     <>
       <PlomberieHero
-        title="Recherche de fuite : détection sans destruction"
+        title="Recherche de fuite - Détection sans casse"
         subtitle="Plomberie"
-        description="Fuite d'eau invisible ? Nos techniciens la localisent précisément avec caméra thermique, écoute acoustique et gaz traceur. Sans casser vos murs."
+        description="Fuite cachée dans mur, sol ou plafond ? Nos plombiers détectent sans casse à Paris & IDF avec caméra thermique et gaz traceur. Prix fixe dès 129€, rapport inclus."
+        servicePrice="dès 129€"
+      />
+      <ServicePricingHighlight
+        serviceName="Recherche de fuite"
+        price="dès 129€"
+        priceFrom
+        trade="plomberie"
+        features={[
+          "Détection sans casse",
+          "Caméra thermique + gaz traceur",
+          "Rapport détaillé pour assurance",
+          "Localisation précise garantie",
+        ]}
       />
       <PlomberieServiceCards
         doList={doList}
@@ -83,9 +91,10 @@ export default function RechercheFuitePage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="plomberie" />
       <TransparenceSection
-        description="Une fuite cachée peut causer des dégâts énormes. Chez Joël, on la trouve vite et sans destruction grâce à nos technologies de pointe."
-        points={["Caméra thermique infrarouge", "Écoute acoustique professionnelle", "Rapport assurance inclus"]}
+        description="Une fuite cachée, ça ne se trouve pas en cassant au hasard. Chez Joël, on utilise les bons équipements pour localiser précisément avant tout travaux."
+        points={["Détection non destructive", "Rapport pour assurance", "Prix fixe dès 129€"]}
       />
       <ServiceFAQ faqs={faqs} serviceName="Recherche de fuite" />
       <FinalCTA />

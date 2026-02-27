@@ -5,67 +5,62 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Chaudière en Panne Paris & IDF | Dépannage Express dès 119€",
-  description: "Chaudière qui ne démarre plus ? Dépannage urgent gaz, fioul, électrique. Diagnostic inclus. Toutes marques : Saunier Duval, Chappée, De Dietrich.",
+  title: "Chaudière en Panne Paris - Dépannage 20 min | Plombier Joël Prix Fixe",
+  description: "Chaudière en panne ? Plombier chauffagiste intervient en 20 min à Paris & IDF. Diagnostic + réparation prix fixe dès 99€. Toutes marques. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/chaudiere-panne",
-  },
-  openGraph: {
-    title: "Chaudière en Panne | Dépannage Toutes Marques | Joël",
-    description: "Chaudière en panne ? Dépannage rapide gaz, fioul, électrique. Diagnostic inclus, toutes marques.",
-    url: "https://monjoel.fr/plombier/chaudiere-panne",
   },
 };
 
 const doList = [
-  "Diagnostic complet de la panne",
-  "Réparation immédiate si possible",
-  "Remplacement des pièces défectueuses",
-  "Mise en sécurité de l'installation",
-  "Test de fonctionnement complet",
-  "Conseils d'entretien préventif",
+  "Diagnostic complet de la chaudière",
+  "Réparation sur place si possible",
+  "Devis remplacement si nécessaire",
+  "Prix fixe annoncé avant intervention",
 ];
 
 const dontList = [
-  "Ignorer les codes erreur affichés",
-  "Forcer le redémarrage sans diagnostic",
-  "Attendre l'hiver pour réparer",
-  "Faire appel à des non-spécialistes",
+  "Pousser au remplacement si réparable",
+  "Facturer des frais cachés",
+  "Laisser sans chauffage inutilement",
+  "Promettre un prix puis le gonfler",
 ];
 
 const benefitsList = [
-  "Diagnostic inclus dans l'intervention",
-  "Toutes marques, tous types (gaz, fioul, électrique)",
-  "Pièces détachées en stock",
-  "Intervention rapide même en hiver",
+  "Chaudière réparée ou remplacée",
+  "Chauffage rétabli rapidement",
+  "Un prix clair, payé une seule fois",
+  "Artisan certifié et assuré",
 ];
 
 const faqs = [
   {
-    question: "Ma chaudière affiche un code erreur, que faire ?",
-    answer: "Notez le code erreur et appelez-nous. Ce code nous aide à identifier le problème avant même d'arriver. Ne tentez pas de forcer le redémarrage, cela peut aggraver la panne.",
+    question: "Pourquoi ma chaudière ne s'allume plus ?",
+    answer: "Plusieurs causes possibles : vanne de gaz fermée, défaut d'allumage, pression d'eau trop basse, capteur défectueux, ou problème électronique. Notre chauffagiste identifie la cause exacte.",
   },
   {
-    question: "Combien coûte un dépannage chaudière ?",
-    answer: "Le diagnostic démarre à 119€ et inclut la main d'œuvre. Les pièces détachées sont facturées en sus si nécessaire. Devis validé avant toute réparation.",
+    question: "Combien coûte le dépannage d'une chaudière ?",
+    answer: "Le prix fixe démarre à 99€ pour un diagnostic et une réparation simple. Pour un remplacement de pièce ou de chaudière, vous recevez un devis détaillé AVANT les travaux.",
   },
   {
-    question: "Intervenez-vous sur toutes les marques ?",
-    answer: "Oui, nos techniciens sont formés sur toutes les marques : Saunier Duval, Chappée, De Dietrich, Viessmann, Vaillant, Chaffoteaux, Frisquet, etc.",
+    question: "Toutes marques de chaudières ?",
+    answer: "Oui : Saunier Duval, De Dietrich, Vaillant, Frisquet, Bosch, Chaffoteaux, Elm Leblanc, et toutes les marques courantes. Nos plombiers ont les pièces courantes en stock.",
   },
   {
-    question: "Ma chaudière est ancienne, ça vaut le coup de réparer ?",
-    answer: "Au-delà de 15-20 ans, un remplacement est souvent plus économique. Nous vous conseillons honnêtement : si la réparation coûte plus de 50% d'une chaudière neuve, on vous le dit.",
+    question: "C'est dangereux une chaudière en panne ?",
+    answer: "Si vous sentez une odeur de gaz, quittez immédiatement les lieux et appelez le 0800 004 004 (urgence gaz GRDF). Sans odeur de gaz, appelez-nous pour un diagnostic.",
   },
   {
-    question: "Pouvez-vous dépanner le week-end ou la nuit ?",
-    answer: "Oui, nous assurons le dépannage chaudière 7j/7, y compris le week-end et les jours fériés. En plein hiver, pas question de vous laisser sans chauffage.",
+    question: "Vous intervenez la nuit et le week-end ?",
+    answer: "Oui, nos plombiers chauffagistes sont disponibles 24h/24, 7j/7. Même tarif, pas de majoration.",
   },
   {
-    question: "Faites-vous aussi l'entretien annuel ?",
-    answer: "Oui, nous proposons l'entretien annuel obligatoire pour chaudières gaz et fioul. L'entretien régulier prévient 80% des pannes.",
+    question: "Quand faut-il remplacer une chaudière ?",
+    answer: "Un remplacement est généralement recommandé si la chaudière a plus de 15 ans, si les réparations deviennent trop fréquentes, ou si la pièce défectueuse n'est plus disponible.",
   },
 ];
 
@@ -73,9 +68,22 @@ export default function ChaudierePannePage() {
   return (
     <>
       <PlomberieHero
-        title="Chaudière en panne : dépannage express"
-        subtitle="Chauffage"
-        description="Chaudière qui ne démarre plus ? Nos techniciens interviennent rapidement pour diagnostiquer et réparer. Toutes marques, gaz, fioul, électrique."
+        title="Chaudière en panne - Dépannage rapide"
+        subtitle="Plomberie"
+        description="Votre chaudière ne démarre plus ? Nos plombiers chauffagistes interviennent en 20 min à Paris & IDF. Toutes marques, pièces en stock. Prix fixe dès 99€ garanti."
+        servicePrice="dès 99€"
+      />
+      <ServicePricingHighlight
+        serviceName="Chaudière en panne"
+        price="dès 99€"
+        priceFrom
+        trade="plomberie"
+        features={[
+          "Diagnostic toutes marques",
+          "Pièces courantes en stock",
+          "Réparation sur place si possible",
+          "Prix fixe — zéro surprise",
+        ]}
       />
       <PlomberieServiceCards
         doList={doList}
@@ -83,9 +91,10 @@ export default function ChaudierePannePage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="plomberie" />
       <TransparenceSection
-        description="Une chaudière en panne, surtout en hiver, c'est l'urgence. Chez Joël, on dépanne vite avec un diagnostic inclus. Pas de mauvaise surprise."
-        points={["Diagnostic inclus dans le tarif", "Toutes marques réparées", "Intervention même le week-end"]}
+        description="Une chaudière en panne en hiver, c'est une urgence. Chez Joël, nos chauffagistes interviennent vite et honnêtement. Réparation si possible, remplacement seulement si nécessaire."
+        points={["Diagnostic honnête", "Réparation prioritaire", "Devis avant remplacement"]}
       />
       <ServiceFAQ faqs={faqs} serviceName="Chaudière en panne" />
       <FinalCTA />

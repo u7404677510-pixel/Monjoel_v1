@@ -5,67 +5,84 @@ import ServiceProcess from "@/components/sections/ServiceProcess";
 import TransparenceSection from "@/components/sections/TransparenceSection";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ServicePricingHighlight from "@/components/sections/ServicePricingHighlight";
+import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Prise ou Interrupteur HS - Réparation Rapide | Électricien Joël - Prix Fixe",
-  description: "Prise ou interrupteur qui ne fonctionne plus ? Réparation ou remplacement rapide. Prix fixe annoncé avant intervention. Électricien 24h/24.",
+  title: "Prise ou Interrupteur HS Paris - Remplacement 59€ | Électricien Joël",
+  description: "Prise qui grésille ou interrupteur HS ? Électricien certifié intervient en 20 min à Paris & IDF. Prix fixe 59€ annoncé avant intervention. 01 41 69 10 08",
+  alternates: {
+    canonical: "https://monjoel.fr/electricien/prise-interrupteur-hs",
+  },
 };
 
 const doList = [
-  "Diagnostic de la panne",
-  "Réparation ou remplacement rapide",
-  "Matériel de qualité inclus",
+  "Diagnostic de la prise ou interrupteur",
+  "Remplacement aux normes NF C 15-100",
+  "Vérification circuit concerné",
   "Prix fixe annoncé avant intervention",
 ];
 
 const dontList = [
-  "Installer du matériel bas de gamme",
-  "Facturer le déplacement en plus",
-  "Laisser des fils apparents",
-  "Créer des risques de sécurité",
+  "Changer sans vérifier la cause",
+  "Utiliser du matériel non conforme",
+  "Facturer des frais cachés",
+  "Laisser une prise dangereuse",
 ];
 
 const benefitsList = [
   "Prise ou interrupteur fonctionnel",
-  "Installation propre et sécurisée",
-  "Un prix clair, tout compris",
+  "Installation sécurisée aux normes",
+  "Un prix clair, payé une seule fois",
   "Artisan certifié et assuré",
 ];
 
 const faqs = [
   {
-    question: "Pourquoi ma prise ne fonctionne plus ?",
-    answer: "Les causes fréquentes : connexion desserrée, fil détérioré, surcharge passée, ou simplement usure. Notre électricien identifie et répare la cause.",
+    question: "Pourquoi une prise ne fonctionne plus ?",
+    answer: "Une prise peut tomber en panne suite à : un faux contact, une surchauffe, un arc électrique, ou un problème sur le circuit. Si la prise grésille ou chauffe, appelez-nous immédiatement — c'est potentiellement dangereux.",
   },
   {
-    question: "Combien coûte un remplacement de prise ?",
-    answer: "Le prix moyen est de 59€ pour un remplacement standard incluant le matériel. Ce prix est fixe et annoncé avant l'intervention.",
+    question: "Combien coûte le remplacement d'une prise ?",
+    answer: "Le prix fixe est de 59€ pour le diagnostic et le remplacement d'une prise ou interrupteur standard. Tu connais le prix AVANT notre intervention.",
   },
   {
-    question: "Puis-je changer une prise moi-même ?",
-    answer: "Techniquement oui, mais c'est risqué sans formation. Une mauvaise manipulation peut causer un court-circuit ou un incendie. Faites appel à un professionnel.",
+    question: "Une prise qui grésille est-elle dangereuse ?",
+    answer: "Oui, une prise qui grésille peut provoquer un incendie électrique. Débranchez immédiatement les appareils et appelez-nous. N'attendez pas.",
   },
   {
-    question: "Combien de temps pour remplacer une prise ?",
-    answer: "Un remplacement simple prend 15 à 30 minutes. Si le câblage est défectueux, cela peut prendre un peu plus de temps.",
+    question: "Vous pouvez remplacer tous types de prises ?",
+    answer: "Oui : prises standard, prises avec terre, prises USB, prises TV/RJ45, interrupteurs simples, va-et-vient, variateurs. Matériel conforme NF C 15-100.",
   },
   {
-    question: "Ma prise fait des étincelles, c'est grave ?",
-    answer: "Oui, c'est un signe de danger. Cessez d'utiliser cette prise immédiatement et appelez-nous. Des étincelles peuvent provoquer un incendie.",
+    question: "Vous intervenez en urgence ?",
+    answer: "Oui, 24h/24, 7j/7. Intervention en 20 min sur Paris et toute l'Île-de-France. Même tarif, sans majoration de nuit ou week-end.",
   },
   {
-    question: "Remplacez-vous aussi les interrupteurs ?",
-    answer: "Oui, nous remplaçons tous types d'interrupteurs : simple, double, va-et-vient, variateur. Même processus : prix fixe avant intervention.",
+    question: "Faut-il remplacer d'autres prises en même temps ?",
+    answer: "Si votre installation est ancienne, notre électricien peut faire un audit de vos prises pendant l'intervention. Vous décidez ensuite des travaux à effectuer.",
   },
 ];
 
-export default function PriseInterrupteurHSPage() {
+export default function PriseInterrupteurHsPage() {
   return (
     <>
       <ElectriciteHero
-        title="Prise ou interrupteur HS - Réparation rapide"
+        title="Prise ou interrupteur HS - Remplacement rapide"
         subtitle="Électricité"
-        description="Prise qui ne fonctionne plus ? Interrupteur défaillant ? On diagnostique et répare rapidement. Matériel de qualité, installation soignée. Prix fixe garanti."
+        description="Prise qui grésille, interrupteur qui ne fonctionne plus ? Nos électriciens certifiés remplacent en 20 min à Paris & IDF. Prix fixe 59€ garanti, zéro arnaque."
+        servicePrice="59€"
+      />
+      <ServicePricingHighlight
+        serviceName="Prise / Interrupteur HS"
+        price="59€"
+        trade="electricite"
+        features={[
+          "Diagnostic circuit inclus",
+          "Matériel conforme NF C 15-100",
+          "Remplacement en 20 min",
+          "Prix fixe — sans surprise",
+        ]}
       />
       <ElectriciteServiceCards
         doList={doList}
@@ -73,15 +90,13 @@ export default function PriseInterrupteurHSPage() {
         benefitsList={benefitsList}
       />
       <ServiceProcess />
+      <ServiceTrustSection trade="electricite" />
       <TransparenceSection
-        description="Une prise ou un interrupteur HS, ça peut sembler anodin. Mais ça peut cacher un problème plus grave. Chez Joël, on vérifie tout et on répare proprement."
-        points={["Diagnostic complet", "Matériel inclus", "Installation sécurisée"]}
+        description="Une prise qui grésille ou chauffe est un signal d'alarme. Chez Joël, on intervient vite avec un diagnostic complet — pas juste le remplacement cosmétique."
+        points={["Diagnostic complet", "Matériel certifié", "Prix fixe garanti"]}
       />
-      <ServiceFAQ faqs={faqs} serviceName="Prise et interrupteur" />
+      <ServiceFAQ faqs={faqs} serviceName="Prise ou interrupteur HS" />
       <FinalCTA />
     </>
   );
 }
-
-
-
