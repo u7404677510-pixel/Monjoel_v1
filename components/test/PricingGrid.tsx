@@ -21,10 +21,10 @@ const pricingData: PricingCategory[] = [
     icon: <Lock size={24} className="3xl:w-8 3xl:h-8 5xl:w-10 5xl:h-10" />,
     color: "joel-violet",
     items: [
-      { service: "Ouverture porte claquée", price: "89€", note: "sans perçage" },
-      { service: "Ouverture avec perçage", price: "150€", note: "cylindre à remplacer" },
+      { service: "Ouverture porte claquée", price: "89€", note: "sans perçage, technique radio" },
+      { service: "Ouverture avec perçage", price: "150€", note: "cylindre inclus" },
       { service: "Changement cylindre", price: "120€", note: "fourniture incluse" },
-      { service: "Blindage de porte", price: "Sur devis" },
+      { service: "Blindage de porte", price: "Sur devis", note: "devis gratuit" },
     ],
   },
   {
@@ -32,10 +32,10 @@ const pricingData: PricingCategory[] = [
     icon: <Wrench size={24} className="3xl:w-8 3xl:h-8 5xl:w-10 5xl:h-10" />,
     color: "blue-500",
     items: [
-      { service: "Fuite simple", price: "95€", note: "robinet, joint" },
-      { service: "Débouchage WC", price: "110€", note: "manuel ou furet" },
-      { service: "Dégât des eaux", price: "150€", note: "intervention urgente" },
-      { service: "Chauffe-eau", price: "Sur devis" },
+      { service: "Fuite d'eau", price: "89€", note: "robinet, tuyau, joint" },
+      { service: "WC bouchés", price: "79€", note: "furet ou haute pression" },
+      { service: "Dégât des eaux", price: "129€", note: "arrêt + constat assurance" },
+      { service: "Chauffe-eau en panne", price: "dès 99€", note: "toutes marques" },
     ],
   },
   {
@@ -43,10 +43,10 @@ const pricingData: PricingCategory[] = [
     icon: <Zap size={24} className="3xl:w-8 3xl:h-8 5xl:w-10 5xl:h-10" />,
     color: "amber-500",
     items: [
-      { service: "Panne électrique", price: "89€", note: "diagnostic inclus" },
-      { service: "Disjoncteur saute", price: "95€", note: "réparation" },
-      { service: "Prise / Interrupteur HS", price: "75€", note: "remplacement" },
-      { service: "Tableau électrique", price: "Sur devis" },
+      { service: "Panne électrique", price: "79€", note: "diagnostic + remise en service" },
+      { service: "Disjoncteur qui saute", price: "69€", note: "identification cause" },
+      { service: "Prise / Interrupteur HS", price: "59€", note: "remplacement" },
+      { service: "Tableau électrique", price: "149€", note: "dépannage ou remplacement" },
     ],
   },
 ];

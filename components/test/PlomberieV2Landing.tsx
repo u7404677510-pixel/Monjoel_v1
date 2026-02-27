@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
+import PaymentLogos from "@/components/sections/PaymentLogos";
 
 const STATIC_PHONE = "01 41 69 10 08";
 const STATIC_PHONE_TEL = "+33141691008";
@@ -194,9 +195,9 @@ export default function PlomberieV2Landing() {
               </button>
             </div>
 
-            <p className="text-white/50 text-xs mt-4">
-              Appel gratuit · Paiement après intervention · CB acceptée
-            </p>
+            <div className="mt-4">
+              <PaymentLogos variant="dark" />
+            </div>
           </div>
         </div>
 
@@ -422,9 +423,27 @@ export default function PlomberieV2Landing() {
           <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-6 font-medium">
             Agréé par les principales compagnies d&apos;assurance
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
-            {["AXA", "Allianz", "MAIF", "Groupama", "MACIF"].map((name) => (
-              <span key={name} className="text-gray-400 font-bold text-sm tracking-wide">{name}</span>
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            {[
+              { name: "AXA", logo: "/logos/axa.svg" },
+              { name: "Allianz", logo: "/logos/allianz.svg" },
+              { name: "MAIF", logo: "/logos/maif.svg" },
+              { name: "Groupama", logo: "/logos/groupama.svg" },
+              { name: "MACIF", logo: "/logos/macif.svg" },
+              { name: "Matmut", logo: "/logos/matmut.svg" },
+            ].map((ins) => (
+              <div
+                key={ins.name}
+                className="flex items-center justify-center w-24 h-12 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all"
+              >
+                <Image
+                  src={ins.logo}
+                  alt={ins.name}
+                  width={80}
+                  height={32}
+                  className="w-auto h-8 object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>

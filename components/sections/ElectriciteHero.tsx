@@ -4,6 +4,7 @@ import { Zap, Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight 
 import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
+import PaymentLogos from "@/components/sections/PaymentLogos";
 // Numéro de téléphone statique pour Google Ads detection
 const STATIC_PHONE = "01 41 69 10 08";
 const STATIC_PHONE_TEL = "+33141691008";
@@ -116,9 +117,10 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
                 <ArrowRight size={18} />
               </button>
             </div>
-            <p className="text-sm text-gray-500 mb-4 lg:mb-0">
+            <p className="text-sm text-gray-500 mb-2 lg:mb-0">
               Appel gratuit • Devis instantané • Sans engagement
             </p>
+            <PaymentLogos />
             {/* Quote Modal */}
             {showQuoteModal && (
               <QuickQuoteForm

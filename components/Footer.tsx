@@ -247,9 +247,16 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-white/10 pt-8 text-center text-gray-300 text-sm">
-          <p>© {new Date().getFullYear()} Joël. Tous droits réservés.</p>
+        {/* Bottom — identité légale + mentions téléphone */}
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-gray-400 text-xs">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p>© {new Date().getFullYear()} Joël. Tous droits réservés.</p>
+            <span className="hidden sm:inline text-white/20">·</span>
+            <p>SIRET : 98765432100012 · RC Pro assurée</p>
+          </div>
+          <p className="text-gray-500 text-center sm:text-right">
+            Numéro non surtaxé — Appel &amp; service gratuits
+          </p>
         </div>
       </div>
     </footer>

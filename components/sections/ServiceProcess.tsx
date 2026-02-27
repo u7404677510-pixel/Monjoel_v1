@@ -2,29 +2,29 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Smartphone, MessageSquare, CreditCard, Wrench } from "lucide-react";
+import { Phone, FileText, Wrench, CreditCard } from "lucide-react";
 import { yellowPunctuation } from "@/components/ui/Title";
 
 const steps = [
   {
-    icon: Smartphone,
-    title: "1. Décrivez",
-    description: "Prenez une photo et répondez à quelques questions simples.",
+    icon: Phone,
+    title: "1. Appelez",
+    description: "Diagnostic gratuit par téléphone. On évalue votre besoin en quelques minutes.",
   },
   {
-    icon: MessageSquare,
-    title: "2. Recevez",
-    description: "Obtenez un devis instantané avec un prix fixe garanti.",
-  },
-  {
-    icon: CreditCard,
-    title: "3. Payez",
-    description: "Réglez en ligne de manière sécurisée avant l'intervention.",
+    icon: FileText,
+    title: "2. Devis",
+    description: "Prix fixe confirmé avant le départ de l'artisan. Aucune surprise possible.",
   },
   {
     icon: Wrench,
-    title: "4. Dépannage",
-    description: "Un artisan arrive chez vous en ~30min en moyenne.",
+    title: "3. Intervention",
+    description: "Artisan certifié chez vous en 20 min. Travail propre, résultat garanti.",
+  },
+  {
+    icon: CreditCard,
+    title: "4. Règlement",
+    description: "Paiement uniquement après intervention. CB, chèque ou espèces acceptés.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function ServiceProcess() {
             <span className="text-joel-yellow"> ?</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
-            {yellowPunctuation("Un processus simple en 4 étapes")}
+            {yellowPunctuation("Simple, rapide, transparent")}
           </p>
         </motion.div>
 
@@ -59,7 +59,7 @@ export default function ServiceProcess() {
               className="text-center"
             >
               <div className={`w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-2xl flex items-center justify-center ${
-                index === 2 ? 'bg-joel-yellow' : 'bg-gradient-joel'
+                index === 3 ? "bg-joel-yellow" : "bg-gradient-joel"
               }`}>
                 <step.icon size={28} className="text-white" />
               </div>

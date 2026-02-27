@@ -18,6 +18,7 @@ import { TradeConfig, VariantType } from "@/lib/ab-test/config";
 import { trackConversion } from "@/lib/ab-test/router";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
+import PaymentLogos from "@/components/sections/PaymentLogos";
 import {
   TestHeader,
   TestFooter,
@@ -137,9 +138,12 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                 </button>
               </div>
 
-              <p className="text-gray-500 text-sm 3xl:text-base mt-3 3xl:mt-4 text-center md:text-left">
+              <p className="text-gray-500 text-sm 3xl:text-base mt-3 3xl:mt-2 text-center md:text-left">
                 Appel gratuit • Devis instantané • Sans engagement
               </p>
+              <div className="mt-2">
+                <PaymentLogos />
+              </div>
 
               {/* Quote Modal */}
               {showQuoteModal && (

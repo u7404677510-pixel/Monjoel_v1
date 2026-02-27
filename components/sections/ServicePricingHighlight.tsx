@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Phone, Shield, Check, ArrowRight, Clock, Star } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
+import PaymentLogos from "@/components/sections/PaymentLogos";
 
 type TradeType = "serrurerie" | "plomberie" | "electricite";
 
@@ -148,6 +149,9 @@ export default function ServicePricingHighlight({
                 <p className="text-center text-xs text-gray-500">
                   Appel gratuit • Devis instantané • Sans engagement
                 </p>
+                <div className="mt-1">
+                  <PaymentLogos showMicrocopy={false} />
+                </div>
               </div>
             </div>
           </div>
