@@ -123,6 +123,7 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
             {showQuoteModal && (
               <QuickQuoteForm
                 variant="modal"
+                trade="electricite"
                 onClose={() => setShowQuoteModal(false)}
               />
             )}

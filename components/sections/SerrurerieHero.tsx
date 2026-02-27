@@ -123,6 +123,7 @@ export default function SerrurerieHero({ title, subtitle, description, servicePr
             {showQuoteModal && (
               <QuickQuoteForm
                 variant="modal"
+                trade="serrurerie"
                 onClose={() => setShowQuoteModal(false)}
               />
             )}

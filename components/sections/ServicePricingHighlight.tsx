@@ -155,7 +155,7 @@ export default function ServicePricingHighlight({
       </div>
 
       {showQuoteModal && (
-        <QuickQuoteForm variant="modal" onClose={() => setShowQuoteModal(false)} />
+        <QuickQuoteForm variant="modal" trade={trade} onClose={() => setShowQuoteModal(false)} />
       )}
     </section>
   );

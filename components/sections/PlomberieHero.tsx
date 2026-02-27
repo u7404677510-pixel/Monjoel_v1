@@ -123,6 +123,7 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
             {showQuoteModal && (
               <QuickQuoteForm
                 variant="modal"
+                trade="plomberie"
                 onClose={() => setShowQuoteModal(false)}
               />
             )}

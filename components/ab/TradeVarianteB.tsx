@@ -145,6 +145,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
               {showQuoteModal && (
                 <QuickQuoteForm
                   variant="modal"
+                  trade={config.slug}
                   onClose={() => setShowQuoteModal(false)}
                 />
               )}
