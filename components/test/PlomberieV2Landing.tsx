@@ -186,16 +186,19 @@ export default function PlomberieV2Landing() {
                 <span>{phoneNumber}</span>
               </a>
 
-              <button
-                onClick={() => setShowQuoteModal(true)}
-                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-lg px-8 py-5 rounded-2xl border border-white/30 backdrop-blur-sm transition-all"
-              >
-                <span>Devis en 30 secondes</span>
-                <ArrowRight size={18} />
-              </button>
             </div>
 
-            <div className="mt-4">
+            {/* Formulaire devis inline — directement dans le hero */}
+            <div className="mt-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
+              <div className="px-4 pt-3 pb-1">
+                <p className="text-white/70 text-xs font-semibold uppercase tracking-widest">
+                  Devis gratuit en 30 secondes
+                </p>
+              </div>
+              <QuickQuoteForm variant="inline" trade="plomberie" />
+            </div>
+
+            <div className="mt-3">
               <PaymentLogos variant="dark" />
             </div>
           </div>

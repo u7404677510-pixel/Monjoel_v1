@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
+import StatsStrip from "@/components/sections/StatsStrip";
 import HowItWorks from "@/components/sections/HowItWorks";
 import ServicesExplorer from "@/components/sections/ServicesExplorer";
 import Advantages from "@/components/sections/Advantages";
@@ -70,6 +71,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <StatsStrip />
       <TrueScopePreview />
       <HowItWorks />
       <ServicesExplorer />
