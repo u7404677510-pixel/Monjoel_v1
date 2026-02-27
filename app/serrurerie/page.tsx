@@ -130,11 +130,60 @@ const localBusinessSchema = {
   }
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre une porte claquée et une porte fermée à clé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une porte claquée signifie que le pêne demi-tour s'est enclenché mais la serrure n'est pas verrouillée à clé — l'ouverture sans perçage est possible. Une porte fermée à clé signifie qu'un ou plusieurs tours de clé ont été donnés — d'autres techniques sont nécessaires. Notre serrurier vous explique les options avant d'intervenir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte l'ouverture d'une porte à Paris ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'ouverture d'une porte claquée sans perçage est à 89€ TTC, prix fixe, annoncé au téléphone avant intervention. Si un perçage est nécessaire, le tarif différent vous est communiqué avant tout travail. Vous décidez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Votre serrurier intervient-il la nuit et en urgence ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, 24h/24 et 7j/7. Porte claquée à 2h du matin ? Nos serruriers sont disponibles. Le tarif est identique à n'importe quelle heure : pas de majoration de nuit, pas de frais supplémentaires le week-end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Percez-vous toujours la porte lors d'une ouverture d'urgence ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Nous essayons systématiquement les techniques non destructives en priorité : crochetage, ouverture radio. Le perçage n'est utilisé qu'en dernier recours, uniquement si aucune autre méthode n'est possible, et toujours après vous avoir informé et obtenu votre accord."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure une intervention de serrurerie ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'ouverture d'une porte claquée par technique radio prend généralement 5 à 20 minutes. Le changement d'un cylindre dure 15 à 30 minutes, fourniture incluse. Notre serrurier ne repart pas avant que votre porte soit sécurisée."
+      }
+    }
+  ]
+};
+
 export default function SerrureriePage() {
   return (
     <>
       {/* Schema.org pour Google Ads + Rich Snippets */}
       <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
+      {/* FAQ Schema — Rich Snippets Google */}
+      <ClientSchema schema={faqSchema} id="faq-schema" />
       
       {/* A/B Test - Variantes A, B, C */}
       <Suspense fallback={<LoadingSkeleton />}>

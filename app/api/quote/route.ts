@@ -14,6 +14,7 @@ const resend = process.env.RESEND_API_KEY
 
 interface QuoteRequest {
   problem: string;
+  urgency?: "urgent" | "today" | "planned";
   postalCode: string;
   phone: string;
   recaptchaToken?: string;
@@ -45,9 +46,17 @@ async function verifyRecaptcha(token: string): Promise<{ success: boolean; score
   }
 }
 
+const urgencyLabels: Record<string, string> = {
+  urgent: "🚨 URGENT — Maintenant",
+  today: "⏰ Aujourd'hui (dans les 4h)",
+  planned: "📅 Programmé — Sur rendez-vous",
+};
+
 interface LeadData {
   problem: string;
   problemLabel: string;
+  urgency: string;
+  urgencyLabel: string;
   trade: string;
   postalCode: string;
   phone: string;
@@ -95,6 +104,8 @@ const problemToTrade: Record<string, string> = {
 // ============================================
 async function sendWhatsAppNotification(leadData: LeadData): Promise<void> {
   const message = `🚨 *NOUVELLE DEMANDE*
+
+${leadData.urgencyLabel}
 
 📋 *Problème:* ${leadData.problemLabel}
 🔧 *Métier:* ${leadData.trade}
@@ -213,7 +224,7 @@ async function sendEmailNotification(leadData: LeadData): Promise<void> {
       <p style="margin: 5px 0 0 0; opacity: 0.9;">Via monjoel.fr</p>
     </div>
     <div class="content">
-      <p class="urgent">RAPPELER RAPIDEMENT</p>
+      <p class="urgent">${leadData.urgencyLabel}</p>
       
       <div class="field">
         <div class="label">📋 Problème</div>
@@ -325,9 +336,12 @@ export async function POST(request: NextRequest) {
     const formattedPhone = cleanPhone.replace(/(\d{2})(?=\d)/g, "$1 ");
 
     // Préparer les données du lead
+    const urgency = body.urgency || "urgent";
     const leadData: LeadData = {
       problem: body.problem,
       problemLabel: problemLabels[body.problem] || body.problem,
+      urgency,
+      urgencyLabel: urgencyLabels[urgency] || urgency,
       trade: problemToTrade[body.problem] || "À déterminer",
       postalCode: body.postalCode,
       phone: formattedPhone,

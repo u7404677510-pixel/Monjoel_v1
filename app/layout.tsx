@@ -6,6 +6,7 @@ import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import TelClickTracker from "@/components/TelClickTracker";
 import ConditionalSticky from "@/components/ConditionalSticky";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 // Popups growth hack retirés - trop agressifs (ChatBot, ArtisanToast, SocialProofNotifications, ExitIntentPopup)
 
@@ -202,6 +203,8 @@ export default function RootLayout({
         
         {/* Bouton d'appel sticky mobile (conditionnel - pas sur /test/*) */}
         <ConditionalSticky />
+        {/* WhatsApp flottant desktop — apparait après 3s */}
+        <WhatsAppFloat />
       </body>
     </html>
   );

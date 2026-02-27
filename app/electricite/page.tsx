@@ -130,11 +130,60 @@ const localBusinessSchema = {
   }
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte un électricien d'urgence à Paris ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nos tarifs démarrent à 59€ TTC pour une intervention simple (remplacement prise/interrupteur). La remise en service d'une panne électrique est à 79€. Le prix est annoncé avant l'intervention, fixe et non modifiable sur place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vos électriciens sont-ils certifiés et habilités ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Tous nos électriciens disposent des habilitations électriques obligatoires (BR, B1V, B2V). Leur identité et qualifications sont vérifiées avant intégration au réseau Joël. Nous travaillons avec des marques certifiées : Legrand, Schneider, Hager."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous en urgence électrique la nuit ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, 24h/24 et 7j/7. Nos électriciens interviennent en 20 minutes, même de nuit, au même tarif qu'en journée. Pas de majoration, pas de supplément week-end ou jour férié."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce dangereux d'attendre en cas de panne électrique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une simple coupure liée au disjoncteur n'est pas dangereuse si vous ne touchez pas aux installations. En revanche, une odeur de brûlé, des étincelles ou de la fumée sont des signes de danger immédiat : coupez le disjoncteur principal et appelez-nous immédiatement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fournissez-vous une attestation de conformité électrique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, après chaque remplacement de tableau électrique ou mise aux normes NF C 15-100. Ce document est obligatoire lors de la vente de votre bien et peut être demandé par votre assurance. Il est remis le jour de l'intervention."
+      }
+    }
+  ]
+};
+
 export default function ElectricitePage() {
   return (
     <>
       {/* Schema.org pour Google Ads + Rich Snippets */}
       <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
+      {/* FAQ Schema — Rich Snippets Google */}
+      <ClientSchema schema={faqSchema} id="faq-schema" />
       
       {/* A/B Test - Variantes A, B, C */}
       <Suspense fallback={<LoadingSkeleton />}>

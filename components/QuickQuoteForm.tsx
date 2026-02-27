@@ -98,9 +98,16 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
   const { config } = useSiteConfig();
   const [formData, setFormData] = useState({
     problem: defaultService,
+    urgency: "urgent" as "urgent" | "today" | "planned",
     postalCode: "",
     phone: "",
   });
+
+  const urgencyOptions = [
+    { value: "urgent" as const, label: "Urgent", sub: "maintenant", emoji: "🚨" },
+    { value: "today" as const, label: "Aujourd'hui", sub: "dans les 4h", emoji: "⏰" },
+    { value: "planned" as const, label: "Programmé", sub: "sur rendez-vous", emoji: "📅" },
+  ];
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -170,6 +177,7 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
       window.dataLayer.push({
         event: "quote_form_submit",
         form_problem: formData.problem,
+        form_urgency: formData.urgency,
         form_postal_code: formData.postalCode,
         form_trade: trade ?? "global",
       });
@@ -286,6 +294,33 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
         {errors.problem && (
           <p className="text-red-500 text-xs mt-1">{errors.problem}</p>
         )}
+      </div>
+
+      {/* Niveau d'urgence */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Niveau d&apos;urgence
+        </label>
+        <div className="grid grid-cols-3 gap-2">
+          {urgencyOptions.map((opt) => (
+            <button
+              key={opt.value}
+              type="button"
+              onClick={() => setFormData({ ...formData, urgency: opt.value })}
+              className={`flex flex-col items-center justify-center gap-0.5 px-2 py-3 rounded-xl border-2 text-center transition-all ${
+                formData.urgency === opt.value
+                  ? "border-joel-violet bg-joel-violet/5"
+                  : "border-gray-100 bg-gray-50 hover:border-gray-300"
+              }`}
+            >
+              <span className="text-lg leading-none">{opt.emoji}</span>
+              <span className={`text-xs font-bold mt-1 ${formData.urgency === opt.value ? "text-joel-violet" : "text-gray-700"}`}>
+                {opt.label}
+              </span>
+              <span className="text-[10px] text-gray-400">{opt.sub}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-3">

@@ -335,8 +335,27 @@ export default function PlomberieV2Landing() {
                 ))}
               </div>
 
+              {/* Vidéo artisan en action */}
+              <div className="mt-8 relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                  poster="/hero-plomberie.webp"
+                >
+                  <source src="/videos/hero-artisan.webm" type="video/webm" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/60 to-transparent flex items-end p-4">
+                  <span className="text-white/80 text-xs font-medium">
+                    Artisan Joël — intervention réelle
+                  </span>
+                </div>
+              </div>
+
               {/* Zone d'intervention */}
-              <div className="mt-10 flex items-center gap-2 text-white/50 text-sm border-t border-white/10 pt-8">
+              <div className="mt-8 flex items-center gap-2 text-white/50 text-sm border-t border-white/10 pt-8">
                 <MapPin size={14} className="flex-shrink-0" />
                 <span>Toute l'Île-de-France — 75, 77, 78, 91, 92, 93, 94, 95</span>
               </div>

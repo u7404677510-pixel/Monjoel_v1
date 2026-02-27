@@ -130,11 +130,60 @@ const localBusinessSchema = {
   }
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte un plombier d'urgence à Paris ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nos tarifs plomberie démarrent à 79€ TTC pour une intervention simple. Le prix exact est annoncé au téléphone avant que l'artisan parte. Ce prix est fixe : ni majoration, ni frais de déplacement cachés."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous la nuit, le week-end et les jours fériés ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, 24h/24 et 7j/7, y compris les week-ends et jours fériés. Le tarif est identique à n'importe quelle heure. Pas de majoration de nuit, pas de supplément week-end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "En combien de temps arrive votre plombier ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nos plombiers interviennent en 20 minutes en moyenne sur Paris et l'Île-de-France. Dès que vous appelez, nous identifions l'artisan le plus proche de chez vous."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fournissez-vous une attestation pour l'assurance en cas de dégât des eaux ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, systématiquement. Après chaque intervention, nous fournissons une facture détaillée et une attestation d'intervention acceptée par toutes les compagnies d'assurance (AXA, Allianz, MAIF, Groupama…)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire en attendant le plombier en cas de fuite d'eau ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coupez immédiatement l'arrivée d'eau générale, généralement située près du compteur d'eau. Épongez l'eau stagnante pour limiter les dégâts. Si des installations électriques sont touchées, coupez également le disjoncteur."
+      }
+    }
+  ]
+};
+
 export default function PlomberiePage() {
   return (
     <>
       {/* Schema.org pour Google Ads + Rich Snippets */}
       <ClientSchema schema={localBusinessSchema} id="local-business-schema" />
+      {/* FAQ Schema — Rich Snippets Google */}
+      <ClientSchema schema={faqSchema} id="faq-schema" />
       
       {/* A/B Test - Variantes A, B, C */}
       <Suspense fallback={<LoadingSkeleton />}>

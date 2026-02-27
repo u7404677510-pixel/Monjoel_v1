@@ -19,6 +19,7 @@ import { trackConversion } from "@/lib/ab-test/router";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
 import PaymentLogos from "@/components/sections/PaymentLogos";
+import HubFAQ from "@/components/sections/HubFAQ";
 import {
   TestHeader,
   TestFooter,
@@ -286,6 +287,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
         </div>
       </section>
 
+      <HubFAQ trade={config.slug} />
       <Certifications />
       <InsuranceLogos />
       <GoogleReviews />
