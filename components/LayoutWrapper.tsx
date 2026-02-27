@@ -12,8 +12,9 @@ export default function LayoutWrapper({
 }) {
   const pathname = usePathname();
   const isAdmin = pathname?.startsWith("/admin");
+  const isFullPage = pathname?.startsWith("/test/joel-uber");
 
-  if (isAdmin) {
+  if (isAdmin || isFullPage) {
     return <>{children}</>;
   }
 

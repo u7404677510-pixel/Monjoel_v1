@@ -9,39 +9,20 @@ import Image from "next/image";
 const PHONE = "01 41 69 10 08";
 const PHONE_TEL = "tel:+33141691008";
 
-const NAV_LINKS = ["Appeler maintenant", "Nos services", "Professionnels", "À propos"];
+const NAV_LINKS = [
+  { label: "Appeler maintenant", href: PHONE_TEL },
+  { label: "Nos services", href: "/plomberie" },
+  { label: "Professionnels", href: "/recrutement" },
+  { label: "À propos", href: "/a-propos" },
+];
 
 const SERVICES = [
-  {
-    icon: "🚿",
-    title: "Plomberie urgence",
-    desc: "Fuite d'eau, canalisation, chauffe-eau. Un plombier en 30 min.",
-  },
-  {
-    icon: "🔐",
-    title: "Serrurerie express",
-    desc: "Porte claquée, serrure bloquée. On arrive avant vous !",
-  },
-  {
-    icon: "⚡",
-    title: "Électricité",
-    desc: "Panne, disjoncteur, mise aux normes. Certifié Consuel.",
-  },
-  {
-    icon: "🤖",
-    title: "Devis instantané",
-    desc: "Notre IA calcule votre prix en 60 secondes. Sans surprise.",
-  },
-  {
-    icon: "📅",
-    title: "Planifier",
-    desc: "Réservez votre artisan à l'avance, au créneau qui vous convient.",
-  },
-  {
-    icon: "🏢",
-    title: "Entreprises",
-    desc: "Solutions B2B pour gestionnaires et syndics de copropriété.",
-  },
+  { icon: "🚿", title: "Plomberie urgence", desc: "Fuite d'eau, canalisation, chauffe-eau. Un plombier en 30 min.", href: "/plomberie" },
+  { icon: "🔐", title: "Serrurerie express", desc: "Porte claquée, serrure bloquée. On arrive avant vous !", href: "/serrurerie" },
+  { icon: "⚡", title: "Électricité", desc: "Panne, disjoncteur, mise aux normes. Certifié Consuel.", href: "/electricite" },
+  { icon: "🤖", title: "Devis instantané", desc: "Notre IA calcule votre prix en 60 secondes. Sans surprise.", href: "/plomberie" },
+  { icon: "📅", title: "Planifier", desc: "Réservez votre artisan à l'avance, au créneau qui vous convient.", href: "#planifier" },
+  { icon: "🏢", title: "Entreprises", desc: "Solutions B2B pour gestionnaires et syndics de copropriété.", href: "/recrutement" },
 ];
 
 const DEPARTMENTS = ["75 — Paris", "77 — Seine-et-Marne", "78 — Yvelines", "91 — Essonne", "92 — Hauts-de-Seine", "93 — Seine-Saint-Denis", "94 — Val-de-Marne", "95 — Val-d'Oise"];
@@ -72,19 +53,42 @@ const STEPS: Record<string, Array<{ num: string; title: string; desc: string }>>
 const FOOTER_COLS = [
   {
     title: "Entreprise",
-    links: ["À propos", "Presse", "Investisseurs", "Blog", "Offres d'emploi", "Joel IA"],
+    links: [
+      { label: "À propos", href: "/a-propos" },
+      { label: "Presse", href: "#" },
+      { label: "Investisseurs", href: "#" },
+      { label: "Blog", href: "/blog" },
+      { label: "Offres d'emploi", href: "/recrutement" },
+      { label: "Joel IA", href: "#" },
+    ],
   },
   {
     title: "Services",
-    links: ["Plomberie", "Serrurerie", "Électricité", "Devis IA", "Joel Pro", "Joel Entreprise"],
+    links: [
+      { label: "Plomberie", href: "/plomberie" },
+      { label: "Serrurerie", href: "/serrurerie" },
+      { label: "Électricité", href: "/electricite" },
+      { label: "Devis IA", href: "#" },
+      { label: "Joel Pro", href: "#" },
+      { label: "Joel Entreprise", href: "#" },
+    ],
   },
   {
     title: "Confiance",
-    links: ["Anti-arnaque", "Développement durable", "Sécurité", "Artisans vérifiés"],
+    links: [
+      { label: "Anti-arnaque", href: "/stop-arnaques" },
+      { label: "Développement durable", href: "#" },
+      { label: "Sécurité", href: "#" },
+      { label: "Artisans vérifiés", href: "/stop-arnaques" },
+    ],
   },
   {
     title: "Interventions",
-    links: ["Réserver", "Aéroports IDF", "Villes desservies"],
+    links: [
+      { label: "Réserver", href: "/plomberie" },
+      { label: "Aéroports IDF", href: "#" },
+      { label: "Villes desservies", href: "#" },
+    ],
   },
 ];
 
@@ -204,23 +208,26 @@ export default function JoelUberHomepage() {
         <Container>
           <div className="flex items-center justify-between" style={{ height: 64 }}>
             {/* Logo */}
-            <div className="flex items-center gap-2 cursor-pointer select-none">
-              <div style={{ width: 32, height: 32, background: "#7C3AED", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "#fff", fontWeight: 800, fontSize: 18 }}>J</span>
-              </div>
-              <span style={{ color: "#fff", fontWeight: 700, fontSize: 18, letterSpacing: -0.5 }}>Joël</span>
-            </div>
+            <a href="/" className="flex items-center cursor-pointer select-none">
+              <Image
+                src="/logo-white.webp"
+                alt="Joël"
+                width={80}
+                height={28}
+                className="h-7 w-auto object-contain"
+              />
+            </a>
 
             {/* Nav links */}
             <div className="hidden md:flex items-center gap-8">
               {NAV_LINKS.map((l) => (
                 <a
-                  key={l}
-                  href="#"
+                  key={l.label}
+                  href={l.href}
                   className="text-white text-sm font-medium relative group"
                   style={{ textDecoration: "none", fontSize: 14 }}
                 >
-                  {l}
+                  {l.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-200" style={{ background: "#FFE066" }} />
                 </a>
               ))}
@@ -229,10 +236,10 @@ export default function JoelUberHomepage() {
             {/* Right actions */}
             <div className="hidden md:flex items-center gap-4">
               <span style={{ color: "#fff", fontSize: 13, opacity: 0.7 }}>🌍 Paris, FR</span>
-              <a href="#" style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}>Aide</a>
+              <a href="/contact" style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}>Aide</a>
               <a href="#" style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}>Connexion</a>
               <a
-                href="#"
+                href={PHONE_TEL}
                 style={{ background: "#fff", color: "#000", borderRadius: 100, padding: "10px 18px", fontSize: 14, fontWeight: 600, textDecoration: "none" }}
               >
                 Obtenir un devis
@@ -390,7 +397,7 @@ export default function JoelUberHomepage() {
                   </div>
                   <span style={{ fontSize: 32, marginLeft: 16, flexShrink: 0 }}>{s.icon}</span>
                 </div>
-                <a href="#" style={{ color: "#7C3AED", fontSize: 14, fontWeight: 600, textDecoration: "underline" }}>
+                <a href={s.href} style={{ color: "#7C3AED", fontSize: 14, fontWeight: 600, textDecoration: "underline" }}>
                   Détails →
                 </a>
               </div>
@@ -414,8 +421,8 @@ export default function JoelUberHomepage() {
                 Consultez l'heure d'arrivée estimée, l'historique de vos interventions, vos devis et factures. Tout dans votre espace client.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <BtnPrimary>Se connecter à mon compte</BtnPrimary>
-                <a href="#" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
+                <BtnPrimary href="#">Se connecter à mon compte</BtnPrimary>
+                <a href="/recrutement" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
                   Créer un compte
                 </a>
               </div>
@@ -458,7 +465,7 @@ export default function JoelUberHomepage() {
                   </select>
                 </div>
               </div>
-              <BtnPrimary fullWidth>Suivant</BtnPrimary>
+              <BtnPrimary href={PHONE_TEL} fullWidth>Suivant</BtnPrimary>
             </div>
 
             {/* Avantages */}
@@ -476,7 +483,7 @@ export default function JoelUberHomepage() {
                   <p style={{ fontSize: 15, lineHeight: 1.6, color: "#1A1A1A" }}>{item.text}</p>
                 </div>
               ))}
-              <a href="#" style={{ color: "#6B6B6B", fontSize: 14, textDecoration: "underline" }}>
+              <a href="/cgu" style={{ color: "#6B6B6B", fontSize: 14, textDecoration: "underline" }}>
                 Voir les conditions générales
               </a>
             </div>
@@ -602,8 +609,8 @@ export default function JoelUberHomepage() {
             {/* Articles right */}
             <div className="flex flex-col gap-4">
               {[
-                { img: "/uber-test/article-plomberie.webp", alt: "Article plomberie — trouver un plombier urgence Paris", title: "Paris : Comment trouver un plombier d'urgence", tag: "Conseils pratiques" },
-                { img: "/uber-test/article-serrurerie.webp", alt: "Article serrurerie — arnaques à éviter", title: "Serrurerie : les arnaques à éviter absolument", tag: "Sécurité & confiance" },
+                { img: "/uber-test/article-plomberie.webp", alt: "Article plomberie — trouver un plombier urgence Paris", title: "Paris : Comment trouver un plombier d'urgence", tag: "Conseils pratiques", href: "/plomberie" },
+                { img: "/uber-test/article-serrurerie.webp", alt: "Article serrurerie — arnaques à éviter", title: "Serrurerie : les arnaques à éviter absolument", tag: "Sécurité & confiance", href: "/stop-arnaques" },
               ].map((art) => (
                 <div key={art.title} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
                   <div style={{ height: 120, position: "relative" }}>
@@ -618,7 +625,7 @@ export default function JoelUberHomepage() {
                   <div style={{ padding: "16px 20px" }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: "#7C3AED", textTransform: "uppercase", letterSpacing: 1 }}>{art.tag}</span>
                     <p style={{ fontSize: 15, fontWeight: 600, marginTop: 6, lineHeight: 1.4 }}>{art.title}</p>
-                    <a href="#" style={{ fontSize: 13, color: "#6B6B6B", textDecoration: "underline", display: "block", marginTop: 8 }}>En savoir plus</a>
+                    <a href={art.href} style={{ fontSize: 13, color: "#6B6B6B", textDecoration: "underline", display: "block", marginTop: 8 }}>En savoir plus</a>
                   </div>
                 </div>
               ))}
@@ -653,7 +660,7 @@ export default function JoelUberHomepage() {
                 Rejoignez le réseau Joël. Vous choisissez vos créneaux, nous gérons les clients, la facturation et les impayés. Liberté totale.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
-                <BtnPrimary>Devenir artisan Joël</BtnPrimary>
+                <BtnPrimary href="/recrutement">Devenir artisan Joël</BtnPrimary>
                 <a href="#" style={{ color: "#6B6B6B", fontSize: 14, textDecoration: "underline", display: "flex", alignItems: "center", paddingTop: 4 }}>
                   Vous avez déjà un compte ? Connectez-vous
                 </a>
@@ -678,8 +685,8 @@ export default function JoelUberHomepage() {
                 Joël Pro est dédié aux gestionnaires d'immeubles, syndics et entreprises. Gérez vos interventions, vos équipes et vos budgets en un seul endroit.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
-                <BtnPrimary>Commencer</BtnPrimary>
-                <a href="#" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
+                <BtnPrimary href="/recrutement">Commencer</BtnPrimary>
+                <a href="/a-propos" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
                   Découvrir nos solutions pro →
                 </a>
               </div>
@@ -736,12 +743,15 @@ export default function JoelUberHomepage() {
         <Container>
           {/* Top row */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-8" style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
-            <div className="flex items-center gap-2">
-              <div style={{ width: 32, height: 32, background: "#7C3AED", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "#fff", fontWeight: 800, fontSize: 18 }}>J</span>
-              </div>
-              <span style={{ fontWeight: 700, fontSize: 18 }}>Joël</span>
-            </div>
+            <a href="/" className="flex items-center">
+              <Image
+                src="/logo-white.webp"
+                alt="Joël"
+                width={80}
+                height={28}
+                className="h-7 w-auto object-contain"
+              />
+            </a>
             <div className="flex items-center gap-2" style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>
               <span style={{ color: "#4CAF50" }}>✅</span>
               <span>Tous les services opérationnels · 24h/24 · 7j/7</span>
@@ -750,7 +760,7 @@ export default function JoelUberHomepage() {
 
           {/* Help link */}
           <div className="py-6" style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
-            <a href="#" style={{ color: "#fff", fontSize: 15, fontWeight: 600, textDecoration: "none" }}>
+            <a href="/contact" style={{ color: "#fff", fontSize: 15, fontWeight: 600, textDecoration: "none" }}>
               Accéder au centre d'aide →
             </a>
           </div>
@@ -764,11 +774,11 @@ export default function JoelUberHomepage() {
                 </p>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
                   {col.links.map((link) => (
-                    <li key={link}>
-                      <a href="#" style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}
+                    <li key={link.label}>
+                      <a href={link.href} style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}
                         className="hover:opacity-100 transition-opacity"
                       >
-                        {link}
+                        {link.label}
                       </a>
                     </li>
                   ))}
@@ -816,9 +826,13 @@ export default function JoelUberHomepage() {
           {/* Legal */}
           <div className="flex flex-wrap items-center gap-4 pt-6" style={{ fontSize: 13, color: "rgba(255,255,255,0.4)" }}>
             <span>© 2025 Joël Technologies SAS.</span>
-            {["Confidentialité", "Accessibilité", "Conditions"].map((l) => (
-              <a key={l} href="#" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }} className="hover:text-white transition-colors">
-                {l}
+            {[
+              { label: "Confidentialité", href: "/confidentialite" },
+              { label: "Accessibilité", href: "#" },
+              { label: "Conditions", href: "/cgu" },
+            ].map((l) => (
+              <a key={l.label} href={l.href} style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }} className="hover:text-white transition-colors">
+                {l.label}
               </a>
             ))}
           </div>
