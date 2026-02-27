@@ -153,7 +153,7 @@ export default function Hero() {
               {/* Main illustration - No priority to avoid LCP on mobile where it's hidden */}
               <div className="relative rounded-3xl overflow-hidden">
                 <Image
-                  src="/hero-illustration-f.webp"
+                  src="/hero-plomberie.jpg"
                   alt="Artisan dépannage à domicile - Plombier Serrurier Électricien"
                   width={600}
                   height={600}

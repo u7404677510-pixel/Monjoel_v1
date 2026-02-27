@@ -49,7 +49,7 @@ export const tradeConfigs: Record<TradeType, TradeConfig> = {
     name: "Plombier",
     namePlural: "plombiers",
     heroTitle: "Plombier d'urgence Paris",
-    heroImage: "/hero-plomberie.webp",
+    heroImage: "/hero-plomberie.jpg",
     priceFrom: 29,
     mainService: "Fuite d'eau",
     mainServicePrice: "à partir de 29€",

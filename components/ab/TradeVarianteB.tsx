@@ -132,7 +132,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
             {/* Photo artisan */}
             <div className="relative h-[400px] md:h-[500px] 3xl:h-[600px] 5xl:h-[750px] rounded-2xl 3xl:rounded-3xl overflow-hidden shadow-2xl order-first md:order-last">
               <Image
-                src="/artisan-real.webp"
+                src={config.heroImage}
                 alt={`${config.name} professionnel Joël intervention urgence`}
                 fill
                 className="object-cover"

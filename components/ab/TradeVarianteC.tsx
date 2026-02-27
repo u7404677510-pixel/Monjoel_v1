@@ -66,7 +66,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
             {/* Photo artisan - EN PREMIER sur mobile */}
             <div className="relative h-[350px] md:h-[500px] 3xl:h-[600px] 5xl:h-[750px] rounded-2xl 3xl:rounded-3xl overflow-hidden shadow-2xl order-first">
               <Image
-                src="/artisan-real.webp"
+                src={config.heroImage}
                 alt={`${config.name} professionnel Joël de confiance`}
                 fill
                 className="object-cover"
