@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Phone, ArrowRight, Shield, Clock, BadgeCheck, AlertTriangle } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
@@ -145,19 +146,29 @@ export default function BenefitBlocks() {
                   )}
                 </div>
 
-                {/* Illustration placeholder — remplacée par les assets Midjourney */}
+                {/* Illustration */}
                 <div
-                  className={`hidden lg:flex items-center justify-center rounded-2xl ${!isEven ? "lg:col-start-1 lg:row-start-1" : ""}`}
+                  className={`hidden lg:block rounded-2xl overflow-hidden ${!isEven ? "lg:col-start-1 lg:row-start-1" : ""}`}
                   style={{
                     height: 320,
-                    background: i === 0 ? "#F0FDF4" : i === 1 ? "#EFF6FF" : i === 2 ? "#F5F3FF" : "#FFFBEB",
                     borderRadius: 16,
+                    position: "relative",
+                    background: i === 0 ? "#F0FDF4" : i === 1 ? "#EFF6FF" : i === 2 ? "#F5F3FF" : "#FFFBEB",
                   }}
                 >
-                  <Icon
-                    size={64}
-                    className={`${block.iconColor} opacity-20`}
-                  />
+                  {i === 0 ? (
+                    <Image
+                      src="/uber-test/plomberie-preparation2.webp"
+                      alt="Illustration prix transparent — Joël"
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 1280px) 50vw, 600px"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <Icon size={64} className={`${block.iconColor} opacity-20`} />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

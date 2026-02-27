@@ -3,6 +3,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const PHONE = "01 41 69 10 08";
@@ -336,9 +337,15 @@ export default function JoelUberHomepage() {
 
             {/* Right — illustration */}
             <div className="hidden lg:block relative">
-              <div style={{ background: "#F0EDFF", borderRadius: 16, height: 480, display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
-                <span style={{ color: "#7C3AED", fontSize: 14, fontWeight: 500, opacity: 0.5 }}>[Illustration artisan Joël]</span>
-
+              <div style={{ borderRadius: 16, height: 480, position: "relative", overflow: "hidden" }}>
+                <Image
+                  src="/uber-test/hero-artisan.webp"
+                  alt="Artisan Joël — intervention urgence Paris"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
                 {/* Hover card bas */}
                 <div
                   className="absolute bottom-0 left-0 right-0 group"
@@ -413,8 +420,14 @@ export default function JoelUberHomepage() {
                 </a>
               </div>
             </div>
-            <div style={{ background: "#FFF3E0", borderRadius: 16, height: 360, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#E65100", fontSize: 14, opacity: 0.5 }}>[Illustration : artisan + client]</span>
+            <div style={{ borderRadius: 16, height: 360, position: "relative", overflow: "hidden" }}>
+              <Image
+                src="/uber-test/artisan-client.webp"
+                alt="Artisan Joël avec un client — suivi intervention"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </Container>
@@ -426,7 +439,7 @@ export default function JoelUberHomepage() {
       <Section bg="#F6F6F6">
         <Container>
           <h2 style={{ fontSize: 40, fontWeight: 800, letterSpacing: -1, marginBottom: 40 }}>Planifiez</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             {/* Form card */}
             <div style={{ background: "#fff", borderRadius: 16, boxShadow: "0 2px 16px rgba(0,0,0,0.08)", padding: 32 }}>
               <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 24 }}>Réservez votre intervention</h3>
@@ -466,6 +479,17 @@ export default function JoelUberHomepage() {
               <a href="#" style={{ color: "#6B6B6B", fontSize: 14, textDecoration: "underline" }}>
                 Voir les conditions générales
               </a>
+            </div>
+
+            {/* Image planifier — 3e colonne desktop */}
+            <div className="hidden lg:block" style={{ borderRadius: 16, height: 360, position: "relative", overflow: "hidden" }}>
+              <Image
+                src="/uber-test/planifier-card.webp"
+                alt="Planifier une intervention Joël"
+                fill
+                className="object-cover object-center"
+                sizes="33vw"
+              />
             </div>
           </div>
         </Container>
@@ -509,8 +533,14 @@ export default function JoelUberHomepage() {
                 )}
               </div>
             </div>
-            <div style={{ background: "#E8F4FD", borderRadius: 16, height: 360, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#0277BD", fontSize: 14, opacity: 0.5 }}>[Carte Île-de-France]</span>
+            <div style={{ borderRadius: 16, height: 360, position: "relative", overflow: "hidden" }}>
+              <Image
+                src="/uber-test/carte-idf.webp"
+                alt="Zone d'intervention Joël — Île-de-France"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </Container>
@@ -572,12 +602,18 @@ export default function JoelUberHomepage() {
             {/* Articles right */}
             <div className="flex flex-col gap-4">
               {[
-                { bg: "#E8F4FD", color: "#0277BD", title: "Paris : Comment trouver un plombier d'urgence", tag: "Conseils pratiques" },
-                { bg: "#FFF3E0", color: "#E65100", title: "Serrurerie : les arnaques à éviter absolument", tag: "Sécurité & confiance" },
+                { img: "/uber-test/article-plomberie.webp", alt: "Article plomberie — trouver un plombier urgence Paris", title: "Paris : Comment trouver un plombier d'urgence", tag: "Conseils pratiques" },
+                { img: "/uber-test/article-serrurerie.webp", alt: "Article serrurerie — arnaques à éviter", title: "Serrurerie : les arnaques à éviter absolument", tag: "Sécurité & confiance" },
               ].map((art) => (
                 <div key={art.title} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
-                  <div style={{ background: art.bg, height: 120, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ color: art.color, fontSize: 12, opacity: 0.5 }}>[Photo]</span>
+                  <div style={{ height: 120, position: "relative" }}>
+                    <Image
+                      src={art.img}
+                      alt={art.alt}
+                      fill
+                      className="object-cover object-center"
+                      sizes="300px"
+                    />
                   </div>
                   <div style={{ padding: "16px 20px" }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: "#7C3AED", textTransform: "uppercase", letterSpacing: 1 }}>{art.tag}</span>
@@ -598,8 +634,14 @@ export default function JoelUberHomepage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Illustration gauche */}
-            <div style={{ background: "#FFF8E1", borderRadius: 16, height: 400, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#F57F17", fontSize: 14, opacity: 0.5 }}>[Artisan en intervention]</span>
+            <div style={{ borderRadius: 16, height: 400, position: "relative", overflow: "hidden" }}>
+              <Image
+                src="/uber-test/artisan-travail-B2B.webp"
+                alt="Artisan Joël en intervention"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
             {/* Texte droite */}
             <div>
@@ -642,8 +684,14 @@ export default function JoelUberHomepage() {
                 </a>
               </div>
             </div>
-            <div style={{ background: "#E8F4FD", borderRadius: 16, height: 400, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#0277BD", fontSize: 14, opacity: 0.5 }}>[Joël Pro dashboard]</span>
+            <div style={{ borderRadius: 16, height: 400, position: "relative", overflow: "hidden" }}>
+              <Image
+                src="/uber-test/joel-pro-dashboard.webp"
+                alt="Joël Pro — dashboard gestionnaire"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </Container>
