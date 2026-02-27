@@ -12,11 +12,12 @@
  */
 
 import Image from "next/image";
-import { Phone, Star, Shield, Check, Clock, Award, Wrench, Users } from "lucide-react";
+import { Phone, Star, Shield, Check, Clock, Award, Wrench, Users, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { TradeConfig, VariantType } from "@/lib/ab-test/config";
 import { trackConversion } from "@/lib/ab-test/router";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
+import QuickQuoteForm from "@/components/QuickQuoteForm";
 import {
   TestHeader,
   TestFooter,
@@ -34,6 +35,7 @@ interface TradeVarianteBProps {
 export default function TradeVarianteB({ config, variant }: TradeVarianteBProps) {
   const { config: siteConfig } = useSiteConfig();
   const [artisanCount, setArtisanCount] = useState(8);
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -114,19 +116,38 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                 <p className="text-gray-600 3xl:text-lg 5xl:text-xl mt-1 3xl:mt-2">{config.mainService}</p>
               </div>
 
-              {/* CTA VERT - Feedback appliqué */}
-              <a
-                href={`tel:${formatPhoneForTel(siteConfig.phone_number)}`}
-                onClick={() => handleCallClick("hero-cta")}
-                className="group inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 5xl:px-14 py-5 3xl:py-6 5xl:py-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl md:text-2xl 3xl:text-3xl 5xl:text-4xl rounded-xl 3xl:rounded-2xl shadow-xl transition-all w-full md:w-auto"
-              >
-                <Phone size={28} className="animate-ring 3xl:w-9 3xl:h-9 5xl:w-11 5xl:h-11" />
-                <span>{siteConfig.phone_number}</span>
-              </a>
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3 3xl:gap-4 w-full md:w-auto">
+                <a
+                  href={`tel:${formatPhoneForTel(siteConfig.phone_number)}`}
+                  onClick={() => handleCallClick("hero-cta")}
+                  className="group relative inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 py-5 3xl:py-6 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl md:text-2xl 3xl:text-3xl rounded-xl 3xl:rounded-2xl shadow-xl transition-all"
+                >
+                  <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full">GRATUIT</span>
+                  <Phone size={24} className="animate-ring 3xl:w-8 3xl:h-8" />
+                  <span>{siteConfig.phone_number}</span>
+                </a>
 
-              <p className="text-gray-500 text-sm 3xl:text-base 5xl:text-lg mt-3 3xl:mt-4 text-center md:text-left">
-                Appel gratuit • Devis immédiat • Paiement APRÈS intervention
+                <button
+                  onClick={() => setShowQuoteModal(true)}
+                  className="inline-flex items-center justify-center gap-2 px-6 3xl:px-8 py-5 3xl:py-6 bg-white text-joel-violet font-bold text-lg md:text-xl 3xl:text-2xl rounded-xl 3xl:rounded-2xl border-2 border-joel-violet/30 hover:border-joel-violet hover:bg-joel-violet/5 transition-all shadow-sm"
+                >
+                  <span>Demander un devis</span>
+                  <ArrowRight size={20} className="3xl:w-6 3xl:h-6" />
+                </button>
+              </div>
+
+              <p className="text-gray-500 text-sm 3xl:text-base mt-3 3xl:mt-4 text-center md:text-left">
+                Appel gratuit • Devis instantané • Sans engagement
               </p>
+
+              {/* Quote Modal */}
+              {showQuoteModal && (
+                <QuickQuoteForm
+                  variant="modal"
+                  onClose={() => setShowQuoteModal(false)}
+                />
+              )}
             </div>
 
             {/* Photo artisan */}

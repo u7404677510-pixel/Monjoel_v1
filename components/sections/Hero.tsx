@@ -1,26 +1,67 @@
 "use client";
 
-import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight } from "lucide-react";
+import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
+
+const carouselSlides = [
+  {
+    src: "/hero-serrurerie.webp",
+    alt: "Serrurier professionnel Joël - Dépannage serrurerie Paris",
+    label: "Serrurerie",
+    color: "from-joel-violet/60",
+  },
+  {
+    src: "/hero-plomberie.webp",
+    alt: "Plombier professionnel Joël - Dépannage plomberie Paris",
+    label: "Plomberie",
+    color: "from-blue-600/60",
+  },
+  {
+    src: "/hero-electricite.webp",
+    alt: "Électricien professionnel Joël - Dépannage électricité Paris",
+    label: "Électricité",
+    color: "from-amber-500/60",
+  },
+];
 
 export default function Hero() {
   const { config } = useSiteConfig();
   
-  // Compteur artisans disponibles (varie entre 2-5)
   const [artisansCount, setArtisansCount] = useState(3);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
-  
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const goToSlide = useCallback((index: number) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide(index);
+    setTimeout(() => setIsTransitioning(false), 600);
+  }, [isTransitioning]);
+
+  const nextSlide = useCallback(() => {
+    goToSlide((currentSlide + 1) % carouselSlides.length);
+  }, [currentSlide, goToSlide]);
+
+  const prevSlide = useCallback(() => {
+    goToSlide((currentSlide - 1 + carouselSlides.length) % carouselSlides.length);
+  }, [currentSlide, goToSlide]);
+
   useEffect(() => {
-    // Variation aléatoire toutes les 30 secondes
     const interval = setInterval(() => {
-      setArtisansCount(Math.floor(Math.random() * 4) + 2); // 2-5
+      setArtisansCount(Math.floor(Math.random() * 4) + 2);
     }, 30000);
-    
     return () => clearInterval(interval);
   }, []);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 4000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
 
   const handleCallClick = () => {
     // Track call click
@@ -147,24 +188,72 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right side - Illustration - Desktop only */}
-          <div className="hidden lg:block order-2 relative animate-fade-in-right delay-200">
+          {/* Right side - Carousel - Desktop only */}
+          <div className="hidden lg:block order-2 relative">
             <div className="relative max-w-lg mx-auto lg:max-w-none">
-              {/* Main illustration - No priority to avoid LCP on mobile where it's hidden */}
-              <div className="relative rounded-3xl overflow-hidden">
-                <Image
-                  src="/hero-plomberie.webp"
-                  alt="Artisan dépannage à domicile - Plombier Serrurier Électricien"
-                  width={600}
-                  height={600}
-                  sizes="(max-width: 1024px) 100vw, 600px"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
+
+              {/* Carousel container */}
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
+                {carouselSlides.map((slide, index) => (
+                  <div
+                    key={slide.src}
+                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                      index === currentSlide ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt}
+                      fill
+                      sizes="(max-width: 1280px) 50vw, 600px"
+                      className="object-cover"
+                      loading={index === 0 ? "eager" : "lazy"}
+                      priority={index === 0}
+                    />
+                    {/* Label overlay */}
+                    <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${slide.color} to-transparent px-6 py-4`}>
+                      <span className="text-white text-sm font-semibold bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                        {slide.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+
+                {/* Prev / Next arrows */}
+                <button
+                  onClick={prevSlide}
+                  aria-label="Image précédente"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow hover:bg-white transition-all"
+                >
+                  <ChevronLeft size={18} className="text-gray-700" />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  aria-label="Image suivante"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow hover:bg-white transition-all"
+                >
+                  <ChevronRight size={18} className="text-gray-700" />
+                </button>
+
+                {/* Dots */}
+                <div className="absolute bottom-4 right-4 z-10 flex gap-2">
+                  {carouselSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      aria-label={`Aller à l'image ${index + 1}`}
+                      className={`transition-all duration-300 rounded-full ${
+                        index === currentSlide
+                          ? "w-6 h-2 bg-white"
+                          : "w-2 h-2 bg-white/50 hover:bg-white/80"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
 
               {/* Floating badge - Availability */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100 animate-scale-in delay-600">
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
                     <Clock className="text-white" size={20} />
@@ -177,12 +266,57 @@ export default function Hero() {
               </div>
 
               {/* Floating badge - Price */}
-              <div className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2 shadow-lg animate-scale-in delay-800">
+              <div className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2 shadow-lg">
                 <p className="text-xs font-medium">À partir de</p>
                 <p className="font-bold text-xl">89€</p>
               </div>
             </div>
           </div>
+
+          {/* Mobile carousel - full width below content */}
+          <div className="lg:hidden order-2 relative">
+            <div className="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-xl">
+              {carouselSlides.map((slide, index) => (
+                <div
+                  key={slide.src}
+                  className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                  <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${slide.color} to-transparent px-4 py-3`}>
+                    <span className="text-white text-xs font-semibold bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                      {slide.label}
+                    </span>
+                  </div>
+                </div>
+              ))}
+
+              {/* Mobile dots */}
+              <div className="absolute bottom-3 right-3 z-10 flex gap-1.5">
+                {carouselSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    aria-label={`Image ${index + 1}`}
+                    className={`transition-all duration-300 rounded-full ${
+                      index === currentSlide
+                        ? "w-5 h-1.5 bg-white"
+                        : "w-1.5 h-1.5 bg-white/50"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
