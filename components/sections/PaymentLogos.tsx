@@ -7,10 +7,10 @@ interface PaymentLogosProps {
 }
 
 const paymentMethods = [
-  { name: "CB", logo: "/logos/payments/cb.svg", width: 44, height: 28 },
-  { name: "Visa", logo: "/logos/payments/visa.svg", width: 54, height: 28 },
-  { name: "Mastercard", logo: "/logos/payments/mastercard.svg", width: 48, height: 28 },
-  { name: "Apple Pay", logo: "/logos/payments/apple-pay.svg", width: 56, height: 28 },
+  { name: "CB", logo: "/logos/payments/cb.svg" },
+  { name: "Visa", logo: "/logos/payments/visa.svg" },
+  { name: "Mastercard", logo: "/logos/payments/mastercard.svg" },
+  { name: "Apple Pay", logo: "/logos/payments/apple-pay.svg" },
 ];
 
 export default function PaymentLogos({ variant = "light", showMicrocopy = true }: PaymentLogosProps) {
@@ -18,49 +18,42 @@ export default function PaymentLogos({ variant = "light", showMicrocopy = true }
 
   return (
     <div className={`${isDark ? "" : "border-t border-gray-100"} pt-3`}>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        {/* Logos paiement */}
-        <div className="flex items-center gap-2 flex-wrap">
-          {paymentMethods.map((pm) => (
-            <div
-              key={pm.name}
-              className={`flex items-center justify-center rounded-md overflow-hidden ${
-                isDark ? "opacity-70 hover:opacity-100" : "opacity-80 hover:opacity-100"
-              } transition-opacity`}
-              title={pm.name}
-            >
-              <Image
-                src={pm.logo}
-                alt={pm.name}
-                width={pm.width}
-                height={pm.height}
-                className="h-7 w-auto object-contain"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Séparateur */}
-        {showMicrocopy && (
-          <div className={`hidden sm:flex items-center gap-3 text-xs ${isDark ? "text-white/50" : "text-gray-400"} flex-wrap`}>
-            <span className={isDark ? "text-white/20" : "text-gray-200"}>|</span>
-            <span className="flex items-center gap-1">
-              <Shield size={11} className={isDark ? "text-white/50" : "text-gray-400"} />
-              Paiement après intervention
-            </span>
-            <span className="flex items-center gap-1">
-              <Phone size={11} className={isDark ? "text-white/50" : "text-gray-400"} />
-              Numéro non surtaxé
-            </span>
+      {/* Logos + microcopy sur la même ligne */}
+      <div className="flex flex-wrap items-center gap-2">
+        {/* Cartes de paiement — chacune dans un badge blanc arrondi */}
+        {paymentMethods.map((pm) => (
+          <div
+            key={pm.name}
+            title={pm.name}
+            className="flex items-center justify-center bg-white border border-gray-200 rounded-md px-2 py-1 shadow-sm"
+            style={{ minWidth: 40, height: 28 }}
+          >
+            <Image
+              src={pm.logo}
+              alt={pm.name}
+              width={36}
+              height={20}
+              className="w-auto object-contain"
+              style={{ maxHeight: 18 }}
+            />
           </div>
+        ))}
+
+        {/* Microcopy à droite des logos */}
+        {showMicrocopy && (
+          <span className={`hidden sm:inline text-xs ${isDark ? "text-white/40" : "text-gray-400"} ml-1`}>
+            · Paiement après intervention · Numéro non surtaxé
+          </span>
         )}
       </div>
 
-      {/* Version mobile — microcopy simplifiée */}
+      {/* Mobile — microcopy seule sous les logos */}
       {showMicrocopy && (
-        <p className={`sm:hidden text-[10px] mt-1.5 ${isDark ? "text-white/40" : "text-gray-400"}`}>
-          Paiement après intervention · Appel gratuit · Numéro non surtaxé
-        </p>
+        <div className="sm:hidden flex items-center gap-2 mt-1.5">
+          <span className={`text-[10px] ${isDark ? "text-white/40" : "text-gray-400"}`}>
+            Paiement après intervention · Numéro non surtaxé
+          </span>
+        </div>
       )}
     </div>
   );
