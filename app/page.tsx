@@ -4,13 +4,12 @@ import StatsStrip from "@/components/sections/StatsStrip";
 import HowItWorks from "@/components/sections/HowItWorks";
 import ServicesExplorer from "@/components/sections/ServicesExplorer";
 import Advantages from "@/components/sections/Advantages";
-import TrueScopePreview from "@/components/sections/TrueScopePreview";
 import StopArnaquesPreview from "@/components/sections/StopArnaquesPreview";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Joël - Plombier, Serrurier & Électricien Paris | 24h/24",
-  description: "Dépannage urgence prix fixe à Paris et Île-de-France. Plombier, serrurier, électricien. Intervention 30 min, devis gratuit. Appelez le 01 41 69 10 08.",
+  description: "Devis fixe en 30 secondes par IA. Plombier, serrurier, électricien à Paris et Île-de-France. 3 questions + 1 photo = prix garanti. 24h/24, intervention rapide.",
   keywords: [
     "plombier urgence Paris",
     "serrurier urgence Paris",
@@ -72,7 +71,6 @@ export default function Home() {
     <>
       <Hero />
       <StatsStrip />
-      <TrueScopePreview />
       <HowItWorks />
       <ServicesExplorer />
       <Advantages />
