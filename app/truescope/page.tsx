@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Sparkles, Zap, Eye, Clock, BadgeEuro, Target, ArrowRight, Wrench, MessageSquare, Camera } from "lucide-react";
 import Link from "next/link";
 
-const TRUESCOPE_URL = "https://www.truescope-by-joel.tech/nouvelle-demande";
+const TRUESCOPE_URL = "https://monjoel.fr/app/truescope";
 
 const steps = [
   {
@@ -102,8 +102,6 @@ export default function TrueScopePage() {
           >
             <a
               href={TRUESCOPE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
@@ -284,8 +282,6 @@ export default function TrueScopePage() {
               </p>
               <a
                 href={TRUESCOPE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-joel-violet font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-joel-violet/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />

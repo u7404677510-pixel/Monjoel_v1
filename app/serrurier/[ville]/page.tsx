@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getCityBySlug, getPriorityCities } from "@/lib/data/cities-idf";
+import { getCityBySlug, citiesIDF } from "@/lib/data/cities-idf";
 import { getTradeBySlug } from "@/lib/data/services-definition";
 import { generateCityPageContent } from "@/lib/seo/city-content";
 import { CityHero, CityFAQ, CityServices, LocalSchema, NearbyAreas } from "@/components/seo";
@@ -20,10 +20,8 @@ export const dynamicParams = true;
 // ISR: Revalider les pages toutes les 24 heures
 export const revalidate = 86400;
 
-// Générer les pages statiques uniquement pour les villes prioritaires
 export async function generateStaticParams() {
-  const priorityCities = getPriorityCities();
-  return priorityCities.map((city) => ({
+  return citiesIDF.map((city) => ({
     ville: city.slug,
   }));
 }
@@ -111,6 +109,25 @@ export default function SerurierVillePage({ params }: Props) {
 
         {/* Services */}
         <CityServices trade={trade} city={city} />
+
+        {/* Pourquoi Joël */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+              {content.whyJoel.title}
+            </h2>
+            <div className="space-y-4">
+              {content.whyJoel.points.map((point, index) => (
+                <div key={index} className="flex gap-4 items-start bg-white rounded-xl p-5 border border-gray-100">
+                  <span className="flex-shrink-0 w-8 h-8 bg-joel-violet/10 text-joel-violet rounded-full flex items-center justify-center font-bold text-sm">
+                    {index + 1}
+                  </span>
+                  <p className="text-gray-700 leading-relaxed">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* FAQ */}
         <CityFAQ 
