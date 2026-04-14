@@ -80,6 +80,18 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/truescope",
+        destination: "https://monjoeltruescope.vercel.app/truescope",
+      },
+      {
+        source: "/truescope/:path*",
+        destination: "https://monjoeltruescope.vercel.app/truescope/:path*",
+      },
+    ];
+  },
   // Enable strict mode for better development experience
   reactStrictMode: true,
   // Optimize images
