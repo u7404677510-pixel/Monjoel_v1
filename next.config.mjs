@@ -23,8 +23,20 @@ const nextConfig = {
         ],
       },
       {
-        // Apply to all routes
-        source: "/:path*",
+        source: "/app/truescope/:path*",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: "",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(self), microphone=(), geolocation=(self)",
+          },
+        ],
+      },
+      {
+        source: "/((?!app/truescope).*)",
         headers: [
           // Prevent clickjacking
           {
