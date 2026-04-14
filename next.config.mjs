@@ -83,12 +83,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/truescope",
-        destination: "https://monjoeltruescope.vercel.app/truescope",
+        source: "/app/truescope",
+        destination: "https://monjoeltruescope.vercel.app/app/truescope",
       },
       {
-        source: "/truescope/:path*",
-        destination: "https://monjoeltruescope.vercel.app/truescope/:path*",
+        source: "/app/truescope/:path*",
+        destination: "https://monjoeltruescope.vercel.app/app/truescope/:path*",
       },
     ];
   },
