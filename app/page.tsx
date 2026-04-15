@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
+import TrueScopeHero from "@/components/sections/TrueScopeHero";
 import StatsStrip from "@/components/sections/StatsStrip";
 import HowItWorks from "@/components/sections/HowItWorks";
 import ServicesExplorer from "@/components/sections/ServicesExplorer";
@@ -9,7 +10,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
   title: "Joël - Plombier, Serrurier & Électricien Paris | 24h/24",
-  description: "Devis fixe en 30 secondes par IA. Plombier, serrurier, électricien à Paris et Île-de-France. 3 questions + 1 photo = prix garanti. 24h/24, intervention rapide.",
+  description: "Dépannage urgence prix fixe à Paris et Île-de-France. Plombier, serrurier, électricien. Intervention 30 min, devis gratuit par IA en 30 secondes. Appelez le 01 41 69 10 08.",
   keywords: [
     "plombier urgence Paris",
     "serrurier urgence Paris",
@@ -70,6 +71,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrueScopeHero />
       <StatsStrip />
       <HowItWorks />
       <ServicesExplorer />
