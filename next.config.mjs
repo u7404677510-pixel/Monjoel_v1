@@ -104,6 +104,36 @@ const nextConfig = {
       },
     ];
   },
+  // Redirects 301 — slugs villes accentués → slugs ASCII.
+  // Corrige le bug ayant causé ~190 pages en 404 dans Google Search Console.
+  // Les URLs accentuées étaient présentes dans le sitemap historique : on les
+  // redirige proprement pour que Google récupère le jus SEO.
+  async redirects() {
+    const accentMap = [
+      ["armentières-en-brie", "armentieres-en-brie"],
+      ["ferrières-en-brie", "ferrieres-en-brie"],
+      ["fontenay-trésigny", "fontenay-tresigny"],
+      ["achères", "acheres"],
+      ["bourdonné", "bourdonne"],
+    ];
+    const trades = ["plombier", "serrurier", "electricien"];
+    const redirects = [];
+    for (const [oldSlug, newSlug] of accentMap) {
+      for (const trade of trades) {
+        redirects.push({
+          source: `/${trade}/${oldSlug}`,
+          destination: `/${trade}/${newSlug}`,
+          permanent: true,
+        });
+        redirects.push({
+          source: `/${trade}/${oldSlug}/:service`,
+          destination: `/${trade}/${newSlug}/:service`,
+          permanent: true,
+        });
+      }
+    }
+    return redirects;
+  },
   // Enable strict mode for better development experience
   reactStrictMode: true,
   // Optimize images
