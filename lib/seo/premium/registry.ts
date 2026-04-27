@@ -22,7 +22,7 @@ import type { PremiumPageContent } from "./types";
 // Ajouter un import ici dès qu'un nouveau fichier de contenu est créé.
 // (Pour 1000+ pages, on passera à un import dynamique généré via script.)
 
-// -- Plombier
+// -- Plombier (pages ville)
 import { content as plombierParis15 } from "./content/plombier-paris-15";
 import { content as plombierParis7 } from "./content/plombier-paris-7";
 import { content as plombierParis18 } from "./content/plombier-paris-18";
@@ -35,18 +35,32 @@ import { content as plombierParis9 } from "./content/plombier-paris-9";
 import { content as plombierSaintCloud } from "./content/plombier-saint-cloud";
 import { content as plombierEvryCourcouronnes } from "./content/plombier-evry-courcouronnes";
 import { content as plombierIvrySurSeine } from "./content/plombier-ivry-sur-seine";
+import { content as plombierMelun } from "./content/plombier-melun";
+import { content as plombierAubervilliers } from "./content/plombier-aubervilliers";
+import { content as plombierCergy } from "./content/plombier-cergy";
+import { content as plombierColombes } from "./content/plombier-colombes";
 
-// -- Serrurier
+// -- Plombier (pages service)
+import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
+
+// -- Serrurier (pages ville)
 import { content as serrurierParis11 } from "./content/serrurier-paris-11";
 import { content as serrurierParis3 } from "./content/serrurier-paris-3";
 import { content as serrurierBoulogneBillancourt } from "./content/serrurier-boulogne-billancourt";
 import { content as serrurierParis20 } from "./content/serrurier-paris-20";
 import { content as serrurierVincennes } from "./content/serrurier-vincennes";
 import { content as serrurierSaintDenis } from "./content/serrurier-saint-denis";
+import { content as serrurierArgenteuil } from "./content/serrurier-argenteuil";
 
-// -- Électricien
+// -- Serrurier (pages service)
+import { content as serrurierAngervilleReproductionCles } from "./content/serrurier-angerville-reproduction-cles";
+import { content as serrurierEnghienLesBainsReproductionCles } from "./content/serrurier-enghien-les-bains-reproduction-cles";
+import { content as serrurierVaurealReproductionCles } from "./content/serrurier-vaureal-reproduction-cles";
+
+// -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
 import { content as electricienIssyLesMoulineaux } from "./content/electricien-issy-les-moulineaux";
+import { content as electricienCourbevoie } from "./content/electricien-courbevoie";
 
 // ============================================
 // REGISTRE
@@ -79,6 +93,18 @@ const premiumPages: PremiumPageContent[] = [
   serrurierVincennes,
   serrurierSaintDenis,
   electricienIssyLesMoulineaux,
+  // Batch 3 — pages ville
+  plombierMelun,
+  plombierAubervilliers,
+  plombierCergy,
+  plombierColombes,
+  serrurierArgenteuil,
+  electricienCourbevoie,
+  // Batch 3 — pages service (capitalisation positions GSC top 10)
+  plombierEvryCourcouronnesChauffeEauPanne,
+  serrurierAngervilleReproductionCles,
+  serrurierEnghienLesBainsReproductionCles,
+  serrurierVaurealReproductionCles,
 ];
 
 // ============================================
