@@ -52,9 +52,13 @@ import { content as plombierAsnieresSurSeine } from "./content/plombier-asnieres
 import { content as plombierCreteil } from "./content/plombier-creteil";
 import { content as plombierFontenayAuxRoses } from "./content/plombier-fontenay-aux-roses";
 import { content as plombierPantin } from "./content/plombier-pantin";
+import { content as plombierSaintMaurDesFosses } from "./content/plombier-saint-maur-des-fosses";
 
 // -- Plombier (pages service)
 import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
+import { content as plombierVilliersSurMarneRechercheFuite } from "./content/plombier-villiers-sur-marne-recherche-fuite";
+import { content as plombierLongjumeauRechercheFuite } from "./content/plombier-longjumeau-recherche-fuite";
+import { content as plombierQuincySousSenartDebouchageCanalisation } from "./content/plombier-quincy-sous-senart-debouchage-canalisation";
 
 // -- Serrurier (pages ville)
 import { content as serrurierParis11 } from "./content/serrurier-paris-11";
@@ -64,11 +68,15 @@ import { content as serrurierParis20 } from "./content/serrurier-paris-20";
 import { content as serrurierVincennes } from "./content/serrurier-vincennes";
 import { content as serrurierSaintDenis } from "./content/serrurier-saint-denis";
 import { content as serrurierArgenteuil } from "./content/serrurier-argenteuil";
+import { content as serrurierBobigny } from "./content/serrurier-bobigny";
+import { content as serrurierSaintGermainEnLaye } from "./content/serrurier-saint-germain-en-laye";
+import { content as serrurierMeaux } from "./content/serrurier-meaux";
 
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
 import { content as electricienIssyLesMoulineaux } from "./content/electricien-issy-les-moulineaux";
 import { content as electricienCourbevoie } from "./content/electricien-courbevoie";
+import { content as electricienMassy } from "./content/electricien-massy";
 
 // ============================================
 // REGISTRE
@@ -112,6 +120,16 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierCreteil,
   plombierFontenayAuxRoses,
   plombierPantin,
+  // Batch 5 — pages ville fact-checked
+  plombierSaintMaurDesFosses,
+  serrurierBobigny,
+  serrurierSaintGermainEnLaye,
+  serrurierMeaux,
+  electricienMassy,
+  // Batch 5 — pages service fact-checked (capitalisation GSC)
+  plombierVilliersSurMarneRechercheFuite,
+  plombierLongjumeauRechercheFuite,
+  plombierQuincySousSenartDebouchageCanalisation,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
