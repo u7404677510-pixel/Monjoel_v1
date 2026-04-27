@@ -50,6 +50,8 @@ import { content as plombierColombes } from "./content/plombier-colombes";
 import { content as plombierNanterre } from "./content/plombier-nanterre";
 import { content as plombierAsnieresSurSeine } from "./content/plombier-asnieres-sur-seine";
 import { content as plombierCreteil } from "./content/plombier-creteil";
+import { content as plombierFontenayAuxRoses } from "./content/plombier-fontenay-aux-roses";
+import { content as plombierPantin } from "./content/plombier-pantin";
 
 // -- Plombier (pages service)
 import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
@@ -108,6 +110,8 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierNanterre,
   plombierAsnieresSurSeine,
   plombierCreteil,
+  plombierFontenayAuxRoses,
+  plombierPantin,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
