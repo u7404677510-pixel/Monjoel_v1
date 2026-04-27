@@ -29,14 +29,24 @@ import { content as plombierParis18 } from "./content/plombier-paris-18";
 import { content as plombierNeuillySurSeine } from "./content/plombier-neuilly-sur-seine";
 import { content as plombierVersailles } from "./content/plombier-versailles";
 import { content as plombierMontreuil } from "./content/plombier-montreuil";
+import { content as plombierParis13 } from "./content/plombier-paris-13";
+import { content as plombierParis17 } from "./content/plombier-paris-17";
+import { content as plombierParis9 } from "./content/plombier-paris-9";
+import { content as plombierSaintCloud } from "./content/plombier-saint-cloud";
+import { content as plombierEvryCourcouronnes } from "./content/plombier-evry-courcouronnes";
+import { content as plombierIvrySurSeine } from "./content/plombier-ivry-sur-seine";
 
 // -- Serrurier
 import { content as serrurierParis11 } from "./content/serrurier-paris-11";
 import { content as serrurierParis3 } from "./content/serrurier-paris-3";
 import { content as serrurierBoulogneBillancourt } from "./content/serrurier-boulogne-billancourt";
+import { content as serrurierParis20 } from "./content/serrurier-paris-20";
+import { content as serrurierVincennes } from "./content/serrurier-vincennes";
+import { content as serrurierSaintDenis } from "./content/serrurier-saint-denis";
 
 // -- Électricien
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
+import { content as electricienIssyLesMoulineaux } from "./content/electricien-issy-les-moulineaux";
 
 // ============================================
 // REGISTRE
@@ -47,6 +57,7 @@ import { content as electricienLevalloisPerret } from "./content/electricien-lev
  * Le registre sera reconstruit automatiquement à partir de cette liste.
  */
 const premiumPages: PremiumPageContent[] = [
+  // Batch 1
   plombierParis15,
   plombierParis7,
   plombierParis18,
@@ -57,6 +68,17 @@ const premiumPages: PremiumPageContent[] = [
   serrurierParis3,
   serrurierBoulogneBillancourt,
   electricienLevalloisPerret,
+  // Batch 2
+  plombierParis13,
+  plombierParis17,
+  plombierParis9,
+  plombierSaintCloud,
+  plombierEvryCourcouronnes,
+  plombierIvrySurSeine,
+  serrurierParis20,
+  serrurierVincennes,
+  serrurierSaintDenis,
+  electricienIssyLesMoulineaux,
 ];
 
 // ============================================
