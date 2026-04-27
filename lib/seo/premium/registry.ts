@@ -12,15 +12,23 @@
  *
  * Le sitemap et les pages [ville] / [service] consultent ce registre via les
  * helpers `isPremiumCity` / `isPremiumService` / `getPremiumContent`.
+ *
+ * EXCLUSION : le service "reproduction-cles" est BANNI du programme Premium
+ * (décision business, monjoel.fr ne cible pas ce business). Voir BLOCKED_SERVICES.
  */
 
 import type { PremiumPageContent } from "./types";
 
 // ============================================
+// SERVICES BANNIS DU PROGRAMME PREMIUM
+// ============================================
+// Ces services ne doivent JAMAIS apparaître en page Premium.
+// Si un fichier reproduction-cles est créé par erreur, il sera ignoré au runtime.
+const BLOCKED_SERVICES = new Set<string>(["reproduction-cles"]);
+
+// ============================================
 // IMPORTS DES CONTENUS PREMIUM
 // ============================================
-// Ajouter un import ici dès qu'un nouveau fichier de contenu est créé.
-// (Pour 1000+ pages, on passera à un import dynamique généré via script.)
 
 // -- Plombier (pages ville)
 import { content as plombierParis15 } from "./content/plombier-paris-15";
@@ -39,6 +47,9 @@ import { content as plombierMelun } from "./content/plombier-melun";
 import { content as plombierAubervilliers } from "./content/plombier-aubervilliers";
 import { content as plombierCergy } from "./content/plombier-cergy";
 import { content as plombierColombes } from "./content/plombier-colombes";
+import { content as plombierNanterre } from "./content/plombier-nanterre";
+import { content as plombierAsnieresSurSeine } from "./content/plombier-asnieres-sur-seine";
+import { content as plombierCreteil } from "./content/plombier-creteil";
 
 // -- Plombier (pages service)
 import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
@@ -52,11 +63,6 @@ import { content as serrurierVincennes } from "./content/serrurier-vincennes";
 import { content as serrurierSaintDenis } from "./content/serrurier-saint-denis";
 import { content as serrurierArgenteuil } from "./content/serrurier-argenteuil";
 
-// -- Serrurier (pages service)
-import { content as serrurierAngervilleReproductionCles } from "./content/serrurier-angerville-reproduction-cles";
-import { content as serrurierEnghienLesBainsReproductionCles } from "./content/serrurier-enghien-les-bains-reproduction-cles";
-import { content as serrurierVaurealReproductionCles } from "./content/serrurier-vaureal-reproduction-cles";
-
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
 import { content as electricienIssyLesMoulineaux } from "./content/electricien-issy-les-moulineaux";
@@ -66,11 +72,7 @@ import { content as electricienCourbevoie } from "./content/electricien-courbevo
 // REGISTRE
 // ============================================
 
-/**
- * Liste de TOUS les contenus premium importés ci-dessus.
- * Le registre sera reconstruit automatiquement à partir de cette liste.
- */
-const premiumPages: PremiumPageContent[] = [
+const _allPremiumPages: PremiumPageContent[] = [
   // Batch 1
   plombierParis15,
   plombierParis7,
@@ -100,12 +102,18 @@ const premiumPages: PremiumPageContent[] = [
   plombierColombes,
   serrurierArgenteuil,
   electricienCourbevoie,
-  // Batch 3 — pages service (capitalisation positions GSC top 10)
+  // Batch 3 — pages service Premium
   plombierEvryCourcouronnesChauffeEauPanne,
-  serrurierAngervilleReproductionCles,
-  serrurierEnghienLesBainsReproductionCles,
-  serrurierVaurealReproductionCles,
+  // Batch 4 — pages ville
+  plombierNanterre,
+  plombierAsnieresSurSeine,
+  plombierCreteil,
 ];
+
+// Application du filtre BLOCKED_SERVICES (sécurité runtime)
+const premiumPages: PremiumPageContent[] = _allPremiumPages.filter(
+  (p) => !p.serviceSlug || !BLOCKED_SERVICES.has(p.serviceSlug),
+);
 
 // ============================================
 // INDEX INTERNES
@@ -121,52 +129,41 @@ for (const page of premiumPages) {
 }
 
 // ============================================
-// API PUBLIQUE — utilisée par les pages et le sitemap
+// API PUBLIQUE
 // ============================================
 
-/** Retourne le contenu premium si la combinaison existe, sinon undefined. */
 export function getPremiumContent(
   trade: string,
   citySlug: string,
   serviceSlug?: string,
 ): PremiumPageContent | undefined {
+  if (serviceSlug && BLOCKED_SERVICES.has(serviceSlug)) return undefined;
   return _premiumIndex.get(makeKey(trade, citySlug, serviceSlug));
 }
 
-/** Indique si une page /[trade]/[citySlug] est en mode premium (= indexable). */
 export function isPremiumCity(trade: string, citySlug: string): boolean {
   return _premiumIndex.has(makeKey(trade, citySlug));
 }
 
-/** Indique si une page /[trade]/[citySlug]/[serviceSlug] est en mode premium. */
 export function isPremiumService(
   trade: string,
   citySlug: string,
   serviceSlug: string,
 ): boolean {
+  if (BLOCKED_SERVICES.has(serviceSlug)) return false;
   return _premiumIndex.has(makeKey(trade, citySlug, serviceSlug));
 }
 
-/**
- * Retourne TOUTES les combinaisons premium connues.
- * Utilisé par le sitemap pour ne lister QUE les URLs indexables.
- */
 export function listPremiumPages(): PremiumPageContent[] {
   return premiumPages;
 }
 
-/**
- * Retourne uniquement les pages premium d'un type donné.
- */
 export function listPremiumByKind(kind: "city" | "service"): PremiumPageContent[] {
   return premiumPages.filter((p) =>
     kind === "service" ? !!p.serviceSlug : !p.serviceSlug,
   );
 }
 
-/**
- * Stats utilisées par l'admin et le monitoring.
- */
 export function getPremiumStats() {
   const cityPages = listPremiumByKind("city");
   const servicePages = listPremiumByKind("service");
@@ -180,5 +177,6 @@ export function getPremiumStats() {
     cityPages: cityPages.length,
     servicePages: servicePages.length,
     byTrade,
+    blockedServices: Array.from(BLOCKED_SERVICES),
   };
 }
