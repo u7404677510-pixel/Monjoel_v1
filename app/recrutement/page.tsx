@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   Send,
   CheckCircle,
@@ -109,7 +109,7 @@ export default function RecrutementPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5 relative overflow-hidden">
+    <div className="min-h-screen pt-32 pb-16 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5 relative overflow-hidden">
       {/* Background decorations continues */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-joel-violet/8 rounded-full blur-3xl" />
@@ -159,7 +159,7 @@ export default function RecrutementPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50 hover:shadow-xl transition-shadow"
+                className="bg-white/80 backdrop-blur-xs rounded-2xl p-6 shadow-lg border border-white/50 hover:shadow-xl transition-shadow"
               >
                 <div className="w-12 h-12 bg-gradient-joel rounded-xl flex items-center justify-center mb-4">
                   <advantage.icon size={24} className="text-white" />
@@ -193,7 +193,7 @@ export default function RecrutementPage() {
 
                 <div className="space-y-6">
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
                       1
                     </div>
                     <div>
@@ -206,7 +206,7 @@ export default function RecrutementPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
                       2
                     </div>
                     <div>
@@ -221,7 +221,7 @@ export default function RecrutementPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
                       3
                     </div>
                     <div>
@@ -258,7 +258,7 @@ export default function RecrutementPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50">
+            <div className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg border border-white/50">
               <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">
                 Déposez votre candidature
               </h2>
@@ -301,7 +301,7 @@ export default function RecrutementPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, firstName: e.target.value })
                         }
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden transition-all"
                         placeholder="Votre prénom"
                       />
                     </div>
@@ -316,7 +316,7 @@ export default function RecrutementPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, lastName: e.target.value })
                         }
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden transition-all"
                         placeholder="Votre nom"
                       />
                     </div>
@@ -334,7 +334,7 @@ export default function RecrutementPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden transition-all"
                       placeholder="votre@email.com"
                     />
                   </div>
@@ -351,7 +351,7 @@ export default function RecrutementPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden transition-all"
                       placeholder="06 12 34 56 78"
                     />
                   </div>
@@ -419,7 +419,7 @@ export default function RecrutementPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, zone: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden transition-all"
                       placeholder="Ex : Paris, Hauts-de-Seine, Val-de-Marne..."
                     />
                     <p className="text-xs text-gray-400 mt-1">
@@ -441,7 +441,7 @@ export default function RecrutementPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none resize-none transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden resize-none transition-all"
                       placeholder="Présentez-vous en quelques mots, votre expérience..."
                     />
                   </div>

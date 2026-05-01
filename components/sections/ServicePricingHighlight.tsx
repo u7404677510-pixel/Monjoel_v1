@@ -1,10 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { Phone, Shield, Check, ArrowRight, Clock, Star } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
 import PaymentLogos from "@/components/sections/PaymentLogos";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 type TradeType = "serrurerie" | "plomberie" | "electricite";
 
@@ -104,7 +109,7 @@ export default function ServicePricingHighlight({
                 <ul className="space-y-2">
                   {features.map((feat, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                      <Check size={16} className="text-emerald-500 flex-shrink-0" />
+                      <Check size={16} className="text-emerald-500 shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}

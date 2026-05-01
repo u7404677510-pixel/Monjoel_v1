@@ -2,9 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Phone, ArrowRight, Shield, Clock, BadgeCheck, AlertTriangle } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA. Économise sur le first paint.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 const STATIC_PHONE = "01 41 69 10 08";
 const STATIC_PHONE_TEL = "+33141691008";
@@ -97,7 +102,7 @@ export default function BenefitBlocks() {
                 <div className={!isEven ? "lg:col-start-2" : ""}>
                   {/* Tag + icone */}
                   <div className="flex items-center gap-3 mb-5">
-                    <div className={`w-10 h-10 ${block.iconBg} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <div className={`w-10 h-10 ${block.iconBg} rounded-xl flex items-center justify-center shrink-0`}>
                       <Icon size={20} className={block.iconColor} />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-widest text-gray-400">

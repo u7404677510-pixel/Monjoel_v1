@@ -9,6 +9,13 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Changement de Cylindre (Barillet) | Serrurier Joël",
   description: "Changement de cylindre par un serrurier pro. Cylindre haute sécurité A2P disponible. Prix fixe, intervention rapide.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/changement-cylindre",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/changement-cylindre",
+      "x-default": "https://monjoel.fr/serrurier/changement-cylindre",
+    },
+  },
 };
 
 const doList = [

@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   description: "WC bouchés ? Plombier intervient en 20 min à Paris & IDF. Furet ou haute pression. Prix fixe 79€ annoncé avant intervention. Résultat garanti. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/wc-bouches",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/wc-bouches",
+      "x-default": "https://monjoel.fr/plombier/wc-bouches",
+    },
   },
 };
 

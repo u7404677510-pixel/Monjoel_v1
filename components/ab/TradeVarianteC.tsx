@@ -72,7 +72,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 className="object-cover"
                 priority
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 3xl:p-8 5xl:p-10">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 3xl:p-8 5xl:p-10">
                 <div className="flex items-center gap-3 3xl:gap-4">
                   <div className="w-12 h-12 3xl:w-16 3xl:h-16 5xl:w-20 5xl:h-20 bg-emerald-500 rounded-full flex items-center justify-center">
                     <Shield size={24} className="text-white 3xl:w-8 3xl:h-8 5xl:w-10 5xl:h-10" />
@@ -111,7 +111,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
               </p>
 
               {/* Indicateur artisans */}
-              <div className="flex items-center gap-2 3xl:gap-3 mb-6 bg-white px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit shadow-sm">
+              <div className="flex items-center gap-2 3xl:gap-3 mb-6 bg-white px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit shadow-xs">
                 <Users size={18} className="text-emerald-600 3xl:w-6 3xl:h-6" />
                 <span className="text-gray-700 font-medium 3xl:text-lg">
                   <span className="text-emerald-600 font-bold">{artisanCount} {config.namePlural}</span> disponibles
@@ -138,7 +138,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
       </section>
 
       {/* Section CHEZ JOËL - Positif */}
-      <section className="py-12 3xl:py-18 5xl:py-24 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white">
+      <section className="py-12 3xl:py-18 5xl:py-24 bg-linear-to-br from-emerald-600 to-emerald-700 text-white">
         <div className="max-w-5xl 3xl:max-w-7xl 4xl:max-w-8xl 5xl:max-w-9xl mx-auto px-4 sm:px-6 3xl:px-8">
           <div className="text-center mb-10 3xl:mb-14">
             <div className="inline-flex items-center gap-2 3xl:gap-3 bg-white text-emerald-700 text-sm 3xl:text-base font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full mb-4">
@@ -158,7 +158,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 "On essaie sans perçage d'abord",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 3xl:gap-4">
-                  <Check size={24} className="text-joel-yellow flex-shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
+                  <Check size={24} className="text-joel-yellow shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
                   <span className="text-lg 3xl:text-xl 5xl:text-2xl">{item}</span>
                 </li>
               ))}
@@ -170,7 +170,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 "Prix garanti par écrit",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 3xl:gap-4">
-                  <Check size={24} className="text-joel-yellow flex-shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
+                  <Check size={24} className="text-joel-yellow shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
                   <span className="text-lg 3xl:text-xl 5xl:text-2xl">{item}</span>
                 </li>
               ))}
@@ -245,7 +245,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 "Majorations abusives nuit/WE",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <X size={18} className="text-red-400 flex-shrink-0" />
+                  <X size={18} className="text-red-400 shrink-0" />
                   <span className="text-gray-300 3xl:text-lg">{item}</span>
                 </div>
               ))}
@@ -290,7 +290,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
 
           <div className="grid md:grid-cols-4 gap-4 3xl:gap-6 5xl:gap-8">
             {config.services.map((service, i) => (
-              <div key={i} className="bg-white rounded-xl 3xl:rounded-2xl p-5 3xl:p-7 5xl:p-9 shadow-sm text-center">
+              <div key={i} className="bg-white rounded-xl 3xl:rounded-2xl p-5 3xl:p-7 5xl:p-9 shadow-xs text-center">
                 <p className="text-gray-600 text-sm 3xl:text-base 5xl:text-lg mb-2">{service.name}</p>
                 <p className="font-display text-3xl 3xl:text-4xl 5xl:text-5xl font-bold text-emerald-600">
                   {service.price}

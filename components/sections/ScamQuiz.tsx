@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { Check, X, ArrowRight, RotateCcw, Trophy } from "lucide-react";
 
 interface Question {
@@ -136,7 +136,7 @@ export default function ScamQuiz() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
-              className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50"
+              className="bg-white/90 backdrop-blur-xs rounded-3xl p-8 shadow-xl border border-white/50"
             >
               <div className="text-center mb-8">
                 <p className="text-gray-600 mb-4">À votre avis...</p>

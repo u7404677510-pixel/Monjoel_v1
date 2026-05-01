@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Disjoncteur qui Saute Paris - Diagnostic & Réparation 69€ | Électricien Joël",
+  title: "Disjoncteur qui Saute Paris - Réparation 69€ | Joël",
   description: "Disjoncteur qui saute en permanence ? Électricien certifié identifie la cause et répare en 20 min. Prix fixe 69€ à Paris & IDF. 24h/24. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/electricien/disjoncteur-saute",
+    languages: {
+      "fr-FR": "https://monjoel.fr/electricien/disjoncteur-saute",
+      "x-default": "https://monjoel.fr/electricien/disjoncteur-saute",
+    },
   },
 };
 

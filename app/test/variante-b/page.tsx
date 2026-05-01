@@ -60,7 +60,7 @@ function PriceHighlight() {
             return (
               <div
                 key={item.service}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/20"
+                className="bg-white/10 backdrop-blur-xs rounded-xl p-5 text-center border border-white/20"
               >
                 <Icon size={28} className="text-joel-yellow mx-auto mb-2" />
                 <p className="text-white/70 text-sm">{item.service}</p>

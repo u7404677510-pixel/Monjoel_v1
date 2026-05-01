@@ -12,10 +12,12 @@ export async function generateStaticParams() {
   return getPriorityCities().map((city) => ({ ville: city.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { ville: string } }) {
+export async function generateMetadata(props: { params: Promise<{ ville: string }> }) {
+  const params = await props.params;
   return buildCityMetadata(TRADE_SLUG, params.ville);
 }
 
-export default function Page({ params }: { params: { ville: string } }) {
+export default async function Page(props: { params: Promise<{ ville: string }> }) {
+  const params = await props.params;
   return <CityPageBody tradeSlug={TRADE_SLUG} citySlug={params.ville} />;
 }

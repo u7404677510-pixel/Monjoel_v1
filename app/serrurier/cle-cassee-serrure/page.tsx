@@ -7,8 +7,15 @@ import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Clé Cassée dans la Serrure | Serrurier Joël - Extraction Prix Fixe",
+  title: "Clé Cassée dans Serrure | Extraction Prix Fixe | Joël",
   description: "Clé cassée dans la serrure ? Extraction sans dégâts quand c'est possible. Serrurier disponible 24h/24. Prix fixe garanti.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/cle-cassee-serrure",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/cle-cassee-serrure",
+      "x-default": "https://monjoel.fr/serrurier/cle-cassee-serrure",
+    },
+  },
 };
 
 const doList = [

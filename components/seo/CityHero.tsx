@@ -1,14 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Phone, ArrowRight, Clock, Shield, Euro, MapPin, Users } from "lucide-react";
 import Link from "next/link";
-import { City } from "@/lib/data/cities-idf";
+import dynamic from "next/dynamic";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Trade, Service } from "@/lib/data/services-definition";
-import { CityPageContent, ServicePageContent } from "@/lib/seo/city-content";
+import type { CityPageContent, ServicePageContent } from "@/lib/seo/city-content";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA. Critique sur les 7869 pages SEO.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 interface CityHeroProps {
   trade: Trade;
@@ -39,7 +44,7 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
+      <div className="absolute inset-0 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
       
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />

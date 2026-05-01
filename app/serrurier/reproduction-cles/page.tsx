@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Reproduction de clés à Paris et IDF. Double clé plate dès 15€, clé sécurisée dès 45€. Toutes marques. Service rapide, artisan qualifié.",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/reproduction-cles",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/reproduction-cles",
+      "x-default": "https://monjoel.fr/serrurier/reproduction-cles",
+    },
   },
   openGraph: {
     title: "Reproduction de Clés | Double Clé | Joël",

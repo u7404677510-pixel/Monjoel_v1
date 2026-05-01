@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function ConfidentialitePage() {
   return (
@@ -12,7 +12,7 @@ export default function ConfidentialitePage() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Politique de confidentialité</h1>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
+          <div className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
             <h2>1. Introduction</h2>
             <p>
               La société Joël SAS (ci-après "Joël", "nous", "notre") s'engage à protéger 

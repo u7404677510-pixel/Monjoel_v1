@@ -16,7 +16,7 @@ export default function SplitHero() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 min-h-[auto] md:min-h-[80vh]">
+      <div className="grid md:grid-cols-2 min-h-auto md:min-h-[80vh]">
         {/* Côté gauche - Les autres (sombre) */}
         <div className="bg-gray-900 p-8 md:p-12 flex flex-col justify-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-5">
@@ -49,7 +49,7 @@ export default function SplitHero() {
                 { text: '"Devis gratuit"', subtext: "→ Paiement exigé AVANT" },
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-red-500/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                     <X size={12} className="text-red-400" />
                   </div>
                   <div>
@@ -63,7 +63,7 @@ export default function SplitHero() {
         </div>
 
         {/* Côté droit - Avec Joël (lumineux) */}
-        <div className="bg-gradient-to-br from-joel-violet to-joel-mauve p-8 md:p-12 flex flex-col justify-center relative">
+        <div className="bg-linear-to-br from-joel-violet to-joel-mauve p-8 md:p-12 flex flex-col justify-center relative">
           <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
           <div className="absolute bottom-20 left-10 w-24 h-24 bg-joel-yellow/20 rounded-full blur-xl" />
 
@@ -84,7 +84,7 @@ export default function SplitHero() {
             </h2>
 
             {/* Prix Joël comparé */}
-            <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 mb-6">
+            <div className="bg-white/20 backdrop-blur-xs border border-white/30 rounded-xl p-4 mb-6">
               <p className="text-white/80 text-sm mb-1">Chez nous, porte claquée :</p>
               <p className="text-joel-yellow text-4xl font-bold">89€ TTC</p>
               <p className="text-white/70 text-sm mt-1">Pas 890€. Jamais.</p>
@@ -97,7 +97,7 @@ export default function SplitHero() {
                 { text: "Paiement APRÈS", subtext: "Intervention terminée" },
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                     <Check size={12} className="text-joel-yellow" />
                   </div>
                   <div>

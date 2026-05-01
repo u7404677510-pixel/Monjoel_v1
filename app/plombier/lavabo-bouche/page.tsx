@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   description: "Lavabo bouché ? Plombier débouche en 20 min à Paris & IDF. Siphon ou canalisation. Prix fixe 69€ annoncé avant intervention. Résultat garanti. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/lavabo-bouche",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/lavabo-bouche",
+      "x-default": "https://monjoel.fr/plombier/lavabo-bouche",
+    },
   },
 };
 

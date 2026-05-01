@@ -1,3 +1,4 @@
+import type { ReactElement } from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -55,7 +56,7 @@ const categoryLabels: Record<BlogArticle["category"], { label: string; color: st
 // Simple markdown-like renderer (basic)
 function renderContent(content: string) {
   const lines = content.trim().split("\n");
-  const elements: JSX.Element[] = [];
+  const elements: ReactElement[] = [];
   let currentList: string[] = [];
   let isInTable = false;
   let tableRows: string[][] = [];
@@ -231,31 +232,112 @@ export default async function BlogArticlePage({ params }: PageProps) {
     (a) => a.slug !== article.slug
   );
 
-  // Article Schema
+  // Compute wordCount from raw markdown content (approximation, suffisant pour Schema)
+  const wordCount = article.content.trim().split(/\s+/).length;
+
+  // Image OG dynamique (route /api/og rend une image 1200x630 brandée)
+  const ogImage = `https://monjoel.fr/api/og?title=${encodeURIComponent(article.title)}&trade=${article.category}`;
+
+  // articleSection humain à partir du label catégorie
+  const articleSection = categoryLabels[article.category].label;
+
+  // Extraire les FAQ implicites du contenu : on pioche les H3 commençant par une
+  // question (terminée par "?") + paragraphe suivant. Limite à 5 pour rester clean.
+  const extractFaqsFromMarkdown = (md: string): { q: string; a: string }[] => {
+    const lines = md.trim().split("\n");
+    const faqs: { q: string; a: string }[] = [];
+    for (let i = 0; i < lines.length && faqs.length < 5; i++) {
+      const l = lines[i].trim();
+      if ((l.startsWith("### ") || l.startsWith("## ")) && l.includes("?")) {
+        const q = l.replace(/^#+\s+/, "").trim();
+        const answerLines: string[] = [];
+        for (let j = i + 1; j < lines.length; j++) {
+          const next = lines[j].trim();
+          if (next.startsWith("#")) break;
+          if (next) answerLines.push(next.replace(/\*\*/g, "").replace(/^[-*]\s+/, ""));
+          if (answerLines.join(" ").length > 200) break;
+        }
+        const a = answerLines.join(" ").slice(0, 500).trim();
+        if (a) faqs.push({ q, a });
+      }
+    }
+    return faqs;
+  };
+  const faqs = extractFaqsFromMarkdown(article.content);
+
+  // BlogPosting Schema premium : @id stable, image, wordCount, keywords,
+  // articleSection, publisher relié à l'@id de l'organisation Joël.
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": article.title,
-    "description": article.metaDescription,
-    "datePublished": article.publishedAt,
-    "dateModified": article.updatedAt || article.publishedAt,
-    "author": {
-      "@type": "Organization",
-      "name": "Joël",
-      "url": "https://monjoel.fr",
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Joël",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://monjoel.fr/logo.png",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `https://monjoel.fr/blog/${article.slug}#article`,
+        headline: article.title,
+        description: article.metaDescription,
+        image: [ogImage, "https://monjoel.fr/og-default.jpg"],
+        datePublished: article.publishedAt,
+        dateModified: article.updatedAt || article.publishedAt,
+        author: {
+          "@type": "Organization",
+          "@id": "https://monjoel.fr/#organization",
+          name: "Joël",
+          url: "https://monjoel.fr",
+        },
+        publisher: { "@id": "https://monjoel.fr/#organization" },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://monjoel.fr/blog/${article.slug}`,
+        },
+        url: `https://monjoel.fr/blog/${article.slug}`,
+        inLanguage: "fr-FR",
+        articleSection,
+        keywords: article.keywords.join(", "),
+        wordCount,
+        timeRequired: `PT${article.readTime}M`,
+        isPartOf: { "@id": "https://monjoel.fr/blog#blog" },
       },
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://monjoel.fr/blog/${article.slug}`,
-    },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://monjoel.fr/blog/${article.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Accueil",
+            item: "https://monjoel.fr",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: "https://monjoel.fr/blog",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: article.title,
+            item: `https://monjoel.fr/blog/${article.slug}`,
+          },
+        ],
+      },
+      ...(faqs.length >= 2
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `https://monjoel.fr/blog/${article.slug}#faq`,
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: f.a,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
   };
 
   return (
@@ -342,7 +424,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                     href={`/blog/${related.slug}`}
                     className="bg-white rounded-xl p-6 border border-gray-100 hover:border-joel-violet/30 hover:shadow-lg transition-all"
                   >
-                    <span className={`inline-block px-2 py-1 rounded text-xs font-medium mb-3 ${categoryLabels[related.category].color}`}>
+                    <span className={`inline-block px-2 py-1 rounded-sm text-xs font-medium mb-3 ${categoryLabels[related.category].color}`}>
                       {categoryLabels[related.category].label}
                     </span>
                     <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 hover:text-joel-violet transition-colors">

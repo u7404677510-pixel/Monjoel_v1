@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Évier bouché ? Débouchage professionnel cuisine et salle de bain. Intervention express, résultat garanti. Prix fixe sans surprise.",
   alternates: {
     canonical: "https://monjoel.fr/plombier/evier-bouche",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/evier-bouche",
+      "x-default": "https://monjoel.fr/plombier/evier-bouche",
+    },
   },
   openGraph: {
     title: "Évier Bouché | Débouchage Express | Joël",

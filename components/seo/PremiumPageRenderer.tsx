@@ -2,13 +2,19 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Phone, Clock, Shield, ChevronDown, MapPin, Calendar, User, Star } from "lucide-react";
-import { City } from "@/lib/data/cities-idf";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Trade, Service } from "@/lib/data/services-definition";
 import { PremiumPageContent } from "@/lib/seo/premium/types";
 import { getPersona } from "@/lib/seo/premium/personas";
 import { Markdown } from "@/lib/seo/premium/renderMarkdown";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+import MidPageCTA from "@/components/MidPageCTA";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA. Critique sur les 7869 pages premium SEO.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 interface PremiumPageRendererProps {
   content: PremiumPageContent;
@@ -34,7 +40,7 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
       {/* HERO PREMIUM avec auteur */}
       {/* ============================================ */}
       <section className="relative pt-28 pb-12 md:pt-32 md:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
+        <div className="absolute inset-0 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-joel-mauve/10 rounded-full blur-3xl" />
 
@@ -146,6 +152,16 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
       </section>
 
       {/* ============================================ */}
+      {/* CTA MI-PAGE — boost conversion entre sections rédac et bloc prix */}
+      {/* ============================================ */}
+      <MidPageCTA
+        title={`Besoin d'un ${trade.name.toLowerCase()} à ${city.name} ?`}
+        subtitle="Devis instantané · prix fixe annoncé avant intervention"
+        placement={`premium_${trade.slug}_${city.slug}${service ? `_${service.slug}` : ""}`}
+        trade={tradeToTradeType(trade.slug)}
+      />
+
+      {/* ============================================ */}
       {/* VRAIS PRIX VS ARNAQUES */}
       {/* ============================================ */}
       {content.vraisPrix.length > 0 && (
@@ -192,7 +208,7 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
                       className="w-full flex justify-between items-start gap-4 p-5 text-left hover:bg-gray-50 transition"
                     >
                       <span className="font-semibold text-gray-900">{item.question}</span>
-                      <ChevronDown className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
+                      <ChevronDown className={`w-5 h-5 text-gray-400 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
                     </button>
                     {open && (
                       <div className="px-5 pb-5 text-gray-700 leading-relaxed">
@@ -211,14 +227,14 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
       {/* TÉMOIGNAGES GÉOLOCALISÉS */}
       {/* ============================================ */}
       {content.temoignages.length > 0 && (
-        <section id="temoignages" className="py-12 md:py-16 bg-gradient-to-br from-joel-violet/5 to-joel-mauve/5 scroll-mt-24">
+        <section id="temoignages" className="py-12 md:py-16 bg-linear-to-br from-joel-violet/5 to-joel-mauve/5 scroll-mt-24">
           <div className="max-w-5xl mx-auto px-5 md:px-8">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
               Ils nous ont fait confiance à {city.name}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {content.temoignages.map((t, i) => (
-                <figure key={i} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                <figure key={i} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs">
                   <div className="flex items-center gap-1 mb-3">
                     {Array.from({ length: 5 }).map((_, k) => (
                       <Star key={k} className={`w-4 h-4 ${k < t.rating ? "fill-yellow-400 text-yellow-400" : "text-gray-200"}`} />

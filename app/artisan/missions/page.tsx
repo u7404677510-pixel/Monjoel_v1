@@ -1,183 +1,274 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { createClient } from "@supabase/supabase-js";
-import { motion } from "framer-motion";
+/**
+ * Missions artisan — page `/artisan/missions`.
+ *
+ * Architecture:
+ *  - Tabs : Aujourd'hui / Cette semaine / À venir / Terminées
+ *  - Carte IDF stylisée avec points pulsants par mission
+ *  - Liste missions avec MissionCard (variant "full")
+ *  - Drawer slide-in détail mission au click
+ *
+ * Auth : redirige vers /artisan si pas de session ou pas d'artisan associé.
+ */
+
+import { useEffect, useMemo, useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { useRouter } from "next/navigation";
 import {
-  Wrench, Phone, MapPin, Clock, CheckCircle, AlertCircle,
-  ArrowLeft, Loader2, Zap, Droplets, Key
+  Loader2,
+  Wrench,
+  Sparkles,
+  CalendarDays,
+  Clock,
+  CalendarCheck,
+  ListChecks,
+  Filter,
 } from "lucide-react";
-import Link from "next/link";
 
-function getSupabase() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key);
-}
+import {
+  useMyMissions,
+  filterMissions,
+  type ArtisanMission,
+  type MissionFilter,
+} from "@/lib/hooks/artisan-queries";
+import { supabase } from "@/lib/supabase";
+import { MissionCard } from "@/components/artisan/MissionCard";
+import { IDFMap } from "@/components/artisan/IDFMap";
+import { MissionDrawer } from "@/components/artisan/MissionDrawer";
+import { cn } from "@/lib/utils";
 
-interface Mission {
-  id: string;
-  problem_label: string;
-  trade: string;
-  postal_code: string;
-  status: string;
-  urgency: string;
-  phone: string;
-  notes: string | null;
-  created_at: string;
-  scheduled_at?: string;
-}
-
-const statusConfig: Record<string, { label: string; color: string; icon: React.ElementType }> = {
-  pending: { label: "En attente", color: "text-amber-400 bg-amber-500/10", icon: Clock },
-  scheduled: { label: "Planifiée", color: "text-blue-400 bg-blue-500/10", icon: Clock },
-  en_route: { label: "En route", color: "text-indigo-400 bg-indigo-500/10", icon: Clock },
-  in_progress: { label: "En cours", color: "text-purple-400 bg-purple-500/10", icon: Wrench },
-  completed: { label: "Terminée", color: "text-emerald-400 bg-emerald-500/10", icon: CheckCircle },
-  cancelled: { label: "Annulée", color: "text-gray-400 bg-gray-500/10", icon: AlertCircle },
-};
-
-const tradeIcon: Record<string, React.ElementType> = { Plomberie: Droplets, Serrurerie: Key, Électricité: Zap };
+const TABS: { value: MissionFilter; label: string; Icon: React.ElementType }[] = [
+  { value: "today", label: "Aujourd'hui", Icon: Clock },
+  { value: "week", label: "Cette semaine", Icon: CalendarDays },
+  { value: "upcoming", label: "À venir", Icon: CalendarCheck },
+  { value: "completed", label: "Terminées", Icon: ListChecks },
+];
 
 export default function ArtisanMissionsPage() {
-  const [missions, setMissions] = useState<Mission[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [filter, setFilter] = useState<"active" | "completed" | "all">("active");
-  const [updating, setUpdating] = useState<string | null>(null);
   const router = useRouter();
+  const [authChecked, setAuthChecked] = useState(false);
+  const [tab, setTab] = useState<MissionFilter>("today");
+  const [drawerMission, setDrawerMission] = useState<ArtisanMission | null>(null);
 
-  const load = useCallback(async () => {
-    const supabase = getSupabase();
-    if (!supabase) { setError("Service indisponible"); setLoading(false); return; }
+  // Load all missions and filter client-side
+  const { data: allMissions = [], isLoading } = useMyMissions("all");
 
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session) { router.push("/artisan"); return; }
-
-    // Pour la démo, on charge tous les leads. En production:
-    // charger les interventions liées à l'artisan connecté
-    const { data, error: e } = await supabase.from("leads").select("*")
-      .order("created_at", { ascending: false });
-
-    if (e) { setError("Erreur de chargement"); }
-    else { setMissions(data || []); }
-    setLoading(false);
+  // Auth gate
+  useEffect(() => {
+    if (!supabase) {
+      router.replace("/artisan");
+      return;
+    }
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
+      if (!session?.user?.email) {
+        router.replace("/artisan");
+        return;
+      }
+      const { data: artisan } = await supabase!
+        .from("artisans")
+        .select("id")
+        .eq("email", session.user.email)
+        .maybeSingle();
+      if (!artisan) {
+        await supabase!.auth.signOut();
+        router.replace("/artisan");
+        return;
+      }
+      setAuthChecked(true);
+    });
   }, [router]);
 
-  useEffect(() => { load(); }, [load]);
+  const filtered = useMemo(
+    () => filterMissions(allMissions, tab),
+    [allMissions, tab]
+  );
 
-  const updateStatus = async (id: string, status: string) => {
-    const supabase = getSupabase();
-    if (!supabase) return;
-    setUpdating(id);
-    await supabase.from("leads").update({ status, updated_at: new Date().toISOString() }).eq("id", id);
-    setMissions(prev => prev.map(m => m.id === id ? { ...m, status } : m));
-    setUpdating(null);
-  };
+  // Counts par tab
+  const counts = useMemo(() => {
+    return TABS.reduce<Record<string, number>>((acc, t) => {
+      acc[t.value] = filterMissions(allMissions, t.value).length;
+      return acc;
+    }, {});
+  }, [allMissions]);
 
-  const filtered = missions.filter(m => {
-    if (filter === "active") return !["converted", "lost"].includes(m.status);
-    if (filter === "completed") return m.status === "converted";
-    return true;
-  });
-
-  const timeAgo = (d: string) => {
-    const diff = Date.now() - new Date(d).getTime();
-    const m = Math.floor(diff / 60000); const h = Math.floor(diff / 3600000); const day = Math.floor(diff / 86400000);
-    return m < 60 ? `${m} min` : h < 24 ? `${h}h` : `${day}j`;
-  };
+  if (!authChecked) {
+    return (
+      <div className="flex min-h-[calc(100vh-3.5rem)] items-center justify-center">
+        <Loader2 size={26} className="animate-spin text-joel-mauve" />
+      </div>
+    );
+  }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-6">
-      <div className="flex items-center gap-3 mb-6">
-        <Link href="/artisan" className="text-gray-400 hover:text-white transition-colors">
-          <ArrowLeft size={20} />
-        </Link>
-        <h1 className="text-xl font-bold text-white">Mes missions</h1>
-      </div>
-
-      {/* Filters */}
-      <div className="flex gap-1 bg-white/5 rounded-xl p-1 mb-5">
-        {[
-          { value: "active", label: "Actives" },
-          { value: "completed", label: "Terminées" },
-          { value: "all", label: "Toutes" },
-        ].map(f => (
-          <button key={f.value} onClick={() => setFilter(f.value as typeof filter)}
-            className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${filter === f.value ? "bg-white/10 text-white" : "text-gray-500"}`}>
-            {f.label}
-          </button>
-        ))}
-      </div>
-
-      {error && <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl text-sm mb-4">{error}</div>}
-
-      {loading ? (
-        <div className="flex justify-center py-12"><Loader2 size={32} className="animate-spin text-joel-violet" /></div>
-      ) : filtered.length === 0 ? (
-        <div className="text-center py-16">
-          <Wrench size={40} className="mx-auto text-gray-600 mb-3" />
-          <p className="text-gray-400">Aucune mission {filter === "active" ? "active" : filter === "completed" ? "terminée" : ""}</p>
+    <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:py-8">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"
+      >
+        <div>
+          <p className="text-[11px] font-medium uppercase tracking-wide text-joel-mauve">
+            Pilotage opérationnel
+          </p>
+          <h1 className="font-display text-3xl font-semibold tracking-tight text-white">
+            Mes missions
+          </h1>
+          <p className="mt-1 text-sm text-zinc-400">
+            {allMissions.length} mission{allMissions.length !== 1 ? "s" : ""} ·{" "}
+            {counts.today ?? 0} aujourd&apos;hui · {counts.week ?? 0} cette semaine
+          </p>
         </div>
-      ) : (
-        <div className="space-y-3">
-          {filtered.map((m, i) => {
-            const sc = statusConfig[m.status] || statusConfig.pending;
-            const StatusIcon = sc.icon;
-            const TradeIcon = tradeIcon[m.trade] || Wrench;
-            const isActive = !["converted", "lost", "completed", "cancelled"].includes(m.status);
 
-            return (
-              <motion.div key={m.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-4">
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TradeIcon size={18} className="text-gray-300" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-white text-sm">{m.problem_label}</p>
-                    <div className="flex items-center gap-2 mt-0.5 text-xs text-gray-400">
-                      <span className="flex items-center gap-1"><MapPin size={10} />{m.postal_code}</span>
-                      <span>·</span>
-                      <span>{timeAgo(m.created_at)}</span>
-                    </div>
-                  </div>
-                  <span className={`flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full ${sc.color}`}>
-                    <StatusIcon size={11} />{sc.label}
-                  </span>
-                </div>
+        <div className="hidden items-center gap-2 sm:flex">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-medium text-emerald-300">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+            Live · synchro 60s
+          </span>
+        </div>
+      </motion.div>
 
-                {m.notes && (
-                  <div className="bg-white/5 rounded-lg px-3 py-2 text-xs text-gray-300 mb-3">{m.notes}</div>
+      {/* Carte IDF (uniquement si missions actives) */}
+      <AnimatePresence>
+        {filterMissions(allMissions, "week").length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.3 }}
+            className="mb-5"
+          >
+            <IDFMap
+              missions={filterMissions(allMissions, "week")}
+              onSelect={(m) => setDrawerMission(m)}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Tabs */}
+      <motion.div
+        initial={{ opacity: 0, y: 6 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.05 }}
+        className="mb-4 flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-white/4 p-1.5 backdrop-blur-xs"
+      >
+        {TABS.map((t) => {
+          const active = t.value === tab;
+          const count = counts[t.value] ?? 0;
+          return (
+            <button
+              key={t.value}
+              onClick={() => setTab(t.value)}
+              className={cn(
+                "relative inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-semibold transition-all",
+                active
+                  ? "bg-joel-mauve text-white shadow-[0_4px_14px_-6px_rgba(158,118,236,0.6)]"
+                  : "text-zinc-400 hover:bg-white/5 hover:text-white"
+              )}
+            >
+              <t.Icon size={13} />
+              {t.label}
+              <span
+                className={cn(
+                  "ml-0.5 inline-flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[9px] font-bold",
+                  active ? "bg-white/20 text-white" : "bg-white/5 text-zinc-400"
                 )}
+              >
+                {count}
+              </span>
+            </button>
+          );
+        })}
+      </motion.div>
 
-                <div className="flex items-center gap-2">
-                  <a href={`tel:${m.phone}`}
-                    className="flex-1 flex items-center justify-center gap-1.5 bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 py-2 rounded-xl text-xs font-semibold transition-colors">
-                    <Phone size={13} /> Appeler le client
-                  </a>
-
-                  {isActive && (
-                    <select
-                      value={m.status}
-                      onChange={e => updateStatus(m.id, e.target.value)}
-                      disabled={updating === m.id}
-                      className="px-3 py-2 bg-white/10 border border-white/20 text-white rounded-xl text-xs focus:outline-none appearance-none cursor-pointer"
-                    >
-                      <option value="new">En attente</option>
-                      <option value="contacted">Contacté</option>
-                      <option value="converted">Terminé ✓</option>
-                      <option value="lost">Annulé</option>
-                    </select>
-                  )}
-                </div>
-              </motion.div>
-            );
-          })}
+      {/* Liste */}
+      {isLoading ? (
+        <div className="flex justify-center py-16">
+          <Loader2 size={26} className="animate-spin text-joel-mauve" />
         </div>
+      ) : filtered.length === 0 ? (
+        <EmptyState tab={tab} />
+      ) : (
+        <motion.div
+          layout
+          className="grid gap-3 lg:grid-cols-2"
+        >
+          <AnimatePresence>
+            {filtered.map((m, i) => (
+              <motion.div
+                key={m.id}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25, delay: i * 0.03 }}
+              >
+                <MissionCard
+                  mission={m}
+                  variant="full"
+                  onOpen={(mission) => setDrawerMission(mission)}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       )}
+
+      <MissionDrawer
+        mission={drawerMission}
+        open={!!drawerMission}
+        onClose={() => setDrawerMission(null)}
+      />
     </div>
+  );
+}
+
+// ─── Empty state ─────────────────────────────────────────────────────────────
+
+function EmptyState({ tab }: { tab: MissionFilter }) {
+  const messages: Record<MissionFilter, { title: string; sub: string; Icon: React.ElementType }> = {
+    today: {
+      title: "Aucune mission prévue aujourd'hui",
+      sub: "Profitez d'une journée tranquille — vous serez notifié dès qu'une mission arrive.",
+      Icon: Sparkles,
+    },
+    week: {
+      title: "Aucune mission cette semaine",
+      sub: "Pensez à vérifier votre statut et vos zones de couverture.",
+      Icon: CalendarDays,
+    },
+    upcoming: {
+      title: "Aucune mission planifiée",
+      sub: "Les missions à venir s'afficheront ici dès qu'elles seront assignées.",
+      Icon: CalendarCheck,
+    },
+    completed: {
+      title: "Aucune mission terminée",
+      sub: "Votre historique apparaîtra ici à la clôture des interventions.",
+      Icon: ListChecks,
+    },
+    all: {
+      title: "Pas de missions",
+      sub: "—",
+      Icon: Filter,
+    },
+  };
+
+  const m = messages[tab];
+  const Icon = m.Icon;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/3 py-14 text-center"
+    >
+      <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-joel-mauve/10 ring-1 ring-joel-mauve/30">
+        <Icon size={20} className="text-joel-mauve" />
+      </span>
+      <h3 className="mt-4 text-base font-semibold text-white">{m.title}</h3>
+      <p className="mt-1 max-w-xs text-xs text-zinc-500">{m.sub}</p>
+    </motion.div>
   );
 }

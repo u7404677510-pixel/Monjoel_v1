@@ -9,6 +9,13 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Changement de Serrure | Serrurier Joël - Prix Annoncé Avant",
   description: "Changement de serrure complet. Serrure simple ou multipoints. Prix fixe annoncé avant intervention. Serrurier certifié.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/changement-serrure",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/changement-serrure",
+      "x-default": "https://monjoel.fr/serrurier/changement-serrure",
+    },
+  },
 };
 
 const doList = [

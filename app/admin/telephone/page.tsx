@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Save, Phone, AlertCircle, CheckCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
@@ -121,7 +121,7 @@ export default function TelephonePage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-2xl p-8 shadow-sm"
+        className="bg-white rounded-2xl p-8 shadow-xs"
       >
         <div className="flex items-center gap-4 mb-6">
           <div className="w-14 h-14 bg-gradient-joel rounded-2xl flex items-center justify-center">
@@ -144,7 +144,7 @@ export default function TelephonePage() {
                 value={phoneNumber}
                 onChange={handleChange}
                 placeholder="01 41 69 10 08"
-                className={`w-full px-4 py-4 text-2xl font-bold border rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none ${
+                className={`w-full px-4 py-4 text-2xl font-bold border rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden ${
                   error ? "border-red-300" : "border-gray-300"
                 }`}
               />
@@ -191,7 +191,7 @@ export default function TelephonePage() {
         </div>
       </motion.div>
 
-      <div className="bg-white rounded-2xl p-6 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 shadow-xs">
         <h3 className="text-lg font-bold text-gray-900 mb-4">Où ce numéro apparaît</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
@@ -212,7 +212,7 @@ export default function TelephonePage() {
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-2xl p-4 flex items-start gap-3">
-        <CheckCircle className="text-green-500 flex-shrink-0 mt-0.5" size={20} />
+        <CheckCircle className="text-green-500 shrink-0 mt-0.5" size={20} />
         <div className="text-sm text-green-700">
           <p className="font-medium mb-1">Connecté à Supabase ✓</p>
           <p>Les modifications sont enregistrées en temps réel dans la base de données.</p>

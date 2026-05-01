@@ -7,10 +7,14 @@ import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Groupe de Sécurité Chauffe-Eau Paris & IDF | Remplacement dès 89€",
+  title: "Groupe de Sécurité Chauffe-Eau dès 89€ | Joël",
   description: "Groupe de sécurité qui fuit ? Remplacement rapide sur chauffe-eau et cumulus. Intervention express, pièce et main d'œuvre incluses.",
   alternates: {
     canonical: "https://monjoel.fr/plombier/groupe-securite",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/groupe-securite",
+      "x-default": "https://monjoel.fr/plombier/groupe-securite",
+    },
   },
   openGraph: {
     title: "Groupe de Sécurité | Remplacement Chauffe-Eau | Joël",

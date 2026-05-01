@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Dépannage rideau métallique bloqué à Paris et IDF. Réparation moteur, axe, lames. Commerces et garages. Intervention 24h/24 dès 149€.",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/rideau-metallique",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/rideau-metallique",
+      "x-default": "https://monjoel.fr/serrurier/rideau-metallique",
+    },
   },
   openGraph: {
     title: "Rideau Métallique Bloqué | Dépannage Urgent | Joël",

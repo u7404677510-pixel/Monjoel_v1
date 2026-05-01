@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://monjoel.fr/plomberie",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plomberie",
+      "x-default": "https://monjoel.fr/plomberie",
+    },
   },
   other: {
     "telephone": "01 41 69 10 08",

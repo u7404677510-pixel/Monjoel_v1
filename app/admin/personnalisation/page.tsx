@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Save, Palette, Layout, Loader2, CheckCircle, MousePointer, ExternalLink } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
@@ -118,7 +118,7 @@ export default function PersonnalisationPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Colors */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm">
+        <div className="bg-white rounded-2xl p-6 shadow-xs">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-joel-violet/10 rounded-xl flex items-center justify-center">
               <Palette size={20} className="text-joel-violet" />
@@ -171,7 +171,7 @@ export default function PersonnalisationPage() {
         </div>
 
         {/* CTA Configuration */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm">
+        <div className="bg-white rounded-2xl p-6 shadow-xs">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-joel-violet/10 rounded-xl flex items-center justify-center">
               <MousePointer size={20} className="text-joel-violet" />
@@ -223,7 +223,7 @@ export default function PersonnalisationPage() {
                 value={ctaDevisUrl}
                 onChange={(e) => setCtaDevisUrl(e.target.value)}
                 placeholder="https://app.monjoel.fr"
-                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none" 
+                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden" 
               />
               <p className="text-xs text-gray-500 mt-2">
                 URL vers laquelle le bouton redirige (ex: votre application, formulaire, etc.)
@@ -233,7 +233,7 @@ export default function PersonnalisationPage() {
         </div>
 
         {/* Display Options */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm lg:col-span-2">
+        <div className="bg-white rounded-2xl p-6 shadow-xs lg:col-span-2">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-joel-violet/10 rounded-xl flex items-center justify-center">
               <Layout size={20} className="text-joel-violet" />
@@ -282,7 +282,7 @@ export default function PersonnalisationPage() {
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-start gap-3">
-        <CheckCircle className="text-green-500 flex-shrink-0 mt-0.5" size={20} />
+        <CheckCircle className="text-green-500 shrink-0 mt-0.5" size={20} />
         <div className="text-sm text-green-700">
           <p className="font-medium">Connecté à Supabase ✓</p>
         </div>

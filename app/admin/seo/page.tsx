@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Save, Globe, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import { supabase, SEOPage as SEOPageType } from "@/lib/supabase";
 
@@ -101,7 +101,7 @@ export default function SEOPageAdmin() {
         </motion.div>
       )}
 
-      <div className="bg-white rounded-2xl p-6 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 shadow-xs">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-bold text-gray-900">Score SEO global</h3>
@@ -116,7 +116,7 @@ export default function SEOPageAdmin() {
 
       <div className="space-y-4">
         {pages.map((page) => (
-          <div key={page.id} className="bg-white rounded-2xl p-6 shadow-sm">
+          <div key={page.id} className="bg-white rounded-2xl p-6 shadow-xs">
             {editingId === page.id ? (
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -138,7 +138,7 @@ export default function SEOPageAdmin() {
                     type="text"
                     value={editData.title || ""}
                     onChange={(e) => setEditData({ ...editData, title: e.target.value })}
-                    className="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-none"
+                    className="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden"
                   />
                   <p className="text-xs text-gray-500 mt-1">{editData.title?.length || 0} caractères</p>
                 </div>
@@ -149,7 +149,7 @@ export default function SEOPageAdmin() {
                     value={editData.description || ""}
                     onChange={(e) => setEditData({ ...editData, description: e.target.value })}
                     rows={3}
-                    className="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-none resize-none"
+                    className="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden resize-none"
                   />
                   <p className="text-xs text-gray-500 mt-1">{editData.description?.length || 0} caractères</p>
                 </div>
@@ -160,7 +160,7 @@ export default function SEOPageAdmin() {
                     type="text"
                     value={editData.keywords || ""}
                     onChange={(e) => setEditData({ ...editData, keywords: e.target.value })}
-                    className="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-none"
+                    className="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden"
                   />
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function SEOPageAdmin() {
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-2xl p-4 flex items-start gap-3">
-        <CheckCircle className="text-green-500 flex-shrink-0 mt-0.5" size={20} />
+        <CheckCircle className="text-green-500 shrink-0 mt-0.5" size={20} />
         <div className="text-sm text-green-700">
           <p className="font-medium">Connecté à Supabase ✓</p>
         </div>

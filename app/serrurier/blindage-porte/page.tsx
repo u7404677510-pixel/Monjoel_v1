@@ -7,8 +7,15 @@ import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Blindage de Porte | Serrurier Joël - Devis Gratuit & Prix Fixe",
+  title: "Blindage de Porte | Devis Gratuit Prix Fixe | Joël",
   description: "Blindage de porte existante ou installation porte blindée. Diagnostic gratuit, devis transparent. Sécurisez votre logement au juste prix.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/blindage-porte",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/blindage-porte",
+      "x-default": "https://monjoel.fr/serrurier/blindage-porte",
+    },
+  },
 };
 
 const doList = [

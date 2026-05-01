@@ -7,8 +7,15 @@ import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Perte de Clés | Serrurier Joël - Intervention Urgente Prix Fixe",
+  title: "Perte de Clés | Serrurier Joël - Urgence Prix Fixe",
   description: "Clés perdues ? Serrurier disponible 24h/24. Ouverture + changement de cylindre si nécessaire. Prix fixe annoncé avant intervention.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/perte-cles",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/perte-cles",
+      "x-default": "https://monjoel.fr/serrurier/perte-cles",
+    },
+  },
 };
 
 const doList = [

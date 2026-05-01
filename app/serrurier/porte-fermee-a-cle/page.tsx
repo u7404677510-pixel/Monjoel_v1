@@ -9,6 +9,13 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Porte Fermée à Clé | Serrurier Joël - Ouverture Prix Fixe",
   description: "Porte fermée à clé, clés à l'intérieur ? Ouverture adaptée à votre serrure. Prix fixe annoncé avant. Serrurier 24h/24.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/porte-fermee-a-cle",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/porte-fermee-a-cle",
+      "x-default": "https://monjoel.fr/serrurier/porte-fermee-a-cle",
+    },
+  },
 };
 
 const doList = [

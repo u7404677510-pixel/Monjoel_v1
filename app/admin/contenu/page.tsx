@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Save, Edit2, Loader2, CheckCircle, Info } from "lucide-react";
 import { supabase, ContentItem } from "@/lib/supabase";
 
@@ -97,7 +97,7 @@ export default function ContenuPage() {
 
       {/* Info box */}
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
-        <Info className="text-blue-500 flex-shrink-0 mt-0.5" size={20} />
+        <Info className="text-blue-500 shrink-0 mt-0.5" size={20} />
         <div className="text-sm text-blue-700">
           <p>
             Pour ajouter de nouveaux contenus éditables, contactez le développeur 
@@ -106,7 +106,7 @@ export default function ContenuPage() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-xs overflow-hidden">
         <table className="w-full">
           <thead className="bg-gray-50 border-b">
             <tr>
@@ -136,7 +136,7 @@ export default function ContenuPage() {
                         type="text"
                         value={editValue}
                         onChange={(e) => setEditValue(e.target.value)}
-                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-joel-violet outline-none"
+                        className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-joel-violet outline-hidden"
                         autoFocus
                       />
                     ) : (
@@ -176,7 +176,7 @@ export default function ContenuPage() {
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-start gap-3">
-        <CheckCircle className="text-green-500 flex-shrink-0 mt-0.5" size={20} />
+        <CheckCircle className="text-green-500 shrink-0 mt-0.5" size={20} />
         <div className="text-sm text-green-700">
           <p className="font-medium">Connecté à Supabase ✓</p>
         </div>

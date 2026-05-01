@@ -75,7 +75,7 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
               style={{ backgroundImage: `url(${config.heroImage})` }}
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
+          <div className="absolute inset-0 bg-linear-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
         </div>
 
         <div className="relative z-10 max-w-7xl 3xl:max-w-8xl 4xl:max-w-9xl 5xl:max-w-10xl mx-auto px-4 sm:px-6 3xl:px-8 5xl:px-12 py-16 md:py-0 w-full">
@@ -105,7 +105,7 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
             </p>
 
             {/* Compteur artisans */}
-            <div className="flex items-center gap-2 3xl:gap-3 mb-8 bg-white/10 backdrop-blur-sm px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit">
+            <div className="flex items-center gap-2 3xl:gap-3 mb-8 bg-white/10 backdrop-blur-xs px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit">
               <Users size={18} className="text-emerald-400 3xl:w-6 3xl:h-6" />
               <span className="text-white font-medium 3xl:text-lg 5xl:text-xl">
                 <span className="text-emerald-400 font-bold">{artisanCount} {config.namePlural}</span> disponibles
@@ -130,13 +130,13 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
             </div>
 
             {/* Trust badge */}
-            <div className="flex items-center gap-2 3xl:gap-3 bg-white/10 backdrop-blur-sm px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit">
+            <div className="flex items-center gap-2 3xl:gap-3 bg-white/10 backdrop-blur-xs px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit">
               <Star size={18} className="text-yellow-400 fill-yellow-400 3xl:w-6 3xl:h-6" />
               <span className="text-white text-sm 3xl:text-base 5xl:text-lg font-medium">4.9/5 (947 avis Google)</span>
             </div>
 
             {/* Prix */}
-            <div className="grid grid-cols-3 gap-4 3xl:gap-6 max-w-md 3xl:max-w-lg 5xl:max-w-xl bg-white/5 backdrop-blur-sm rounded-xl 3xl:rounded-2xl p-4 3xl:p-6 5xl:p-8 mt-8 3xl:mt-10">
+            <div className="grid grid-cols-3 gap-4 3xl:gap-6 max-w-md 3xl:max-w-lg 5xl:max-w-xl bg-white/5 backdrop-blur-xs rounded-xl 3xl:rounded-2xl p-4 3xl:p-6 5xl:p-8 mt-8 3xl:mt-10">
               {config.services.slice(0, 3).map((service, i) => (
                 <div key={i} className={`text-center ${i === 1 ? "border-x border-white/20" : ""}`}>
                   <p className="text-white/60 text-xs 3xl:text-sm 5xl:text-base mb-1">{service.name.split(" ")[0]}</p>

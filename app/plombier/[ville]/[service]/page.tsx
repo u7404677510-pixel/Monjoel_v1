@@ -19,10 +19,12 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ params }: { params: { ville: string; service: string } }) {
+export async function generateMetadata(props: { params: Promise<{ ville: string; service: string }> }) {
+  const params = await props.params;
   return buildServiceMetadata(TRADE_SLUG, params.ville, params.service);
 }
 
-export default function Page({ params }: { params: { ville: string; service: string } }) {
+export default async function Page(props: { params: Promise<{ ville: string; service: string }> }) {
+  const params = await props.params;
   return <ServicePageBody tradeSlug={TRADE_SLUG} citySlug={params.ville} serviceSlug={params.service} />;
 }

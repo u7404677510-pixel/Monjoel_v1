@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function CGUPage() {
   return (
@@ -12,7 +12,7 @@ export default function CGUPage() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Conditions Générales d'Utilisation</h1>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
+          <div className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
             <h2>Article 1 - Mentions légales</h2>
             <p>
               Le site monjoel.fr et l'application Joël sont édités par :<br />

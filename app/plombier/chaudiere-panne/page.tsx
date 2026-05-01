@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Chaudière en Panne Paris - Dépannage 20 min | Plombier Joël Prix Fixe",
+  title: "Chaudière en Panne Paris - Dépannage 20 min | Joël",
   description: "Chaudière en panne ? Plombier chauffagiste intervient en 20 min à Paris & IDF. Diagnostic + réparation prix fixe dès 99€. Toutes marques. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/chaudiere-panne",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/chaudiere-panne",
+      "x-default": "https://monjoel.fr/plombier/chaudiere-panne",
+    },
   },
 };
 

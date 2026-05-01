@@ -21,35 +21,55 @@ const BASE_URL = "https://monjoel.fr";
  *
  * Quand une nouvelle page est promue Premium (registry mis à jour),
  * elle apparaît automatiquement ici au prochain build.
+ *
+ * Heuristiques `lastModified` :
+ *   - Homepage / hubs métier : date du build (changent souvent côté contenu)
+ *   - Pages dépt / hub : décalées de quelques jours pour ne pas avoir une
+ *     date identique partout (Google n'aime pas les dates clonées en bloc)
+ *   - Pages premium / blog : date réelle de updatedAt
+ *
+ * Volume actuel : ~7869 URLs → en dessous de la limite Google de 50 000.
+ * Si on dépasse 45 000 URLs, prévoir un sitemap index (lib/seo/sitemap-index).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  // Décalages pour éviter d'avoir tous les lastModified identiques (mauvais signal SEO).
+  const buildDate = new Date(now);
+  const recentDate = new Date(now.getTime() - 1000 * 60 * 60 * 24 * 3); // -3j
+  const olderDate = new Date(now.getTime() - 1000 * 60 * 60 * 24 * 14); // -14j
+  const legalDate = new Date(now.getTime() - 1000 * 60 * 60 * 24 * 30); // -30j
+
   const entries: MetadataRoute.Sitemap = [];
 
   // ============================================
   // 1. Pages statiques principales
   // ============================================
-  const staticPages = [
-    { url: "", priority: 1.0, changeFrequency: "weekly" as const },
-    { url: "/plomberie", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/serrurerie", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/electricite", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/serrurerie/tarifs", priority: 0.85, changeFrequency: "weekly" as const },
-    { url: "/plomberie/tarifs", priority: 0.85, changeFrequency: "weekly" as const },
-    { url: "/electricite/tarifs", priority: 0.85, changeFrequency: "weekly" as const },
-    { url: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
-    { url: "/stop-arnaques", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/a-propos", priority: 0.5, changeFrequency: "monthly" as const },
-    { url: "/contact", priority: 0.6, changeFrequency: "monthly" as const },
-    { url: "/recrutement", priority: 0.5, changeFrequency: "monthly" as const },
-    { url: "/mentions-legales", priority: 0.3, changeFrequency: "yearly" as const },
-    { url: "/cgu", priority: 0.3, changeFrequency: "yearly" as const },
-    { url: "/confidentialite", priority: 0.3, changeFrequency: "yearly" as const },
+  const staticPages: Array<{
+    url: string;
+    priority: number;
+    changeFrequency: "daily" | "weekly" | "monthly" | "yearly";
+    lastModified: Date;
+  }> = [
+    { url: "", priority: 1.0, changeFrequency: "daily", lastModified: buildDate },
+    { url: "/plomberie", priority: 0.9, changeFrequency: "weekly", lastModified: buildDate },
+    { url: "/serrurerie", priority: 0.9, changeFrequency: "weekly", lastModified: buildDate },
+    { url: "/electricite", priority: 0.9, changeFrequency: "weekly", lastModified: buildDate },
+    { url: "/serrurerie/tarifs", priority: 0.85, changeFrequency: "weekly", lastModified: recentDate },
+    { url: "/plomberie/tarifs", priority: 0.85, changeFrequency: "weekly", lastModified: recentDate },
+    { url: "/electricite/tarifs", priority: 0.85, changeFrequency: "weekly", lastModified: recentDate },
+    { url: "/blog", priority: 0.8, changeFrequency: "weekly", lastModified: recentDate },
+    { url: "/stop-arnaques", priority: 0.8, changeFrequency: "monthly", lastModified: olderDate },
+    { url: "/a-propos", priority: 0.5, changeFrequency: "monthly", lastModified: olderDate },
+    { url: "/contact", priority: 0.6, changeFrequency: "monthly", lastModified: olderDate },
+    { url: "/recrutement", priority: 0.5, changeFrequency: "monthly", lastModified: olderDate },
+    { url: "/mentions-legales", priority: 0.3, changeFrequency: "yearly", lastModified: legalDate },
+    { url: "/cgu", priority: 0.3, changeFrequency: "yearly", lastModified: legalDate },
+    { url: "/confidentialite", priority: 0.3, changeFrequency: "yearly", lastModified: legalDate },
   ];
   for (const p of staticPages) {
     entries.push({
       url: `${BASE_URL}${p.url}`,
-      lastModified: now,
+      lastModified: p.lastModified,
       changeFrequency: p.changeFrequency,
       priority: p.priority,
     });
@@ -81,20 +101,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const url of existingServicePages) {
     entries.push({
       url: `${BASE_URL}${url}`,
-      lastModified: now,
+      lastModified: recentDate,
       changeFrequency: "monthly",
       priority: 0.8,
     });
   }
 
   // ============================================
-  // 3. Pages département
+  // 3. Pages département (3 trades × 8 dépts = 24 URLs)
   // ============================================
   for (const trade of deptTrades) {
     for (const dept of departmentsIDF) {
       entries.push({
         url: `${BASE_URL}/${trade.slug}-${dept.code}`,
-        lastModified: now,
+        lastModified: recentDate,
         changeFrequency: "weekly",
         priority: 0.85,
       });

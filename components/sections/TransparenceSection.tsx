@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { ShieldCheck, Eye } from "lucide-react";
 import { yellowPunctuation } from "@/components/ui/Title";
@@ -48,7 +48,7 @@ export default function TransparenceSection({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               {points.map((point, i) => (
                 <div key={i} className="flex items-center gap-2 bg-white/10 rounded-xl px-4 py-3">
-                  <ShieldCheck size={18} className="text-joel-yellow flex-shrink-0" />
+                  <ShieldCheck size={18} className="text-joel-yellow shrink-0" />
                   <span className="text-sm text-white/90">{point}</span>
                 </div>
               ))}

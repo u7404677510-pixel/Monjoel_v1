@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Débouchage Canalisation Paris - Furet & Hydrocurage | Plombier Joël",
+  title: "Débouchage Canalisation Paris dès 99€ | Joël",
   description: "Canalisation bouchée ? Plombier intervient en 20 min à Paris & IDF. Furet électrique ou hydrocurage haute pression. Prix fixe dès 99€. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/debouchage-canalisation",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/debouchage-canalisation",
+      "x-default": "https://monjoel.fr/plombier/debouchage-canalisation",
+    },
   },
 };
 

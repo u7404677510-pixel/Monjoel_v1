@@ -1,14 +1,60 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { createClient } from "@supabase/supabase-js";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import {
-  Wrench, Clock, CheckCircle, AlertCircle, Phone,
-  Star, ChevronRight, Droplets, Key, Zap, LogOut
-} from "lucide-react";
+/**
+ * /client/interventions — Mes demandes (auth required).
+ *
+ * Composé de :
+ *  - Header "Bonjour {prénom}" + sub + CTA "Nouvelle demande"
+ *  - Tabs (Toutes / En cours / Terminées / Annulées) avec badges count
+ *  - Search par problem_label / postal_code / date
+ *  - Liste de cards interventions (clickable → drawer détaillé)
+ *  - Drawer détail avec timeline grande, photos, devis/facture, chat, rating
+ *
+ * Auth :
+ *  - Redirige vers /client si pas de session.
+ *  - Charge tous les leads (la table n'a pas de colonne `email` — voir rapport).
+ *
+ * Rating :
+ *  - Stocké en local state pour l'instant (mock).
+ *  - Toast de succès au submit.
+ *  - À brancher sur table `ratings` côté DB.
+ */
+
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { createClient } from "@supabase/supabase-js";
+import { AnimatePresence, motion } from "motion/react";
+import {
+  AlertCircle,
+  ChevronRight,
+  Droplets,
+  Inbox,
+  Key,
+  MapPin,
+  Phone,
+  Plus,
+  RefreshCw,
+  Search,
+  Wrench,
+  Zap,
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { EmptyState } from "@/components/ui/empty-state";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { toast } from "@/components/ui/toast";
+import { InterventionDrawer } from "../_components/InterventionDrawer";
+import { RatingStars } from "../_components/RatingStars";
+import { Timeline } from "../_components/Timeline";
+import {
+  emailToFirstName,
+  formatDateShort,
+  getStatusMeta,
+  type Lead,
+  type LeadStatus,
+} from "../_components/util";
 
 function getSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -17,200 +63,469 @@ function getSupabase() {
   return createClient(url, key);
 }
 
-interface Lead {
-  id: string;
-  problem_label: string;
-  trade: string;
-  postal_code: string;
-  status: string;
-  phone: string;
-  created_at: string;
-  notes: string | null;
-}
-
-const statusConfig: Record<string, { label: string; icon: React.ElementType; color: string }> = {
-  new: { label: "Nouveau", icon: AlertCircle, color: "text-blue-600 bg-blue-50" },
-  contacted: { label: "Prise en charge", icon: Phone, color: "text-amber-600 bg-amber-50" },
-  converted: { label: "Terminé", icon: CheckCircle, color: "text-emerald-600 bg-emerald-50" },
-  lost: { label: "Annulé", icon: AlertCircle, color: "text-gray-400 bg-gray-50" },
+const TRADE_ICONS: Record<string, React.ElementType> = {
+  Plomberie: Droplets,
+  Plombier: Droplets,
+  Serrurerie: Key,
+  Serrurier: Key,
+  Électricité: Zap,
+  Electricite: Zap,
+  Electricien: Zap,
 };
 
-const tradeIcon: Record<string, React.ElementType> = { Plomberie: Droplets, Serrurerie: Key, Électricité: Zap };
+type FilterTab = "all" | "open" | "done" | "cancelled";
+
+const TABS: { value: FilterTab; label: string }[] = [
+  { value: "all", label: "Toutes" },
+  { value: "open", label: "En cours" },
+  { value: "done", label: "Terminées" },
+  { value: "cancelled", label: "Annulées" },
+];
 
 export default function ClientInterventionsPage() {
+  const router = useRouter();
   const [leads, setLeads] = useState<Lead[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [authChecked, setAuthChecked] = useState(false);
+  const [error, setError] = useState<string>("");
   const [userEmail, setUserEmail] = useState("");
-  const [rating, setRating] = useState<Record<string, number>>({});
-  const router = useRouter();
 
-  const checkAuth = useCallback(async () => {
+  const [tab, setTab] = useState<FilterTab>("all");
+  const [search, setSearch] = useState("");
+  const [selected, setSelected] = useState<Lead | null>(null);
+  const [ratings, setRatings] = useState<Record<string, number>>({});
+
+  // Hydratation des ratings depuis localStorage au mount
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const stored: Record<string, number> = {};
+      for (let i = 0; i < window.localStorage.length; i++) {
+        const key = window.localStorage.key(i);
+        if (key && key.startsWith("joel_ratings_")) {
+          const leadId = key.slice("joel_ratings_".length);
+          const raw = window.localStorage.getItem(key);
+          const n = raw ? parseInt(raw, 10) : NaN;
+          if (!isNaN(n) && n > 0 && n <= 5) {
+            stored[leadId] = n;
+          }
+        }
+      }
+      if (Object.keys(stored).length) {
+        setRatings((prev) => ({ ...stored, ...prev }));
+      }
+    } catch {
+      /* localStorage indispo en SSR / mode privé strict */
+    }
+  }, []);
+
+  const fetchLeads = useCallback(async () => {
     const supabase = getSupabase();
-    if (!supabase) { setError("Service indisponible"); setLoading(false); return; }
+    if (!supabase) {
+      setError("Service indisponible. Réessayez plus tard.");
+      setLoading(false);
+      setAuthChecked(true);
+      return;
+    }
 
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session) { router.push("/client"); return; }
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
 
-    setUserEmail(session.user.email || "");
+    if (!session) {
+      router.replace("/client");
+      return;
+    }
 
-    // Charger les leads liés à l'email (via numéro de téléphone ou user_id)
-    const { data, error: e } = await supabase
+    setUserEmail(session.user.email ?? "");
+    setAuthChecked(true);
+
+    const { data, error: fetchError } = await supabase
       .from("leads")
       .select("*")
       .order("created_at", { ascending: false });
 
-    // Note: en production, filtrer par user_id ou phone
-    // .eq("user_id", session.user.id)
-    // Pour la démo on affiche tous les leads
-
-    if (e) { setError("Erreur de chargement"); }
-    else { setLeads(data || []); }
+    if (fetchError) {
+      setError("Impossible de charger vos interventions.");
+    } else {
+      setLeads((data as Lead[]) ?? []);
+      setError("");
+    }
     setLoading(false);
   }, [router]);
 
-  useEffect(() => { checkAuth(); }, [checkAuth]);
+  useEffect(() => {
+    fetchLeads();
+  }, [fetchLeads]);
 
-  const handleLogout = async () => {
+  // Compteurs par bucket pour les badges des tabs
+  const counts = useMemo(() => {
+    const c = { all: leads.length, open: 0, done: 0, cancelled: 0 };
+    for (const l of leads) {
+      const bucket = getStatusMeta(l.status).bucket;
+      c[bucket]++;
+    }
+    return c;
+  }, [leads]);
+
+  // Filtrage tab + search
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return leads.filter((l) => {
+      const bucket = getStatusMeta(l.status).bucket;
+      if (tab !== "all" && bucket !== tab) return false;
+      if (!q) return true;
+      const haystack = [
+        l.problem_label,
+        l.trade,
+        l.postal_code,
+        formatDateShort(l.created_at),
+      ]
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [leads, tab, search]);
+
+  const handleRate = async (leadId: string, stars: number) => {
+    setRatings((prev) => ({ ...prev, [leadId]: stars }));
+    // Persistance localStorage (toujours, fallback de base)
+    try {
+      window.localStorage.setItem(`joel_ratings_${leadId}`, String(stars));
+    } catch {
+      /* fail silent */
+    }
+    // Tentative INSERT sur table `ratings` (best-effort, ne casse pas le UX si absente)
     const supabase = getSupabase();
-    if (supabase) await supabase.auth.signOut();
-    router.push("/client");
+    if (supabase) {
+      try {
+        const { error: insertError } = await supabase.from("ratings").insert({
+          lead_id: leadId,
+          stars,
+          created_at: new Date().toISOString(),
+        });
+        if (insertError) {
+          // Table absente / RLS / colonne manquante → on garde le localStorage
+          console.warn("[ratings] insert fallback localStorage:", insertError.message);
+        }
+      } catch (err) {
+        console.warn("[ratings] insert exception:", err);
+      }
+    }
+    toast.success("Merci pour votre note !", {
+      description: `Note de ${stars}/5 enregistrée.`,
+    });
   };
 
-  const handleRate = (leadId: string, stars: number) => {
-    setRating(prev => ({ ...prev, [leadId]: stars }));
-    // En production: sauvegarder dans Supabase
-  };
+  const firstName = emailToFirstName(userEmail);
 
-  const formatDate = (d: string) => new Date(d).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  // ---- Render ---------------------------------------------------------------
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+      {/* Page header */}
+      <header className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Mes demandes</h1>
-          {userEmail && <p className="text-sm text-gray-400 mt-0.5">{userEmail}</p>}
+          <p className="text-xs uppercase tracking-widest text-joel-violet/70 font-semibold">
+            Espace client
+          </p>
+          <h1 className="font-display text-3xl sm:text-4xl text-zinc-900 mt-1.5 leading-tight">
+            Bonjour{firstName && ` ${firstName}`}
+            <span className="text-joel-yellow">.</span>
+          </h1>
+          <p className="text-sm text-zinc-500 mt-1.5">
+            Vos interventions et demandes de devis, mises à jour en temps réel.
+          </p>
         </div>
-        <button onClick={handleLogout} className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors">
-          <LogOut size={16} /> Déconnexion
-        </button>
-      </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <Button
+            variant="ghost"
+            size="md"
+            leftIcon={<RefreshCw size={15} />}
+            onClick={() => {
+              setLoading(true);
+              fetchLeads();
+            }}
+            aria-label="Recharger"
+          >
+            <span className="hidden sm:inline">Actualiser</span>
+          </Button>
+          <Button asChild size="md" leftIcon={<Plus size={16} />}>
+            <Link href="/?devis=1#devis">Nouvelle demande</Link>
+          </Button>
+        </div>
+      </header>
 
-      {error && (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm mb-6 flex items-center gap-2">
-          <AlertCircle size={16} /> {error}
-        </div>
-      )}
-
-      {loading ? (
-        <div className="space-y-4">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="bg-white rounded-2xl p-5 border border-gray-100 animate-pulse">
-              <div className="flex gap-3"><div className="w-10 h-10 bg-gray-100 rounded-xl" /><div className="flex-1"><div className="h-4 bg-gray-100 rounded mb-2 w-3/4" /><div className="h-3 bg-gray-100 rounded w-1/2" /></div></div>
-            </div>
-          ))}
-        </div>
-      ) : leads.length === 0 ? (
-        <div className="text-center py-16">
-          <Wrench size={48} className="mx-auto text-gray-200 mb-4" />
-          <h2 className="font-semibold text-gray-700 mb-2">Aucune demande pour le moment</h2>
-          <p className="text-gray-400 text-sm mb-6">Vos interventions Joël apparaîtront ici après votre première demande.</p>
-          <Link href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-joel text-white font-semibold rounded-xl hover:opacity-90 transition-opacity">
-            Faire une demande <ChevronRight size={18} />
-          </Link>
-        </div>
-      ) : (
-        <div className="space-y-4">
-          {leads.map((lead, i) => {
-            const sc = statusConfig[lead.status] || statusConfig.new;
-            const StatusIcon = sc.icon;
-            const TradeIcon = tradeIcon[lead.trade] || Wrench;
-            const currentRating = rating[lead.id] || 0;
-            const isCompleted = lead.status === "converted";
-
-            return (
-              <motion.div
-                key={lead.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm"
-              >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-10 h-10 bg-gray-50 border border-gray-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TradeIcon size={18} className="text-gray-500" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-gray-900">{lead.problem_label}</p>
-                    <p className="text-sm text-gray-400 mt-0.5">
-                      {lead.trade} · {lead.postal_code} · {formatDate(lead.created_at)}
-                    </p>
-                  </div>
-                  <span className={`flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full ${sc.color}`}>
-                    <StatusIcon size={12} /> {sc.label}
+      {/* Filters bar */}
+      <div className="bg-white border border-zinc-200/80 rounded-2xl p-3 sm:p-4 mb-6 shadow-xs shadow-joel-violet/5">
+        <div className="flex flex-col lg:flex-row gap-3 lg:items-center lg:justify-between">
+          <Tabs
+            value={tab}
+            onValueChange={(v) => setTab(v as FilterTab)}
+            className="min-w-0"
+          >
+            <TabsList className="flex flex-wrap gap-0 border-0 w-auto">
+              {TABS.map((t) => (
+                <TabsTrigger key={t.value} value={t.value} className="px-3">
+                  {t.label}
+                  <span
+                    className={`ml-1.5 inline-flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-bold ${
+                      tab === t.value
+                        ? "bg-joel-violet text-white"
+                        : "bg-zinc-100 text-zinc-500"
+                    }`}
+                  >
+                    {counts[t.value]}
                   </span>
-                </div>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </Tabs>
+          <div className="relative w-full lg:w-72">
+            <Input
+              type="search"
+              placeholder="Rechercher (problème, code postal…)"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              leftIcon={<Search size={15} />}
+            />
+          </div>
+        </div>
+      </div>
 
-                {/* Timeline simple */}
-                <div className="flex items-center gap-1 mb-3">
-                  {["new", "contacted", "converted"].map((s, idx) => {
-                    const statuses = ["new", "contacted", "converted"];
-                    const currentIdx = statuses.indexOf(lead.status);
-                    const active = idx <= currentIdx;
-                    return (
-                      <div key={s} className="flex items-center flex-1">
-                        <div className={`w-3 h-3 rounded-full flex-shrink-0 ${active ? "bg-joel-violet" : "bg-gray-200"}`} />
-                        {idx < 2 && <div className={`flex-1 h-0.5 ${idx < currentIdx ? "bg-joel-violet" : "bg-gray-200"}`} />}
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="flex justify-between text-[10px] text-gray-400 mb-3">
-                  <span>Demande reçue</span>
-                  <span>Prise en charge</span>
-                  <span>Terminé</span>
-                </div>
-
-                {/* Note si terminé */}
-                {isCompleted && (
-                  <div className="bg-gray-50 rounded-xl p-3 mt-2">
-                    <p className="text-xs text-gray-500 mb-2">Notez cette intervention :</p>
-                    <div className="flex gap-1">
-                      {[1, 2, 3, 4, 5].map(star => (
-                        <button key={star} onClick={() => handleRate(lead.id, star)}
-                          className={`transition-colors ${star <= currentRating ? "text-amber-400" : "text-gray-200 hover:text-amber-300"}`}>
-                          <Star size={22} fill={star <= currentRating ? "currentColor" : "none"} />
-                        </button>
-                      ))}
-                      {currentRating > 0 && <span className="text-xs text-gray-400 ml-2 self-center">Merci !</span>}
-                    </div>
-                  </div>
-                )}
-
-                {/* CTA contact */}
-                {lead.status !== "converted" && lead.status !== "lost" && (
-                  <div className="mt-3 pt-3 border-t border-gray-50">
-                    <a href="tel:+33141691008"
-                      className="flex items-center justify-center gap-2 w-full py-2.5 bg-emerald-50 text-emerald-700 rounded-xl text-sm font-semibold hover:bg-emerald-100 transition-colors">
-                      <Phone size={15} /> Contacter Joël — 01 41 69 10 08
-                    </a>
-                  </div>
-                )}
-              </motion.div>
-            );
-          })}
+      {/* Error state */}
+      {error && authChecked && (
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm mb-6 flex items-start gap-2">
+          <AlertCircle size={16} className="mt-0.5 shrink-0" />
+          <div className="flex-1">
+            <p className="font-semibold">Erreur</p>
+            <p className="text-xs mt-0.5">{error}</p>
+          </div>
+          <button
+            onClick={() => {
+              setLoading(true);
+              fetchLeads();
+            }}
+            className="text-xs font-semibold hover:underline"
+          >
+            Réessayer
+          </button>
         </div>
       )}
 
-      {/* Nouvelle demande */}
-      <div className="mt-8 text-center">
-        <Link href="/"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-joel text-white font-semibold rounded-xl hover:opacity-90 transition-opacity">
-          Nouvelle demande <ChevronRight size={18} />
-        </Link>
-      </div>
+      {/* Body */}
+      {loading || !authChecked ? (
+        <SkeletonList />
+      ) : filtered.length === 0 ? (
+        leads.length === 0 ? (
+          <EmptyState
+            icon={Inbox}
+            title="Vous n'avez aucune intervention"
+            description="Vos demandes apparaîtront ici dès que vous nous solliciterez. Joël est disponible 24h/24."
+            action={
+              <Button asChild leftIcon={<Plus size={15} />}>
+                <Link href="/?devis=1#devis">Faire une demande</Link>
+              </Button>
+            }
+          />
+        ) : (
+          <EmptyState
+            icon={Search}
+            title="Aucun résultat"
+            description="Essayez d'effacer la recherche ou de changer de filtre."
+            action={
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => {
+                  setSearch("");
+                  setTab("all");
+                }}
+              >
+                Réinitialiser les filtres
+              </Button>
+            }
+          />
+        )
+      ) : (
+        <AnimatePresence initial={false} mode="popLayout">
+          <motion.ul
+            key={tab + search}
+            layout
+            className="grid grid-cols-1 lg:grid-cols-2 gap-4"
+          >
+            {filtered.map((lead, i) => (
+              <InterventionCard
+                key={lead.id}
+                lead={lead}
+                index={i}
+                rating={ratings[lead.id] ?? 0}
+                onOpen={() => setSelected(lead)}
+                onRate={(stars) => handleRate(lead.id, stars)}
+              />
+            ))}
+          </motion.ul>
+        </AnimatePresence>
+      )}
+
+      <InterventionDrawer
+        lead={selected}
+        rating={selected ? (ratings[selected.id] ?? 0) : 0}
+        onRate={(stars) => selected && handleRate(selected.id, stars)}
+        onClose={() => setSelected(null)}
+      />
+    </div>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Sub-components                                                             */
+/* -------------------------------------------------------------------------- */
+
+interface InterventionCardProps {
+  lead: Lead;
+  index: number;
+  rating: number;
+  onOpen: () => void;
+  onRate: (stars: number) => void;
+}
+
+function InterventionCard({
+  lead,
+  index,
+  rating,
+  onOpen,
+  onRate,
+}: InterventionCardProps) {
+  const meta = getStatusMeta(lead.status);
+  const TradeIcon = TRADE_ICONS[lead.trade] ?? Wrench;
+  const isCompleted = meta.bucket === "done";
+
+  return (
+    <motion.li
+      layout
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
+      transition={{
+        duration: 0.4,
+        delay: Math.min(index, 6) * 0.04,
+        ease: [0.16, 1, 0.3, 1],
+      }}
+      whileHover={{ y: -2 }}
+      className="group"
+    >
+      <article
+        className="bg-white border border-zinc-200/80 rounded-2xl p-5 sm:p-6 hover:border-joel-violet/30 hover:shadow-lg hover:shadow-joel-violet/5 transition-all cursor-pointer h-full flex flex-col"
+        onClick={onOpen}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onOpen();
+          }
+        }}
+      >
+        {/* Header: badge + date */}
+        <div className="flex items-center justify-between gap-3 mb-3">
+          <Badge variant={meta.badgeVariant}>
+            <meta.icon size={11} />
+            {meta.short}
+          </Badge>
+          <span className="text-xs text-zinc-400 font-medium">
+            {formatDateShort(lead.created_at)}
+          </span>
+        </div>
+
+        {/* Title + trade icon */}
+        <div className="flex items-start gap-3 mb-3">
+          <div className="w-10 h-10 rounded-xl bg-linear-to-br from-joel-violet/10 to-joel-mauve/10 border border-joel-violet/15 flex items-center justify-center shrink-0">
+            <TradeIcon size={18} className="text-joel-violet" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <h2 className="font-display text-lg text-zinc-900 leading-tight line-clamp-2">
+              {lead.problem_label}
+            </h2>
+            <div className="mt-1.5 flex items-center gap-2 flex-wrap">
+              {lead.trade && (
+                <Badge variant="primary" className="text-[10px]">
+                  {lead.trade}
+                </Badge>
+              )}
+              {lead.postal_code && (
+                <span className="text-xs text-zinc-500 inline-flex items-center gap-1">
+                  <MapPin size={11} />
+                  {lead.postal_code}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Timeline */}
+        <div className="my-4 px-1">
+          <Timeline status={(lead.status as LeadStatus) || "new"} />
+        </div>
+
+        {/* Bottom row: rating si terminée, sinon CTA contact */}
+        <div className="mt-auto pt-4 border-t border-zinc-100 flex items-center justify-between gap-2">
+          {isCompleted ? (
+            <div
+              className="flex items-center gap-2"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className="text-xs text-zinc-500 font-medium">
+                {rating > 0 ? "Votre note :" : "Évaluez :"}
+              </span>
+              <RatingStars value={rating} onSubmit={onRate} size={18} />
+            </div>
+          ) : meta.bucket === "cancelled" ? (
+            <span className="text-xs text-zinc-400 italic">
+              Intervention annulée
+            </span>
+          ) : (
+            <a
+              href="tel:+33141691008"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800"
+            >
+              <Phone size={12} /> Appeler
+            </a>
+          )}
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-joel-violet group-hover:translate-x-0.5 transition-transform">
+            Voir les détails
+            <ChevronRight size={14} />
+          </span>
+        </div>
+      </article>
+    </motion.li>
+  );
+}
+
+function SkeletonList() {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      {Array.from({ length: 4 }).map((_, i) => (
+        <div
+          key={i}
+          className="bg-white border border-zinc-200/80 rounded-2xl p-6 animate-pulse"
+        >
+          <div className="flex justify-between mb-4">
+            <div className="h-5 w-24 bg-zinc-100 rounded-full" />
+            <div className="h-3 w-16 bg-zinc-100 rounded-sm" />
+          </div>
+          <div className="flex gap-3 mb-4">
+            <div className="w-10 h-10 bg-zinc-100 rounded-xl shrink-0" />
+            <div className="flex-1 space-y-2">
+              <div className="h-4 w-3/4 bg-zinc-100 rounded-sm" />
+              <div className="h-3 w-1/2 bg-zinc-100 rounded-sm" />
+            </div>
+          </div>
+          <div className="h-10 bg-zinc-100 rounded-lg" />
+          <div className="mt-4 h-4 bg-zinc-100 rounded-sm w-1/3" />
+        </div>
+      ))}
     </div>
   );
 }

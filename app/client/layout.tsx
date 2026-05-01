@@ -1,31 +1,29 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import { ClientShell } from "./_components/ClientShell";
 
 export const metadata: Metadata = {
   title: "Mon espace client — Joël",
-  description: "Consultez vos interventions, devis et factures Joël.",
+  description:
+    "Suivez vos interventions, retrouvez vos factures, contactez Joël en un clic.",
   robots: { index: false, follow: false },
 };
 
-export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header minimal */}
-      <header className="bg-white border-b border-gray-100 px-4 py-3 flex items-center justify-between">
-        <Link href="/">
-          <Image src="/logo.webp" alt="Joël" width={80} height={28} className="h-7 w-auto" />
-        </Link>
-        <Link href="/" className="text-sm text-gray-400 hover:text-gray-600 transition-colors">
-          ← Retour au site
-        </Link>
-      </header>
-
-      <main>{children}</main>
-
-      <footer className="mt-16 py-8 text-center text-xs text-gray-400 border-t border-gray-100">
-        <p>© {new Date().getFullYear()} Joël Technologies SAS · <Link href="/confidentialite" className="hover:underline">Confidentialité</Link></p>
-      </footer>
-    </div>
-  );
+/**
+ * Layout de l'espace client MonJoël — DA Purple lumineuse.
+ *
+ * Différence avec /admin : moins dense, plus aéré, ton chaleureux et rassurant.
+ * Le client peut être en pleine urgence ou rentré chez lui post-intervention.
+ *
+ * Structure :
+ *  - Header sticky avec logo + nav (Mes demandes / Aide / Déconnexion)
+ *  - Body : gradient subtil blanc → joel-yellow-light/30
+ *  - Footer minimal avec téléphone 24h/24
+ *  - Mobile : nav burger avec slide-in (géré dans ClientShell client component)
+ */
+export default function ClientLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <ClientShell>{children}</ClientShell>;
 }

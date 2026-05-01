@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight, Clock, Euro } from "lucide-react";
 import Link from "next/link";
-import { City } from "@/lib/data/cities-idf";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Trade } from "@/lib/data/services-definition";
 
 interface CityServicesProps {

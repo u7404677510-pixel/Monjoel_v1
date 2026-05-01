@@ -7,10 +7,14 @@ import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Débouchage WC Paris & IDF | WC Bouchés ? Intervention dès 79€",
+  title: "Débouchage WC Paris & IDF | Intervention dès 79€",
   description: "WC bouchés, eau qui remonte ? Débouchage WC professionnel en 30 min. Prix fixe, intervention propre. Tarif plombier WC bouché transparent.",
   alternates: {
     canonical: "https://monjoel.fr/plombier/debouchage-wc",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/debouchage-wc",
+      "x-default": "https://monjoel.fr/plombier/debouchage-wc",
+    },
   },
   openGraph: {
     title: "WC Bouchés | Débouchage Express | Joël",

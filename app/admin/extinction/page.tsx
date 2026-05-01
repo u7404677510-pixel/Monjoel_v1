@@ -29,7 +29,7 @@ interface KPICardProps {
 
 function KPICard({ title, value, change, changeType, icon, target }: KPICardProps) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+    <div className="bg-white rounded-xl p-6 shadow-xs border border-gray-100">
       <div className="flex items-start justify-between mb-4">
         <div className="w-10 h-10 bg-joel-violet/10 rounded-lg flex items-center justify-center">
           {icon}
@@ -243,7 +243,7 @@ export default function ExtinctionDashboard() {
 
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Tasks */}
-          <div className="lg:col-span-2 bg-white rounded-xl shadow-sm p-6">
+          <div className="lg:col-span-2 bg-white rounded-xl shadow-xs p-6">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-bold text-gray-900">Actions Semaine 1</h2>
               <span className="text-sm text-gray-500">
@@ -258,7 +258,7 @@ export default function ExtinctionDashboard() {
           </div>
 
           {/* Nemesis Watch */}
-          <div className="bg-white rounded-xl shadow-sm p-6">
+          <div className="bg-white rounded-xl shadow-xs p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
               <AlertTriangle size={20} className="text-red-500" />
               Surveillance Némesis

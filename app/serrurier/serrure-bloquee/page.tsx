@@ -9,6 +9,13 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Serrure Bloquée | Serrurier Joël - Intervention Rapide",
   description: "Serrure bloquée ? Déblocage sans forcer. Prix fixe annoncé avant intervention. Serrurier disponible 24h/24, intervention en 30 min.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/serrure-bloquee",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/serrure-bloquee",
+      "x-default": "https://monjoel.fr/serrurier/serrure-bloquee",
+    },
+  },
 };
 
 const doList = [

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
+import { getFooterDeptAnchor } from "@/lib/seo/anchor-variants";
 
 const footerLinks = {
   plomberie: [
@@ -92,7 +93,7 @@ export default function Footer() {
               {loading ? (
                 <span className="flex items-center gap-2 text-gray-300 text-sm">
                   <Phone size={16} />
-                  <span className="animate-pulse bg-gray-700 h-4 w-20 rounded" />
+                  <span className="animate-pulse bg-gray-700 h-4 w-20 rounded-sm" />
                 </span>
               ) : (
                 <a 
@@ -213,37 +214,45 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 mb-8">
           <p className="font-bold text-sm mb-4 text-joel-yellow">Zones d&apos;intervention</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
-            {departmentLinks.map((dept) => (
-              <div key={dept.code} className="text-center">
-                <p className="text-xs text-gray-300 mb-2">{dept.name}</p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  <Link
-                    href={`/plombier-${dept.code}`}
-                    className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
-                    title={`Plombier ${dept.name}`}
-                    aria-label={`Plombier ${dept.name}`}
-                  >
-                    🔧
-                  </Link>
-                  <Link
-                    href={`/serrurier-${dept.code}`}
-                    className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
-                    title={`Serrurier ${dept.name}`}
-                    aria-label={`Serrurier ${dept.name}`}
-                  >
-                    🔐
-                  </Link>
-                  <Link
-                    href={`/electricien-${dept.code}`}
-                    className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
-                    title={`Électricien ${dept.name}`}
-                    aria-label={`Électricien ${dept.name}`}
-                  >
-                    ⚡
-                  </Link>
+            {departmentLinks.map((dept) => {
+              // Anchors variés via title/aria-label — évite que les 8 dpts
+              // aient tous l'ancre "Plombier {dept}". L'emoji visible n'a pas
+              // de texte d'anchor, donc Google se base sur title/aria-label.
+              const plombierAnchor = getFooterDeptAnchor(dept.name, dept.code, "plombier");
+              const serrurierAnchor = getFooterDeptAnchor(dept.name, dept.code, "serrurier");
+              const electricienAnchor = getFooterDeptAnchor(dept.name, dept.code, "electricien");
+              return (
+                <div key={dept.code} className="text-center">
+                  <p className="text-xs text-gray-300 mb-2">{dept.name}</p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    <Link
+                      href={`/plombier-${dept.code}`}
+                      className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
+                      title={plombierAnchor}
+                      aria-label={plombierAnchor}
+                    >
+                      🔧
+                    </Link>
+                    <Link
+                      href={`/serrurier-${dept.code}`}
+                      className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
+                      title={serrurierAnchor}
+                      aria-label={serrurierAnchor}
+                    >
+                      🔐
+                    </Link>
+                    <Link
+                      href={`/electricien-${dept.code}`}
+                      className="text-base p-1.5 text-gray-300 hover:text-joel-yellow transition-colors"
+                      title={electricienAnchor}
+                      aria-label={electricienAnchor}
+                    >
+                      ⚡
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

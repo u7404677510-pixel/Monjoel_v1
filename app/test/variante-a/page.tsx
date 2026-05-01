@@ -82,7 +82,7 @@ function ProcessSection() {
                   <div className="w-24 h-24 bg-gradient-joel rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Icon size={36} className="text-white" />
                   </div>
-                  <span className="absolute -top-2 w-8 h-8 bg-joel-yellow text-gray-900 font-bold rounded-full flex items-center justify-center text-sm shadow" style={{ right: 'calc(50% - 60px)' }}>
+                  <span className="absolute -top-2 w-8 h-8 bg-joel-yellow text-gray-900 font-bold rounded-full flex items-center justify-center text-sm shadow-sm" style={{ right: 'calc(50% - 60px)' }}>
                     {step.number}
                   </span>
                 </div>

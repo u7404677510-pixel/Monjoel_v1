@@ -14,7 +14,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
 
-import { City, getCityBySlug } from "@/lib/data/cities-idf";
+import { City, getCityBySlug, getNearbyCities } from "@/lib/data/cities-idf";
 import { Service, Trade, getTradeBySlug, getServiceBySlug } from "@/lib/data/services-definition";
 import { generateCityPageContent, generateServicePageContent } from "@/lib/seo/city-content";
 import { generatePremiumSchemas } from "@/lib/seo/premium/schema";
@@ -26,11 +26,21 @@ import {
   LocalSchema,
   NearbyAreas,
 } from "@/components/seo";
+import { getServiceCityAnchor } from "@/lib/seo/anchor-variants";
 import PremiumPageRenderer from "@/components/seo/PremiumPageRenderer";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceProcess from "@/components/sections/ServiceProcess";
+import MidPageCTA from "@/components/MidPageCTA";
+
+// Map slug métier → trade type pour pré-remplir le QuickQuoteForm dans MidPageCTA
+function tradeSlugToType(slug: string): "serrurerie" | "plomberie" | "electricite" | undefined {
+  if (slug === "serrurier") return "serrurerie";
+  if (slug === "plombier") return "plomberie";
+  if (slug === "electricien") return "electricite";
+  return undefined;
+}
 
 // ============================================
 // METADATA — version unifiée city-or-service
@@ -43,16 +53,23 @@ export async function buildCityMetadata(tradeSlug: string, citySlug: string): Pr
   if (!city || !trade) return { title: "Page non trouvée" };
 
   const premium = getPremiumContent(tradeSlug, citySlug);
+  const url = `https://monjoel.fr/${tradeSlug}/${citySlug}`;
 
   if (premium) {
     return {
       title: premium.metaTitle,
       description: premium.metaDescription,
-      alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}` },
+      alternates: {
+        canonical: url,
+        languages: {
+          "fr-FR": url,
+          "x-default": url,
+        },
+      },
       openGraph: {
         title: premium.metaTitle,
         description: premium.metaDescription,
-        url: `https://monjoel.fr/${tradeSlug}/${citySlug}`,
+        url,
         siteName: "Joël",
         locale: "fr_FR",
         type: "article",
@@ -60,7 +77,20 @@ export async function buildCityMetadata(tradeSlug: string, citySlug: string): Pr
         modifiedTime: premium.updatedAt,
       },
       twitter: { card: "summary_large_image", title: premium.metaTitle, description: premium.metaDescription },
-      robots: { index: true, follow: true },
+      robots: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-snippet": -1,
+          "max-image-preview": "large",
+          "max-video-preview": -1,
+        },
+      },
     };
   }
 
@@ -69,7 +99,13 @@ export async function buildCityMetadata(tradeSlug: string, citySlug: string): Pr
   return {
     title: content.title,
     description: content.metaDescription,
-    alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}` },
+    alternates: {
+      canonical: url,
+      languages: {
+        "fr-FR": url,
+        "x-default": url,
+      },
+    },
     robots: { index: false, follow: true },
   };
 }
@@ -86,16 +122,23 @@ export async function buildServiceMetadata(
   if (!city || !trade || !service) return { title: "Page non trouvée" };
 
   const premium = getPremiumContent(tradeSlug, citySlug, serviceSlug);
+  const url = `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}`;
 
   if (premium) {
     return {
       title: premium.metaTitle,
       description: premium.metaDescription,
-      alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}` },
+      alternates: {
+        canonical: url,
+        languages: {
+          "fr-FR": url,
+          "x-default": url,
+        },
+      },
       openGraph: {
         title: premium.metaTitle,
         description: premium.metaDescription,
-        url: `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}`,
+        url,
         siteName: "Joël",
         locale: "fr_FR",
         type: "article",
@@ -103,7 +146,20 @@ export async function buildServiceMetadata(
         modifiedTime: premium.updatedAt,
       },
       twitter: { card: "summary_large_image", title: premium.metaTitle, description: premium.metaDescription },
-      robots: { index: true, follow: true },
+      robots: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-snippet": -1,
+          "max-image-preview": "large",
+          "max-video-preview": -1,
+        },
+      },
     };
   }
 
@@ -111,7 +167,13 @@ export async function buildServiceMetadata(
   return {
     title: content.title,
     description: content.metaDescription,
-    alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}` },
+    alternates: {
+      canonical: url,
+      languages: {
+        "fr-FR": url,
+        "x-default": url,
+      },
+    },
     robots: { index: false, follow: true },
   };
 }
@@ -153,10 +215,19 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
         <LocalSchema trade={trade} city={city} faqItems={content.faq} />
         <CityHero trade={trade} city={city} content={content} />
         <FallbackIntro content={content} />
+        <FallbackLocalContext content={content} city={city} trade={trade} />
         <CityServices trade={trade} city={city} />
+        <FallbackPricingContext content={content} city={city} trade={trade} />
+        {/* CTA mi-page : réinjection conversion à mi-scroll */}
+        <MidPageCTA
+          title={`Besoin d'un ${trade.name.toLowerCase()} à ${city.name} ?`}
+          subtitle="Devis instantané · prix fixe annoncé avant intervention"
+          placement={`city_${tradeSlug}_${citySlug}`}
+          trade={tradeSlugToType(tradeSlug)}
+        />
         <FallbackWhyJoel content={content} />
         <CityFAQ faqItems={content.faq} cityName={city.name} tradeName={trade.name} />
-        <NearbyAreas trade={trade} city={city} />
+        <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
         <FinalCTA />
       </main>
       <Footer />
@@ -210,7 +281,16 @@ export function ServicePageBody({
         <LocalSchema trade={trade} city={city} faqItems={content.faq} service={service} />
         <CityHero trade={trade} city={city} content={content} service={service} />
         <FallbackServiceBlock trade={trade} city={city} service={service} content={content} />
+        <FallbackLocalContext content={content} city={city} trade={trade} />
+        <FallbackPricingContext content={content} city={city} trade={trade} />
         <FallbackWhyJoel content={content} />
+        {/* CTA mi-page : réinjection conversion juste avant le bloc autres services */}
+        <MidPageCTA
+          title={`${service.name} à ${city.name} : appelez maintenant`}
+          subtitle={`Prix fixe dès ${service.priceFrom}€ · intervention en ~30 min`}
+          placement={`service_${tradeSlug}_${citySlug}_${serviceSlug}`}
+          trade={tradeSlugToType(tradeSlug)}
+        />
         <FallbackOtherServices trade={trade} city={city} service={service} />
         <ServiceProcess />
         <CityFAQ
@@ -218,7 +298,7 @@ export function ServicePageBody({
           cityName={city.name}
           tradeName={service.name}
         />
-        <NearbyAreas trade={trade} city={city} />
+        <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
         <FinalCTA />
       </main>
       <Footer />
@@ -296,6 +376,58 @@ function FallbackServiceBlock({
   );
 }
 
+/**
+ * Contexte local enrichi : bâti, normes, réseau.
+ * Contenu unique par ville × métier — sert le SEO en cassant le duplicate.
+ */
+function FallbackLocalContext({
+  content,
+  city,
+  trade,
+}: {
+  content: { localContext: string };
+  city: City;
+  trade: Trade;
+}) {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          {trade.name} à {city.name} : ce qu'il faut savoir
+        </h2>
+        <p className="text-gray-700 leading-relaxed text-lg">{content.localContext}</p>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Tarifs et délais détaillés par ville.
+ * Bloc factuel, vendeur, et qui apporte du contenu unique.
+ */
+function FallbackPricingContext({
+  content,
+  city,
+  trade,
+}: {
+  content: { pricingContext: string };
+  city: City;
+  trade: Trade;
+}) {
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+            Tarifs {trade.name.toLowerCase()} à {city.name} ({city.postalCodes[0]})
+          </h2>
+          <p className="text-gray-700 leading-relaxed">{content.pricingContext}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FallbackOtherServices({
   trade,
   city,
@@ -315,16 +447,22 @@ function FallbackOtherServices({
           {trade.services
             .filter((s) => s.slug !== service.slug)
             .slice(0, 6)
-            .map((s) => (
-              <a
-                key={s.slug}
-                href={`/${trade.slug}/${city.slug}/${s.slug}`}
-                className="block p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-joel-violet hover:shadow-md transition-all text-center"
-              >
-                <p className="font-semibold text-gray-900 text-sm">{s.shortName}</p>
-                <p className="text-joel-violet text-sm mt-1">dès {s.priceFrom}€</p>
-              </a>
-            ))}
+            .map((s) => {
+              // Anchor varié pour les liens "autre service" — sur 6 cartes,
+              // pool de 5 patterns → cycle naturel.
+              const anchorText = getServiceCityAnchor(s.shortName, city.name, s.slug, city.slug);
+              return (
+                <a
+                  key={s.slug}
+                  href={`/${trade.slug}/${city.slug}/${s.slug}`}
+                  aria-label={anchorText}
+                  className="block p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-joel-violet hover:shadow-md transition-all text-center"
+                >
+                  <p className="font-semibold text-gray-900 text-sm">{anchorText}</p>
+                  <p className="text-joel-violet text-sm mt-1">dès {s.priceFrom}€</p>
+                </a>
+              );
+            })}
         </div>
       </div>
     </section>

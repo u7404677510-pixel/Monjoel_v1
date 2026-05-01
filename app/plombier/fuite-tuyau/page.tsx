@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   description: "Tuyau qui fuit ? Plombier intervient en 20 min à Paris & IDF. Cuivre, PVC, multicouche. Arrêt de fuite immédiat. Prix fixe 89€ annoncé avant. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/fuite-tuyau",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/fuite-tuyau",
+      "x-default": "https://monjoel.fr/plombier/fuite-tuyau",
+    },
   },
 };
 

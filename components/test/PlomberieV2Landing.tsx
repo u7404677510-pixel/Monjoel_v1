@@ -96,7 +96,7 @@ export default function PlomberieV2Landing() {
     <main className="min-h-screen font-sans">
 
       {/* ─── HEADER MINIMAL ──────────────────────────────────────── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B172A]/95 backdrop-blur-sm border-b border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B172A]/95 backdrop-blur-xs border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Droplets size={20} className="text-[#F5D547]" />
@@ -130,13 +130,13 @@ export default function PlomberieV2Landing() {
           {/* Overlay sombre */}
           <div className="absolute inset-0 bg-[#0B172A]/78" />
           {/* Dégradé bas pour lisibilité */}
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0B172A] to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-t from-[#0B172A] to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-28 pb-20 w-full">
           <div className="max-w-2xl">
             {/* Disponibilité live */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
@@ -279,7 +279,7 @@ export default function PlomberieV2Landing() {
                     </p>
                     <p className="text-gray-400 text-sm mt-0.5">{service.note}</p>
                   </div>
-                  <div className="text-right flex-shrink-0 ml-4">
+                  <div className="text-right shrink-0 ml-4">
                     <span className={`font-display font-bold text-2xl ${service.popular ? "text-p1-blue" : "text-gray-900"}`}>
                       {service.price}
                     </span>
@@ -289,7 +289,7 @@ export default function PlomberieV2Landing() {
               ))}
 
               <div className="pt-3 flex items-start gap-2 text-gray-400 text-xs">
-                <Shield size={14} className="flex-shrink-0 mt-0.5" />
+                <Shield size={14} className="shrink-0 mt-0.5" />
                 <span>Prix fixe garanti • Pas de frais de déplacement • Paiement après intervention</span>
               </div>
             </div>
@@ -310,7 +310,7 @@ export default function PlomberieV2Landing() {
                 className="object-cover object-top lg:object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0B2545]/50 hidden lg:block" />
+              <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0B2545]/50 hidden lg:block" />
             </div>
 
             {/* Texte droite */}
@@ -327,7 +327,7 @@ export default function PlomberieV2Landing() {
               <div className="space-y-8">
                 {differentiators.map((d, i) => (
                   <div key={i} className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-[#F5D547]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 rounded-full bg-[#F5D547]/20 flex items-center justify-center shrink-0 mt-0.5">
                       <Check size={16} className="text-[#F5D547]" />
                     </div>
                     <div>
@@ -350,7 +350,7 @@ export default function PlomberieV2Landing() {
                 >
                   <source src="/videos/hero-artisan.webm" type="video/webm" />
                 </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/60 to-transparent flex items-end p-4">
+                <div className="absolute inset-0 bg-linear-to-t from-[#0B2545]/60 to-transparent flex items-end p-4">
                   <span className="text-white/80 text-xs font-medium">
                     Artisan Joël — intervention réelle
                   </span>
@@ -359,7 +359,7 @@ export default function PlomberieV2Landing() {
 
               {/* Zone d'intervention */}
               <div className="mt-8 flex items-center gap-2 text-white/50 text-sm border-t border-white/10 pt-8">
-                <MapPin size={14} className="flex-shrink-0" />
+                <MapPin size={14} className="shrink-0" />
                 <span>Toute l'Île-de-France — 75, 77, 78, 91, 92, 93, 94, 95</span>
               </div>
             </div>
@@ -378,7 +378,7 @@ export default function PlomberieV2Landing() {
                 947 clients ne se sont pas trompés.
               </h2>
             </div>
-            <div className="flex items-center gap-3 bg-white rounded-2xl px-5 py-3 shadow-sm border border-blue-100 flex-shrink-0">
+            <div className="flex items-center gap-3 bg-white rounded-2xl px-5 py-3 shadow-xs border border-blue-100 shrink-0">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
@@ -396,7 +396,7 @@ export default function PlomberieV2Landing() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`bg-white rounded-2xl p-6 border border-blue-100 shadow-sm ${
+                className={`bg-white rounded-2xl p-6 border border-blue-100 shadow-xs ${
                   i === 1 ? "md:mt-0 md:pt-8 md:pb-8" : ""
                 }`}
               >
@@ -405,7 +405,7 @@ export default function PlomberieV2Landing() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3 border-t border-gray-100 pt-4">
-                  <div className="w-10 h-10 rounded-full bg-p1-blue flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-p1-blue flex items-center justify-center shrink-0">
                     <span className="text-white font-bold text-sm">{t.initial}</span>
                   </div>
                   <div>
@@ -512,7 +512,7 @@ export default function PlomberieV2Landing() {
 
       {/* ─── STICKY MOBILE — ROUGE ───────────────────────────────── */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-[60] md:hidden transition-transform duration-300 ${
+        className={`fixed bottom-0 left-0 right-0 z-60 md:hidden transition-transform duration-300 ${
           stickyVisible ? "translate-y-0" : "translate-y-full"
         }`}
       >

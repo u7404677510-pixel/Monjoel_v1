@@ -9,6 +9,13 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Remplacement Robinet ou Siphon | Plombier Joël - Prix Fixe",
   description: "Robinet qui fuit ? Siphon bouché ? Remplacement rapide à prix fixe. Plombier disponible 24h/24, intervention en 30 min.",
+  alternates: {
+    canonical: "https://monjoel.fr/plombier/remplacement-robinet",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/remplacement-robinet",
+      "x-default": "https://monjoel.fr/plombier/remplacement-robinet",
+    },
+  },
 };
 
 const doList = [

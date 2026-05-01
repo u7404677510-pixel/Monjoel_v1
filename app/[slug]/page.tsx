@@ -64,6 +64,24 @@ export async function generateMetadata({
     ],
     alternates: {
       canonical: content.canonical,
+      languages: {
+        "fr-FR": content.canonical,
+        "x-default": content.canonical,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
     },
     openGraph: {
       title: content.seoTitle,

@@ -25,7 +25,7 @@ export default function PaymentLogos({ variant = "light", showMicrocopy = true }
           <div
             key={pm.name}
             title={pm.name}
-            className="flex items-center justify-center bg-white border border-gray-200 rounded-md px-2 py-1 shadow-sm"
+            className="flex items-center justify-center bg-white border border-gray-200 rounded-md px-2 py-1 shadow-xs"
             style={{ minWidth: 40, height: 28 }}
           >
             <Image

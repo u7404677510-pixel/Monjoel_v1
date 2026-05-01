@@ -1,14 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { MapPin, ArrowRight, BookOpen, Euro } from "lucide-react";
 import Link from "next/link";
-import { City, getNearbyCities } from "@/lib/data/cities-idf";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Trade } from "@/lib/data/services-definition";
+import { getNearbyCityAnchor } from "@/lib/seo/anchor-variants";
 
 interface NearbyAreasProps {
   trade: Trade;
   city: City;
+  /**
+   * Liste pré-calculée des villes voisines (8 max).
+   * Le calcul se fait côté Server (parent) pour éviter d'embarquer le
+   * dataset complet `cities-idf.ts` dans le bundle JS public.
+   */
+  nearbyCities: City[];
 }
 
 // Articles de blog par métier pour le maillage interne
@@ -32,8 +39,7 @@ const relatedArticles: Record<string, { href: string; label: string }[]> = {
   ],
 };
 
-export default function NearbyAreas({ trade, city }: NearbyAreasProps) {
-  const nearbyCities = getNearbyCities(city, 12);
+export default function NearbyAreas({ trade, city, nearbyCities }: NearbyAreasProps) {
   const articles = relatedArticles[trade.slug] || [];
   
   return (
@@ -60,31 +66,40 @@ export default function NearbyAreas({ trade, city }: NearbyAreasProps) {
 
         {/* Cities grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {nearbyCities.map((nearbyCity, index) => (
-            <motion.div
-              key={nearbyCity.slug}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-            >
-              <Link
-                href={`/${trade.slug}/${nearbyCity.slug}`}
-                className="group flex items-center justify-between p-4 bg-white rounded-xl border border-gray-200 hover:border-joel-violet hover:shadow-lg transition-all"
+          {nearbyCities.map((nearbyCity, index) => {
+            // Anchor varié + cohérent (même ville donne toujours le même anchor).
+            // Le `aria-label` reprend l'anchor pour les lecteurs d'écran et Google.
+            const anchorText = getNearbyCityAnchor(nearbyCity, trade.slug);
+            return (
+              <motion.div
+                key={nearbyCity.slug}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
               >
-                <div>
-                  <p className="font-semibold text-gray-900 group-hover:text-joel-violet transition-colors">
-                    {nearbyCity.name}
-                  </p>
-                  <p className="text-sm text-gray-500">{nearbyCity.postalCodes[0]}</p>
-                </div>
-                <ArrowRight 
-                  size={18} 
-                  className="text-gray-400 group-hover:text-joel-violet group-hover:translate-x-1 transition-all" 
-                />
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  href={`/${trade.slug}/${nearbyCity.slug}`}
+                  aria-label={anchorText}
+                  className="group flex items-center justify-between p-4 bg-white rounded-xl border border-gray-200 hover:border-joel-violet hover:shadow-lg transition-all"
+                >
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-joel-violet transition-colors">
+                      {nearbyCity.name}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      <span className="sr-only">{anchorText} · </span>
+                      {nearbyCity.postalCodes[0]}
+                    </p>
+                  </div>
+                  <ArrowRight
+                    size={18}
+                    className="text-gray-400 group-hover:text-joel-violet group-hover:translate-x-1 transition-all"
+                  />
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Liens utiles - Maillage interne */}

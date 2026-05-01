@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Chauffe-Eau en Panne Paris - Dépannage Rapide | Plombier Joël Prix Fixe",
+  title: "Chauffe-Eau en Panne Paris - Dépannage 99€ | Joël",
   description: "Chauffe-eau en panne ? Plombier intervient en 20 min à Paris & IDF. Toutes marques, réparation ou remplacement. Prix fixe dès 99€ annoncé avant. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/chauffe-eau-panne",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/chauffe-eau-panne",
+      "x-default": "https://monjoel.fr/plombier/chauffe-eau-panne",
+    },
   },
 };
 

@@ -2,35 +2,57 @@
   "name": "monjoel",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "test:urls": "npx tsx scripts/test-urls.ts",
     "test:build": "npx tsx scripts/validate-build.ts"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.87.1",
-    "@vercel/og": "^0.8.6",
+    "@hookform/resolvers": "^5.2.2",
+    "@supabase/supabase-js": "^2.105.1",
+    "@tanstack/react-query": "^5.100.6",
+    "@tanstack/react-query-devtools": "^5.100.6",
+    "@tanstack/react-table": "^8.21.3",
+    "@vercel/og": "^0.11.1",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.8",
-    "lucide-react": "^0.424.0",
-    "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "resend": "^6.9.1"
+    "cmdk": "^1.1.1",
+    "lucide-react": "^1.14.0",
+    "motion": "^12.38.0",
+    "next": "16.2.4",
+    "radix-ui": "^1.4.3",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "react-hook-form": "^7.74.0",
+    "recharts": "^3.8.1",
+    "resend": "^6.12.2",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.4.1"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.19",
-    "fast-xml-parser": "^5.3.4",
-    "postcss": "^8",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.4",
+    "fast-xml-parser": "^5.7.2",
+    "postcss": "^8.5.13",
     "sharp": "^0.34.5",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.2.4",
     "tsx": "^4.21.0",
-    "typescript": "^5"
+    "tw-animate-css": "^1.4.0",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
   }
 }

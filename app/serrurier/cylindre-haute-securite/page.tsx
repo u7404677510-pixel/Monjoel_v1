@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Cylindre haute sécurité A2P à Paris et IDF. Anti-crochetage, anti-perçage. Marques Vachette, Bricard, Fichet. Installation dès 149€.",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/cylindre-haute-securite",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/cylindre-haute-securite",
+      "x-default": "https://monjoel.fr/serrurier/cylindre-haute-securite",
+    },
   },
   openGraph: {
     title: "Cylindre Haute Sécurité A2P | Installation | Joël",

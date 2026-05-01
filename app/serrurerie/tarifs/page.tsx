@@ -4,8 +4,8 @@ import { Phone, Check, AlertTriangle, Clock, Shield, Star, ArrowRight } from "lu
 import ClientSchema from "@/components/ClientSchema";
 
 export const metadata: Metadata = {
-  title: "Tarifs Serrurier Paris 2026 | Prix Réels & Fixes",
-  description: "Découvrez nos vrais tarifs serrurier à Paris. Prix fixes garantis : ouverture porte 89€, changement cylindre 120€, ouverture avec perçage 150€. Sans majoration 24h/24. Zéro arnaque.",
+  title: "Tarifs Serrurier Paris 2026 | Prix Réels & Fixes dès 89€",
+  description: "Vrais tarifs serrurier Paris : ouverture porte 89€, changement cylindre 120€, perçage 150€. Prix fixes, sans majoration 24h/24.",
   keywords: [
     "tarif serrurier paris",
     "prix serrurier paris",
@@ -18,6 +18,21 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://monjoel.fr/serrurerie/tarifs",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurerie/tarifs",
+      "x-default": "https://monjoel.fr/serrurerie/tarifs",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
@@ -27,6 +42,12 @@ export const metadata: Metadata = {
     title: "Tarifs Serrurier Paris 2026 | Prix Réels dès 89€",
     description: "Prix fixes garantis : ouverture porte 89€, changement cylindre 120€. Sans majoration 24h/24.",
     images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tarifs Serrurier Paris 2026 | Prix Réels dès 89€",
+    description: "Prix fixes garantis : ouverture porte 89€, changement cylindre 120€. Sans majoration 24h/24.",
+    images: ["/og-default.jpg"],
   },
 };
 
@@ -347,7 +368,7 @@ export default function TarifsSerrureriePage() {
           </div>
 
           <div className="mt-10 bg-emerald-50 rounded-xl p-6 flex items-start gap-4">
-            <Check size={24} className="text-emerald-600 flex-shrink-0 mt-1" />
+            <Check size={24} className="text-emerald-600 shrink-0 mt-1" />
             <div>
               <p className="font-bold text-gray-900">Garantie prix fixe</p>
               <p className="text-gray-600 text-sm">
@@ -422,7 +443,7 @@ export default function TarifsSerrureriePage() {
           </h2>
 
           <div className="space-y-6">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Quel est le prix moyen d&apos;un serrurier à Paris ?
               </h3>
@@ -434,7 +455,7 @@ export default function TarifsSerrureriePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Y a-t-il des frais supplémentaires la nuit ou le week-end ?
               </h3>
@@ -445,7 +466,7 @@ export default function TarifsSerrureriePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Comment être sûr du prix avant l&apos;intervention ?
               </h3>

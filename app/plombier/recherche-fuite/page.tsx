@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Recherche de Fuite Paris - Détection Sans Casse | Plombier Joël",
-  description: "Fuite cachée introuvable ? Détection non destructive en 20 min à Paris & IDF. Caméra thermique, gaz traceur. Prix fixe dès 129€. Rapport détaillé. 01 41 69 10 08",
+  title: "Recherche de Fuite Paris - Détection Sans Casse | Joël",
+  description: "Fuite cachée ? Détection non destructive en 20 min à Paris & IDF. Caméra thermique, gaz traceur. Prix fixe dès 129€. Rapport détaillé. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/recherche-fuite",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/recherche-fuite",
+      "x-default": "https://monjoel.fr/plombier/recherche-fuite",
+    },
   },
 };
 

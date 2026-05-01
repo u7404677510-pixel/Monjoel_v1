@@ -9,6 +9,13 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Après Effraction | Serrurier Joël - Sécurisation Immédiate",
   description: "Cambriolage ? Sécurisation immédiate de votre porte. Remplacement serrure, renforcement, facture pour assurance. Intervention urgente.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/apres-effraction",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/apres-effraction",
+      "x-default": "https://monjoel.fr/serrurier/apres-effraction",
+    },
+  },
 };
 
 const doList = [

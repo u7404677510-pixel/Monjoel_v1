@@ -18,6 +18,21 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://monjoel.fr/plomberie/tarifs",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plomberie/tarifs",
+      "x-default": "https://monjoel.fr/plomberie/tarifs",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
@@ -27,6 +42,12 @@ export const metadata: Metadata = {
     title: "Tarifs Plombier Paris 2026 | Prix Réels dès 69€",
     description: "Prix fixes garantis : débouchage WC 79€, fuite d'eau 89€. Sans majoration 24h/24.",
     images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tarifs Plombier Paris 2026 | Prix Réels dès 69€",
+    description: "Prix fixes garantis : débouchage WC 79€, fuite d'eau 89€. Sans majoration 24h/24.",
+    images: ["/og-default.jpg"],
   },
 };
 
@@ -241,7 +262,7 @@ export default function TarifsPlomberiePage() {
       <ClientSchema schema={faqSchema} id="faq-schema" />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16 md:py-24">
+      <section className="bg-linear-to-br from-blue-600 to-blue-800 text-white py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
@@ -347,7 +368,7 @@ export default function TarifsPlomberiePage() {
           </div>
 
           <div className="mt-10 bg-emerald-50 rounded-xl p-6 flex items-start gap-4">
-            <Check size={24} className="text-emerald-600 flex-shrink-0 mt-1" />
+            <Check size={24} className="text-emerald-600 shrink-0 mt-1" />
             <div>
               <p className="font-bold text-gray-900">Garantie prix fixe</p>
               <p className="text-gray-600 text-sm">
@@ -422,7 +443,7 @@ export default function TarifsPlomberiePage() {
           </h2>
 
           <div className="space-y-6">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Quel est le prix moyen d&apos;un plombier à Paris ?
               </h3>
@@ -434,7 +455,7 @@ export default function TarifsPlomberiePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Combien coûte un débouchage de WC ?
               </h3>
@@ -445,7 +466,7 @@ export default function TarifsPlomberiePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Y a-t-il des frais supplémentaires la nuit ou le week-end ?
               </h3>
@@ -456,7 +477,7 @@ export default function TarifsPlomberiePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Quel est le tarif horaire d&apos;un plombier ?
               </h3>

@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Porte Claquée Paris - Ouverture Sans Perçage 89€ | Serrurier Joël",
+  title: "Porte Claquée Paris - Ouverture Sans Perçage 89€ | Joël",
   description: "Porte claquée ? Serrurier ouvre sans dégâts en 20 min à Paris & IDF. Prix fixe 89€ annoncé avant intervention. 24h/24, zéro arnaque. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/ouverture-sans-percage",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/ouverture-sans-percage",
+      "x-default": "https://monjoel.fr/serrurier/ouverture-sans-percage",
+    },
   },
 };
 

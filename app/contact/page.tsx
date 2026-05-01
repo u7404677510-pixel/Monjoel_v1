@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Send, Mail, MapPin, CheckCircle, Loader2 } from "lucide-react";
 import PhoneButton from "@/components/PhoneButton";
+import MidPageCTA from "@/components/MidPageCTA";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold mb-2">Adresse</h3>
                   <div className="flex items-start gap-2">
-                    <MapPin size={18} className="flex-shrink-0 mt-1" />
+                    <MapPin size={18} className="shrink-0 mt-1" />
                     <span>Île-de-France</span>
                   </div>
                 </div>
@@ -93,7 +94,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50">
+            <div className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg border border-white/50">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h2>
               
               {sent ? (
@@ -123,7 +124,7 @@ export default function ContactPage() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden"
                       placeholder="Votre nom"
                     />
                   </div>
@@ -134,7 +135,7 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden"
                       placeholder="votre@email.com"
                     />
                   </div>
@@ -145,7 +146,7 @@ export default function ContactPage() {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden"
                       placeholder="Sujet de votre message"
                     />
                   </div>
@@ -156,7 +157,7 @@ export default function ContactPage() {
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-none resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-joel-violet focus:border-transparent outline-hidden resize-none"
                       placeholder="Votre message..."
                     />
                   </div>
@@ -182,6 +183,15 @@ export default function ContactPage() {
             </div>
           </motion.div>
         </div>
+      </div>
+
+      {/* CTA conversion bas — urgence prend le dessus sur le formulaire de contact générique */}
+      <div className="mt-16">
+        <MidPageCTA
+          title="Une urgence ? N'attendez pas le mail."
+          subtitle="Notre équipe répond 24h/24 par téléphone — intervention en ~30 min"
+          placement="contact_bottom"
+        />
       </div>
     </div>
   );

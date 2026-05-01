@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Panne Électrique Paris - Intervention Urgente 20 min | Prix Fixe 79€",
+  title: "Panne Électrique Paris - 20 min | Prix Fixe 79€",
   description: "Panne électrique ? Électricien certifié intervient en 20 min à Paris & IDF. Prix fixe 79€ annoncé avant intervention. Zéro arnaque, 24h/24. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/electricien/panne-electrique",
+    languages: {
+      "fr-FR": "https://monjoel.fr/electricien/panne-electrique",
+      "x-default": "https://monjoel.fr/electricien/panne-electrique",
+    },
   },
 };
 

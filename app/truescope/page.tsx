@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Sparkles, Zap, Eye, Clock, BadgeEuro, Target, ArrowRight, Wrench, MessageSquare, Camera } from "lucide-react";
 import Link from "next/link";
 
@@ -47,7 +47,7 @@ const features = [
 
 export default function TrueScopePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-white via-joel-violet/5 to-joel-mauve/10 relative">
+    <main className="min-h-screen bg-linear-to-br from-white via-joel-violet/5 to-joel-mauve/10 relative">
       {/* Global Background decorations */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
@@ -63,7 +63,7 @@ export default function TrueScopePage() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-xs rounded-full mb-8 shadow-xs"
           >
             <Sparkles size={16} className="text-joel-violet" />
             <span className="text-sm font-semibold text-joel-violet uppercase tracking-wide">
@@ -104,7 +104,7 @@ export default function TrueScopePage() {
               href={TRUESCOPE_URL}
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <Zap size={22} className="relative z-10" />
               <span className="relative z-10">Essayer TrueScope Gratuitement</span>
               <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -152,7 +152,7 @@ export default function TrueScopePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-white/50"
+            className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 md:p-12 shadow-lg border border-white/50"
           >
             <div className="max-w-none text-gray-600 leading-relaxed space-y-6 text-lg md:text-xl">
               <p>
@@ -201,7 +201,7 @@ export default function TrueScopePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-joel-violet/20 hover:-translate-y-2 transition-all duration-300 border border-white/50"
+                className="group relative bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-joel-violet/20 hover:-translate-y-2 transition-all duration-300 border border-white/50"
               >
                 {/* Number badge */}
                 <div className="absolute -top-4 -left-4 w-14 h-14 bg-gradient-joel rounded-2xl flex items-center justify-center shadow-lg">
@@ -284,7 +284,7 @@ export default function TrueScopePage() {
                 href={TRUESCOPE_URL}
                 className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-joel-violet font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-joel-violet/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <span className="absolute inset-0 bg-linear-to-r from-transparent via-joel-violet/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <Eye size={22} className="relative z-10" />
                 <span className="relative z-10">Lancer TrueScope</span>
                 <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />

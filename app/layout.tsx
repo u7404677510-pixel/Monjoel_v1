@@ -2,11 +2,18 @@ import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import TelClickTracker from "@/components/TelClickTracker";
 import ConditionalSticky from "@/components/ConditionalSticky";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { Providers } from "./providers";
+
+// Lazy-load — apparait après 3s (cf. WhatsAppFloat.tsx). Inutile dans le bundle initial.
+// Code-split en chunk séparé : retiré du JS critique du first paint.
+// (ssr:false interdit en Server Component Next 14, mais le composant est déjà
+// "use client" + useEffect → render initial vide, code chargé en parallèle.)
+const WhatsAppFloat = dynamic(() => import("@/components/WhatsAppFloat"));
 
 // Popups growth hack retirés - trop agressifs (ChatBot, ArtisanToast, SocialProofNotifications, ExitIntentPopup)
 
@@ -40,6 +47,13 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   // Removed maximumScale and userScalable for accessibility (allows zoom for visually impaired users)
+  // Theme color = joel-violet (#7055A7) — colore l'address bar mobile (Chrome/Safari iOS)
+  // pour un effet premium "app-like" cohérent avec la DA Purple.
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#7055A7" },
+    { media: "(prefers-color-scheme: dark)", color: "#7055A7" },
+  ],
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
@@ -68,12 +82,22 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
     googleBot: {
       index: true,
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://monjoel.fr",
+    languages: {
+      "fr-FR": "https://monjoel.fr",
+      "x-default": "https://monjoel.fr",
     },
   },
   openGraph: {
@@ -84,20 +108,13 @@ export const metadata: Metadata = {
     title: "Joël | Dépannage sans arnaques",
     description:
       "Trouvez un artisan de confiance. Devis instantané, prix fixe. Appelez le 01 41 69 10 08.",
-    images: [
-      {
-        url: "/og-default.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Joël - Dépannage d'urgence Paris & Île-de-France",
-      },
-    ],
+    // images: gérées automatiquement par app/opengraph-image.tsx (fallback global)
   },
   twitter: {
     card: "summary_large_image",
     title: "Joël | Dépannage sans arnaques",
     description: "Trouvez un artisan de confiance. Devis instantané, prix fixe.",
-    images: ["/og-default.jpg"],
+    // images: Next.js réutilise automatiquement opengraph-image pour Twitter card
   },
 };
 
@@ -145,9 +162,88 @@ export default function RootLayout({
 
         {/* GTM is loaded via Script component in body with afterInteractive strategy */}
         {/* Both Poppins and Chillax are self-hosted via next/font - no render-blocking external requests */}
-        
+
+        {/* ========================================
+            PRELOAD FONTS CRITIQUES — Chillax
+            Next/font/local génère normalement les preload auto, mais on
+            force ici les 2 weights critiques (Medium pour le wordmark "Joël",
+            Bold pour les H2/H3 imposants). Évite le FOUT (flash of unstyled text).
+            ======================================== */}
+        <link
+          rel="preload"
+          href="/fonts/Chillax-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Chillax-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
         {/* Preconnect to Supabase for faster config loading */}
         <link rel="preconnect" href="https://aylnautzwhiaoeilgzfu.supabase.co" />
+
+        {/* ========================================
+            DNS-PREFETCH / PRECONNECT — services tracking critiques
+            Réduit le RTT pour les domaines tiers (résolution DNS + TLS handshake
+            anticipés). Le navigateur ouvre la connexion en parallèle du parsing HTML.
+            ======================================== */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://consent.cookiebot.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link
+          rel="preconnect"
+          href="https://www.googletagmanager.com"
+          crossOrigin="anonymous"
+        />
+
+        {/* ========================================
+            SPECULATION RULES API — prefetch agressif
+            Chrome/Edge stable : prerender les pages internes que l'utilisateur
+            est susceptible de visiter (au survol/focus, eagerness "moderate").
+            Gain LCP perçu massif sur les 7869 pages SEO.
+            Opt-out d'un lien : ajouter l'attribut data-no-prerender
+            ======================================== */}
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  source: "document",
+                  where: {
+                    and: [
+                      { href_matches: "/*" },
+                      { not: { selector_matches: "[data-no-prerender]" } },
+                      { not: { selector_matches: "[rel~=\"external\"]" } },
+                      { not: { href_matches: "/api/*" } },
+                      { not: { href_matches: "/admin/*" } },
+                      { not: { href_matches: "/app/*" } },
+                    ],
+                  },
+                  eagerness: "moderate",
+                },
+              ],
+              prefetch: [
+                {
+                  source: "document",
+                  where: {
+                    and: [
+                      { href_matches: "/*" },
+                      { not: { selector_matches: "[data-no-prerender]" } },
+                      { not: { href_matches: "/api/*" } },
+                    ],
+                  },
+                  eagerness: "moderate",
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="bg-white min-h-screen overflow-x-hidden">
         {/* ========================================
@@ -197,14 +293,18 @@ export default function RootLayout({
 
         {/* Tel Click Tracker pour conversions Google Ads */}
         <TelClickTracker />
-        
-        {/* Contenu du site */}
-        <LayoutWrapper>{children}</LayoutWrapper>
-        
-        {/* Bouton d'appel sticky mobile (conditionnel - pas sur /test/*) */}
-        <ConditionalSticky />
-        {/* WhatsApp flottant desktop — apparait après 3s */}
-        <WhatsAppFloat />
+
+        {/* Providers globaux — TanStack Query, Sonner, Radix Tooltip
+            (encapsule site public + /admin + /client + /artisan) */}
+        <Providers>
+          {/* Contenu du site */}
+          <LayoutWrapper>{children}</LayoutWrapper>
+
+          {/* Bouton d'appel sticky mobile (conditionnel - pas sur /test/*) */}
+          <ConditionalSticky />
+          {/* WhatsApp flottant desktop — apparait après 3s */}
+          <WhatsAppFloat />
+        </Providers>
       </body>
     </html>
   );
