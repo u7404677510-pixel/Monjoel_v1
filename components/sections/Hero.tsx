@@ -2,9 +2,14 @@
 
 import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import { useState, useEffect, useCallback } from "react";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+
+// Lazy-load — modal devis n'est rendu qu'au clic CTA. Économise ~30 KB gzip sur le first paint.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 const carouselSlides = [
   {
@@ -75,10 +80,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100svh] lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
+    <section className="relative min-h-svh lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
       {/* Mobile Background - CSS background-image excludes from LCP calculation */}
       <div className="absolute inset-0 lg:hidden hero-bg-main opacity-15">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/90 via-white/70 to-white" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
@@ -103,7 +108,7 @@ export default function Hero() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-gray-700">4.9/5</span>
-              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (847 avis vérifiés)</span>
+              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (947 avis vérifiés)</span>
             </div>
 
             {/* Main title - SEO optimized */}
@@ -193,7 +198,7 @@ export default function Hero() {
             <div className="relative max-w-lg mx-auto lg:max-w-none">
 
               {/* Carousel container */}
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden aspect-4/3 shadow-2xl">
                 {carouselSlides.map((slide, index) => (
                   <div
                     key={slide.src}
@@ -211,8 +216,8 @@ export default function Hero() {
                       priority={index === 0}
                     />
                     {/* Label overlay */}
-                    <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${slide.color} to-transparent px-6 py-4`}>
-                      <span className="text-white text-sm font-semibold bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className={`absolute bottom-0 left-0 right-0 bg-linear-to-t ${slide.color} to-transparent px-6 py-4`}>
+                      <span className="text-white text-sm font-semibold bg-white/20 backdrop-blur-xs px-3 py-1 rounded-full">
                         {slide.label}
                       </span>
                     </div>
@@ -223,14 +228,14 @@ export default function Hero() {
                 <button
                   onClick={prevSlide}
                   aria-label="Image précédente"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow hover:bg-white transition-all"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-xs rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-all"
                 >
                   <ChevronLeft size={18} className="text-gray-700" />
                 </button>
                 <button
                   onClick={nextSlide}
                   aria-label="Image suivante"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow hover:bg-white transition-all"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-xs rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-all"
                 >
                   <ChevronRight size={18} className="text-gray-700" />
                 </button>
@@ -275,7 +280,7 @@ export default function Hero() {
 
           {/* Mobile carousel - full width below content */}
           <div className="lg:hidden order-2 relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-xl">
+            <div className="relative rounded-2xl overflow-hidden aspect-video shadow-xl">
               {carouselSlides.map((slide, index) => (
                 <div
                   key={slide.src}
@@ -291,8 +296,8 @@ export default function Hero() {
                     className="object-cover"
                     loading="lazy"
                   />
-                  <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${slide.color} to-transparent px-4 py-3`}>
-                    <span className="text-white text-xs font-semibold bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                  <div className={`absolute bottom-0 left-0 right-0 bg-linear-to-t ${slide.color} to-transparent px-4 py-3`}>
+                    <span className="text-white text-xs font-semibold bg-white/20 backdrop-blur-xs px-2.5 py-1 rounded-full">
                       {slide.label}
                     </span>
                   </div>

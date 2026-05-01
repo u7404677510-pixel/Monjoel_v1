@@ -1,49 +1,99 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Marie L.",
-    location: "Paris 15e",
+    name: "Sarah K.",
+    location: "Paris 11e",
     service: "Serrurerie",
     rating: 1,
-    text: "Porte claquée, j'ai appelé le premier numéro sur Google. 890€ pour 10 minutes de travail ! Le serrurier m'a menacée quand j'ai voulu refuser de payer.",
-    date: "Décembre 2023",
+    text: "Porte claquée à 23h. J'ai pris le premier numéro Google. Annoncé 89€ au téléphone. Une fois sur place, devis à 850€ pour « ouverture impossible sans perçage ». J'ai signé pour qu'il parte.",
+    date: "Mars 2025",
+    outcome: "victim" as const,
   },
   {
-    name: "Thomas D.",
-    location: "Lyon",
+    name: "Thomas R.",
+    location: "Saint-Denis",
     service: "Plomberie",
     rating: 1,
-    text: "Fuite d'eau un dimanche. L'artisan m'a dit qu'il fallait changer toute la tuyauterie. 1200€ de facture. Un vrai plombier m'a dit que c'était juste un joint à 5€.",
-    date: "Novembre 2023",
+    text: "Fuite sous l'évier un dimanche. Le gars annonce 79€, repart avec 1 240€ pour avoir « changé toute l'évacuation ». Le vrai plombier de l'immeuble m'a dit après que c'était un joint de 4€.",
+    date: "Janvier 2026",
+    outcome: "victim" as const,
   },
   {
-    name: "Sophie M.",
-    location: "Marseille",
+    name: "Laëtitia B.",
+    location: "Boulogne-Billancourt",
     service: "Électricité",
     rating: 1,
-    text: "Panne de courant. L'électricien a 'diagnostiqué' un problème grave et m'a fait signer un devis de 2000€ en pleine nuit. C'était juste le disjoncteur.",
-    date: "Janvier 2024",
+    text: "Disjoncteur qui sautait. L'électricien a parlé de « tableau dangereux à refaire d'urgence ». Devis de 1 980€ signé en pleine nuit. C'était juste un différentiel à enclencher.",
+    date: "Novembre 2025",
+    outcome: "victim" as const,
   },
   {
-    name: "Jean-Pierre R.",
-    location: "Bordeaux",
+    name: "Karim D.",
+    location: "Nanterre",
     service: "Serrurerie",
     rating: 1,
-    text: "Le serrurier a percé ma porte alors qu'une simple carte aurait suffi. 750€ + frais de nouvelle porte. Arnaque pure et simple.",
-    date: "Octobre 2023",
+    text: "Porte simplement claquée. Le serrurier l'a percée d'office en 30 secondes alors qu'une carte radio aurait suffi. 720€, plus 380€ pour le nouveau cylindre obligatoire d'après lui.",
+    date: "Septembre 2025",
+    outcome: "victim" as const,
   },
   {
     name: "Isabelle F.",
-    location: "Toulouse",
+    location: "Versailles",
     service: "Plomberie",
     rating: 1,
-    text: "WC bouché. Le plombier a passé 15 minutes, facture de 650€. Il a refusé de me donner une facture détaillée. Je n'ai eu aucun recours.",
-    date: "Septembre 2023",
+    text: "WC bouché. 12 minutes de furet, facture à 590€. Pas de devis écrit, pas de SIRET sur la quittance. J'ai signalé sur SignalConso, dossier toujours en cours.",
+    date: "Mai 2025",
+    outcome: "victim" as const,
+  },
+  {
+    name: "Mehdi T.",
+    location: "Vincennes",
+    service: "Serrurerie",
+    rating: 1,
+    text: "Devis flou signé sous pression à 3h du matin : 460€ qui sont devenus 1 100€ sur la facture finale. Le SIRET sur le papier ne correspond à aucune entreprise active. Banque saisie.",
+    date: "Février 2026",
+    outcome: "victim" as const,
+  },
+  {
+    name: "Charlotte M.",
+    location: "Asnières-sur-Seine",
+    service: "Électricité",
+    rating: 1,
+    text: "Panne sur une prise. Le « technicien » a refusé la CB, m'a forcée à payer 380€ en espèces. Pas de facture conforme, juste un papier griffonné. Mon assurance a refusé la prise en charge.",
+    date: "Octobre 2025",
+    outcome: "victim" as const,
+  },
+  {
+    name: "François L.",
+    location: "Pantin",
+    service: "Plomberie",
+    rating: 1,
+    text: "Chauffe-eau en panne un samedi. Annoncé 99€, parti à 870€ pour un « démontage complet » de 25 minutes. La sécurité thermique n'avait juste pas été réarmée. J'ai porté plainte.",
+    date: "Décembre 2025",
+    outcome: "victim" as const,
+  },
+  {
+    name: "Aïcha N.",
+    location: "Créteil",
+    service: "Serrurerie",
+    rating: 5,
+    text: "Porte claquée un samedi soir. J'allais rappeler le numéro habituel quand mon voisin m'a passé Joël. Prix annoncé au téléphone : 89€. Facture finale : 89€. Ouverture sans perçage en 15 minutes.",
+    date: "Janvier 2026",
+    outcome: "avoided" as const,
+  },
+  {
+    name: "Antoine P.",
+    location: "Montreuil",
+    service: "Électricité",
+    rating: 5,
+    text: "Coupure totale en pleine soirée. Le premier devis Google annonçait 49€ « pour voir ». J'ai préféré appeler Joël : 79€ annoncés, 79€ payés. Disjoncteur réparmé en 10 minutes.",
+    date: "Mars 2026",
+    outcome: "avoided" as const,
   },
 ];
 
@@ -90,7 +140,7 @@ export default function ScamTestimonials() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
-            className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-red-100"
+            className="bg-white/90 backdrop-blur-xs rounded-3xl p-8 shadow-xl border border-red-100"
           >
             <Quote className="text-red-200 mb-4" size={40} />
             

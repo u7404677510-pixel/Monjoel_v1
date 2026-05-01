@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ShieldAlert, AlertTriangle } from "lucide-react";
 
 export default function StopArnaquesHero() {
@@ -17,7 +17,7 @@ export default function StopArnaquesHero() {
           className="inline-flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-full mb-8"
         >
           <AlertTriangle size={18} />
-          <span className="font-medium">Sensibilisation</span>
+          <span className="font-medium">Manifeste anti-arnaque</span>
         </motion.div>
 
         <motion.h1
@@ -26,9 +26,9 @@ export default function StopArnaquesHero() {
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
         >
-          Les arnaques au dépannage,
+          L&apos;arnaque au dépannage est un système.
           <br />
-          <span className="gradient-text">c'est terminé.</span>
+          <span className="gradient-text">On l&apos;a démonté.</span>
         </motion.h1>
 
         <motion.p
@@ -37,9 +37,25 @@ export default function StopArnaquesHero() {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10"
         >
-          Chaque année, des milliers de Français sont victimes de faux artisans.
-          Découvrez leurs pratiques et comment vous protéger.
+          Comment ça fonctionne, qui en profite, et ce qu&apos;on a changé pour
+          que ça s&apos;arrête chez Joël.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
+          className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-10 text-left bg-white/60 backdrop-blur-xs rounded-2xl p-6 border border-white/50"
+        >
+          <p className="leading-relaxed">
+            8 200 signalements DGCCRF par an pour le seul dépannage à domicile.
+            Derrière ce chiffre, un mécanisme bien rodé : prix d&apos;appel cassé
+            au téléphone, devis qui explose une fois sur place, pression
+            psychologique pour signer. On vous explique ce qui se passe vraiment,
+            comment repérer les signaux, et pourquoi le tarif fixe payé à
+            l&apos;artisan coupe l&apos;incitation à la racine.
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

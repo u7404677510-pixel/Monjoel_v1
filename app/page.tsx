@@ -1,12 +1,19 @@
 import { Metadata } from "next";
-import Hero from "@/components/sections/Hero";
+// import Hero from "@/components/sections/Hero"; // ancien Hero carousel — gardé pour rollback
+import HeroCinematic from "@/components/sections/HeroCinematic";
+import TrustStrip from "@/components/sections/TrustStrip";
+import ServicesDeepDive from "@/components/sections/ServicesDeepDive";
 import TrueScopeHero from "@/components/sections/TrueScopeHero";
 import StatsStrip from "@/components/sections/StatsStrip";
 import HowItWorks from "@/components/sections/HowItWorks";
 import ServicesExplorer from "@/components/sections/ServicesExplorer";
+import CoverageMap from "@/components/sections/CoverageMap";
 import Advantages from "@/components/sections/Advantages";
+import PricingTransparency from "@/components/sections/PricingTransparency";
+import EngagementSection from "@/components/sections/EngagementSection";
 import StopArnaquesPreview from "@/components/sections/StopArnaquesPreview";
 import FinalCTA from "@/components/sections/FinalCTA";
+import HomeSchema from "@/components/seo/HomeSchema";
 
 export const metadata: Metadata = {
   title: "Joël - Plombier, Serrurier & Électricien Paris | 24h/24",
@@ -47,35 +54,32 @@ export const metadata: Metadata = {
     siteName: "Joël",
     title: "Joël - Plombier, Serrurier & Électricien | Paris & Île-de-France",
     description: "Dépannage d'urgence à prix fixe. Intervention en 30 min, devis instantané, artisans vérifiés. Appelez le 01 41 69 10 08.",
-    images: [
-      {
-        url: "/og-default.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Joël - Dépannage d'urgence Paris & Île-de-France",
-      },
-    ],
+    // images: gérées automatiquement par app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
     title: "Joël - Plombier, Serrurier & Électricien | Paris & Île-de-France",
     description: "Dépannage d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
-    images: ["/og-default.jpg"],
+    // images: Next.js réutilise automatiquement opengraph-image pour Twitter card
   },
-  verification: {
-    google: "votre-code-verification-google", // À remplacer
-  },
+  // verification: { google: "..." }, // TODO Mehdi : ajouter le code GSC quand fourni
 };
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <HomeSchema />
+      <HeroCinematic />
+      <TrustStrip />
+      <ServicesDeepDive />
       <TrueScopeHero />
       <StatsStrip />
       <HowItWorks />
       <ServicesExplorer />
+      <CoverageMap />
       <Advantages />
+      <PricingTransparency />
+      <EngagementSection />
       <StopArnaquesPreview />
       <FinalCTA />
     </>
