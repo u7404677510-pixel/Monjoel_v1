@@ -185,4 +185,26 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// ─── Sentry wrapper ─────────────────────────────────────────────────────────
+// Activé uniquement si SENTRY_AUTH_TOKEN + NEXT_PUBLIC_SENTRY_DSN définis.
+// Sinon : nextConfig retourné nu (no-op safe pour preview/CI sans secrets).
+import { withSentryConfig } from "@sentry/nextjs";
+
+const sentryEnabled = Boolean(
+  process.env.SENTRY_AUTH_TOKEN && process.env.NEXT_PUBLIC_SENTRY_DSN,
+);
+
+const sentryWebpackPluginOptions = {
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  tunnelRoute: "/monitoring",
+  hideSourceMaps: true,
+  disableLogger: true,
+  automaticVercelMonitors: false,
+};
+
+export default sentryEnabled
+  ? withSentryConfig(nextConfig, sentryWebpackPluginOptions)
+  : nextConfig;
