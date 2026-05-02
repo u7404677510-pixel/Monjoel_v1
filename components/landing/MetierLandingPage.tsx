@@ -457,7 +457,7 @@ function QuickQuoteWidget({ trade, phoneNumber, phoneTel }: QuickQuoteWidgetProp
               key={s.id}
               type="button"
               onClick={() => setSelectedId(s.id)}
-              className={`px-3.5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+              className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all min-h-[40px] active:scale-95 ${
                 selectedId === s.id
                   ? "bg-joel-violet text-white shadow-md shadow-joel-violet/30"
                   : "bg-zinc-100 text-zinc-700 hover:bg-joel-violet/10 hover:text-joel-violet"
@@ -696,10 +696,10 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════
-          1. HERO — asymétrique 6/6 grid avec QuickQuoteWidget interactif
+          1. HERO — asymétrique 7/5 grid, image artisan branded à droite
          ═══════════════════════════════════════════════════════════════════ */}
-      <section className="relative pt-10 md:pt-14 pb-16 md:pb-24 overflow-hidden">
-        {/* Background subtil */}
+      <section className="relative pt-10 md:pt-14 pb-12 md:pb-20 overflow-hidden">
+        {/* Background subtil DA Purple */}
         <div className="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
           <div className="absolute inset-0 bg-linear-to-br from-white via-joel-violet/5 to-joel-mauve/8" />
           <div className="absolute -top-40 -right-32 h-[520px] w-[520px] rounded-full bg-joel-mauve/12 blur-3xl" />
@@ -707,8 +707,8 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center">
-            {/* ─── Côté GAUCHE : badges + H1 + arguments + image artisan ─── */}
+          <div className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] gap-10 lg:gap-14 items-center">
+            {/* ─── Côté GAUCHE : badges + H1 + subtitle + stats + CTAs ─── */}
             <div className="text-center lg:text-left">
               {/* Eyebrow + badges */}
               <motion.div
@@ -724,6 +724,10 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
                 <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-joel-yellow text-joel-violet text-xs font-bold uppercase tracking-[0.12em] shadow-md shadow-joel-yellow/30">
                   <Zap size={13} />
                   Intervention 30 min
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-zinc-700 text-xs font-semibold shadow-xs ring-1 ring-joel-violet/10">
+                  <Star size={12} className="text-joel-yellow fill-joel-yellow" />
+                  4.9/5 (947 avis)
                 </span>
               </motion.div>
 
@@ -754,78 +758,142 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
                 exception.
               </motion.p>
 
-              {/* Mini-stats horizontales */}
+              {/* CTA duo + indicateur dispo */}
               <motion.div
                 initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: EASE_OUT }}
-                className="grid grid-cols-3 gap-3 sm:gap-5 max-w-xl mx-auto lg:mx-0 mb-7"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-xl mx-auto lg:mx-0 mb-5"
               >
-                {[
-                  { value: "947", label: "avis Google" },
-                  { value: "30 min", label: "Paris intra" },
-                  { value: artisanCount.toString(), label: `${config.namePlural} dispo`, live: true },
-                ].map((s, i) => (
-                  <div key={i} className="text-center lg:text-left">
-                    <div className="flex items-center gap-1.5 justify-center lg:justify-start">
-                      <p className="font-display font-bold text-2xl sm:text-3xl text-joel-violet">
-                        {s.value}
-                      </p>
-                      {s.live && (
-                        <span className="relative flex h-2 w-2 mt-1" aria-hidden="true">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75" />
-                          <span className="relative inline-flex h-2 w-2 rounded-full bg-joel-yellow" />
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mt-0.5">
-                      {s.label}
-                    </p>
-                  </div>
-                ))}
+                <a
+                  href={`tel:${phoneTel}`}
+                  data-placement="metier-landing-hero"
+                  className="group relative inline-flex items-center justify-center gap-3 flex-1 px-6 py-4 sm:py-5 bg-joel-yellow hover:bg-joel-yellow-light text-joel-violet font-bold text-base sm:text-lg rounded-2xl shadow-xl shadow-joel-yellow/40 hover:shadow-2xl hover:shadow-joel-yellow/50 hover:-translate-y-0.5 active:translate-y-0 transition-all"
+                >
+                  <span className="absolute -top-2 -right-2 bg-joel-violet text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                    Gratuit
+                  </span>
+                  <Phone size={20} className="animate-ring" aria-hidden="true" />
+                  <span>{siteConfig.phone_number}</span>
+                </a>
+                <a
+                  href="#devis-instantane"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 sm:py-5 bg-white text-joel-violet font-bold text-base sm:text-lg rounded-2xl border-2 border-joel-violet/25 hover:border-joel-violet hover:bg-joel-violet/5 hover:-translate-y-0.5 active:translate-y-0 transition-all"
+                >
+                  <Sparkles size={18} />
+                  <span>Devis en 1 clic</span>
+                </a>
               </motion.div>
 
-              {/* Image artisan ROND, plus petit, à droite du texte sur desktop large */}
+              {/* Indicateur dispo + reassurance */}
               <motion.div
-                initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.92 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7, delay: 0.4, ease: EASE_OUT }}
-                className="hidden xl:flex items-center gap-4 mb-2"
+                initial={prefersReducedMotion ? false : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.45 }}
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 mb-6 text-xs text-zinc-500"
               >
-                <div className="relative w-20 h-20 rounded-full overflow-hidden ring-4 ring-white shadow-xl shadow-joel-violet/30 shrink-0">
-                  <Image
-                    src={heroAsset.url || config.heroImage}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="80px"
-                  />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-zinc-900">Artisan certifié Joël</p>
-                  <div className="flex items-center gap-1 mt-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={12} className="text-joel-yellow fill-joel-yellow" />
-                    ))}
-                    <span className="text-[11px] text-zinc-500 ml-1">10+ ans · RC pro · Qualibat</span>
-                  </div>
-                </div>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="relative flex h-2 w-2" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-joel-yellow" />
+                  </span>
+                  <span className="text-joel-violet font-bold">{artisanCount} {config.namePlural}</span>
+                  <span>dispo maintenant</span>
+                </span>
+                <span aria-hidden="true">·</span>
+                <span>Appel gratuit</span>
+                <span aria-hidden="true">·</span>
+                <span>Sans engagement</span>
               </motion.div>
 
               <PaymentLogos />
             </div>
 
-            {/* ─── Côté DROITE : QuickQuoteWidget interactif ─── */}
+            {/* ─── Côté DROITE : photo artisan branded MonJoël avec floating chips ─── */}
             <motion.div
-              initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3, ease: EASE_OUT }}
+              initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: EASE_OUT }}
+              className="relative order-first lg:order-last"
             >
-              <QuickQuoteWidget
-                trade={config.slug}
-                phoneNumber={siteConfig.phone_number}
-                phoneTel={phoneTel}
+              {/* Halo violet/jaune subtil */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-6 -z-10"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, rgba(112,85,167,0.18) 0%, rgba(245,213,71,0.08) 50%, transparent 75%)",
+                  filter: "blur(50px)",
+                }}
               />
+              <div className="relative aspect-[5/6] sm:aspect-[4/5] lg:aspect-[5/6] xl:aspect-[6/7] rounded-3xl overflow-hidden shadow-2xl shadow-joel-violet/25 ring-1 ring-white/60">
+                <Image
+                  src={heroAsset.url || config.heroImage}
+                  alt={`${config.name} Joël en intervention en Île-de-France`}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+                {/* Voile subtil violet bas pour lisibilité du badge */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-joel-violet/40 via-joel-violet/10 to-transparent"
+                  aria-hidden="true"
+                />
+
+                {/* Floating chip — top-right "Prix fixes" */}
+                <motion.div
+                  initial={prefersReducedMotion ? false : { opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6, ease: EASE_OUT }}
+                  className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-joel-yellow text-joel-violet rounded-2xl px-4 py-2.5 shadow-xl backdrop-blur-md ring-1 ring-joel-yellow/60 flex items-center gap-2"
+                >
+                  <Shield size={16} />
+                  <div className="leading-tight">
+                    <p className="text-[10px] font-bold uppercase tracking-wider">Prix fixes</p>
+                    <p className="text-xs font-bold">Garantis sans surprise</p>
+                  </div>
+                </motion.div>
+
+                {/* Badge artisan certifié — bottom-left */}
+                <motion.div
+                  initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.7, ease: EASE_OUT }}
+                  className="absolute bottom-5 left-5 sm:bottom-7 sm:left-7 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl px-4 py-3 ring-1 ring-joel-violet/20 max-w-[260px]"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-joel flex items-center justify-center shadow-md shadow-joel-violet/30 shrink-0">
+                      <Award size={20} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-zinc-900 text-sm leading-tight">
+                        Artisan certifié Joël
+                      </p>
+                      <div className="flex items-center gap-1 mt-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} size={11} className="text-joel-yellow fill-joel-yellow" />
+                        ))}
+                        <span className="text-[10px] text-zinc-500 ml-1">10+ ans</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Bottom rating chip — bottom-right */}
+                <motion.div
+                  initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8, ease: EASE_OUT }}
+                  className="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 bg-joel-violet text-white rounded-2xl px-3.5 py-2 shadow-xl backdrop-blur-md flex items-center gap-2"
+                >
+                  <Star size={13} className="text-joel-yellow fill-joel-yellow" />
+                  <div className="leading-tight">
+                    <p className="text-xs font-bold">4.9/5</p>
+                    <p className="text-[10px] text-white/80">947 avis Google</p>
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -837,6 +905,58 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
             onClose={() => setShowQuoteModal(false)}
           />
         )}
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          1.5 — QUICK QUOTE WIDGET en section dédiée (signature CRO)
+         ═══════════════════════════════════════════════════════════════════ */}
+      <section
+        id="devis-instantane"
+        className="relative py-16 sm:py-20 overflow-hidden bg-linear-to-br from-joel-violet/8 via-white to-joel-mauve/10"
+      >
+        {/* Background décorations subtiles */}
+        <div className="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-0 left-1/4 h-[420px] w-[420px] rounded-full bg-joel-violet/12 blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 h-[380px] w-[380px] rounded-full bg-joel-yellow/10 blur-3xl" />
+        </div>
+
+        <div className="relative max-w-5xl mx-auto px-5 sm:px-8">
+          <motion.div
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: EASE_OUT }}
+            className="text-center mb-10 max-w-2xl mx-auto"
+          >
+            <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-joel-violet">
+              Devis en 1 clic · sans inscription
+            </span>
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-900 leading-[1.05] tracking-tight">
+              Votre prix fixe{" "}
+              <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+                avant qu&apos;on sonne
+              </span>
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed">
+              Sélectionnez votre problème ci-dessous. Le prix qui s&apos;affiche
+              est exactement celui qui sera annoncé au téléphone et payé sur la
+              facture.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.1, ease: EASE_OUT }}
+          >
+            <QuickQuoteWidget
+              trade={config.slug}
+              phoneNumber={siteConfig.phone_number}
+              phoneTel={phoneTel}
+            />
+          </motion.div>
+        </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════
@@ -902,30 +1022,31 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
             </p>
           </motion.div>
 
+          {/* Comparison TABLEAU desktop (md+) — cassé en cards stack sur mobile */}
           <motion.div
             initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.7, delay: 0.1, ease: EASE_OUT }}
-            className="rounded-3xl bg-white shadow-xl shadow-joel-violet/10 ring-1 ring-zinc-100 overflow-hidden"
+            className="hidden md:block rounded-3xl bg-white shadow-xl shadow-joel-violet/10 ring-1 ring-zinc-100 overflow-hidden"
           >
             <div className="grid grid-cols-3 border-b border-zinc-200 bg-zinc-50">
-              <div className="px-4 sm:px-7 py-5 sm:py-6">
+              <div className="px-7 py-6">
                 <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-zinc-500">
                   Critère
                 </p>
               </div>
-              <div className="px-4 sm:px-7 py-5 sm:py-6 border-l border-zinc-200">
+              <div className="px-7 py-6 border-l border-zinc-200">
                 <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-red-500">
                   Marché classique
                 </p>
-                <p className="text-xs sm:text-sm font-bold text-zinc-700 mt-1">Le piège habituel</p>
+                <p className="text-sm font-bold text-zinc-700 mt-1">Le piège habituel</p>
               </div>
-              <div className="px-4 sm:px-7 py-5 sm:py-6 border-l border-zinc-200 bg-gradient-joel/5">
+              <div className="px-7 py-6 border-l border-zinc-200 bg-gradient-joel/5">
                 <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-joel-violet">
                   Avec Joël
                 </p>
-                <p className="text-xs sm:text-sm font-bold text-joel-violet mt-1">Le prix annoncé</p>
+                <p className="text-sm font-bold text-joel-violet mt-1">Le prix annoncé</p>
               </div>
             </div>
 
@@ -938,22 +1059,22 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
                 transition={{ duration: 0.5, delay: i * 0.08, ease: EASE_OUT }}
                 className={`grid grid-cols-3 ${i !== COMPARISON.length - 1 ? "border-b border-zinc-100" : ""}`}
               >
-                <div className="px-4 sm:px-7 py-4 sm:py-6 flex items-center">
-                  <p className="font-bold text-zinc-900 text-xs sm:text-base">{row.label}</p>
+                <div className="px-7 py-6 flex items-center">
+                  <p className="font-bold text-zinc-900 text-base">{row.label}</p>
                 </div>
-                <div className="px-4 sm:px-7 py-4 sm:py-6 border-l border-zinc-100 flex items-start gap-2">
+                <div className="px-7 py-6 border-l border-zinc-100 flex items-start gap-2">
                   <X size={14} className="text-red-500 shrink-0 mt-0.5" aria-hidden="true" />
-                  <p className="text-xs sm:text-sm text-zinc-600 leading-snug">{row.market}</p>
+                  <p className="text-sm text-zinc-600 leading-snug">{row.market}</p>
                 </div>
-                <div className="px-4 sm:px-7 py-4 sm:py-6 border-l border-zinc-100 bg-joel-violet/5 flex items-start gap-2">
+                <div className="px-7 py-6 border-l border-zinc-100 bg-joel-violet/5 flex items-start gap-2">
                   <Check size={14} className="text-joel-violet shrink-0 mt-0.5" aria-hidden="true" />
-                  <p className="text-xs sm:text-sm text-zinc-800 font-medium leading-snug">{row.joel}</p>
+                  <p className="text-sm text-zinc-800 font-medium leading-snug">{row.joel}</p>
                 </div>
               </motion.div>
             ))}
 
-            <div className="border-t border-zinc-200 px-5 sm:px-7 py-4 bg-zinc-50">
-              <p className="text-sm text-zinc-600 text-center sm:text-left">
+            <div className="border-t border-zinc-200 px-7 py-4 bg-zinc-50">
+              <p className="text-sm text-zinc-600">
                 On a écrit le mécanisme complet :{" "}
                 <a href="/stop-arnaques" className="text-joel-violet font-semibold hover:underline">
                   comprendre comment l&apos;arnaque au dépannage fonctionne
@@ -962,6 +1083,59 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
               </p>
             </div>
           </motion.div>
+
+          {/* Comparison CARDS STACK mobile (<md) — chaque row = 1 card autonome
+              avec critère + 2 colonnes Marché vs Joël empilées verticalement.
+              Lisibilité optimale 375-768px. */}
+          <div className="md:hidden space-y-4">
+            {COMPARISON.map((row, i) => (
+              <motion.div
+                key={row.label}
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.5, delay: i * 0.06, ease: EASE_OUT }}
+                className="rounded-2xl bg-white shadow-md shadow-joel-violet/10 ring-1 ring-zinc-100 overflow-hidden"
+              >
+                {/* Header card : critère */}
+                <div className="px-5 py-3 bg-zinc-50 border-b border-zinc-100">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.18em] text-zinc-500 mb-0.5">
+                    Critère
+                  </p>
+                  <p className="font-bold text-zinc-900 text-base">{row.label}</p>
+                </div>
+                {/* Body : 2 colonnes Marché vs Joël */}
+                <div className="grid grid-cols-1">
+                  <div className="px-5 py-4 border-b border-zinc-100">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.18em] text-red-500 mb-1.5">
+                      Marché classique
+                    </p>
+                    <div className="flex items-start gap-2">
+                      <X size={14} className="text-red-500 shrink-0 mt-0.5" aria-hidden="true" />
+                      <p className="text-sm text-zinc-600 leading-snug">{row.market}</p>
+                    </div>
+                  </div>
+                  <div className="px-5 py-4 bg-joel-violet/5">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.18em] text-joel-violet mb-1.5">
+                      Avec Joël
+                    </p>
+                    <div className="flex items-start gap-2">
+                      <Check size={14} className="text-joel-violet shrink-0 mt-0.5" aria-hidden="true" />
+                      <p className="text-sm text-zinc-800 font-medium leading-snug">{row.joel}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+            {/* Mini-CTA mobile vers /stop-arnaques */}
+            <a
+              href="/stop-arnaques"
+              className="block text-center px-5 py-4 rounded-2xl bg-joel-violet/5 ring-1 ring-joel-violet/15 text-sm text-joel-violet font-semibold"
+            >
+              Comprendre l&apos;arnaque au dépannage
+              <ChevronRight size={14} className="inline ml-0.5" />
+            </a>
+          </div>
         </div>
       </section>
 

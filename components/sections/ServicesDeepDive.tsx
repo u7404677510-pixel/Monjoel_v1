@@ -92,7 +92,7 @@ const trades: Trade[] = [
     index: "02",
     badge: "Serrurerie",
     slotId: "home-services-serrurerie",
-    imageSrc: "/images/service-serrurerie.jpg",
+    imageSrc: "/images/service-serrurerie.png",
     imageAlt:
       "Serrurier MonJoël ouvre une porte sans dégradation à Paris",
     fallbackIcon: KeyRound,
