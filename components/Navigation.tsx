@@ -30,16 +30,63 @@ import { formatPhoneForTel, useSiteConfig } from "@/lib/hooks/useSiteConfig";
 // Liens hub — synchros avec le Footer DA Purple
 // ─────────────────────────────────────────────────────────────────────────────
 
+interface SubService {
+  href: string;
+  label: string;
+  /** Description courte affichée sous le label dans le mega-menu. */
+  desc?: string;
+}
+
 interface NavLink {
   href: string;
   label: string;
   highlight?: boolean;
+  /** Sous-services affichés en mega-menu hover (desktop uniquement). */
+  subServices?: SubService[];
+  /** Lien "voir tous" en pied du mega-menu. */
+  allServicesHref?: string;
 }
 
 const navLinks: NavLink[] = [
-  { href: "/plomberie", label: "Plomberie" },
-  { href: "/serrurerie", label: "Serrurerie" },
-  { href: "/electricite", label: "Électricité" },
+  {
+    href: "/plomberie",
+    label: "Plomberie",
+    subServices: [
+      { href: "/plombier/fuite-eau", label: "Fuite d'eau", desc: "Détection + réparation 24h/24" },
+      { href: "/plombier/wc-bouches", label: "WC bouchés", desc: "Débouchage rapide dès 79€" },
+      { href: "/plombier/debouchage-canalisation", label: "Débouchage canalisation", desc: "Furet + caméra" },
+      { href: "/plombier/chauffe-eau-panne", label: "Chauffe-eau en panne", desc: "Diagnostic + réparation" },
+      { href: "/plombier/recherche-fuite", label: "Recherche de fuite", desc: "Caméra thermique non destructive" },
+      { href: "/plombier/degat-des-eaux", label: "Dégât des eaux", desc: "Attestation assurance fournie" },
+    ],
+    allServicesHref: "/plomberie/tarifs",
+  },
+  {
+    href: "/serrurerie",
+    label: "Serrurerie",
+    subServices: [
+      { href: "/serrurier/ouverture-sans-percage", label: "Ouverture sans perçage", desc: "Porte claquée — 89€" },
+      { href: "/serrurier/ouverture-avec-percage", label: "Ouverture avec perçage", desc: "Porte fermée à clé" },
+      { href: "/serrurier/changement-cylindre", label: "Changement de cylindre", desc: "A2P certifié" },
+      { href: "/serrurier/changement-serrure", label: "Changement de serrure", desc: "Vachette · Bricard · Picard" },
+      { href: "/serrurier/blindage-porte", label: "Blindage de porte", desc: "Anti-effraction" },
+      { href: "/serrurier/apres-effraction", label: "Après effraction", desc: "Sécurisation immédiate" },
+    ],
+    allServicesHref: "/serrurerie/tarifs",
+  },
+  {
+    href: "/electricite",
+    label: "Électricité",
+    subServices: [
+      { href: "/electricien/panne-electrique", label: "Panne électrique", desc: "Diagnostic + remise en service" },
+      { href: "/electricien/disjoncteur-saute", label: "Disjoncteur qui saute", desc: "Identification cause" },
+      { href: "/electricien/court-circuit", label: "Court-circuit", desc: "Intervention urgente" },
+      { href: "/electricien/tableau-electrique", label: "Tableau électrique", desc: "Schneider · Hager · Legrand" },
+      { href: "/electricien/mise-aux-normes", label: "Mise aux normes NF C 15-100", desc: "Conformité vente / location" },
+      { href: "/electricien/prise-interrupteur-hs", label: "Prise / interrupteur HS", desc: "Remplacement rapide" },
+    ],
+    allServicesHref: "/electricite/tarifs",
+  },
   { href: "/stop-arnaques", label: "Anti-arnaque" },
   { href: "/recrutement", label: "Recrutement", highlight: true },
 ];
@@ -75,6 +122,90 @@ function DesktopNavLink({
     );
   }
 
+  // Lien avec mega-menu hover (desktop) : Plomberie / Serrurerie / Électricité
+  if (link.subServices && link.subServices.length > 0) {
+    return (
+      <motion.div
+        initial={false}
+        animate={{ opacity: 1, y: [4, 0] }}
+        transition={{ duration: 0.35, delay: 0.1 + index * 0.05, ease: [0.4, 0, 0.2, 1] }}
+        className="group relative"
+      >
+        <Link
+          href={link.href}
+          aria-current={isActive ? "page" : undefined}
+          className="relative text-sm font-medium text-zinc-700 hover:text-joel-violet transition-colors duration-200 bg-linear-to-r from-joel-yellow to-joel-yellow bg-size-[0%_2px] bg-bottom bg-no-repeat group-hover:bg-size-[100%_2px] [transition:background-size_300ms_cubic-bezier(0.4,0,0.2,1),color_200ms] aria-[current=page]:text-joel-violet aria-[current=page]:bg-size-[100%_2px] inline-flex items-center gap-1"
+        >
+          {link.label}
+          <svg
+            aria-hidden="true"
+            width="10"
+            height="10"
+            viewBox="0 0 12 12"
+            className="opacity-50 group-hover:opacity-100 group-hover:rotate-180 transition-transform duration-300"
+          >
+            <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </Link>
+
+        {/* Mega-menu hover — invisible mais "pointer-events-auto" sur la zone, slide-down au reveal */}
+        <div
+          className="absolute top-full left-1/2 -translate-x-1/2 pt-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-[opacity,visibility] duration-200 z-50 pointer-events-none group-hover:pointer-events-auto"
+          aria-hidden="true"
+        >
+          <div className="w-[440px] bg-white rounded-2xl shadow-2xl shadow-joel-violet/15 border border-zinc-100 overflow-hidden">
+            {/* Header mini */}
+            <div className="px-5 pt-4 pb-2 border-b border-zinc-100 bg-linear-to-br from-joel-violet/5 to-joel-mauve/5">
+              <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-joel-violet">
+                Services {link.label.toLowerCase()}
+              </p>
+            </div>
+
+            {/* Grille 2 colonnes des sous-services */}
+            <ul className="grid grid-cols-2 gap-1 p-2">
+              {link.subServices.map((sub) => (
+                <li key={sub.href}>
+                  <Link
+                    href={sub.href}
+                    className="block px-3 py-2.5 rounded-lg hover:bg-joel-violet/5 transition-colors group/sub"
+                  >
+                    <p className="text-sm font-semibold text-zinc-900 group-hover/sub:text-joel-violet transition-colors">
+                      {sub.label}
+                    </p>
+                    {sub.desc && (
+                      <p className="text-[11px] text-zinc-500 leading-snug mt-0.5">
+                        {sub.desc}
+                      </p>
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Footer mega-menu : voir tous les services + lien hub */}
+            {link.allServicesHref && (
+              <div className="border-t border-zinc-100 px-5 py-3 bg-zinc-50/50 flex items-center justify-between">
+                <Link
+                  href={link.allServicesHref}
+                  className="text-xs font-semibold text-joel-violet hover:underline inline-flex items-center gap-1"
+                >
+                  Voir tous les tarifs →
+                </Link>
+                <Link
+                  href={link.href}
+                  className="text-xs font-medium text-zinc-500 hover:text-joel-violet transition-colors"
+                >
+                  Page {link.label.toLowerCase()} complète
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Lien simple (Anti-arnaque)
   return (
     <motion.div
       initial={false}

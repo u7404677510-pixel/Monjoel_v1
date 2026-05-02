@@ -31,10 +31,11 @@ import StatsStrip from "@/components/sections/StatsStrip";
 import BenefitBlocks from "@/components/sections/BenefitBlocks";
 import MetierServicesGrid from "@/components/sections/MetierServicesGrid";
 import MetierTrust from "@/components/sections/MetierTrust";
+// Imports test/* — TestHeader / TestFooter / TestStickyCall RETIRÉS
+// car ils masquaient la Navigation globale (TestHeader z-50 > Navigation z-40)
+// et créaient un doublon de Footer en bas de page hub. La Navigation et le
+// Footer globaux sont déjà rendus par LayoutWrapper dans app/layout.tsx.
 import {
-  TestHeader,
-  TestFooter,
-  TestStickyCall,
   InsuranceLogos,
   GoogleReviews,
   Certifications,
@@ -81,10 +82,9 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
 
   return (
     <main className="min-h-screen">
-      <TestHeader badge="PRIX FIXES GARANTIS" badgeColor="emerald" variant="transparent" />
-
-      {/* Hero avec photo artisan + fond mobile */}
-      <section className="relative min-h-screen flex items-center pt-[56px] md:pt-[64px] 3xl:pt-[72px] overflow-hidden">
+      {/* Hero avec photo artisan + fond mobile.
+          Padding-top 80px pour respecter la Navigation globale fixed (h-16 md:h-20). */}
+      <section className="relative min-h-screen flex items-center pt-20 md:pt-24 overflow-hidden">
         {/* Image de fond mobile */}
         <div
           className="absolute inset-0 md:hidden bg-cover bg-center"
@@ -444,8 +444,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
       <Certifications />
       <InsuranceLogos />
       <GoogleReviews />
-      <TestFooter />
-      <TestStickyCall />
+      {/* TestFooter + TestStickyCall RETIRÉS — Footer global rendu par LayoutWrapper */}
     </main>
   );
 }

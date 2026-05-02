@@ -65,7 +65,7 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     path: "/hero-artisan-portrait.png",
     category: "Homepage",
     description:
-      "Portrait artisan en PNG transparent, affiché à droite du wordmark sur desktop (≥lg). Parallax léger au scroll. Cible : 1024×1280, fond transparent. Si vide → Hero garde le layout centré.",
+      "Portrait artisan EN PNG TRANSPARENT (alpha channel obligatoire), affiché à droite du wordmark sur desktop (≥lg). Parallax léger au scroll. Cible : 1024×1280, fond TOTALEMENT transparent. Si vide → Hero garde le layout centré.",
   },
   {
     id: "home-services-plomberie",
