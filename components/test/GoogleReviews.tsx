@@ -66,7 +66,7 @@ export default function GoogleReviews() {
             </div>
 
             {/* Center: Badge vérifiés */}
-            <div className="flex items-center gap-3 bg-emerald-100 text-emerald-700 px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full">
+            <div className="flex items-center gap-3 bg-joel-violet/10 text-joel-violet px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full">
               <CheckCircle size={20} className="3xl:w-6 3xl:h-6" />
               <span className="font-bold text-sm 3xl:text-base 5xl:text-lg">Avis vérifiés</span>
             </div>

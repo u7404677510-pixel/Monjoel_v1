@@ -105,18 +105,18 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 3xl:gap-16 5xl:gap-24 items-center">
             {/* Texte */}
             <div>
-              {/* Badges - AJOUT "Intervention 20 min" */}
+              {/* Badges DA Purple — violet+jaune cohérents avec Hero homepage */}
               <div className="flex flex-wrap gap-3 3xl:gap-4 mb-4 3xl:mb-6">
-                <div className="inline-flex items-center gap-2 3xl:gap-3 bg-emerald-500 text-white text-sm 3xl:text-base 5xl:text-lg font-bold px-4 3xl:px-5 5xl:px-6 py-2 3xl:py-2.5 5xl:py-3 rounded-full">
+                <div className="inline-flex items-center gap-2 3xl:gap-3 bg-gradient-joel text-white text-sm 3xl:text-base 5xl:text-lg font-bold px-4 3xl:px-5 5xl:px-6 py-2 3xl:py-2.5 5xl:py-3 rounded-full shadow-md shadow-joel-violet/30">
                   <Shield size={16} className="3xl:w-5 3xl:h-5 5xl:w-6 5xl:h-6" />
                   <span>PRIX FIXES GARANTIS</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-joel-yellow text-gray-900 text-sm 3xl:text-base font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full">
+                <div className="inline-flex items-center gap-2 bg-joel-yellow text-joel-violet text-sm 3xl:text-base font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full shadow-md shadow-joel-yellow/30">
                   <Clock size={16} className="3xl:w-5 3xl:h-5" />
-                  <span>Intervention 20 min</span>
+                  <span>Intervention 30 min</span>
                 </div>
-                <div className="flex items-center gap-1 3xl:gap-2 bg-white px-3 3xl:px-4 py-1.5 3xl:py-2 rounded-full shadow-xs">
-                  <Star size={14} className="text-yellow-400 fill-yellow-400 3xl:w-5 3xl:h-5" />
+                <div className="flex items-center gap-1 3xl:gap-2 bg-white px-3 3xl:px-4 py-1.5 3xl:py-2 rounded-full shadow-xs ring-1 ring-joel-violet/10">
+                  <Star size={14} className="text-joel-yellow fill-joel-yellow 3xl:w-5 3xl:h-5" />
                   <span className="text-sm 3xl:text-base 5xl:text-lg font-medium">4.9/5 (947 avis)</span>
                 </div>
               </div>
@@ -133,20 +133,23 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                 Intervention 24h/24, 7j/7.
               </p>
 
-              {/* Indicateur artisans disponibles - NOUVEAU */}
-              <div className="flex items-center gap-2 3xl:gap-3 mb-6 bg-white/80 backdrop-blur-xs px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit shadow-xs">
-                <Users size={18} className="text-emerald-600 3xl:w-6 3xl:h-6" />
+              {/* Indicateur artisans disponibles — DA Purple */}
+              <div className="flex items-center gap-2 3xl:gap-3 mb-6 bg-white/80 backdrop-blur-xs px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit shadow-xs ring-1 ring-joel-violet/10">
+                <Users size={18} className="text-joel-violet 3xl:w-6 3xl:h-6" />
                 <span className="text-gray-700 font-medium 3xl:text-lg">
-                  <span className="text-emerald-600 font-bold">{artisanCount} {config.namePlural}</span> disponibles maintenant
+                  <span className="text-joel-violet font-bold">{artisanCount} {config.namePlural}</span> disponibles maintenant
                 </span>
-                <span className="w-2 h-2 3xl:w-3 3xl:h-3 bg-emerald-500 rounded-full animate-pulse" />
+                <span className="relative flex h-2 w-2 3xl:h-3 3xl:w-3" aria-hidden="true">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 3xl:h-3 3xl:w-3 rounded-full bg-joel-yellow" />
+                </span>
               </div>
 
-              {/* Prix mis en avant */}
-              <div className="bg-white rounded-xl 3xl:rounded-2xl shadow-lg p-5 3xl:p-7 5xl:p-9 mb-6 3xl:mb-8 border-2 border-emerald-500/20">
+              {/* Prix mis en avant — DA Purple */}
+              <div className="bg-white rounded-xl 3xl:rounded-2xl shadow-lg shadow-joel-violet/10 p-5 3xl:p-7 5xl:p-9 mb-6 3xl:mb-8 border-2 border-joel-violet/20">
                 <p className="text-gray-500 text-sm 3xl:text-base 5xl:text-lg mb-1">Prix de base</p>
                 <div className="flex items-baseline gap-2 3xl:gap-3">
-                  <span className="font-display text-4xl 3xl:text-5xl 5xl:text-6xl font-bold text-emerald-600">
+                  <span className="font-display text-4xl 3xl:text-5xl 5xl:text-6xl font-bold bg-gradient-joel bg-clip-text text-transparent">
                     {config.mainServicePrice}
                   </span>
                   <span className="text-gray-500 3xl:text-lg 5xl:text-xl">TTC</span>
@@ -159,9 +162,9 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                 <a
                   href={`tel:${formatPhoneForTel(siteConfig.phone_number)}`}
                   onClick={() => handleCallClick("hero-cta")}
-                  className="group relative inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 py-5 3xl:py-6 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl md:text-2xl 3xl:text-3xl rounded-xl 3xl:rounded-2xl shadow-xl transition-all"
+                  className="group relative inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 py-5 3xl:py-6 bg-joel-yellow hover:bg-joel-yellow-light text-joel-violet font-bold text-xl md:text-2xl 3xl:text-3xl rounded-xl 3xl:rounded-2xl shadow-xl shadow-joel-yellow/40 hover:shadow-2xl hover:shadow-joel-yellow/50 transition-all"
                 >
-                  <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full">GRATUIT</span>
+                  <span className="absolute -top-2 -right-2 bg-joel-violet text-white text-xs font-bold px-2 py-0.5 rounded-full">GRATUIT</span>
                   <Phone size={24} className="animate-ring 3xl:w-8 3xl:h-8" />
                   <span>{siteConfig.phone_number}</span>
                 </a>
@@ -286,22 +289,28 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
             {config.services.map((service, i) => (
               <div
                 key={i}
-                className={`bg-gray-50 rounded-xl 3xl:rounded-2xl p-6 3xl:p-8 5xl:p-10 border-2 ${i === 0 ? "border-emerald-500 shadow-lg" : "border-transparent"}`}
+                className={`bg-white rounded-xl 3xl:rounded-2xl p-6 3xl:p-8 5xl:p-10 border-2 transition-all ${
+                  i === 0
+                    ? "border-joel-yellow shadow-lg shadow-joel-yellow/30 ring-1 ring-joel-yellow/40"
+                    : "border-zinc-100 hover:border-joel-violet/20 hover:shadow-md hover:shadow-joel-violet/10"
+                }`}
               >
                 {i === 0 && (
-                  <span className="inline-block bg-emerald-500 text-white text-xs 3xl:text-sm font-bold px-3 3xl:px-4 py-1 3xl:py-1.5 rounded-full mb-3 3xl:mb-4">
+                  <span className="inline-block bg-joel-yellow text-joel-violet text-xs 3xl:text-sm font-bold px-3 3xl:px-4 py-1 3xl:py-1.5 rounded-full mb-3 3xl:mb-4">
                     Le plus demandé
                   </span>
                 )}
                 <p className="font-bold text-gray-900 mb-2 3xl:text-lg 5xl:text-xl">{service.name}</p>
-                <p className="text-3xl 3xl:text-4xl 5xl:text-5xl font-bold text-emerald-600 mb-2 3xl:mb-3">{service.price}</p>
+                <p className="text-3xl 3xl:text-4xl 5xl:text-5xl font-bold text-joel-violet mb-2 3xl:mb-3">{service.price}</p>
                 <p className="text-gray-500 text-sm 3xl:text-base 5xl:text-lg">{service.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 3xl:mt-12 bg-emerald-50 rounded-xl 3xl:rounded-2xl p-6 3xl:p-8 flex items-start gap-4 3xl:gap-6">
-            <Check size={24} className="text-emerald-600 shrink-0 mt-1 3xl:w-8 3xl:h-8" />
+          <div className="mt-8 3xl:mt-12 bg-joel-violet/5 rounded-xl 3xl:rounded-2xl p-6 3xl:p-8 flex items-start gap-4 3xl:gap-6 border border-joel-violet/10">
+            <div className="w-10 h-10 3xl:w-12 3xl:h-12 rounded-xl bg-gradient-joel flex items-center justify-center shrink-0 shadow-md shadow-joel-violet/30">
+              <Check size={20} className="text-white 3xl:w-6 3xl:h-6" />
+            </div>
             <div>
               <p className="font-bold text-gray-900 3xl:text-lg 5xl:text-xl">Garantie prix fixe</p>
               <p className="text-gray-600 text-sm 3xl:text-base 5xl:text-lg">
@@ -401,7 +410,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                 <div className="flex items-center gap-2 bg-white rounded-xl px-4 py-2.5 shadow-xs border border-gray-100 shrink-0">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={14} className="text-yellow-400 fill-yellow-400" />
+                      <Star key={i} size={14} className="text-joel-yellow fill-joel-yellow" />
                     ))}
                   </div>
                   <span className="font-bold text-gray-900 text-sm">4.9/5</span>
@@ -411,18 +420,18 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
 
               <div className="grid md:grid-cols-3 gap-5">
                 {reviews.map((r, i) => (
-                  <div key={i} className="bg-white rounded-xl p-6 shadow-xs border border-gray-100 flex flex-col">
+                  <div key={i} className="bg-white rounded-xl p-6 shadow-xs border border-gray-100 flex flex-col hover:shadow-md hover:shadow-joel-violet/10 hover:border-joel-violet/20 transition-all">
                     <div className="flex gap-0.5 mb-3">
                       {[...Array(r.rating)].map((_, j) => (
-                        <Star key={j} size={14} className="text-yellow-400 fill-yellow-400" />
+                        <Star key={j} size={14} className="text-joel-yellow fill-joel-yellow" />
                       ))}
                     </div>
                     <p className="text-gray-700 text-sm leading-relaxed mb-5 flex-1 italic">
                       &quot;{r.text}&quot;
                     </p>
                     <div className="flex items-center gap-3 border-t border-gray-100 pt-4">
-                      <div className="w-9 h-9 bg-emerald-100 rounded-full flex items-center justify-center shrink-0">
-                        <span className="font-bold text-emerald-700 text-sm">{r.name.charAt(0)}</span>
+                      <div className="w-9 h-9 bg-gradient-joel rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                        <span className="font-bold text-white text-sm">{r.name.charAt(0)}</span>
                       </div>
                       <div>
                         <p className="font-bold text-gray-900 text-sm">{r.name}</p>

@@ -13,22 +13,22 @@ const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
 
 const carouselSlides = [
   {
-    src: "/hero-serrurerie.webp",
+    src: "/images/hero-serrurier.png",
     alt: "Serrurier professionnel Joël - Dépannage serrurerie Paris",
     label: "Serrurerie",
     color: "from-joel-violet/60",
   },
   {
-    src: "/hero-plomberie.webp",
+    src: "/images/hero-plombier.png",
     alt: "Plombier professionnel Joël - Dépannage plomberie Paris",
     label: "Plomberie",
-    color: "from-blue-600/60",
+    color: "from-joel-mauve/60",
   },
   {
-    src: "/hero-electricite.webp",
+    src: "/images/hero-electricien.png",
     alt: "Électricien professionnel Joël - Dépannage électricité Paris",
     label: "Électricité",
-    color: "from-amber-500/60",
+    color: "from-joel-yellow/60",
   },
 ];
 

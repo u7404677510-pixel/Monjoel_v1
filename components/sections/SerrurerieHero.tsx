@@ -26,7 +26,7 @@ export default function SerrurerieHero({ title, subtitle, description, servicePr
   const phoneNumber = config.phone_number || STATIC_PHONE;
   const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
   // Slot Hero serrurerie — image custom depuis /admin/medias, sinon WebP legacy.
-  const heroAsset = useSiteAsset("hero-serrurerie", "/hero-serrurerie.webp");
+  const heroAsset = useSiteAsset("hero-serrurerie", "/images/hero-serrurier.png");
   const prefersReducedMotion = useReducedMotion();
   // Compteur artisans disponibles
   const [artisansCount, setArtisansCount] = useState(3);
@@ -184,7 +184,7 @@ export default function SerrurerieHero({ title, subtitle, description, servicePr
               {/* Main illustration with DA Purple overlay */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-joel-violet/20 ring-1 ring-joel-violet/10">
                 <Image
-                  src={heroAsset.url || "/hero-serrurerie.webp"}
+                  src={heroAsset.url || "/images/hero-serrurier.png"}
                   alt={heroAsset.alt || "Serrurier professionnel - Dépannage serrurerie Paris Île-de-France"}
                   width={600}
                   height={600}

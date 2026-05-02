@@ -26,7 +26,7 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
   const phoneNumber = config.phone_number || STATIC_PHONE;
   const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
   // Slot Hero électricité — image custom depuis /admin/medias, sinon WebP legacy.
-  const heroAsset = useSiteAsset("hero-electricite", "/hero-electricite.webp");
+  const heroAsset = useSiteAsset("hero-electricite", "/images/hero-electricien.png");
   const prefersReducedMotion = useReducedMotion();
   // Compteur artisans disponibles
   const [artisansCount, setArtisansCount] = useState(3);
@@ -184,7 +184,7 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
               {/* Main illustration with DA Purple overlay */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-joel-violet/20 ring-1 ring-joel-violet/10">
                 <Image
-                  src={heroAsset.url || "/hero-electricite.webp"}
+                  src={heroAsset.url || "/images/hero-electricien.png"}
                   alt={heroAsset.alt || "Électricien professionnel - Dépannage électricité Paris Île-de-France"}
                   width={600}
                   height={500}

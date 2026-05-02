@@ -30,8 +30,8 @@ interface Block {
 const blocks: Block[] = [
   {
     icon: Shield,
-    iconColor: "text-emerald-600",
-    iconBg: "bg-emerald-100",
+    iconColor: "text-joel-violet",
+    iconBg: "bg-joel-violet/10",
     tag: "Transparence totale",
     headline: "Le prix annoncé est le prix payé.",
     body: "Pas d'estimation. Pas de surprise le jour J. Prix confirmé par téléphone avant que l'artisan parte de chez lui. Ce que vous entendez au téléphone est le montant final de la facture — sans exception.",

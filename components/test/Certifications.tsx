@@ -47,8 +47,8 @@ export default function Certifications() {
         {/* Garanties */}
         <div className="grid sm:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl p-6 text-center shadow-xs">
-            <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield size={24} className="text-emerald-600" />
+            <div className="w-12 h-12 bg-joel-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Shield size={24} className="text-joel-violet" />
             </div>
             <h3 className="font-bold text-gray-900 mb-2">Garantie pièces</h3>
             <p className="text-sm text-gray-500">2 ans sur toutes les pièces installées</p>

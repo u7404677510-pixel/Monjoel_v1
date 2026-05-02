@@ -26,7 +26,7 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
   const phoneNumber = config.phone_number || STATIC_PHONE;
   const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
   // Slot Hero plomberie — image custom depuis /admin/medias, sinon WebP legacy.
-  const heroAsset = useSiteAsset("hero-plomberie", "/hero-plomberie.webp");
+  const heroAsset = useSiteAsset("hero-plomberie", "/images/hero-plombier.png");
   const prefersReducedMotion = useReducedMotion();
   // Compteur artisans disponibles
   const [artisansCount, setArtisansCount] = useState(3);
@@ -184,7 +184,7 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
               {/* Main illustration with DA Purple overlay */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-joel-violet/20 ring-1 ring-joel-violet/10">
                 <Image
-                  src={heroAsset.url || "/hero-plomberie.webp"}
+                  src={heroAsset.url || "/images/hero-plombier.png"}
                   alt={heroAsset.alt || "Plombier professionnel - Dépannage plomberie Paris Île-de-France"}
                   width={600}
                   height={500}

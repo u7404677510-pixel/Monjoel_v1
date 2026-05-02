@@ -62,7 +62,7 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     label: "Portrait artisan Hero (cutout PNG transparent)",
     type: "image",
     aspect: "4:3",
-    path: "/hero-artisan-portrait.png",
+    path: "/hero-artisan-portrait-cutout.png",
     category: "Homepage",
     description:
       "Portrait artisan EN PNG TRANSPARENT (alpha channel obligatoire), affiché à droite du wordmark sur desktop (≥lg). Parallax léger au scroll. Cible : 1024×1280, fond TOTALEMENT transparent. Si vide → Hero garde le layout centré.",
