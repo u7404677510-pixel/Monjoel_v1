@@ -1,8 +1,6 @@
 import { Metadata } from "next";
-import { Suspense } from "react";
 import ClientSchema from "@/components/ClientSchema";
-import TradeVarianteB from "@/components/ab/TradeVarianteB";
-import LoadingSkeleton from "@/components/ab/LoadingSkeleton";
+import MetierLandingPage from "@/components/landing/MetierLandingPage";
 import { tradeConfigs } from "@/lib/ab-test/config";
 import { generateHubSchema } from "@/lib/seo/schema-generator";
 import { getTradeBySlug } from "@/lib/data/services-definition";
@@ -114,10 +112,10 @@ export default function PlomberiePage() {
       {/* FAQ Schema — Rich Snippets Google */}
       <ClientSchema schema={faqSchema} id="faq-schema" />
 
-      {/* Variante B figée - A/B test en pause */}
-      <Suspense fallback={<LoadingSkeleton />}>
-        <TradeVarianteB config={tradeConfigs.plomberie} variant="B" />
-      </Suspense>
+      {/* Landing métier UNIQUE refondue — A/B/C abandonnés (mai 2026).
+          Cf. components/landing/MetierLandingPage.tsx — DA Purple SOTA,
+          QuickQuoteWidget interactif, Live ticker, sticky mobile bar. */}
+      <MetierLandingPage config={tradeConfigs.plomberie} />
     </>
   );
 }

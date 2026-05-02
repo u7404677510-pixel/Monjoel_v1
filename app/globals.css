@@ -344,6 +344,23 @@ h1, h2, h3, h4, h5, h6 {
   animation: ring 2s ease-in-out infinite;
 }
 
+/* Marquee défilement infini horizontal — utilisé par LiveActivityTicker.
+   Le contenu est dupliqué côté JS pour boucle sans gap visible.
+   La durée est passée en inline style. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee linear infinite;
+  width: max-content;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
 /* ============================================
    VIEW TRANSITIONS API — animations cross-document
    Active des transitions fluides (fade subtil) entre les pages MonJoël

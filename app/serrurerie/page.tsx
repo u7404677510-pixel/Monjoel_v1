@@ -1,8 +1,6 @@
 import { Metadata } from "next";
-import { Suspense } from "react";
 import ClientSchema from "@/components/ClientSchema";
-import TradeVarianteB from "@/components/ab/TradeVarianteB";
-import LoadingSkeleton from "@/components/ab/LoadingSkeleton";
+import MetierLandingPage from "@/components/landing/MetierLandingPage";
 import { tradeConfigs } from "@/lib/ab-test/config";
 import { generateHubSchema } from "@/lib/seo/schema-generator";
 import { getTradeBySlug } from "@/lib/data/services-definition";
@@ -114,10 +112,8 @@ export default function SerrureriePage() {
       {/* FAQ Schema — Rich Snippets Google */}
       <ClientSchema schema={faqSchema} id="faq-schema" />
 
-      {/* A/B Test - Variantes A, B, C */}
-      <Suspense fallback={<LoadingSkeleton />}>
-        <TradeVarianteB config={tradeConfigs.serrurerie} variant="B" />
-      </Suspense>
+      {/* Landing métier UNIQUE refondue (mai 2026) — voir components/landing/MetierLandingPage.tsx */}
+      <MetierLandingPage config={tradeConfigs.serrurerie} />
     </>
   );
 }
