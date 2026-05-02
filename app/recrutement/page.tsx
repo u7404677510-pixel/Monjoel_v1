@@ -14,6 +14,8 @@ import {
   BadgeCheck,
   TrendingUp,
   Users,
+  Quote,
+  ChevronDown,
 } from "lucide-react";
 
 const trades = [
@@ -25,27 +27,61 @@ const trades = [
 const advantages = [
   {
     icon: TrendingUp,
-    title: "Missions régulières",
+    title: "Volume garanti",
     description:
-      "Recevez des demandes d'intervention qualifiées en continu sur votre zone.",
+      "En moyenne 18 à 25 missions/mois sur Paris intra-muros, 8 à 14 en couronne IDF — selon votre disponibilité.",
+    stat: "≈ 200 missions/an",
   },
   {
     icon: BadgeCheck,
-    title: "Rémunération juste",
+    title: "Tarif fixe à l'artisan",
     description:
-      "Pas de commission cachée. Vous êtes payé au juste prix pour votre travail.",
+      "Vous êtes payé à un tarif fixe par mission, indépendant du prix client. Pas de commission au pourcentage, pas de variable cachée.",
+    stat: "0 % commission",
   },
   {
     icon: Clock,
-    title: "Flexibilité totale",
+    title: "Agenda libre",
     description:
-      "Choisissez vos horaires et vos zones. Vous restez maître de votre activité.",
+      "Vous validez chaque mission individuellement avant qu'elle vous soit attribuée. Pas de pénalité au refus, pas de quota imposé.",
+    stat: "Disponibilité à la carte",
   },
   {
     icon: Users,
-    title: "Réseau de confiance",
+    title: "Image marque & outils",
     description:
-      "Rejoignez un réseau d'artisans vérifiés et bénéficiez d'une image de marque forte.",
+      "Identité Joël (uniforme + logos), back-office mobile pour suivi missions, factures auto, paiement sous 7 jours après intervention.",
+    stat: "Paiement à 7 j",
+  },
+];
+
+const artisanTestimonial = {
+  name: "David M.",
+  trade: "Plombier",
+  city: "Vitry-sur-Seine",
+  text: "J'ai rejoint Joël il y a 14 mois après 8 ans en indépendant. Aujourd'hui je tourne à 22 missions par mois en moyenne, payé tarif fixe sans avoir à négocier sur place. Je passe 3h de moins par semaine en relances client. Mon CA est plus stable, ma tête plus claire.",
+};
+
+const artisanFaqs = [
+  {
+    q: "Comment je suis payé concrètement ?",
+    a: "Tarif fixe par mission, défini à l'avance par grille de service (ex : ouverture porte claquée = 89€ artisan, débouchage WC = 79€). Vous êtes payé sous 7 jours par virement après chaque intervention validée par le client. Aucune commission, aucune retenue surprise.",
+  },
+  {
+    q: "Quelle est la commission Joël sur mon travail ?",
+    a: "Joël ne prend pas de commission au pourcentage. Le client paye un service global (intervention + garantie + back-office), et vous êtes rémunéré au tarif convenu sans variable. Ce qu'il facture au client en plus couvre nos coûts (téléphone, plateforme, garantie SAV) — c'est totalement décorrélé de votre rémunération.",
+  },
+  {
+    q: "Quels documents demandés pour rejoindre ?",
+    a: "RC pro à jour, qualifications (Qualibat / Qualifelec / certif A2P selon métier), extrait Kbis, attestation URSSAF, casier judiciaire vierge (B3 personnel), permis B. Documents à fournir une fois pour toute après validation du profil. Pas de cotisation d'entrée.",
+  },
+  {
+    q: "Combien de missions par mois en réalité ?",
+    a: "Sur Paris intra-muros, un artisan disponible 5j/7 + 2 nuits tourne entre 18 et 25 missions/mois après 3 mois d'ancienneté. En couronne IDF (77/78/91/95), plutôt 8 à 14 missions/mois. Volume monté progressivement selon retours clients.",
+  },
+  {
+    q: "Puis-je refuser une mission ?",
+    a: "Oui, sans pénalité ni explication. Chaque mission est proposée en notification (push + SMS) — vous avez 90 secondes pour accepter ou décliner avant qu'elle parte au suivant. Aucun quota, aucun TJM imposé. La seule contrainte : honorer les missions acceptées (sinon retrait du réseau).",
   },
 ];
 
@@ -167,10 +203,76 @@ export default function RecrutementPage() {
                 <h3 className="font-display text-lg font-bold text-gray-900 mb-2">
                   {advantage.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">
                   {advantage.description}
                 </p>
+                <span className="inline-block text-xs font-mono uppercase tracking-wider text-joel-violet bg-joel-violet/10 px-2 py-1 rounded-md">
+                  {advantage.stat}
+                </span>
               </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Témoignage artisan */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-12 max-w-3xl mx-auto"
+        >
+          <div className="bg-gradient-joel rounded-3xl p-8 md:p-10 text-white shadow-xl shadow-joel-violet/20 relative overflow-hidden">
+            <Quote className="absolute top-6 right-6 text-white/15" size={80} />
+            <div className="relative z-10">
+              <p className="text-lg md:text-xl leading-relaxed italic mb-6">
+                « {artisanTestimonial.text} »
+              </p>
+              <footer className="flex items-center gap-3 pt-4 border-t border-white/20">
+                <div className="w-12 h-12 bg-joel-yellow text-joel-violet rounded-full flex items-center justify-center font-bold text-lg shrink-0">
+                  {artisanTestimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-bold">{artisanTestimonial.name}</p>
+                  <p className="text-white/80 text-sm">
+                    {artisanTestimonial.trade} · {artisanTestimonial.city}
+                  </p>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* FAQ artisan */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-12 max-w-3xl mx-auto"
+        >
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+            Questions concrètes — artisans
+          </h2>
+          <div className="space-y-3">
+            {artisanFaqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group border border-gray-100 rounded-2xl overflow-hidden bg-white/80 backdrop-blur-xs"
+              >
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5 hover:bg-gray-50 transition-colors">
+                  <span className="font-bold text-gray-900 text-sm sm:text-base pr-2">
+                    {faq.q}
+                  </span>
+                  <ChevronDown
+                    size={20}
+                    className="shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                  />
+                </summary>
+                <div className="px-6 pb-5 border-t border-gray-100">
+                  <p className="text-gray-600 text-sm leading-relaxed pt-4">
+                    {faq.a}
+                  </p>
+                </div>
+              </details>
             ))}
           </div>
         </motion.div>
