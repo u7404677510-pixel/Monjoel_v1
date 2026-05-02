@@ -55,6 +55,16 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     description: "Image affichée avant lecture de la vidéo Hero (poster).",
   },
   {
+    id: "home-hero-portrait",
+    label: "Portrait artisan Hero (cutout PNG transparent)",
+    type: "image",
+    aspect: "4:3",
+    path: "",
+    category: "Homepage",
+    description:
+      "Portrait artisan en PNG transparent, affiché à droite du wordmark sur desktop (≥lg). Parallax léger au scroll. Cible : 1024×1280, fond transparent. Si vide → Hero garde le layout centré.",
+  },
+  {
     id: "home-services-plomberie",
     label: "Image services — Plomberie",
     type: "image",

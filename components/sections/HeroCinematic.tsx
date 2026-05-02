@@ -39,8 +39,9 @@
  *     RETIRÉE du Hero — la signature Joël passe par le wordmark animé.
  */
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, Pause, Phone, Play, Star } from "lucide-react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import JoelWordmark from "@/components/hero/JoelWordmark";
@@ -258,6 +259,64 @@ function HeroBackgroundMedia({ onPlayingChange, videoRef }: HeroBackgroundMediaP
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// HeroPortraitOverlay — portrait artisan PNG transparent à droite, desktop only
+// ─────────────────────────────────────────────────────────────────────────────
+//
+// Affiché uniquement si Mehdi a uploadé un cutout PNG transparent dans le slot
+// `home-hero-portrait` via /admin/medias. Sinon : composant ne rend rien et le
+// Hero garde son layout centré classique.
+//
+// Comportement responsive :
+//   - mobile/tablette (<lg) : caché (display:none) — l'image gênerait le wordmark
+//   - desktop (≥lg) : positioned absolute right-0, ~38% width, parallax léger.
+//
+// Parallax : `useScroll` + `useTransform` translateY de 0 → -60px sur les 800
+// premiers pixels de scroll. Désactivé sous prefers-reduced-motion (a11y).
+
+interface HeroPortraitOverlayProps {
+  src: string;
+}
+
+function HeroPortraitOverlay({ src }: HeroPortraitOverlayProps) {
+  const prefersReducedMotion = useReducedMotion();
+  const { scrollY } = useScroll();
+  // Parallax léger : -60px max au scroll, désactivé sous reduced-motion.
+  const y = useTransform(
+    scrollY,
+    [0, 800],
+    prefersReducedMotion ? [0, 0] : [0, -60],
+  );
+
+  return (
+    <motion.div
+      style={{ y, zIndex: 15 }}
+      className="hidden lg:block absolute right-0 lg:right-4 xl:right-12 bottom-0 w-[38%] xl:w-[34%] max-w-[520px] pointer-events-none"
+      aria-hidden="true"
+    >
+      {/* Halo violet derrière le portrait — cohérence DA Purple */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(112,85,167,0.45) 0%, rgba(158,118,236,0.20) 50%, transparent 75%)",
+          filter: "blur(60px)",
+        }}
+      />
+      {/* Le portrait lui-même — cutout PNG transparent */}
+      <Image
+        src={src}
+        alt=""
+        width={520}
+        height={650}
+        priority
+        sizes="(max-width: 1024px) 0px, (max-width: 1280px) 38vw, 520px"
+        className="relative w-full h-auto object-contain object-bottom drop-shadow-[0_24px_48px_rgba(40,20,80,0.45)]"
+      />
+    </motion.div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // HeroCinematic — composant principal
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -267,6 +326,12 @@ export default function HeroCinematic() {
   const [interventionsCount] = useState(12); // statique pour l'instant
   const [videoPlaying, setVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Slot dynamique : portrait artisan PNG transparent uploadé via /admin/medias.
+  // Fallback "" → l'overlay ne rend rien (Hero garde son layout centré classique).
+  // Quand Mehdi uploade un cutout via le slot `home-hero-portrait`, le portrait
+  // apparaît automatiquement à droite sur desktop avec parallax léger au scroll.
+  const heroPortrait = useSiteAsset("home-hero-portrait");
 
   // Tracking GTM — strictement identique à l'existant.
   const handleCallClick = useCallback(() => {
@@ -309,6 +374,11 @@ export default function HeroCinematic() {
             "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.10) 60%, rgba(0,0,0,0.55) 100%)",
         }}
       />
+
+      {/* Couche 1.5 : portrait artisan rassurant (desktop only, conditionnel).
+          Ne rend rien si Mehdi n'a pas uploadé de cutout dans /admin/medias.
+          Parallax léger au scroll (-60px max) sauf prefers-reduced-motion. */}
+      {heroPortrait.url && <HeroPortraitOverlay src={heroPortrait.url} />}
 
       {/* Couche 2 : contenu */}
       <div className="relative z-20 w-full max-w-4xl mx-auto px-5 sm:px-8 py-10 sm:py-14 text-center">
