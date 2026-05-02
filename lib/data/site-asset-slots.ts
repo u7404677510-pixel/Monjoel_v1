@@ -20,7 +20,10 @@ export type SiteAssetAspect = "16:9" | "4:3" | "1:1" | "3:2" | "21:9";
 export type SiteAssetCategory =
   | "Homepage"
   | "Hero métier"
-  | "Sections génériques";
+  | "Sections génériques"
+  | "Témoignages"
+  | "Anti-arnaques"
+  | "Métier mains";
 
 export interface SiteAssetSlot {
   id: string;
@@ -50,16 +53,16 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     label: "Poster Hero homepage",
     type: "image",
     aspect: "16:9",
-    path: "/videos/hero-poster.jpg",
+    path: "/videos/hero-poster.png",
     category: "Homepage",
-    description: "Image affichée avant lecture de la vidéo Hero (poster).",
+    description: "Image affichée avant lecture de la vidéo Hero (poster cinematic Haussmannien doré-violet).",
   },
   {
     id: "home-hero-portrait",
     label: "Portrait artisan Hero (cutout PNG transparent)",
     type: "image",
     aspect: "4:3",
-    path: "",
+    path: "/hero-artisan-portrait.png",
     category: "Homepage",
     description:
       "Portrait artisan en PNG transparent, affiché à droite du wordmark sur desktop (≥lg). Parallax léger au scroll. Cible : 1024×1280, fond transparent. Si vide → Hero garde le layout centré.",
@@ -78,9 +81,9 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     label: "Image services — Serrurerie",
     type: "image",
     aspect: "4:3",
-    path: "/images/service-serrurerie.jpg",
+    path: "/images/service-serrurerie.png",
     category: "Homepage",
-    description: "Vignette du bloc 'Serrurerie' sur la grille services home.",
+    description: "Vignette du bloc 'Serrurerie' sur la grille services home (artisan devant porte avec clés laiton).",
   },
   {
     id: "home-services-electricite",
@@ -98,27 +101,27 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     label: "Hero plomberie",
     type: "image",
     aspect: "4:3",
-    path: "/images/hero-plombier.jpg",
+    path: "/images/hero-plombier.png",
     category: "Hero métier",
-    description: "Image principale en haut de /plomberie et /plombier.",
+    description: "Image principale en haut de /plomberie et /plombier (plombier salle de bain avec clé MonJoël).",
   },
   {
     id: "hero-serrurerie",
     label: "Hero serrurerie",
     type: "image",
     aspect: "4:3",
-    path: "/images/hero-serrurier.jpg",
+    path: "/images/hero-serrurier.png",
     category: "Hero métier",
-    description: "Image principale en haut de /serrurerie et /serrurier.",
+    description: "Image principale en haut de /serrurerie et /serrurier (artisan devant porte clés laiton MonJoël).",
   },
   {
     id: "hero-electricite",
     label: "Hero électricité",
     type: "image",
     aspect: "4:3",
-    path: "/images/hero-electricien.jpg",
+    path: "/images/hero-electricien.png",
     category: "Hero métier",
-    description: "Image principale en haut de /electricite et /electricien.",
+    description: "Image principale en haut de /electricite et /electricien (électricien tableau Schneider voltmètre MonJoël).",
   },
 
   // ── Sections génériques (deep dive, anti-arnaque, etc.) ──────────────────
@@ -158,6 +161,167 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     category: "Sections génériques",
     description: "Image illustrant la protection anti-arnaque.",
   },
+
+  // ── Témoignages — avatars individuels ────────────────────────────────────
+  {
+    id: "testimonial-avatar-sarah",
+    label: "Avatar — Sarah K. (Paris 11e)",
+    type: "image",
+    aspect: "1:1",
+    path: "/images/testimonials/avatar-sarah.png",
+    category: "Témoignages",
+    description: "Femme 30-35 ans blazer, intérieur Haussmannien.",
+  },
+  {
+    id: "testimonial-avatar-thomas",
+    label: "Avatar — Thomas R. (Saint-Denis)",
+    type: "image",
+    aspect: "1:1",
+    path: "/images/testimonials/avatar-jean-pierre.png",
+    category: "Témoignages",
+    description: "Homme mature barbe grise blazer.",
+  },
+  {
+    id: "testimonial-avatar-laetitia",
+    label: "Avatar — Laëtitia B. (Boulogne-Billancourt)",
+    type: "image",
+    aspect: "1:1",
+    path: "/images/testimonials/avatar-laetitia.png",
+    category: "Témoignages",
+    description: "Femme 30 ans cheveux bouclés.",
+  },
+  {
+    id: "testimonial-avatar-karim",
+    label: "Avatar — Karim D. (Nanterre)",
+    type: "image",
+    aspect: "1:1",
+    path: "/images/testimonials/avatar-karim.png",
+    category: "Témoignages",
+    description: "Homme barbe grise navy.",
+  },
+  {
+    id: "testimonial-avatar-charlotte",
+    label: "Avatar — Charlotte M. (Asnières)",
+    type: "image",
+    aspect: "1:1",
+    path: "/images/testimonials/avatar-charlotte.png",
+    category: "Témoignages",
+    description: "Femme asiatique lunettes.",
+  },
+  {
+    id: "testimonial-avatar-isabelle",
+    label: "Avatar — Isabelle F. (Versailles)",
+    type: "image",
+    aspect: "1:1",
+    path: "/images/testimonials/avatar-isabelle.png",
+    category: "Témoignages",
+    description: "Femme sénior cheveux blancs.",
+  },
+
+  // ── Anti-arnaques — scène conceptuelle ───────────────────────────────────
+  {
+    id: "stop-arnaques-hero",
+    label: "Hero stop-arnaques (facture déchirée)",
+    type: "image",
+    aspect: "16:9",
+    path: "/images/stop-arnaques-hero.png",
+    category: "Anti-arnaques",
+    description: "Mains tenant facture Joël 89€ + facture 890€ déchirée. Conceptuel anti-arnaque.",
+  },
+  {
+    id: "pricing-facture",
+    label: "Facture transparente Joël (illustration)",
+    type: "image",
+    aspect: "3:2",
+    path: "/images/pricing-facture.png",
+    category: "Anti-arnaques",
+    description: "Capture de facture MonJoël 89€ avec ligne déplacement, main d'œuvre, pièces. Pour PricingTransparency.",
+  },
+  {
+    id: "coverage-team",
+    label: "Équipe IDF devant van Joël",
+    type: "image",
+    aspect: "16:9",
+    path: "/images/coverage-team.png",
+    category: "Anti-arnaques",
+    description: "4 artisans diversifiés devant van bleu marine logo Joël. Pour CoverageMap enrichissement.",
+  },
+
+  // ── Mains au travail — close-ups métier ──────────────────────────────────
+  {
+    id: "metier-mains-plombier",
+    label: "Mains au travail — plombier",
+    type: "image",
+    aspect: "16:9",
+    path: "/images/metier-mains/plombier.png",
+    category: "Métier mains",
+    description: "Macro mains plombier sur tuyau cuivre + clé chrome. Pour MetierTrust ou nouveau composant proof.",
+  },
+  {
+    id: "metier-mains-electricien",
+    label: "Mains au travail — électricien",
+    type: "image",
+    aspect: "16:9",
+    path: "/images/metier-mains/electricien.png",
+    category: "Métier mains",
+    description: "Macro mains électricien tournevis tableau Schneider + sticker MonJoël. Pour MetierTrust.",
+  },
+
+  // ── Before/After — paires interventions ──────────────────────────────────
+  {
+    id: "before-plomberie",
+    label: "Avant — fuite sous évier",
+    type: "image",
+    aspect: "4:3",
+    path: "/images/before-after/plomberie-before.png",
+    category: "Sections génériques",
+    description: "Fuite calcaire sous évier dégât d'eau (BEFORE plomberie).",
+  },
+  {
+    id: "after-plomberie",
+    label: "Après — tuyau réparé",
+    type: "image",
+    aspect: "4:3",
+    path: "/images/before-after/plomberie-after.png",
+    category: "Sections génériques",
+    description: "Tuyau chrome propre + sticker MonJoël (AFTER plomberie).",
+  },
+  {
+    id: "before-serrurerie",
+    label: "Avant — serrure abîmée",
+    type: "image",
+    aspect: "4:3",
+    path: "/images/before-after/serrurerie-before.png",
+    category: "Sections génériques",
+    description: "Serrure scratchée porte foncée (BEFORE serrurerie).",
+  },
+  {
+    id: "after-serrurerie",
+    label: "Après — serrure A2P neuve",
+    type: "image",
+    aspect: "4:3",
+    path: "/images/before-after/serrurerie-after.png",
+    category: "Sections génériques",
+    description: "Serrure laiton A2P brillante (AFTER serrurerie).",
+  },
+  {
+    id: "before-electricite",
+    label: "Avant — tableau brûlé",
+    type: "image",
+    aspect: "4:3",
+    path: "/images/before-after/electricite-before.png",
+    category: "Sections génériques",
+    description: "Tableau électrique blackened, smoke residue (BEFORE électricité).",
+  },
+  {
+    id: "after-electricite",
+    label: "Après — tableau Schneider neuf",
+    type: "image",
+    aspect: "4:3",
+    path: "/images/before-after/electricite-after.png",
+    category: "Sections génériques",
+    description: "Tableau Schneider NF C 15-100 propre (AFTER électricité).",
+  },
 ] as const;
 
 /** Lookup O(1) par id de slot. */
@@ -171,6 +335,9 @@ export const SITE_ASSET_SLOTS_BY_ID: Record<string, SiteAssetSlot> =
 export const SITE_ASSET_CATEGORIES: readonly SiteAssetCategory[] = [
   "Homepage",
   "Hero métier",
+  "Anti-arnaques",
+  "Témoignages",
+  "Métier mains",
   "Sections génériques",
 ] as const;
 
