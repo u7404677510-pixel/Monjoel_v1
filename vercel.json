@@ -1,8 +1,9 @@
 {
   "git": {
     "deploymentEnabled": {
-      "main": true
+      "main": true,
+      "claude/full-refresh-2026-05": true
     }
   },
-  "ignoreCommand": "if [ \"$VERCEL_GIT_COMMIT_REF\" = \"main\" ]; then exit 1; else exit 0; fi"
+  "ignoreCommand": "if [ \"$VERCEL_GIT_COMMIT_REF\" = \"main\" ] || [ \"$VERCEL_GIT_COMMIT_REF\" = \"claude/full-refresh-2026-05\" ]; then exit 1; else exit 0; fi"
 }
