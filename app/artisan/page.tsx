@@ -179,7 +179,7 @@ function LoginHero() {
           animate={{ opacity: 1, y: 0 }}
           className="w-full max-w-md text-center"
         >
-          <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-2xl border border-emerald-400/30 bg-emerald-400/10">
+          <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-2xl border border-emerald-400/30 bg-joel-yellow/10">
             <Mail size={32} className="text-emerald-300" />
           </div>
           <h1 className="text-2xl font-bold text-white">Lien envoyé</h1>
@@ -269,7 +269,7 @@ function LoginHero() {
           </button>
 
           <p className="mt-3 flex items-center justify-center gap-1.5 text-[11px] text-zinc-500">
-            <ShieldCheck size={11} className="text-emerald-400" />
+            <ShieldCheck size={11} className="text-joel-yellow" />
             Accès réservé aux artisans du réseau Joël
           </p>
         </form>
@@ -563,7 +563,7 @@ function Avatar({ artisan }: { artisan: { first_name: string; last_name: string;
       <span
         className={cn(
           "absolute -bottom-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full border-2 border-zinc-950",
-          artisan.status === "active" && "bg-emerald-400",
+          artisan.status === "active" && "bg-joel-yellow",
           artisan.status === "on_intervention" && "bg-joel-mauve",
           artisan.status === "inactive" && "bg-zinc-500"
         )}
@@ -613,7 +613,7 @@ function KPICard({
   const accentMap = {
     violet: "text-joel-mauve bg-joel-mauve/15 ring-joel-mauve/30",
     yellow: "text-joel-yellow bg-joel-yellow/15 ring-joel-yellow/30",
-    emerald: "text-emerald-300 bg-emerald-400/15 ring-emerald-400/30",
+    emerald: "text-emerald-300 bg-joel-yellow/15 ring-emerald-400/30",
     rose: "text-rose-300 bg-rose-400/15 ring-rose-400/30",
   };
   return (

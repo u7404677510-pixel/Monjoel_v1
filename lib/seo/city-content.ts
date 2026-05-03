@@ -275,7 +275,7 @@ const heroTitleVariations = {
 };
 
 const heroSubtitleVariations = [
-  "⭐ 4.9/5 (947 avis) • Intervention 20 min • Prix fixe, zéro arnaque",
+  "⭐ 4.9/5 (947 avis) • Intervention 30 min • Prix fixe, zéro arnaque",
   "Artisan chez vous en 20 min • Prix annoncé = prix payé • Sans majoration 24h/24",
   "Prix clair AVANT intervention • 24h/24 7j/7 • Paiement après satisfaction",
   "Fini les arnaques : prix fixe garanti • Intervention express • Artisan certifié",
@@ -345,20 +345,20 @@ export function generateServiceTitle(service: Service, city: City): string {
 export function generateMetaDescription(trade: Trade, city: City): string {
   const metaTemplates: Record<string, string[]> = {
     serrurier: [
-      `Serrurier ${city.name} ⭐ 4.9/5. Ouverture porte 89€, intervention 20 min. Prix fixe garanti, sans majoration 24h/24. 01 41 69 10 08`,
+      `Serrurier ${city.name} ⭐ 4.9/5. Ouverture porte 89€, intervention 30 min. Prix fixe garanti, sans majoration 24h/24. 01 41 69 10 08`,
       `Serrurier urgence ${city.name} 🔐 Prix fixe dès 89€. Porte claquée, serrure bloquée. 20 min, zéro arnaque. Appelez maintenant !`,
       `${city.name} : Serrurier prix fixe 89€ ⭐ 947 avis. Ouverture porte, changement serrure. 24h/24 sans majoration.`,
       `Serrurier ${city.name} (${city.postalCodes[0]}) ⭐ Sans majoration nuit/WE. Ouverture porte 89€, cylindre 120€. Prix annoncé = prix payé.`,
     ],
     plombier: [
-      `Plombier ${city.name} ⭐ 4.9/5. Fuite, WC bouchés, chauffe-eau dès 79€. Intervention 20 min. Prix fixe, zéro arnaque. 01 41 69 10 08`,
+      `Plombier ${city.name} ⭐ 4.9/5. Fuite, WC bouchés, chauffe-eau dès 79€. Intervention 30 min. Prix fixe, zéro arnaque. 01 41 69 10 08`,
       `Plombier urgence ${city.name} 💧 Prix fixe dès 79€. Dégât des eaux, débouchage WC. 20 min, sans majoration. Appelez !`,
       `${city.name} : Plombier autour de moi prix fixe 79€ ⭐ 947 avis. Fuite d'eau, débouchage. 24h/24 sans majoration.`,
       `Plombier pas cher ${city.name} 💧 Tarif réel dès 69€. WC bouché, fuite, ballon. Devis instantané, prix garanti.`,
       `Plombier ${city.name} (${city.postalCodes[0]}) ⭐ Robinet 69€, WC 79€, fuite 89€. Artisan certifié, devis instant.`,
     ],
     electricien: [
-      `Électricien ${city.name} ⭐ 4.9/5. Panne, disjoncteur dès 59€. Intervention 20 min. Prix fixe garanti. 01 41 69 10 08`,
+      `Électricien ${city.name} ⭐ 4.9/5. Panne, disjoncteur dès 59€. Intervention 30 min. Prix fixe garanti. 01 41 69 10 08`,
       `Électricien urgence ${city.name} ⚡ Prix fixe dès 59€. Panne électrique, court-circuit. 20 min, zéro arnaque. Appelez !`,
       `${city.name} : Électricien prix fixe 59€ ⭐ 947 avis. Panne, tableau électrique. 24h/24 sans majoration.`,
       `Électricien ${city.name} (${city.postalCodes[0]}) ⭐ NF C 15-100. Disjoncteur 79€, panne 89€, tableau 129€. Diagnostic inclus.`,
@@ -392,7 +392,7 @@ const introOpeners: Record<string, string[]> = {
     "Fuite d'eau, WC bouché, chauffe-eau en panne à {city}",
     "Une urgence plomberie à {city}",
     "Problème de plomberie à {city}",
-    "Plombier {city} : Joël intervient en 20 minutes",
+    "Plombier {city} : Joël intervient en 30 minutes",
     "À {city}, Joël envoie un plombier certifié",
     "Plomberie {city} – on s'occupe de tout",
   ],
@@ -400,7 +400,7 @@ const introOpeners: Record<string, string[]> = {
     "Porte claquée, clé perdue à {city}",
     "Vous cherchez un serrurier à {city}",
     "Besoin d'un serrurier d'urgence à {city}",
-    "Serrurier {city} : intervention en 20 minutes",
+    "Serrurier {city} : intervention en 30 minutes",
     "À {city}, Joël intervient pour toute urgence serrurerie",
     "Serrure bloquée à {city} ? Joël s'en charge",
     "Une urgence serrurerie à {city}",
@@ -412,7 +412,7 @@ const introOpeners: Record<string, string[]> = {
     "Vous cherchez un électricien à {city}",
     "À {city}, Joël envoie un électricien certifié",
     "Urgence électrique à {city}",
-    "Électricien {city} : intervention en 20 minutes",
+    "Électricien {city} : intervention en 30 minutes",
     "Tableau électrique en panne à {city}",
     "Court-circuit à {city}",
   ],

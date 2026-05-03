@@ -105,9 +105,9 @@ export default function Footer() {
                   <span>{config.phone_number}</span>
                 </a>
               )}
-              <a href="mailto:contact@monjoel.com" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+              <a href="mailto:contact@monjoel.fr" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
                 <Mail size={16} />
-                <span>contact@monjoel.com</span>
+                <span>contact@monjoel.fr</span>
               </a>
             </div>
           </div>
@@ -231,7 +231,8 @@ export default function Footer() {
                       title={plombierAnchor}
                       aria-label={plombierAnchor}
                     >
-                      🔧
+                      <span aria-hidden="true">🔧</span>
+                      <span className="sr-only">{plombierAnchor}</span>
                     </Link>
                     <Link
                       href={`/serrurier-${dept.code}`}
@@ -239,7 +240,8 @@ export default function Footer() {
                       title={serrurierAnchor}
                       aria-label={serrurierAnchor}
                     >
-                      🔐
+                      <span aria-hidden="true">🔐</span>
+                      <span className="sr-only">{serrurierAnchor}</span>
                     </Link>
                     <Link
                       href={`/electricien-${dept.code}`}
@@ -247,7 +249,8 @@ export default function Footer() {
                       title={electricienAnchor}
                       aria-label={electricienAnchor}
                     >
-                      ⚡
+                      <span aria-hidden="true">⚡</span>
+                      <span className="sr-only">{electricienAnchor}</span>
                     </Link>
                   </div>
                 </div>
@@ -260,8 +263,19 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-gray-400 text-xs">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
             <p>© {new Date().getFullYear()} Joël. Tous droits réservés.</p>
-            <span className="hidden sm:inline text-white/20">·</span>
-            <p>SIRET : 98765432100012 · RC Pro assurée</p>
+            {/* SIRET retiré tant qu'on n'a pas le numéro réel — ne JAMAIS afficher
+                un SIRET fictif (pénalement risqué + confiance détruite si vérifié). */}
+            {process.env.NEXT_PUBLIC_SIRET ? (
+              <>
+                <span className="hidden sm:inline text-white/20">·</span>
+                <p>SIRET : {process.env.NEXT_PUBLIC_SIRET} · RC Pro assurée</p>
+              </>
+            ) : (
+              <>
+                <span className="hidden sm:inline text-white/20">·</span>
+                <p>RC Pro assurée · Mentions légales en cours d&apos;enregistrement</p>
+              </>
+            )}
           </div>
           <p className="text-gray-500 text-center sm:text-right">
             Numéro non surtaxé — Appel &amp; service gratuits

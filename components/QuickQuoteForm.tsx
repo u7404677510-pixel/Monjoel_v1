@@ -234,8 +234,8 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
       className="bg-white rounded-2xl p-6 sm:p-8"
     >
       <div className="text-center">
-        <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <CheckCircle size={32} className="text-emerald-500" />
+        <div className="w-16 h-16 bg-joel-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <CheckCircle size={32} className="text-joel-violet" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">Demande envoyée !</h3>
         <p className="text-gray-600 mb-6">
@@ -244,7 +244,7 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
         <a
           href={`tel:${formatPhoneForTel(config.phone_number)}`}
           onClick={handleCallClick}
-          className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+          className="inline-flex items-center gap-2 bg-joel-violet hover:bg-joel-violet text-white font-semibold px-6 py-3 rounded-xl transition-colors"
         >
           <Phone size={18} />
           <span>Ou appelez maintenant</span>
@@ -411,11 +411,11 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
 
       <div className="flex items-center justify-center gap-4 text-xs text-gray-500 pt-2">
         <span className="flex items-center gap-1">
-          <CheckCircle size={12} className="text-emerald-500" />
+          <CheckCircle size={12} className="text-joel-violet" />
           Sans engagement
         </span>
         <span className="flex items-center gap-1">
-          <CheckCircle size={12} className="text-emerald-500" />
+          <CheckCircle size={12} className="text-joel-violet" />
           Réponse en 2 min
         </span>
       </div>

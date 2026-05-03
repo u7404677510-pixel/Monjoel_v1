@@ -36,7 +36,7 @@ const testimonials = [
     name: "Thomas D.",
     city: "Boulogne-Billancourt",
     rating: 5,
-    text: "WC bouchés à 22h un dimanche. Plombier arrivé en 20 minutes, problème réglé en 30. Même tarif que la semaine. Franchement impressionnant.",
+    text: "WC bouchés à 22h un dimanche. Plombier arrivé en 30 minutes, problème réglé en 30. Même tarif que la semaine. Franchement impressionnant.",
     service: "WC bouchés",
   },
   {
@@ -150,7 +150,7 @@ export default function PlomberieV2Landing() {
                 Plombier à Paris
               </span>
               <span className="block text-4xl sm:text-5xl lg:text-6xl text-[#F5D547] mt-1">
-                en 20 minutes.
+                en 30 minutes.
               </span>
             </h1>
 
@@ -520,7 +520,7 @@ export default function PlomberieV2Landing() {
           <div className="flex items-center justify-center gap-1 mb-2">
             <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse" />
             <span className="text-white/70 text-[11px] font-medium">
-              {artisansCount} plombiers disponibles · Intervention 20 min
+              {artisansCount} plombiers disponibles · Intervention 30 min
             </span>
           </div>
           <a

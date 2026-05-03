@@ -569,8 +569,8 @@ export default function HeroCinematic() {
           className="mt-7 sm:mt-9 inline-flex items-center gap-2 text-xs text-joel-yellow-light/70"
         >
           <span className="relative flex h-2 w-2" aria-hidden="true">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-60" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-yellow" />
           </span>
           <span>+{interventionsCount} interventions ces 24 dernières heures</span>
         </motion.div>

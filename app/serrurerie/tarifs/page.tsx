@@ -279,7 +279,7 @@ export default function TarifsSerrureriePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="tel:+33141691008"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl rounded-xl shadow-lg transition-all"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-joel-violet hover:bg-joel-violet text-white font-bold text-xl rounded-xl shadow-lg transition-all"
               >
                 <Phone size={24} className="animate-pulse" />
                 01 41 69 10 08
@@ -326,7 +326,7 @@ export default function TarifsSerrureriePage() {
 
           {/* Installation / Sécurisation */}
           <h3 className="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">
-            <Shield size={20} className="text-emerald-500" />
+            <Shield size={20} className="text-joel-violet" />
             Installation & Sécurisation
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -338,7 +338,7 @@ export default function TarifsSerrureriePage() {
                 }`}
               >
                 {service.popular && (
-                  <span className="absolute -top-3 left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="absolute -top-3 left-4 bg-joel-violet text-white text-xs font-bold px-3 py-1 rounded-full">
                     Populaire
                   </span>
                 )}
@@ -367,8 +367,8 @@ export default function TarifsSerrureriePage() {
             ))}
           </div>
 
-          <div className="mt-10 bg-emerald-50 rounded-xl p-6 flex items-start gap-4">
-            <Check size={24} className="text-emerald-600 shrink-0 mt-1" />
+          <div className="mt-10 bg-joel-violet/5 rounded-xl p-6 flex items-start gap-4">
+            <Check size={24} className="text-joel-violet shrink-0 mt-1" />
             <div>
               <p className="font-bold text-gray-900">Garantie prix fixe</p>
               <p className="text-gray-600 text-sm">
@@ -407,26 +407,26 @@ export default function TarifsSerrureriePage() {
             </div>
 
             <div className="bg-emerald-950/50 rounded-xl p-6 border border-emerald-800">
-              <h3 className="font-bold text-emerald-400 mb-4">✓ Chez Joël</h3>
+              <h3 className="font-bold text-joel-yellow mb-4">✓ Chez Joël</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Prix réalistes et affichés (89€ minimum)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Devis écrit avant toute intervention</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Paiement CB ou virement accepté</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>On essaie sans perçage d&apos;abord</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Entreprise identifiable, artisans vérifiés</span>
                 </li>
               </ul>
@@ -491,12 +491,12 @@ export default function TarifsSerrureriePage() {
             Besoin d&apos;un serrurier maintenant ?
           </h2>
           <p className="text-white/80 mb-8">
-            Intervention en 20 minutes • Prix fixe garanti • Zéro majoration
+            Intervention en 30 minutes • Prix fixe garanti • Zéro majoration
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:+33141691008"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-2xl rounded-xl shadow-xl transition-all"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-joel-violet hover:bg-joel-violet text-white font-bold text-2xl rounded-xl shadow-xl transition-all"
             >
               <Phone size={28} />
               01 41 69 10 08

@@ -66,7 +66,7 @@ Un détail technique important : ne confondez pas "ouverture porte claquée" (la
       title: "Les sept signaux d'alerte à repérer AVANT de laisser entrer quelqu'un",
       body: `Le réflexe à avoir avant même de décrocher : vérifier que le prestataire affiche un certain nombre d'éléments minimums. Voici la check-list que je recommande dans toutes mes interventions de formation auprès des associations de consommateurs franciliennes.
 
-**1. Un nom d'entreprise clair, un SIREN consultable.** Un vrai artisan vous donne, sur demande, son SIREN ou sa raison sociale. Vous pouvez la vérifier sur Pappers ou societe.com en 30 secondes. Une "société" qui n'apparaît pas, qui est radiée depuis trois ans, ou qui est domiciliée en banlieue lointaine alors qu'elle prétend desservir le 11e en 20 minutes, c'est un drapeau rouge.
+**1. Un nom d'entreprise clair, un SIREN consultable.** Un vrai artisan vous donne, sur demande, son SIREN ou sa raison sociale. Vous pouvez la vérifier sur Pappers ou societe.com en 30 secondes. Une "société" qui n'apparaît pas, qui est radiée depuis trois ans, ou qui est domiciliée en banlieue lointaine alors qu'elle prétend desservir le 11e en 30 minutes, c'est un drapeau rouge.
 
 **2. Un prix fixe annoncé avant déplacement.** Pas "à partir de", pas "selon diagnostic", pas "ça dépend". Un prix fixe pour la prestation principale, plus une fourchette claire pour les fournitures (cylindre, pièces). Joël annonce 89€ TTC pour porte claquée. Ce chiffre engage. Si l'opérateur refuse de s'engager au téléphone, raccrochez.
 

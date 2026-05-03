@@ -114,7 +114,7 @@ export const content: PremiumPageContent = {
       question:
         "Comment savoir si la fuite vient de la colonne commune ou de mon installation privative dans mon immeuble du boulevard Bineau ?",
       answer:
-        "Trois indices fiables. 1° La fuite est-elle visible dans la gaine technique commune (placard accessible depuis le palier ou les WC) ? Si oui, c'est commune. 2° Plusieurs voisins du même appartement vertical (étages alignés) ont-ils des problèmes similaires en même temps ? Si oui, colonne commune. 3° Quand vous fermez votre vanne d'arrêt privative (généralement sous l'évier ou dans les WC), la fuite continue-t-elle ? Si oui, ça vient d'avant votre compteur, donc commun. Si elle s'arrête, c'est privatif. En cas de doute, faites venir un professionnel comme Joël au 01 41 69 10 08 : un diagnostic en 20 minutes vous coûtera 79€ et vous évitera des semaines d'incertitude.",
+        "Trois indices fiables. 1° La fuite est-elle visible dans la gaine technique commune (placard accessible depuis le palier ou les WC) ? Si oui, c'est commune. 2° Plusieurs voisins du même appartement vertical (étages alignés) ont-ils des problèmes similaires en même temps ? Si oui, colonne commune. 3° Quand vous fermez votre vanne d'arrêt privative (généralement sous l'évier ou dans les WC), la fuite continue-t-elle ? Si oui, ça vient d'avant votre compteur, donc commun. Si elle s'arrête, c'est privatif. En cas de doute, faites venir un professionnel comme Joël au 01 41 69 10 08 : un diagnostic en 30 minutes vous coûtera 79€ et vous évitera des semaines d'incertitude.",
     },
     {
       question:

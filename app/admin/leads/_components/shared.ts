@@ -75,7 +75,7 @@ export const STATUS_CONFIG: Record<LeadStatus, StatusMeta> = {
   converted: {
     label: "Converti",
     badge: "success",
-    kanbanHeader: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    kanbanHeader: "bg-joel-violet/5 text-joel-violet border-joel-violet/20",
   },
   lost: {
     label: "Perdu",

@@ -22,7 +22,7 @@ const faqsByTrade: Record<TradeType, FAQ[]> = {
     },
     {
       question: "En combien de temps arrive votre plombier ?",
-      answer: "Nos plombiers interviennent en 20 minutes en moyenne sur Paris et l'Île-de-France. Ce délai est tenu dans la très grande majorité des cas. Dès que vous appelez, nous identifions l'artisan le plus proche de chez vous.",
+      answer: "Nos plombiers interviennent en 30 minutes en moyenne sur Paris et l'Île-de-France. Ce délai est tenu dans la très grande majorité des cas. Dès que vous appelez, nous identifions l'artisan le plus proche de chez vous.",
     },
     {
       question: "Fournissez-vous une attestation pour l'assurance en cas de dégât des eaux ?",
@@ -122,7 +122,7 @@ const faqsByTrade: Record<TradeType, FAQ[]> = {
     },
     {
       question: "Intervenez-vous en urgence électrique la nuit ?",
-      answer: "Oui, 24h/24 et 7j/7. Une panne électrique ne peut pas attendre, surtout si elle touche le chauffage, le congélateur ou des équipements médicaux. Nos électriciens interviennent en 20 minutes, même de nuit, au même tarif qu'en journée.",
+      answer: "Oui, 24h/24 et 7j/7. Une panne électrique ne peut pas attendre, surtout si elle touche le chauffage, le congélateur ou des équipements médicaux. Nos électriciens interviennent en 30 minutes, même de nuit, au même tarif qu'en journée.",
     },
     {
       question: "Est-ce dangereux d'attendre en cas de panne électrique ?",

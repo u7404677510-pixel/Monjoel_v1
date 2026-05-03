@@ -160,7 +160,7 @@ export default function ScamTestimonials() {
             <Quote className="text-red-200 mb-4" size={40} />
             
             <p className="text-lg text-gray-700 mb-6 italic">
-              "{testimonials[current].text}"
+              &laquo;&nbsp;{testimonials[current].text}&nbsp;&raquo;
             </p>
 
             <div className="flex items-center justify-between gap-4">
@@ -191,7 +191,7 @@ export default function ScamTestimonials() {
                   <Star
                     key={i}
                     size={16}
-                    className={i < testimonials[current].rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}
+                    className={i < testimonials[current].rating ? "text-joel-yellow fill-joel-yellow" : "text-gray-300"}
                   />
                 ))}
               </div>

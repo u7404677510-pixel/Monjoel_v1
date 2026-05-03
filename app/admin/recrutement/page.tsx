@@ -965,7 +965,7 @@ function KpiCard({
             className={cn(
               "text-xs font-semibold px-2 py-0.5 rounded-full border",
               deltaPositive
-                ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+                ? "bg-joel-violet/5 text-joel-violet border-joel-violet/20"
                 : "bg-red-50 text-red-700 border-red-200"
             )}
           >

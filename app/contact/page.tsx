@@ -174,20 +174,18 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold mb-2 flex items-center gap-2">
                     <MapPin size={18} className="text-joel-yellow" />
-                    Adresse postale
+                    Couverture
                   </h3>
                   <address className="not-italic text-white/90 text-sm leading-relaxed">
-                    Joël SAS<br />
-                    {/* TODO Mehdi : compléter adresse réelle */}
-                    {"{{adresse postale du siège}}"}<br />
-                    {"{{code postal}} Paris"}<br />
-                    France
+                    Joël SAS — Île-de-France<br />
+                    Paris (75) · Petite couronne (92, 93, 94)<br />
+                    Grande couronne (77, 78, 91, 95)
                   </address>
                 </div>
 
                 <div className="pt-4 border-t border-white/20 text-xs text-white/70">
-                  <p>SIRET : <span className="font-mono">{"{{à compléter}}"}</span></p>
-                  <p>RCS : <span className="font-mono">{"{{à compléter}}"}</span></p>
+                  <p>Société à responsabilité limitée Joël SAS</p>
+                  <p>Mentions légales complètes : <a href="/mentions-legales" className="underline hover:text-joel-yellow">mentions-legales</a></p>
                 </div>
               </div>
 
@@ -392,7 +390,7 @@ export default function ContactPage() {
       <div className="mt-16">
         <MidPageCTA
           title="Une urgence ? N'attendez pas le mail."
-          subtitle="Notre équipe répond 24h/24 par téléphone — intervention en ~30 min"
+          subtitle="Joël répond 24h/24 par téléphone — intervention en ~30 min Paris / 60 min IDF"
           placement="contact_bottom"
         />
       </div>

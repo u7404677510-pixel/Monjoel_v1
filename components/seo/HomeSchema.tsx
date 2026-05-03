@@ -61,7 +61,7 @@ export default function HomeSchema() {
           maxValue: 200,
         },
         telephone: "+33141691008",
-        email: "contact@monjoel.com",
+        email: "contact@monjoel.fr",
         address: {
           "@type": "PostalAddress",
           streetAddress: "45 Rue Boursault",
@@ -151,7 +151,7 @@ export default function HomeSchema() {
         ],
         logo: `${BASE_URL}/logo.webp`,
         telephone: "+33141691008",
-        email: "contact@monjoel.com",
+        email: "contact@monjoel.fr",
         priceRange: "€€",
         currenciesAccepted: "EUR",
         paymentAccepted: "Cash, Credit Card, Debit Card, Apple Pay, Google Pay",

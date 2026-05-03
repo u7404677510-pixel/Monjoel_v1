@@ -227,7 +227,7 @@ export function ArtisanTable({
               <a
                 href={`tel:${a.phone}`}
                 aria-label="Appeler"
-                className="p-2 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors"
+                className="p-2 text-joel-violet hover:bg-joel-violet/5 rounded-lg transition-colors"
               >
                 <Phone size={14} />
               </a>

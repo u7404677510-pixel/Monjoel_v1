@@ -200,7 +200,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Débouchage douche après échec hydrocurage proposé ailleurs",
       texte:
-        "Notre douche se vidait au ralenti depuis trois semaines. Premier plombier appelé : devis 420€ pour un hydrocurage soi-disant indispensable. J'ai trouvé bizarre, j'ai appelé Joël qui m'a dit 'tentons d'abord le furet, c'est 99€'. L'artisan est arrivé, a démonté le siphon, a passé le furet manuel, et a sorti un amas de cheveux et savon en 20 minutes. Total : 99€. Économie réelle 321€ sur la même panne. La transparence sur la technique change tout : ces gens-là ne cherchent pas à surfacturer.",
+        "Notre douche se vidait au ralenti depuis trois semaines. Premier plombier appelé : devis 420€ pour un hydrocurage soi-disant indispensable. J'ai trouvé bizarre, j'ai appelé Joël qui m'a dit 'tentons d'abord le furet, c'est 99€'. L'artisan est arrivé, a démonté le siphon, a passé le furet manuel, et a sorti un amas de cheveux et savon en 30 minutes. Total : 99€. Économie réelle 321€ sur la même panne. La transparence sur la technique change tout : ces gens-là ne cherchent pas à surfacturer.",
     },
     {
       auteur: "Mireille D. (retraitée veuve)",

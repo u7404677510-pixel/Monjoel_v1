@@ -47,7 +47,7 @@ export default function SectionCTA({
       <a
         href={`tel:${formatPhoneForTel(config.phone_number)}`}
         onClick={handleClick}
-        className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
+        className="inline-flex items-center gap-3 bg-joel-violet hover:bg-joel-violet text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
       >
         <Phone size={22} />
         <span>{config.phone_number}</span>

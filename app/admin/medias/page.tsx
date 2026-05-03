@@ -532,14 +532,14 @@ export default function MediasPage() {
       {!supabaseReady && (
         <Card className="border-amber-200 bg-amber-50/50">
           <CardContent className="p-4 flex items-start gap-3">
-            <CircleSlash className="text-amber-600 mt-0.5" size={18} />
+            <CircleSlash className="text-joel-violet mt-0.5" size={18} />
             <div className="text-sm text-amber-900">
               <strong>Supabase non configuré.</strong> Définis{" "}
-              <code className="text-xs bg-amber-100 px-1 py-0.5 rounded-sm">
+              <code className="text-xs bg-joel-yellow/20 px-1 py-0.5 rounded-sm">
                 NEXT_PUBLIC_SUPABASE_URL
               </code>{" "}
               et{" "}
-              <code className="text-xs bg-amber-100 px-1 py-0.5 rounded-sm">
+              <code className="text-xs bg-joel-yellow/20 px-1 py-0.5 rounded-sm">
                 NEXT_PUBLIC_SUPABASE_ANON_KEY
               </code>{" "}
               dans <code>.env.local</code> puis redémarre le serveur.

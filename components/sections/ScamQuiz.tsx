@@ -63,7 +63,7 @@ const questions: Question[] = [
     unit: "minutes",
     answer: "moins",
     explanation:
-      "5 à 20 minutes en moyenne pour un serrurier équipé d'un kit radio. Les artisans qui « passent 2 heures » et « démontent tout » sont systématiquement en sur-facturation.",
+      "5 à 30 minutes en moyenne pour un serrurier équipé d'un kit radio. Les artisans qui « passent 2 heures » et « démontent tout » sont systématiquement en sur-facturation.",
     source: "Données opérationnelles Joël 2024-2026 (947 interventions)",
   },
   {

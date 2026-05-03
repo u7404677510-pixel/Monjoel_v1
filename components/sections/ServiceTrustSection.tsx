@@ -21,7 +21,7 @@ const tradeReviews: Record<TradeType, Array<{ author: string; text: string; date
     },
     {
       author: "Camille T.",
-      text: "Excellent service. Clé cassée dans la serrure, réglé en 20 minutes. Prix fixe respecté, artisan compétent.",
+      text: "Excellent service. Clé cassée dans la serrure, réglé en 30 minutes. Prix fixe respecté, artisan compétent.",
       date: "Il y a 2 semaines",
     },
   ],
@@ -100,14 +100,14 @@ export default function ServiceTrustSection({ trade }: ServiceTrustSectionProps)
                 <p className="font-bold text-gray-900">Google Reviews — Joël</p>
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} className="text-yellow-400 fill-yellow-400" />
+                    <Star key={i} size={14} className="text-joel-yellow fill-joel-yellow" />
                   ))}
                   <span className="font-bold text-gray-900">4.9</span>
                   <span className="text-gray-500 text-sm">(947 avis)</span>
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-2 bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="flex items-center gap-2 bg-joel-violet/10 text-joel-violet px-4 py-2 rounded-full text-sm font-semibold">
               <Check size={16} />
               <span>Avis vérifiés Google</span>
             </div>
@@ -128,7 +128,7 @@ export default function ServiceTrustSection({ trade }: ServiceTrustSectionProps)
                 </div>
                 <div className="flex gap-0.5 mb-2">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={12} className="text-yellow-400 fill-yellow-400" />
+                    <Star key={j} size={12} className="text-joel-yellow fill-joel-yellow" />
                   ))}
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">&ldquo;{review.text}&rdquo;</p>
@@ -144,8 +144,8 @@ export default function ServiceTrustSection({ trade }: ServiceTrustSectionProps)
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {guarantees.map((g, i) => (
               <div key={i} className="bg-white rounded-xl p-5 text-center shadow-xs border border-gray-100">
-                <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <g.icon size={20} className="text-emerald-600" />
+                <div className="w-10 h-10 bg-joel-violet/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <g.icon size={20} className="text-joel-violet" />
                 </div>
                 <p className="font-bold text-gray-900 text-sm mb-1">{g.label}</p>
                 <p className="text-xs text-gray-500">{g.sub}</p>

@@ -41,7 +41,7 @@ const tradeIcon: Record<string, React.ElementType> = {
 
 const tradeColor: Record<string, { bg: string; text: string }> = {
   Plomberie: { bg: "bg-sky-100", text: "text-sky-700" },
-  Serrurerie: { bg: "bg-amber-100", text: "text-amber-700" },
+  Serrurerie: { bg: "bg-joel-yellow/20", text: "text-joel-violet" },
   Électricité: { bg: "bg-violet-100", text: "text-violet-700" },
 };
 

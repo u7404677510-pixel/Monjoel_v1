@@ -30,8 +30,8 @@ const tradeMeta: Record<
   Serrurerie: {
     icon: Key,
     gradient: "from-amber-500 to-orange-500",
-    iconColor: "text-amber-700",
-    iconBg: "bg-amber-100",
+    iconColor: "text-joel-violet",
+    iconBg: "bg-joel-yellow/20",
   },
   Électricité: {
     icon: Zap,
@@ -102,7 +102,7 @@ function TradeCard({ entry, index }: { entry: TradeBreakdownEntry; index: number
           </div>
 
           <div className="flex items-center gap-3 text-xs mb-3">
-            <div className="flex items-center gap-1 text-emerald-700">
+            <div className="flex items-center gap-1 text-joel-violet">
               <TrendingUp size={11} strokeWidth={2.5} />
               <span className="font-semibold">{entry.conversion_pct}%</span>
               <span className="text-zinc-500">conversion</span>

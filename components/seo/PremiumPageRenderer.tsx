@@ -237,7 +237,7 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
                 <figure key={i} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs">
                   <div className="flex items-center gap-1 mb-3">
                     {Array.from({ length: 5 }).map((_, k) => (
-                      <Star key={k} className={`w-4 h-4 ${k < t.rating ? "fill-yellow-400 text-yellow-400" : "text-gray-200"}`} />
+                      <Star key={k} className={`w-4 h-4 ${k < t.rating ? "fill-joel-yellow text-joel-yellow" : "text-gray-200"}`} />
                     ))}
                   </div>
                   <blockquote className="text-gray-700 italic mb-4 leading-relaxed">« {t.texte} »</blockquote>

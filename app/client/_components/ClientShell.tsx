@@ -212,7 +212,7 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
               <div className="px-3 pb-4 pt-2 border-t border-zinc-100 space-y-1">
                 <a
                   href="tel:+33141691008"
-                  className="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-emerald-700 bg-emerald-50/60 hover:bg-emerald-50"
+                  className="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-joel-violet bg-joel-violet/5/60 hover:bg-joel-violet/5"
                 >
                   <Phone size={18} />
                   01 41 69 10 08

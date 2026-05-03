@@ -93,7 +93,7 @@ export default function AdminLoginPage() {
 
         <div className="px-8 py-7">
           {/* Security badge */}
-          <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-2.5 rounded-xl text-xs font-medium mb-6">
+          <div className="flex items-center gap-2 bg-joel-violet/5 border border-joel-violet/20 text-joel-violet px-4 py-2.5 rounded-xl text-xs font-medium mb-6">
             <Shield size={14} />
             <span>Connexion sécurisée via Supabase Auth</span>
           </div>
@@ -116,8 +116,8 @@ export default function AdminLoginPage() {
 
           {success ? (
             <div className="text-center py-6">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail size={28} className="text-emerald-600" />
+              <div className="w-16 h-16 bg-joel-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail size={28} className="text-joel-violet" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Email envoyé !</h3>
               <p className="text-gray-500 text-sm">{success}</p>

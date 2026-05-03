@@ -40,10 +40,10 @@ export const metadata: Metadata = {
 };
 
 const categoryLabels: Record<BlogArticle["category"], { label: string; color: string }> = {
-  plomberie: { label: "Plomberie", color: "bg-blue-100 text-blue-700" },
-  serrurerie: { label: "Serrurerie", color: "bg-emerald-100 text-emerald-700" },
-  electricite: { label: "Électricité", color: "bg-amber-100 text-amber-700" },
-  conseils: { label: "Conseils", color: "bg-purple-100 text-purple-700" },
+  plomberie: { label: "Plomberie", color: "bg-joel-mauve/15 text-joel-mauve" },
+  serrurerie: { label: "Serrurerie", color: "bg-joel-violet/10 text-joel-violet" },
+  electricite: { label: "Électricité", color: "bg-joel-yellow/20 text-joel-violet" },
+  conseils: { label: "Conseils", color: "bg-joel-violet/10 text-joel-violet" },
 };
 
 function BlogCard({ article }: { article: BlogArticle }) {

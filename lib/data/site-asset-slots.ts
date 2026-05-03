@@ -136,7 +136,7 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
   },
   {
     id: "section-intervention",
-    label: "Section intervention 20 min",
+    label: "Section intervention 30 min",
     type: "image",
     aspect: "4:3",
     path: "/images/section-intervention.jpg",

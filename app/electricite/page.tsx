@@ -7,7 +7,7 @@ import { getTradeBySlug } from "@/lib/data/services-definition";
 
 export const metadata: Metadata = {
   title: "Électricien d'urgence Paris & Île-de-France | Dès 59€",
-  description: "Électricien d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Panne, disjoncteur, tableau. Intervention 20 min, à partir de 59€. 01 41 69 10 08",
+  description: "Électricien d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Panne, disjoncteur, tableau. Intervention 30 min, à partir de 59€. 01 41 69 10 08",
   keywords: [
     "électricien urgence Paris",
     "électricien Île-de-France",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr/electricite",
     siteName: "Joël",
-    title: "Électricien d'urgence Paris | Dès 59€ | Intervention 20 min",
-    description: "Électricien d'urgence à partir de 59€. Intervention en 20 min, zéro arnaque. Appelez le 01 41 69 10 08.",
+    title: "Électricien d'urgence Paris | Dès 59€ | Intervention 30 min",
+    description: "Électricien d'urgence à partir de 59€. Intervention en 30 min, zéro arnaque. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Électricien d'urgence Paris | Dès 59€ | Intervention 20 min",
-    description: "Électricien d'urgence à partir de 59€. Intervention en 20 min. Appelez le 01 41 69 10 08.",
+    title: "Électricien d'urgence Paris | Dès 59€ | Intervention 30 min",
+    description: "Électricien d'urgence à partir de 59€. Intervention en 30 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
@@ -78,7 +78,7 @@ const hubFaqItems = [
   {
     question: "Intervenez-vous en urgence électrique la nuit ?",
     answer:
-      "Oui, 24h/24 et 7j/7. Nos électriciens interviennent en 20 minutes, même de nuit, au même tarif qu'en journée. Pas de majoration, pas de supplément week-end ou jour férié.",
+      "Oui, 24h/24 et 7j/7. Nos électriciens interviennent en 30 minutes, même de nuit, au même tarif qu'en journée. Pas de majoration, pas de supplément week-end ou jour férié.",
   },
   {
     question: "Est-ce dangereux d'attendre en cas de panne électrique ?",

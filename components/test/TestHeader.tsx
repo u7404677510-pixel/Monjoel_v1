@@ -38,7 +38,7 @@ export default function TestHeader({
             </span>
             {variant === "urgentiste" && (
               <span className="bg-joel-yellow text-gray-900 text-xs 3xl:text-sm 5xl:text-base font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full animate-pulse">
-                Intervention 20 min
+                Intervention 30 min
               </span>
             )}
           </div>

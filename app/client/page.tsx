@@ -61,8 +61,8 @@ const FEATURES = [
   {
     icon: MessageSquareHeart,
     title: "Support 24h/24",
-    desc: "Joignez notre équipe à tout moment, jour comme nuit.",
-    accent: "bg-emerald-50 text-emerald-700",
+    desc: "Joignez Joël à tout moment, jour comme nuit.",
+    accent: "bg-joel-violet/5 text-joel-violet",
   },
 ] as const;
 

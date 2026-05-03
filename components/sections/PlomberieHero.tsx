@@ -59,11 +59,11 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
           <div className="order-1">
             {/* Artisans disponibles - Urgence */}
             <div
-              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-2"
+              className="inline-flex items-center gap-2 bg-joel-violet/5 border border-joel-violet/20 text-joel-violet px-3 py-1.5 rounded-full text-sm font-medium mb-2"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-violet"></span>
               </span>
               <Users size={14} />
               <span>{artisansCount} plombiers disponibles maintenant</span>
@@ -81,7 +81,7 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
             >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                  <Star key={i} size={16} className="text-joel-yellow fill-joel-yellow" />
                 ))}
               </div>
               <span className="text-sm font-semibold text-gray-700">4.9/5</span>
@@ -110,7 +110,7 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
                 href={`tel:${phoneTel}`}
                 onClick={handleCallClick}
                 data-placement="plomberie-hero"
-                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 bg-joel-violet hover:bg-joel-violet text-white font-bold text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 {/* Badge GRATUIT */}
                 <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
@@ -166,7 +166,7 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
                   <span className="text-sm font-medium">Jacob Delafon</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
-                  <Shield size={16} className="text-emerald-500" />
+                  <Shield size={16} className="text-joel-violet" />
                   <span className="text-sm font-medium">Artisan Confiance</span>
                 </div>
               </div>

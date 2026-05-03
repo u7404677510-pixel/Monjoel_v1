@@ -68,8 +68,8 @@ export const STATUS_META: Record<
   },
   completed: {
     label: "Terminée",
-    tone: "text-emerald-200 bg-emerald-400/10 border-emerald-400/30",
-    dot: "bg-emerald-400",
+    tone: "text-emerald-200 bg-joel-yellow/10 border-emerald-400/30",
+    dot: "bg-joel-yellow",
   },
   cancelled: {
     label: "Annulée",
@@ -281,7 +281,7 @@ function FullActions({
       {phone && (
         <a
           href={`tel:${phone}`}
-          className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-200 hover:bg-emerald-400/20 transition-colors"
+          className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-400/30 bg-joel-yellow/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-200 hover:bg-joel-yellow/20 transition-colors"
         >
           <Phone size={11} /> Appeler
         </a>
@@ -348,13 +348,13 @@ function FullActions({
           <button
             onClick={() => onStatus("completed", "Mission terminée")}
             disabled={loading}
-            className="inline-flex items-center gap-1 rounded-lg bg-emerald-500 px-3 py-1.5 text-[11px] font-semibold text-white shadow-[0_4px_12px_-4px_rgba(16,185,129,0.5)] hover:bg-emerald-500/90 transition-colors"
+            className="inline-flex items-center gap-1 rounded-lg bg-joel-violet px-3 py-1.5 text-[11px] font-semibold text-white shadow-[0_4px_12px_-4px_rgba(16,185,129,0.5)] hover:bg-joel-violet/90 transition-colors"
           >
             <CheckCircle size={11} /> Terminer
           </button>
         )}
         {status === "completed" && (
-          <span className="inline-flex items-center gap-1 rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-200">
+          <span className="inline-flex items-center gap-1 rounded-lg border border-emerald-400/30 bg-joel-yellow/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-200">
             <CheckCircle size={11} /> Clôturée
           </span>
         )}

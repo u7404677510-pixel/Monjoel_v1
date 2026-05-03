@@ -82,13 +82,13 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
           <div className="max-w-2xl 3xl:max-w-3xl 5xl:max-w-4xl">
             {/* Badges */}
             <div className="flex flex-wrap gap-3 3xl:gap-4 mb-6 3xl:mb-8">
-              <div className="inline-flex items-center gap-2 3xl:gap-3 bg-emerald-500 text-white text-sm md:text-base 3xl:text-lg 5xl:text-xl font-bold px-5 3xl:px-6 5xl:px-8 py-2.5 3xl:py-3 5xl:py-4 rounded-full shadow-lg">
+              <div className="inline-flex items-center gap-2 3xl:gap-3 bg-joel-violet text-white text-sm md:text-base 3xl:text-lg 5xl:text-xl font-bold px-5 3xl:px-6 5xl:px-8 py-2.5 3xl:py-3 5xl:py-4 rounded-full shadow-lg">
                 <Shield size={20} className="3xl:w-6 3xl:h-6 5xl:w-7 5xl:h-7" />
                 <span>SANS MAJORATION 24h/24</span>
               </div>
               <div className="inline-flex items-center gap-2 bg-joel-yellow text-gray-900 text-sm 3xl:text-base 5xl:text-lg font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full">
                 <Clock size={16} className="3xl:w-5 3xl:h-5" />
-                <span>Intervention 20 min</span>
+                <span>Intervention 30 min</span>
               </div>
             </div>
 
@@ -106,11 +106,11 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
 
             {/* Compteur artisans */}
             <div className="flex items-center gap-2 3xl:gap-3 mb-8 bg-white/10 backdrop-blur-xs px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit">
-              <Users size={18} className="text-emerald-400 3xl:w-6 3xl:h-6" />
+              <Users size={18} className="text-joel-yellow 3xl:w-6 3xl:h-6" />
               <span className="text-white font-medium 3xl:text-lg 5xl:text-xl">
-                <span className="text-emerald-400 font-bold">{artisanCount} {config.namePlural}</span> disponibles
+                <span className="text-joel-yellow font-bold">{artisanCount} {config.namePlural}</span> disponibles
               </span>
-              <span className="w-2 h-2 3xl:w-3 3xl:h-3 bg-emerald-400 rounded-full animate-pulse" />
+              <span className="w-2 h-2 3xl:w-3 3xl:h-3 bg-joel-yellow rounded-full animate-pulse" />
             </div>
 
             {/* CTA XXL */}
@@ -119,7 +119,7 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
                 href={`tel:${formatPhoneForTel(siteConfig.phone_number)}`}
                 onClick={() => handleCallClick("hero-cta")}
                 data-placement="hero-cta"
-                className="group flex items-center justify-center gap-4 3xl:gap-5 px-10 3xl:px-14 5xl:px-18 py-6 3xl:py-8 5xl:py-10 bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-2xl md:text-3xl 3xl:text-4xl 5xl:text-5xl rounded-2xl 3xl:rounded-3xl shadow-2xl transition-all w-full md:w-auto"
+                className="group flex items-center justify-center gap-4 3xl:gap-5 px-10 3xl:px-14 5xl:px-18 py-6 3xl:py-8 5xl:py-10 bg-joel-violet hover:bg-joel-yellow text-white font-bold text-2xl md:text-3xl 3xl:text-4xl 5xl:text-5xl rounded-2xl 3xl:rounded-3xl shadow-2xl transition-all w-full md:w-auto"
               >
                 <Phone size={32} className="animate-ring 3xl:w-10 3xl:h-10 5xl:w-12 5xl:h-12" />
                 <span>{siteConfig.phone_number}</span>
@@ -131,7 +131,7 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
 
             {/* Trust badge */}
             <div className="flex items-center gap-2 3xl:gap-3 bg-white/10 backdrop-blur-xs px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit">
-              <Star size={18} className="text-yellow-400 fill-yellow-400 3xl:w-6 3xl:h-6" />
+              <Star size={18} className="text-joel-yellow fill-joel-yellow 3xl:w-6 3xl:h-6" />
               <span className="text-white text-sm 3xl:text-base 5xl:text-lg font-medium">4.9/5 (947 avis Google)</span>
             </div>
 
@@ -154,7 +154,7 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
         <div className="max-w-6xl 3xl:max-w-8xl 4xl:max-w-9xl 5xl:max-w-10xl mx-auto px-4 sm:px-6 3xl:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 3xl:gap-10 text-center">
             {[
-              { value: "20 min", label: "Intervention moyenne" },
+              { value: "30 min", label: "Intervention moyenne" },
               { value: "947", label: "Avis 5 étoiles" },
               { value: "0€", label: "Majoration nuit" },
               { value: "24h/24", label: "Disponibilité" },

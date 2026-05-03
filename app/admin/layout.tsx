@@ -168,8 +168,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <div className="px-3 py-2 mb-1">
               <p className="text-xs text-gray-500 truncate">{userEmail}</p>
               <div className="flex items-center gap-1 mt-0.5">
-                <Shield size={10} className="text-emerald-400" />
-                <span className="text-[10px] text-emerald-400">Session sécurisée</span>
+                <Shield size={10} className="text-joel-yellow" />
+                <span className="text-[10px] text-joel-yellow">Session sécurisée</span>
               </div>
             </div>
           )}
@@ -247,6 +247,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <Link
             href="/"
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors"
           >
             <ExternalLink size={14} />

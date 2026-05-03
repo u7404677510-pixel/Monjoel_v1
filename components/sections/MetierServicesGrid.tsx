@@ -222,7 +222,7 @@ export default function MetierServicesGrid({
           <span className="hidden sm:inline text-gray-300">•</span>
           <span className="inline-flex items-center gap-2">
             <Clock size={16} className="text-joel-violet" />
-            Intervention en 20 min, 24h/24
+            Intervention en 30 min, 24h/24
           </span>
         </motion.div>
       </div>

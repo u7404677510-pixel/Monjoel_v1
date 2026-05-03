@@ -488,7 +488,7 @@ function InterventionCard({
             <a
               href="tel:+33141691008"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-joel-violet hover:text-joel-violet"
             >
               <Phone size={12} /> Appeler
             </a>

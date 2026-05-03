@@ -280,7 +280,7 @@ function DrawerContent({
 
             {phone && (
               <div className="flex items-center gap-2.5">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-400/15 text-emerald-300">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-joel-yellow/15 text-emerald-300">
                   <Phone size={14} />
                 </span>
                 <div className="min-w-0 flex-1">
@@ -291,7 +291,7 @@ function DrawerContent({
                 </div>
                 <a
                   href={`tel:${phone}`}
-                  className="inline-flex items-center gap-1 rounded-lg bg-emerald-500 px-3 py-1.5 text-[11px] font-semibold text-white shadow-[0_4px_12px_-4px_rgba(16,185,129,0.5)] hover:bg-emerald-400 transition-colors"
+                  className="inline-flex items-center gap-1 rounded-lg bg-joel-violet px-3 py-1.5 text-[11px] font-semibold text-white shadow-[0_4px_12px_-4px_rgba(16,185,129,0.5)] hover:bg-joel-yellow transition-colors"
                 >
                   <Phone size={11} /> Appeler
                 </a>
@@ -461,7 +461,7 @@ function DrawerContent({
                 className={cn(
                   "flex cursor-pointer items-start gap-2.5 rounded-lg border px-3 py-2.5 transition-colors",
                   paymentReceived
-                    ? "border-emerald-400/40 bg-emerald-400/10"
+                    ? "border-emerald-400/40 bg-joel-yellow/10"
                     : "border-white/10 bg-zinc-950/40 hover:bg-zinc-950/60"
                 )}
               >
@@ -469,7 +469,7 @@ function DrawerContent({
                   type="checkbox"
                   checked={paymentReceived}
                   onChange={(e) => setPaymentReceived(e.target.checked)}
-                  className="mt-0.5 h-3.5 w-3.5 cursor-pointer rounded-sm border border-white/20 bg-zinc-950 text-emerald-400 focus:ring-emerald-400/40 focus:ring-offset-0"
+                  className="mt-0.5 h-3.5 w-3.5 cursor-pointer rounded-sm border border-white/20 bg-zinc-950 text-joel-yellow focus:ring-emerald-400/40 focus:ring-offset-0"
                 />
                 <span className="flex-1 text-xs">
                   <span className="flex items-center gap-1.5 font-semibold text-white">
@@ -532,14 +532,14 @@ function DrawerContent({
             <button
               onClick={() => onAdvance("completed", "Mission terminée")}
               disabled={loading}
-              className="flex w-full items-center justify-center gap-1.5 rounded-xl bg-emerald-500 px-3 py-2.5 text-xs font-semibold text-white shadow-[0_4px_12px_-4px_rgba(16,185,129,0.5)] hover:bg-emerald-400 transition-colors disabled:opacity-50"
+              className="flex w-full items-center justify-center gap-1.5 rounded-xl bg-joel-violet px-3 py-2.5 text-xs font-semibold text-white shadow-[0_4px_12px_-4px_rgba(16,185,129,0.5)] hover:bg-joel-yellow transition-colors disabled:opacity-50"
             >
               {loading ? <Loader2 size={13} className="animate-spin" /> : <CheckCircle size={13} />}
               Marquer terminée
             </button>
           )}
           {mission.status === "completed" && (
-            <div className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-2.5 text-xs font-semibold text-emerald-200">
+            <div className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-emerald-400/30 bg-joel-yellow/10 px-3 py-2.5 text-xs font-semibold text-emerald-200">
               <CheckCircle size={13} /> Mission clôturée
             </div>
           )}

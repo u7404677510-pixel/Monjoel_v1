@@ -41,7 +41,7 @@ const alertStyle: Record<DashboardAlert["type"], string> = {
   critical:
     "bg-red-50 border-red-200 hover:bg-red-100 [&_svg]:text-red-600",
   warning:
-    "bg-amber-50 border-amber-200 hover:bg-amber-100 [&_svg]:text-amber-600",
+    "bg-amber-50 border-amber-200 hover:bg-joel-yellow/20 [&_svg]:text-joel-violet",
   info:
     "bg-joel-yellow-light border-joel-yellow/50 hover:bg-joel-yellow/30 [&_svg]:text-joel-violet",
 };
@@ -128,8 +128,8 @@ export function AlertsPanel() {
             </div>
           ) : alerts.length === 0 ? (
             <div className="flex flex-col items-center text-center py-6 px-2">
-              <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center mb-3">
-                <CheckCircle2 size={24} className="text-emerald-600" />
+              <div className="w-12 h-12 rounded-full bg-joel-violet/5 flex items-center justify-center mb-3">
+                <CheckCircle2 size={24} className="text-joel-violet" />
               </div>
               <p className="text-sm font-semibold text-zinc-900">
                 Tout est sous contrôle

@@ -122,8 +122,8 @@ export default function ArtisanMissionsPage() {
         </div>
 
         <div className="hidden items-center gap-2 sm:flex">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-medium text-emerald-300">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-joel-yellow/10 px-3 py-1 text-[11px] font-medium text-emerald-300">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-joel-yellow" />
             Live · synchro 60s
           </span>
         </div>

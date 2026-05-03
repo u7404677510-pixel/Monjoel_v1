@@ -42,8 +42,8 @@ const stats = [
     label: "Plaintes 2020→2024",
     description: "Hausse signalements DGCCRF en 4 ans",
     source: "DGCCRF, séries statistiques 2020-2024",
-    color: "text-orange-500",
-    bgColor: "bg-orange-500/10",
+    color: "text-joel-violet",
+    bgColor: "bg-joel-violet/10",
   },
 ];
 

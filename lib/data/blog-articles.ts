@@ -575,7 +575,7 @@ Si c'est la nuit ou le week-end, les tarifs peuvent être majorés. Chez **Joël
 
 Une porte claquée n'est pas une fatalité coûteuse. Essayez d'abord les méthodes simples, et si vous devez appeler un serrurier, choisissez-en un qui annonce son prix à l'avance.
 
-📞 **Porte claquée ?** Appelez le 01 41 69 10 08 - Ouverture dès 89€, intervention 20 min
+📞 **Porte claquée ?** Appelez le 01 41 69 10 08 - Ouverture dès 89€, intervention 30 min
     `
   },
   {

@@ -35,8 +35,8 @@ const tradeBorder: Record<TradeType, string> = {
 
 const tradeText: Record<TradeType, string> = {
   serrurerie: "text-joel-violet",
-  plomberie: "text-blue-600",
-  electricite: "text-amber-600",
+  plomberie: "text-joel-mauve",
+  electricite: "text-joel-violet",
 };
 
 const STATIC_PHONE = "01 41 69 10 08";
@@ -85,7 +85,7 @@ export default function ServicePricingHighlight({
                 {/* Rating */}
                 <div className="flex items-center gap-2 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                    <Star key={i} size={16} className="text-joel-yellow fill-joel-yellow" />
                   ))}
                   <span className="text-sm font-semibold text-gray-700">4.9/5</span>
                   <span className="text-sm text-gray-500">(947 avis)</span>
@@ -109,7 +109,7 @@ export default function ServicePricingHighlight({
                 <ul className="space-y-2">
                   {features.map((feat, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                      <Check size={16} className="text-emerald-500 shrink-0" />
+                      <Check size={16} className="text-joel-violet shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -119,13 +119,13 @@ export default function ServicePricingHighlight({
               {/* Right — CTAs */}
               <div className="space-y-3">
                 {/* Disponibilité */}
-                <div className="flex items-center gap-2 text-sm text-emerald-700 bg-emerald-50 px-4 py-2.5 rounded-xl">
+                <div className="flex items-center gap-2 text-sm text-joel-violet bg-joel-violet/5 px-4 py-2.5 rounded-xl">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-violet" />
                   </span>
                   <Clock size={14} />
-                  <span className="font-medium">Disponible 24h/24 — Intervention en 20 min</span>
+                  <span className="font-medium">Disponible 24h/24 — Intervention en 30 min</span>
                 </div>
 
                 {/* CTA Appeler */}

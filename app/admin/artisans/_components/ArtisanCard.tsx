@@ -214,7 +214,7 @@ export function ArtisanCard({
       <div className="flex items-center gap-2 pt-3 border-t border-zinc-100">
         <a
           href={`tel:${artisan.phone}`}
-          className="flex-1 flex items-center justify-center gap-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-2 rounded-lg text-xs font-semibold transition-colors"
+          className="flex-1 flex items-center justify-center gap-1.5 bg-joel-violet/5 hover:bg-joel-violet/10 text-joel-violet py-2 rounded-lg text-xs font-semibold transition-colors"
         >
           <Phone size={13} />
           Appeler

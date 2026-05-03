@@ -227,7 +227,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Remplacement anode magnésium préventif (ballon 7 ans)",
       texte:
-        "Mon ballon Atlantic 200L avait 7 ans, fonctionnait bien, mais j'avais lu sur le site Joël qu'à Évry il fallait contrôler l'anode. J'ai appelé pour faire un check préventif. L'artisan a démonté la bride en 20 minutes, m'a montré l'anode quasi totalement consommée (il ne restait qu'un petit bout corrodé). Remplacement immédiat par anode neuve. Facture 95€ TTC. Sans cette intervention il m'a dit que la cuve aurait commencé à percer dans les 18 mois. Investissement préventif vraiment rentable. À refaire dans 2-3 ans.",
+        "Mon ballon Atlantic 200L avait 7 ans, fonctionnait bien, mais j'avais lu sur le site Joël qu'à Évry il fallait contrôler l'anode. J'ai appelé pour faire un check préventif. L'artisan a démonté la bride en 30 minutes, m'a montré l'anode quasi totalement consommée (il ne restait qu'un petit bout corrodé). Remplacement immédiat par anode neuve. Facture 95€ TTC. Sans cette intervention il m'a dit que la cuve aurait commencé à percer dans les 18 mois. Investissement préventif vraiment rentable. À refaire dans 2-3 ans.",
     },
     {
       auteur: "Karine D.",

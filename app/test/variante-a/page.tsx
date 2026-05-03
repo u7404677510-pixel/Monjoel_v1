@@ -12,7 +12,7 @@ import { Phone, Clock, Truck, CreditCard, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Dépannage Urgence 24h/24 | Joël - Test A",
-  description: "Serrurier, plombier, électricien en urgence. Intervention en 20 minutes. Prix fixe, sans majoration.",
+  description: "Serrurier, plombier, électricien en urgence. Intervention en 30 minutes. Prix fixe, sans majoration.",
   robots: {
     index: false,
     follow: false,
@@ -105,7 +105,7 @@ function ProcessSection() {
 // Stats section
 function StatsSection() {
   const stats = [
-    { value: "20 min", label: "Intervention moyenne" },
+    { value: "30 min", label: "Intervention moyenne" },
     { value: "947", label: "Avis 5 étoiles" },
     { value: "0€", label: "Majoration nuit" },
     { value: "24h/24", label: "Disponibilité" },

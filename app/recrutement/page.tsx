@@ -316,7 +316,7 @@ export default function RecrutementPage() {
                         Validation du profil
                       </h3>
                       <p className="text-white/80 text-sm">
-                        Notre équipe vérifie vos qualifications et vous
+                        Joël vérifie vos qualifications et vous
                         recontacte rapidement.
                       </p>
                     </div>
@@ -378,7 +378,7 @@ export default function RecrutementPage() {
                     Candidature envoyée !
                   </h3>
                   <p className="text-gray-600 mb-2">
-                    Merci pour votre intérêt. Notre équipe examinera votre profil
+                    Merci pour votre intérêt. Joël examinera votre profil
                     et vous recontactera dans les plus brefs délais.
                   </p>
                   <button
@@ -576,7 +576,7 @@ export default function RecrutementPage() {
 
                   <p className="text-xs text-gray-400 text-center">
                     En soumettant ce formulaire, vous acceptez d&apos;être
-                    recontacté par notre équipe.
+                    recontacté par Joël.
                   </p>
                 </form>
               )}

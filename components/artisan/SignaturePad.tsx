@@ -160,14 +160,14 @@ export function SignaturePad({ interventionId, className }: SignaturePadProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="relative overflow-hidden rounded-xl border border-emerald-400/30 bg-emerald-400/5"
+            className="relative overflow-hidden rounded-xl border border-emerald-400/30 bg-joel-yellow/5"
           >
             <img
               src={savedDataUrl}
               alt="Signature enregistrée"
               className="h-32 w-full object-contain bg-zinc-950/40"
             />
-            <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-emerald-400/15 px-2 py-0.5 text-[10px] font-semibold text-emerald-200">
+            <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-joel-yellow/15 px-2 py-0.5 text-[10px] font-semibold text-emerald-200">
               <Sparkles size={10} /> Enregistrée
             </div>
             <button

@@ -420,7 +420,7 @@ const AUDIT_ACTION_META: Record<
   edited: {
     icon: Edit3,
     label: "Lead édité",
-    iconColor: "text-amber-600",
+    iconColor: "text-joel-violet",
     iconBg: "bg-amber-50",
   },
   deleted: {
@@ -432,8 +432,8 @@ const AUDIT_ACTION_META: Record<
   contacted: {
     icon: Phone,
     label: "Client contacté",
-    iconColor: "text-emerald-600",
-    iconBg: "bg-emerald-50",
+    iconColor: "text-joel-violet",
+    iconBg: "bg-joel-violet/5",
   },
   created: {
     icon: PlusCircle,

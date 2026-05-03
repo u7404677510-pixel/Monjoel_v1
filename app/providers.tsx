@@ -64,10 +64,10 @@ export function Providers({ children }: { children: React.ReactNode }) {
               cancelButton:
                 "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 rounded-md text-xs px-2 py-1",
               success:
-                "bg-white border-emerald-200 [&>div>svg]:text-emerald-600",
+                "bg-white border-joel-violet/20 [&>div>svg]:text-joel-violet",
               error: "bg-white border-red-200 [&>div>svg]:text-red-600",
               warning:
-                "bg-white border-amber-200 [&>div>svg]:text-amber-600",
+                "bg-white border-amber-200 [&>div>svg]:text-joel-violet",
               info: "bg-white border-joel-violet/30 [&>div>svg]:text-joel-violet",
             },
           }}

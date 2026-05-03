@@ -58,7 +58,7 @@ export default function StickyCallButton() {
             href={`tel:${formatPhoneForTel(config.phone_number)}`}
             onClick={handleCallClick}
             data-placement="sticky-mobile"
-            className="relative flex-1 flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm sm:text-base py-3 rounded-xl shadow-lg active:scale-[0.98] transition-all overflow-hidden"
+            className="relative flex-1 flex items-center justify-center gap-2 bg-joel-violet hover:bg-joel-violet text-white font-bold text-sm sm:text-base py-3 rounded-xl shadow-lg active:scale-[0.98] transition-all overflow-hidden"
           >
             {/* Pulse ring subtle pour attirer l'œil sans être agressif */}
             <span

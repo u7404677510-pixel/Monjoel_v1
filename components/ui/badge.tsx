@@ -17,7 +17,7 @@ const badgeVariants = cva(
         default: "bg-zinc-100 text-zinc-700 border-zinc-200",
         primary: "bg-joel-violet/10 text-joel-violet border-joel-violet/20",
         accent: "bg-joel-yellow/20 text-joel-violet border-joel-yellow/40",
-        success: "bg-emerald-50 text-emerald-700 border-emerald-200",
+        success: "bg-joel-violet/5 text-joel-violet border-joel-violet/20",
         warning: "bg-amber-50 text-amber-800 border-amber-200",
         danger: "bg-red-50 text-red-700 border-red-200",
         outline: "bg-transparent text-zinc-600 border-zinc-300",

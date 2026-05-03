@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     question: "Vous intervenez en urgence ?",
-    answer: "Oui, 24h/24, 7j/7. Intervention en 20 min sur Paris et toute l'Île-de-France. Même tarif, sans majoration de nuit ou week-end.",
+    answer: "Oui, 24h/24, 7j/7. Intervention en 30 min sur Paris et toute l'Île-de-France. Même tarif, sans majoration de nuit ou week-end.",
   },
   {
     question: "Faut-il remplacer d'autres prises en même temps ?",

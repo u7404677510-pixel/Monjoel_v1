@@ -334,7 +334,7 @@ export function ArtisanDrawer({
             {/* Footer actions */}
             <div className="border-t border-zinc-100 p-4 bg-zinc-50/50 flex items-center justify-between gap-3">
               {!isValid && Object.keys(errors).length > 0 ? (
-                <p className="text-xs text-amber-700 inline-flex items-center gap-1.5">
+                <p className="text-xs text-joel-violet inline-flex items-center gap-1.5">
                   <AlertCircle size={13} />
                   Corrigez les erreurs avant d'enregistrer
                 </p>
@@ -427,7 +427,7 @@ function StatusRadioCard({
     active: {
       icon: CheckCircle2,
       label: "Actif",
-      accent: "text-emerald-600 border-emerald-500 bg-emerald-50",
+      accent: "text-joel-violet border-emerald-500 bg-joel-violet/5",
     },
     on_intervention: {
       icon: Activity,

@@ -21,7 +21,7 @@ import { getPersona } from "./personas";
 const BASE_URL = "https://monjoel.fr";
 const COMPANY_NAME = "Joël";
 const COMPANY_PHONE = "+33141691008";
-const COMPANY_EMAIL = "contact@monjoel.com";
+const COMPANY_EMAIL = "contact@monjoel.fr";
 
 export function generatePremiumSchemas(
   content: PremiumPageContent,

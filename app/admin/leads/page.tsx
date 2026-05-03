@@ -907,7 +907,7 @@ function LeadsTable({
                 <DropdownMenuItem
                   onClick={() => onStatusChange(row.original.id, "converted")}
                 >
-                  <Sparkles size={13} className="text-emerald-500" />
+                  <Sparkles size={13} className="text-joel-violet" />
                   Marquer converti
                 </DropdownMenuItem>
                 <DropdownMenuItem

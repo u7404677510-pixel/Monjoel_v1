@@ -63,7 +63,7 @@ const ITEMS: Record<MetierSlug, TrustItem[]> = {
     },
     {
       icon: Clock,
-      title: "Intervention 20 min — sans majoration",
+      title: "Intervention 30 min — sans majoration",
       description:
         "Disponibles 24h/24, 7j/7. Tarif identique nuit, week-end, jour férié. Le prix annoncé au téléphone est le prix payé.",
     },
@@ -114,7 +114,7 @@ const ITEMS: Record<MetierSlug, TrustItem[]> = {
     },
     {
       icon: Clock,
-      title: "Intervention 20 min — 24h/24",
+      title: "Intervention 30 min — 24h/24",
       description:
         "Géolocalisation des serruriers en temps réel. Le plus proche est envoyé chez vous. Tarif identique nuit, dimanche, jour férié.",
     },
@@ -155,7 +155,7 @@ const ITEMS: Record<MetierSlug, TrustItem[]> = {
       icon: Wrench,
       title: "Sécurisation immédiate 24h/24",
       description:
-        "Étincelles, odeur de brûlé, fumée : intervention en 20 min, mise hors tension immédiate. Tarif identique de jour comme de nuit.",
+        "Étincelles, odeur de brûlé, fumée : intervention en 30 min, mise hors tension immédiate. Tarif identique de jour comme de nuit.",
     },
   ],
 };

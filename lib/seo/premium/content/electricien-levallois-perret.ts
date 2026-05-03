@@ -170,7 +170,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Diagnostic disjoncteur qui sautait toutes les nuits",
       texte:
-        "Mon disjoncteur tombait systématiquement vers 2h du matin depuis trois semaines. J'avais appelé un autre dépanneur qui m'avait facturé 280 € pour soi-disant 'reprogrammer le tableau' et le problème continuait. Karim de chez Joël est venu en 25 minutes, a sorti un mégohmmètre dont je découvrais l'existence, et a identifié en 20 minutes que c'était mon vieux ballon d'eau chaude qui fuyait à la terre pendant la chauffe nocturne. Remplacement de la résistance le lendemain, plus rien depuis. Tarif annoncé avant : 79 € pour le diagnostic. Honnête et compétent.",
+        "Mon disjoncteur tombait systématiquement vers 2h du matin depuis trois semaines. J'avais appelé un autre dépanneur qui m'avait facturé 280 € pour soi-disant 'reprogrammer le tableau' et le problème continuait. Karim de chez Joël est venu en 25 minutes, a sorti un mégohmmètre dont je découvrais l'existence, et a identifié en 30 minutes que c'était mon vieux ballon d'eau chaude qui fuyait à la terre pendant la chauffe nocturne. Remplacement de la résistance le lendemain, plus rien depuis. Tarif annoncé avant : 79 € pour le diagnostic. Honnête et compétent.",
     },
     {
       auteur: "Mehdi B.",

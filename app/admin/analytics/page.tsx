@@ -148,8 +148,8 @@ export default function AnalyticsPage() {
         <div className="bg-white rounded-2xl p-6 shadow-xs">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                <BarChart3 size={24} className="text-blue-600" />
+              <div className="w-12 h-12 bg-joel-mauve/15 rounded-xl flex items-center justify-center">
+                <BarChart3 size={24} className="text-joel-mauve" />
               </div>
               <div>
                 <h3 className="font-bold text-gray-900">Google Analytics 4</h3>
@@ -169,7 +169,7 @@ export default function AnalyticsPage() {
             className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden font-mono"
           />
           <p className="text-xs text-gray-500 mt-2">Optionnel si vous utilisez uniquement le Google Tag</p>
-          <a href="https://analytics.google.com/" target="_blank" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
+          <a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
             Ouvrir Google Analytics <ExternalLink size={14} />
           </a>
         </div>
@@ -199,7 +199,7 @@ export default function AnalyticsPage() {
             className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden font-mono"
           />
           <p className="text-xs text-gray-500 mt-2">ID de conversion pour le suivi des appels/devis</p>
-          <a href="https://ads.google.com/" target="_blank" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
+          <a href="https://ads.google.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
             Ouvrir Google Ads <ExternalLink size={14} />
           </a>
         </div>

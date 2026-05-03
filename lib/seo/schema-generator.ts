@@ -9,7 +9,7 @@ import type { FAQItem } from "./city-content";
 const BASE_URL = "https://monjoel.fr";
 const COMPANY_NAME = "Joël";
 const COMPANY_PHONE = "+33141691008";
-const COMPANY_EMAIL = "contact@monjoel.com";
+const COMPANY_EMAIL = "contact@monjoel.fr";
 const COMPANY_ADDRESS = "45 Rue Boursault, 75017 Paris";
 
 // IDs canoniques pour références @id (déduplication via @graph)
@@ -253,7 +253,7 @@ export function generateLocalBusinessSchema(
     "@id": `${BASE_URL}/${trade.slug}/${city.slug}#localbusiness`,
     name: `${COMPANY_NAME} - ${trade.name} à ${city.name}`,
     alternateName: `Joël ${trade.name} ${city.name}`,
-    description: `${trade.name} urgence à ${city.name}. Intervention 20 min, prix fixe dès ${basePrice}€. Sans majoration 24h/24. Zéro arnaque, artisans certifiés.`,
+    description: `${trade.name} urgence à ${city.name}. Intervention 30 min, prix fixe dès ${basePrice}€. Sans majoration 24h/24. Zéro arnaque, artisans certifiés.`,
     url: `${BASE_URL}/${trade.slug}/${city.slug}`,
     telephone: COMPANY_PHONE,
     email: COMPANY_EMAIL,
@@ -490,8 +490,8 @@ export function generateDepartmentSchema(
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "2847",
+      ratingValue: "4.9",
+      reviewCount: "947",
       bestRating: "5",
       worstRating: "1",
     },
@@ -673,7 +673,7 @@ export function generateServiceSchema(
     offers: {
       "@type": "Offer",
       name: `${service.name} prix fixe à ${city.name}`,
-      description: `${service.description} Intervention en 20 min. Prix fixe annoncé avant déplacement.`,
+      description: `${service.description} Intervention en 30 min. Prix fixe annoncé avant déplacement.`,
       price: service.priceFrom,
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
@@ -750,7 +750,7 @@ export function generateHubSchema(
     "@id": `${hubUrl}#localbusiness`,
     name: `${COMPANY_NAME} - ${tradeName} d'urgence Paris & Île-de-France`,
     alternateName: `Joël ${tradeName}`,
-    description: `Service de ${tradeName.toLowerCase()} d'urgence à prix fixe. Intervention en 20 minutes sur Paris et toute l'Île-de-France. Zéro arnaque, zéro majoration.`,
+    description: `Service de ${tradeName.toLowerCase()} d'urgence à prix fixe. Intervention en 30 minutes sur Paris et toute l'Île-de-France. Zéro arnaque, zéro majoration.`,
     url: hubUrl,
     telephone: COMPANY_PHONE,
     email: COMPANY_EMAIL,

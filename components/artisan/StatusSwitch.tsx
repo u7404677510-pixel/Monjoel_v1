@@ -122,7 +122,7 @@ export function StatusSwitch({ profile }: { profile: Artisan }) {
           {mutation.isPending ? (
             <Loader2 size={11} className="animate-spin" />
           ) : (
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-joel-yellow shadow-[0_0_8px_rgba(52,211,153,0.6)]" />
           )}
           Statut changé {relTime(lastChange)}
         </span>

@@ -141,7 +141,7 @@ export default function PartenairesPage() {
             </div>
             <h3 className="font-semibold text-gray-900">{partner.name}</h3>
             {partner.website_url && (
-              <a href={partner.website_url} target="_blank" className="text-sm text-joel-violet hover:underline">
+              <a href={partner.website_url} target="_blank" rel="noopener noreferrer" className="text-sm text-joel-violet hover:underline">
                 {partner.website_url}
               </a>
             )}

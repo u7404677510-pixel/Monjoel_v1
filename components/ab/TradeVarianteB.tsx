@@ -6,7 +6,7 @@
  * Responsive: Mobile → 4K
  * 
  * FEEDBACKS APPLIQUÉS:
- * ✓ Ajout "Intervention 20 min" dans hero
+ * ✓ Ajout "Intervention 30 min" dans hero
  * ✓ Bouton vert au lieu de violet
  * ✓ Ajout indicateur artisans disponibles
  */
@@ -364,7 +364,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
               name: "Julien B.",
               city: "Levallois-Perret",
               service: "WC bouchés",
-              text: "WC bouchés qui débordaient, dimanche soir. Plombier en 20 minutes, problème réglé en 30. Même tarif qu'un jour ouvré — il me l'a confirmé au téléphone avant de venir. Sérieux et propre. Je recommande sans hésiter.",
+              text: "WC bouchés qui débordaient, dimanche soir. Plombier en 30 minutes, problème réglé en 30. Même tarif qu'un jour ouvré — il me l'a confirmé au téléphone avant de venir. Sérieux et propre. Je recommande sans hésiter.",
               rating: 5,
             },
             {

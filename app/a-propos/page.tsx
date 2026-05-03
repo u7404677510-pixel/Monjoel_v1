@@ -194,7 +194,7 @@ export default function AProposPage() {
       <div className="mt-16">
         <MidPageCTA
           title="Une urgence dépannage ?"
-          subtitle="Notre équipe est disponible 24h/24 — devis instantané, prix fixe garanti"
+          subtitle="Joël intervient 24h/24 — devis instantané, prix fixe garanti"
           placement="a_propos_bottom"
         />
       </div>

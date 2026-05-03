@@ -194,7 +194,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Débouchage WC un dimanche soir",
       texte:
-        "WC bouchés un dimanche à 21h, panique avec deux enfants. J'avais appelé deux numéros 'urgence' avant Joël, l'un me demandait 350€, l'autre 'à voir sur place'. Joël m'a annoncé 79€ au téléphone, l'artisan est arrivé en 25 minutes, débouché en 20 minutes au furet, payé 79€ comme prévu. Sans majoration dimanche. Je garde le numéro précieusement.",
+        "WC bouchés un dimanche à 21h, panique avec deux enfants. J'avais appelé deux numéros 'urgence' avant Joël, l'un me demandait 350€, l'autre 'à voir sur place'. Joël m'a annoncé 79€ au téléphone, l'artisan est arrivé en 25 minutes, débouché en 30 minutes au furet, payé 79€ comme prévu. Sans majoration dimanche. Je garde le numéro précieusement.",
     },
     {
       auteur: "Bernard L.",

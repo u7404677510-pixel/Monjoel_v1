@@ -98,7 +98,7 @@ export default function ContenuPage() {
       {/* Info box */}
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
         <Info className="text-blue-500 shrink-0 mt-0.5" size={20} />
-        <div className="text-sm text-blue-700">
+        <div className="text-sm text-joel-mauve">
           <p>
             Pour ajouter de nouveaux contenus éditables, contactez le développeur 
             ou ajoutez-les directement dans Supabase (table "content").

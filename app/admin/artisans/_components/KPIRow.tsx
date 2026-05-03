@@ -61,8 +61,8 @@ export function KPIRow({ artisans, loading }: KPIRowProps) {
         label="Actifs"
         value={active.length}
         icon={CheckCircle2}
-        accent="text-emerald-600"
-        iconBg="bg-emerald-50 text-emerald-600"
+        accent="text-joel-violet"
+        iconBg="bg-joel-violet/5 text-joel-violet"
         delta={deltaActifs}
         deltaLabel={
           deltaActifs === null
@@ -87,7 +87,7 @@ export function KPIRow({ artisans, loading }: KPIRowProps) {
         value={inactive7d.length}
         icon={AlertTriangle}
         accent="text-zinc-700"
-        iconBg="bg-amber-50 text-amber-600"
+        iconBg="bg-amber-50 text-joel-violet"
         warning={inactive7d.length > 5}
       />
     </div>
@@ -178,7 +178,7 @@ function KPI({
             className={cn(
               "inline-flex items-center text-xs font-semibold px-1.5 py-0.5 rounded-full border",
               delta > 0
-                ? "text-emerald-600 bg-emerald-50 border-emerald-200"
+                ? "text-joel-violet bg-joel-violet/5 border-joel-violet/20"
                 : delta < 0
                   ? "text-zinc-500 bg-zinc-50 border-zinc-200"
                   : "text-zinc-500 bg-zinc-50 border-zinc-200"
@@ -189,7 +189,7 @@ function KPI({
           </span>
         )}
         {warning && !loading && (
-          <span className="inline-flex items-center text-xs font-semibold px-1.5 py-0.5 rounded-full border text-amber-700 bg-amber-50 border-amber-200">
+          <span className="inline-flex items-center text-xs font-semibold px-1.5 py-0.5 rounded-full border text-joel-violet bg-amber-50 border-amber-200">
             attention
           </span>
         )}

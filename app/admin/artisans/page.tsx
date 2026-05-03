@@ -227,7 +227,7 @@ export default function ArtisansPage() {
           </h1>
           <div className="flex flex-wrap items-center gap-2 mt-2">
             <Badge variant="success" className="px-2.5 py-1">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-joel-violet" />
               {counts.active} actif{counts.active > 1 ? "s" : ""}
             </Badge>
             <Badge variant="primary" className="px-2.5 py-1">
@@ -313,7 +313,7 @@ export default function ArtisansPage() {
           <AlertCircle size={16} className="shrink-0 mt-0.5" />
           <div className="text-sm">
             <p className="font-semibold">Impossible de charger les artisans</p>
-            <p className="text-xs text-amber-700 mt-0.5">{error.message}</p>
+            <p className="text-xs text-joel-violet mt-0.5">{error.message}</p>
             <button
               type="button"
               onClick={() => refetch()}

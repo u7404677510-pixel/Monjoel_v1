@@ -238,8 +238,8 @@ function KPIGrid() {
         label="À contacter"
         value={toContact}
         icon={PhoneCall}
-        iconBg={pendingCritical > 0 ? "bg-amber-100" : "bg-amber-50"}
-        iconColor="text-amber-600"
+        iconBg={pendingCritical > 0 ? "bg-joel-yellow/20" : "bg-amber-50"}
+        iconColor="text-joel-violet"
         href="/admin/leads?filter=new"
         urgency={
           pendingCritical > 0 ? (
@@ -254,7 +254,7 @@ function KPIGrid() {
               {pendingCritical} non contacté{pendingCritical > 1 ? "s" : ""} {">"} 2h
             </Badge>
           ) : toContact === 0 ? (
-            <span className="inline-flex items-center gap-1 text-xs text-emerald-600 font-medium">
+            <span className="inline-flex items-center gap-1 text-xs text-joel-violet font-medium">
               <Sparkles size={11} /> File d'attente vide
             </span>
           ) : null
@@ -268,8 +268,8 @@ function KPIGrid() {
         value={data?.conversion_rate ?? 0}
         suffix="%"
         icon={TrendingUp}
-        iconBg="bg-emerald-50"
-        iconColor="text-emerald-600"
+        iconBg="bg-joel-violet/5"
+        iconColor="text-joel-violet"
         href="/admin/leads?filter=converted"
         delta={conversionDelta}
         deltaLabel={
@@ -318,10 +318,10 @@ function KPIGrid() {
           data?.in_intervention && data.in_intervention > 0 ? (
             <span className="inline-flex items-center gap-1.5 text-xs">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-violet" />
               </span>
-              <span className="text-emerald-700 font-medium">
+              <span className="text-joel-violet font-medium">
                 {data.in_intervention} en intervention
               </span>
             </span>

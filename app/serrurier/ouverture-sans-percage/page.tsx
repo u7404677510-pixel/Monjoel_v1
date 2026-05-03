@@ -24,7 +24,7 @@ const doList = [
   "Ouverture radio si porte claquée (non verrouillée)",
   "Techniques non destructives en priorité",
   "Prix fixe annoncé avant intervention",
-  "Intervention en ~20 min en moyenne",
+  "Intervention en ~30 min en moyenne",
 ];
 
 const dontList = [
@@ -74,7 +74,7 @@ export default function OuvertureSansPercagePage() {
       <SerrurerieHero
         title="Porte claquée - Ouverture sans perçage"
         subtitle="Serrurerie"
-        description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe 89€, intervention en 20 min."
+        description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe 89€, intervention en 30 min."
         servicePrice="89€"
       />
       <ServicePricingHighlight
@@ -84,7 +84,7 @@ export default function OuvertureSansPercagePage() {
         features={[
           "Ouverture sans perçage en priorité",
           "Porte intacte garantie",
-          "Intervention en 20 min",
+          "Intervention en 30 min",
           "Prix fixe — zéro surprise",
         ]}
       />

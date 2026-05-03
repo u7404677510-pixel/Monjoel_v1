@@ -301,7 +301,7 @@ function DrawerBody({
               <motion.p
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-3 text-xs text-emerald-700 font-medium"
+                className="mt-3 text-xs text-joel-violet font-medium"
               >
                 Merci pour votre note&nbsp;!
               </motion.p>
@@ -610,7 +610,7 @@ function ChatPanel({
         </Button>
       </form>
       <p className="text-[10px] text-zinc-400 px-3 py-1.5 bg-white border-t border-zinc-100 flex items-center gap-1">
-        <CheckCircle2 size={10} className="text-emerald-500" />
+        <CheckCircle2 size={10} className="text-joel-violet" />
         Conversation transférée à votre artisan
       </p>
     </div>

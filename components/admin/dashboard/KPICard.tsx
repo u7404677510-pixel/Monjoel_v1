@@ -67,7 +67,7 @@ export function KPICard({
     delta === 0
       ? "text-zinc-500"
       : isGood
-        ? "text-emerald-600 bg-emerald-50 border-emerald-200"
+        ? "text-joel-violet bg-joel-violet/5 border-joel-violet/20"
         : isBad
           ? "text-red-600 bg-red-50 border-red-200"
           : "text-zinc-500";

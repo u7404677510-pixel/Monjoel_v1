@@ -216,7 +216,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Débouchage canalisation cuisine",
       texte:
-        "Locataire Airbnb longue durée (8 mois) rue Cadet pour un nouveau job dans le luxe. L'évier de la cuisine s'est mis à se vider en 40 minutes après deux mois d'usage. Bicarbonate/vinaigre essayés, ça n'a pas marché. Appel Joël, intervention en 28 min un samedi après-midi. Le mec a sorti son furet électrique, débouchage propre en 20 minutes. 99€ TTC comme annoncé. Il m'a expliqué que la canalisation était de bonne facture mais que les précédents locataires avaient laissé trop de gras de cuisson partir dedans, il m'a montré comment éviter (filtre grille). J'ai transmis la facture à mon hôte Airbnb via la messagerie de la plateforme avec demande de remboursement, j'ai été remboursée intégralement 8 jours plus tard. Procédure carrée des deux côtés.",
+        "Locataire Airbnb longue durée (8 mois) rue Cadet pour un nouveau job dans le luxe. L'évier de la cuisine s'est mis à se vider en 40 minutes après deux mois d'usage. Bicarbonate/vinaigre essayés, ça n'a pas marché. Appel Joël, intervention en 28 min un samedi après-midi. Le mec a sorti son furet électrique, débouchage propre en 30 minutes. 99€ TTC comme annoncé. Il m'a expliqué que la canalisation était de bonne facture mais que les précédents locataires avaient laissé trop de gras de cuisson partir dedans, il m'a montré comment éviter (filtre grille). J'ai transmis la facture à mon hôte Airbnb via la messagerie de la plateforme avec demande de remboursement, j'ai été remboursée intégralement 8 jours plus tard. Procédure carrée des deux côtés.",
     },
     {
       auteur: "Karim B.",

@@ -127,7 +127,7 @@ function BulkButton({
   tone: "emerald" | "violet" | "zinc" | "red";
 }) {
   const tones: Record<string, string> = {
-    emerald: "hover:bg-emerald-600/30 hover:text-emerald-300",
+    emerald: "hover:bg-joel-violet/30 hover:text-emerald-300",
     violet: "hover:bg-joel-violet/30 hover:text-joel-mauve",
     zinc: "hover:bg-white/10 hover:text-white",
     red: "hover:bg-red-600/30 hover:text-red-300",

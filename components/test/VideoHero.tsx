@@ -56,7 +56,7 @@ export default function VideoHero({
             </div>
             <div className="inline-flex items-center gap-2 bg-joel-yellow text-gray-900 text-sm font-bold px-4 py-2 rounded-full">
               <Clock size={16} />
-              <span>Intervention 20 min</span>
+              <span>Intervention 30 min</span>
             </div>
           </div>
 

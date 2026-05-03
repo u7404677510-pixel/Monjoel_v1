@@ -26,9 +26,9 @@ export const STATUS_CONFIG: Record<ArtisanStatus, StatusUI> = {
   active: {
     key: "active",
     label: "Actif",
-    badgeClass: "text-emerald-700 bg-emerald-50 border-emerald-200",
-    dotClass: "bg-emerald-500",
-    accentClass: "text-emerald-600",
+    badgeClass: "text-joel-violet bg-joel-violet/5 border-joel-violet/20",
+    dotClass: "bg-joel-violet",
+    accentClass: "text-joel-violet",
   },
   on_intervention: {
     key: "on_intervention",

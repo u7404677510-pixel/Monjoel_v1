@@ -186,7 +186,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Débouchage WC un dimanche après-midi",
       texte:
-        "Mon petit dernier de 5 ans avait jeté son doudou et la moitié du rouleau dans les WC, je rigolais pas du tout sur le moment. Dimanche 16h, mes deux grands à la maison qui regardent un film, moi en panique parce qu'une voisine m'avait raconté avoir payé 600€ une bêtise pareille. J'ai appelé Joël, ils m'ont dit 79€ tout compris, dimanche ou pas dimanche. Le plombier est arrivé en 30 minutes, débouchage en 20 minutes, doudou récupéré (pas réutilisable hein), facture exactement 79€ comme annoncé. Je recommande aux mamans qui flippent du prix quand ça casse.",
+        "Mon petit dernier de 5 ans avait jeté son doudou et la moitié du rouleau dans les WC, je rigolais pas du tout sur le moment. Dimanche 16h, mes deux grands à la maison qui regardent un film, moi en panique parce qu'une voisine m'avait raconté avoir payé 600€ une bêtise pareille. J'ai appelé Joël, ils m'ont dit 79€ tout compris, dimanche ou pas dimanche. Le plombier est arrivé en 30 minutes, débouchage en 30 minutes, doudou récupéré (pas réutilisable hein), facture exactement 79€ comme annoncé. Je recommande aux mamans qui flippent du prix quand ça casse.",
     },
     {
       auteur: "Olivier M. (locataire en couple, un enfant)",
