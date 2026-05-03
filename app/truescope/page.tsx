@@ -190,7 +190,7 @@ export default function TrueScopePage() {
 
               <p className="text-xl md:text-2xl font-semibold text-gray-900">
                 Vous savez combien vous payez{" "}
-                <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+                <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
                   avant qu&apos;on sonne
                 </span>
                 .

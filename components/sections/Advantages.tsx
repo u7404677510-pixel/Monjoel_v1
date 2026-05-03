@@ -93,7 +93,7 @@ export default function Advantages() {
             className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl font-bold text-zinc-900 leading-[1.04] tracking-tight"
           >
             Pourquoi choisir{" "}
-            <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+            <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
               Joël
             </span>
             <span className="text-joel-yellow"> ?</span>

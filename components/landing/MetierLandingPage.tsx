@@ -437,7 +437,7 @@ function QuickQuoteWidget({ trade, phoneNumber, phoneTel }: QuickQuoteWidgetProp
         <h3 className="font-display text-2xl sm:text-3xl font-bold text-zinc-900 leading-tight">
           Connaissez votre prix
           <br />
-          <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+          <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
             avant qu&apos;on sonne
           </span>
         </h3>
@@ -740,7 +740,7 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
               >
                 {config.heroTitle}
                 <br />
-                <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+                <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
                   Le prix annoncé est le prix payé
                 </span>
                 <span className="text-joel-yellow">.</span>
@@ -933,7 +933,7 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
             </span>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-900 leading-[1.05] tracking-tight">
               Votre prix fixe{" "}
-              <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+              <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
                 avant qu&apos;on sonne
               </span>
             </h2>
@@ -1011,7 +1011,7 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
             </span>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-bold text-zinc-900 leading-[1.05] tracking-tight">
               Pourquoi notre tarif{" "}
-              <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+              <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
                 ne change pas
               </span>{" "}
               en route
@@ -1297,7 +1297,7 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
             </span>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-bold text-zinc-900 leading-[1.05] tracking-tight">
               Six garanties{" "}
-              <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+              <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
                 contractuelles
               </span>
               <span className="text-joel-yellow">.</span>
@@ -1465,7 +1465,7 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
               <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 leading-[1.05] tracking-tight">
                 Une urgence {config.slug} ?
                 <br />
-                <span className="text-joel-yellow italic">On répond en moins de 60 secondes.</span>
+                <span className="text-joel-yellow italic pe-1.5">On répond en moins de 60 secondes.</span>
               </h2>
               <p className="text-base sm:text-lg text-white/85 max-w-xl mx-auto mb-9 leading-relaxed">
                 Standard humain 24h/24 en français. Devis fixe annoncé en 90
