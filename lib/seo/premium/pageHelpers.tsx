@@ -215,7 +215,10 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
         <LocalSchema trade={trade} city={city} faqItems={content.faq} />
         <CityHero trade={trade} city={city} content={content} />
         <FallbackIntro content={content} />
+        <FallbackLocalIndicators content={content} city={city} />
         <FallbackLocalContext content={content} city={city} trade={trade} />
+        <FallbackBuildingType content={content} city={city} trade={trade} />
+        <FallbackCaseStudy content={content} city={city} />
         <CityServices trade={trade} city={city} />
         <FallbackPricingContext content={content} city={city} trade={trade} />
         {/* CTA mi-page : réinjection conversion à mi-scroll */}
@@ -227,6 +230,7 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
         />
         <FallbackWhyJoel content={content} />
         <CityFAQ faqItems={content.faq} cityName={city.name} tradeName={trade.name} />
+        <FallbackInterlinkNearby content={content} city={city} tradeSlug={tradeSlug} />
         <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
         <FinalCTA />
       </main>
@@ -281,7 +285,10 @@ export function ServicePageBody({
         <LocalSchema trade={trade} city={city} faqItems={content.faq} service={service} />
         <CityHero trade={trade} city={city} content={content} service={service} />
         <FallbackServiceBlock trade={trade} city={city} service={service} content={content} />
+        <FallbackLocalIndicators content={content} city={city} />
         <FallbackLocalContext content={content} city={city} trade={trade} />
+        <FallbackBuildingType content={content} city={city} trade={trade} />
+        <FallbackCaseStudy content={content} city={city} />
         <FallbackPricingContext content={content} city={city} trade={trade} />
         <FallbackWhyJoel content={content} />
         {/* CTA mi-page : réinjection conversion juste avant le bloc autres services */}
@@ -298,6 +305,7 @@ export function ServicePageBody({
           cityName={city.name}
           tradeName={service.name}
         />
+        <FallbackInterlinkNearby content={content} city={city} tradeSlug={tradeSlug} />
         <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
         <FinalCTA />
       </main>
@@ -422,6 +430,134 @@ function FallbackPricingContext({
             Tarifs {trade.name.toLowerCase()} à {city.name} ({city.postalCodes[0]})
           </h2>
           <p className="text-gray-700 leading-relaxed">{content.pricingContext}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Indicateurs locaux factuels (CP, distance Paris, délai, bâti).
+ * Tableau simple — apporte des données vérifiables uniques par ville.
+ */
+function FallbackLocalIndicators({
+  content,
+  city,
+}: {
+  content: ReturnType<typeof generateCityPageContent>;
+  city: City;
+}) {
+  return (
+    <section className="py-12 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-6">
+          {city.name} en chiffres
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {content.localIndicators.map((ind, i) => (
+            <div key={i} className="bg-white rounded-xl p-4 border border-gray-100">
+              <p className="text-xs uppercase tracking-wide text-gray-500 mb-1">{ind.label}</p>
+              <p className="text-base font-semibold text-gray-900">{ind.value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Paragraphe "Bâti dominant" — généré par heuristique dépt+slug+pop.
+ * Apporte un contenu structurellement différent entre 2 villes de typologie différente.
+ */
+function FallbackBuildingType({
+  content,
+  city,
+  trade,
+}: {
+  content: { buildingTypeParagraph: string };
+  city: City;
+  trade: Trade;
+}) {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          Le bâti à {city.name} et son impact sur l'intervention {trade.name.toLowerCase()}
+        </h2>
+        <p className="text-gray-700 leading-relaxed text-lg">{content.buildingTypeParagraph}</p>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Mini cas d'étude templated — sans rue ni client inventé.
+ * Un cas par ville × métier, choisi de façon déterministe.
+ */
+function FallbackCaseStudy({
+  content,
+  city,
+}: {
+  content: { caseStudy: { title: string; body: string; priceFrom: number; duration: string } };
+  city: City;
+}) {
+  return (
+    <section className="py-16 bg-gradient-to-br from-joel-violet/5 to-joel-mauve/5">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <span className="inline-block bg-joel-violet/10 text-joel-violet text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
+            Intervention récente — {city.name}
+          </span>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            {content.caseStudy.title}
+          </h2>
+          <p className="text-gray-700 leading-relaxed">{content.caseStudy.body}</p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <span className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-3 py-1.5 rounded-full">
+              <span className="font-semibold">À partir de</span> {content.caseStudy.priceFrom}€ TTC
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-3 py-1.5 rounded-full">
+              <span className="font-semibold">Durée</span> {content.caseStudy.duration}
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Bloc d'interlinking villes voisines réelles (3-5) avec distance.
+ * Aide Google à comprendre la zone géographique même en noindex.
+ */
+function FallbackInterlinkNearby({
+  content,
+  city,
+  tradeSlug,
+}: {
+  content: { interlinkNearby: Array<{ name: string; slug: string; distanceKm: number }> };
+  city: City;
+  tradeSlug: string;
+}) {
+  if (content.interlinkNearby.length === 0) return null;
+  return (
+    <section className="py-12 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-4">
+          Communes voisines de {city.name} couvertes par Joël
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {content.interlinkNearby.map((c) => (
+            <a
+              key={c.slug}
+              href={`/${tradeSlug}/${c.slug}`}
+              className="inline-flex items-center gap-2 bg-gray-50 hover:bg-joel-violet/5 hover:text-joel-violet text-gray-700 px-4 py-2 rounded-full text-sm border border-gray-100 hover:border-joel-violet/30 transition-colors"
+            >
+              <span className="font-medium">{c.name}</span>
+              <span className="text-gray-400 text-xs">{c.distanceKm} km</span>
+            </a>
+          ))}
         </div>
       </div>
     </section>

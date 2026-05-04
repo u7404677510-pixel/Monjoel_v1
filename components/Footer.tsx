@@ -41,7 +41,7 @@ const footerLinks = {
     { href: "/serrurier/serrure-3-points", label: "Serrure 3 points" },
     { href: "/serrurier/cylindre-haute-securite", label: "Cylindre A2P" },
     { href: "/serrurier/porte-blindee", label: "Porte blindée" },
-    { href: "/serrurier/reproduction-cles", label: "Double de clés" },
+    { href: "/serrurier/blindage-porte", label: "Blindage de porte" },
   ],
   company: [
     { href: "/stop-arnaques", label: "Anti-arnaque" },

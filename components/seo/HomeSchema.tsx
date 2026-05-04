@@ -229,47 +229,9 @@ export default function HomeSchema() {
             validFrom: "2024-01-01",
           },
         ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "947",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        review: [
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Marie L." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody:
-              "Intervention sous 25 min, prix annoncé tenu, artisan pro et propre. Je recommande.",
-            datePublished: "2025-09-15",
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Thomas R." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody:
-              "Appel un dimanche soir, technicien sur place dans l'heure. Aucune majoration. Top service.",
-            datePublished: "2025-08-22",
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Sophie M." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody:
-              "Devis transparent en 30 secondes, intervention le jour même. Vraiment zéro arnaque.",
-            datePublished: "2025-07-08",
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Karim B." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody:
-              "Serrurier arrivé en 18 minutes, ouverture sans perçage, prix exactement annoncé. Bluffant.",
-            datePublished: "2025-06-12",
-          },
-        ],
+        // Pas d'aggregateRating ni de Review schema tant qu'on n'a pas
+        // d'avis Google réels collectés (sinon = "structured data spam"
+        // → risque de manual action Google).
         slogan: "Prix fixe, zéro arnaque",
         potentialAction: [
           {

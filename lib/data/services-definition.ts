@@ -374,17 +374,10 @@ export const serrurerieServices: Service[] = [
     keywords: ["serrure multipoints", "serrure 5 points", "serrure 7 points", "serrure haute sécurité", "serrure multipoints prix"],
     metaDescription: "Serrure multipoints à {city}. 3, 5 ou 7 points dès 249€. Installation pro, certification A2P. Devis gratuit.",
   },
-  {
-    slug: "reproduction-cles",
-    name: "Reproduction de clés",
-    shortName: "Double clés",
-    description: "Reproduction de clés : clé plate, clé sécurisée, clé brevetée. Double de clé sur place ou sur commande. Cartes de propriété acceptées.",
-    icon: "Copy",
-    priceFrom: 15,
-    urgencyLevel: "low",
-    keywords: ["reproduction clé", "double clé", "refaire clé", "copie clé", "reproduire clé", "clé minute"],
-    metaDescription: "Reproduction de clés à {city}. Double clé dès 15€. Clés sécurisées et brevetées. Service rapide, artisan qualifié.",
-  },
+  // Service "reproduction-cles" supprimé le 2026-05-04 — décision business :
+  // Joël ne fait pas de reproduction de clés. Toutes les pages /serrurier/[ville]/reproduction-cles
+  // sont 301-redirigées vers /serrurerie via next.config.mjs. Le hub /serrurier/reproduction-cles
+  // est supprimé. BLOCKED_SERVICES dans premium/registry.ts continue de refuser tout futur fichier.
   {
     slug: "cylindre-haute-securite",
     name: "Cylindre haute sécurité",

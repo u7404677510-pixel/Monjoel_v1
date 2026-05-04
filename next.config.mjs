@@ -134,10 +134,12 @@ const nextConfig = {
       },
     ];
   },
-  // Redirects 301 — slugs villes accentués → slugs ASCII.
-  // Corrige le bug ayant causé ~190 pages en 404 dans Google Search Console.
-  // Les URLs accentuées étaient présentes dans le sitemap historique : on les
-  // redirige proprement pour que Google récupère le jus SEO.
+  // Redirects 301 — multi-purpose
+  // 1. Slugs villes accentués → slugs ASCII (corrige ~190 pages en 404 GSC)
+  // 2. Service "reproduction-cles" supprimé le 2026-05-04 — Joël ne fait pas
+  //    ce service. Toutes les pages reproduction-cles (déjà indexées par
+  //    Google avec position 3-12) sont 301-redirigées vers /serrurerie ou
+  //    /serrurier/[ville] pour récupérer le jus SEO sans 404.
   async redirects() {
     const accentMap = [
       ["armentières-en-brie", "armentieres-en-brie"],
@@ -148,6 +150,8 @@ const nextConfig = {
     ];
     const trades = ["plombier", "serrurier", "electricien"];
     const redirects = [];
+
+    // (1) Redirects accents → ASCII
     for (const [oldSlug, newSlug] of accentMap) {
       for (const trade of trades) {
         redirects.push({
@@ -162,6 +166,22 @@ const nextConfig = {
         });
       }
     }
+
+    // (2) reproduction-cles supprimé — redirection vers /serrurerie ou ville
+    // Hub : /serrurier/reproduction-cles → /serrurerie
+    redirects.push({
+      source: "/serrurier/reproduction-cles",
+      destination: "/serrurerie",
+      permanent: true,
+    });
+    // Pages ville : /serrurier/[ville]/reproduction-cles → /serrurier/[ville]
+    // Garde le contexte géographique (mieux que renvoyer tout vers /serrurerie)
+    redirects.push({
+      source: "/serrurier/:ville/reproduction-cles",
+      destination: "/serrurier/:ville",
+      permanent: true,
+    });
+
     return redirects;
   },
   // Enable strict mode for better development experience

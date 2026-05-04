@@ -92,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/serrurier/porte-fermee-a-cle", "/serrurier/changement-cylindre",
     "/serrurier/changement-serrure", "/serrurier/apres-effraction",
     "/serrurier/serrure-3-points", "/serrurier/serrure-multipoints",
-    "/serrurier/reproduction-cles", "/serrurier/cylindre-haute-securite",
+    "/serrurier/cylindre-haute-securite",
     "/serrurier/porte-blindee", "/serrurier/coffre-fort", "/serrurier/rideau-metallique",
     "/electricien/panne-electrique", "/electricien/disjoncteur-saute",
     "/electricien/tableau-electrique", "/electricien/prise-interrupteur-hs",

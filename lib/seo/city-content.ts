@@ -134,6 +134,164 @@ function getEstimatedArrival(city: City): string {
   return "30 à 45 minutes";
 }
 
+// ============================================
+// BÂTI DOMINANT (heuristique dépt + population + slug)
+// ============================================
+
+export type BuildingType =
+  | "haussmannien"
+  | "annees-30"
+  | "grand-ensemble"
+  | "pavillonnaire"
+  | "moderne";
+
+/**
+ * Set des slugs connus pour avoir un parc de grand ensemble dominant
+ * (cités HLM des années 60-70, tours/barres). Pas exhaustif — heuristique.
+ * Utilisé en complément du critère "petite couronne + grande commune".
+ */
+const KNOWN_GRAND_ENSEMBLE_SLUGS = new Set<string>([
+  // 93
+  "saint-denis", "aubervilliers", "la-courneuve", "stains", "epinay-sur-seine",
+  "bobigny", "bondy", "drancy", "le-blanc-mesnil", "sevran",
+  "villepinte", "tremblay-en-france", "clichy-sous-bois", "montfermeil",
+  "pierrefitte-sur-seine", "villetaneuse", "aulnay-sous-bois",
+  // 94
+  "creteil", "vitry-sur-seine", "ivry-sur-seine", "champigny-sur-marne",
+  "villeneuve-saint-georges", "orly", "valenton", "choisy-le-roi",
+  // 92
+  "gennevilliers", "nanterre", "bagneux", "villeneuve-la-garenne",
+  // 91
+  "evry-courcouronnes", "grigny", "viry-chatillon", "corbeil-essonnes",
+  "fleury-merogis",
+  // 95
+  "argenteuil", "garges-les-gonesse", "sarcelles", "goussainville",
+  "villiers-le-bel", "cergy",
+  // 78
+  "trappes", "mantes-la-jolie", "les-mureaux", "chanteloup-les-vignes",
+  // 77
+  "meaux", "chelles", "torcy",
+]);
+
+/**
+ * Slugs connus pour parc majoritairement haussmannien / années 30 préservé
+ * (en plus de Paris arr. 1-11). Utilisé pour les villes 92 ouest "résidentielles bourgeoises".
+ */
+const KNOWN_HAUSSMANN_BOURGEOIS = new Set<string>([
+  "neuilly-sur-seine", "levallois-perret", "boulogne-billancourt",
+  "saint-cloud", "garches", "vaucresson", "ville-d-avray",
+  "sceaux", "bourg-la-reine", "marnes-la-coquette",
+  "versailles", "saint-germain-en-laye", "le-vesinet", "le-pecq",
+  "vincennes", "saint-mande", "nogent-sur-marne", "le-perreux-sur-marne",
+]);
+
+/**
+ * Infère le type de bâti dominant d'une ville à partir d'heuristiques :
+ *   - Paris arr. 1-11 → haussmannien
+ *   - Villes 92 ouest bourgeoises + Versailles → mix haussmann/années 30
+ *   - Listes connues (grands-ensembles 93/94/91/95) → grand-ensemble
+ *   - Grande commune (>15k hab.) en petite couronne hors liste → grand-ensemble
+ *   - Petite couronne dense (>5k hab.) → annees-30 (mix)
+ *   - Grande couronne hors gros centres → pavillonnaire
+ *   - Petits centres modernes (villes nouvelles) → moderne
+ *
+ * AUCUNE invention : si aucune heuristique ne match, on retourne "moderne"
+ * comme fallback neutre (généralement vrai pour les villes intermédiaires).
+ */
+export function inferBuildingType(city: City): BuildingType {
+  const slug = city.slug;
+  const dept = city.department;
+  const pop = city.population || 0;
+
+  // Paris : arr. 1-11 = haussmannien dominant, 12-20 = mix
+  if (dept === "75") {
+    const arrMatch = slug.match(/^paris-(\d+)$/);
+    if (arrMatch) {
+      const arr = parseInt(arrMatch[1], 10);
+      if (arr <= 11) return "haussmannien";
+      // 12-20 : mix — les arrondissements sud/est ont plus d'années 30 et grands ensembles
+      if (arr === 13 || arr === 19 || arr === 20) return "annees-30";
+      return "haussmannien";
+    }
+    return "haussmannien";
+  }
+
+  // Listes explicites de grands ensembles
+  if (KNOWN_GRAND_ENSEMBLE_SLUGS.has(slug)) return "grand-ensemble";
+
+  // Bourgeois ouest 92 + Versailles + 78 résidentielles
+  if (KNOWN_HAUSSMANN_BOURGEOIS.has(slug)) return "annees-30";
+
+  // 92 hors listes : généralement mix haussmann/années 30 (parc dense, ancien)
+  if (dept === "92") return "annees-30";
+
+  // Petite couronne (93/94) hors listes connues : grande commune dense → grand ensemble probable
+  if ((dept === "93" || dept === "94") && pop >= 15000) return "grand-ensemble";
+
+  // Petite couronne (93/94) commune moyenne : pavillonnaire + petits collectifs
+  if (dept === "93" || dept === "94") return "pavillonnaire";
+
+  // Grande couronne (77/78/91/95) : pavillonnaire dominant hors gros centres déjà listés
+  if (["77", "78", "91", "95"].includes(dept)) {
+    // Grande commune (>30k) probablement villes nouvelles ou gros centres → moderne
+    if (pop >= 30000) return "moderne";
+    return "pavillonnaire";
+  }
+
+  // Fallback neutre
+  return "moderne";
+}
+
+/**
+ * Libellé court du type de bâti (utilisé dans le contenu généré).
+ */
+function getBuildingTypeLabel(type: BuildingType): string {
+  switch (type) {
+    case "haussmannien": return "haussmannien";
+    case "annees-30": return "des années 30";
+    case "grand-ensemble": return "de grand ensemble";
+    case "pavillonnaire": return "pavillonnaire";
+    case "moderne": return "récent";
+  }
+}
+
+/**
+ * Phrase descriptive du parc immobilier dominant (1 ligne).
+ */
+function getBuildingTypeDescription(type: BuildingType, cityName: string): string {
+  switch (type) {
+    case "haussmannien":
+      return `${cityName} compte un parc majoritairement haussmannien : moulures, parquet, hauteurs sous plafond généreuses et colonnes montantes communes — un bâti qui exige un savoir-faire précis pour ne pas dégrader l'existant.`;
+    case "annees-30":
+      return `${cityName} mêle immeubles des années 30, hôtels particuliers et constructions plus récentes. Un parc varié qui demande de l'expérience sur les installations rénovées par couches successives.`;
+    case "grand-ensemble":
+      return `${cityName} comprend une part importante de grands ensembles (immeubles collectifs des années 60-70). Les interventions y impliquent souvent des colonnes communes, des bailleurs sociaux et des règles de copropriété spécifiques.`;
+    case "pavillonnaire":
+      return `${cityName} est dominée par l'habitat pavillonnaire et les petits collectifs récents. Maisons individuelles, jardins, fosses ou raccordements sur réseau communal — les configurations sont variées.`;
+    case "moderne":
+      return `${cityName} compte une majorité de constructions récentes, souvent conformes aux dernières normes (RT 2012, RE 2020). Les installations sont standardisées, ce qui simplifie les diagnostics.`;
+  }
+}
+
+/**
+ * Distance approximative (km) entre la ville et un point de référence Paris (centre).
+ * Utilisé pour les indicateurs locaux. Calcul Haversine sur les coords.
+ */
+function distanceFromParisKm(city: City): number {
+  const paris = { lat: 48.8566, lng: 2.3522 };
+  const c = city.coordinates;
+  const R = 6371;
+  const toRad = (deg: number) => (deg * Math.PI) / 180;
+  const dLat = toRad(c.lat - paris.lat);
+  const dLon = toRad(c.lng - paris.lng);
+  const lat1 = toRad(paris.lat);
+  const lat2 = toRad(c.lat);
+  const x =
+    Math.sin(dLat / 2) ** 2 +
+    Math.sin(dLon / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
+  return Math.round(2 * R * Math.asin(Math.sqrt(x)));
+}
+
 const departmentDescriptors: Record<string, string[]> = {
   "75": [
     "au cœur de la capitale",
@@ -1002,7 +1160,10 @@ export function generateCityFAQ(trade: Trade, city: City): FAQItem[] {
     ],
   };
 
-  return [...baseFAQ, ...(tradeFAQ[trade.slug] || [])];
+  // Ajouter les FAQ spécifiques au type de bâti dominant (2 questions)
+  const buildingFAQ = generateBuildingTypeFAQ(trade, city);
+
+  return [...baseFAQ, ...(tradeFAQ[trade.slug] || []), ...buildingFAQ];
 }
 
 export function generateServiceFAQ(
@@ -1032,6 +1193,522 @@ export function generateServiceFAQ(
 }
 
 // ============================================
+// MINI CAS D'ÉTUDE (sans inventer rue ni quartier)
+// ============================================
+
+/**
+ * Localisations génériques par dépt — JAMAIS inventées,
+ * formulations volontairement vagues pour rester véridiques.
+ */
+const GENERIC_LOCATIONS: Record<string, string[]> = {
+  "75": [
+    "dans une rue résidentielle",
+    "près de la mairie d'arrondissement",
+    "dans un immeuble haussmannien du secteur",
+    "dans un appartement ancien rénové",
+    "près d'une station de métro centrale",
+  ],
+  "92": [
+    "dans un immeuble du centre-ville",
+    "près de la mairie",
+    "dans un secteur résidentiel calme",
+    "dans une copropriété récente",
+    "dans un pavillon proche d'une gare",
+  ],
+  "93": [
+    "dans une résidence du centre",
+    "près de la mairie",
+    "dans un immeuble collectif",
+    "dans un pavillon de quartier résidentiel",
+  ],
+  "94": [
+    "dans une résidence proche du centre-ville",
+    "dans un immeuble collectif",
+    "dans un pavillon de bord de Marne",
+    "dans une copropriété résidentielle",
+  ],
+  "78": [
+    "dans un pavillon du centre",
+    "dans une copropriété résidentielle",
+    "près de la gare RER",
+    "dans une maison ancienne rénovée",
+  ],
+  "91": [
+    "dans un pavillon",
+    "dans une résidence collective",
+    "près du centre commercial",
+    "dans un quartier résidentiel",
+  ],
+  "95": [
+    "dans un pavillon proche du centre",
+    "dans un immeuble collectif",
+    "dans une résidence résidentielle",
+    "près de la gare",
+  ],
+  "77": [
+    "dans un pavillon",
+    "dans une maison rénovée",
+    "près du centre-bourg",
+    "dans une résidence collective",
+  ],
+};
+
+/**
+ * Pool de cas d'étude templated, paramétrés par métier.
+ * IMPORTANT : ne contient AUCUNE invention factuelle vérifiable
+ * (pas de date précise, pas de nom de rue, pas de nom de client).
+ * Utilise "récemment" et des localisations génériques.
+ */
+const CASE_STUDIES: Record<string, Array<{
+  intervention: string;
+  diagnostic: string;
+  resolution: string;
+  priceFrom: number;
+  duration: string;
+}>> = {
+  plombier: [
+    {
+      intervention: "fuite sous évier de cuisine",
+      diagnostic: "joint d'évacuation usé et siphon entartré",
+      resolution: "remplacement du joint et nettoyage du siphon, test étanchéité",
+      priceFrom: 89,
+      duration: "45 minutes",
+    },
+    {
+      intervention: "WC bouchés",
+      diagnostic: "amas dans la canalisation principale (lingettes / accumulation)",
+      resolution: "débouchage au furet manuel, test de chasse, conseils anti-récidive",
+      priceFrom: 79,
+      duration: "30 à 60 minutes",
+    },
+    {
+      intervention: "chauffe-eau électrique en panne",
+      diagnostic: "résistance HS et thermostat à remplacer",
+      resolution: "remplacement de la résistance et du thermostat, vidange préalable, remise en service",
+      priceFrom: 109,
+      duration: "1h30",
+    },
+    {
+      intervention: "fuite sur ballon d'eau chaude",
+      diagnostic: "groupe de sécurité encrassé par le calcaire",
+      resolution: "remplacement du groupe de sécurité, vérification pression, test étanchéité",
+      priceFrom: 129,
+      duration: "1 heure",
+    },
+    {
+      intervention: "robinet mitigeur qui goutte",
+      diagnostic: "cartouche céramique en fin de vie",
+      resolution: "remplacement de la cartouche, test débit chaud/froid",
+      priceFrom: 69,
+      duration: "30 minutes",
+    },
+    {
+      intervention: "dégât des eaux au plafond",
+      diagnostic: "fuite sur canalisation encastrée — recherche caméra thermique",
+      resolution: "localisation précise, ouverture limitée, réparation de la canalisation",
+      priceFrom: 99,
+      duration: "1h à 2h selon accès",
+    },
+  ],
+  serrurier: [
+    {
+      intervention: "porte claquée sans clé à l'intérieur",
+      diagnostic: "serrure standard 3 points, ouverture par carte plastifiée possible",
+      resolution: "ouverture sans dégât, vérification du bon fonctionnement de la serrure",
+      priceFrom: 89,
+      duration: "15 à 30 minutes",
+    },
+    {
+      intervention: "clé cassée dans la serrure",
+      diagnostic: "tronçon de clé bloqué dans le cylindre",
+      resolution: "extraction du tronçon, vérification du cylindre, devis remplacement si nécessaire",
+      priceFrom: 89,
+      duration: "30 minutes",
+    },
+    {
+      intervention: "perte du trousseau de clés",
+      diagnostic: "remplacement du cylindre par sécurité (changement complet conseillé)",
+      resolution: "pose d'un nouveau cylindre conforme NF EN 1303, fourniture de 3 clés",
+      priceFrom: 120,
+      duration: "30 à 45 minutes",
+    },
+    {
+      intervention: "porte blindée bloquée",
+      diagnostic: "serrure A2P endommagée, perçage nécessaire",
+      resolution: "perçage du cylindre, remplacement par modèle équivalent A2P",
+      priceFrom: 150,
+      duration: "1 heure",
+    },
+    {
+      intervention: "changement de serrure après emménagement",
+      diagnostic: "remplacement complet conseillé pour sécurité",
+      resolution: "pose d'une serrure 3 points avec cylindre A2P, 3 clés fournies",
+      priceFrom: 180,
+      duration: "1 heure",
+    },
+  ],
+  electricien: [
+    {
+      intervention: "disjoncteur principal qui saute en boucle",
+      diagnostic: "défaut d'isolement sur un circuit (souvent salle de bain ou cuisine)",
+      resolution: "test circuit par circuit, identification du défaut, mise en sécurité",
+      priceFrom: 79,
+      duration: "1 heure",
+    },
+    {
+      intervention: "panne électrique partielle (une pièce)",
+      diagnostic: "prise endommagée ou faux contact dans le circuit",
+      resolution: "remplacement de la prise / réparation du circuit, test charge",
+      priceFrom: 89,
+      duration: "45 minutes",
+    },
+    {
+      intervention: "court-circuit après orage",
+      diagnostic: "différentiel grillé par surtension",
+      resolution: "remplacement du différentiel 30 mA, vérification mise à la terre",
+      priceFrom: 99,
+      duration: "1 heure",
+    },
+    {
+      intervention: "tableau électrique vétuste",
+      diagnostic: "tableau non conforme NF C 15-100, absence de différentiels suffisants",
+      resolution: "devis détaillé pour mise aux normes (souvent réalisable en 1 journée)",
+      priceFrom: 129,
+      duration: "diagnostic 1h, mise aux normes selon devis",
+    },
+    {
+      intervention: "prise qui ne fonctionne plus",
+      diagnostic: "faux contact ou prise endommagée",
+      resolution: "remplacement de la prise et vérification du circuit aval",
+      priceFrom: 59,
+      duration: "30 minutes",
+    },
+  ],
+};
+
+/**
+ * Génère un mini cas d'étude templated pour la ville.
+ * Format : "Récemment, [localisation générique], intervention pour [problème] : [diagnostic]. [résolution]. Tarif appliqué : XX€, durée XX."
+ * AUCUNE date précise, AUCUNE rue, AUCUN client nommé.
+ */
+export function generateCaseStudy(trade: Trade, city: City): {
+  title: string;
+  body: string;
+  priceFrom: number;
+  duration: string;
+} {
+  const studies = CASE_STUDIES[trade.slug] || CASE_STUDIES.plombier;
+  const study = selectByCombined(studies, city.slug + "-case", trade.slug);
+  const locations = GENERIC_LOCATIONS[city.department] || GENERIC_LOCATIONS["75"];
+  const location = selectByCombined(locations, city.slug + "-loc", trade.slug);
+
+  const arrival = getEstimatedArrival(city);
+
+  const body = `Récemment à ${city.name}, ${location}, nous sommes intervenus pour une ${study.intervention}. Diagnostic sur place : ${study.diagnostic}. ${study.resolution.charAt(0).toUpperCase() + study.resolution.slice(1)}. Délai d'arrivée : ${arrival}, durée d'intervention : ${study.duration}. Tarif annoncé d'avance : ${study.priceFrom}€ TTC, sans majoration et sans frais cachés.`;
+
+  return {
+    title: `Cas récent à ${city.name} : ${study.intervention}`,
+    body,
+    priceFrom: study.priceFrom,
+    duration: study.duration,
+  };
+}
+
+// ============================================
+// FAQ ENRICHIE PAR TYPE DE BÂTI
+// ============================================
+
+/**
+ * Pool de FAQ supplémentaires pour chaque combinaison métier × type de bâti.
+ * S'ajoute aux 3 FAQ universelles + 4-5 FAQ métier déjà générées.
+ * 2 questions par combinaison → diversité réelle entre villes.
+ */
+const BUILDING_TYPE_FAQ: Record<string, Record<BuildingType, FAQItem[]>> = {
+  plombier: {
+    "haussmannien": [
+      {
+        question: "Vous travaillez sur les colonnes montantes anciennes en immeuble haussmannien ?",
+        answer: "Oui. Sur le bâti haussmannien, les colonnes montantes communes (eau, évacuation) sont sous responsabilité du syndic — nous identifions précisément la limite privatif/parties communes et fournissons un devis adapté. Pour les interventions privatives (robinetterie, chauffe-eau, débouchage), nous intervenons directement avec un matériel adapté aux installations anciennes (raccords cuivre, fonte, plomb).",
+      },
+      {
+        question: "Que faire si la fuite vient de l'étage du dessus dans un immeuble ancien ?",
+        answer: "C'est fréquent en bâti haussmannien (canalisations vétustes). Nous diagnostiquons la source exacte avec caméra thermique et fournissons un constat écrit utilisable pour votre assurance dégât des eaux et la coordination avec le syndic. L'intervention privative reste à 89€ (recherche de fuite incluse).",
+      },
+    ],
+    "annees-30": [
+      {
+        question: "Les installations des années 30 sont-elles encore aux normes ?",
+        answer: "Pas toujours. Les canalisations en plomb de cette époque sont à remplacer en priorité (interdites pour l'eau potable depuis 2013). Nous fournissons un diagnostic visuel gratuit lors de toute intervention et un devis chiffré si remplacement nécessaire. Intervention courante (réparation, remplacement ponctuel) à partir de 89€.",
+      },
+      {
+        question: "Vous gérez les copropriétés dans les immeubles d'avant-guerre ?",
+        answer: "Oui. Sur ce type de bâti (souvent en copropriété ancienne), nous distinguons systématiquement parties privatives et communes, fournissons un devis et une facture conformes pour transmission au syndic, et intervenons en coordination avec le contrat d'assurance multirisque immeuble si besoin.",
+      },
+    ],
+    "grand-ensemble": [
+      {
+        question: "Comment se passe l'intervention en HLM ou bailleur social ?",
+        answer: "Nous intervenons à votre demande (locataire) avec un devis et une facture en bonne et due forme. Selon la nature du problème (privatif vs commun), nous vous orientons sur ce qui est à votre charge ou à celle du bailleur. Souvent les fuites sur colonnes communes, chaudières collectives et VMC relèvent du bailleur — nous vous le signalons clairement.",
+      },
+      {
+        question: "Qui paie : bailleur ou locataire en grand ensemble ?",
+        answer: "Règle générale : entretien courant (joints, débouchage, robinetterie, mitigeurs) = locataire. Réparations lourdes (canalisations encastrées, colonnes montantes, chaudière collective, fuite structurelle) = bailleur. Nous vous remettons un constat écrit qui clarifie la répartition pour transmission au bailleur ou au syndic.",
+      },
+    ],
+    "pavillonnaire": [
+      {
+        question: "Vous intervenez sur fosse septique ou assainissement non collectif ?",
+        answer: "Oui, sur les pavillons en zone non desservie par le tout-à-l'égout, nous intervenons sur les pompes de relevage, vannes et raccordements. Pour le vidangeage de fosse septique en lui-même, nous travaillons avec des partenaires spécialisés (intervention sous 24h en moyenne, devis à part).",
+      },
+      {
+        question: "Vous gérez l'évacuation des eaux pluviales d'une maison ?",
+        answer: "Oui. Sur les pavillons, nous intervenons sur les gouttières, descentes EP, regards et raccordements au réseau communal ou aux puits perdus. Diagnostic gratuit lors de l'intervention principale, devis chiffré si reprise importante nécessaire.",
+      },
+    ],
+    "moderne": [
+      {
+        question: "Vous intervenez sur des installations récentes RT 2012 / RE 2020 ?",
+        answer: "Oui. Les installations modernes (PER, multicouche, chaudières condensation, ballons thermodynamiques) sont notre quotidien. Nos plombiers sont formés sur les marques courantes : Atlantic, Saunier Duval, De Dietrich, Chappée, Thermor. Garantie pièces et main-d'œuvre.",
+      },
+      {
+        question: "Comment fonctionne le SAV sur une installation récente ?",
+        answer: "Si votre installation est sous garantie constructeur (généralement 2 à 10 ans selon l'élément), nous vous indiquons s'il faut activer la garantie ou si l'intervention sort du cadre garanti. Dans le doute, nous fournissons un diagnostic à 59€ (offert si vous validez l'intervention chez nous).",
+      },
+    ],
+  },
+  serrurier: {
+    "haussmannien": [
+      {
+        question: "Vous respectez les moulures et les portes anciennes ?",
+        answer: "Oui. Sur les portes haussmanniennes (souvent classées dans les copropriétés), nous privilégions toujours l'ouverture sans dégât (carte, crochetage). Si perçage indispensable, nous utilisons des techniques précises pour préserver le bois et les éléments décoratifs. Le syndic peut demander une fiche technique du cylindre installé : nous la fournissons.",
+      },
+      {
+        question: "Quelles serrures pour une porte palière dans un immeuble ancien ?",
+        answer: "Sur un immeuble haussmannien, on peut souvent rester sur une serrure 3 ou 5 points compatible avec l'épaisseur de porte d'origine. Nous travaillons les marques classiques (Picard, Vachette, Bricard, Fichet) et conseillons un cylindre A2P 1 ou 2 étoiles selon votre niveau de risque.",
+      },
+    ],
+    "annees-30": [
+      {
+        question: "Les portes des immeubles d'avant-guerre sont-elles compatibles avec les serrures modernes ?",
+        answer: "Dans la grande majorité des cas oui — il existe des cylindres et serrures adaptables aux épaisseurs et coffres anciens. Nous arrivons avec un stock varié pour pouvoir intervenir sans deuxième passage dans 90% des cas.",
+      },
+      {
+        question: "Faut-il prévenir le syndic en cas de remplacement de cylindre dans un immeuble des années 30 ?",
+        answer: "Non si vous changez votre serrure de porte palière (privative). Oui pour la porte d'entrée d'immeuble. Nous vous le signalons systématiquement avant intervention et adaptons le matériel au standard de la copropriété.",
+      },
+    ],
+    "grand-ensemble": [
+      {
+        question: "Comment se passe l'intervention en HLM pour une porte claquée ?",
+        answer: "Vous nous appelez, nous arrivons sous 30-45 minutes. Selon votre bail, vous êtes responsable de votre serrure : nous facturons l'intervention au prix annoncé (89€ porte claquée standard). Si problème sur la serrure du hall ou colonne commune, c'est le bailleur — nous vous orientons.",
+      },
+      {
+        question: "Le bailleur peut-il refuser un changement de serrure en grand ensemble ?",
+        answer: "En général non, vous pouvez changer votre serrure privative (porte palière) sans accord. Mais nous vous conseillons de garder l'ancienne serrure ou un double pour la restitution du logement. Nous fournissons une facture qui détaille la pose pour vos archives.",
+      },
+    ],
+    "pavillonnaire": [
+      {
+        question: "Vous intervenez sur les serrures de portails et garages ?",
+        answer: "Oui. En pavillonnaire, nous travaillons sur les serrures de portails (manuelles ou motorisées), portes de garage basculantes ou sectionnelles, et portes de jardin. Diagnostic sur place gratuit, devis chiffré avant intervention.",
+      },
+      {
+        question: "Recommandez-vous le blindage d'une maison individuelle ?",
+        answer: "Si votre maison est isolée ou en zone à risque, oui. Une porte blindée avec serrure A2P 3 étoiles + cornière anti-pince représente un investissement de 1 500 à 3 000€ (devis sur mesure). Pour une porte standard, le minimum recommandé est un cylindre A2P 2 étoiles (~120€).",
+      },
+    ],
+    "moderne": [
+      {
+        question: "Vous travaillez sur les serrures connectées et électroniques ?",
+        answer: "Oui. Nous installons et dépannons les serrures connectées des marques courantes (Somfy, Nuki, Yale, Tedee). Attention : pour les pannes électroniques (firmware, batterie), nous diagnostiquons puis indiquons si c'est réparable ou si un retour SAV constructeur est nécessaire.",
+      },
+      {
+        question: "Sur un immeuble récent, qui est responsable de la serrure ?",
+        answer: "Dans une copropriété récente, votre serrure de porte palière est privative — vous en êtes responsable. La porte commune (hall, parking) est du ressort du syndic. Nous vous le confirmons à l'arrivée.",
+      },
+    ],
+  },
+  electricien: {
+    "haussmannien": [
+      {
+        question: "Les installations électriques des immeubles haussmanniens sont-elles aux normes ?",
+        answer: "Rarement à 100%. Beaucoup d'appartements haussmanniens ont une installation des années 50-70 partiellement rénovée. Notre diagnostic NF C 15-100 (offert si intervention) signale les écarts (différentiel 30 mA, prises de terre, sections de câbles) et chiffre une mise aux normes. Possible par étapes pour étaler le coût.",
+      },
+      {
+        question: "Vous intervenez sur les colonnes électriques anciennes en immeuble parisien ?",
+        answer: "Pour la partie privative (depuis votre compteur), oui. Pour la colonne montante commune (entre compteurs et entrée d'immeuble), c'est généralement du ressort d'Enedis ou du syndic — nous vous orientons et fournissons un constat écrit si nécessaire.",
+      },
+    ],
+    "annees-30": [
+      {
+        question: "Les installations des années 30 sont-elles dangereuses ?",
+        answer: "Pas systématiquement, mais souvent à risque (anciens câbles isolés au tissu, absence de différentiel 30 mA, mise à la terre incomplète). Nous évaluons gratuitement l'état (lors de l'intervention principale) et vous remettons un constat clair. Mise en sécurité immédiate si danger réel.",
+      },
+      {
+        question: "Mise aux normes complète d'un appartement ancien : combien ça coûte ?",
+        answer: "Selon la surface et l'état initial, comptez entre 80€ et 150€ TTC le m² pour une mise aux normes complète NF C 15-100 (refonte tableau, prises, points lumineux, sécurité). Nous fournissons un devis détaillé après diagnostic à 59€ (offert si validation).",
+      },
+    ],
+    "grand-ensemble": [
+      {
+        question: "Le bailleur ou le locataire paie l'intervention électrique en HLM ?",
+        answer: "Règle générale : entretien courant (prise, interrupteur, ampoule, petit dépannage) = locataire. Tableau électrique, colonnes communes, panne structurelle = bailleur. Nous vous remettons un constat écrit qui détaille la responsabilité, utilisable pour réclamation auprès du bailleur si nécessaire.",
+      },
+      {
+        question: "Que faire en cas de coupure générale dans un grand ensemble ?",
+        answer: "D'abord vérifier si la coupure est privative (votre tableau) ou collective (palier ou immeuble entier). Si tout l'immeuble est concerné, c'est Enedis ou le syndic — appelez votre bailleur en priorité. Si seulement votre logement, nous intervenons en 30-45 min pour diagnostic et remise en service.",
+      },
+    ],
+    "pavillonnaire": [
+      {
+        question: "Vous intervenez sur les installations extérieures (jardin, abri, portail) ?",
+        answer: "Oui. En pavillonnaire, nous traitons les éclairages extérieurs, prises étanches, alimentation portail/visiophone, et les coffrets divisionnaires d'abri de jardin ou garage. Devis sur mesure si extension importante.",
+      },
+      {
+        question: "Vous installez une borne de recharge véhicule électrique ?",
+        answer: "Oui, sous réserve de capacité du compteur (évaluée gratuitement). Pour une borne 7 kW classique, comptez 800 à 1 500€ pose comprise (hors aides). Possibilité d'aide MaPrimeRénov' / crédit d'impôt selon votre situation — nous vous orientons.",
+      },
+    ],
+    "moderne": [
+      {
+        question: "Mon installation est récente, pourquoi des pannes ?",
+        answer: "Même les installations récentes (post-2002 conformes NF C 15-100) peuvent avoir des défauts : différentiels qui se déclenchent prématurément, prises mal serties, défauts d'isolement. Notre diagnostic identifie l'origine en 30-45 minutes (59€ offert si intervention).",
+      },
+      {
+        question: "Vous gérez le SAV sur une installation neuve sous garantie ?",
+        answer: "Si votre installation est sous garantie installateur ou décennale, nous vous indiquons s'il faut activer la garantie. Si vous préférez nous mandater directement (intervention immédiate), nous facturons au tarif standard mais vous pouvez ensuite vous retourner contre l'installateur initial — nous fournissons un constat technique adapté.",
+      },
+    ],
+  },
+};
+
+export function generateBuildingTypeFAQ(trade: Trade, city: City): FAQItem[] {
+  const buildingType = inferBuildingType(city);
+  const tradePool = BUILDING_TYPE_FAQ[trade.slug];
+  if (!tradePool) return [];
+  return tradePool[buildingType] || [];
+}
+
+// ============================================
+// VILLES VOISINES PAR DISTANCE (interlinking)
+// ============================================
+
+/**
+ * Retourne 3 à 5 villes voisines réelles triées par distance Haversine,
+ * avec leur slug pour interlinking. Filtrage strict :
+ *   - même département en priorité
+ *   - sinon départements limitrophes
+ *   - distance max 15 km
+ */
+export function getInterlinkNearbyCities(
+  city: City,
+  count: number = 5,
+): Array<{ name: string; slug: string; distanceKm: number }> {
+  const nearby = getNearbyCities(city, 30); // large pool puis on filtre
+  return nearby
+    .map((c) => {
+      const dx = c.coordinates.lat - city.coordinates.lat;
+      const dy = c.coordinates.lng - city.coordinates.lng;
+      // approx km : 1 deg lat ≈ 111 km, 1 deg lng ≈ 73 km à 48° de latitude
+      const distKm = Math.round(Math.sqrt((dx * 111) ** 2 + (dy * 73) ** 2));
+      return { name: c.name, slug: c.slug, distanceKm: distKm };
+    })
+    .filter((c) => c.distanceKm <= 15)
+    .slice(0, count);
+}
+
+// ============================================
+// INDICATEURS LOCAUX (tableau dynamique)
+// ============================================
+
+export interface LocalIndicator {
+  label: string;
+  value: string;
+}
+
+export function generateLocalIndicators(city: City): LocalIndicator[] {
+  const distKm = distanceFromParisKm(city);
+  const arrival = getEstimatedArrival(city);
+  const buildingType = inferBuildingType(city);
+  const buildingLabel = getBuildingTypeLabel(buildingType);
+
+  const indicators: LocalIndicator[] = [
+    {
+      label: "Code(s) postal/aux",
+      value: city.postalCodes.join(" / "),
+    },
+    {
+      label: "Département",
+      value: `${city.departmentName} (${city.department})`,
+    },
+  ];
+
+  if (city.population) {
+    indicators.push({
+      label: "Population",
+      value: `${formatPopulation(city.population)} habitants`,
+    });
+  }
+
+  indicators.push(
+    {
+      label: "Distance Paris-centre",
+      value: `≈ ${distKm} km`,
+    },
+    {
+      label: "Délai d'arrivée moyen",
+      value: arrival,
+    },
+    {
+      label: "Bâti dominant",
+      value: buildingLabel.charAt(0).toUpperCase() + buildingLabel.slice(1),
+    },
+  );
+
+  return indicators;
+}
+
+// ============================================
+// PARAGRAPHE BÂTI DOMINANT (intégré au "Pourquoi Joël")
+// ============================================
+
+/**
+ * Paragraphe descriptif du parc immobilier dominant, customisé par métier.
+ * S'ajoute en intro de la section "Pourquoi Joël" ou en bloc séparé.
+ */
+export function generateBuildingTypeParagraph(trade: Trade, city: City): string {
+  const buildingType = inferBuildingType(city);
+  const baseDesc = getBuildingTypeDescription(buildingType, city.name);
+
+  const tradeAddon: Record<string, Record<BuildingType, string>> = {
+    plombier: {
+      "haussmannien": ` Côté plomberie, on intervient régulièrement sur des canalisations en cuivre ou plomb d'origine, des robinetteries fines à préserver, et des chauffe-eau en cumulus à remplacer. Joël envoie un plombier formé à ces configurations.`,
+      "annees-30": ` Côté plomberie, le mix d'installations (parfois rénovées partiellement) demande un diagnostic précis avant tout remplacement. Nos plombiers identifient la nature exacte du réseau (cuivre, PER, multicouche) avant de proposer la réparation.`,
+      "grand-ensemble": ` Côté plomberie, nous intervenons fréquemment sur les colonnes communes (signalées au syndic ou au bailleur) et les installations privatives standardisées (chauffe-eau, robinetterie, débouchage). Devis et facture conformes pour transmission au bailleur si pertinent.`,
+      "pavillonnaire": ` Côté plomberie, nous traitons aussi bien les installations intérieures (cuisine, salle de bain, WC) que les extérieurs (gouttières, fosses, raccordements jardin). Matériel embarqué adapté aux deux configurations.`,
+      "moderne": ` Côté plomberie, les installations modernes (PER, multicouche, chaudières condensation) sont notre quotidien. Compatibilité avec les marques courantes du marché et SAV constructeur si pertinent.`,
+    },
+    serrurier: {
+      "haussmannien": ` Côté serrurerie, nous privilégions l'ouverture sans dégât pour préserver les portes anciennes (souvent classées en copropriété). Cylindres compatibles avec les coffres d'origine, conformité A2P et NF EN 1303.`,
+      "annees-30": ` Côté serrurerie, les portes des années 30 acceptent des cylindres et serrures modernes adaptés. Nous arrivons avec un stock varié pour intervenir sans deuxième passage dans la majorité des cas.`,
+      "grand-ensemble": ` Côté serrurerie, nous distinguons systématiquement votre serrure privative (à votre charge) et les serrures collectives (hall, parking) gérées par le bailleur ou syndic. Devis et facture conformes pour vos archives.`,
+      "pavillonnaire": ` Côté serrurerie, nous intervenons sur portes principales mais aussi portails, garages et portes de jardin. Diagnostic sur place gratuit, conseils sécurité (blindage, A2P) si pertinent.`,
+      "moderne": ` Côté serrurerie, nous installons et dépannons les serrures classiques mais aussi les serrures connectées (Somfy, Nuki, Yale). Diagnostic électronique inclus si pertinent.`,
+    },
+    electricien: {
+      "haussmannien": ` Côté électricité, beaucoup d'appartements haussmanniens ont une installation rénovée partiellement — notre diagnostic NF C 15-100 (offert si intervention) signale les écarts et chiffre une mise aux normes possible par étapes.`,
+      "annees-30": ` Côté électricité, les installations d'avant-guerre nécessitent souvent une mise aux normes complète. Nous fournissons un devis chiffré après diagnostic, et pouvons étaler les travaux si besoin.`,
+      "grand-ensemble": ` Côté électricité, nous traitons l'entretien courant (prise, interrupteur, dépannage) à votre charge, et identifions ce qui relève du tableau collectif ou du bailleur. Constat écrit fourni pour transmission.`,
+      "pavillonnaire": ` Côté électricité, nous intervenons aussi bien à l'intérieur (tableau, prises, panne) qu'à l'extérieur (éclairage, portail, borne de recharge VE). Diagnostic capacité compteur inclus si projet d'extension.`,
+      "moderne": ` Côté électricité, les installations récentes conformes NF C 15-100 simplifient les diagnostics. Matériel embarqué adapté aux marques courantes (Schneider, Legrand, Hager).`,
+    },
+  };
+
+  const addon = tradeAddon[trade.slug]?.[buildingType] || "";
+  return `${baseDesc}${addon}`;
+}
+
+// ============================================
 // GÉNÉRATION SEO COMPLÈTE
 // ============================================
 
@@ -1052,6 +1729,16 @@ export interface CityPageContent {
   localContext: string;
   /** Tarifs et délais détaillés par ville — paragraphe enrichi */
   pricingContext: string;
+  /** Type de bâti dominant inféré (haussmannien/années 30/grand ensemble/pavillonnaire/moderne) */
+  buildingType: BuildingType;
+  /** Paragraphe descriptif du parc immobilier dominant + spécificité métier */
+  buildingTypeParagraph: string;
+  /** Mini cas d'étude templated (ville + type d'intervention cohérent métier) */
+  caseStudy: ReturnType<typeof generateCaseStudy>;
+  /** Indicateurs locaux factuels (CP, distance, délai, etc.) */
+  localIndicators: LocalIndicator[];
+  /** Villes voisines (3-5) pour interlinking — slug + nom + distance km */
+  interlinkNearby: ReturnType<typeof getInterlinkNearbyCities>;
 }
 
 export function generateCityPageContent(
@@ -1074,6 +1761,11 @@ export function generateCityPageContent(
     whyJoel: generateWhyJoelSection(trade, city),
     localContext: generateCityLocalContext(trade, city),
     pricingContext: generatePricingContext(trade, city),
+    buildingType: inferBuildingType(city),
+    buildingTypeParagraph: generateBuildingTypeParagraph(trade, city),
+    caseStudy: generateCaseStudy(trade, city),
+    localIndicators: generateLocalIndicators(city),
+    interlinkNearby: getInterlinkNearbyCities(city, 5),
   };
 }
 

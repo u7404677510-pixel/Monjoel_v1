@@ -53,6 +53,11 @@ import { content as plombierCreteil } from "./content/plombier-creteil";
 import { content as plombierFontenayAuxRoses } from "./content/plombier-fontenay-aux-roses";
 import { content as plombierPantin } from "./content/plombier-pantin";
 import { content as plombierSaintMaurDesFosses } from "./content/plombier-saint-maur-des-fosses";
+import { content as plombierBoulogneBillancourt } from "./content/plombier-boulogne-billancourt";
+import { content as plombierVillejuif } from "./content/plombier-villejuif";
+import { content as plombierVitrySurSeine } from "./content/plombier-vitry-sur-seine";
+import { content as plombierClamart } from "./content/plombier-clamart";
+import { content as plombierChampignySurMarne } from "./content/plombier-champigny-sur-marne";
 
 // -- Plombier (pages service)
 import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
@@ -71,12 +76,15 @@ import { content as serrurierArgenteuil } from "./content/serrurier-argenteuil";
 import { content as serrurierBobigny } from "./content/serrurier-bobigny";
 import { content as serrurierSaintGermainEnLaye } from "./content/serrurier-saint-germain-en-laye";
 import { content as serrurierMeaux } from "./content/serrurier-meaux";
+import { content as serrurierFontenayAuxRoses } from "./content/serrurier-fontenay-aux-roses";
+import { content as serrurierVillejuif } from "./content/serrurier-villejuif";
 
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
 import { content as electricienIssyLesMoulineaux } from "./content/electricien-issy-les-moulineaux";
 import { content as electricienCourbevoie } from "./content/electricien-courbevoie";
 import { content as electricienMassy } from "./content/electricien-massy";
+import { content as electricienBoulogneBillancourt } from "./content/electricien-boulogne-billancourt";
 
 // ============================================
 // REGISTRE
@@ -130,6 +138,15 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierVilliersSurMarneRechercheFuite,
   plombierLongjumeauRechercheFuite,
   plombierQuincySousSenartDebouchageCanalisation,
+  // Batch 6 — extension géographique GSC mai 2026
+  plombierBoulogneBillancourt,
+  plombierVillejuif,
+  plombierVitrySurSeine,
+  plombierClamart,
+  plombierChampignySurMarne,
+  serrurierFontenayAuxRoses,
+  serrurierVillejuif,
+  electricienBoulogneBillancourt,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)

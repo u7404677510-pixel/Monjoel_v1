@@ -1,4 +1,4 @@
-import { getPriorityCities } from "@/lib/data/cities-idf";
+import { listPremiumByKind } from "@/lib/seo/premium/registry";
 import { buildCityMetadata, CityPageBody } from "@/lib/seo/premium/pageHelpers";
 
 const TRADE_SLUG = "electricien";
@@ -7,7 +7,10 @@ export const dynamicParams = true;
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  return getPriorityCities().map((city) => ({ ville: city.slug }));
+  // SEO post-désindexation 2026-05-04 : pre-build premium-only.
+  return listPremiumByKind("city")
+    .filter((p) => p.trade === TRADE_SLUG)
+    .map((p) => ({ ville: p.citySlug }));
 }
 
 export async function generateMetadata(props: { params: Promise<{ ville: string }> }) {
