@@ -341,7 +341,7 @@ function ServiceTextBlock({ trade }: ServiceTextBlockProps) {
       {/* Lien hub métier — underline jaune qui grandit gauche→droite au hover */}
       <Link
         href={trade.ctaHref}
-        className="group/link mt-8 inline-flex items-center gap-2 text-sm font-semibold text-joel-violet"
+        className="group/link mt-8 inline-flex items-center gap-2 text-sm font-semibold text-joel-violet min-h-[44px] py-2.5"
       >
         <span
           className="bg-linear-to-r from-joel-yellow to-joel-yellow bg-no-repeat pb-0.5 transition-[background-size] duration-300 ease-in-out group-hover/link:bg-size-[100%_2px]"

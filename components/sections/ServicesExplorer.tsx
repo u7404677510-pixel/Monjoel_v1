@@ -156,7 +156,7 @@ export default function ServicesExplorer() {
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActiveService(service)}
-                  className={`relative flex items-center gap-2 sm:gap-3 px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 ease-in-out ${
+                  className={`relative flex items-center justify-center gap-2 sm:gap-3 min-h-[44px] px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 ease-in-out ${
                     isActive
                       ? "bg-white text-joel-violet shadow-md"
                       : "text-white/80 hover:text-white hover:bg-white/10"

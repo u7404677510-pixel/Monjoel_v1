@@ -280,7 +280,7 @@ function MobileDrawer({ isOpen, onClose, phone, onCallClick, pathname }: MobileD
                 type="button"
                 onClick={onClose}
                 aria-label="Fermer le menu"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full text-zinc-600 hover:text-joel-violet hover:bg-joel-violet/5 transition-colors"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full text-zinc-600 hover:text-joel-violet hover:bg-joel-violet/5 transition-colors"
               >
                 <X size={22} aria-hidden="true" />
               </button>
@@ -455,18 +455,18 @@ export default function Navigation() {
                 onClick={handleCallClick}
                 data-placement="nav-main"
                 aria-label={`Appeler le ${config.phone_number}`}
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-joel text-white shadow-md shadow-joel-violet/20"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-gradient-joel text-white shadow-md shadow-joel-violet/20"
               >
-                <Phone size={16} aria-hidden="true" />
+                <Phone size={18} aria-hidden="true" />
               </a>
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Ouvrir le menu"
                 aria-expanded={isMobileMenuOpen}
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full text-zinc-700 hover:text-joel-violet hover:bg-joel-violet/5 transition-colors"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full text-zinc-700 hover:text-joel-violet hover:bg-joel-violet/5 transition-colors"
               >
-                <Menu size={22} aria-hidden="true" />
+                <Menu size={24} aria-hidden="true" />
               </button>
             </div>
           </div>

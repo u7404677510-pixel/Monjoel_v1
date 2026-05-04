@@ -646,10 +646,10 @@ function StickyMobileCTABar({
         <a
           href={`tel:${phoneTel}`}
           data-placement="metier-sticky-mobile"
-          className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-joel-yellow text-joel-violet font-bold text-sm rounded-full shadow-lg shadow-joel-yellow/40 shrink-0"
+          className="inline-flex items-center justify-center gap-2 px-5 min-h-[44px] bg-joel-yellow text-joel-violet font-bold text-sm rounded-full shadow-lg shadow-joel-yellow/40 shrink-0"
         >
-          <Phone size={15} className="animate-ring" />
-          <span className="text-xs sm:text-sm">{phoneNumber}</span>
+          <Phone size={16} className="animate-ring" />
+          <span className="text-sm">{phoneNumber}</span>
         </a>
       </div>
     </div>

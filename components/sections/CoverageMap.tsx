@@ -507,7 +507,7 @@ export default function CoverageMap() {
                   type="button"
                   onClick={() => setSelectedTrade(t.slug)}
                   aria-pressed={isActive}
-                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all min-h-[40px] ${
+                  className={`inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-bold transition-all min-h-[44px] ${
                     isActive
                       ? "bg-joel-yellow text-joel-violet shadow-lg shadow-joel-yellow/30"
                       : "text-white/80 hover:text-white hover:bg-white/8"
