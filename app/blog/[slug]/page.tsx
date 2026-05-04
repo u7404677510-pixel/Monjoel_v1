@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar, Phone, ArrowRight } from "lucide-react";
 import { blogArticles, getBlogArticleBySlug, getLatestBlogArticles, BlogArticle } from "@/lib/data/blog-articles";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -340,6 +341,12 @@ export default async function BlogArticlePage({ params }: PageProps) {
     ],
   };
 
+  // Tronque le titre breadcrumb à 50 chars (Google + UX)
+  const breadcrumbTitle =
+    article.title.length > 50
+      ? `${article.title.slice(0, 47).trim()}…`
+      : article.title;
+
   return (
     <>
       <script
@@ -347,10 +354,18 @@ export default async function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
+      <Breadcrumbs
+        mode="standalone"
+        items={[
+          { label: "Blog", href: "/blog" },
+          { label: breadcrumbTitle },
+        ]}
+      />
+
       <article className="min-h-screen bg-white">
         {/* Header */}
         <header className="bg-gray-50 border-b border-gray-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-8">
             {/* Back link */}
             <Link
               href="/blog"

@@ -7,6 +7,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { useSiteAsset } from "@/lib/hooks/useSiteAssets";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import PaymentLogos from "@/components/sections/PaymentLogos";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // Lazy-load — modal devis ouvert seulement au clic CTA. Économise ~30 KB gzip sur le first paint.
 const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
@@ -54,6 +55,14 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
         <div className="absolute inset-0 bg-linear-to-b from-white/90 via-white/70 to-white" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
+        {/* Breadcrumbs SEO + UX (sous le header fixed, en haut du hero) */}
+        <Breadcrumbs
+          className="mb-4"
+          items={[
+            { label: "Électricité", href: "/electricite" },
+            { label: title },
+          ]}
+        />
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center">
           {/* Content - Always first on mobile - No animation to ensure LCP element is visible */}
           <div className="order-1">

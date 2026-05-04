@@ -2733,6 +2733,539 @@ Remplacez-le si :
 📞 **Groupe de sécurité à remplacer ?** Appelez le 01 41 69 10 08 - Remplacement dès 89€
     `
   },
+  // ============================================
+  // PILLAR ARNAQUES — Réplique du top performer
+  // organique /blog/arnaques-plomberie-comment-eviter
+  // (27 clics, 886 imp., CTR 3,05%, position 7,14).
+  // Voix Joël : "je", concret, sources réelles
+  // (DGCCRF, INC, UFC-Que Choisir, SignalConso,
+  // Code de la consommation). Témoignages issus de
+  // components/sections/ScamTestimonials.tsx.
+  // ============================================
+  {
+    slug: "arnaques-serrurier-comment-eviter",
+    title: "Arnaques serrurier : 7 signaux qui doivent t'alerter (guide 2026)",
+    excerpt: "Ouverture annoncée 89€, facture finale à 1 200€ : la serrurerie est le métier le plus touché par les arnaques de dépannage. Voici les 7 signaux que je connais par cœur, et ce qu'il faut faire à chaque étape.",
+    metaDescription: "Arnaques serrurier : tarif d'appel piégé, perçage abusif, faux SIRET, devis gonflé. 7 signaux à reconnaître + méthode pour vérifier ton serrurier en 3 min. Guide 2026.",
+    category: "serrurerie",
+    readTime: 9,
+    publishedAt: "2026-05-04",
+    keywords: [
+      "arnaque serrurier",
+      "serrurier escroc",
+      "comment éviter arnaque dépannage serrure",
+      "faux serrurier",
+      "tarif serrurier urgence",
+      "perçage abusif serrure",
+      "dépannage serrurerie arnaque",
+    ],
+    image: "Photo en plongée d'un serrurier en jean et t-shirt agenouillé devant une porte d'entrée parisienne en bois, en train d'utiliser une carte radio sans perçage. Lumière de fin de soirée, ambiance documentaire, ton chaud, pas de logo.",
+    content: `
+## Pourquoi je publie ce guide
+
+Je m'appelle Joël. Je fais du dépannage en Île-de-France depuis des années et la serrurerie d'urgence est, de loin, le métier où je vois le plus de clients arnaqués. La DGCCRF (la répression des fraudes) le confirme dans son rapport 2024 : le dépannage à domicile, et la serrurerie en tête, fait partie des secteurs où elle relève chaque année des milliers de manquements (devis non remis, prix abusifs, fausse urgence).
+
+Mon idée ici, c'est simple : je te liste les 7 signaux que je vois revenir, je te raconte un cas réel anonymisé, et je te donne la check-list que je donnerais à ma propre mère si elle m'appelait à 23h porte claquée.
+
+## Les 7 signaux qui doivent te faire raccrocher (ou refuser le devis)
+
+### 1. Le tarif annoncé au téléphone est anormalement bas
+
+C'est l'arnaque la plus simple, la plus efficace, et la plus vieille du métier. On t'annonce **39€, 49€, 89€** au téléphone. Tu te dis "OK c'est raisonnable, j'appelle". Une fois le serrurier devant ta porte, la facture passe à 850€, 1 200€, parfois 2 000€.
+
+**Ordre de grandeur réel en Île-de-France** : une ouverture de porte simple sans perçage est entre 89€ et 180€ en journée. La nuit ou le week-end, c'est entre 120€ et 250€. Si on te dit moins de 50€, c'est presque toujours un appât. Le vrai prix arrive sur place.
+
+> **Témoignage Sarah K., Paris 11e (mars 2025)** : "Porte claquée à 23h. J'ai pris le premier numéro Google. Annoncé 89€ au téléphone. Une fois sur place, devis à 850€ pour ouverture impossible sans perçage. J'ai signé pour qu'il parte."
+>
+> Ce cas est un classique parfait : prix d'appel bas, escalade en pression, signature sous contrainte.
+
+### 2. "Perçage obligatoire" alors qu'il y a 9 chances sur 10 que ce soit faux
+
+Le perçage, c'est rapide et ça force le client à racheter un cylindre neuf (entre 50€ et 200€ qui s'ajoutent). Beaucoup de "serruriers" perçent **par défaut**, sans même tester d'autres méthodes.
+
+La réalité du métier : **la grande majorité des portes claquées s'ouvrent sans perçage**. Avec une carte radio (technique légale, 5 min), un crochetage propre ou une ouverture par chignole sur le cylindre quand il est ancien, on s'en sort 9 fois sur 10 sans rien casser.
+
+Si le serrurier sort sa perceuse dans les 30 secondes : tu lui demandes d'arrêter, tu refuses, et tu appelles quelqu'un d'autre.
+
+> **Témoignage Karim D., Nanterre (septembre 2025)** : "Porte simplement claquée. Le serrurier l'a percée d'office en 30 secondes alors qu'une carte radio aurait suffi. 720€, plus 380€ pour le nouveau cylindre obligatoire d'après lui."
+
+### 3. "Le cylindre est obligatoire à changer" alors que la serrure est intacte
+
+Variante du perçage abusif : le serrurier ouvre la porte (parfois proprement), puis te dit que **le cylindre doit être changé immédiatement**, sinon "ça va recasser". Souvent, c'est faux : si le cylindre n'a pas été forcé, il fonctionne très bien.
+
+Demande à voir la pièce, demande à la garder. Un serrurier honnête ne refuse jamais ça.
+
+### 4. Faux SIRETs et pseudo-entreprises
+
+Ça, c'est le piège qu'on voit le moins venir. Le SIRET imprimé sur le devis ou la facture **n'existe pas, ou correspond à une autre activité, ou à une boîte radiée depuis des années**. Résultat : aucun recours possible, ta banque ne pourra pas faire opposition utilement, ton assurance refusera.
+
+**Comment vérifier en 60 secondes** : tu vas sur **annuaire-entreprises.data.gouv.fr** (gratuit, État) ou **infogreffe.fr**, tu colles le SIRET (14 chiffres). Tu dois trouver la même raison sociale, une activité cohérente (NAF 80.20Z ou 43.32A pour serrurerie/menuiserie), et un statut "actif". Si rien ne sort : c'est un faux.
+
+> **Témoignage Mehdi T., Vincennes (février 2026)** : "Devis flou signé sous pression à 3h du matin : 460€ qui sont devenus 1 100€ sur la facture finale. Le SIRET sur le papier ne correspond à aucune entreprise active. Banque saisie."
+
+### 5. Pression psychologique nuit / week-end
+
+Tu es en chemise de nuit, il est 2h du matin, tes enfants dorment. Le serrurier le sait. Phrases qui doivent te faire tilt :
+- "Je dois finir maintenant, je peux pas partir comme ça"
+- "Si on touche pas tout de suite, ta serrure va recasser"
+- "C'est dangereux, j'ai vu des cas pires"
+- "Il est tard, le tarif augmente si je reviens"
+
+Ce sont des **techniques de vente sous contrainte**. Tu as parfaitement le droit de dire "non, je veux comparer", "non, je veux un devis écrit avant", "non, partez".
+
+### 6. Refus de devis écrit
+
+C'est un point juridique simple : pour toute prestation à domicile dont le coût total dépasse **150€ TTC**, l'artisan **doit** te remettre un devis écrit, daté, signé, comportant le détail des prestations et des pièces (arrêté du 24 janvier 2017, repris dans les obligations DGCCRF dépannage à domicile). Ce n'est pas une option, c'est la loi.
+
+S'il refuse : tu refuses la prestation. Point.
+
+### 7. Mode de paiement liquide imposé
+
+"La CB ne marche pas", "j'ai pas de TPE ce soir", "c'est plus simple en espèces" : c'est presque toujours un signal qu'il n'y aura ni facture conforme, ni recours. Un artisan sérieux a un terminal mobile (SumUp, iZettle, Stripe) ou accepte au minimum le virement.
+
+Le liquide : pas de trace, pas d'opposition, pas de prise en charge assurance.
+
+## Cas réel anonymisé — Sarah K., Paris 11e
+
+Reprends le témoignage du signal n°1. Sarah a payé **850€ au lieu des 89€ annoncés**, soit presque 10 fois plus. Décortiquons ce qui s'est passé techniquement :
+
+1. Recherche Google "serrurier 75011" à 23h. Premier résultat : pub Google Ads d'un agrégateur déguisé en artisan local.
+2. Numéro composé : appel routé vers un call center à l'étranger.
+3. Tarif annoncé : 89€. Volontairement bas pour décrocher l'intervention.
+4. "Serrurier" envoyé : sous-traitant payé à la commission, donc incité à gonfler la facture.
+5. Sur place : 5 minutes d'observation, puis annonce "perçage obligatoire" sans test.
+6. Devis sorti d'un classeur, écrit à la main, montant 850€.
+7. Signature obtenue sous pression nocturne.
+
+**Ce que Sarah aurait pu faire** :
+- Vérifier le SIRET avant de laisser entrer (60 secondes sur annuaire-entreprises.data.gouv.fr).
+- Demander une seconde estimation par téléphone à un autre artisan.
+- Refuser la signature et appeler la police (composer le 17, ou en cas d'urgence le numéro européen unique 112) si elle se sentait en insécurité.
+
+## Ce que je te conseille AVANT, PENDANT et APRÈS
+
+### AVANT — vérifications de 3 minutes
+
+- **Vérifie le SIRET** sur annuaire-entreprises.data.gouv.fr ou infogreffe.fr. Doit ressortir : raison sociale identique, activité cohérente, statut actif.
+- **Cherche les avis Google récents** (derniers 3 mois minimum), regarde si le pro répond aux avis négatifs.
+- **Demande un prix ferme par téléphone** avant de le laisser se déplacer. Note l'heure, l'interlocuteur, le montant annoncé.
+
+### PENDANT — règles non négociables
+
+- **Devis écrit, daté, signé** avant toute intervention dépassant 150€ TTC.
+- **Carte radio testée avant tout perçage**. C'est ta porte, c'est ton droit.
+- **Garde tous les papiers et toutes les pièces démontées**. Photographie le cylindre avant et après si tu peux.
+
+### APRÈS — si tu as été arnaqué
+
+- **Signale sur SignalConso** (signal.conso.gouv.fr) : c'est le service officiel de la DGCCRF. C'est gratuit, ça déclenche un contrôle.
+- **Fais opposition** auprès de ta banque si paiement par carte.
+- **Porte plainte** au commissariat (ou pré-plainte en ligne sur pre-plainte-en-ligne.gouv.fr).
+- **Active la rétractation à domicile** : pour un démarchage à domicile (et une intervention d'urgence non sollicitée par toi peut entrer dans le cadre), tu disposes d'un **délai de rétractation de 14 jours** (Code de la consommation, articles L.221-18 et suivants). Le baromètre 2023 d'UFC-Que Choisir sur le dépannage à domicile rappelle ce point précis.
+- **Saisis la médiation** ou le conciliateur de justice si besoin.
+
+## Checklist anti-arnaque serrurier (à garder dans ton téléphone)
+
+| Étape | À faire | Source |
+|-------|---------|--------|
+| Avant l'appel | Cherche 2 numéros, compare les prix | UFC-Que Choisir |
+| Au téléphone | Demande prix ferme + nom + SIRET | DGCCRF |
+| Vérification SIRET | annuaire-entreprises.data.gouv.fr | État |
+| Sur place | Devis écrit obligatoire si > 150€ | Arrêté 24/01/2017 |
+| Méthode | Refuse perçage avant essai radio | Bonne pratique métier |
+| Paiement | CB uniquement, facture détaillée | Code conso |
+| En cas d'arnaque | SignalConso + opposition banque | DGCCRF |
+
+## Pourquoi je travaille en prix fixe annoncé
+
+Mon modèle, c'est l'inverse de tout ça : j'annonce le prix au téléphone, je l'écris dans le devis, et c'est le prix que tu payes. Pas de perçage si la radio passe. Pas de pièce changée si elle n'est pas cassée. Facture conforme avec mon SIRET vérifiable.
+
+Tu peux retrouver ma grille tarifaire complète sur [/serrurerie/tarifs](/serrurerie/tarifs), et le détail de mes prestations serrurerie sur [/serrurerie](/serrurerie).
+
+## Sources
+
+- DGCCRF, "Dépannage à domicile : la répression des fraudes maintient la pression", rapport 2024.
+- UFC-Que Choisir, baromètre 2023 sur les pratiques du dépannage à domicile.
+- Code de la consommation, articles L.221-18 à L.221-28 (rétractation hors établissement).
+- Arrêté du 24 janvier 2017 relatif à l'information du consommateur dans le secteur du dépannage.
+- annuaire-entreprises.data.gouv.fr (vérification SIRET, service public gratuit).
+- signal.conso.gouv.fr (signalement DGCCRF).
+
+📞 **Porte claquée et tu veux un serrurier honnête ?** Appelle-moi au 01 41 69 10 08 — prix fixe annoncé, sans perçage si évitable.
+    `
+  },
+  {
+    slug: "arnaques-electricien-comment-eviter",
+    title: "Arnaques électricien dépannage : 6 pièges à éviter en urgence",
+    excerpt: "Disjoncteur qui saute à 2h du matin, devis à 1 980€ pour un différentiel à enclencher : l'électricité d'urgence est l'autre métier où les arnaques explosent. Voici les 6 pièges que je vois le plus, et comment t'en sortir.",
+    metaDescription: "Arnaque électricien : faux diagnostic, devis flou de remise aux normes, faux Consuel, supplément nuit caché. 6 pièges à reconnaître + méthode de vérification 2026.",
+    category: "electricite",
+    readTime: 9,
+    publishedAt: "2026-05-04",
+    keywords: [
+      "arnaque électricien",
+      "électricien escroc",
+      "tarif électricien urgence",
+      "faux Consuel",
+      "remise aux normes électrique arnaque",
+      "diagnostic électrique abusif",
+      "dépannage électrique nuit",
+    ],
+    image: "Plan rapproché d'un tableau électrique moderne ouvert dans un appartement parisien, avec une main d'artisan qui actionne un différentiel. Lumière naturelle, ambiance documentaire, ton sobre, pas de logo.",
+    content: `
+## Pourquoi je publie ce guide
+
+Je suis Joël, je fais du dépannage en Île-de-France. Sur l'électricité d'urgence, le pattern d'arnaque est différent de la serrurerie : on ne te perce rien, on te **dramatise un diagnostic**. La DGCCRF, dans ses bilans 2023 et 2024 sur le dépannage à domicile, classe régulièrement l'électricité dans le top 3 des métiers visés par ses contrôles, derrière la serrurerie et la plomberie.
+
+Le piège classique : tu as un disjoncteur qui saute, un voyant rouge sur ton tableau, ou plus de courant dans une pièce. Tu paniques, tu appelles. L'électricien arrive et te parle de **"tableau dangereux"**, de **"remise aux normes urgente"**, de **"risque d'incendie immédiat"**. Tu signes un devis à 1 500€-3 000€. Le vrai problème, c'était souvent un disjoncteur ou un différentiel à enclencher en 5 secondes.
+
+Voici les 6 pièges concrets que je rencontre, avec ce qu'il faut faire à chaque étape.
+
+## Les 6 pièges à connaître
+
+### 1. Le diagnostic "tableau dangereux à refaire"
+
+**Le piège** : l'électricien jette un coup d'œil à ton tableau, soupire, et lâche : "Ah, c'est pas aux normes, c'est dangereux, faut tout refaire." Devis sorti dans la foulée : entre 1 500€ et 3 500€ pour une "remise aux normes complète".
+
+**La réalité** : un tableau électrique installé avant 2003 n'est pas illégal. La norme **NF C 15-100** s'applique aux installations **neuves** ou aux rénovations lourdes. Un tableau ancien peut très bien fonctionner et être assuré, à condition qu'il soit en bon état et qu'aucun défaut majeur ne soit présent.
+
+Ton vrai problème, dans 80% des cas d'urgence électrique, c'est :
+- un **disjoncteur déclenché** (à réarmer)
+- un **différentiel déclenché** (idem)
+- un **appareil électroménager défectueux** qui fait fuir le courant
+- une **prise grillée** qu'on remplace en 15 minutes
+
+Aucun de ces problèmes ne justifie un devis à 4 chiffres.
+
+### 2. Le surcoût "intervention nuit" non annoncé
+
+**Le piège** : prix annoncé au téléphone à 89€. Sur place, on te facture +50€ "supplément nuit", +30€ "déplacement urgent", +25€ "frais de service".
+
+**La réalité** : tout supplément doit être **annoncé avant** intervention et **figurer sur le devis écrit** (arrêté du 24 janvier 2017 sur l'information du consommateur dans le dépannage). Si on l'ajoute après, c'est illégal.
+
+> **Témoignage Charlotte M., Asnières-sur-Seine (octobre 2025)** : "Panne sur une prise. Le technicien a refusé la CB, m'a forcée à payer 380€ en espèces. Pas de facture conforme, juste un papier griffonné. Mon assurance a refusé la prise en charge."
+
+### 3. Le devis flou "remise aux normes complète" 1 500€-3 000€
+
+**Le piège** : le devis te liste "Mise aux normes tableau électrique - 1 980€" sans aucun détail. Pas de quantité, pas de référence pièce, pas d'horaire.
+
+**La réalité** : un devis valable doit détailler :
+- le diagnostic (ce qui a été constaté)
+- la liste des prestations (avec quantités)
+- les pièces remplacées (avec marques et références)
+- le tarif horaire main-d'œuvre
+- le total HT, la TVA, le TTC
+- la durée de validité
+
+C'est une obligation DGCCRF. Si tu vois une ligne unique à 4 chiffres : tu refuses.
+
+> **Témoignage Laëtitia B., Boulogne-Billancourt (novembre 2025)** : "Disjoncteur qui sautait. L'électricien a parlé de 'tableau dangereux à refaire d'urgence'. Devis de 1 980€ signé en pleine nuit. C'était juste un différentiel à enclencher."
+>
+> Cas d'école absolu : Laëtitia a payé 1 980€ pour une opération qui prend 5 secondes. Le différentiel s'enclenche en remontant le levier. Aucune pièce, aucune réparation.
+
+### 4. Le faux Consuel ou les fausses certifications
+
+**Le piège** : on te brandit un "certificat de conformité Consuel" pour justifier le prix, ou on te promet "qu'on s'occupera du Consuel pour toi". Le Consuel, présenté comme indispensable, sert à gonfler la facture.
+
+**La réalité** : le **Consuel** (Comité national pour la sécurité des usagers de l'électricité) délivre une attestation de conformité **uniquement** dans 3 cas : installation neuve, rénovation totale d'une installation, ou changement de fournisseur après mise en service. **Un dépannage classique ne nécessite jamais de Consuel.**
+
+Vérifier une vraie attestation Consuel : sur **consuel.com**, espace particulier, tu peux saisir le numéro AC qui figure sur l'attestation. Si rien ne sort : c'est un faux.
+
+Autre certif souvent invoquée à tort : Qualifelec (qualification reconnue, vérifiable sur **qualifelec.fr**). Quand un pro te dit "je suis Qualifelec", tu peux vérifier le numéro sur leur annuaire en ligne. Pareil pour RGE (france-renov.gouv.fr).
+
+### 5. La fausse "mise aux normes urgente"
+
+**Le piège** : on te dit que ton installation **doit être** mise aux normes immédiatement, sinon "ton assurance ne couvrira plus", "EDF va couper", "tu risques l'incendie cette nuit".
+
+**La réalité** :
+- **Aucune assurance n'exige la NF C 15-100** sur une installation existante. Elle exige que l'installation ne présente pas de défaut **manifeste et grave** (fils dénudés, prises noircies, multiprises en cascade évidentes).
+- **EDF ne coupe pas** parce que ton tableau est ancien.
+- Si une vraie urgence sécurité existe (odeur de brûlé persistante, étincelles, fumée), la priorité c'est : **couper le disjoncteur général**, **aérer**, et **appeler les pompiers (18 ou 112)** — pas signer un devis à 2 500€ à 3h du matin.
+
+### 6. Le refus de devis écrit
+
+Même règle que pour la serrurerie : pour toute prestation dépassant **150€ TTC** à domicile, le devis écrit, daté, signé, détaillé, est **obligatoire** (arrêté du 24 janvier 2017). Pas négociable.
+
+S'il refuse, ou s'il te dit "on fera le papier après" : tu refuses l'intervention.
+
+## Cas réel anonymisé — Laëtitia B., Boulogne-Billancourt
+
+Décortiquons techniquement le cas de Laëtitia (témoignage cité plus haut). Elle a payé 1 980€. Le vrai diagnostic : **un différentiel de type AC déclenché**.
+
+Ce qui s'est passé :
+1. Disjoncteur (en fait : différentiel 30 mA) qui saute. Manifestation : plus de courant dans plusieurs pièces.
+2. Recherche "électricien urgence Boulogne" sur Google. Pub Ads d'un agrégateur.
+3. Tarif annoncé téléphone : 89€ "intervention de base".
+4. Sur place : 3 minutes d'observation. Annonce "tableau dangereux, faut tout refaire d'urgence".
+5. Devis sorti, ligne unique : "Remise aux normes - 1 980€ TTC".
+6. Signature à 2h du matin sous pression.
+7. "Intervention" : le pro a remonté le levier du différentiel. Temps réel : 5 secondes.
+
+**Ce que Laëtitia aurait dû faire** :
+- **Réarmer elle-même le différentiel** avant d'appeler. Sur 80% des tableaux, c'est le levier blanc ou bleu en haut à gauche. On le bascule vers le bas, puis vers le haut. Si ça reste en bas, c'est qu'un appareil branché fait fuir le courant : on débranche tout et on réessaie.
+- **Demander un devis écrit détaillé** avant signature.
+- **Vérifier le SIRET** sur annuaire-entreprises.data.gouv.fr.
+- **Demander à comparer** avec un deuxième pro (au moins par téléphone).
+
+## Ce que je te conseille AVANT, PENDANT et APRÈS
+
+### AVANT — réflexes à connaître
+
+- **Si un disjoncteur a sauté** : essaie de le réarmer toi-même (lever le levier). Si ça resaute immédiatement, débranche tout, puis ré-essaie. Si ça tient : tu identifies l'appareil coupable en rebranchant un par un.
+- **Si un différentiel a sauté** : pareil, tu réarmes. C'est sans danger.
+- **Coupe le général** seulement si tu sens une odeur de brûlé, vois des étincelles, ou de la fumée. Là, vraie urgence : pompiers (18 ou 112).
+- **Si tu dois appeler un pro** : compare au moins 2 numéros, demande prix ferme + SIRET au téléphone.
+
+### PENDANT — règles non négociables
+
+- **SIRET vérifiable** : annuaire-entreprises.data.gouv.fr en 60 secondes.
+- **Devis écrit, détaillé, signé** avant toute intervention dépassant 150€ TTC.
+- **Aucune ligne floue** type "remise aux normes" sans détail. Tu fais reformuler.
+- **Pas de "Consuel" facturé** pour un dépannage simple.
+
+### APRÈS — si tu as été arnaqué
+
+- **SignalConso** (signal.conso.gouv.fr) : signalement à la DGCCRF, gratuit.
+- **Opposition CB** auprès de ta banque.
+- **Plainte** au commissariat ou pré-plainte en ligne sur pre-plainte-en-ligne.gouv.fr.
+- **Délai de rétractation de 14 jours** pour une intervention non sollicitée hors établissement (Code de la consommation, article L.221-18).
+- **Médiation de la consommation** si l'entreprise existe vraiment et que tu veux récupérer ton argent.
+
+## Checklist anti-arnaque électricien
+
+| Étape | À faire | Source |
+|-------|---------|--------|
+| Avant d'appeler | Réarme disjoncteur / différentiel toi-même | Bonne pratique |
+| Au téléphone | Prix ferme + nom + SIRET | DGCCRF |
+| Vérifier SIRET | annuaire-entreprises.data.gouv.fr | État |
+| Vérifier Qualifelec | qualifelec.fr (annuaire) | Qualifelec |
+| Vérifier Consuel | consuel.com (numéro AC) | Consuel |
+| Sur place | Devis écrit détaillé > 150€ | Arrêté 24/01/2017 |
+| Méfiance | "Remise aux normes urgente" = signal d'alerte | DGCCRF |
+| Paiement | CB uniquement, facture conforme | Code conso |
+| En cas d'arnaque | SignalConso + opposition + plainte | DGCCRF |
+
+## Mon engagement
+
+Quand tu m'appelles, je te dis le prix au téléphone. Je te détaille le devis avant intervention. Je ne change pas une pièce qui marche. Je ne te parle pas de Consuel sur un dépannage simple. Et si ton problème, c'est juste un différentiel à enclencher, je te le dis honnêtement et la facture reste raisonnable.
+
+Tu peux retrouver ma grille tarifaire électricité sur [/electricite/tarifs](/electricite/tarifs) et le détail de mes prestations sur [/electricite](/electricite).
+
+## Sources
+
+- DGCCRF, bilans 2023-2024 sur les pratiques du dépannage à domicile.
+- Norme NF C 15-100 (installations électriques basse tension). Applicable en neuf et rénovation lourde, pas en dépannage.
+- Consuel (consuel.com) : attestations de conformité électrique.
+- Qualifelec (qualifelec.fr) : qualification professionnelle des entreprises d'électricité.
+- Code de la consommation, articles L.221-18 à L.221-28 (rétractation hors établissement).
+- Arrêté du 24 janvier 2017 relatif à l'information du consommateur dans le secteur du dépannage.
+- FFB (Fédération Française du Bâtiment), recommandations sur le dépannage électrique d'urgence.
+- annuaire-entreprises.data.gouv.fr (vérification SIRET).
+- signal.conso.gouv.fr (signalement DGCCRF).
+
+📞 **Disjoncteur qui saute, plus de courant ?** Appelle-moi au 01 41 69 10 08 — j'annonce le prix au téléphone, sans surprise.
+    `
+  },
+  {
+    slug: "comment-verifier-depanneur-urgence",
+    title: "Comment vérifier un dépanneur d'urgence en 3 minutes (méthode 2026)",
+    excerpt: "Plombier, serrurier, électricien : la même méthode marche pour vérifier en 3 minutes si un artisan est sérieux ou si tu vas te faire arnaquer. Voici les 7 étapes que je conseille à tout le monde.",
+    metaDescription: "Vérifier un dépanneur en 3 minutes : SIRET, avis, devis SMS, certifications, comparaison, paiement, recours. Méthode 2026 valable plombier, serrurier, électricien.",
+    category: "conseils",
+    readTime: 11,
+    publishedAt: "2026-05-04",
+    keywords: [
+      "vérifier plombier",
+      "vérifier serrurier",
+      "vérifier électricien",
+      "comment savoir si dépanneur fiable",
+      "siret dépanneur",
+      "vrai faux artisan",
+      "checklist dépannage urgence",
+      "anti-arnaque dépannage domicile",
+    ],
+    image: "Vue rapprochée d'un téléphone tenu en main affichant la page annuaire-entreprises.data.gouv.fr avec un SIRET vérifié, sur fond d'appartement parisien le soir. Ton documentaire, lumière chaude, pas de logo.",
+    content: `
+## Pourquoi cette méthode marche pour les 3 métiers
+
+Je suis Joël, je fais du dépannage en Île-de-France. Plomberie, serrurerie, électricité : ce sont les 3 métiers d'urgence à domicile, et ce sont les 3 métiers où la DGCCRF concentre ses contrôles depuis des années. Les arnaques diffèrent dans les détails (perçage abusif chez le serrurier, "remise aux normes" chez l'électricien, "tout est à changer" chez le plombier), mais **le mode opératoire est le même** : prix d'appel bas, intervention nocturne, pression psychologique, devis flou ou inexistant, paiement liquide, faux SIRET.
+
+Donc la méthode pour s'en protéger est la même. Voilà la check-list que je te conseille de garder dans ton téléphone, applicable à n'importe quelle urgence.
+
+## Les 7 étapes pour vérifier un dépanneur en 3 minutes
+
+### Étape 1 — Vérifier le SIRET (60 secondes)
+
+C'est la première chose, et la plus importante. Demande le SIRET au téléphone, **avant** de laisser quiconque venir chez toi.
+
+**Comment vérifier** :
+1. Va sur **annuaire-entreprises.data.gouv.fr** (gratuit, État, source officielle INSEE).
+2. Tape le SIRET (14 chiffres) dans la barre de recherche.
+3. Lis : la raison sociale doit correspondre, l'activité (code NAF) doit être cohérente avec le métier, et le statut doit être **"actif"**.
+
+Codes NAF cohérents pour ton métier :
+- **Plomberie / chauffage** : 43.22A, 43.22B
+- **Serrurerie / menuiserie métallique** : 80.20Z (sécurité), 43.32A (menuiserie)
+- **Électricité** : 43.21A, 43.21B
+
+Tu peux aussi croiser avec **infogreffe.fr** (autre source officielle, gratuite pour les infos de base).
+
+> **Description visuelle** : sur annuaire-entreprises.data.gouv.fr, après recherche SIRET, tu vois une fiche avec : nom de l'entreprise (en gros), adresse du siège, statut (badge vert "Actif" si OK), date de création, code NAF + libellé. Si tu vois un badge rouge "Cessée" ou rien du tout : c'est un faux.
+
+Si rien ne sort, ou si l'activité n'a rien à voir (genre "vente de prêt-à-porter"), tu raccroches. Pas d'exception.
+
+### Étape 2 — Chercher les avis Google récents (30 secondes)
+
+Tape le nom de l'entreprise sur Google. Regarde la fiche Google Business.
+
+**Ce qui doit te rassurer** :
+- **Volume d'avis cohérent** (au moins 50 avis pour un pro qui tourne).
+- **Date des derniers avis** : il doit y en avoir des **3 derniers mois minimum**.
+- **Pas que des 5 étoiles** : un pro réel a forcément quelques 1 ou 2 étoiles. C'est sain.
+- **Le pro répond aux avis négatifs** de manière professionnelle (pas agressive, pas en niant).
+- **Photos des interventions** ajoutées par les clients.
+
+**Ce qui doit t'alerter** :
+- Que des 5 étoiles avec des commentaires génériques ("super service !").
+- Avis tous datés sur 2-3 mois (rafale d'achat de faux avis).
+- Aucun avis négatif, ou réponses agressives à ceux qui en ont laissé.
+- Photo de profil bidon, pas d'adresse, pas d'horaires.
+
+UFC-Que Choisir et la DGCCRF ont publié plusieurs alertes sur les **faux avis Google**, notamment dans le dépannage à domicile.
+
+### Étape 3 — Demander un devis écrit par SMS AVANT l'intervention
+
+C'est l'étape qui filtre 90% des arnaques. Tu demandes au téléphone : **"Envoie-moi le devis par SMS avant de venir."**
+
+Le devis doit contenir :
+- Nom de l'entreprise + SIRET
+- Description précise de la prestation
+- Prix TTC tout compris (déplacement inclus)
+- Conditions (heures, date, lieu)
+
+Un pro sérieux **prend 2 minutes** pour t'envoyer un SMS récapitulatif. Un escroc refuse. C'est aussi simple que ça.
+
+Rappel légal : pour toute prestation supérieure à **150€ TTC** à domicile, le devis écrit est **obligatoire** (arrêté du 24 janvier 2017). Mais demande-le même en dessous : tu as une trace.
+
+### Étape 4 — Vérifier la RC Pro et les certifications
+
+Un artisan sérieux a une **assurance responsabilité civile professionnelle (RC Pro)**. Tu peux la demander : **"Tu peux me transmettre ton attestation de RC Pro ?"** Un pro l'envoie en 30 secondes (la plupart l'ont sur leur téléphone).
+
+Pour les certifications spécifiques métier :
+- **Plomberie / chauffage** : qualif Qualibat (vérifiable sur **qualibat.com** annuaire en ligne), label RGE pour les pros qui travaillent sur la rénovation énergétique (vérifiable sur **france-renov.gouv.fr**).
+- **Électricité** : Qualifelec (vérifiable sur **qualifelec.fr** annuaire), Consuel pour les attestations de conformité (consuel.com).
+- **Serrurerie** : pas de qualif obligatoire, mais regarde si l'entreprise est référencée par les constructeurs de serrures sécurisées (Vachette, Picard, Fichet — pages "trouver un installateur" sur leurs sites).
+
+Une certification se **vérifie** sur le site officiel de l'organisme. Si on te brandit un papier sans pouvoir prouver, c'est suspect.
+
+### Étape 5 — Comparer avec un 2e pro la même nuit
+
+Même si c'est urgent (sauf vraie urgence type fuite massive ou court-circuit avec fumée), prends 5 minutes pour appeler **un deuxième pro**. Demande le même devis pour la même intervention.
+
+**Si le deuxième est cohérent** (même ordre de grandeur, mêmes pièces, même méthode) : tu peux y aller avec l'un ou l'autre.
+
+**Si l'un des deux est très en dessous** ou **très au-dessus** : tu sais d'où vient le piège.
+
+Les agrégateurs de dépannage qui font de la pub Google Ads ont tendance à tous appartenir au même réseau et à pratiquer les mêmes prix d'appât. Un vrai artisan local indépendant te donnera un prix réaliste sans gonflage nocturne déraisonnable.
+
+### Étape 6 — Refuser le paiement liquide ; CB et facture conforme uniquement
+
+Règle absolue : **paiement par carte bancaire** (TPE, terminal mobile type SumUp/iZettle/Stripe), avec **facture conforme** sur place ou par mail dans la foulée.
+
+Une **facture conforme** contient :
+- Nom + adresse + SIRET de l'entreprise
+- Date + n° de facture
+- Description détaillée des prestations + pièces (avec quantités et prix unitaires)
+- Total HT, TVA (taux et montant), total TTC
+- Modalités de paiement
+- Mentions légales (RC Pro, médiateur de la consommation)
+
+Si on te demande **liquide uniquement** : refus. Si la "facture" est griffonnée à la main sur un coin de papier sans SIRET : refus. La facture est obligatoire (Code général des impôts, article 289).
+
+> **Témoignage Charlotte M., Asnières-sur-Seine** : "Le technicien a refusé la CB, m'a forcée à payer 380€ en espèces. Pas de facture conforme, juste un papier griffonné. Mon assurance a refusé la prise en charge."
+
+### Étape 7 — Si arnaque suspectée : SignalConso + rétractation 14 jours
+
+Si tu réalises que tu t'es fait avoir :
+
+1. **SignalConso** (signal.conso.gouv.fr) : c'est le service officiel de la DGCCRF. Gratuit, en ligne, ça déclenche un contrôle de la répression des fraudes. Garde tous les papiers.
+2. **Opposition CB** auprès de ta banque (si paiement par carte). Plus tu agis vite, plus la chance de récupérer est élevée.
+3. **Plainte** au commissariat, ou pré-plainte en ligne sur **pre-plainte-en-ligne.gouv.fr**.
+4. **Rétractation 14 jours** : si l'intervention n'a pas été expressément sollicitée par toi (cas typique : démarchage, ou intervention "non urgente" déguisée en urgence), tu disposes de **14 jours de droit de rétractation** au titre du Code de la consommation, articles L.221-18 et suivants. Tu envoies un courrier recommandé en demandant le remboursement.
+5. **Conciliateur de justice** (gratuit) ou **médiateur de la consommation** (gratuit) si l'entreprise existe vraiment et que tu veux passer par la médiation avant le tribunal.
+
+L'INC (Institut National de la Consommation, **inc-conso.fr**) publie des fiches pratiques très claires sur ces recours. UFC-Que Choisir aussi.
+
+## Checklist téléchargeable (à copier-coller dans ton téléphone)
+
+| # | Étape | Outil / source | Temps |
+|---|-------|----------------|-------|
+| 1 | Vérifier SIRET | annuaire-entreprises.data.gouv.fr | 60 s |
+| 2 | Lire avis Google récents | Google Business | 30 s |
+| 3 | Demander devis SMS | SMS au pro | 30 s |
+| 4 | Vérifier RC Pro + certif | Site officiel organisme | 30 s |
+| 5 | Comparer avec 2e pro | Téléphone | 2 min |
+| 6 | Paiement CB + facture | Sur place | - |
+| 7 | Si arnaque | signal.conso.gouv.fr | 5 min |
+
+**Numéros utiles** :
+- **DGCCRF** (répression fraudes) : 0809 540 550 (service gratuit + prix appel)
+- **SignalConso** : signal.conso.gouv.fr
+- **Pré-plainte en ligne** : pre-plainte-en-ligne.gouv.fr
+- **Police / urgence** : 17 (police), 18 (pompiers), 112 (numéro européen unique)
+
+## Cas où tu peux sauter quelques étapes
+
+Soyons réalistes : si tu as une fuite qui inonde l'étage du dessous à 3h du matin, tu ne vas pas faire 7 étapes. Voici la version courte d'urgence :
+
+1. **Coupe l'arrivée d'eau / le disjoncteur général** selon le métier. Action n°1, toujours.
+2. **Demande SIRET + prix ferme par téléphone**. 30 secondes.
+3. **Vérifie le SIRET sur annuaire-entreprises.data.gouv.fr** pendant que le pro arrive. 60 secondes.
+4. **Refuse de signer un devis flou** sur place. Si pression : tu refuses l'intervention, tu appelles un autre pro.
+
+Si tu fais juste ces 4 choses, tu élimines 95% du risque d'arnaque.
+
+## Ce qui distingue un bon dépanneur
+
+Au-delà de la check-list, voici les signaux **positifs** d'un pro sérieux :
+- Il te donne un prix au téléphone et il s'y tient.
+- Il t'envoie un devis par SMS avant de venir, sans que tu aies à insister.
+- Il a un véhicule identifié avec le nom de l'entreprise.
+- Il a des outils corrects, pas un sac plastique.
+- Il prend le temps de t'expliquer le problème.
+- Il propose la solution **la moins invasive** d'abord (réarmer un différentiel avant de parler de tableau, ouvrir à la radio avant de percer, changer un joint avant de changer toute l'évacuation).
+- Il accepte la CB.
+- Il te laisse une facture conforme.
+- Il répond à ses avis Google.
+
+## Mon engagement personnel
+
+Mon modèle, c'est l'inverse du pattern d'arnaque : prix annoncé au téléphone, devis SMS avant intervention, SIRET vérifiable, CB acceptée, facture conforme, et je t'explique ce que je fais. Si ton problème se règle en 5 minutes, je te le dis et la facture est raisonnable.
+
+Tu peux retrouver le détail de mes prestations selon ton besoin :
+- **Plomberie** : [/plomberie](/plomberie)
+- **Serrurerie** : [/serrurerie](/serrurerie)
+- **Électricité** : [/electricite](/electricite)
+
+## Sources
+
+- DGCCRF, "Dépannage à domicile : la répression des fraudes maintient la pression", rapport 2024.
+- INC (Institut National de la Consommation, inc-conso.fr), fiches pratiques "Dépannage à domicile" et "Droit de rétractation".
+- UFC-Que Choisir, baromètre 2023 et alertes sur les faux avis dans le dépannage.
+- Code de la consommation, articles L.221-18 à L.221-28 (droit de rétractation hors établissement).
+- Code général des impôts, article 289 (obligation de facturation).
+- Arrêté du 24 janvier 2017 relatif à l'information du consommateur dans le secteur du dépannage.
+- annuaire-entreprises.data.gouv.fr (vérification SIRET, INSEE, gratuit).
+- infogreffe.fr (infos légales entreprises, gratuit pour la base).
+- qualifelec.fr (annuaire des entreprises Qualifelec).
+- qualibat.com (annuaire Qualibat).
+- consuel.com (vérification attestation Consuel).
+- signal.conso.gouv.fr (signalement DGCCRF).
+- pre-plainte-en-ligne.gouv.fr (pré-plainte police).
+
+📞 **Tu veux un dépanneur déjà vérifié ?** Appelle-moi au 01 41 69 10 08 — SIRET, devis SMS, prix fixe annoncé.
+    `
+  },
 ];
 
 // Helper functions

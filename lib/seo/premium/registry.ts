@@ -58,12 +58,26 @@ import { content as plombierVillejuif } from "./content/plombier-villejuif";
 import { content as plombierVitrySurSeine } from "./content/plombier-vitry-sur-seine";
 import { content as plombierClamart } from "./content/plombier-clamart";
 import { content as plombierChampignySurMarne } from "./content/plombier-champigny-sur-marne";
+// -- Plombier Batch 7 — extension SEO 2 mai 2026 (pages ville)
+import { content as plombierAntony } from "./content/plombier-antony";
+import { content as plombierRueilMalmaison } from "./content/plombier-rueil-malmaison";
+import { content as plombierLevalloisPerret } from "./content/plombier-levallois-perret";
+import { content as plombierIssyLesMoulineaux } from "./content/plombier-issy-les-moulineaux";
+import { content as plombierCourbevoie } from "./content/plombier-courbevoie";
+import { content as plombierPuteaux } from "./content/plombier-puteaux";
+import { content as plombierSuresnes } from "./content/plombier-suresnes";
+import { content as plombierBagneux } from "./content/plombier-bagneux";
+import { content as plombierSceaux } from "./content/plombier-sceaux";
+import { content as plombierRosnySousBois } from "./content/plombier-rosny-sous-bois";
 
 // -- Plombier (pages service)
 import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
 import { content as plombierVilliersSurMarneRechercheFuite } from "./content/plombier-villiers-sur-marne-recherche-fuite";
 import { content as plombierLongjumeauRechercheFuite } from "./content/plombier-longjumeau-recherche-fuite";
 import { content as plombierQuincySousSenartDebouchageCanalisation } from "./content/plombier-quincy-sous-senart-debouchage-canalisation";
+// -- Plombier Batch 7 — pages service Paris fact-checked (capitalisation GSC)
+import { content as plombierParis15DebouchageCanalisation } from "./content/plombier-paris-15-debouchage-canalisation";
+import { content as plombierParis17DebouchageWc } from "./content/plombier-paris-17-debouchage-wc";
 
 // -- Serrurier (pages ville)
 import { content as serrurierParis11 } from "./content/serrurier-paris-11";
@@ -78,6 +92,17 @@ import { content as serrurierSaintGermainEnLaye } from "./content/serrurier-sain
 import { content as serrurierMeaux } from "./content/serrurier-meaux";
 import { content as serrurierFontenayAuxRoses } from "./content/serrurier-fontenay-aux-roses";
 import { content as serrurierVillejuif } from "./content/serrurier-villejuif";
+// -- Serrurier Batch 8 — extension géographique 4 mai 2026
+import { content as serrurierAntony } from "./content/serrurier-antony";
+import { content as serrurierRueilMalmaison } from "./content/serrurier-rueil-malmaison";
+import { content as serrurierChampignySurMarne } from "./content/serrurier-champigny-sur-marne";
+import { content as serrurierVitrySurSeine } from "./content/serrurier-vitry-sur-seine";
+import { content as serrurierClamart } from "./content/serrurier-clamart";
+import { content as serrurierIvrySurSeine } from "./content/serrurier-ivry-sur-seine";
+
+// -- Serrurier Batch 8 — pages service Paris (post-suppression reproduction-cles)
+import { content as serrurierParis11ChangementCylindre } from "./content/serrurier-paris-11-changement-cylindre";
+import { content as serrurierParis15OuvertureSansPercage } from "./content/serrurier-paris-15-ouverture-sans-percage";
 
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
@@ -85,6 +110,9 @@ import { content as electricienIssyLesMoulineaux } from "./content/electricien-i
 import { content as electricienCourbevoie } from "./content/electricien-courbevoie";
 import { content as electricienMassy } from "./content/electricien-massy";
 import { content as electricienBoulogneBillancourt } from "./content/electricien-boulogne-billancourt";
+// -- Électricien Batch 8 — extension géographique 4 mai 2026
+import { content as electricienRueilMalmaison } from "./content/electricien-rueil-malmaison";
+import { content as electricienAntony } from "./content/electricien-antony";
 
 // ============================================
 // REGISTRE
@@ -147,6 +175,32 @@ const _allPremiumPages: PremiumPageContent[] = [
   serrurierFontenayAuxRoses,
   serrurierVillejuif,
   electricienBoulogneBillancourt,
+  // Batch 7 — extension SEO plombier 2 mai 2026
+  // 10 villes Hauts-de-Seine et Seine-Saint-Denis + 2 services Paris (15 débouchage canalisation, 17 débouchage WC)
+  plombierAntony,
+  plombierRueilMalmaison,
+  plombierLevalloisPerret,
+  plombierIssyLesMoulineaux,
+  plombierCourbevoie,
+  plombierPuteaux,
+  plombierSuresnes,
+  plombierBagneux,
+  plombierSceaux,
+  plombierRosnySousBois,
+  plombierParis15DebouchageCanalisation,
+  plombierParis17DebouchageWc,
+  // Batch 8 — extension serrurier+électricien 4 mai 2026
+  // 6 serruriers city + 2 serruriers service Paris (post-suppression reproduction-cles) + 2 électriciens city
+  serrurierAntony,
+  serrurierRueilMalmaison,
+  serrurierChampignySurMarne,
+  serrurierVitrySurSeine,
+  serrurierClamart,
+  serrurierIvrySurSeine,
+  serrurierParis11ChangementCylindre,
+  serrurierParis15OuvertureSansPercage,
+  electricienRueilMalmaison,
+  electricienAntony,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)

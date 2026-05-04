@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Phone, ArrowRight, Clock, Shield, Euro, MapPin, Users } from "lucide-react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import type { City } from "@/lib/data/cities-idf-types";
 import { Trade, Service } from "@/lib/data/services-definition";
 import type { CityPageContent, ServicePageContent } from "@/lib/seo/city-content";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // Lazy-load — modal devis ouvert seulement au clic CTA. Critique sur les 7869 pages SEO.
 const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
@@ -59,33 +59,22 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
             transition={{ duration: 0.6 }}
           >
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="hover:text-joel-violet transition-colors">
-                Accueil
-              </Link>
-              <span>/</span>
-              <Link 
-                href={`/${trade.slug === "plombier" ? "plomberie" : trade.slug === "electricien" ? "electricite" : "serrurerie"}`}
-                className="hover:text-joel-violet transition-colors"
-              >
-                {trade.name}
-              </Link>
-              <span>/</span>
-              {service ? (
-                <>
-                  <Link 
-                    href={`/${trade.slug}/${city.slug}`}
-                    className="hover:text-joel-violet transition-colors"
-                  >
-                    {city.name}
-                  </Link>
-                  <span>/</span>
-                  <span className="text-gray-700">{service.name}</span>
-                </>
-              ) : (
-                <span className="text-gray-700">{city.name}</span>
-              )}
-            </div>
+            <Breadcrumbs
+              className="mb-6"
+              items={[
+                {
+                  label: trade.name,
+                  href: `/${trade.slug === "plombier" ? "plomberie" : trade.slug === "electricien" ? "electricite" : "serrurerie"}`,
+                },
+                ...(service
+                  ? [
+                      { label: city.name, href: `/${trade.slug}/${city.slug}` },
+                      { label: service.name },
+                    ]
+                  : [{ label: city.name }]),
+              ]}
+            />
+
 
             {/* Artisans disponibles - Urgence */}
             <div className="inline-flex items-center gap-2 bg-joel-violet/5 border border-joel-violet/20 text-joel-violet px-3 py-1.5 rounded-full text-sm font-medium mb-3">

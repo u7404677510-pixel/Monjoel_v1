@@ -29,6 +29,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# SEO cache local (fallback quand Supabase indispo)
+/data/seo-cache.json
+# GCP service account JSON (ne JAMAIS commiter)
+*-service-account*.json
+gcp-key*.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -10,6 +10,7 @@ import { PremiumPageContent } from "@/lib/seo/premium/types";
 import { getPersona } from "@/lib/seo/premium/personas";
 import { Markdown } from "@/lib/seo/premium/renderMarkdown";
 import MidPageCTA from "@/components/MidPageCTA";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // Lazy-load — modal devis ouvert seulement au clic CTA. Critique sur les 7869 pages premium SEO.
 const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
@@ -46,19 +47,18 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
 
         <div className="relative max-w-5xl mx-auto px-5 md:px-8">
           {/* Breadcrumb */}
-          <nav aria-label="Fil d'Ariane" className="text-sm text-gray-500 mb-6">
-            <Link href="/" className="hover:text-joel-violet">Accueil</Link>
-            <span className="mx-2">›</span>
-            <Link href={`/${trade.slug}`} className="hover:text-joel-violet">{trade.name}</Link>
-            <span className="mx-2">›</span>
-            <Link href={`/${trade.slug}/${city.slug}`} className="hover:text-joel-violet">{city.name}</Link>
-            {service && (
-              <>
-                <span className="mx-2">›</span>
-                <span className="text-gray-700">{service.name}</span>
-              </>
-            )}
-          </nav>
+          <Breadcrumbs
+            className="mb-6"
+            items={[
+              { label: trade.name, href: `/${trade.slug}` },
+              ...(service
+                ? [
+                    { label: city.name, href: `/${trade.slug}/${city.slug}` },
+                    { label: service.name },
+                  ]
+                : [{ label: city.name }]),
+            ]}
+          />
 
           {/* H1 + intro */}
           <h1 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">

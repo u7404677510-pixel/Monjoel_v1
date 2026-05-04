@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Phone, Check, AlertTriangle, Clock, Shield, Star, ArrowRight } from "lucide-react";
 import ClientSchema from "@/components/ClientSchema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Tarifs Serrurier Paris 2026 | Prix Réels & Fixes dès 89€",
@@ -260,6 +261,14 @@ export default function TarifsSerrureriePage() {
     <>
       <ClientSchema schema={pricingSchema} id="pricing-schema" />
       <ClientSchema schema={faqSchema} id="faq-schema" />
+
+      <Breadcrumbs
+        mode="standalone"
+        items={[
+          { label: "Serrurerie", href: "/serrurerie" },
+          { label: "Tarifs" },
+        ]}
+      />
 
       {/* Hero */}
       <section className="bg-gradient-joel text-white py-16 md:py-24">

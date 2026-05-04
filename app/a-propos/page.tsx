@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Shield, Users, Award, Heart, Phone, Star } from "lucide-react";
 import MidPageCTA from "@/components/MidPageCTA";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const values = [
   {
@@ -68,7 +69,9 @@ function AProposHeroCTA() {
 
 export default function AProposPage() {
   return (
-    <div className="pt-32 pb-16">
+    <>
+      <Breadcrumbs mode="standalone" items={[{ label: "À propos" }]} />
+      <div className="pt-8 pb-16">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -199,6 +202,7 @@ export default function AProposPage() {
         />
       </div>
     </div>
+    </>
   );
 }
 

@@ -15,6 +15,7 @@ import { motion } from "motion/react";
 import { Send, Mail, MapPin, CheckCircle, Loader2, Phone, Wrench, Truck, FileCheck, ShieldCheck, ChevronDown } from "lucide-react";
 import PhoneButton from "@/components/PhoneButton";
 import MidPageCTA from "@/components/MidPageCTA";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const REQUEST_TYPES = [
   { value: "question", label: "Question avant intervention" },
@@ -90,7 +91,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-32 pb-16">
+    <>
+      <Breadcrumbs mode="standalone" items={[{ label: "Contact" }]} />
+      <div className="pt-8 pb-16">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -395,5 +398,6 @@ export default function ContactPage() {
         />
       </div>
     </div>
+    </>
   );
 }

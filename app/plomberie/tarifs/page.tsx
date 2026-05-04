@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Phone, Check, AlertTriangle, Clock, Shield, Star, ArrowRight, Droplets } from "lucide-react";
 import ClientSchema from "@/components/ClientSchema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Tarifs Plombier Paris 2026 | Prix Réels & Fixes dès 69€",
@@ -260,6 +261,14 @@ export default function TarifsPlomberiePage() {
     <>
       <ClientSchema schema={pricingSchema} id="pricing-schema" />
       <ClientSchema schema={faqSchema} id="faq-schema" />
+
+      <Breadcrumbs
+        mode="standalone"
+        items={[
+          { label: "Plomberie", href: "/plomberie" },
+          { label: "Tarifs" },
+        ]}
+      />
 
       {/* Hero */}
       <section className="bg-linear-to-br from-blue-600 to-blue-800 text-white py-16 md:py-24">

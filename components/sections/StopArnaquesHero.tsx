@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { AlertTriangle } from "lucide-react";
 import { useSiteAsset } from "@/lib/hooks/useSiteAssets";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function StopArnaquesHero() {
   // Slot dynamique : scène conceptuelle facture déchirée 890€ → 89€ Joël.
@@ -17,6 +18,11 @@ export default function StopArnaquesHero() {
       <div className="absolute bottom-0 left-10 w-48 h-48 bg-joel-mauve/15 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
+        {/* Breadcrumbs SEO + UX */}
+        <Breadcrumbs
+          className="mb-6"
+          items={[{ label: "Stop arnaques" }]}
+        />
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-12 items-center">
           {/* ── Côté gauche : H1 + lead ─────────────────────────────────── */}
           <div className="text-center lg:text-left">

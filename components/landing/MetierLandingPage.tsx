@@ -59,6 +59,7 @@ import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import { useSiteAsset } from "@/lib/hooks/useSiteAssets";
 import HubFAQ from "@/components/sections/HubFAQ";
 import PaymentLogos from "@/components/sections/PaymentLogos";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // Lazy-load — modal devis ouvert seulement au clic CTA backup
 const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
@@ -693,6 +694,24 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
          ═══════════════════════════════════════════════════════════════════ */}
       <div className="pt-20 md:pt-24">
         <LiveActivityTicker trade={config.slug} />
+      </div>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          0.bis BREADCRUMBS — fil d'Ariane SEO + Schema BreadcrumbList JSON-LD
+         ═══════════════════════════════════════════════════════════════════ */}
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-3">
+        <Breadcrumbs
+          items={[
+            {
+              label:
+                config.slug === "plomberie"
+                  ? "Plomberie"
+                  : config.slug === "serrurerie"
+                    ? "Serrurerie"
+                    : "Électricité",
+            },
+          ]}
+        />
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════

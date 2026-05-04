@@ -17,6 +17,7 @@ import {
   Quote,
   ChevronDown,
 } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const trades = [
   { value: "serrurerie", label: "Serrurerie", icon: KeyRound },
@@ -145,7 +146,9 @@ export default function RecrutementPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-16 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5 relative overflow-hidden">
+    <>
+    <Breadcrumbs mode="standalone" items={[{ label: "Recrutement" }]} />
+    <div className="min-h-screen pt-8 pb-16 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5 relative overflow-hidden">
       {/* Background decorations continues */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-joel-violet/8 rounded-full blur-3xl" />
@@ -585,5 +588,6 @@ export default function RecrutementPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

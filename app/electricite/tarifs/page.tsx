@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Phone, Check, AlertTriangle, Clock, Shield, Star, ArrowRight, Zap } from "lucide-react";
 import ClientSchema from "@/components/ClientSchema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Tarifs Électricien Paris 2026 | Prix Réels & Fixes dès 59€",
@@ -230,6 +231,14 @@ export default function TarifsElectricitePage() {
     <>
       <ClientSchema schema={pricingSchema} id="pricing-schema" />
       <ClientSchema schema={faqSchema} id="faq-schema" />
+
+      <Breadcrumbs
+        mode="standalone"
+        items={[
+          { label: "Électricité", href: "/electricite" },
+          { label: "Tarifs" },
+        ]}
+      />
 
       {/* Hero */}
       <section className="bg-linear-to-br from-amber-500 to-amber-700 text-white py-16 md:py-24">
