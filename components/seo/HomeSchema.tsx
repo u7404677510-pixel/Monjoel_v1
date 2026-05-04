@@ -2,13 +2,15 @@
  * HomeSchema - Server Component
  *
  * Rend un graphe JSON-LD unique (`@graph`) pour la homepage MonJoel.
- * Contient 4 entités : Organization, WebSite, EmergencyService (LocalBusiness)
- * et FAQPage. Les references croisées sont faites via `@id` (pattern Schema.org
- * recommandé par Google Rich Results).
+ * Contient 5 entités : Organization, WebSite, EmergencyService (LocalBusiness),
+ * Person (Joël fondateur — boost E-E-A-T) et FAQPage. Les references croisées
+ * sont faites via `@id` (pattern Schema.org recommandé par Google Rich Results).
  *
  * Pas de "use client" : Server Component pur — le JSON-LD est rendu côté serveur,
  * directement crawlable par Google sans hydratation JS.
  */
+
+import { generatePersonJoelSchema } from "@/lib/seo/person-schema";
 
 const BASE_URL = "https://monjoel.fr";
 const ORG_ID = `${BASE_URL}/#organization`;
@@ -70,10 +72,22 @@ export default function HomeSchema() {
           addressRegion: "Île-de-France",
           addressCountry: "FR",
         },
-        areaServed: {
-          "@type": "AdministrativeArea",
-          name: "Île-de-France",
-        },
+        // ServiceArea précis : 8 départements IDF + région.
+        // Plus précis que "Île-de-France" seul → meilleure interprétation Google
+        // pour le local pack. AdministrativeArea = type accepté Rich Results.
+        areaServed: [
+          { "@type": "AdministrativeArea", name: "Île-de-France" },
+          { "@type": "AdministrativeArea", name: "Paris (75)" },
+          { "@type": "AdministrativeArea", name: "Seine-et-Marne (77)" },
+          { "@type": "AdministrativeArea", name: "Yvelines (78)" },
+          { "@type": "AdministrativeArea", name: "Essonne (91)" },
+          { "@type": "AdministrativeArea", name: "Hauts-de-Seine (92)" },
+          { "@type": "AdministrativeArea", name: "Seine-Saint-Denis (93)" },
+          { "@type": "AdministrativeArea", name: "Val-de-Marne (94)" },
+          { "@type": "AdministrativeArea", name: "Val-d'Oise (95)" },
+        ],
+        // Lien fondateur → Person (E-E-A-T)
+        founder: { "@id": `${BASE_URL}/#person-joel` },
         contactPoint: [
           {
             "@type": "ContactPoint",
@@ -261,7 +275,12 @@ export default function HomeSchema() {
       },
 
       // ============================================
-      // 4. FAQ PAGE
+      // 4. PERSON — Joël (fondateur, signal E-E-A-T)
+      // ============================================
+      generatePersonJoelSchema(),
+
+      // ============================================
+      // 5. FAQ PAGE
       // ============================================
       {
         "@type": "FAQPage",

@@ -78,6 +78,9 @@ import { content as plombierQuincySousSenartDebouchageCanalisation } from "./con
 // -- Plombier Batch 7 — pages service Paris fact-checked (capitalisation GSC)
 import { content as plombierParis15DebouchageCanalisation } from "./content/plombier-paris-15-debouchage-canalisation";
 import { content as plombierParis17DebouchageWc } from "./content/plombier-paris-17-debouchage-wc";
+// -- Plombier Batch 9 — extension Vague 3 mai 2026 (banlieues 93/94, partiel post-crash)
+import { content as plombierSaintDenis } from "./content/plombier-saint-denis";
+import { content as plombierAulnaySousBois } from "./content/plombier-aulnay-sous-bois";
 
 // -- Serrurier (pages ville)
 import { content as serrurierParis11 } from "./content/serrurier-paris-11";
@@ -103,6 +106,9 @@ import { content as serrurierIvrySurSeine } from "./content/serrurier-ivry-sur-s
 // -- Serrurier Batch 8 — pages service Paris (post-suppression reproduction-cles)
 import { content as serrurierParis11ChangementCylindre } from "./content/serrurier-paris-11-changement-cylindre";
 import { content as serrurierParis15OuvertureSansPercage } from "./content/serrurier-paris-15-ouverture-sans-percage";
+// -- Serrurier Batch 9 — extension Vague 3 mai 2026 (partiel post-crash)
+import { content as serrurierAsnieresSurSeine } from "./content/serrurier-asnieres-sur-seine";
+import { content as serrurierVersailles } from "./content/serrurier-versailles";
 
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
@@ -113,6 +119,9 @@ import { content as electricienBoulogneBillancourt } from "./content/electricien
 // -- Électricien Batch 8 — extension géographique 4 mai 2026
 import { content as electricienRueilMalmaison } from "./content/electricien-rueil-malmaison";
 import { content as electricienAntony } from "./content/electricien-antony";
+// -- Électricien Batch 9 — extension Vague 3 mai 2026 (Paris arrondissements, partiel post-crash)
+import { content as electricienParis11 } from "./content/electricien-paris-11";
+import { content as electricienParis15 } from "./content/electricien-paris-15";
 
 // ============================================
 // REGISTRE
@@ -201,6 +210,14 @@ const _allPremiumPages: PremiumPageContent[] = [
   serrurierParis15OuvertureSansPercage,
   electricienRueilMalmaison,
   electricienAntony,
+  // Batch 9 — extension Vague 3 (4 mai 2026, partiel post-crash agents)
+  // Compléments à venir : 13 plombier + 10 serrurier + 8 électricien restants
+  plombierSaintDenis,
+  plombierAulnaySousBois,
+  serrurierAsnieresSurSeine,
+  serrurierVersailles,
+  electricienParis11,
+  electricienParis15,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)

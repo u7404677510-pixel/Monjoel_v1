@@ -9,6 +9,7 @@ import { Trade, Service } from "@/lib/data/services-definition";
 import { PremiumPageContent } from "@/lib/seo/premium/types";
 import { getPersona } from "@/lib/seo/premium/personas";
 import { Markdown } from "@/lib/seo/premium/renderMarkdown";
+import type { ContextualLink } from "@/lib/seo/premium/contextualLinks";
 import MidPageCTA from "@/components/MidPageCTA";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -22,12 +23,18 @@ interface PremiumPageRendererProps {
   trade: Trade;
   city: City;
   service?: Service;
+  /**
+   * Liens contextuels (calculés serveur) à injecter DANS le corps des sections.
+   * Map sectionIndex → ContextualLink. Renforce le maillage interne profond
+   * (≠ menu/footer/breadcrumbs) — boost SEO de pertinence locale.
+   */
+  contextualLinks?: Map<number, ContextualLink>;
 }
 
 const PHONE = "01 41 69 10 08";
 const PHONE_INTL = "+33141691008";
 
-export default function PremiumPageRenderer({ content, trade, city, service }: PremiumPageRendererProps) {
+export default function PremiumPageRenderer({ content, trade, city, service, contextualLinks }: PremiumPageRendererProps) {
   const persona = getPersona(content.authorPersona);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(0);
@@ -135,19 +142,31 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
 
       {/* ============================================ */}
       {/* SECTIONS RÉDACTIONNELLES */}
+      {/* + injection des liens contextuels (maillage interne profond) */}
       {/* ============================================ */}
       <section className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-5 md:px-8">
-          {content.sections.map((sec) => (
-            <article key={sec.anchor} id={sec.anchor} className="mb-12 scroll-mt-24">
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-5 border-l-4 border-joel-violet pl-4">
-                {sec.title}
-              </h2>
-              <div>
-                <Markdown>{sec.body}</Markdown>
-              </div>
-            </article>
-          ))}
+          {content.sections.map((sec, idx) => {
+            const link = contextualLinks?.get(idx);
+            return (
+              <article key={sec.anchor} id={sec.anchor} className="mb-12 scroll-mt-24">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-5 border-l-4 border-joel-violet pl-4">
+                  {sec.title}
+                </h2>
+                <div>
+                  <Markdown>{sec.body}</Markdown>
+                </div>
+                {link && (
+                  // Lien contextuel : phrase narrative en italique discret,
+                  // intégrée à la suite de la section. Voix Joël, pas un encart.
+                  // <div> (et non <p>) car Markdown génère son propre <p> interne.
+                  <div className="mt-5 text-gray-600 italic text-base leading-relaxed border-l-2 border-joel-violet/30 pl-4 [&>p]:mb-0 [&>p]:italic [&>p]:text-gray-600">
+                    <Markdown>{link.sentence}</Markdown>
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
       </section>
 

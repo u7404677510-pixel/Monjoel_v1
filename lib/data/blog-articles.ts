@@ -3266,6 +3266,945 @@ Tu peux retrouver le détail de mes prestations selon ton besoin :
 📞 **Tu veux un dépanneur déjà vérifié ?** Appelle-moi au 01 41 69 10 08 — SIRET, devis SMS, prix fixe annoncé.
     `
   },
+  // ============================================
+  // PILLAR GUIDES — Vague 3 mai 2026
+  // 4 nouveaux articles pillar pour étendre la
+  // couverture de mots-clés à fort intent :
+  // tarifs plombier, normes électriques NF C 15-100,
+  // sécurité serrure (cylindre A2P), dépannage
+  // urgence nuit/weekend. Voix Joël, sources
+  // réelles (DGCCRF, INC, FFB, AFNOR, CNPP, codes
+  // consommation/construction, arrêté 24/01/2017).
+  // Témoignages réutilisés depuis ScamTestimonials.
+  // ============================================
+  {
+    slug: "tarifs-plombier-2026-guide-prix",
+    title: "Tarifs plombier 2026 : guide complet des prix justes (Paris/IDF)",
+    excerpt: "Combien coûte vraiment un plombier en 2026 ? Tarif débouchage WC, fuite, chauffe-eau, intervention de nuit : voici les prix moyens en Île-de-France et la méthode pour lire un devis sans se faire piéger.",
+    metaDescription: "Tarifs plombier 2026 en IDF : prix débouchage WC, fuite, chauffe-eau, intervention nuit/weekend. Tableaux détaillés, base légale (TVA 10%, arrêté 24/01/2017) et conseils pour lire un devis.",
+    category: "plomberie",
+    readTime: 10,
+    publishedAt: "2026-05-04",
+    keywords: [
+      "tarif plombier",
+      "prix plombier urgence",
+      "combien coute plombier",
+      "tarif débouchage WC",
+      "prix dépannage plombier nuit",
+      "tarif plombier paris",
+      "prix plombier IDF",
+      "majoration nuit plombier",
+    ],
+    image: "Photo en gros plan d'une main d'artisan en train de remettre un devis papier détaillé à un client devant un évier de cuisine, avec un sac à outils ouvert au sol et un carnet à souches. Lumière naturelle de jour, ambiance documentaire chaude, pas de logo.",
+    content: `
+## Pourquoi je publie ma grille de prix
+
+Je m'appelle Joël, je fais du dépannage en plomberie en Île-de-France depuis des années. La question qui revient le plus, et de loin, c'est : **"C'est combien ?"** Et j'aime autant te dire que sur Google, tu vas tomber sur tout et son contraire : 49€ "à partir de", 1 200€ pour un débouchage, des comparateurs qui mélangent l'entretien programmé et l'urgence à 3h du matin.
+
+Ce guide, c'est ma photo réelle des prix pratiqués en Île-de-France en 2026. Je te donne **les ordres de grandeur du marché** (tels qu'on les voit dans les baromètres UFC-Que Choisir et les bilans DGCCRF sur le dépannage à domicile), puis **mes prix fixes à moi**, et enfin **ce que dit la loi** sur les majorations et les obligations du devis.
+
+L'idée, c'est qu'à la fin tu saches lire n'importe quel devis et reconnaître un prix juste d'un prix gonflé.
+
+## Tableau des prix moyens plombier en Île-de-France (2026)
+
+Voici les fourchettes que je vois pratiquées en IDF, en journée, du lundi au vendredi 8h-18h. Ce sont des **ordres de grandeur**, pas des tarifs officiels (il n'en existe pas, le métier est libre).
+
+| Intervention | Fourchette marché IDF (jour) | Mon prix Joël (fixe) |
+|--------------|------------------------------|----------------------|
+| Débouchage WC simple (ventouse / furet manuel) | 80€ - 180€ | 89€ |
+| Débouchage WC complexe (furet électrique) | 150€ - 300€ | 149€ |
+| Débouchage évier / lavabo | 70€ - 160€ | 79€ |
+| Débouchage canalisation principale | 200€ - 450€ | 219€ |
+| Recherche de fuite (test acoustique simple) | 100€ - 250€ | 129€ |
+| Recherche de fuite (caméra thermique) | 250€ - 600€ | 289€ |
+| Réparation fuite robinet (changement joint) | 60€ - 130€ | 69€ |
+| Remplacement robinet (mitigeur évier) | 90€ - 220€ | 109€ |
+| Remplacement chasse d'eau complète | 110€ - 240€ | 129€ |
+| Remplacement groupe sécurité chauffe-eau | 130€ - 290€ | 159€ |
+| Vidange + détartrage chauffe-eau | 150€ - 350€ | 179€ |
+| Remplacement chauffe-eau électrique 200L | 700€ - 1 400€ (matériel + pose) | 890€ posé |
+
+**Important** : ces prix marché sont une moyenne pondérée. En centre-ville Paris intra-muros, c'est souvent dans le haut de fourchette ou au-dessus. En grande couronne (78, 91, 95, 77), souvent dans le bas. Mes prix fixes sont les mêmes partout en IDF (je ne facture pas la zone).
+
+## Différence prix journée vs nuit / weekend
+
+C'est le sujet où il y a le plus d'arnaques. Un prix "89€" annoncé devient 350€ une fois sur place "parce qu'il est tard". Voici ce qui est légal et ce qui ne l'est pas.
+
+### Ce que dit la loi : arrêté du 24 janvier 2017
+
+L'**arrêté du 24 janvier 2017 relatif à l'information préalable du consommateur sur les prestations de dépannage, de réparation et d'entretien dans le secteur du bâtiment et de l'équipement de la maison** encadre les majorations horaires. En pratique :
+
+- **Toute majoration nuit, dimanche, jour férié doit être annoncée AVANT** intervention.
+- Elle doit **figurer en clair sur le devis écrit**.
+- Le tarif horaire de base, le détail des suppléments, les frais de déplacement : **tout est obligatoire** sur le devis.
+
+Les **plages horaires majorées** habituellement reconnues par la profession (FFB plomberie, fédérations) :
+- **Nuit** : 20h - 8h (parfois 19h - 7h selon les pros)
+- **Dimanche et jours fériés** : toute la journée
+- **Samedi** : variable selon les pros
+
+### Ordres de grandeur des majorations marché
+
+Les baromètres UFC-Que Choisir et les contrôles DGCCRF montrent une fourchette de majorations pratiquées :
+
+| Plage horaire | Majoration habituelle marché |
+|---------------|------------------------------|
+| Soir (18h-22h) | +20% à +40% |
+| Nuit (22h-7h) | +50% à +100% |
+| Samedi journée | +25% à +50% |
+| Dimanche | +50% à +100% |
+| Jour férié | +100% (parfois +150%) |
+
+**Au-delà de +100%, on entre dans la zone de l'abus**. La DGCCRF a déjà sanctionné des entreprises pour majoration non annoncée ou disproportionnée.
+
+### Mon modèle : prix fixe 24h/24
+
+Chez moi, **pas de majoration nuit, pas de majoration weekend**. Le prix annoncé au téléphone est le prix de la facture, qu'il soit 14h un mardi ou 3h un dimanche. Je le précise parce que c'est rare dans le métier, et parce que ça enlève une grosse source de stress quand tu as une fuite à minuit.
+
+## La TVA : 10% ou 20% ?
+
+Beaucoup de devis "oublient" cette ligne, et beaucoup de clients pensent que la TVA est toujours à 20%. Faux.
+
+### TVA 10% (taux intermédiaire)
+
+S'applique aux **travaux d'amélioration, transformation, aménagement et entretien** dans les **logements achevés depuis plus de 2 ans** (Code général des impôts, article 279-0 bis). Conditions :
+- Logement à usage d'habitation.
+- Logement achevé depuis plus de 2 ans à la date de début des travaux.
+- Travaux non assimilés à du neuf (ne touche pas plus de la moitié des fondations, façades, planchers, etc.).
+
+**La grande majorité des dépannages plomberie en logement existant relève du 10%**.
+
+### TVA 20% (taux normal)
+
+S'applique :
+- Logements de moins de 2 ans.
+- Travaux assimilés à du neuf (rénovation très lourde).
+- Locaux à usage professionnel.
+- Pièces "détachées" achetées seules sans pose.
+
+### TVA 5,5% (taux réduit)
+
+S'applique uniquement aux **travaux d'amélioration énergétique** précis (isolation, chaudière à très haute performance énergétique, certains équipements de chauffage). Pas pour un débouchage WC.
+
+**Pratique** : sur ton devis, exige toujours de voir le **taux de TVA appliqué** et le **montant TVA**. Si on te facture du 20% sur un dépannage en logement de plus de 2 ans, c'est faux.
+
+## Comment lire un devis plombier (les postes obligatoires)
+
+Le devis écrit est obligatoire pour toute prestation à domicile dépassant **150€ TTC** (arrêté 24/01/2017, repris dans les obligations DGCCRF dépannage à domicile). Mais demande-le même en dessous : tu as une trace.
+
+### Les 9 mentions obligatoires d'un devis valable
+
+1. **Identité de l'entreprise** : raison sociale, adresse, **SIRET (14 chiffres)**, forme juridique.
+2. **Identité du client** : nom, adresse de l'intervention.
+3. **Date du devis et durée de validité** (souvent 30 jours).
+4. **Description précise de la prestation** : ce qui est diagnostiqué, ce qui sera fait.
+5. **Détail des pièces** : marque, référence, quantité, prix unitaire HT.
+6. **Détail de la main-d'œuvre** : nombre d'heures, taux horaire HT.
+7. **Frais de déplacement** : distincts ou inclus, mais explicites.
+8. **Total HT, TVA (taux + montant), Total TTC**.
+9. **Mentions légales** : RC Pro, médiateur de la consommation, garanties.
+
+### Signaux d'alerte dans un devis
+
+- Une **ligne unique** type "Réparation fuite : 850€" sans détail. **Refus**.
+- **Pas de SIRET** ou SIRET non vérifiable. **Refus**.
+- **Pas de taux TVA** affiché. **Refus**.
+- **"Pièces et main-d'œuvre incluses"** sans aucun détail. **Tu fais reformuler**.
+- **Devis griffonné à la main** sans en-tête entreprise. **Refus**.
+
+> **Témoignage Sarah K., Paris 11e** : "Annoncé 89€ au téléphone. Une fois sur place, devis à 850€ pour ouverture impossible sans perçage. J'ai signé pour qu'il parte." (Cas serrurier, mais le pattern est identique en plomberie : prix d'appel + escalade + pression nocturne. Sarah a payé environ **10 fois** le prix annoncé. Avec un devis détaillé exigé avant intervention, ça ne se serait pas passé.)
+
+## Cas pratique : combien coûte VRAIMENT un débouchage WC à 2h du matin ?
+
+Prenons un cas concret. WC bouché complet, refoulement dans la salle de bain, dimanche 2h du matin.
+
+### Estimation marché IDF (fourchette honnête)
+
+- Intervention de base débouchage complexe : **180€ - 280€** (jour)
+- Majoration nuit + dimanche : **+50% à +100%** = **270€ - 560€**
+- Frais de déplacement : 30€ - 60€
+- TVA 10% (logement >2 ans)
+- **Total réaliste : 330€ - 680€ TTC**
+
+### Cas d'arnaque typique
+
+- Annoncé "à partir de 49€" au téléphone.
+- Sur place : "C'est plus grave, faut sortir le furet électrique haute pression."
+- Devis sorti à 1 100€ "parce que dimanche nuit".
+- Pression : "Si on touche pas tout de suite, l'évacuation va péter."
+- Signé sous contrainte.
+
+**Différence** : les 49€ étaient un appât. Le prix juste pour cette intervention dimanche nuit, c'est entre 330€ et 680€ chez un pro honnête. 1 100€, c'est 50 à 100% au-dessus du haut de fourchette : c'est gonflé.
+
+### Mon prix Joël pour ce cas
+
+Débouchage WC complexe (furet électrique) : **149€ TTC**, dimanche ou pas, 14h ou 3h. Pas de majoration. Annoncé au téléphone, écrit sur le devis SMS, payé par CB sur place avec facture conforme.
+
+## Pour info : qui surveille les prix du dépannage ?
+
+Plusieurs organismes publient des données vérifiables :
+
+- **DGCCRF** (Direction générale de la concurrence, de la consommation et de la répression des fraudes) : contrôles annuels du dépannage à domicile, sanctions publiées, alertes.
+- **UFC-Que Choisir** : baromètres réguliers des prix pratiqués, enquêtes mystery shopping.
+- **INC** (Institut National de la Consommation, inc-conso.fr) : fiches pratiques tarifs.
+- **FFB Plomberie** (Fédération Française du Bâtiment, section plomberie-chauffage) : référentiels métier.
+- **Capeb** (Confédération de l'artisanat et des petites entreprises du bâtiment) : grilles indicatives par région.
+
+📞 **Tu as un devis qui te paraît gonflé ?** Appelle-moi au 01 41 69 10 08, je te donne mon prix au téléphone en 1 minute.
+
+## Comment je calcule mes prix (transparence)
+
+Mon modèle, c'est l'inverse du dépannage agrégateur :
+
+- **Pas de prix d'appel à 49€** qui se transforme en 800€ sur place. Je dis le prix réel au téléphone.
+- **Pas de majoration nuit / weekend / férié**. Tarif unique.
+- **Pas de pièce changée si elle marche**. Si je peux ressouder un joint plutôt que changer le mitigeur entier, je le fais.
+- **Devis SMS systématique avant déplacement**. Tu as la preuve écrite avant que je passe ta porte.
+- **Facture conforme avec SIRET vérifiable**. Tu peux passer mon numéro sur **annuaire-entreprises.data.gouv.fr** quand tu veux.
+
+Tu peux retrouver ma grille tarifaire complète plomberie sur [/plomberie/tarifs](/plomberie/tarifs), et le détail de mes prestations sur [/plomberie](/plomberie).
+
+## Comment vérifier ton devis en 2 minutes
+
+1. **SIRET** sur annuaire-entreprises.data.gouv.fr → activité doit être 43.22A ou 43.22B (plomberie).
+2. **Détail des lignes** : pièces séparées, main-d'œuvre séparée, déplacement séparé.
+3. **Taux TVA** : 10% si logement >2 ans, 20% sinon.
+4. **Total TTC affiché en gros**, pas en bas en tout petit.
+5. **Mentions légales** : RC Pro + médiateur.
+6. **Signature et date** : tu signes en double exemplaire (un pour toi, un pour le pro).
+
+Si l'un des 6 manque, tu refuses et tu appelles un autre pro.
+
+## Articles liés à lire
+
+- [Arnaques plomberie : 7 conseils pour les éviter](/blog/arnaques-plomberie-comment-eviter)
+- [Comment vérifier un dépanneur d'urgence en 3 minutes](/blog/comment-verifier-depanneur-urgence)
+- [Tarif plombier WC bouché : prix réel 2026](/blog/tarif-plombier-wc-bouche)
+- [Prix intervention plombier urgence](/blog/prix-intervention-plombier-urgence)
+- [Fuite d'eau la nuit : que faire en urgence ?](/blog/fuite-eau-nuit-que-faire)
+
+## Sources
+
+- DGCCRF, "Dépannage à domicile : la répression des fraudes maintient la pression", rapport 2024.
+- UFC-Que Choisir, baromètre 2023-2024 sur les pratiques du dépannage à domicile.
+- INC (Institut National de la Consommation), fiches pratiques "Dépannage à domicile" et "Devis et factures".
+- Code général des impôts, article 279-0 bis (TVA 10% travaux entretien logement >2 ans).
+- Code de la consommation, article L.111-1 (information précontractuelle obligatoire).
+- Arrêté du 24 janvier 2017 relatif à l'information préalable du consommateur sur les prestations de dépannage, de réparation et d'entretien dans le secteur du bâtiment et de l'équipement de la maison.
+- FFB Plomberie-chauffage (section professionnelle de la Fédération Française du Bâtiment), recommandations métier.
+- Capeb (Confédération de l'artisanat et des petites entreprises du bâtiment), référentiels.
+- annuaire-entreprises.data.gouv.fr (vérification SIRET, INSEE, gratuit).
+- signal.conso.gouv.fr (signalement DGCCRF).
+
+📞 **Besoin d'un plombier honnête en IDF ?** Appelle-moi au 01 41 69 10 08 — prix annoncé au téléphone, sans majoration nuit ni weekend.
+    `
+  },
+  {
+    slug: "normes-electriques-nf-c-15-100-explique",
+    title: "Norme NF C 15-100 expliquée simplement (logement habitable)",
+    excerpt: "La norme NF C 15-100 fait peur, sert d'argument à des devis de remise aux normes à 3 000€, et reste mal comprise. Voici ce qu'elle dit vraiment, quand elle s'applique, et combien coûte une vraie mise aux normes.",
+    metaDescription: "Norme NF C 15-100 : les 6 obligations en logement neuf, quand elle s'applique (vente, location, rénovation), DTI obligatoire >15 ans, coûts mise aux normes. Guide 2026.",
+    category: "electricite",
+    readTime: 11,
+    publishedAt: "2026-05-04",
+    keywords: [
+      "NF C 15-100",
+      "norme électrique logement",
+      "mise aux normes électriques",
+      "diagnostic électrique obligatoire",
+      "dti électrique",
+      "diagnostic technique installation électrique",
+      "consuel norme",
+      "installation électrique conforme",
+    ],
+    image: "Photo d'un tableau électrique moderne ouvert dans un appartement, avec disjoncteurs alignés et étiquetage clair, lumière naturelle de jour. Plan rapproché qui met en valeur la propreté du câblage. Pas de logo.",
+    content: `
+## Pourquoi cette norme génère autant de confusion (et d'arnaques)
+
+Je suis Joël, je fais du dépannage électrique en Île-de-France. La **NF C 15-100**, c'est LA norme qu'on me cite dès que je rentre chez un client. Et c'est aussi LA norme que les escrocs utilisent pour gonfler les factures : "votre tableau n'est pas aux normes NF C 15-100, c'est dangereux, faut tout refaire d'urgence — 2 800€."
+
+Dans 80% des cas, **c'est faux**. La norme NF C 15-100 ne s'impose **pas** à toutes les installations existantes. Elle s'impose dans des cas précis (que je détaille plus bas). Pour le reste, ce qui compte légalement, c'est que ton installation ne présente pas de **danger grave et manifeste** — pas qu'elle soit conforme aux dernières évolutions normatives.
+
+Ce guide, c'est ma version "simple et honnête" de ce que dit vraiment cette norme, à quoi elle sert, quand elle s'applique, ce que tu risques si elle n'est pas respectée, et ce que coûte une vraie mise aux normes.
+
+## C'est quoi, NF C 15-100 ?
+
+**NF C 15-100** est la norme française qui décrit les **règles de conception, de réalisation et d'entretien des installations électriques basse tension** (jusqu'à 1 000 volts en alternatif). Elle est publiée par l'**AFNOR** (Association Française de Normalisation) et l'**UTE** (Union Technique de l'Électricité).
+
+### À quoi elle sert vraiment
+
+L'objectif de la norme tient en deux points :
+
+1. **Sécurité incendie** : éviter que ton installation prenne feu (court-circuit, surcharge, défaut d'isolement). On parle de plusieurs milliers d'incendies d'origine électrique par an en France selon les bilans Promotelec et FFA (Fédération Française de l'Assurance).
+2. **Protection des personnes** : éviter électrisations et électrocutions. C'est la raison d'être des **dispositifs différentiels** (le fameux "30 mA" qui détecte la fuite de courant).
+
+### Une norme qui évolue
+
+NF C 15-100 a été révisée plusieurs fois depuis sa première publication en 1969. Les versions de **2002**, **2008**, **2015**, et les amendements successifs, ont chacun ajouté des exigences (nombre de prises minimum par pièce, équipotentialité de la salle de bain, etc.).
+
+**Conséquence importante** : ton installation est jugée par rapport à la version de la norme **en vigueur au moment de sa réalisation**. Une installation faite en 1995 n'a pas à respecter la version de 2015. C'est ce qu'on appelle le principe de **"non-rétroactivité"**.
+
+## Les 6 obligations principales en logement neuf (résumé)
+
+Pour un logement **neuf** ou une **rénovation totale**, la NF C 15-100 impose, entre autres :
+
+### 1. Un dispositif de protection différentielle 30 mA
+
+Au moins un dispositif différentiel à haute sensibilité (30 mA) sur chaque circuit qui dessert des prises ou des points d'éclairage. C'est ce qui te protège de l'électrocution si un appareil défectueux fait fuir le courant à la terre (ou à toi).
+
+### 2. Une installation correctement protégée par disjoncteurs
+
+Chaque circuit (éclairage, prises, four, plaque de cuisson, lave-linge, etc.) doit avoir son **propre disjoncteur**, calibré au bon ampérage selon la nature et le nombre d'appareils.
+
+### 3. Des prises spécialisées en cuisine
+
+La cuisine impose des **circuits spécialisés** (32A pour la plaque de cuisson, 20A pour le four, 20A pour le lave-vaisselle, 20A pour le lave-linge si en cuisine). Ces appareils ne doivent pas être branchés sur des prises génériques.
+
+### 4. Un nombre minimum de prises par pièce
+
+La norme précise un nombre minimum de prises 16A par pièce :
+- Séjour : 5 prises minimum (1 par tranche de 4 m²)
+- Chambres : 3 prises minimum
+- Cuisine : 6 prises 16A (en plus des spécialisées)
+- Couloirs : 1 prise
+
+### 5. Une équipotentialité dans la salle de bain
+
+La salle de bain est divisée en **volumes de sécurité** (volume 0 = baignoire, volume 1 = jusqu'à 2,25 m, volume 2 = au-delà). Chaque volume tolère certains équipements et pas d'autres. Les masses métalliques (radiateur sèche-serviettes, baignoire, tuyauterie) doivent être reliées à la terre par une **liaison équipotentielle supplémentaire (LES)**.
+
+### 6. Un GTL (gaine technique logement) et un ETEL
+
+La GTL regroupe les arrivées (énergie + télécom). L'ETEL (Espace Technique Électrique du Logement) accueille le tableau de répartition, le tableau de communication, et laisse la place pour des évolutions futures (domotique, fibre optique).
+
+**Note importante** : ces 6 points concernent le **neuf** et la **rénovation totale**. Pour ton appartement de 1985, ce n'est pas obligatoire d'avoir tout ça. Lis la suite.
+
+## Quand est-on OBLIGÉ de respecter NF C 15-100 ?
+
+C'est LA question qui fait la différence entre un devis honnête et une arnaque à 3 000€.
+
+### Cas 1 : Logement neuf
+
+Pour toute construction neuve (permis de construire après 2003 pour les premières exigences, dates différentes selon les versions de la norme), la NF C 15-100 est obligatoire et conditionne la délivrance du **Consuel** (attestation de conformité). Sans Consuel, EDF / Enedis ne raccorde pas.
+
+### Cas 2 : Rénovation totale ou lourde
+
+Quand la rénovation **touche significativement** l'installation électrique (refonte complète, redistribution des circuits, déplacement du tableau, etc.), la norme s'applique aux **parties refaites**. Là encore, un Consuel est demandé.
+
+### Cas 3 : Vente d'un logement (DTI / diagnostic électrique)
+
+Depuis la **loi ENL de 2009** et ses décrets d'application, **tout logement vendu dont l'installation électrique a plus de 15 ans** doit être accompagné d'un **diagnostic électrique** (parfois appelé DTI - Diagnostic Technique de l'Installation). Référence : Code de la construction et de l'habitation, **article L.134-7** et suivants.
+
+**Important** : ce diagnostic ne dit **pas** "conforme NF C 15-100 / non conforme". Il liste des **points de contrôle** (6 obligations majeures de sécurité) et signale les **anomalies**. Une anomalie ne rend pas la vente impossible, mais l'acheteur en est informé. Une remise aux normes peut alors être négociée dans le prix.
+
+### Cas 4 : Location
+
+Depuis le **1er janvier 2018** pour les baux signés à partir de cette date (**1er juillet 2017** pour la "rénovation lourde"), un **état de l'installation intérieure d'électricité** doit être annexé au contrat de bail si l'installation a plus de **15 ans**. Décret n°2016-1105 du 11 août 2016, codifié dans le Code de la construction.
+
+### Cas 5 : Tu as un dépannage simple
+
+**Dans la grande majorité des cas où tu m'appelles** : disjoncteur qui saute, prise qui ne fonctionne plus, panne dans une pièce, four qui fait disjoncter… **AUCUNE obligation** de remettre toute ton installation aux normes NF C 15-100. Le pro intervient sur le défaut, point.
+
+**Si on te dit "il faut refaire tout le tableau aux normes 2015"** alors que tu appelles juste pour une prise qui ne marche plus : c'est un signal d'arnaque évident.
+
+## Le DTI : c'est quoi exactement ?
+
+Le **diagnostic électrique** (souvent appelé DTI - Diagnostic Technique de l'Installation, ou simplement "diag élec") est obligatoire dans deux cas :
+
+- **Vente** d'un logement avec installation électrique de **plus de 15 ans**.
+- **Location** (depuis 2018) d'un logement avec installation de **plus de 15 ans**.
+
+### Ce que vérifie le DTI
+
+Le diagnostic est encadré par l'**arrêté du 28 septembre 2017** et porte sur **6 points clés** de sécurité :
+
+1. **Présence d'un appareil général de commande et de protection** (disjoncteur de branchement) accessible.
+2. **Présence d'au moins un dispositif différentiel** approprié.
+3. **Protection contre les surintensités** adaptée à chaque circuit (disjoncteurs / fusibles).
+4. **Présence d'une liaison équipotentielle dans la salle de bain**.
+5. **Absence de matériel vétuste, inadapté ou présentant des risques**.
+6. **Conducteurs non protégés mécaniquement** (fils apparents, etc.).
+
+### Validité
+
+Le DTI est valable **3 ans pour la vente** et **6 ans pour la location**. Il doit être réalisé par un **diagnostiqueur certifié** (Cofrac ou équivalent).
+
+### Coût d'un DTI
+
+Comptez **80€ à 180€** selon la surface du logement et la région. C'est le vendeur (ou le bailleur) qui paie.
+
+## Combien coûte une vraie mise aux normes ?
+
+Voici les fourchettes que je vois pratiquées en Île-de-France pour des **vraies** opérations de mise aux normes (pas pour réarmer un différentiel facturé 1 980€).
+
+| Intervention | Fourchette IDF |
+|--------------|----------------|
+| Mise aux normes partielle (ajout différentiel 30 mA + revue tableau) | 350€ - 700€ |
+| Remplacement complet du tableau électrique | 800€ - 1 800€ |
+| Mise aux normes salle de bain (équipotentialité, volumes) | 250€ - 600€ |
+| Réfection partielle du circuit cuisine (4-6 spécialisés) | 600€ - 1 400€ |
+| Rénovation électrique complète appartement T3 | 3 500€ - 8 000€ |
+| Rénovation complète maison 100 m² | 6 000€ - 15 000€ |
+
+**Ces prix incluent main-d'œuvre + matériel + obtention Consuel** quand applicable.
+
+**Signal d'alerte** : si on te demande **1 980€ pour "mise aux normes"** alors qu'on a juste réarmé un différentiel chez toi, tu paies environ **20 fois trop cher** pour 5 secondes de travail réel.
+
+> **Témoignage Laëtitia B., Boulogne-Billancourt** : "Disjoncteur qui sautait. L'électricien a parlé de 'tableau dangereux à refaire d'urgence'. Devis de 1 980€ signé en pleine nuit. C'était juste un différentiel à enclencher." (Cas typique du faux diagnostic NF C 15-100 utilisé pour gonfler une facture.)
+
+## Risques d'une installation non conforme
+
+C'est important de séparer le **vrai risque** du **risque inventé pour vendre**.
+
+### Vrais risques (à ne pas négliger)
+
+- **Incendie d'origine électrique** : selon Promotelec, l'origine électrique est l'une des premières causes d'incendies domestiques. Les défauts les plus fréquents : **multiprises en cascade**, **rallonges sous tapis**, **fils dénudés**, **prises noircies** (signe d'échauffement).
+- **Électrisation et électrocution** : surtout sans dispositif différentiel 30 mA (ou si défaillant). Plusieurs centaines de personnes meurent encore d'électrocution à domicile chaque année en France selon les bilans Santé Publique France.
+- **Refus d'indemnisation par l'assurance en cas de sinistre grave** : si un incendie démarre depuis un défaut **manifeste et grave** d'installation que tu connaissais et que tu n'as pas fait réparer, ton assurance peut refuser ou réduire la prise en charge (article L.113-1 et suivants du Code des assurances).
+
+### Idées reçues fausses
+
+- **"Mon assurance va refuser parce que je n'ai pas la NF C 15-100"** → faux dans 99% des cas. Aucun contrat MRH (multirisque habitation) n'exige la NF C 15-100 sur installation existante. Ce qui est exigé, c'est **l'absence de défaut grave et manifeste**.
+- **"EDF / Enedis va me couper si mon tableau n'est pas aux normes"** → faux, sauf danger immédiat constaté.
+- **"Le diagnostic électrique m'oblige à refaire l'installation"** → faux. Il informe l'acheteur ou le locataire, qui peut négocier le prix ou demander des travaux. Mais aucune obligation légale immédiate de tout refaire.
+
+## Comment savoir si TON installation a un vrai problème
+
+Voici les vrais signaux qui doivent t'alerter (et qui justifient un diagnostic ou des travaux ciblés) :
+
+**Signaux clairs d'un défaut grave** :
+- Odeur de brûlé persistante autour d'une prise ou du tableau.
+- Prise ou interrupteur **noirci ou marron** (signe de surchauffe).
+- Fils électriques **dénudés** apparents.
+- **Picotements** quand tu touches un appareil métallique branché.
+- Disjoncteur ou différentiel qui saute **plusieurs fois par semaine** sans cause identifiée.
+- Tableau électrique avec **fusibles à porcelaine** (technologie obsolète, plus aucun différentiel).
+
+**Si tu vois un de ces signaux**, fais venir un électricien certifié (Qualifelec sur **qualifelec.fr** annuaire) pour un **diagnostic factuel**. Tu peux aussi demander un DTI volontaire (80-180€) qui te donnera un état des lieux écrit et opposable.
+
+📞 **Tu veux un diagnostic électrique honnête, sans devis gonflé ?** Appelle-moi au 01 41 69 10 08, je te dis le vrai état de ton installation.
+
+## Mon engagement quand je passe chez toi
+
+- Je **diagnostique avant de chiffrer**. Pas de "remise aux normes" annoncée à l'aveugle.
+- Je **dépanne le problème immédiat** (ex : prise grillée, différentiel défaillant) sans en profiter pour vendre 1 800€ de travaux non urgents.
+- Si je vois un **vrai défaut grave** (fils dénudés, prise brûlée), je te le dis, je te montre, je te donne un devis chiffré pour ton calme — et tu décides si tu fais maintenant ou tu attends.
+- Je ne te facture **jamais un faux Consuel** sur un dépannage simple. Le Consuel ne sert que pour le neuf, la rénovation totale, ou le changement de fournisseur après mise en service.
+
+Tu peux retrouver ma grille tarifaire électricité sur [/electricite/tarifs](/electricite/tarifs) et le détail de mes prestations sur [/electricite](/electricite).
+
+## Articles liés à lire
+
+- [Arnaques électricien dépannage : 6 pièges à éviter en urgence](/blog/arnaques-electricien-comment-eviter)
+- [Disjoncteur qui saute : causes et solutions](/blog/disjoncteur-saute-causes-solutions)
+- [Comment vérifier un dépanneur d'urgence en 3 minutes](/blog/comment-verifier-depanneur-urgence)
+
+## Sources
+
+- AFNOR (Association Française de Normalisation), norme NF C 15-100 et amendements 2008-2015.
+- UTE (Union Technique de l'Électricité), guide d'application NF C 15-100.
+- Promotelec, bilans annuels sur la sécurité électrique dans le logement.
+- Consuel (consuel.com), attestations de conformité électrique.
+- Qualifelec (qualifelec.fr), qualification professionnelle des entreprises d'électricité.
+- Code de la construction et de l'habitation, article L.134-7 et suivants (DTI vente).
+- Décret n°2016-1105 du 11 août 2016 (DTI location, codifié dans le CCH).
+- Arrêté du 28 septembre 2017 modifiant l'arrêté du 8 juillet 2008 (modèle de diagnostic électrique).
+- Loi ENL n°2009-323 du 25 mars 2009 (introduction du diagnostic électrique vente).
+- Code des assurances, article L.113-1 et suivants (limites d'indemnisation en cas de défaut grave connu).
+- Santé Publique France, bilans accidents domestiques (électrisation et électrocution).
+- FFA (Fédération Française de l'Assurance), bilans incendies domestiques d'origine électrique.
+
+📞 **Une question sur la conformité de ton installation ?** Appelle-moi au 01 41 69 10 08 — diagnostic clair, sans pression commerciale.
+    `
+  },
+  {
+    slug: "securite-serrure-quel-cylindre-choisir",
+    title: "Quel cylindre de serrure choisir ? Guide A2P 2026",
+    excerpt: "Cylindre A2P 1 étoile, 2 étoiles, 3 étoiles : la différence se compte en minutes face à un cambrioleur. Voici comment choisir, les marques sérieuses (Vachette, Bricard, Pollux, Picard, Mul-T-Lock) et combien ça coûte vraiment.",
+    metaDescription: "Guide cylindre A2P 2026 : 3 niveaux de certification, marques sérieuses (Vachette, Bricard, Pollux, Picard, Mul-T-Lock), prix installation. Conseils CNPP et assureurs pour ne pas se tromper.",
+    category: "serrurerie",
+    readTime: 10,
+    publishedAt: "2026-05-04",
+    keywords: [
+      "cylindre A2P",
+      "serrure haute sécurité",
+      "Vachette Bricard Pollux",
+      "cylindre anti-effraction",
+      "changer cylindre",
+      "cylindre A2P 3 étoiles",
+      "Picard Mul-T-Lock",
+      "anti-bumping",
+    ],
+    image: "Photo macro d'un cylindre de serrure A2P 3 étoiles posé sur un établi en bois, avec sa clé brevetée à goupilles et son carton d'origine portant le logo CNPP. Lumière naturelle, ambiance documentaire, gros plan, pas de logo MonJoël.",
+    content: `
+## Pourquoi le cylindre, c'est 90% de la sécurité de ta porte
+
+Je suis Joël, je fais de la serrurerie en Île-de-France. Quand je dépanne après cambriolage ou tentative d'effraction, **9 fois sur 10**, le point faible n'était pas la serrure entière, ni la porte : c'était **le cylindre**. La pièce qu'on insère la clé dedans, ce petit barillet de 6 cm. C'est lui qui est attaqué en premier.
+
+Une porte blindée à 1 800€ avec un cylindre à 12€ acheté en grande surface : ton cambrioleur passe en 3 minutes au crochet. Une porte standard avec un cylindre A2P 3 étoiles à 180€ : il faut entre 15 et 30 minutes, et la plupart abandonnent.
+
+Ce guide, c'est l'arbre de décision que je te donnerais si tu m'appelais pour me demander : **"Joël, quel cylindre je mets ?"**.
+
+## C'est quoi A2P, concrètement ?
+
+**A2P** signifie "Assurance Prévention Protection". C'est la **certification de référence** délivrée par le **CNPP** (Centre National de Prévention et de Protection), un organisme indépendant reconnu par les assureurs français.
+
+### À quoi ça sert
+
+Un cylindre certifié A2P a passé une **batterie de tests d'effraction normalisés** : crochetage, perçage, bumping (frappe), arrachement, cassage. Il est noté en fonction du **temps qu'il résiste** à un cambrioleur outillé.
+
+### Pourquoi c'est important pour ton assurance
+
+Beaucoup de contrats MRH (multirisque habitation), surtout en Île-de-France, **exigent au minimum un A2P 1 étoile** pour appliquer la garantie vol sans franchise majorée, voire pour la prise en charge du vol tout court selon les contrats. Vérifie toujours **les conditions générales de ton contrat** : c'est écrit noir sur blanc dans la clause "moyens de protection".
+
+## Les 3 niveaux A2P expliqués
+
+| Niveau A2P | Résistance certifiée à l'effraction | Usage recommandé | Prix indicatif IDF (cylindre seul) |
+|------------|-------------------------------------|------------------|------------------------------------|
+| **A2P 1 étoile** | **5 minutes** | Maison ou appartement zone calme | 60€ - 120€ |
+| **A2P 2 étoiles** | **10 minutes** | Appartement standard, IDF urbain | 100€ - 200€ |
+| **A2P 3 étoiles** | **15 minutes** | Risque élevé, cambriolages dans le quartier | 150€ - 300€ |
+
+**Pourquoi les minutes comptent** : les statistiques de gendarmerie et police (SSMSI - Service Statistique Ministériel de la Sécurité Intérieure) montrent qu'un **cambrioleur abandonne dans la majorité des cas s'il ne franchit pas la porte en moins de 5 minutes**. Au-delà de 10 minutes, c'est exceptionnel qu'il insiste.
+
+### Quelle étoile choisir pour ton cas
+
+- **Studio ou T1 en sous-sol parisien** : A2P 1 étoile suffit (peu de visibilité, peu d'opportunité).
+- **Appartement T2-T4 en immeuble lambda IDF** : **A2P 2 étoiles minimum**. C'est le standard que je conseille.
+- **Maison individuelle, rez-de-chaussée, ou logement déjà cambriolé** : **A2P 3 étoiles**. Le surcoût (40-100€ vs A2P 2 étoiles) est largement justifié.
+- **Logement avec valeurs (collection, espèces, bijoux importants)** : A2P 3 étoiles + porte blindée + alarme. C'est un sujet en soi.
+
+## Les marques sérieuses (sans favoritisme)
+
+Voici les marques que je vois le plus dans les portes haut de gamme en France. Toutes proposent des gammes A2P 1, 2, et 3 étoiles. Le choix entre elles est plus une affaire de **disponibilité de pièces** et de **préférence personnelle** que de différence majeure de qualité.
+
+### Vachette (groupe Assa Abloy)
+
+**Marque française historique**, gamme très large. Modèles emblématiques : **Radial NT+**, **V8**. Très bien distribué, pièces faciles à trouver. Bon rapport qualité-prix. A2P 1 à 3 étoiles selon modèles.
+
+### Bricard (groupe Hager)
+
+**Autre référence française historique**, souvent privilégié par les serruriers indépendants pour la robustesse. Gammes **Chifral**, **Trial**. Très anti-arrachement. A2P 1 à 3 étoiles.
+
+### Pollux (groupe Mottura, italien)
+
+Cylindres **anti-bumping** très réputés. Gammes **Champions** et **Project**. Particulièrement résistants au crochetage. A2P 2 et 3 étoiles principalement.
+
+### Picard (français, indépendant)
+
+**Marque artisanale française** souvent recommandée pour les portes blindées (Picard fabrique aussi des portes). Modèles **Vigirex**, **Diamant**. A2P jusqu'à 3 étoiles. Excellent niveau global.
+
+### Mul-T-Lock (israélien, groupe Assa Abloy)
+
+**Référence mondiale du haut de gamme**. Système de **clés brevetées** très difficiles à reproduire (clés à téton ou clés à 4 rangées de goupilles). Modèles **Interactive+**, **MT5+**. Souvent en A2P 3 étoiles. Plus cher mais très haut niveau.
+
+### Et les marques "low cost" en grande surface ?
+
+Cylindres bricolage à 9-25€ : aucune certification A2P, **anti-perçage limité ou inexistant**, **anti-bumping = zéro**. Honnêtement : si tu changes ton cylindre, ne mets pas ce genre de truc. C'est l'équivalent d'une serrure qui te donne un faux sentiment de sécurité et qui se crochete à la main en 30 secondes.
+
+## Cylindre européen, belge, ovale : c'est quoi la différence ?
+
+C'est une question de **profil mécanique** : la forme du barillet qui s'insère dans la serrure. Tu n'as pas le choix, c'est ta serrure qui impose le profil. Il faut juste savoir quel profil tu as pour acheter le bon cylindre.
+
+### Profil européen (le plus courant en France)
+
+Forme caractéristique : un **rond avec une partie aplatie au milieu** qui descend (le "panneton" qui actionne le pêne). C'est le format **largement majoritaire** sur les portes d'appartement en France.
+
+### Profil belge / ovale (rond)
+
+Cylindre **complètement rond**, sans partie aplatie. Plus utilisé en Belgique et au Luxembourg, mais on en trouve aussi sur certaines portes anciennes en France.
+
+### Profil suisse, américain, autres
+
+Sur des portes spéciales ou anciennes. Si tu es là-dedans, demande à un serrurier de regarder.
+
+### Mesurer son cylindre (3 mesures clés)
+
+1. **Longueur côté extérieur** (du milieu de la fixation à l'extrémité extérieure) — typiquement **30 mm**.
+2. **Longueur côté intérieur** (du milieu vers l'intérieur) — typiquement **30 ou 35 mm**.
+3. **Type** : à clé des deux côtés, à bouton intérieur, à bouton avec urgence ?
+
+**Important sécurité** : si ton cylindre **dépasse de plus de 5 mm** de la garniture extérieure, il devient **vulnérable à l'arrachement** (le cambrioleur attaque la partie qui dépasse avec une pince spéciale). Privilégie un cylindre **affleurant** (qui ne dépasse pas).
+
+## Quand changer ton cylindre
+
+### Cas où c'est OBLIGATOIRE de changer
+
+- **Tu as perdu une clé** sans savoir qui l'a récupérée.
+- **Déménagement** dans un logement où tu ne connais pas l'historique des clés (qui les a eues : ancien proprio, agence, voisin, ouvrier ?).
+- **Après une effraction** ou tentative d'effraction (le cylindre a probablement été abîmé même si la porte est restée fermée).
+- **Vol de clés** dans ton sac, à la maison, au bureau.
+
+### Cas où c'est INUTILE de changer
+
+- Tu rentres tranquillement chez toi le soir, ta clé fonctionne, ta serrure n'a pas bougé. Le serrurier qui t'a ouvert porte claquée te dit "il faut changer le cylindre" : **regarde-le dans les yeux**. Si la porte n'a pas été forcée et que ton cylindre fonctionne, **rien à changer**. C'est une arnaque classique de gonflage de facture.
+
+> **Témoignage Karim D., Nanterre (septembre 2025)** : "Porte simplement claquée. Le serrurier l'a percée d'office en 30 secondes alors qu'une carte radio aurait suffi. 720€, plus 380€ pour le nouveau cylindre obligatoire d'après lui." (Le perçage abusif sert à **forcer** le client à racheter un cylindre. Si la radio passe, **rien à changer**. Karim a donc payé 380€ d'arnaque en plus du perçage.)
+
+## Pourquoi PAS un cylindre "pas cher"
+
+Voilà ce qui se passe techniquement avec un cylindre bas de gamme à 12€ :
+
+- **Crochetage** : avec un set de pics à 25€ acheté sur Internet, ça s'ouvre en 30 secondes à 2 minutes.
+- **Bumping** (frappe avec une "clé bumping") : 5 secondes. C'est devenu une technique massive, des tutos sur YouTube en pagaille.
+- **Perçage** : avec une perceuse de chantier et un foret au cobalt, 1 à 3 minutes pour détruire le mécanisme.
+- **Arrachement** : avec une pince spéciale, 15 à 30 secondes si le cylindre dépasse.
+
+Avec un **A2P 2 étoiles** correct, le crochetage devient quasi impossible (goupilles anti-crochetage, contre-goupilles), le bumping est bloqué (système anti-frappe), le perçage prend 8-12 minutes (insertions trempées au carbure), et l'arrachement nécessite des outils lourds (renforts internes).
+
+**Différence en pratique** : 30 secondes vs 10 minutes. Ton cambrioleur abandonne.
+
+## Combien coûte une installation Joël (transparence)
+
+| Prestation | Prix Joël IDF |
+|------------|---------------|
+| Remplacement cylindre A2P 1 étoile (cylindre + pose) | 149€ |
+| Remplacement cylindre A2P 2 étoiles (cylindre + pose) | 219€ |
+| Remplacement cylindre A2P 3 étoiles (cylindre + pose) | 289€ |
+| Remplacement cylindre A2P 3 étoiles + 5 clés brevetées | 349€ |
+| Remplacement cylindre haut de gamme Mul-T-Lock / Pollux 3 étoiles | 379€ |
+
+Ces prix sont **TTC, sans majoration nuit ni weekend**, déplacement IDF inclus.
+
+**Pour comparaison marché** : on voit beaucoup de devis serruriers dans la fourchette **180€ - 500€** pour un A2P 1 étoile (oui, jusqu'à 500€ pour le niveau le plus bas), et **300€ - 900€** pour un A2P 3 étoiles. Au-delà de 600€ pour un A2P 3 étoiles, on est dans le gonflage.
+
+## Comment vérifier qu'on t'a vraiment installé un A2P
+
+Sur le cylindre lui-même, l'**emblème A2P avec le nombre d'étoiles** est gravé sur le côté du barillet. Demande à voir.
+
+Tu peux aussi vérifier la certification du modèle exact installé sur le **site CNPP** (cnpp.com, espace certifications), qui liste les produits certifiés.
+
+Si on te dit "c'est A2P" mais qu'il n'y a pas de gravure, ou que le modèle ne ressort pas dans la base CNPP : **c'est un faux A2P**.
+
+📞 **Tu hésites entre A2P 1, 2 ou 3 étoiles ?** Appelle-moi au 01 41 69 10 08, je t'aide à choisir selon ton vrai risque.
+
+## Conseils CNPP et assureurs
+
+Le CNPP, dans ses guides à destination des particuliers, et la plupart des grands assureurs (Allianz, AXA, MAIF, Macif, Groupama dans leurs guides "moyens de protection") recommandent en moyenne :
+
+- **Appartement standard IDF** : A2P 2 étoiles minimum.
+- **Maison individuelle isolée** : A2P 3 étoiles + serrure 3 ou 5 points.
+- **Vérifier les conditions de son contrat MRH** : certains contrats imposent A2P 1 étoile minimum pour la garantie vol, et A2P 3 étoiles pour les capitaux supérieurs à un seuil (souvent 30 000€ de mobilier).
+
+Le **SSMSI** (statistiques sécurité intérieure) publie chaque année les chiffres des cambriolages : depuis plusieurs années, le mode opératoire principal en logement reste **l'effraction de la porte d'entrée** (souvent par le cylindre).
+
+## Mon engagement quand je change ton cylindre
+
+- Je te **demande ton contrat MRH** ou tes attentes en niveau de protection avant de te conseiller. Pas l'inverse.
+- Je te propose **plusieurs niveaux** A2P avec leurs prix, tu choisis.
+- Je **ne te change pas le cylindre** si la porte n'a pas été forcée et que tu m'as appelé pour une porte claquée simple. C'est inutile.
+- Je te montre **le cylindre installé**, la **gravure A2P + étoiles**, et te remets l'**ancien cylindre** si tu veux le garder.
+- Je te fournis la **facture conforme** avec marque, référence, niveau A2P, garantie.
+
+Tu peux retrouver le détail de mes prestations serrurerie sur [/serrurerie](/serrurerie), et ma grille tarifaire complète sur [/serrurerie/tarifs](/serrurerie/tarifs).
+
+## Articles liés à lire
+
+- [Cylindre A2P : guide sécurité](/blog/cylindre-a2p-guide-securite)
+- [Serrure 3 points vs 5 points](/blog/serrure-3-points-vs-5-points)
+- [Porte blindée : guide d'achat](/blog/porte-blindee-guide-achat)
+- [Arnaques serrurier : 7 signaux qui doivent t'alerter](/blog/arnaques-serrurier-comment-eviter)
+- [Changer une serrure : guide complet](/blog/changer-serrure-guide-complet)
+
+## Sources
+
+- CNPP (Centre National de Prévention et de Protection), référentiels A2P et guides à destination des particuliers (cnpp.com).
+- AFNOR / référentiels A2P (procédures de certification cylindres, serrures, portes blindées).
+- SSMSI (Service Statistique Ministériel de la Sécurité Intérieure), rapports annuels cambriolages et modes opératoires.
+- Guides moyens de protection des grands assureurs : Allianz, AXA, MAIF, Macif, Groupama (clauses "vol" des contrats MRH).
+- Code des assurances, articles L.113-1 et suivants (limites d'indemnisation et obligations contractuelles).
+- Documentation produits Vachette (groupe Assa Abloy), Bricard (groupe Hager), Pollux (Mottura), Picard, Mul-T-Lock.
+- ONDRP (Observatoire National de la Délinquance et des Réponses Pénales), bilans cambriolages.
+
+📞 **Tu veux changer ton cylindre vers du vrai A2P ?** Appelle-moi au 01 41 69 10 08 — A2P certifié, marque sérieuse, prix annoncé au téléphone.
+    `
+  },
+  {
+    slug: "depannage-urgence-nuit-weekend-tarif",
+    title: "Dépannage urgence nuit, weekend, jour férié : qui appeler et combien (2026)",
+    excerpt: "Plombier à 3h du matin, serrurier le dimanche, électricien le 1er janvier : quelle majoration est légale, quelle arnaque guette, et qui appeler pour ne pas se faire piéger. Le guide complet.",
+    metaDescription: "Dépannage urgence nuit / weekend / jour férié 2026 : majorations légales (arrêté 24/01/2017), pièges du 1er numéro Google, méthode de vérification 2 min, conseils anti-stress.",
+    category: "conseils",
+    readTime: 12,
+    publishedAt: "2026-05-04",
+    keywords: [
+      "dépannage urgence nuit",
+      "plombier dimanche",
+      "serrurier 3h du matin",
+      "tarif urgence weekend",
+      "majoration tarif",
+      "majoration nuit dépannage",
+      "tarif férié plombier",
+      "qui appeler urgence dépannage",
+    ],
+    image: "Photo nocturne d'une rue parisienne sous la pluie, vue depuis l'intérieur d'un appartement à travers une fenêtre embuée, avec un téléphone tenu en main au premier plan affichant un appel sortant vers un artisan. Lumière des lampadaires orangée, ambiance documentaire intimiste, pas de logo.",
+    content: `
+## Pourquoi je publie ce guide
+
+Je m'appelle Joël, je fais du dépannage en Île-de-France et je suis joignable **24h/24, 7j/7**. La nuit, le weekend, le 14 juillet, le 1er janvier : c'est précisément à ces moments-là que les arnaques explosent. Stress, fatigue, plus rien d'ouvert pour comparer, peur que ça empire : c'est le terrain de jeu rêvé des escrocs du dépannage.
+
+Ce guide, c'est ce que je dirais à n'importe qui qui m'appelle paniqué à 2h du matin. **Voici ce que dit la loi sur les majorations, comment vérifier un dépanneur en pleine nuit en 2 minutes, ce que tu peux faire toi-même en attendant, et les vrais pièges de l'urgence nocturne**.
+
+C'est le plus long article du blog. Il vaut le coup parce que les nuits où tu en as besoin, **tu n'as plus le temps d'apprendre tout ça**.
+
+## Que dit la loi sur les majorations nuit / dimanche / férié
+
+C'est le sujet où il y a le plus d'arnaques, donc commençons par les bases légales.
+
+### Arrêté du 24 janvier 2017
+
+L'**arrêté du 24 janvier 2017 relatif à l'information préalable du consommateur sur les prestations de dépannage, de réparation et d'entretien dans le secteur du bâtiment et de l'équipement de la maison** est le texte qui encadre tout ça. Trois principes clés :
+
+1. **Toute majoration horaire (nuit, dimanche, férié) doit être annoncée AVANT** intervention, par écrit ou oralement avec confirmation écrite.
+2. **Elle doit figurer en clair sur le devis écrit**, avec son montant exact (pas un "supplément à voir").
+3. **Le tarif horaire de base, le détail des suppléments, les frais de déplacement** : tout est obligatoire.
+
+Si on t'ajoute "+50€ de supplément nuit" **après** intervention sans que ce soit annoncé sur le devis : c'est **illégal**, tu peux le contester (DGCCRF, signal.conso.gouv.fr).
+
+### Plages horaires usuelles
+
+L'arrêté ne fixe pas les heures précises ; chaque profession et chaque pro définit ses plages. Mais on retrouve grosso modo :
+
+- **Soir** : 18h ou 20h jusqu'à 22h
+- **Nuit** : 22h jusqu'à 7h ou 8h
+- **Dimanche** : toute la journée
+- **Jours fériés** : toute la journée
+
+### Majorations habituellement pratiquées (marché)
+
+Voici les fourchettes que les baromètres UFC-Que Choisir, les contrôles DGCCRF et les fédérations professionnelles (FFB, Capeb) montrent comme étant pratiquées :
+
+| Plage | Majoration usuelle marché | Plafond raisonnable |
+|-------|---------------------------|---------------------|
+| Soir 18h-22h | +20% à +40% | +50% |
+| Nuit 22h-7h | +50% à +100% | +100% |
+| Samedi journée | +25% à +50% | +50% |
+| Dimanche | +50% à +100% | +100% |
+| Jour férié | +100% (parfois +150%) | +150% |
+
+**Au-delà des plafonds raisonnables**, on entre dans la zone des sanctions DGCCRF. La DGCCRF a déjà publié des bilans annonçant des amendes pour majoration **abusive** ou **non annoncée**.
+
+### Mon modèle Joël : prix unique 24h/24
+
+Mon choix de business, c'est de **pas faire de majoration**. Le prix annoncé au téléphone est le prix de la facture, qu'il soit 14h un mardi ou 3h un dimanche du 1er mai. Je le précise parce que c'est rare dans le métier et parce que ça **enlève une grosse source d'arnaque potentielle** (et de stress quand on appelle paniqué).
+
+C'est un fact réel du modèle MonJoël, vérifiable sur ma grille tarifaire publique.
+
+## Comment vérifier un dépanneur en 2 minutes (en pleine nuit)
+
+Quand il est 3h du matin et que ton WC déborde, tu n'as pas 30 minutes pour faire une enquête approfondie. Voici la **version express en 2 minutes** que je recommande.
+
+### Action 1 : SIRET (60 secondes)
+
+Au téléphone, demande **avant** que la personne se déplace :
+- Le **nom** exact de l'entreprise.
+- Son **SIRET** (14 chiffres).
+
+Tu vas sur **annuaire-entreprises.data.gouv.fr** depuis ton téléphone (gratuit, État, accessible 24h/24), tu colles le SIRET. Doit ressortir :
+- La **même raison sociale**.
+- Une **activité cohérente** (code NAF) avec le métier.
+- Statut **"actif"**.
+
+**Codes NAF cohérents** :
+- Plomberie : 43.22A, 43.22B
+- Serrurerie : 80.20Z, 43.32A
+- Électricité : 43.21A, 43.21B
+
+Si rien ne sort, ou si l'activité est "vente de jouets en gros", **tu raccroches**. Pas d'exception.
+
+### Action 2 : avis Google récents (30 secondes)
+
+Tape le nom de l'entreprise sur Google. Regarde la fiche Google Business :
+
+- **Volume d'avis** : au moins 50 pour un pro qui tourne vraiment.
+- **Date des derniers** : au moins quelques-uns dans les 3 derniers mois.
+- **Pas que des 5 étoiles** : un vrai pro a forcément quelques 1 ou 2 étoiles. C'est sain.
+- **Réponses du pro** aux avis négatifs (signe qu'il prend ses clients au sérieux).
+
+Si tu vois 200 avis 5 étoiles datés tous sur 2 mois, ou que le pro répond aux avis négatifs en insultant les clients, **tu raccroches**.
+
+### Action 3 : devis SMS avant déplacement (30 secondes)
+
+Tu demandes au téléphone : **"Envoie-moi le devis par SMS avant de venir, avec le prix tout compris."**
+
+Le devis doit contenir :
+- Nom + SIRET.
+- Description de l'intervention prévue.
+- Prix TTC tout compris (déplacement, suppléments, etc.).
+
+Un pro sérieux prend 2 minutes pour t'envoyer un SMS. **Un escroc refuse**. C'est aussi simple que ça.
+
+**Total : 2 minutes**, et tu as éliminé 95% des risques d'arnaque nocturne.
+
+## Le vrai piège : pourquoi le 1er numéro Google n'est PAS le bon
+
+C'est le piège le plus systématique en dépannage urgence nocturne. Tu tapes "serrurier urgence Paris 17e", tu prends le **premier numéro qui sort**, et c'est presque garanti que tu tombes dans une chaîne d'arnaque.
+
+### Comment ça marche techniquement
+
+1. **Annonces Google Ads** (publicité payante) : le premier "résultat" en haut de la page Google est presque toujours une **annonce publicitaire**, pas un résultat naturel. Et les annonces les plus visibles dans le dépannage sont **payées par des agrégateurs**, pas par des artisans locaux.
+
+2. **Agrégateurs déguisés** : ces sites prennent ton appel, le **routent vers un call center** (souvent à l'étranger). Le "serrurier" qui te répond n'est pas le pro qui viendra : c'est un commercial.
+
+3. **Sous-traitance à la commission** : l'artisan envoyé est **payé un pourcentage** sur ce que tu paies à la fin. Plus la facture est grosse, plus il gagne. Donc il a **intérêt à gonfler**.
+
+4. **Boîte aux lettres partagée** : l'entreprise officielle (le SIRET sur la facture, quand il y en a un) est souvent une **boîte aux lettres** mutualisée. Aucune adresse réelle, aucun atelier, aucune équipe.
+
+### Comment le repérer
+
+- Le numéro affiché dans la pub Google n'est pas un numéro fixe local (souvent un 09 ou un numéro masqué).
+- Le site est **hyper générique** : "Plombier Paris", "Serrurier Île-de-France", sans aucune photo réelle ni équipe identifiée.
+- Plusieurs villes différentes pointent vers **le même numéro**.
+- Aucun **avis Google récent** sur la fiche officielle.
+- Pas de **SIRET visible** sur le site (ou SIRET non vérifiable).
+
+### Ce qu'il faut faire à la place
+
+- **Cherche le 2e ou 3e résultat** (souvent un vrai artisan local).
+- **Compare 2 ou 3 numéros**, demande à chacun le prix au téléphone.
+- **Prends le pro qui a les meilleurs avis Google + un SIRET vérifiable + qui t'envoie un devis SMS** sans que tu insistes.
+
+> **Témoignage Mehdi T., Vincennes (février 2026)** : "Devis flou signé sous pression à 3h du matin : 460€ qui sont devenus 1 100€ sur la facture finale. Le SIRET sur le papier ne correspond à aucune entreprise active. Banque saisie." (Cas typique : 1er numéro Google, devis flou signé sous pression nocturne, SIRET fantôme qui rend tout recours impossible.)
+
+## Ce que tu peux faire TOI-MÊME en attendant
+
+Pendant que tu vérifies le pro et qu'il arrive, tu n'es pas démuni. Voici les **gestes utiles selon ton type d'urgence**.
+
+### Fuite d'eau
+
+1. **Coupe l'arrivée d'eau générale**. Compteur dans le placard technique de l'appart, au sous-sol de l'immeuble, ou regard extérieur pour une maison. Quart de tour sur la vanne.
+2. **Coupe l'électricité** si l'eau s'approche de prises ou d'appareils branchés. Disjoncteur général.
+3. **Limite la propagation** : serpillières, bassines, serviettes. Surélève les meubles si possible.
+4. **Préviens les voisins du dessous** si tu es en immeuble (la fuite va vite descendre). C'est aussi de leur intérêt.
+5. **Photographie tout** (la fuite, les dégâts, les indices de cause). Indispensable pour ton assurance.
+
+### Porte claquée (pas effractée)
+
+1. **Vérifie d'abord le voisin** (parfois quelqu'un a un double, si tu connais bien).
+2. **Tente la carte plastique** sur une serrure simple (carte de fidélité, pas ta CB) si la porte n'a qu'un pêne demi-tour. Glisse entre le pêne et la gâche, en oblique. Marche sur 30% des cas, jamais sur une serrure 3 points.
+3. **Si tu es propriétaire** : appelle ton assurance habitation, certaines couvrent l'ouverture de porte (vérifie ton contrat avant).
+4. **Si tu es locataire** : contacte le syndic ou le gardien si possible (parfois ils ont un double).
+5. **N'essaie PAS** de défoncer la porte : tu vas casser plus cher que la facture serrurier.
+
+### Coupure d'électricité partielle
+
+1. **Va voir le tableau** : un disjoncteur ou un différentiel a sauté ? Le levier est en bas ou au milieu ?
+2. **Réarme-le** : remonte le levier en position haute. Si ça tient, c'est réglé.
+3. **Si ça resaute immédiatement** : un appareil fait fuir le courant. **Débranche tout** dans le circuit concerné, réarme, puis rebranche un par un pour identifier le coupable.
+4. **Si plus rien ne marche dans tout le logement** : vérifie qu'il n'y a pas une coupure générale dans ton immeuble ou ton quartier. Tu peux appeler **Enedis (urgence dépannage : 09 72 67 50 + ton n° de département)**, c'est gratuit et eux interviennent partout 24h/24.
+
+### Coupure de gaz suspecte
+
+**Différent**, c'est dangereux. Si tu sens du gaz :
+1. **N'allume aucune lumière**, **n'utilise aucun appareil électrique** (pas de portable près de toi).
+2. **Aère** en grand ouvrant fenêtres et portes.
+3. **Ferme la vanne d'arrivée gaz** (souvent près du compteur ou avant la chaudière).
+4. **Sors du logement** et **appelle GRDF dépannage gaz : 0 800 47 33 33** (numéro vert, gratuit, 24h/24). C'est eux qui interviennent en premier, pas un plombier privé.
+
+## Pourquoi c'est cher la nuit (et combien c'est juste)
+
+Disons que tu as une vraie urgence à 2h du matin un dimanche. Voici ce qui justifie un prix plus élevé qu'en journée :
+
+- Le pro est **réveillé en pleine nuit** ou **renonce à son weekend en famille**.
+- Il **roule en pleine nuit** sur des routes pas optimales, plus de risque.
+- C'est une **astreinte** : il a souvent un système de garde qui implique d'être joignable en permanence, ce qui a un coût opérationnel.
+
+Donc une majoration **+50% à +100% en nuit** ou **+100% en férié**, c'est juste et reflète une réalité économique.
+
+**Ce qui n'est pas juste** :
+- Une majoration **non annoncée** ajoutée après coup.
+- Un prix d'appel à 49€ qui passe à 1 200€ "à cause de la nuit".
+- Une majoration **+200%** ou **+300%** : c'est de l'abus.
+- Un prix annoncé au téléphone qui **double** une fois sur place sans justification claire.
+
+> **Témoignage François L., Pantin** : "Devis sorti de nulle part, à 920€ pour changer un siphon évier dimanche après-midi. J'ai dit non, j'ai trouvé un autre pro à 130€ le lundi matin." (Cas parfait : François a refusé la signature, attendu 12h, payé 7 fois moins.)
+
+> **Témoignage Sarah K., Paris 11e** : "Porte claquée à 23h. J'ai pris le premier numéro Google. Annoncé 89€ au téléphone. Une fois sur place, devis à 850€ pour ouverture impossible sans perçage. J'ai signé pour qu'il parte." (Sarah a payé presque **10 fois** le prix annoncé. Le piège classique du 1er numéro Google + escalade nocturne + signature sous pression.)
+
+## Si tu peux ATTENDRE le matin, attends
+
+Tous les problèmes "urgents" ne le sont pas vraiment. Voici ma règle de tri honnête :
+
+### Vraie urgence (intervention immédiate justifiée)
+
+- **Fuite d'eau active** qui inonde et que tu n'arrives pas à couper.
+- **Court-circuit avec fumée**, étincelles, odeur de brûlé persistante.
+- **Effraction en cours** ou porte ouverte par cambriolage (logement non sécurisé).
+- **Personne enfermée à l'intérieur** sans clé (enfant, personne âgée, animal).
+- **WC unique bouché** dans un logement sans alternative, avec refoulement.
+- **Plus du tout de chauffage en hiver très froid** avec personne fragile (bébé, personne âgée).
+
+### Faux urgence (peut attendre le matin)
+
+- **Robinet qui goutte** : tu mets un seau, ça attend.
+- **Une prise qui ne marche plus** dans une pièce, le reste fonctionne.
+- **Chauffe-eau en panne en été** ou avec saison douce, tu peux te débrouiller.
+- **Porte d'entrée OK** mais une porte intérieure bloquée : ça attend.
+- **Fuite minime** sous l'évier que tu peux limiter avec une bassine.
+
+**Différence pratique** : si tu peux attendre le matin (8h), tu paies **30% à 50% moins cher**, tu as le temps de comparer 3 pros, et tu n'es pas sous pression.
+
+## Numéros utiles à connaître
+
+À garder dans tes contacts :
+
+- **Pompiers** : 18 (incendie, danger immédiat)
+- **Police** : 17
+- **Numéro européen unique** : 112 (depuis n'importe quel téléphone, partout en Europe)
+- **GRDF urgence gaz** : 0 800 47 33 33 (24h/24, gratuit)
+- **Enedis dépannage électricité** : 09 72 67 50 + n° département (coupure générale, problème compteur)
+- **Centre antipoison** : 01 40 05 48 48 (Paris) ou 0 800 59 59 59 (numéro vert national)
+- **DGCCRF** : 0809 540 550 (signaler une arnaque dépannage)
+- **SignalConso** (en ligne) : signal.conso.gouv.fr
+
+## Cas réels qui se passent bien (parce qu'on a fait juste)
+
+> **Mehdi T., Vincennes (alternative)** : si Mehdi avait pris 2 minutes à 3h du matin pour vérifier le SIRET sur annuaire-entreprises.data.gouv.fr, il aurait vu que l'entreprise n'existait pas, raccroché, appelé un autre pro. Coût total évité : **640€** (1 100 - 460). Temps investi : **2 minutes**.
+
+> **François L., Pantin (cas réussi)** : François a **refusé** le devis à 920€ dimanche, accepté de "vivre avec" le siphon en attendant lundi (mis une bassine sous l'évier), trouvé un pro à **130€** le lundi matin. Coût évité : **790€**. Stress économisé : énorme.
+
+> **Sarah K. (alternative)** : si Sarah avait demandé un devis SMS avant de laisser entrer, ou même juste vérifié le SIRET pendant que le serrurier arrivait, elle aurait vu le pattern d'arnaque (entreprise floue, pas de SIRET). Coût évité : **750€** environ.
+
+## Mon engagement nuit / weekend
+
+- **Joignable 24h/24, 7j/7**, vraiment (pas un call center).
+- **Prix unique** : pas de majoration nuit, weekend, férié. Le prix annoncé au téléphone est le prix de la facture.
+- **Devis SMS systématique** avant déplacement.
+- **SIRET vérifiable** sur annuaire-entreprises.data.gouv.fr.
+- **Facture conforme** sur place ou par mail dans la foulée.
+- Si ton problème **peut attendre le matin**, je te le dis honnêtement et on prend rendez-vous pour le lendemain (souvent 30% moins cher pour toi).
+
+Tu peux retrouver mes prestations selon ton besoin :
+- **Plomberie** : [/plomberie](/plomberie) — [Tarifs](/plomberie/tarifs)
+- **Serrurerie** : [/serrurerie](/serrurerie) — [Tarifs](/serrurerie/tarifs)
+- **Électricité** : [/electricite](/electricite) — [Tarifs](/electricite/tarifs)
+
+## Articles liés à lire
+
+- [Comment vérifier un dépanneur d'urgence en 3 minutes](/blog/comment-verifier-depanneur-urgence)
+- [Arnaques plomberie : 7 conseils pour les éviter](/blog/arnaques-plomberie-comment-eviter)
+- [Arnaques serrurier : 7 signaux qui doivent t'alerter](/blog/arnaques-serrurier-comment-eviter)
+- [Arnaques électricien dépannage : 6 pièges à éviter](/blog/arnaques-electricien-comment-eviter)
+- [Tarifs plombier 2026 : guide complet des prix justes](/blog/tarifs-plombier-2026-guide-prix)
+- [Fuite d'eau la nuit : que faire en urgence](/blog/fuite-eau-nuit-que-faire)
+- [Serrurier urgence nuit weekend](/blog/serrurier-urgence-nuit-weekend)
+
+## Sources
+
+- Arrêté du 24 janvier 2017 relatif à l'information préalable du consommateur sur les prestations de dépannage, de réparation et d'entretien dans le secteur du bâtiment et de l'équipement de la maison.
+- Code de la consommation, article L.111-1 (information précontractuelle obligatoire).
+- Code de la consommation, articles L.221-18 à L.221-28 (droit de rétractation hors établissement, applicable aux interventions à domicile non sollicitées).
+- DGCCRF, "Dépannage à domicile : la répression des fraudes maintient la pression", rapport 2024.
+- UFC-Que Choisir, baromètres 2023-2024 sur le dépannage à domicile.
+- INC (Institut National de la Consommation), fiches pratiques "Dépannage à domicile".
+- FFB (Fédération Française du Bâtiment) et Capeb, recommandations métier sur les majorations.
+- annuaire-entreprises.data.gouv.fr (vérification SIRET, INSEE, gratuit).
+- signal.conso.gouv.fr (signalement DGCCRF).
+- pre-plainte-en-ligne.gouv.fr (pré-plainte police).
+- Numéros utiles GRDF (0 800 47 33 33), Enedis (09 72 67 50 XX), DGCCRF (0809 540 550).
+
+📞 **Tu as une vraie urgence en pleine nuit ?** Appelle-moi au 01 41 69 10 08 — joignable 24h/24, prix unique sans majoration, devis SMS avant intervention.
+    `
+  },
 ];
 
 // Helper functions

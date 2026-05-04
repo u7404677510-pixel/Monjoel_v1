@@ -20,6 +20,11 @@ import { generateCityPageContent, generateServicePageContent } from "@/lib/seo/c
 import { generatePremiumSchemas } from "@/lib/seo/premium/schema";
 import { getPremiumContent } from "@/lib/seo/premium/registry";
 import {
+  buildCityContextualLinks,
+  buildServiceContextualLinks,
+  distributeLinksAcrossSections,
+} from "@/lib/seo/premium/contextualLinks";
+import {
   CityHero,
   CityFAQ,
   CityServices,
@@ -191,6 +196,10 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
 
   // ---- PREMIUM ----
   if (premium) {
+    // Calcul serveur des liens contextuels (maillage interne profond) :
+    // 1 lien max par section, sauf 1re et dernière. Voix Joël, ancres stables.
+    const cityLinks = buildCityContextualLinks(trade, city);
+    const cityLinkMap = distributeLinksAcrossSections(cityLinks, premium.sections.length);
     return (
       <>
         <Navigation />
@@ -199,7 +208,12 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city) }}
           />
-          <PremiumPageRenderer content={premium} trade={trade} city={city} />
+          <PremiumPageRenderer
+            content={premium}
+            trade={trade}
+            city={city}
+            contextualLinks={cityLinkMap}
+          />
         </main>
         <Footer />
       </>
@@ -261,6 +275,9 @@ export function ServicePageBody({
 
   // ---- PREMIUM ----
   if (premium) {
+    // Liens contextuels page service : ville parent + voisine premium + blog.
+    const serviceLinks = buildServiceContextualLinks(trade, city, serviceSlug);
+    const serviceLinkMap = distributeLinksAcrossSections(serviceLinks, premium.sections.length);
     return (
       <>
         <Navigation />
@@ -269,7 +286,13 @@ export function ServicePageBody({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city, service) }}
           />
-          <PremiumPageRenderer content={premium} trade={trade} city={city} service={service} />
+          <PremiumPageRenderer
+            content={premium}
+            trade={trade}
+            city={city}
+            service={service}
+            contextualLinks={serviceLinkMap}
+          />
         </main>
         <Footer />
       </>

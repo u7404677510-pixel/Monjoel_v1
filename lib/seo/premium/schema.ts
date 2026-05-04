@@ -92,6 +92,8 @@ export function generatePremiumSchemas(
   });
 
   // --- LocalBusiness ---
+  // areaServed enrichi : ville + département + région — donne une lecture
+  // hiérarchique précise à Google plutôt qu'un seul niveau "City".
   const localBusiness: any = {
     "@context": "https://schema.org",
     "@type": tradeToLocalBusinessType(trade.slug),
@@ -109,17 +111,22 @@ export function generatePremiumSchemas(
       postalCode: city.postalCodes[0],
       addressCountry: "FR",
     },
-    areaServed: {
-      "@type": "City",
-      name: city.name,
-      containedIn: { "@type": "AdministrativeArea", name: city.departmentName },
-    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: city.name,
+        containedIn: { "@type": "AdministrativeArea", name: city.departmentName },
+      },
+      { "@type": "AdministrativeArea", name: `${city.departmentName} (${city.department})` },
+      { "@type": "AdministrativeArea", name: "Île-de-France" },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "00:00",
         closes: "23:59",
+        validFrom: "2024-01-01",
       },
     ],
     // Pas d'aggregateRating tant qu'on n'a pas d'avis Google réels collectés.
@@ -163,9 +170,19 @@ export function generatePremiumSchemas(
         url: BASE_URL,
         telephone: COMPANY_PHONE,
       },
-      areaServed: {
-        "@type": "City",
-        name: city.name,
+      areaServed: [
+        {
+          "@type": "City",
+          name: city.name,
+          containedIn: { "@type": "AdministrativeArea", name: city.departmentName },
+        },
+        { "@type": "AdministrativeArea", name: `${city.departmentName} (${city.department})` },
+      ],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
       },
       offers: {
         "@type": "Offer",

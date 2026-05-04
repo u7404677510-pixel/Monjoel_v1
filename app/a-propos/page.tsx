@@ -5,6 +5,7 @@ import { Shield, Users, Award, Heart, Phone, Star } from "lucide-react";
 import MidPageCTA from "@/components/MidPageCTA";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { generatePersonJoelStandaloneSchema } from "@/lib/seo/person-schema";
 
 const values = [
   {
@@ -70,6 +71,14 @@ function AProposHeroCTA() {
 export default function AProposPage() {
   return (
     <>
+      {/* Schema.org Person — page principale dédiée au fondateur. */}
+      {/* Boost E-E-A-T : Google rattache le contenu à une personne réelle. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generatePersonJoelStandaloneSchema()),
+        }}
+      />
       <Breadcrumbs mode="standalone" items={[{ label: "À propos" }]} />
       <div className="pt-8 pb-16">
       <div className="max-w-4xl mx-auto px-6">

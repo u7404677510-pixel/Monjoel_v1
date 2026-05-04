@@ -19,17 +19,46 @@ const BASE_URL = "https://monjoel.fr";
  * Toutes les autres combinaisons ville × métier (× service) sont
  * `noindex, follow` côté HTML et ABSENTES du sitemap.
  *
- * Quand une nouvelle page est promue Premium (registry mis à jour),
- * elle apparaît automatiquement ici au prochain build.
+ * EXCLUSIONS sitemap (volontaires) :
+ *   - /admin, /artisan, /client (UIs internes — non publiques)
+ *   - /api/* (routes API, pas indexables)
+ *   - /test, /truescope (pages d'expérimentation)
+ *   - /[slug] (route catch-all dynamique sans contenu propre)
+ *   - /recherche (page utilitaire, pas un cluster SEO)
+ *
+ * CALIBRATION DES PRIORITÉS (échelle Google 0.0–1.0) :
+ *   - Home : 1.0 (point d'entrée principal)
+ *   - Hubs métier (/plomberie, /serrurerie, /electricite) : 0.9
+ *   - Pages dépt + tarifs hub : 0.85
+ *   - Pages premium ville : 0.85 (cluster SEO local prioritaire)
+ *   - Pages services génériques : 0.8
+ *   - Pages premium service : 0.8 (longue traîne, légèrement < ville)
+ *   - Blog hub : 0.8
+ *   - Articles de blog : 0.7
+ *   - Stop arnaques + contact : 0.7
+ *   - Pages institutionnelles (/a-propos, /recrutement) : 0.5
+ *   - Pages légales : 0.3
  *
  * Heuristiques `lastModified` :
+ *   - Pages premium / blog : date réelle de updatedAt (signal de fraîcheur fiable)
  *   - Homepage / hubs métier : date du build (changent souvent côté contenu)
- *   - Pages dépt / hub : décalées de quelques jours pour ne pas avoir une
- *     date identique partout (Google n'aime pas les dates clonées en bloc)
- *   - Pages premium / blog : date réelle de updatedAt
+ *   - Pages dépt : décalées de quelques jours pour éviter les dates clonées
+ *   - Pages légales : -30j (rarement modifiées)
  *
- * Volume actuel : ~7869 URLs → en dessous de la limite Google de 50 000.
- * Si on dépasse 45 000 URLs, prévoir un sitemap index (lib/seo/sitemap-index).
+ * Volume actuel : ~150 URLs publiques (premium + blog + statiques + services + dépts).
+ * Limite Google : 50 000 URLs / 50 Mo par sitemap.
+ *
+ * STRATÉGIE FUTURE — sitemap-index si > 5000 URLs :
+ *   Si on prévoit 500+ pages premium en plus, splitter en :
+ *     /sitemap.xml         → index master listant les sous-sitemaps
+ *     /sitemap-static.xml  → pages institutionnelles (max ~50 URLs)
+ *     /sitemap-premium.xml → pages premium ville + service (peut atteindre milliers)
+ *     /sitemap-blog.xml    → articles de blog
+ *   Implémentation Next.js : `app/sitemap.ts` retourne l'index, et chaque
+ *   sous-sitemap vit dans `app/sitemap-[name]/route.ts` qui retourne du XML
+ *   manuellement (Next.js ne supporte pas nativement plusieurs MetadataRoute.Sitemap).
+ *   Seuil de bascule recommandé : > 5 000 URLs (Google reste tolérant jusqu'à 50k mais
+ *   un sitemap segmenté facilite le diagnostic GSC et l'invalidation sélective).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -51,17 +80,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: Date;
   }> = [
     { url: "", priority: 1.0, changeFrequency: "daily", lastModified: buildDate },
+    // Hubs métier
     { url: "/plomberie", priority: 0.9, changeFrequency: "weekly", lastModified: buildDate },
     { url: "/serrurerie", priority: 0.9, changeFrequency: "weekly", lastModified: buildDate },
     { url: "/electricite", priority: 0.9, changeFrequency: "weekly", lastModified: buildDate },
-    { url: "/serrurerie/tarifs", priority: 0.85, changeFrequency: "weekly", lastModified: recentDate },
-    { url: "/plomberie/tarifs", priority: 0.85, changeFrequency: "weekly", lastModified: recentDate },
-    { url: "/electricite/tarifs", priority: 0.85, changeFrequency: "weekly", lastModified: recentDate },
+    // Pages tarifs (hubs métier secondaires)
+    { url: "/serrurerie/tarifs", priority: 0.85, changeFrequency: "monthly", lastModified: recentDate },
+    { url: "/plomberie/tarifs", priority: 0.85, changeFrequency: "monthly", lastModified: recentDate },
+    { url: "/electricite/tarifs", priority: 0.85, changeFrequency: "monthly", lastModified: recentDate },
+    // Hub blog (changement weekly réaliste — articles ajoutés régulièrement)
     { url: "/blog", priority: 0.8, changeFrequency: "weekly", lastModified: recentDate },
-    { url: "/stop-arnaques", priority: 0.8, changeFrequency: "monthly", lastModified: olderDate },
+    // Pages contenu fort SEO
+    { url: "/stop-arnaques", priority: 0.7, changeFrequency: "monthly", lastModified: olderDate },
+    { url: "/contact", priority: 0.7, changeFrequency: "monthly", lastModified: olderDate },
+    // Pages institutionnelles
     { url: "/a-propos", priority: 0.5, changeFrequency: "monthly", lastModified: olderDate },
-    { url: "/contact", priority: 0.6, changeFrequency: "monthly", lastModified: olderDate },
     { url: "/recrutement", priority: 0.5, changeFrequency: "monthly", lastModified: olderDate },
+    // Pages légales (rarement updated)
     { url: "/mentions-legales", priority: 0.3, changeFrequency: "yearly", lastModified: legalDate },
     { url: "/cgu", priority: 0.3, changeFrequency: "yearly", lastModified: legalDate },
     { url: "/confidentialite", priority: 0.3, changeFrequency: "yearly", lastModified: legalDate },
@@ -77,6 +112,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ============================================
   // 2. Pages services génériques /[trade]/[service]
+  // (Liste en dur car elles existent comme routes statiques.)
   // ============================================
   const existingServicePages = [
     "/plombier/fuite-eau", "/plombier/wc-bouches", "/plombier/degat-des-eaux",
@@ -115,7 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${BASE_URL}/${trade.slug}-${dept.code}`,
         lastModified: recentDate,
-        changeFrequency: "weekly",
+        changeFrequency: "monthly",
         priority: 0.85,
       });
     }
@@ -135,6 +171,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ============================================
   // 5. Pages PREMIUM (ville × métier × service)
+  // Calibration : ville premium 0.85, service premium 0.8.
+  // lastModified = updatedAt réel de chaque page (signal de fraîcheur).
+  // changeFrequency = monthly (les contenus sont stables, les mises à jour sont
+  // ponctuelles — déclarer "weekly" serait mensonger et pénalisé par Google).
   // ============================================
   for (const page of listPremiumPages()) {
     const urlPath = page.serviceSlug
@@ -143,8 +183,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({
       url: `${BASE_URL}${urlPath}`,
       lastModified: new Date(page.updatedAt),
-      changeFrequency: page.serviceSlug ? "monthly" : "weekly",
-      priority: page.serviceSlug ? 0.75 : 0.85,
+      changeFrequency: "monthly",
+      priority: page.serviceSlug ? 0.8 : 0.85,
     });
   }
 
