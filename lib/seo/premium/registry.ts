@@ -95,6 +95,8 @@ import { content as plombierChelles } from "./content/plombier-chelles";
 import { content as plombierPontaultCombault } from "./content/plombier-pontault-combault";
 import { content as plombierSartrouville } from "./content/plombier-sartrouville";
 import { content as plombierPoissy } from "./content/plombier-poissy";
+// -- Plombier Batch 11 — Paris orphelins mai 2026 (post-désindexation, Mega Swarm)
+import { content as plombierParis19 } from "./content/plombier-paris-19";
 
 // -- Serrurier (pages ville)
 import { content as serrurierParis11 } from "./content/serrurier-paris-11";
@@ -135,6 +137,8 @@ import { content as serrurierSarcelles } from "./content/serrurier-sarcelles";
 // -- Serrurier Batch 10 — pages service Paris (golden goose post-suppression reproduction-cles)
 import { content as serrurierParis11BlindagePorte } from "./content/serrurier-paris-11-blindage-porte";
 import { content as serrurierParis15ChangementCylindre } from "./content/serrurier-paris-15-changement-cylindre";
+// -- Serrurier Batch 11 — Paris orphelins mai 2026 (post-désindexation, Mega Swarm)
+import { content as serrurierParis16 } from "./content/serrurier-paris-16";
 
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
@@ -285,6 +289,10 @@ const _allPremiumPages: PremiumPageContent[] = [
   electricienClamart,
   electricienCergy,
   electricienMeaux,
+  // Batch 11 — Paris orphelins mai 2026 (post-désindexation, Mega Swarm pilote 2 pages)
+  // Cibles : arrondissements parisiens 0-trade premium identifiés par gap analysis
+  plombierParis19,
+  serrurierParis16,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)

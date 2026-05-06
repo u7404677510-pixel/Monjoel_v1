@@ -33,6 +33,15 @@ import {
 } from "@/components/seo";
 import { getServiceCityAnchor } from "@/lib/seo/anchor-variants";
 import PremiumPageRenderer from "@/components/seo/PremiumPageRenderer";
+import PremiumPageRendererV2 from "@/components/seo/PremiumPageRendererV2";
+
+// V2 design validé — appliqué à toutes les pages premium (city + service).
+// Note : les pages premium existantes (avant le refactor markdown des introParagraph)
+// afficheront leur intro en bloc unique dans la section "À propos" — pas grave,
+// on refactorera progressivement par batches.
+function shouldUseV2(_tradeSlug: string, _citySlug: string, _serviceSlug?: string): boolean {
+  return true;
+}
 import FinalCTA from "@/components/sections/FinalCTA";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -200,6 +209,26 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
     // 1 lien max par section, sauf 1re et dernière. Voix Joël, ancres stables.
     const cityLinks = buildCityContextualLinks(trade, city);
     const cityLinkMap = distributeLinksAcrossSections(cityLinks, premium.sections.length);
+    const useV2 = shouldUseV2(tradeSlug, citySlug);
+    const Renderer = useV2 ? PremiumPageRendererV2 : PremiumPageRenderer;
+    // V2 a son propre <main> + Navigation/Footer rendus par LayoutWrapper.
+    // V1 (legacy) garde le wrapper Navigation/<main>/Footer pour compat.
+    if (useV2) {
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city) }}
+          />
+          <Renderer
+            content={premium}
+            trade={trade}
+            city={city}
+            contextualLinks={cityLinkMap}
+          />
+        </>
+      );
+    }
     return (
       <>
         <Navigation />
@@ -208,7 +237,7 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city) }}
           />
-          <PremiumPageRenderer
+          <Renderer
             content={premium}
             trade={trade}
             city={city}
