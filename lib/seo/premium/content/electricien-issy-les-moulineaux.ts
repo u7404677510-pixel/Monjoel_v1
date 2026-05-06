@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien à Issy-les-Moulineaux : RT2012/RE2020, IRVE, domotique, tableau, NF C 15-100. Prix fixe dès 59€ TTC, annoncé avant. Joël 01 41 69 10 08, 24h/24.",
   h1: "Électricien à Issy-les-Moulineaux (92130) : le guide pédagogique signé Karim Benali",
-  introParagraph:
-    "À Issy-les-Moulineaux, j'interviens sur ce qui est probablement le bâti le plus hétérogène de toute la petite couronne ouest. D'un côté, les programmes neufs RT2012 puis RE2020 qui ont poussé en quinze ans sur le Val-de-Seine, sur l'Île-Saint-Germain et autour du Fort d'Issy : domotique préinstallée, GTL conforme, parasurtenseur d'origine, prises commandées, parfois borne IRVE en sous-sol. De l'autre, les vieux pavillons des Hauts-d'Issy et les petits collectifs des années 60 du quartier des Épinettes, où je trouve encore des tableaux à fusibles porcelaine, des prises sans terre, et des installations qu'aucun amendement de la NF C 15-100 n'a jamais traversées. Entre les deux, des centaines de logements rénovés à des époques très différentes — certains avec un soin remarquable, d'autres avec un bricolage qui me donne du travail. Je suis Karim Benali, ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques, formateur Qualifelec sur la mise aux normes résidentielles. Cette page, je l'ai pensée comme un cours pédagogique à la disposition des Isséens — pour que vous compreniez ce qui se passe quand votre tableau RT2012 commence à déclencher dès que vous branchez la voiture, quand votre box internet fait griller une multiprise, quand votre installation domotique se met à dialoguer dans le vide. Mon but : vous permettre, quand vous appellerez Joël au 01 41 69 10 08, de savoir exactement ce que l'électricien doit chercher, et combien cela doit coûter. Le tarif Joël démarre à 59 € TTC pour un remplacement de prise standard, annoncé avant l'intervention, sans majoration nuit, week-end ou jour férié. Pas de mauvaise surprise, pas de devis à 700 € pour ce qui aurait dû en coûter 90. Lisez tranquillement, ou en urgence : dans les deux cas vous y gagnerez du temps, de la sécurité et probablement de l'argent.",
+  introParagraph: `### Issy-les-Moulineaux : le bâti le plus hétérogène de la petite couronne ouest
+
+À Issy-les-Moulineaux, j'interviens sur ce qui est probablement le bâti le plus hétérogène de toute la petite couronne ouest. D'un côté, les **programmes neufs RT2012 puis RE2020** qui ont poussé en quinze ans sur le **Val-de-Seine**, sur l'**Île-Saint-Germain** et autour du **Fort d'Issy** : domotique préinstallée, GTL conforme, parasurtenseur d'origine, prises commandées, parfois **borne IRVE** en sous-sol.
+
+De l'autre, les vieux **pavillons des Hauts-d'Issy** et les **petits collectifs des années 60** du quartier des **Épinettes**, où je trouve encore des **tableaux à fusibles porcelaine**, des prises sans terre, et des installations qu'aucun amendement de la **NF C 15-100** n'a jamais traversées.
+
+### Le bricolage entre deux époques
+
+Entre les deux, des centaines de logements rénovés à des époques très différentes — certains avec un soin remarquable, d'autres avec un bricolage qui me donne du travail.
+
+### L'auteur de cette page
+
+Je suis **Karim Benali**, **ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques, **formateur Qualifelec** sur la mise aux normes résidentielles.
+
+Cette page, je l'ai pensée comme un cours pédagogique à la disposition des Isséens — pour que vous compreniez ce qui se passe quand votre tableau RT2012 commence à déclencher dès que vous branchez la voiture, quand votre box internet fait griller une multiprise, quand votre installation domotique se met à dialoguer dans le vide.
+
+### Joël à Issy-les-Moulineaux : tarif fixe annoncé en amont
+
+Mon but : vous permettre, quand vous appellerez Joël au **01 41 69 10 08**, de savoir exactement ce que l'électricien doit chercher, et combien cela doit coûter. Le tarif Joël démarre à **59 € TTC** pour un remplacement de prise standard, annoncé avant l'intervention, sans majoration nuit, week-end ou jour férié.
+
+Pas de mauvaise surprise, pas de devis à 700 € pour ce qui aurait dû en coûter 90. Lisez tranquillement, ou en urgence : dans les deux cas vous y gagnerez du temps, de la sécurité et probablement de l'argent.`,
   sections: [
     {
       anchor: "bati-electrique-issy",

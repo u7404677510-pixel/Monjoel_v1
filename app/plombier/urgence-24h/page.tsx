@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Plombier disponible 24h/24, 7j/7. Fuite, dégât des eaux, canalisation bouchée. Intervention de nuit, week-end, jours fériés. Prix fixe.",
   alternates: {
     canonical: "https://monjoel.fr/plombier/urgence-24h",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/urgence-24h",
+      "x-default": "https://monjoel.fr/plombier/urgence-24h",
+    },
   },
   openGraph: {
     title: "Plombier Urgence 24h/24 | Nuit & Week-end | Joël",

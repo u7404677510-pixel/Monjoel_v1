@@ -14,7 +14,7 @@ export default function PhotoHero({
   const { config } = useSiteConfig();
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-white pt-24 pb-12 md:pt-28 md:pb-20 overflow-hidden">
+    <section className="relative bg-linear-to-br from-gray-50 to-white pt-24 pb-12 md:pt-28 md:pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Contenu texte */}
@@ -60,7 +60,7 @@ export default function PhotoHero({
                 "Paiement APRÈS intervention",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center shrink-0">
                     <Check size={14} className="text-emerald-600" />
                   </div>
                   <span className="text-gray-700">{item}</span>
@@ -98,7 +98,7 @@ export default function PhotoHero({
 
           {/* Image artisan */}
           <div className="order-1 md:order-2 relative">
-            <div className="relative aspect-[4/3] md:aspect-square rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-4/3 md:aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={artisanImage}
                 alt="Artisan Joël en intervention"
@@ -107,7 +107,7 @@ export default function PhotoHero({
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6">
                 <p className="text-white font-semibold">Marc, serrurier certifié</p>
                 <p className="text-white/80 text-sm">12 ans d&apos;expérience • Paris 15e</p>
               </div>

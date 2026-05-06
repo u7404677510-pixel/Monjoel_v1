@@ -1,10 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function MentionsLegalesPage() {
   return (
-    <div className="pt-32 pb-16">
+    <>
+    <Breadcrumbs mode="standalone" items={[{ label: "Mentions légales" }]} />
+    <div className="pt-8 pb-16">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -12,7 +15,7 @@ export default function MentionsLegalesPage() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Mentions légales</h1>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
+          <div className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
             <h2>1. Éditeur du site</h2>
             <p>
               Le site monjoel.fr est édité par :<br />
@@ -23,7 +26,7 @@ export default function MentionsLegalesPage() {
               N° TVA Intracommunautaire : FR52993221878<br />
               Siège social : 45 Rue Boursault, 75017 Paris, France<br />
               Téléphone : 01 41 69 10 08<br />
-              Email : contact@monjoel.com
+              Email : contact@monjoel.fr
             </p>
 
             <h2>2. Directeur de la publication</h2>
@@ -73,7 +76,7 @@ export default function MentionsLegalesPage() {
             </p>
             <p>
               Pour exercer ces droits ou pour toute question relative à vos données 
-              personnelles, contactez-nous à : <strong>contact@monjoel.com</strong>
+              personnelles, contactez-nous à : <strong>contact@monjoel.fr</strong>
             </p>
             <p>
               Pour plus d'informations, consultez notre{" "}
@@ -125,5 +128,6 @@ export default function MentionsLegalesPage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }

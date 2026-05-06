@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Shield, Euro, Clock, FileCheck, Users, Star, ArrowRight } from "lucide-react";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
@@ -9,34 +9,40 @@ import { yellowPunctuation } from "@/components/ui/Title";
 const solutions = [
   {
     icon: FileCheck,
-    title: "Devis instantané",
-    description: "Recevez un prix fixe avant toute intervention. Ce prix ne changera jamais.",
+    title: "Prix fixe annoncé au téléphone",
+    description:
+      "9 cas sur 10 reçoivent un devis ferme avant que l'artisan parte. Le tarif communiqué au standard est celui qui figure sur la facture finale, sans variable.",
   },
   {
     icon: Euro,
-    title: "Paiement avant intervention",
-    description: "Payez avant l'intervention, l'artisan intervient ensuite. Un seul paiement, zéro surprise.",
+    title: "Annulation sans frais",
+    description:
+      "Tant que l'artisan n'est pas arrivé, vous pouvez annuler par téléphone sans pénalité. Si vous refusez le devis sur place, le déplacement n'est pas facturé.",
     accent: true,
   },
   {
     icon: Users,
-    title: "Artisans vérifiés",
-    description: "Chaque professionnel est vérifié : identité, diplômes, assurances, avis clients.",
+    title: "Identité artisan vérifiée",
+    description:
+      "RC pro, qualifications (Qualibat, Qualifelec, A2P) et casier judiciaire contrôlés avant intégration au réseau. Nom et matricule communiqués au téléphone avant départ.",
   },
   {
     icon: Clock,
-    title: "Intervention rapide",
-    description: "Un artisan disponible en moins de 30 minutes en moyenne près de chez vous.",
+    title: "Délai d'arrivée tenu",
+    description:
+      "30 minutes en moyenne sur Paris intra-muros, 60 minutes sur la couronne IDF. Le suivi du temps réel est tracé : si le délai annoncé est dépassé, le standard vous rappelle.",
   },
   {
-    icon: Star,
-    title: "Satisfaction garantie",
-    description: "Si vous n'êtes pas satisfait, nous trouvons une solution. Toujours.",
+    icon: FileCheck,
+    title: "Facture conforme assurance",
+    description:
+      "Ligne déplacement, ligne main d'œuvre, ligne pièces, taux TVA, SIRET, signature. Document accepté par AXA, MAIF, Allianz, Groupama, MMA, Macif, Matmut.",
   },
   {
     icon: Shield,
-    title: "Protection totale",
-    description: "Joël vous accompagne avant, pendant et après l'intervention.",
+    title: "SAV 30 jours sur l'intervention",
+    description:
+      "Si le défaut revient sur la même origine sous 30 jours, le retour de l'artisan est sans frais. Au-delà, garantie pièces 2 ans constructeur, garantie main d'œuvre 1 an.",
   },
 ];
 
@@ -63,7 +69,8 @@ export default function StopArnaquesSolution() {
             {yellowPunctuation("Comment Joël vous protège")}
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Des garanties concrètes pour un dépannage en toute confiance.
+            Six garanties contractuelles. Pas de promesse vague : chaque ligne
+            est défendable, écrite sur la facture, opposable juridiquement.
           </p>
         </motion.div>
 
@@ -75,7 +82,7 @@ export default function StopArnaquesSolution() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-white/80 backdrop-blur-sm rounded-2xl p-5 sm:p-6 shadow-lg border hover:shadow-xl transition-all ${
+              className={`bg-white/80 backdrop-blur-xs rounded-2xl p-5 sm:p-6 shadow-lg border hover:shadow-xl transition-all ${
                 solution.accent ? 'border-joel-yellow/30' : 'border-white/50'
               }`}
             >

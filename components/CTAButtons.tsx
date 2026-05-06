@@ -1,9 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { Phone, ArrowRight } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 interface CTAButtonsProps {
   variant?: "hero" | "section" | "compact";

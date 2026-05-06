@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Créteil (94000) : intervention en 20-30 min, prix Joël annoncé avant — dès 79€ TTC, 24h/24 sans majoration. Conseils d'un ex-EDF, préfecture 94.",
   h1: "Plombier à Créteil (94000) : ce qu'un vieil hydraulicien aimerait expliquer aux Cristoliens avant qu'ils décrochent",
-  introParagraph:
-    "Bonjour, je m'appelle René Salvador. J'ai 71 ans, j'ai passé quarante ans à EDF dans l'hydraulique, à m'occuper de pompes, de réseaux et de canalisations qui n'avaient pas le droit de tomber en panne. Aujourd'hui je suis bénévole à l'UFC-Que Choisir, et chaque semaine je tiens des permanences pour aider les particuliers qui se sont fait piéger par un dépannage à 700€ pour un chauffe-eau bricolé. Créteil, je connais : à la fin des années 90, j'ai été détaché plusieurs mois sur le poste source qui alimente le secteur de l'hôpital Henri-Mondor, pour reprendre l'installation électrique d'une partie du CHU et y inclure les nouvelles normes de continuité d'alimentation des blocs opératoires. J'ai logé en semaine dans une résidence de la rue Pasteur, à dix minutes à pied du métro Créteil-L'Échat, et j'ai vu la ville préfectorale telle qu'elle est : grosse, jeune, mélangée, organisée comme une ville nouvelle pensée d'un seul tenant dans les années 70. Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un mardi soir avec une fuite qui dégouline du plafond dans un Choux du Lac, peut-être un dimanche matin avec un ballon Atlantic qui ne donne plus rien dans une résidence du Mont-Mesly. Créteil, c'est 93 285 habitants en 2024, c'est la préfecture du Val-de-Marne, c'est l'université Paris-Est Créteil avec ses 32 000 étudiants, c'est le CHU Henri-Mondor qui rayonne sur tout le 94 sud, c'est le centre commercial Créteil-Soleil qui tourne en continu, c'est la Mosquée Sahaba qui rassemble une grande communauté chaque vendredi, et c'est cette silhouette unique des Choux de Créteil dessinée par Gérard Grandval en 1969 — quinze tours en pétales de béton qui ne ressemblent à rien d'autre en France. Toute cette ville posée d'un coup sur les berges du Lac de Créteil entre 1969 et 1985, avec la même typologie de réseaux hydrauliques, le même type de ballons, les mêmes pathologies aujourd'hui à quarante ans de service. Je vais essayer de faire deux choses à la fois. Vous expliquer pourquoi votre installation souffre tant ici — l'eau dure du SEDIF, les réseaux PER première génération typiques de la ville nouvelle, les ballons des résidences 70 désormais à bout — et comment Joël, ce réseau d'artisans pour qui je tiens cette rubrique, vous évite les pièges classiques du dépannage francilien : prix annoncé avant, intervention en moins de trente minutes, 79€ TTC pour démarrer, pas de majoration la nuit ni le dimanche. Le numéro à composer si l'eau monte déjà : 01 41 69 10 08. Maintenant, asseyez-vous deux minutes, je vais vous raconter ce que personne ne vous dira sur les tuyaux de Créteil.",
+  introParagraph: `### Créteil en chiffres : la préfecture du Val-de-Marne
+
+Créteil, c'est **93 285 habitants en 2024**, la **préfecture du Val-de-Marne**, l'**université Paris-Est Créteil avec ses 32 000 étudiants**, le **CHU Henri-Mondor** qui rayonne sur tout le 94 sud, le **centre commercial Créteil-Soleil**, et la **Mosquée Sahaba**.
+
+### Le bâti cristolien : la ville nouvelle de 1969
+
+Toute cette ville a été posée d'un coup sur les berges du **Lac de Créteil** entre **1969 et 1985**, avec la même typologie de réseaux hydrauliques, le même type de ballons, les mêmes pathologies aujourd'hui à quarante ans de service.
+
+Vous y trouvez la silhouette unique des **Choux de Créteil dessinée par Gérard Grandval en 1969** — quinze tours en pétales de béton qui ne ressemblent à rien d'autre en France. Le **Mont-Mesly historique** et ses tours alignées, **Les Bleuets**, **La Brèche**, **les Sarrazins**, **les Buttes-Halage**, et plus récemment **les ZAC des Sarrazins** et résidences de la **Pointe-du-Lac**.
+
+### Le quotidien plomberie à Créteil : ce que ça implique
+
+Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un mardi soir avec une fuite qui dégouline du plafond dans un **Choux du Lac**, peut-être un dimanche matin avec un **ballon Atlantic** qui ne donne plus rien dans une résidence du **Mont-Mesly**.
+
+Je vais vous expliquer pourquoi votre installation souffre tant ici : l'**eau dure du SEDIF**, les **réseaux PER première génération** typiques de la ville nouvelle, les **ballons des résidences 70 désormais à bout**.
+
+### L'auteur de cette page
+
+Je m'appelle **René Salvador**. J'ai **71 ans**, j'ai passé **quarante ans à EDF dans l'hydraulique**. Aujourd'hui je suis **bénévole à l'UFC-Que Choisir**, et chaque semaine je tiens des permanences pour aider les particuliers qui se sont fait piéger par un dépannage à **700 €** pour un chauffe-eau bricolé. À la fin des années 90, j'ai été détaché plusieurs mois sur le poste source qui alimente le secteur de l'**hôpital Henri-Mondor**.
+
+### Joël à Créteil : tarif fixe annoncé en amont
+
+Joël vous évite les pièges classiques : **prix annoncé avant**, intervention en moins de trente minutes, **79 € TTC** pour démarrer, **pas de majoration la nuit ni le dimanche**.
+
+Le numéro à composer si l'eau monte déjà : **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "creteil-prefecture-ville-nouvelle",
@@ -194,7 +217,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Débouchage WC un dimanche soir",
       texte:
-        "WC bouchés un dimanche à 21h, panique avec deux enfants à coucher. J'avais appelé deux numéros 'urgence' avant Joël, l'un me demandait 350€, l'autre 'à voir sur place'. Joël m'a annoncé 79€ au téléphone, l'artisan est arrivé en 25 minutes, débouché en 20 minutes au furet, payé 79€ comme prévu. Sans majoration dimanche. Je garde le numéro précieusement pour toute la résidence.",
+        "WC bouchés un dimanche à 21h, panique avec deux enfants à coucher. J'avais appelé deux numéros 'urgence' avant Joël, l'un me demandait 350€, l'autre 'à voir sur place'. Joël m'a annoncé 79€ au téléphone, l'artisan est arrivé en 25 minutes, débouché en 30 minutes au furet, payé 79€ comme prévu. Sans majoration dimanche. Je garde le numéro précieusement pour toute la résidence.",
     },
     {
       auteur: "Daniel R.",

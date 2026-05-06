@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Porte Claquée Paris - Ouverture Sans Perçage 89€ | Serrurier Joël",
+  title: "Porte Claquée Paris - Ouverture Sans Perçage 89€ | Joël",
   description: "Porte claquée ? Serrurier ouvre sans dégâts en 20 min à Paris & IDF. Prix fixe 89€ annoncé avant intervention. 24h/24, zéro arnaque. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/ouverture-sans-percage",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/ouverture-sans-percage",
+      "x-default": "https://monjoel.fr/serrurier/ouverture-sans-percage",
+    },
   },
 };
 
@@ -20,7 +24,7 @@ const doList = [
   "Ouverture radio si porte claquée (non verrouillée)",
   "Techniques non destructives en priorité",
   "Prix fixe annoncé avant intervention",
-  "Intervention en ~20 min en moyenne",
+  "Intervention en ~30 min en moyenne",
 ];
 
 const dontList = [
@@ -70,7 +74,7 @@ export default function OuvertureSansPercagePage() {
       <SerrurerieHero
         title="Porte claquée - Ouverture sans perçage"
         subtitle="Serrurerie"
-        description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe 89€, intervention en 20 min."
+        description="Porte claquée (non verrouillée à clé) ? On l'ouvre sans dégâts grâce à la technique radio. Ta porte reste intacte, ton budget aussi. Prix fixe 89€, intervention en 30 min."
         servicePrice="89€"
       />
       <ServicePricingHighlight
@@ -80,7 +84,7 @@ export default function OuvertureSansPercagePage() {
         features={[
           "Ouverture sans perçage en priorité",
           "Porte intacte garantie",
-          "Intervention en 20 min",
+          "Intervention en 30 min",
           "Prix fixe — zéro surprise",
         ]}
       />

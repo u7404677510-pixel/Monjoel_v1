@@ -1,7 +1,19 @@
 "use client";
 
+/**
+ * TrueScopeHero — section d'accueil de l'app TrueScope (devis IA).
+ *
+ * Repaint DA Purple modernisée :
+ *   - Fond off-white avec halos violet/mauve/jaune subtils.
+ *   - Chip "Nouveau" violet/jaune.
+ *   - H2 font-display, mot signature en bg-gradient-joel.
+ *   - CTA principal bg-gradient-joel + sous-link Phone discret.
+ *   - 3 mini-steps en cards lumineuses joel-yellow-light avec icônes violet.
+ *   - Animations safe (initial={false}, opacity:1 dans hidden).
+ */
+
 import { ArrowRight, Camera, MessageSquare, Zap, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const steps = [
   { icon: MessageSquare, label: "Décrivez", detail: "votre problème" },
@@ -11,82 +23,104 @@ const steps = [
 
 export default function TrueScopeHero() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-white">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-joel-violet/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-joel-mauve/[0.04] rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
+    <section className="relative py-24 lg:py-32 overflow-hidden bg-linear-to-b from-white to-joel-yellow-light/40">
+      {/* Halos décoratifs DA Purple */}
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden="true"
+      >
+        <div className="absolute -top-40 right-0 h-[520px] w-[520px] translate-x-1/4 rounded-full bg-joel-mauve/10 blur-3xl" />
+        <div className="absolute -bottom-40 left-0 h-[420px] w-[420px] -translate-x-1/4 rounded-full bg-joel-yellow/15 blur-3xl" />
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 w-full">
         <div className="text-center max-w-3xl mx-auto">
 
+          {/* Eyebrow chip violet/jaune */}
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={false}
+            whileInView={{ opacity: 1, y: [12, 0] }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-joel-violet/5 border border-joel-violet/10 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-joel-yellow-light border border-joel-violet/15 rounded-full mb-8 shadow-xs shadow-joel-violet/5"
           >
-            <Sparkles size={14} className="text-joel-violet" />
-            <span className="text-sm font-medium text-joel-violet tracking-wide">Nouveau — Propulsé par l&apos;IA</span>
+            <Sparkles size={14} className="text-joel-violet" aria-hidden="true" />
+            <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-joel-violet">
+              Nouveau · Propulsé par l&apos;IA
+            </span>
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={false}
+            whileInView={{ opacity: 1, y: [16, 0] }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.08] tracking-tight"
+            className="font-display text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold text-zinc-900 mb-6 leading-[1.04] tracking-tight"
           >
             Votre devis fixe
             <br />
-            <span className="bg-gradient-joel bg-clip-text text-transparent">en 30 secondes.</span>
+            <span className="bg-gradient-joel bg-clip-text text-transparent italic">
+              en 30 secondes.
+            </span>
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={false}
+            whileInView={{ opacity: 1, y: [16, 0] }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-gray-500 mb-12 max-w-xl mx-auto leading-relaxed font-light"
+            className="text-lg sm:text-xl text-zinc-700 mb-12 max-w-xl mx-auto leading-relaxed"
           >
             3 questions. 1 photo. Un prix fixe garanti.
             <br className="hidden sm:block" />
             {" "}Sans appeler. Sans attendre.
           </motion.p>
 
+          {/* CTA principal — bg-gradient-joel, ombre violette */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={false}
+            whileInView={{ opacity: 1, y: [16, 0] }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
             <a
               href="/app/truescope"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-semibold text-lg rounded-2xl shadow-lg shadow-joel-violet/20 hover:shadow-xl hover:shadow-joel-violet/30 hover:scale-[1.02] transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-[0_14px_40px_-10px_rgba(112,85,167,0.45)] hover:shadow-[0_20px_50px_-10px_rgba(112,85,167,0.65)] hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
             >
               <span>Obtenir mon devis gratuit</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight
+                size={20}
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
             </a>
           </motion.div>
 
+          {/* Steps card lumineuses */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={false}
+            whileInView={{ opacity: 1, y: [20, 0] }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
           >
             {steps.map((step, i) => (
-              <div key={i} className="flex items-center gap-3">
-                {i > 0 && (
-                  <div className="hidden sm:block w-8 h-px bg-gray-200 -ml-6 mr-3" />
-                )}
-                <div className="w-11 h-11 rounded-xl bg-joel-violet/[0.06] flex items-center justify-center flex-shrink-0">
-                  <step.icon size={20} className="text-joel-violet" />
+              <div
+                key={i}
+                className="group flex items-center gap-3 px-4 py-4 rounded-2xl bg-white/70 border border-joel-violet/10 backdrop-blur-xs shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <div className="w-11 h-11 rounded-xl bg-joel-yellow-light flex items-center justify-center shrink-0 ring-1 ring-joel-violet/10 group-hover:bg-joel-yellow/40 transition-colors">
+                  <step.icon size={20} className="text-joel-violet" aria-hidden="true" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-gray-900">{step.label}</p>
-                  <p className="text-xs text-gray-400">{step.detail}</p>
+                  <p className="text-sm font-bold text-zinc-900">
+                    <span className="font-mono text-[10px] mr-1 text-joel-mauve uppercase tracking-[0.18em]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {step.label}
+                  </p>
+                  <p className="text-xs text-zinc-600">{step.detail}</p>
                 </div>
               </div>
             ))}

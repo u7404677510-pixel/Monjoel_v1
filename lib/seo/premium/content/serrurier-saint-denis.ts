@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Saint-Denis (93200, 93210) : ouverture porte 89€, rideau métallique 149€, sécurisation post-effraction 149€. Commerces marché, basilique, La Plaine. 01 41 69 10 08.",
   h1: "Serrurier Saint-Denis : ce que je dis aux commerçants du marché et aux familles des tours",
-  introParagraph:
-    "Moi c'est Yannick Chen, restaurateur dans le 11e, propriétaire de deux boutiques dans le 20e, et ex-président de l'asso des commerçants du bas Belleville. Saint-Denis, je la connais depuis qu'on est gamins : on traversait avec mes parents pour aller chercher la viande halal au marché, le tissu pas cher rue de la République, et on faisait un crochet par la basilique pour que mon père nous explique l'histoire des rois de France. Vingt ans plus tard, j'y vais toujours pour mes approvisionnements épices, vaisselle pro, textile, et pour voir mes potes commerçants qui tiennent boutique rue Gabriel-Péri ou bd Marcel-Sembat. C'est pour ça que les gars de Joël m'ont demandé d'écrire cette page : parce que Saint-Denis, ce n'est PAS Paris 3 Marais. Saint-Denis c'est 113 073 habitants, c'est le marché le plus grand d'Europe (oui oui), c'est la Basilique royale qui draine du touriste, c'est le Stade de France qui fait monter et descendre 80 000 personnes les soirs de match, c'est La Plaine Saint-Denis avec ses tours de bureaux SFR, Orange, Generali, et c'est aussi des cités comme Floréal, Allende, les Joncherolles avec des résidences populaires des années 60-70 qui ont leurs galères de serrurerie. Bref c'est un MONDE. Et dans ce monde, le serrurier ce n'est pas un luxe, c'est un outil de survie : pour le commerçant qui voit sa devanture tapée la nuit, pour la mère de famille qui claque sa porte d'appart au 14e étage de la barre Allende, pour le chef de chantier de la Plaine qui a perdu les clés de l'open space SFR, pour le restaurateur du marché dont le rideau métallique lâche un samedi à 11h en pleine cohue. Joël, c'est l'inverse des arnaqueurs qui pullulent autour des stations Saint-Denis-Basilique et Porte de Paris : prix annoncé AVANT, 89€ TTC pour une ouverture de porte claquée, 24h/24 sans majoration nuit ni dimanche, artisans qu'on a vérifiés un par un. 01 41 69 10 08, ça sonne dans un vrai bureau Île-de-France, pas dans un call center à 2500 km. Cette page, je l'écris pour mes voisins commerçants du marché ET pour les familles des résidences ET pour les boîtes de la Plaine. Tous ont les mêmes ennemis : le temps qui presse et les faux serruriers qui le savent.",
+  introParagraph: `### Saint-Denis en chiffres : population, marché, patrimoine
+
+Saint-Denis compte **113 073 habitants** et abrite **le marché le plus grand d'Europe**, la **Basilique royale** qui draine les touristes, le **Stade de France** qui fait monter et descendre **80 000 personnes les soirs de match**.
+
+C'est aussi **La Plaine Saint-Denis** avec ses tours de bureaux **SFR, Orange, Generali**, et des cités populaires comme **Floréal, Allende, les Joncherolles** — résidences des années 60-70 avec leurs galères de serrurerie spécifiques.
+
+### Le marché : plus de 300 commerçants, 30 000 à 50 000 visiteurs
+
+Le marché de Saint-Denis (place du Caquet, rue de la Boulangerie, place Jean-Jaurès, halle couverte) c'est **plus de 300 commerçants**, **entre 30 000 et 50 000 visiteurs** un samedi, et l'un des plus grands marchés d'Europe en surface et en flux. Les axes commerçants nocturnes — **rue Gabriel-Péri, rue de la République, rue de Strasbourg, bd Marcel-Sembat** — concentrent une activité intense et des risques d'effraction.
+
+### L'auteur de cette page
+
+Moi c'est **Yannick Chen**, restaurateur dans le 11e, propriétaire de deux boutiques dans le 20e, et **ex-président de l'asso des commerçants du bas Belleville**. Saint-Denis, je la connais depuis l'enfance : viande halal au marché, tissu rue de la République, basilique des rois de France. Vingt ans plus tard, j'y vais toujours pour mes approvisionnements **épices, vaisselle pro, textile**, et pour voir mes potes commerçants rue Gabriel-Péri ou bd Marcel-Sembat.
+
+### Joël à Saint-Denis : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à **89 € TTC** pour une ouverture de porte claquée, **24 heures sur 24, sans majoration nuit ni dimanche**, artisans vérifiés un par un.
+
+Le **01 41 69 10 08** sonne dans un vrai bureau Île-de-France, pas dans un call center à 2500 km.`,
   sections: [
     {
       anchor: "marche-saint-denis-rideau-bloque",

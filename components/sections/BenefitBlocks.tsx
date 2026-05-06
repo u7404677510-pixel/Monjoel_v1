@@ -2,9 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Phone, ArrowRight, Shield, Clock, BadgeCheck, AlertTriangle } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA. Économise sur le first paint.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 const STATIC_PHONE = "01 41 69 10 08";
 const STATIC_PHONE_TEL = "+33141691008";
@@ -25,8 +30,8 @@ interface Block {
 const blocks: Block[] = [
   {
     icon: Shield,
-    iconColor: "text-emerald-600",
-    iconBg: "bg-emerald-100",
+    iconColor: "text-joel-violet",
+    iconBg: "bg-joel-violet/10",
     tag: "Transparence totale",
     headline: "Le prix annoncé est le prix payé.",
     body: "Pas d'estimation. Pas de surprise le jour J. Prix confirmé par téléphone avant que l'artisan parte de chez lui. Ce que vous entendez au téléphone est le montant final de la facture — sans exception.",
@@ -36,10 +41,10 @@ const blocks: Block[] = [
   },
   {
     icon: Clock,
-    iconColor: "text-blue-600",
-    iconBg: "bg-blue-100",
+    iconColor: "text-joel-mauve",
+    iconBg: "bg-joel-mauve/15",
     tag: "Intervention rapide",
-    headline: "En 20 minutes, pas en 2 heures.",
+    headline: "En 30 minutes, pas en 2 heures.",
     body: "Nos artisans sont géolocalisés en temps réel. On vous envoie le plus proche, pas le premier disponible. Sur Paris et toute l'Île-de-France, 24h/24 et 7j/7 — sans majoration de nuit ni de week-end.",
     ctaLabel: "Demander un devis",
     ctaType: "devis",
@@ -58,8 +63,8 @@ const blocks: Block[] = [
   },
   {
     icon: AlertTriangle,
-    iconColor: "text-amber-600",
-    iconBg: "bg-amber-100",
+    iconColor: "text-joel-violet",
+    iconBg: "bg-joel-yellow/20",
     tag: "Protection anti-arnaque",
     headline: "Nous existons pour que vous n'appeliez jamais un artisan douteux.",
     body: "Prix affiché = prix payé. Pas de supplément nuit. Pas de frais de déplacement cachés. Jamais. C'est notre raison d'être — depuis le premier appel jusqu'à la dernière facture.",
@@ -97,7 +102,7 @@ export default function BenefitBlocks() {
                 <div className={!isEven ? "lg:col-start-2" : ""}>
                   {/* Tag + icone */}
                   <div className="flex items-center gap-3 mb-5">
-                    <div className={`w-10 h-10 ${block.iconBg} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <div className={`w-10 h-10 ${block.iconBg} rounded-xl flex items-center justify-center shrink-0`}>
                       <Icon size={20} className={block.iconColor} />
                     </div>
                     <span className="text-xs font-bold uppercase tracking-widest text-gray-400">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Save, BarChart3, TrendingUp, ExternalLink, CheckCircle, AlertCircle, Loader2, Code } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
@@ -98,10 +98,10 @@ export default function AnalyticsPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Google Tag (gtag.js) */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm lg:col-span-2">
+        <div className="bg-white rounded-2xl p-6 shadow-xs lg:col-span-2">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-green-500 rounded-xl flex items-center justify-center">
                 <Code size={24} className="text-white" />
               </div>
               <div>
@@ -122,7 +122,7 @@ export default function AnalyticsPage() {
                 value={gtagId}
                 onChange={(e) => setGtagId(e.target.value)}
                 placeholder="AW-17805011663"
-                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-none font-mono"
+                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden font-mono"
               />
               <p className="text-xs text-gray-500 mt-2">
                 Cet ID se trouve dans votre snippet Google Tag. Ex: AW-17805011663
@@ -145,11 +145,11 @@ export default function AnalyticsPage() {
         </div>
 
         {/* Google Analytics */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm">
+        <div className="bg-white rounded-2xl p-6 shadow-xs">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                <BarChart3 size={24} className="text-blue-600" />
+              <div className="w-12 h-12 bg-joel-mauve/15 rounded-xl flex items-center justify-center">
+                <BarChart3 size={24} className="text-joel-mauve" />
               </div>
               <div>
                 <h3 className="font-bold text-gray-900">Google Analytics 4</h3>
@@ -166,16 +166,16 @@ export default function AnalyticsPage() {
             value={gaId}
             onChange={(e) => setGaId(e.target.value)}
             placeholder="G-XXXXXXXXXX"
-            className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-none font-mono"
+            className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden font-mono"
           />
           <p className="text-xs text-gray-500 mt-2">Optionnel si vous utilisez uniquement le Google Tag</p>
-          <a href="https://analytics.google.com/" target="_blank" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
+          <a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
             Ouvrir Google Analytics <ExternalLink size={14} />
           </a>
         </div>
 
         {/* Google Ads Conversion */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm">
+        <div className="bg-white rounded-2xl p-6 shadow-xs">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-joel-yellow/30 rounded-xl flex items-center justify-center">
@@ -196,17 +196,17 @@ export default function AnalyticsPage() {
             value={gadsConversionId}
             onChange={(e) => setGadsConversionId(e.target.value)}
             placeholder="AW-XXXXXXXXXX/XXXXXX"
-            className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-none font-mono"
+            className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-joel-violet outline-hidden font-mono"
           />
           <p className="text-xs text-gray-500 mt-2">ID de conversion pour le suivi des appels/devis</p>
-          <a href="https://ads.google.com/" target="_blank" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
+          <a href="https://ads.google.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 mt-4 text-sm text-joel-violet hover:underline">
             Ouvrir Google Ads <ExternalLink size={14} />
           </a>
         </div>
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-2xl p-4 flex items-start gap-3">
-        <CheckCircle className="text-green-500 flex-shrink-0 mt-0.5" size={20} />
+        <CheckCircle className="text-green-500 shrink-0 mt-0.5" size={20} />
         <div className="text-sm text-green-700">
           <p className="font-medium">Connecté à Supabase ✓</p>
           <p className="text-green-600 mt-1">Les scripts seront injectés automatiquement sur le site après configuration.</p>

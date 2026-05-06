@@ -72,9 +72,9 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 className="object-cover"
                 priority
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 3xl:p-8 5xl:p-10">
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 3xl:p-8 5xl:p-10">
                 <div className="flex items-center gap-3 3xl:gap-4">
-                  <div className="w-12 h-12 3xl:w-16 3xl:h-16 5xl:w-20 5xl:h-20 bg-emerald-500 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 3xl:w-16 3xl:h-16 5xl:w-20 5xl:h-20 bg-joel-violet rounded-full flex items-center justify-center">
                     <Shield size={24} className="text-white 3xl:w-8 3xl:h-8 5xl:w-10 5xl:h-10" />
                   </div>
                   <div>
@@ -88,7 +88,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
             {/* Texte */}
             <div>
               <div className="flex flex-wrap gap-3 3xl:gap-4 mb-4 3xl:mb-6">
-                <div className="inline-flex items-center gap-2 3xl:gap-3 bg-emerald-500 text-white text-sm 3xl:text-base 5xl:text-lg font-bold px-4 3xl:px-5 5xl:px-6 py-2 3xl:py-2.5 5xl:py-3 rounded-full">
+                <div className="inline-flex items-center gap-2 3xl:gap-3 bg-joel-violet text-white text-sm 3xl:text-base 5xl:text-lg font-bold px-4 3xl:px-5 5xl:px-6 py-2 3xl:py-2.5 5xl:py-3 rounded-full">
                   <Shield size={16} className="3xl:w-5 3xl:h-5 5xl:w-6 5xl:h-6" />
                   <span>SERRURIER DE CONFIANCE</span>
                 </div>
@@ -101,29 +101,29 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl 3xl:text-6xl 5xl:text-7xl font-bold text-gray-900 mb-4 3xl:mb-6 leading-tight">
                 {config.heroTitle}
                 <br />
-                <span className="text-emerald-600">Zéro arnaque</span>
+                <span className="text-joel-violet">Zéro arnaque</span>
               </h1>
 
               <p className="text-lg 3xl:text-xl 5xl:text-2xl text-gray-600 mb-6 3xl:mb-8 max-w-md 3xl:max-w-lg 5xl:max-w-xl">
-                <strong className="text-emerald-600">{config.mainServicePrice}</strong> — pas 890€.
+                <strong className="text-joel-violet">{config.mainServicePrice}</strong> — pas 890€.
                 <br />
                 Prix annoncé = prix payé. Toujours.
               </p>
 
               {/* Indicateur artisans */}
-              <div className="flex items-center gap-2 3xl:gap-3 mb-6 bg-white px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit shadow-sm">
-                <Users size={18} className="text-emerald-600 3xl:w-6 3xl:h-6" />
+              <div className="flex items-center gap-2 3xl:gap-3 mb-6 bg-white px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit shadow-xs">
+                <Users size={18} className="text-joel-violet 3xl:w-6 3xl:h-6" />
                 <span className="text-gray-700 font-medium 3xl:text-lg">
-                  <span className="text-emerald-600 font-bold">{artisanCount} {config.namePlural}</span> disponibles
+                  <span className="text-joel-violet font-bold">{artisanCount} {config.namePlural}</span> disponibles
                 </span>
-                <span className="w-2 h-2 3xl:w-3 3xl:h-3 bg-emerald-500 rounded-full animate-pulse" />
+                <span className="w-2 h-2 3xl:w-3 3xl:h-3 bg-joel-violet rounded-full animate-pulse" />
               </div>
 
               {/* CTA */}
               <a
                 href={`tel:${formatPhoneForTel(siteConfig.phone_number)}`}
                 onClick={() => handleCallClick("hero-cta")}
-                className="group inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 5xl:px-14 py-5 3xl:py-6 5xl:py-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl md:text-2xl 3xl:text-3xl 5xl:text-4xl rounded-xl 3xl:rounded-2xl shadow-xl transition-all w-full md:w-auto"
+                className="group inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 5xl:px-14 py-5 3xl:py-6 5xl:py-8 bg-joel-violet hover:bg-joel-violet text-white font-bold text-xl md:text-2xl 3xl:text-3xl 5xl:text-4xl rounded-xl 3xl:rounded-2xl shadow-xl transition-all w-full md:w-auto"
               >
                 <Phone size={28} className="animate-ring 3xl:w-9 3xl:h-9 5xl:w-11 5xl:h-11" />
                 <span>{siteConfig.phone_number}</span>
@@ -138,10 +138,10 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
       </section>
 
       {/* Section CHEZ JOËL - Positif */}
-      <section className="py-12 3xl:py-18 5xl:py-24 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white">
+      <section className="py-12 3xl:py-18 5xl:py-24 bg-linear-to-br from-emerald-600 to-emerald-700 text-white">
         <div className="max-w-5xl 3xl:max-w-7xl 4xl:max-w-8xl 5xl:max-w-9xl mx-auto px-4 sm:px-6 3xl:px-8">
           <div className="text-center mb-10 3xl:mb-14">
-            <div className="inline-flex items-center gap-2 3xl:gap-3 bg-white text-emerald-700 text-sm 3xl:text-base font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 3xl:gap-3 bg-white text-joel-violet text-sm 3xl:text-base font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full mb-4">
               <Shield size={16} className="3xl:w-5 3xl:h-5" />
               <span>NOS ENGAGEMENTS</span>
             </div>
@@ -158,7 +158,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 "On essaie sans perçage d'abord",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 3xl:gap-4">
-                  <Check size={24} className="text-joel-yellow flex-shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
+                  <Check size={24} className="text-joel-yellow shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
                   <span className="text-lg 3xl:text-xl 5xl:text-2xl">{item}</span>
                 </li>
               ))}
@@ -170,7 +170,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 "Prix garanti par écrit",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 3xl:gap-4">
-                  <Check size={24} className="text-joel-yellow flex-shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
+                  <Check size={24} className="text-joel-yellow shrink-0 mt-0.5 3xl:w-7 3xl:h-7 5xl:w-8 5xl:h-8" />
                   <span className="text-lg 3xl:text-xl 5xl:text-2xl">{item}</span>
                 </li>
               ))}
@@ -182,7 +182,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
             <a
               href={`tel:${formatPhoneForTel(siteConfig.phone_number)}`}
               onClick={() => handleCallClick("engagement-cta")}
-              className="inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 py-4 3xl:py-5 bg-white text-emerald-700 hover:bg-emerald-50 font-bold text-xl 3xl:text-2xl rounded-xl shadow-lg transition-all"
+              className="inline-flex items-center justify-center gap-3 3xl:gap-4 px-8 3xl:px-10 py-4 3xl:py-5 bg-white text-joel-violet hover:bg-joel-violet/5 font-bold text-xl 3xl:text-2xl rounded-xl shadow-lg transition-all"
             >
               <Phone size={24} className="animate-ring 3xl:w-8 3xl:h-8" />
               <span>{siteConfig.phone_number}</span>
@@ -245,7 +245,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
                 "Majorations abusives nuit/WE",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <X size={18} className="text-red-400 flex-shrink-0" />
+                  <X size={18} className="text-red-400 shrink-0" />
                   <span className="text-gray-300 3xl:text-lg">{item}</span>
                 </div>
               ))}
@@ -257,19 +257,19 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
       {/* Comparatif final + CTA */}
       <section className="py-16 3xl:py-22 5xl:py-30 bg-white">
         <div className="max-w-4xl 3xl:max-w-6xl mx-auto px-4 sm:px-6 3xl:px-8">
-          <div className="bg-emerald-50 border-2 border-emerald-500 rounded-2xl 3xl:rounded-3xl p-8 3xl:p-12 5xl:p-16 text-center">
+          <div className="bg-joel-violet/5 border-2 border-emerald-500 rounded-2xl 3xl:rounded-3xl p-8 3xl:p-12 5xl:p-16 text-center">
             <h2 className="font-display text-2xl md:text-3xl 3xl:text-4xl 5xl:text-5xl font-bold text-gray-900 mb-4 3xl:mb-6">
               Chez Joël, ces situations n&apos;arrivent jamais.
             </h2>
             <p className="text-gray-600 mb-8 3xl:mb-10 text-lg 3xl:text-xl 5xl:text-2xl">
-              {config.mainService} : <span className="font-bold text-emerald-600 text-2xl 3xl:text-3xl">{config.mainServicePrice}</span>
+              {config.mainService} : <span className="font-bold text-joel-violet text-2xl 3xl:text-3xl">{config.mainServicePrice}</span>
               <br />
               <span className="text-base 3xl:text-lg">Sans majoration • Paiement après intervention</span>
             </p>
             <a
               href={`tel:${formatPhoneForTel(siteConfig.phone_number)}`}
               onClick={() => handleCallClick("final-cta")}
-              className="inline-flex items-center justify-center gap-3 3xl:gap-4 px-10 3xl:px-14 5xl:px-18 py-5 3xl:py-7 5xl:py-9 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-2xl 3xl:text-3xl 5xl:text-4xl rounded-xl 3xl:rounded-2xl shadow-xl transition-all"
+              className="inline-flex items-center justify-center gap-3 3xl:gap-4 px-10 3xl:px-14 5xl:px-18 py-5 3xl:py-7 5xl:py-9 bg-joel-violet hover:bg-joel-violet text-white font-bold text-2xl 3xl:text-3xl 5xl:text-4xl rounded-xl 3xl:rounded-2xl shadow-xl transition-all"
             >
               <Phone size={28} className="animate-ring 3xl:w-10 3xl:h-10 5xl:w-12 5xl:h-12" />
               <span>{siteConfig.phone_number}</span>
@@ -290,9 +290,9 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
 
           <div className="grid md:grid-cols-4 gap-4 3xl:gap-6 5xl:gap-8">
             {config.services.map((service, i) => (
-              <div key={i} className="bg-white rounded-xl 3xl:rounded-2xl p-5 3xl:p-7 5xl:p-9 shadow-sm text-center">
+              <div key={i} className="bg-white rounded-xl 3xl:rounded-2xl p-5 3xl:p-7 5xl:p-9 shadow-xs text-center">
                 <p className="text-gray-600 text-sm 3xl:text-base 5xl:text-lg mb-2">{service.name}</p>
-                <p className="font-display text-3xl 3xl:text-4xl 5xl:text-5xl font-bold text-emerald-600">
+                <p className="font-display text-3xl 3xl:text-4xl 5xl:text-5xl font-bold text-joel-violet">
                   {service.price}
                 </p>
                 <p className="text-gray-400 text-xs 3xl:text-sm 5xl:text-base mt-1">{service.description}</p>
@@ -325,7 +325,7 @@ export default function TradeVarianteC({ config, variant }: TradeVarianteCProps)
               <div key={i} className="bg-gray-50 rounded-xl 3xl:rounded-2xl p-6 3xl:p-8 5xl:p-10">
                 <div className="flex gap-1 mb-3 3xl:mb-4">
                   {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} size={16} className="text-yellow-400 fill-yellow-400 3xl:w-5 3xl:h-5 5xl:w-6 5xl:h-6" />
+                    <Star key={j} size={16} className="text-joel-yellow fill-joel-yellow 3xl:w-5 3xl:h-5 5xl:w-6 5xl:h-6" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 3xl:mb-6 3xl:text-lg 5xl:text-xl">&quot;{testimonial.text}&quot;</p>

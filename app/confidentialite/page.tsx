@@ -1,10 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function ConfidentialitePage() {
   return (
-    <div className="pt-32 pb-16">
+    <>
+    <Breadcrumbs mode="standalone" items={[{ label: "Confidentialité" }]} />
+    <div className="pt-8 pb-16">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -12,7 +15,7 @@ export default function ConfidentialitePage() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Politique de confidentialité</h1>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
+          <div className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
             <h2>1. Introduction</h2>
             <p>
               La société Joël SAS (ci-après "Joël", "nous", "notre") s'engage à protéger 
@@ -32,7 +35,7 @@ export default function ConfidentialitePage() {
               <strong>Joël SAS</strong><br />
               45 Rue Boursault, 75017 Paris<br />
               SIRET : 993 221 878 00016<br />
-              Email : contact@monjoel.com<br />
+              Email : contact@monjoel.fr<br />
               Téléphone : 01 41 69 10 08
             </p>
 
@@ -143,7 +146,7 @@ export default function ConfidentialitePage() {
               <li><strong>Droit de retirer votre consentement</strong> : à tout moment pour les traitements basés sur le consentement</li>
             </ul>
             <p>
-              Pour exercer vos droits, contactez-nous par email à <strong>contact@monjoel.com</strong> ou 
+              Pour exercer vos droits, contactez-nous par email à <strong>contact@monjoel.fr</strong> ou 
               par courrier à : Joël SAS - 45 Rue Boursault, 75017 Paris.
             </p>
             <p>
@@ -194,7 +197,7 @@ export default function ConfidentialitePage() {
             <p>
               <strong>Joël SAS</strong><br />
               45 Rue Boursault, 75017 Paris<br />
-              Email : contact@monjoel.com<br />
+              Email : contact@monjoel.fr<br />
               Téléphone : 01 41 69 10 08
             </p>
 
@@ -205,5 +208,6 @@ export default function ConfidentialitePage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }

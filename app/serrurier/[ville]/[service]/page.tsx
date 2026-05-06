@@ -1,5 +1,4 @@
-import { getPriorityCities } from "@/lib/data/cities-idf";
-import { serrurerieServices } from "@/lib/data/services-definition";
+import { listPremiumByKind } from "@/lib/seo/premium/registry";
 import { buildServiceMetadata, ServicePageBody } from "@/lib/seo/premium/pageHelpers";
 
 const TRADE_SLUG = "serrurier";
@@ -8,19 +7,18 @@ export const dynamicParams = true;
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  const params: { ville: string; service: string }[] = [];
-  for (const city of getPriorityCities()) {
-    for (const service of serrurerieServices) {
-      params.push({ ville: city.slug, service: service.slug });
-    }
-  }
-  return params;
+  // SEO post-désindexation 2026-05-04 : pre-build premium-only.
+  return listPremiumByKind("service")
+    .filter((p) => p.trade === TRADE_SLUG && !!p.serviceSlug)
+    .map((p) => ({ ville: p.citySlug, service: p.serviceSlug! }));
 }
 
-export async function generateMetadata({ params }: { params: { ville: string; service: string } }) {
+export async function generateMetadata(props: { params: Promise<{ ville: string; service: string }> }) {
+  const params = await props.params;
   return buildServiceMetadata(TRADE_SLUG, params.ville, params.service);
 }
 
-export default function Page({ params }: { params: { ville: string; service: string } }) {
+export default async function Page(props: { params: Promise<{ ville: string; service: string }> }) {
+  const params = await props.params;
   return <ServicePageBody tradeSlug={TRADE_SLUG} citySlug={params.ville} serviceSlug={params.service} />;
 }

@@ -25,7 +25,7 @@ export default function TestHeader({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-xs">
       <nav className="max-w-7xl 3xl:max-w-8xl 4xl:max-w-9xl 5xl:max-w-10xl mx-auto px-4 sm:px-6 3xl:px-8 py-2 md:py-3 3xl:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -38,7 +38,7 @@ export default function TestHeader({
             </span>
             {variant === "urgentiste" && (
               <span className="bg-joel-yellow text-gray-900 text-xs 3xl:text-sm 5xl:text-base font-bold px-4 3xl:px-5 py-2 3xl:py-2.5 rounded-full animate-pulse">
-                Intervention 20 min
+                Intervention 30 min
               </span>
             )}
           </div>

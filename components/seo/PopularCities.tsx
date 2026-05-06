@@ -1,29 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { citiesIDF } from "@/lib/data/cities-idf";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Trade } from "@/lib/data/services-definition";
+import { getPopularCityAnchor } from "@/lib/seo/anchor-variants";
 
 interface PopularCitiesProps {
   trade: Trade;
-  limit?: number;
+  /**
+   * Liste pré-calculée des villes populaires (filtrées + triées Server-side
+   * pour éviter d'embarquer le dataset complet dans le bundle JS public).
+   */
+  cities: City[];
 }
 
-// Sélectionner les villes les plus importantes (par population ou stratégie)
-const getPopularCities = (limit: number) => {
-  // Trier par population décroissante et prendre les premières
-  const sorted = [...citiesIDF]
-    .filter(city => city.population && city.population > 20000)
-    .sort((a, b) => (b.population || 0) - (a.population || 0))
-    .slice(0, limit);
-  
-  return sorted;
-};
-
-export default function PopularCities({ trade, limit = 24 }: PopularCitiesProps) {
-  const cities = getPopularCities(limit);
+export default function PopularCities({ trade, cities }: PopularCitiesProps) {
   
   // Grouper par département
   const citiesByDepartment = cities.reduce((acc, city) => {
@@ -35,7 +28,7 @@ export default function PopularCities({ trade, limit = 24 }: PopularCitiesProps)
   }, {} as Record<string, typeof cities>);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-16 bg-linear-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,15 +62,19 @@ export default function PopularCities({ trade, limit = 24 }: PopularCitiesProps)
                 {department}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {departmentCities.map((city) => (
-                  <Link
-                    key={city.slug}
-                    href={`/${trade.slug}/${city.slug}`}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:text-joel-violet hover:border-joel-violet transition-colors"
-                  >
-                    {city.name}
-                  </Link>
-                ))}
+                {departmentCities.map((city) => {
+                  const anchorText = getPopularCityAnchor(city, trade.slug);
+                  return (
+                    <Link
+                      key={city.slug}
+                      href={`/${trade.slug}/${city.slug}`}
+                      aria-label={anchorText}
+                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:text-joel-violet hover:border-joel-violet transition-colors"
+                    >
+                      {anchorText}
+                    </Link>
+                  );
+                })}
               </div>
             </motion.div>
           ))}

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import { FAQItem } from "@/lib/seo/city-content";
+import type { FAQItem } from "@/lib/seo/city-content";
 
 interface CityFAQProps {
   faqItems: FAQItem[];
@@ -53,7 +53,7 @@ export default function CityFAQ({ faqItems, cityName, tradeName }: CityFAQProps)
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
-                  className="flex-shrink-0"
+                  className="shrink-0"
                 >
                   <ChevronDown size={24} className="text-joel-violet" />
                 </motion.div>

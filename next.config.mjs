@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       // Immutable cache for optimized images
       {
-        source: "/hero-:path*.webp",
+        source: "/{hero-:path}*.webp",
         headers: [
           {
             key: "Cache-Control",
@@ -14,7 +14,37 @@ const nextConfig = {
         ],
       },
       {
-        source: "/logo:path*",
+        source: "/{logo:path}*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Immutable cache for /images/* (uploads, photos métier, illustrations)
+      {
+        source: "/images/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Immutable cache for /videos/* (cinematic hero, posters AVIF/JPG)
+      {
+        source: "/videos/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Immutable cache for self-hosted fonts (Chillax woff2)
+      {
+        source: "/fonts/:path*",
         headers: [
           {
             key: "Cache-Control",
@@ -104,10 +134,12 @@ const nextConfig = {
       },
     ];
   },
-  // Redirects 301 — slugs villes accentués → slugs ASCII.
-  // Corrige le bug ayant causé ~190 pages en 404 dans Google Search Console.
-  // Les URLs accentuées étaient présentes dans le sitemap historique : on les
-  // redirige proprement pour que Google récupère le jus SEO.
+  // Redirects 301 — multi-purpose
+  // 1. Slugs villes accentués → slugs ASCII (corrige ~190 pages en 404 GSC)
+  // 2. Service "reproduction-cles" supprimé le 2026-05-04 — Joël ne fait pas
+  //    ce service. Toutes les pages reproduction-cles (déjà indexées par
+  //    Google avec position 3-12) sont 301-redirigées vers /serrurerie ou
+  //    /serrurier/[ville] pour récupérer le jus SEO sans 404.
   async redirects() {
     const accentMap = [
       ["armentières-en-brie", "armentieres-en-brie"],
@@ -118,6 +150,8 @@ const nextConfig = {
     ];
     const trades = ["plombier", "serrurier", "electricien"];
     const redirects = [];
+
+    // (1) Redirects accents → ASCII
     for (const [oldSlug, newSlug] of accentMap) {
       for (const trade of trades) {
         redirects.push({
@@ -132,6 +166,22 @@ const nextConfig = {
         });
       }
     }
+
+    // (2) reproduction-cles supprimé — redirection vers /serrurerie ou ville
+    // Hub : /serrurier/reproduction-cles → /serrurerie
+    redirects.push({
+      source: "/serrurier/reproduction-cles",
+      destination: "/serrurerie",
+      permanent: true,
+    });
+    // Pages ville : /serrurier/[ville]/reproduction-cles → /serrurier/[ville]
+    // Garde le contexte géographique (mieux que renvoyer tout vers /serrurerie)
+    redirects.push({
+      source: "/serrurier/:ville/reproduction-cles",
+      destination: "/serrurier/:ville",
+      permanent: true,
+    });
+
     return redirects;
   },
   // Enable strict mode for better development experience
@@ -139,6 +189,8 @@ const nextConfig = {
   // Optimize images
   images: {
     formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    minimumCacheTTL: 31536000, // 1 an — cache immutable pour les images optimisées
     remotePatterns: [
       {
         protocol: "https",
@@ -149,8 +201,30 @@ const nextConfig = {
   // Experimental features
   experimental: {
     // Optimize package imports
-    optimizePackageImports: ["lucide-react", "framer-motion"],
+    optimizePackageImports: ["lucide-react", "motion"],
   },
 };
 
-export default nextConfig;
+// ─── Sentry wrapper ─────────────────────────────────────────────────────────
+// Activé uniquement si SENTRY_AUTH_TOKEN + NEXT_PUBLIC_SENTRY_DSN définis.
+// Sinon : nextConfig retourné nu (no-op safe pour preview/CI sans secrets).
+import { withSentryConfig } from "@sentry/nextjs";
+
+const sentryEnabled = Boolean(
+  process.env.SENTRY_AUTH_TOKEN && process.env.NEXT_PUBLIC_SENTRY_DSN,
+);
+
+const sentryWebpackPluginOptions = {
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  tunnelRoute: "/monitoring",
+  hideSourceMaps: true,
+  disableLogger: true,
+  automaticVercelMonitors: false,
+};
+
+export default sentryEnabled
+  ? withSentryConfig(nextConfig, sentryWebpackPluginOptions)
+  : nextConfig;

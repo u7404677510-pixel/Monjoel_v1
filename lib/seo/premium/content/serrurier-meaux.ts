@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Meaux (77100) : ouverture porte 89€, rideau métallique 149€, sécurisation post-effraction 149€. Marché, Cathédrale, Beauval, Pierre-Collinet. 01 41 69 10 08.",
   h1: "Serrurier Meaux : ce que je dis aux commerçants du marché et aux familles de Beauval",
-  introParagraph:
-    "Moi c'est Yannick Chen, restaurateur dans le 11e parisien, propriétaire de deux boutiques dans le 20e, et ex-président de l'asso des commerçants du bas Belleville. Meaux, je la connais depuis vingt ans : on y va régulièrement avec ma femme acheter du brie de Meaux AOP à la Maison du Brie au pied de la cathédrale, on y déjeune chez des potes restaurateurs rue du Général-Leclerc, j'ai un fournisseur fromager qui livre depuis Meaux jusqu'à Paris chaque semaine, et un copain confiseur qui tient boutique à deux pas du marché. C'est pour ça que les gars de Joël m'ont demandé d'écrire cette page : parce que Meaux, ce n'est PAS Paris, ce n'est PAS Saint-Denis, et ce n'est surtout PAS une ville-dortoir. Meaux c'est 56 905 habitants au dernier recensement INSEE 2023 publié en 2026 (en hausse de 0,4 % sur un an), c'est la commune LA PLUS PEUPLÉE du département de Seine-et-Marne, c'est une sous-préfecture historique avec sa cathédrale Saint-Étienne édifiée du XIIᵉ au XVIᵉ siècle, c'est SIX marchés hebdomadaires (un des plus grands réseaux marchés du 77), c'est PLUS DE 900 commerces selon la Ville de Meaux dont plus de 500 en centre-ville répartis autour des quartiers Cathédrale, Faubourg Saint-Nicolas et Marché, c'est aussi des quartiers populaires denses comme Beauval, Pierre-Collinet, Dunant-Jaurès, et c'est enfin un pôle de bureaux récents autour de Meaux-Multimodal et de la gare. Un MONDE en miniature. Et dans ce monde, le serrurier ce n'est pas un luxe, c'est un outil de survie : pour le commerçant qui voit sa devanture rue Saint-Faron tapée la nuit, pour la mère de famille qui claque sa porte au 12ᵉ étage de Beauval, pour le restaurateur du marché dont le rideau métallique lâche un samedi à 11h en pleine cohue. Joël, c'est l'inverse des arnaqueurs qui pullulent autour de la gare Meaux SNCF et de la place Henri-IV : prix annoncé AVANT, 89€ TTC pour une ouverture de porte claquée, 24h/24 sans majoration nuit ni dimanche, artisans qu'on a vérifiés un par un. 01 41 69 10 08, ça sonne dans un vrai bureau Île-de-France, pas dans un call center à 3000 km. Cette page, je l'écris pour mes voisins commerçants ET pour les familles de Meaux. Tous ont les mêmes ennemis : le temps qui presse et les faux serruriers qui le savent.",
+  introParagraph: `### Meaux en chiffres : population, patrimoine, parc commercial
+
+Meaux compte **56 905 habitants** au recensement INSEE 2023 publié en 2026 (en hausse de **0,4 % sur un an**). C'est la **commune la plus peuplée du département de Seine-et-Marne**, sous-préfecture historique avec sa **cathédrale Saint-Étienne édifiée du XIIᵉ au XVIᵉ siècle**.
+
+C'est aussi **six marchés hebdomadaires** (un des plus grands réseaux marchés du 77) et **plus de 900 commerces** selon la Ville de Meaux, dont **plus de 500 en centre-ville**, répartis autour des quartiers **Cathédrale, Faubourg Saint-Nicolas et Marché**. À cela s'ajoutent les quartiers populaires denses **Beauval, Pierre-Collinet, Dunant-Jaurès**, et un pôle de bureaux autour de Meaux-Multimodal et de la gare.
+
+### Cambriolages : les chiffres SSMSI 2024
+
+Selon le bilan **SSMSI 2024** publié en 2025 par le ministère de l'Intérieur (interieur.gouv.fr/Interstats), il y a eu **3 960 cambriolages dans le département de Seine-et-Marne en 2024**, et le risque qu'un foyer du 77 soit victime d'un cambriolage de logement s'établit à **2,76 pour 1 000 ménages (soit 0,28 %)**.
+
+Pour Meaux spécifiquement : **65 cambriolages de logement en 2024** (2,34 pour 1 000 ménages, soit **0,23 %**). Sur 9 ans, c'est même une baisse — on est passé de **110 cambriolages en 2016 à 61 en 2025**.
+
+### L'auteur de cette page
+
+Moi c'est **Yannick Chen**, restaurateur dans le 11e parisien, propriétaire de deux boutiques dans le 20e, et **ex-président de l'asso des commerçants du bas Belleville**. Meaux, je la connais depuis vingt ans : achats réguliers de **brie de Meaux AOP à la Maison du Brie** au pied de la cathédrale, déjeuners chez des potes restaurateurs rue du Général-Leclerc, fournisseur fromager qui livre depuis Meaux chaque semaine. Cette page, je l'écris pour mes voisins commerçants ET pour les familles de Meaux.
+
+### Joël à Meaux : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89 € TTC** pour une ouverture de porte claquée, **24 heures sur 24, sans majoration nuit ni dimanche**, artisans vérifiés un par un.
+
+Le numéro à composer reste le **01 41 69 10 08** — un vrai bureau Île-de-France, pas un call center à 3000 km.`,
   sections: [
     {
       anchor: "marche-meaux-rideau-bloque",

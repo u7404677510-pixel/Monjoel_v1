@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Ballon Eau Chaude Paris - Dépannage ou Remplacement | Plombier Joël",
+  title: "Ballon Eau Chaude Paris - Dépannage 99€ | Joël",
   description: "Ballon d'eau chaude en panne ou qui fuit ? Plombier intervient en 20 min à Paris & IDF. Toutes capacités 50L à 300L. Prix fixe dès 99€. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/ballon-eau-chaude",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/ballon-eau-chaude",
+      "x-default": "https://monjoel.fr/plombier/ballon-eau-chaude",
+    },
   },
 };
 

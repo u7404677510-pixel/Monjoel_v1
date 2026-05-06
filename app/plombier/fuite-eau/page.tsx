@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Fuite d'Eau Paris - Intervention Immédiate 89€ | Plombier Joël",
+  title: "Fuite d'Eau Paris - Intervention 89€ | Joël",
   description: "Fuite d'eau urgente ? Plombier intervient en 20 min à Paris & IDF. Réparation durable, attestation assurance. Prix fixe 89€ annoncé avant. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/fuite-eau",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/fuite-eau",
+      "x-default": "https://monjoel.fr/plombier/fuite-eau",
+    },
   },
 };
 

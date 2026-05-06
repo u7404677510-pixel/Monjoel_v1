@@ -10,8 +10,33 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier dans le 13e (Chinatown, Olympiades, Butte-aux-Cailles, Gobelins) : prix fixe annoncé avant intervention dès 79€, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Plombier Paris 13e — Mehdi, terrain Chinatown, Olympiades et Butte-aux-Cailles",
-  introParagraph:
-    "Mehdi Karim, plombier-chauffagiste depuis 1998, formation Compagnons du Devoir entre 1996 et 2000. Le 13e arrondissement, je le pratique au quotidien depuis quinze ans pour le réseau Joël, et je peux vous dire que c'est l'un des secteurs hydrauliques les plus singuliers de Paris. 181 552 habitants, 7,15 km², mais surtout quatre mondes techniques empilés sur un seul code postal : la dalle des Olympiades avec ses tours années 70 dont les colonnes en acier galvanisé sont aujourd'hui un cas d'école pour quiconque s'intéresse à la plomberie collective fatiguée. La Butte-aux-Cailles et son réseau d'évacuations en plomb et fonte qui suit la pente du coteau. Chinatown autour de l'avenue de Choisy et de l'avenue d'Ivry, où la densité de restauration provoque des bouchons de canalisations spécifiques (graisses végétales chaudes, riz, écailles). Et puis la ZAC Rive Gauche le long du boulevard Vincent-Auriol et de la rue Jeanne-d'Arc, du multicouche RT 2012 et RE 2020 tout neuf qui pose ses propres problèmes au bout de cinq à dix ans.\n\nQuand je sors de mon véhicule rue Bobillot, rue de Tolbiac ou place d'Italie, je sais déjà à quel type de bâti j'ai affaire avant même d'avoir sonné. C'est ce que les Compagnons appellent la lecture du chantier : on regarde la façade, l'enseigne du commerce du rez-de-chaussée, le type de boîte aux lettres, l'ascenseur, et on a 80% du diagnostic avant d'ouvrir une caisse à outils. Cette page est là pour vous donner les vrais prix d'une intervention dans le 13e, vous expliquer pourquoi cet arrondissement attire particulièrement les sociétés-écran qui transforment un débouchage WC en facture à 600€, et surtout vous donner les bons réflexes avant d'appeler qui que ce soit. Numéro direct, sans plateforme intermédiaire : **01 41 69 10 08**. Prix fixe annoncé AVANT que je sorte la première clé, dès 79€ TTC. 24h/24, dimanches et jours fériés compris, sans la moindre majoration. Jamais.",
+  introParagraph: `### Le 13e en chiffres : un arrondissement singulier
+
+Le 13e, c'est **181 552 habitants**, **7,15 km²**, mais surtout **quatre mondes techniques empilés sur un seul code postal**.
+
+### Quatre mondes hydrauliques
+
+La **dalle des Olympiades** avec ses tours années 70 dont les **colonnes en acier galvanisé** sont aujourd'hui un cas d'école pour quiconque s'intéresse à la plomberie collective fatiguée.
+
+La **Butte-aux-Cailles** et son réseau d'évacuations en **plomb et fonte** qui suit la pente du coteau.
+
+**Chinatown** autour de l'**avenue de Choisy** et de l'**avenue d'Ivry**, où la densité de restauration provoque des bouchons de canalisations spécifiques (**graisses végétales chaudes, riz, écailles**).
+
+Et puis la **ZAC Rive Gauche** le long du **boulevard Vincent-Auriol** et de la **rue Jeanne-d'Arc**, du **multicouche RT 2012 et RE 2020** tout neuf qui pose ses propres problèmes au bout de cinq à dix ans.
+
+### Le quotidien plomberie dans le 13e : pourquoi se méfier
+
+Quand je sors de mon véhicule **rue Bobillot**, **rue de Tolbiac** ou **place d'Italie**, je sais déjà à quel type de bâti j'ai affaire avant même d'avoir sonné. C'est ce que les Compagnons appellent la **lecture du chantier**.
+
+Cette page est là pour vous donner les vrais prix d'une intervention dans le 13e, vous expliquer pourquoi cet arrondissement attire particulièrement les **sociétés-écran** qui transforment un débouchage WC en facture à **600€**, et surtout vous donner les bons réflexes avant d'appeler qui que ce soit.
+
+### L'auteur de cette page
+
+**Mehdi Karim**, **plombier-chauffagiste depuis 1998**, formation **Compagnons du Devoir** entre 1996 et 2000. Le 13e arrondissement, je le pratique au quotidien depuis **quinze ans** pour le réseau Joël.
+
+### Joël à Paris 13e : tarif fixe annoncé en amont
+
+Numéro direct, sans plateforme intermédiaire : **01 41 69 10 08**. **Prix fixe annoncé AVANT** que je sorte la première clé, **dès 79€ TTC**. **24h/24**, dimanches et jours fériés compris, sans la moindre majoration. Jamais.`,
   sections: [
     {
       anchor: "quatre-mondes-13e",

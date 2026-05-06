@@ -1,10 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function CGUPage() {
   return (
-    <div className="pt-32 pb-16">
+    <>
+    <Breadcrumbs mode="standalone" items={[{ label: "CGU" }]} />
+    <div className="pt-8 pb-16">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -12,14 +15,14 @@ export default function CGUPage() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Conditions Générales d'Utilisation</h1>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
+          <div className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg border border-white/50 prose prose-gray max-w-none">
             <h2>Article 1 - Mentions légales</h2>
             <p>
               Le site monjoel.fr et l'application Joël sont édités par :<br />
               <strong>Joël SAS</strong>, société par actions simplifiée au capital de 1 000 €<br />
               Siège social : 45 Rue Boursault, 75017 Paris<br />
               SIRET : 993 221 878 00016 | RCS Pontoise : 993 221 878<br />
-              Téléphone : 01 41 69 10 08 | Email : contact@monjoel.com<br />
+              Téléphone : 01 41 69 10 08 | Email : contact@monjoel.fr<br />
               Directeur de la publication : Yoël Berros
             </p>
 
@@ -84,7 +87,7 @@ export default function CGUPage() {
             <p>
               En cas de problème survenant dans les 12 mois suivant l'intervention, 
               contactez notre service client au 01 41 69 10 08 ou par email à 
-              contact@monjoel.com pour une prise en charge.
+              contact@monjoel.fr pour une prise en charge.
             </p>
             <p>La garantie couvre :</p>
             <ul>
@@ -141,7 +144,7 @@ export default function CGUPage() {
             <h2>Article 11 - Réclamations</h2>
             <p>
               Pour toute réclamation, contactez notre service client :<br />
-              Email : contact@monjoel.com<br />
+              Email : contact@monjoel.fr<br />
               Téléphone : 01 41 69 10 08<br />
               Courrier : Joël SAS - 45 Rue Boursault, 75017 Paris
             </p>
@@ -181,5 +184,6 @@ export default function CGUPage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,6 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+/**
+ * TrueScope — landing dédiée à l'app de devis instantané IA.
+ *
+ * Refonte 2026-05-02 : suppression caps lock + ponctuation jaune décorative.
+ * Voix Joël franche, mécanique expliquée pas slogan AI-marketing.
+ */
+
+import { motion } from "motion/react";
 import { Sparkles, Zap, Eye, Clock, BadgeEuro, Target, ArrowRight, Wrench, MessageSquare, Camera } from "lucide-react";
 import Link from "next/link";
 
@@ -10,44 +17,44 @@ const steps = [
   {
     number: "01",
     icon: Wrench,
-    title: "CHOISISSEZ VOTRE MÉTIER",
-    description: "Serrurerie, plomberie ou électricité ? Sélectionnez le corps de métier qui correspond à votre urgence.",
+    title: "Choisissez votre métier",
+    description: "Plomberie, serrurerie, électricité — un clic suffit pour cadrer le diagnostic.",
   },
   {
     number: "02",
     icon: MessageSquare,
-    title: "DÉCRIVEZ LE PROBLÈME",
-    description: "En une phrase simple, dites-nous ce qui ne va pas. Notre IA comprend le langage humain, pas besoin de jargon technique.",
+    title: "Décrivez en français",
+    description: "Une phrase, vos mots. Pas de jargon technique, pas de QCM interminable.",
   },
   {
     number: "03",
     icon: Camera,
-    title: "PRENEZ UNE PHOTO",
-    description: "Capturez le problème en image. TrueScope analyse visuellement la situation pour un diagnostic ultra-précis.",
+    title: "Prenez une photo",
+    description: "L'image complète la description. Le diagnostic devient précis sans interprétation à la louche.",
   },
 ];
 
 const features = [
   {
     icon: Clock,
-    title: "INSTANTANÉ",
-    description: "Devis et solution en moins de 60 secondes. L'urgence n'attend pas.",
+    title: "Réponse en 60 s",
+    description: "Devis fixe affiché à l'écran, pas d'attente, pas de rappel commercial différé.",
   },
   {
     icon: BadgeEuro,
-    title: "PRIX TRANSPARENT",
-    description: "Connaissez le prix exact avant même que l'artisan se déplace. Zéro mauvaise surprise.",
+    title: "Le même prix pour tous",
+    description: "L'IA ne sait pas qui vous êtes. Elle ne peut pas adapter le tarif à votre tête, votre quartier, votre heure.",
   },
   {
     icon: Target,
-    title: "SOLUTION PRÉCISE",
-    description: "Notre IA analyse en profondeur pour identifier la vraie cause et la vraie solution.",
+    title: "Diagnostic défendable",
+    description: "Le devis détaille la cause, la pièce, la durée estimée. Vous arrivez à l'intervention informé.",
   },
 ];
 
 export default function TrueScopePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-white via-joel-violet/5 to-joel-mauve/10 relative">
+    <main className="min-h-screen bg-linear-to-br from-white via-joel-violet/5 to-joel-mauve/10 relative">
       {/* Global Background decorations */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
@@ -63,11 +70,11 @@ export default function TrueScopePage() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-xs rounded-full mb-8 shadow-xs"
           >
             <Sparkles size={16} className="text-joel-violet" />
             <span className="text-sm font-semibold text-joel-violet uppercase tracking-wide">
-              Propulsé par l'Intelligence Artificielle
+              TrueScope — devis instantané
             </span>
           </motion.div>
 
@@ -78,9 +85,10 @@ export default function TrueScopePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-display text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
           >
-            VOTRE URGENCE<span className="text-joel-yellow">.</span>
+            Un prix fixe.
             <br />
-            <span className="bg-gradient-joel bg-clip-text text-transparent">RÉSOLUE EN 3 CLICS<span className="text-joel-yellow">.</span></span>
+            <span className="bg-gradient-joel bg-clip-text text-transparent">Avant qu&apos;on sonne</span>
+            <span className="text-joel-yellow">.</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -90,8 +98,8 @@ export default function TrueScopePage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Serrurerie<span className="text-joel-yellow">.</span> Plomberie<span className="text-joel-yellow">.</span> Électricité<span className="text-joel-yellow">.</span> TrueScope analyse votre problème, 
-            vous donne le prix exact et la solution immédiate<span className="text-joel-yellow">.</span>
+            Vous décrivez votre panne, vous prenez une photo. TrueScope renvoie
+            le tarif fixe en 60 secondes. Le même pour tout le monde.
           </motion.p>
 
           {/* CTA */}
@@ -104,9 +112,9 @@ export default function TrueScopePage() {
               href={TRUESCOPE_URL}
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <Zap size={22} className="relative z-10" />
-              <span className="relative z-10">Essayer TrueScope Gratuitement</span>
+              <span className="relative z-10">Obtenir mon devis</span>
               <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
@@ -140,10 +148,10 @@ export default function TrueScopePage() {
             className="text-center mb-12"
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              POURQUOI TRUESCOPE<span className="text-joel-yellow"> ?</span>
+              Pourquoi TrueScope existe
             </h2>
             <p className="text-xl text-gray-600">
-              Même problème = même prix<span className="text-joel-yellow">.</span> Toujours<span className="text-joel-yellow">.</span>
+              Même problème, même prix. Pas par éthique : par mécanique.
             </p>
           </motion.div>
 
@@ -152,23 +160,40 @@ export default function TrueScopePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-white/50"
+            className="bg-white/80 backdrop-blur-xs rounded-3xl p-8 md:p-12 shadow-lg border border-white/50"
           >
             <div className="max-w-none text-gray-600 leading-relaxed space-y-6 text-lg md:text-xl">
               <p>
-                Joël a vu trop de clients se faire arnaquer<span className="text-joel-yellow font-bold">.</span> Des devis qui varient du simple au triple, pour le même problème, parce que l'artisan "sent" qu'il peut facturer plus<span className="text-joel-yellow font-bold">.</span>
+                Le devis dépannage à domicile varie aujourd&apos;hui du simple
+                au triple pour le même problème. La cause n&apos;est pas
+                l&apos;artisan : c&apos;est l&apos;incitation. Tant que le
+                tarif final est négociable sur place, on a tous intérêt à
+                partir un peu plus haut.
               </p>
-              
+
               <p>
-                Alors on a développé <strong className="text-gray-900">TrueScope</strong><span className="text-joel-yellow font-bold">.</span> Une IA incorruptible<span className="text-joel-yellow font-bold">.</span> Un algorithme qui ne triche pas<span className="text-joel-yellow font-bold">.</span> Un système qui analyse votre urgence et fixe le prix — le même, pour tous<span className="text-joel-yellow font-bold">.</span>
+                <strong className="text-gray-900">TrueScope</strong> coupe
+                cette incitation à la source. L&apos;IA reçoit votre
+                description et la photo. Elle ne sait pas votre nom, votre
+                quartier, ni l&apos;heure qu&apos;il est pour vous. Elle
+                renvoie un tarif fixe basé sur le problème — exactement le
+                même qu&apos;elle renverrait à votre voisin avec la même
+                fuite.
               </p>
-              
+
               <p>
-                Pas de négociation à la tête du client<span className="text-joel-yellow font-bold">.</span> Pas de tarif "ça dépend"<span className="text-joel-yellow font-bold">.</span> Pas de majoration surprise<span className="text-joel-yellow font-bold">.</span>
+                C&apos;est ce tarif fixe qui apparaît au téléphone, qui est
+                annoncé à l&apos;artisan partenaire, et qui figure sur la
+                facture. Pas de variable, pas de marge négociée à la tête du
+                client.
               </p>
-              
+
               <p className="text-xl md:text-2xl font-semibold text-gray-900">
-                L'ère de l'arnaque est terminée<span className="text-joel-yellow">.</span> <span className="bg-gradient-joel bg-clip-text text-transparent">Bienvenue sur Joël</span><span className="text-joel-yellow">.</span>
+                Vous savez combien vous payez{" "}
+                <span className="bg-gradient-joel bg-clip-text text-transparent italic pe-1.5">
+                  avant qu&apos;on sonne
+                </span>
+                .
               </p>
             </div>
           </motion.div>
@@ -186,10 +211,10 @@ export default function TrueScopePage() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              COMMENT ÇA MARCHE<span className="text-joel-yellow"> ?</span>
+              Comment ça marche
             </h2>
             <p className="text-xl text-gray-600">
-              Trois étapes<span className="text-joel-yellow">.</span> Zéro prise de tête<span className="text-joel-yellow">.</span>
+              Trois étapes, soixante secondes, pas de compte à créer.
             </p>
           </motion.div>
 
@@ -201,7 +226,7 @@ export default function TrueScopePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-joel-violet/20 hover:-translate-y-2 transition-all duration-300 border border-white/50"
+                className="group relative bg-white/80 backdrop-blur-xs rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-joel-violet/20 hover:-translate-y-2 transition-all duration-300 border border-white/50"
               >
                 {/* Number badge */}
                 <div className="absolute -top-4 -left-4 w-14 h-14 bg-gradient-joel rounded-2xl flex items-center justify-center shadow-lg">
@@ -275,16 +300,17 @@ export default function TrueScopePage() {
 
             <div className="relative z-10">
               <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-6">
-                PRÊT À RÉSOUDRE VOTRE URGENCE<span className="text-joel-yellow"> ?</span>
+                Votre devis fixe en 60 secondes
               </h2>
               <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl mx-auto">
-                Accédez gratuitement à TrueScope et obtenez votre devis instantané<span className="text-joel-yellow">.</span> Aucune inscription requise<span className="text-joel-yellow">.</span>
+                Pas d&apos;inscription, pas de carte bancaire, pas de rappel commercial.
+                Vous décrivez, l&apos;IA répond, vous décidez.
               </p>
               <a
                 href={TRUESCOPE_URL}
                 className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-joel-violet font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-joel-violet/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <span className="absolute inset-0 bg-linear-to-r from-transparent via-joel-violet/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <Eye size={22} className="relative z-10" />
                 <span className="relative z-10">Lancer TrueScope</span>
                 <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -298,7 +324,8 @@ export default function TrueScopePage() {
       <section className="relative py-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} TrueScope<span className="text-joel-yellow">.</span> Propulsé par l'intelligence artificielle au service de vos urgences<span className="text-joel-yellow">.</span>
+            © {new Date().getFullYear()} TrueScope — l&apos;outil de devis fixe
+            de Joël, plombier-serrurier-électricien IDF.
           </p>
           <Link href="/" className="text-joel-violet hover:text-joel-mauve text-sm mt-2 inline-block transition-colors">
             ← Retour à Joël

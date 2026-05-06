@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Ouverture coffre-fort bloqué à Paris et IDF. Code perdu, serrure cassée. Intervention discrète dès 199€. Serrurier spécialisé coffres-forts.",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/coffre-fort",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/coffre-fort",
+      "x-default": "https://monjoel.fr/serrurier/coffre-fort",
+    },
   },
   openGraph: {
     title: "Ouverture Coffre-Fort | Serrurier Spécialisé | Joël",

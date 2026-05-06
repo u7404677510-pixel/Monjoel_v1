@@ -9,6 +9,13 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Ouverture de Porte avec Perçage | Serrurier Joël - Prix Fixe",
   description: "Ouverture de porte avec perçage uniquement quand nécessaire. Cylindre remplacé, porte sécurisée. Prix fixe garanti avant intervention.",
+  alternates: {
+    canonical: "https://monjoel.fr/serrurier/ouverture-avec-percage",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/ouverture-avec-percage",
+      "x-default": "https://monjoel.fr/serrurier/ouverture-avec-percage",
+    },
+  },
 };
 
 const doList = [

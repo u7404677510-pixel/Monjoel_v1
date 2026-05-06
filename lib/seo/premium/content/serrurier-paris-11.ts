@@ -10,13 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Enquête complète sur les serruriers du 11e (75011) : mécanique des arnaques, vrais prix relevés, recours DGCCRF. Joël intervient dès 89€ TTC, prix annoncé.",
   h1: "Serrurier Paris 11e : enquête sur un marché à hauts risques (et comment ne plus se faire piéger)",
-  introParagraph: `Le 11e arrondissement concentre, à lui seul, l'un des plus forts volumes d'interventions de serrurerie d'urgence de la capitale. Ce n'est pas un hasard. Avec ses 146 643 habitants, ses immeubles haussmanniens et post-haussmanniens densément occupés autour de la Roquette, ses colocations d'étudiants et de jeunes actifs entre Oberkampf et Parmentier, ses studios meublés loués à la nuit autour de Bastille, l'arrondissement coche toutes les cases que cherchent les sociétés de racolage : densité de population, rotation locative élevée, public souvent jeune, peu informé, et pressé.
+  introParagraph: `### Le 11e en chiffres : population, parc résidentiel, sociologie
 
-Depuis 2010, dans le cadre d'enquêtes pour 60 Millions de Consommateurs, puis pour la DGCCRF en mission de conseil indépendant, j'ai documenté plusieurs centaines de litiges franciliens liés au dépannage serrurerie. Le 11e revient avec une régularité qui n'est plus statistiquement explicable par sa seule démographie. Il est ciblé. Méthodiquement.
+Le 11e arrondissement compte **146 643 habitants** et concentre **l'un des plus forts volumes d'interventions de serrurerie d'urgence de la capitale**. Ce n'est pas un hasard.
 
-Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise d'une arnaque type, étape par étape : du référencement payant qui détourne les recherches "serrurier Paris 11", à l'appel surtaxé annoncé "39€ tout compris", jusqu'à la facture de 750€ encaissée porte ouverte. Vous y trouverez aussi les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît : rétractation hors démarchage, médiation de la consommation, signalement SignalConso, action conjointe.
+Avec ses **immeubles haussmanniens et post-haussmanniens densément occupés autour de la Roquette**, ses **colocations d'étudiants et de jeunes actifs entre Oberkampf et Parmentier**, ses **studios meublés loués à la nuit autour de Bastille**, l'arrondissement coche toutes les cases que cherchent les sociétés de racolage : **densité de population, rotation locative élevée, public souvent jeune, peu informé, et pressé**.
 
-Joël (01 41 69 10 08) intervient dans le 11e à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Ce n'est pas un slogan, c'est l'inverse exact de ce que pratique l'écosystème dénoncé plus bas. Lisez. Et la prochaine fois qu'une porte claque rue de Charonne ou rue Saint-Maur à 23h, vous saurez quoi faire.`,
+### Le 11e côté arnaques : un arrondissement méthodiquement ciblé
+
+Depuis 2010, dans le cadre d'enquêtes pour **60 Millions de Consommateurs**, puis pour la **DGCCRF en mission de conseil indépendant**, j'ai documenté plusieurs centaines de litiges franciliens liés au dépannage serrurerie. Le 11e revient avec une régularité qui n'est plus statistiquement explicable par sa seule démographie. Il est ciblé. **Méthodiquement.**
+
+Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise d'une arnaque type : du **référencement payant qui détourne les recherches "serrurier Paris 11"**, à l'appel surtaxé annoncé **"39€ tout compris"**, jusqu'à la **facture de 750 € encaissée porte ouverte**.
+
+### L'auteur de cette page
+
+**Julien Vasseur**, journaliste d'enquête. Plusieurs centaines de litiges franciliens documentés depuis 2010 pour **60 Millions de Consommateurs** et pour la **DGCCRF en mission de conseil indépendant**. Recours concrets reconnus : **rétractation hors démarchage, médiation de la consommation, signalement SignalConso, action conjointe**.
+
+### Joël à Paris 11e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée, **sans majoration nuit ni week-end**. C'est l'inverse exact de l'écosystème dénoncé plus bas.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "pourquoi-le-11e",
@@ -66,7 +80,7 @@ Un détail technique important : ne confondez pas "ouverture porte claquée" (la
       title: "Les sept signaux d'alerte à repérer AVANT de laisser entrer quelqu'un",
       body: `Le réflexe à avoir avant même de décrocher : vérifier que le prestataire affiche un certain nombre d'éléments minimums. Voici la check-list que je recommande dans toutes mes interventions de formation auprès des associations de consommateurs franciliennes.
 
-**1. Un nom d'entreprise clair, un SIREN consultable.** Un vrai artisan vous donne, sur demande, son SIREN ou sa raison sociale. Vous pouvez la vérifier sur Pappers ou societe.com en 30 secondes. Une "société" qui n'apparaît pas, qui est radiée depuis trois ans, ou qui est domiciliée en banlieue lointaine alors qu'elle prétend desservir le 11e en 20 minutes, c'est un drapeau rouge.
+**1. Un nom d'entreprise clair, un SIREN consultable.** Un vrai artisan vous donne, sur demande, son SIREN ou sa raison sociale. Vous pouvez la vérifier sur Pappers ou societe.com en 30 secondes. Une "société" qui n'apparaît pas, qui est radiée depuis trois ans, ou qui est domiciliée en banlieue lointaine alors qu'elle prétend desservir le 11e en 30 minutes, c'est un drapeau rouge.
 
 **2. Un prix fixe annoncé avant déplacement.** Pas "à partir de", pas "selon diagnostic", pas "ça dépend". Un prix fixe pour la prestation principale, plus une fourchette claire pour les fournitures (cylindre, pièces). Joël annonce 89€ TTC pour porte claquée. Ce chiffre engage. Si l'opérateur refuse de s'engager au téléphone, raccrochez.
 

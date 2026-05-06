@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Phone, Check, AlertTriangle, Clock, Shield, Star, ArrowRight, Zap } from "lucide-react";
 import ClientSchema from "@/components/ClientSchema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Tarifs Électricien Paris 2026 | Prix Réels & Fixes dès 59€",
@@ -18,6 +19,21 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://monjoel.fr/electricite/tarifs",
+    languages: {
+      "fr-FR": "https://monjoel.fr/electricite/tarifs",
+      "x-default": "https://monjoel.fr/electricite/tarifs",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
@@ -27,6 +43,12 @@ export const metadata: Metadata = {
     title: "Tarifs Électricien Paris 2026 | Prix Réels dès 59€",
     description: "Prix fixes garantis : prise HS 59€, disjoncteur 79€, panne électrique 89€. Sans majoration 24h/24.",
     images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tarifs Électricien Paris 2026 | Prix Réels dès 59€",
+    description: "Prix fixes garantis : prise HS 59€, disjoncteur 79€, panne électrique 89€.",
+    images: ["/og-default.jpg"],
   },
 };
 
@@ -210,8 +232,16 @@ export default function TarifsElectricitePage() {
       <ClientSchema schema={pricingSchema} id="pricing-schema" />
       <ClientSchema schema={faqSchema} id="faq-schema" />
 
+      <Breadcrumbs
+        mode="standalone"
+        items={[
+          { label: "Électricité", href: "/electricite" },
+          { label: "Tarifs" },
+        ]}
+      />
+
       {/* Hero */}
-      <section className="bg-gradient-to-br from-amber-500 to-amber-700 text-white py-16 md:py-24">
+      <section className="bg-linear-to-br from-amber-500 to-amber-700 text-white py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
@@ -228,7 +258,7 @@ export default function TarifsElectricitePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="tel:+33141691008"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl rounded-xl shadow-lg transition-all"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-joel-violet hover:bg-joel-violet text-white font-bold text-xl rounded-xl shadow-lg transition-all"
               >
                 <Phone size={24} className="animate-pulse" />
                 01 41 69 10 08
@@ -267,7 +297,7 @@ export default function TarifsElectricitePage() {
                   </span>
                 )}
                 <h4 className="font-bold text-gray-900 mb-2">{service.name}</h4>
-                <p className="text-3xl font-bold text-amber-600 mb-2">{service.price}</p>
+                <p className="text-3xl font-bold text-joel-violet mb-2">{service.price}</p>
                 <p className="text-gray-500 text-sm">{service.description}</p>
               </div>
             ))}
@@ -287,12 +317,12 @@ export default function TarifsElectricitePage() {
                 }`}
               >
                 {service.popular && (
-                  <span className="absolute -top-3 left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="absolute -top-3 left-4 bg-joel-violet text-white text-xs font-bold px-3 py-1 rounded-full">
                     Populaire
                   </span>
                 )}
                 <h4 className="font-bold text-gray-900 mb-2">{service.name}</h4>
-                <p className="text-3xl font-bold text-amber-600 mb-2">{service.price}</p>
+                <p className="text-3xl font-bold text-joel-violet mb-2">{service.price}</p>
                 <p className="text-gray-500 text-sm">{service.description}</p>
               </div>
             ))}
@@ -310,14 +340,14 @@ export default function TarifsElectricitePage() {
                 className="relative bg-gray-50 rounded-xl p-6 border-2 border-transparent"
               >
                 <h4 className="font-bold text-gray-900 mb-2">{service.name}</h4>
-                <p className="text-3xl font-bold text-amber-600 mb-2">{service.price}</p>
+                <p className="text-3xl font-bold text-joel-violet mb-2">{service.price}</p>
                 <p className="text-gray-500 text-sm">{service.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-10 bg-emerald-50 rounded-xl p-6 flex items-start gap-4">
-            <Check size={24} className="text-emerald-600 flex-shrink-0 mt-1" />
+          <div className="mt-10 bg-joel-violet/5 rounded-xl p-6 flex items-start gap-4">
+            <Check size={24} className="text-joel-violet shrink-0 mt-1" />
             <div>
               <p className="font-bold text-gray-900">Garantie prix fixe</p>
               <p className="text-gray-600 text-sm">
@@ -356,26 +386,26 @@ export default function TarifsElectricitePage() {
             </div>
 
             <div className="bg-emerald-950/50 rounded-xl p-6 border border-emerald-800">
-              <h3 className="font-bold text-emerald-400 mb-4">✓ Chez Joël</h3>
+              <h3 className="font-bold text-joel-yellow mb-4">✓ Chez Joël</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Prix réalistes et affichés (59€ minimum)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Devis écrit avant toute intervention</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Paiement CB ou virement accepté</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Techniciens habilités électriquement</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-400">✓</span>
+                  <span className="text-joel-yellow">✓</span>
                   <span>Entreprise identifiable, artisans vérifiés</span>
                 </li>
               </ul>
@@ -392,7 +422,7 @@ export default function TarifsElectricitePage() {
           </h2>
 
           <div className="space-y-6">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Quel est le prix moyen d&apos;un électricien à Paris ?
               </h3>
@@ -404,7 +434,7 @@ export default function TarifsElectricitePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Combien coûte la remise en service après coupure EDF ?
               </h3>
@@ -416,7 +446,7 @@ export default function TarifsElectricitePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Y a-t-il des frais supplémentaires la nuit ou le week-end ?
               </h3>
@@ -427,7 +457,7 @@ export default function TarifsElectricitePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="bg-white rounded-xl p-6 shadow-xs">
               <h3 className="font-bold text-gray-900 mb-2">
                 Combien coûte une mise aux normes électrique ?
               </h3>
@@ -457,7 +487,7 @@ export default function TarifsElectricitePage() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:+33141691008"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-2xl rounded-xl shadow-xl transition-all"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-joel-violet hover:bg-joel-violet text-white font-bold text-2xl rounded-xl shadow-xl transition-all"
             >
               <Phone size={28} />
               01 41 69 10 08

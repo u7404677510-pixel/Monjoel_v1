@@ -42,7 +42,7 @@ export default function VideoHero({
           <source src={videoWebm} type="video/webm" />
           <source src={videoMp4} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
+        <div className="absolute inset-0 bg-linear-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
       </div>
 
       {/* Content */}
@@ -56,7 +56,7 @@ export default function VideoHero({
             </div>
             <div className="inline-flex items-center gap-2 bg-joel-yellow text-gray-900 text-sm font-bold px-4 py-2 rounded-full">
               <Clock size={16} />
-              <span>Intervention 20 min</span>
+              <span>Intervention 30 min</span>
             </div>
           </div>
 
@@ -75,7 +75,7 @@ export default function VideoHero({
           </p>
 
           {/* Compteur artisans */}
-          <div className="flex items-center gap-2 mb-8 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full w-fit">
+          <div className="flex items-center gap-2 mb-8 bg-white/10 backdrop-blur-xs px-4 py-2 rounded-full w-fit">
             <Users size={18} className="text-emerald-400" />
             <span className="text-white font-medium">
               <span className="text-emerald-400 font-bold">{artisanCount} artisans</span> disponibles maintenant
@@ -100,14 +100,14 @@ export default function VideoHero({
 
           {/* Trust badges */}
           <div className="flex flex-wrap gap-4 mb-8">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-4 py-2 rounded-full">
               <Star size={18} className="text-yellow-400 fill-yellow-400" />
               <span className="text-white text-sm font-medium">4.9/5 (947 avis Google)</span>
             </div>
           </div>
 
           {/* Prix indicatifs avec TTC */}
-          <div className="grid grid-cols-3 gap-4 max-w-md bg-white/5 backdrop-blur-sm rounded-xl p-4">
+          <div className="grid grid-cols-3 gap-4 max-w-md bg-white/5 backdrop-blur-xs rounded-xl p-4">
             <div className="text-center">
               <p className="text-white/60 text-xs mb-1">Serrurerie</p>
               <p className="text-white font-bold text-xl">89€</p>

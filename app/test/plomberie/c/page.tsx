@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { TradeVarianteC } from "@/components/ab";
+import TradeVarianteC from "@/components/ab/TradeVarianteC";
 import { tradeConfigs } from "@/lib/ab-test/config";
 
 export const metadata: Metadata = {

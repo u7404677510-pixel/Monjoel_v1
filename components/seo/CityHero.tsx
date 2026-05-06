@@ -1,14 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Phone, ArrowRight, Clock, Shield, Euro, MapPin, Users } from "lucide-react";
-import Link from "next/link";
-import { City } from "@/lib/data/cities-idf";
+import dynamic from "next/dynamic";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Trade, Service } from "@/lib/data/services-definition";
-import { CityPageContent, ServicePageContent } from "@/lib/seo/city-content";
+import type { CityPageContent, ServicePageContent } from "@/lib/seo/city-content";
 import { useSiteConfig } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA. Critique sur les 7869 pages SEO.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 interface CityHeroProps {
   trade: Trade;
@@ -39,7 +44,7 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
+      <div className="absolute inset-0 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
       
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
@@ -54,39 +59,28 @@ export default function CityHero({ trade, city, content, service }: CityHeroProp
             transition={{ duration: 0.6 }}
           >
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="hover:text-joel-violet transition-colors">
-                Accueil
-              </Link>
-              <span>/</span>
-              <Link 
-                href={`/${trade.slug === "plombier" ? "plomberie" : trade.slug === "electricien" ? "electricite" : "serrurerie"}`}
-                className="hover:text-joel-violet transition-colors"
-              >
-                {trade.name}
-              </Link>
-              <span>/</span>
-              {service ? (
-                <>
-                  <Link 
-                    href={`/${trade.slug}/${city.slug}`}
-                    className="hover:text-joel-violet transition-colors"
-                  >
-                    {city.name}
-                  </Link>
-                  <span>/</span>
-                  <span className="text-gray-700">{service.name}</span>
-                </>
-              ) : (
-                <span className="text-gray-700">{city.name}</span>
-              )}
-            </div>
+            <Breadcrumbs
+              className="mb-6"
+              items={[
+                {
+                  label: trade.name,
+                  href: `/${trade.slug === "plombier" ? "plomberie" : trade.slug === "electricien" ? "electricite" : "serrurerie"}`,
+                },
+                ...(service
+                  ? [
+                      { label: city.name, href: `/${trade.slug}/${city.slug}` },
+                      { label: service.name },
+                    ]
+                  : [{ label: city.name }]),
+              ]}
+            />
+
 
             {/* Artisans disponibles - Urgence */}
-            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-3">
+            <div className="inline-flex items-center gap-2 bg-joel-violet/5 border border-joel-violet/20 text-joel-violet px-3 py-1.5 rounded-full text-sm font-medium mb-3">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-violet"></span>
               </span>
               <Users size={14} />
               <span>{artisansCount} {trade.slug === "plombier" ? "plombiers" : trade.slug === "electricien" ? "électriciens" : "serruriers"} disponibles</span>

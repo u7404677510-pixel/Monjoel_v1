@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Mail, Lock, Eye, EyeOff, ArrowLeft, Loader2, Shield } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -93,7 +93,7 @@ export default function AdminLoginPage() {
 
         <div className="px-8 py-7">
           {/* Security badge */}
-          <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-2.5 rounded-xl text-xs font-medium mb-6">
+          <div className="flex items-center gap-2 bg-joel-violet/5 border border-joel-violet/20 text-joel-violet px-4 py-2.5 rounded-xl text-xs font-medium mb-6">
             <Shield size={14} />
             <span>Connexion sécurisée via Supabase Auth</span>
           </div>
@@ -102,13 +102,13 @@ export default function AdminLoginPage() {
           <div className="flex gap-1 bg-gray-100 rounded-xl p-1 mb-6">
             <button
               onClick={() => { setMode("password"); setError(""); setSuccess(""); }}
-              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${mode === "password" ? "bg-white shadow-sm text-gray-900" : "text-gray-500"}`}
+              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${mode === "password" ? "bg-white shadow-xs text-gray-900" : "text-gray-500"}`}
             >
               Mot de passe
             </button>
             <button
               onClick={() => { setMode("magic"); setError(""); setSuccess(""); }}
-              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${mode === "magic" ? "bg-white shadow-sm text-gray-900" : "text-gray-500"}`}
+              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all ${mode === "magic" ? "bg-white shadow-xs text-gray-900" : "text-gray-500"}`}
             >
               Lien magique
             </button>
@@ -116,8 +116,8 @@ export default function AdminLoginPage() {
 
           {success ? (
             <div className="text-center py-6">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail size={28} className="text-emerald-600" />
+              <div className="w-16 h-16 bg-joel-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail size={28} className="text-joel-violet" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Email envoyé !</h3>
               <p className="text-gray-500 text-sm">{success}</p>
@@ -140,7 +140,7 @@ export default function AdminLoginPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-joel-violet/30 focus:border-joel-violet outline-none text-sm transition-all"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-joel-violet/30 focus:border-joel-violet outline-hidden text-sm transition-all"
                     placeholder="contact@monjoel.fr"
                   />
                 </div>
@@ -157,7 +157,7 @@ export default function AdminLoginPage() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full pl-10 pr-10 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-joel-violet/30 focus:border-joel-violet outline-none text-sm transition-all"
+                      className="w-full pl-10 pr-10 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-joel-violet/30 focus:border-joel-violet outline-hidden text-sm transition-all"
                       placeholder="••••••••"
                     />
                     <button

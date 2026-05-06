@@ -55,7 +55,7 @@ export default function AntiScamBadges() {
             return (
               <div
                 key={badge.title}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-xs hover:shadow-md transition-shadow"
               >
                 <div className={`w-14 h-14 ${colors.bg} rounded-xl flex items-center justify-center mb-4`}>
                   <Icon size={28} className={colors.text} />

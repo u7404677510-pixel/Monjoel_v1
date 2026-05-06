@@ -1,10 +1,18 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Zap, Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight } from "lucide-react";
+import { Zap, Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight, Award } from "lucide-react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import { motion, useReducedMotion } from "motion/react";
+import { useSiteAsset } from "@/lib/hooks/useSiteAssets";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
 import PaymentLogos from "@/components/sections/PaymentLogos";
+import Breadcrumbs from "@/components/Breadcrumbs";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA. Économise ~30 KB gzip sur le first paint.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 // Numéro de téléphone statique pour Google Ads detection
 const STATIC_PHONE = "01 41 69 10 08";
 const STATIC_PHONE_TEL = "+33141691008";
@@ -18,6 +26,9 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
   const { config } = useSiteConfig();
   const phoneNumber = config.phone_number || STATIC_PHONE;
   const phoneTel = formatPhoneForTel(phoneNumber) || STATIC_PHONE_TEL;
+  // Slot Hero électricité — image custom depuis /admin/medias, sinon WebP legacy.
+  const heroAsset = useSiteAsset("hero-electricite", "/images/hero-electricien.png");
+  const prefersReducedMotion = useReducedMotion();
   // Compteur artisans disponibles
   const [artisansCount, setArtisansCount] = useState(3);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
@@ -37,23 +48,31 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
     }
   };
   return (
-    <section className="relative min-h-[100svh] lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
+    <section className="relative min-h-svh lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
       {/* Mobile Background Illustration - Optimized WebP */}
       {/* Mobile Background - CSS background-image excludes from LCP calculation */}
       <div className="absolute inset-0 lg:hidden hero-bg-electricite opacity-15">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/90 via-white/70 to-white" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
+        {/* Breadcrumbs SEO + UX (sous le header fixed, en haut du hero) */}
+        <Breadcrumbs
+          className="mb-4"
+          items={[
+            { label: "Électricité", href: "/electricite" },
+            { label: title },
+          ]}
+        />
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center">
           {/* Content - Always first on mobile - No animation to ensure LCP element is visible */}
           <div className="order-1">
             {/* Artisans disponibles - Urgence */}
             <div
-              className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-2"
+              className="inline-flex items-center gap-2 bg-joel-violet/5 border border-joel-violet/20 text-joel-violet px-3 py-1.5 rounded-full text-sm font-medium mb-2"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-violet"></span>
               </span>
               <Users size={14} />
               <span>{artisansCount} électriciens disponibles maintenant</span>
@@ -71,11 +90,11 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
             >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                  <Star key={i} size={16} className="text-joel-yellow fill-joel-yellow" />
                 ))}
               </div>
               <span className="text-sm font-semibold text-gray-700">4.9/5</span>
-              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (847 avis vérifiés)</span>
+              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (947 avis vérifiés)</span>
             </div>
             {/* Main title */}
             <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 lg:mb-4 leading-[1.15]">
@@ -100,7 +119,7 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
                 href={`tel:${phoneTel}`}
                 onClick={handleCallClick}
                 data-placement="electricite-hero"
-                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 bg-joel-violet hover:bg-joel-violet text-white font-bold text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 {/* Badge GRATUIT */}
                 <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
@@ -156,50 +175,104 @@ export default function ElectriciteHero({ title, subtitle, description, serviceP
                   <span className="text-sm font-medium">Hager</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
-                  <Shield size={16} className="text-emerald-500" />
+                  <Shield size={16} className="text-joel-violet" />
                   <span className="text-sm font-medium">Artisan Confiance</span>
                 </div>
               </div>
             </div>
           </div>
           {/* Right side - Illustration - Desktop only */}
-          <div className="hidden lg:block order-2 relative animate-fade-in-right delay-200">
+          <motion.div
+            initial={prefersReducedMotion ? false : { opacity: 1, scale: 1.02 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:block order-2 relative"
+          >
             <div className="relative max-w-lg mx-auto lg:max-w-none">
-              {/* Main illustration - Optimized WebP */}
-              <div className="relative rounded-3xl overflow-hidden">
+              {/* Main illustration with DA Purple overlay */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-joel-violet/20 ring-1 ring-joel-violet/10">
                 <Image
-                  src="/hero-electricite.webp"
-                  alt="Électricien professionnel - Dépannage électricité Paris Île-de-France"
+                  src={heroAsset.url || "/images/hero-electricien.png"}
+                  alt={heroAsset.alt || "Électricien professionnel - Dépannage électricité Paris Île-de-France"}
                   width={600}
                   height={500}
                   sizes="(max-width: 1024px) 100vw, 600px"
                   className="w-full h-auto object-cover"
                   loading="lazy"
                 />
+                {/* Overlay DA Purple */}
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-tr from-joel-violet/30 via-transparent to-joel-yellow/15 mix-blend-multiply" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-joel-violet/40 via-joel-violet/10 to-transparent" />
               </div>
-              {/* Floating badge - Availability */}
-              <div
-                className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100 animate-scale-in delay-600"
+
+              {/* Floating chip "PRIX FIXES GARANTIS" */}
+              <motion.div
+                initial={prefersReducedMotion ? false : { opacity: 1, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                className="absolute -top-4 -right-4 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2.5 shadow-xl backdrop-blur-md ring-1 ring-joel-yellow/60 flex items-center gap-2"
+              >
+                <Shield size={16} className="text-joel-violet" />
+                <div className="leading-tight">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-joel-violet">Prix fixes</p>
+                  <p className="text-xs font-bold text-gray-900">Garantis sans surprise</p>
+                </div>
+              </motion.div>
+
+              {/* Floating price badge */}
+              <motion.div
+                initial={prefersReducedMotion ? false : { opacity: 1, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+                className="absolute top-6 -right-3 bg-white rounded-2xl px-4 py-2 shadow-lg border border-joel-violet/15"
+              >
+                <p className="text-[10px] uppercase tracking-wider text-gray-400">{servicePrice ? "Prix fixe" : "À partir de"}</p>
+                <p className="font-display font-bold text-xl text-joel-violet">{servicePrice ?? "59€"}</p>
+              </motion.div>
+
+              {/* Floating badge "Artisan certifié Joël" */}
+              <motion.div
+                initial={prefersReducedMotion ? false : { opacity: 1, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                className="absolute -bottom-5 -right-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl px-4 py-3 border border-joel-violet/20 max-w-[260px]"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
-                    <Clock className="text-white" size={20} />
+                  <div className="w-11 h-11 rounded-xl bg-gradient-joel flex items-center justify-center shadow-md shadow-joel-violet/30 shrink-0">
+                    <Award className="text-white" size={20} />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500">Disponible</p>
-                    <p className="font-bold text-gray-900">24h/24 • 7j/7</p>
+                    <p className="font-bold text-gray-900 text-sm leading-tight">Artisan certifié Joël</p>
+                    <div className="flex items-center gap-1 mt-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={11} className="text-joel-yellow fill-joel-yellow" />
+                      ))}
+                      <span className="text-[10px] text-gray-500 ml-1">Habilité BR/B1V</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/* Floating badge - Price */}
-              <div
-                className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 rounded-2xl px-4 py-2 shadow-lg animate-scale-in delay-800"
+              </motion.div>
+
+              {/* Floating availability */}
+              <motion.div
+                initial={prefersReducedMotion ? false : { opacity: 1, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+                className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-joel-violet/15"
               >
-                <p className="text-xs font-medium">{servicePrice ? "Prix fixe" : "À partir de"}</p>
-                <p className="font-bold text-xl">{servicePrice ?? "59€"}</p>
-              </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-joel-yellow-light rounded-xl flex items-center justify-center">
+                    <Clock className="text-joel-violet" size={20} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-wider text-gray-400">Disponible</p>
+                    <p className="font-bold text-gray-900 text-sm">24h/24 • 7j/7</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

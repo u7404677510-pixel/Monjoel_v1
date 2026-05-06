@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://monjoel.fr/serrurier/porte-blindee",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/porte-blindee",
+      "x-default": "https://monjoel.fr/serrurier/porte-blindee",
+    },
   },
   openGraph: {
     title: "Porte Blindée | Installation Certifiée A2P | Joël",

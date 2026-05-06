@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { Send, CheckCircle, Phone, MapPin, Wrench, Loader2, X } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 
@@ -234,8 +234,8 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
       className="bg-white rounded-2xl p-6 sm:p-8"
     >
       <div className="text-center">
-        <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <CheckCircle size={32} className="text-emerald-500" />
+        <div className="w-16 h-16 bg-joel-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <CheckCircle size={32} className="text-joel-violet" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">Demande envoyée !</h3>
         <p className="text-gray-600 mb-6">
@@ -244,7 +244,7 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
         <a
           href={`tel:${formatPhoneForTel(config.phone_number)}`}
           onClick={handleCallClick}
-          className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+          className="inline-flex items-center gap-2 bg-joel-violet hover:bg-joel-violet text-white font-semibold px-6 py-3 rounded-xl transition-colors"
         >
           <Phone size={18} />
           <span>Ou appelez maintenant</span>
@@ -274,16 +274,19 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
 
       {/* Problem select — contextuel selon trade */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
-          <Wrench size={14} className="inline mr-1" />
+        <label htmlFor="qq-problem" className="block text-sm font-medium text-gray-700 mb-1">
+          <Wrench size={14} className="inline mr-1" aria-hidden="true" />
           {problemLabel}
         </label>
         <select
+          id="qq-problem"
           value={formData.problem}
           onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
+          aria-invalid={errors.problem ? "true" : undefined}
+          aria-describedby={errors.problem ? "qq-problem-error" : undefined}
           className={`w-full px-4 py-3 rounded-xl border ${
             errors.problem ? "border-red-300 bg-red-50" : "border-gray-200"
-          } focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-none transition-colors`}
+          } focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-hidden transition-colors`}
         >
           {problemList.map((p) => (
             <option key={p.value} value={p.value}>
@@ -292,21 +295,22 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
           ))}
         </select>
         {errors.problem && (
-          <p className="text-red-500 text-xs mt-1">{errors.problem}</p>
+          <p id="qq-problem-error" className="text-red-500 text-xs mt-1">{errors.problem}</p>
         )}
       </div>
 
-      {/* Niveau d'urgence */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+      {/* Niveau d'urgence — group de boutons radio-like */}
+      <div role="group" aria-labelledby="qq-urgency-label">
+        <span id="qq-urgency-label" className="block text-sm font-medium text-gray-700 mb-2">
           Niveau d&apos;urgence
-        </label>
+        </span>
         <div className="grid grid-cols-3 gap-2">
           {urgencyOptions.map((opt) => (
             <button
               key={opt.value}
               type="button"
               onClick={() => setFormData({ ...formData, urgency: opt.value })}
+              aria-pressed={formData.urgency === opt.value}
               className={`flex flex-col items-center justify-center gap-0.5 px-2 py-3 rounded-xl border-2 text-center transition-all ${
                 formData.urgency === opt.value
                   ? "border-joel-violet bg-joel-violet/5"
@@ -325,41 +329,50 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
 
       <div className="grid grid-cols-2 gap-3">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            <MapPin size={14} className="inline mr-1" />
+          <label htmlFor="qq-postal" className="block text-sm font-medium text-gray-700 mb-1">
+            <MapPin size={14} className="inline mr-1" aria-hidden="true" />
             Code postal
           </label>
           <input
+            id="qq-postal"
             type="text"
+            inputMode="numeric"
+            autoComplete="postal-code"
             placeholder="75015"
             maxLength={5}
             value={formData.postalCode}
             onChange={(e) => setFormData({ ...formData, postalCode: e.target.value.replace(/\D/g, "") })}
+            aria-invalid={errors.postalCode ? "true" : undefined}
+            aria-describedby={errors.postalCode ? "qq-postal-error" : undefined}
             className={`w-full px-4 py-3 rounded-xl border ${
               errors.postalCode ? "border-red-300 bg-red-50" : "border-gray-200"
-            } focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-none transition-colors`}
+            } focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-hidden transition-colors`}
           />
           {errors.postalCode && (
-            <p className="text-red-500 text-xs mt-1">{errors.postalCode}</p>
+            <p id="qq-postal-error" className="text-red-500 text-xs mt-1">{errors.postalCode}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            <Phone size={14} className="inline mr-1" />
+          <label htmlFor="qq-phone" className="block text-sm font-medium text-gray-700 mb-1">
+            <Phone size={14} className="inline mr-1" aria-hidden="true" />
             Téléphone
           </label>
           <input
+            id="qq-phone"
             type="tel"
+            autoComplete="tel"
             placeholder="06 12 34 56 78"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            aria-invalid={errors.phone ? "true" : undefined}
+            aria-describedby={errors.phone ? "qq-phone-error" : undefined}
             className={`w-full px-4 py-3 rounded-xl border ${
               errors.phone ? "border-red-300 bg-red-50" : "border-gray-200"
-            } focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-none transition-colors`}
+            } focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-hidden transition-colors`}
           />
           {errors.phone && (
-            <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+            <p id="qq-phone-error" className="text-red-500 text-xs mt-1">{errors.phone}</p>
           )}
         </div>
       </div>
@@ -398,11 +411,11 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
 
       <div className="flex items-center justify-center gap-4 text-xs text-gray-500 pt-2">
         <span className="flex items-center gap-1">
-          <CheckCircle size={12} className="text-emerald-500" />
+          <CheckCircle size={12} className="text-joel-violet" />
           Sans engagement
         </span>
         <span className="flex items-center gap-1">
-          <CheckCircle size={12} className="text-emerald-500" />
+          <CheckCircle size={12} className="text-joel-violet" />
           Réponse en 2 min
         </span>
       </div>
@@ -416,7 +429,7 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-start lg:items-center justify-center p-4 pt-20 lg:pt-4 overflow-y-auto"
+          className="fixed inset-0 bg-black/50 backdrop-blur-xs z-100 flex items-start lg:items-center justify-center p-4 pt-20 lg:pt-4 overflow-y-auto"
           onClick={onClose}
         >
           <motion.div

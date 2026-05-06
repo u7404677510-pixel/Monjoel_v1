@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Mise aux Normes Électrique Paris - NF C 15-100 | Électricien Joël",
+  title: "Mise aux Normes Électrique Paris - NF C 15-100 | Joël",
   description: "Mise aux normes électrique NF C 15-100 à Paris & IDF. Électricien agréé, prix fixe dès 29€ annoncé avant intervention. Devis gratuit, 24h/24. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/electricien/mise-aux-normes",
+    languages: {
+      "fr-FR": "https://monjoel.fr/electricien/mise-aux-normes",
+      "x-default": "https://monjoel.fr/electricien/mise-aux-normes",
+    },
   },
 };
 
@@ -44,7 +48,7 @@ const faqs = [
   },
   {
     question: "Combien coûte une mise aux normes électrique ?",
-    answer: "Le prix dépend de l'état de votre installation et des travaux nécessaires. L'audit initial est à partir de 29€. Vous recevez un devis détaillé AVANT toute intervention.",
+    answer: "Le prix dépend de l'état de votre installation et des travaux nécessaires. L'audit initial est à partir de 59€. Vous recevez un devis détaillé AVANT toute intervention.",
   },
   {
     question: "Qu'est-ce que la norme NF C 15-100 ?",

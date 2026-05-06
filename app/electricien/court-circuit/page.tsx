@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Court-Circuit Paris - Diagnostic & Mise en Sécurité | Électricien Joël",
+  title: "Court-Circuit Paris - Mise en Sécurité 79€ | Joël",
   description: "Court-circuit électrique ? Électricien certifié intervient en urgence à Paris & IDF. Diagnostic immédiat, mise en sécurité. Prix fixe dès 79€. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/electricien/court-circuit",
+    languages: {
+      "fr-FR": "https://monjoel.fr/electricien/court-circuit",
+      "x-default": "https://monjoel.fr/electricien/court-circuit",
+    },
   },
 };
 

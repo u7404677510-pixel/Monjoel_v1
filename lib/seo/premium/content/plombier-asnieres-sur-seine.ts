@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Asnières-sur-Seine 92600 — villas Belle Époque, bords de Seine, Bourguignons, Agnettes, Bac d'Asnières. Prix Joël annoncé dès 79€ TTC, 24h/24, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Asnières-sur-Seine : intervenir dans une banlieue Belle Époque où la villa côtoie la barre",
-  introParagraph:
-    "Asnières-sur-Seine n'est pas une banlieue comme une autre. À huit kilomètres au nord-ouest des Champs-Élysées, sur la rive droite du fleuve qui lui a donné son nom et son destin, cette ville de 86 020 habitants étalée sur un peu moins de cinq kilomètres carrés mérite que l'on s'arrête sur la singularité de son bâti avant d'aborder la moindre intervention de plomberie. La cité, longtemps simple village de pêche pour les Parisiens, s'est métamorphosée à partir de 1837 avec l'arrivée du chemin de fer Paris - Saint-Germain — l'une des premières lignes de France — qui a transformé les bords de Seine en lieu de villégiature pour la bourgeoisie d'affaires de la capitale. C'est de cette révolution ferroviaire que datent les villas singulières, les hôtels particuliers néo-Renaissance, le théâtre municipal édifié en 1898, et ce cimetière des chiens et autres animaux domestiques inauguré en 1899 sur l'île des Ravageurs — premier cimetière animalier au monde, classé monument historique depuis 1987. Mais Asnières est aussi, dans le même geste, la ville des barres et des tours édifiées dans l'urgence des années 1960-1970 sur les hauteurs des Agnettes ou aux abords du Bac d'Asnières vers Gennevilliers, et celle, désormais, des programmes neufs de la ZAC Seine-Ouest qui réinventent les rives. Mon métier d'architecte du patrimoine me conduit à fréquenter régulièrement les communes du nord du 92, où je travaille avec des syndics et des copropriétés sur les problématiques techniques que pose ce mélange de bâtis. Cette page s'adresse aux Asnièrois qui, confrontés à une urgence de plomberie un soir, un dimanche, en pleine nuit, hésitent entre composer un numéro trouvé en cinq secondes sur Google et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC, 24 heures sur 24, sans majoration nuit ou week-end. Le numéro à composer reste le 01 41 69 10 08. Cette page veut leur donner les clefs pour comprendre, sur leur ville et son histoire, ce qui distingue un dépannage juste d'une arnaque du dimanche soir.",
+  introParagraph: `### Asnières-sur-Seine en chiffres : la banlieue Belle Époque du nord-ouest
+
+Asnières-sur-Seine compte **86 020 habitants** étalés sur un peu moins de **cinq kilomètres carrés**, à **huit kilomètres au nord-ouest des Champs-Élysées**, sur la rive droite de la Seine.
+
+Longtemps simple village de pêche pour les Parisiens, la cité s'est métamorphosée à partir de **1837** avec l'arrivée du **chemin de fer Paris - Saint-Germain**, l'une des premières lignes de France, qui a transformé les bords de Seine en lieu de villégiature pour la bourgeoisie d'affaires de la capitale.
+
+### Le bâti asnièrois : villa Belle Époque, barre, programme neuf
+
+C'est de cette révolution ferroviaire que datent les **villas singulières**, les **hôtels particuliers néo-Renaissance**, le **théâtre municipal édifié en 1898**, et ce célèbre **cimetière des chiens et autres animaux domestiques inauguré en 1899** sur l'île des Ravageurs — premier cimetière animalier au monde, **classé monument historique depuis 1987**.
+
+Mais Asnières est aussi, dans le même geste, la ville des **barres et tours édifiées dans l'urgence des années 1960-1970** sur les hauteurs des **Agnettes** ou aux abords du **Bac d'Asnières** vers Gennevilliers, et celle, désormais, des programmes neufs de la **ZAC Seine-Ouest** qui réinventent les rives.
+
+### Le quotidien plomberie à Asnières : ce que ça implique
+
+Cette diversité radicale du bâti impose une discipline d'observation que la plupart des opérateurs commerciaux du dépannage low-cost n'ont pas. Cette page s'adresse aux Asnièrois qui, confrontés à une urgence de plomberie un soir, un dimanche, en pleine nuit, **hésitent entre composer un numéro trouvé en cinq secondes sur Google et chercher un peu plus loin un artisan honnête**.
+
+### L'auteur de cette page
+
+**Architecte du patrimoine**, mon métier me conduit à fréquenter régulièrement les communes du nord du 92, où je travaille avec des syndics et des copropriétés sur les problématiques techniques que pose ce **mélange de bâtis**. Cette page veut donner aux Asnièrois les clefs pour comprendre, sur leur ville et son histoire, ce qui distingue **un dépannage juste d'une arnaque du dimanche soir**.
+
+### Joël à Asnières-sur-Seine : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC**, **24 heures sur 24**, sans majoration nuit ou week-end.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "asnieres-belle-epoque-banlieue",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
 import { Department } from "@/lib/data/departments-idf";
+import { getOtherDeptAnchor } from "@/lib/seo/anchor-variants";
 
 interface OtherDepartmentsProps {
   currentDepartment: Department;
@@ -36,45 +37,51 @@ export default function OtherDepartments({
 
         {/* Departments grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {otherDepartments.map((dept) => (
-            <Link
-              key={dept.code}
-              href={`/${tradeSlug}-${dept.code}`}
-              className="group relative bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-joel-violet/30 hover:shadow-lg transition-all"
-            >
-              {/* Department code badge */}
-              <div className="absolute -top-3 -right-3 bg-joel-violet text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
-                {dept.code}
-              </div>
-
-              {/* Content */}
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin
-                  size={24}
-                  className="text-joel-violet mt-1 flex-shrink-0"
-                />
-                <div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-joel-violet transition-colors">
-                    {dept.name}
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    {dept.cityCount} villes
-                  </p>
+          {otherDepartments.map((dept) => {
+            // Anchor texte varié — évite la répétition "Voir plombier" sur 7 cartes.
+            // Le aria-label restitue l'intention pour les lecteurs d'écran.
+            const anchorText = getOtherDeptAnchor(dept, tradeSlug);
+            return (
+              <Link
+                key={dept.code}
+                href={`/${tradeSlug}-${dept.code}`}
+                aria-label={anchorText}
+                className="group relative bg-linear-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 hover:border-joel-violet/30 hover:shadow-lg transition-all"
+              >
+                {/* Department code badge */}
+                <div className="absolute -top-3 -right-3 bg-joel-violet text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
+                  {dept.code}
                 </div>
-              </div>
 
-              {/* Main cities preview */}
-              <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                {dept.mainCities.slice(0, 4).join(", ")}...
-              </p>
+                {/* Content */}
+                <div className="flex items-start gap-3 mb-4">
+                  <MapPin
+                    size={24}
+                    className="text-joel-violet mt-1 shrink-0"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-joel-violet transition-colors">
+                      {dept.name}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {dept.cityCount} villes
+                    </p>
+                  </div>
+                </div>
 
-              {/* Link indicator */}
-              <div className="flex items-center gap-1 text-joel-violet font-medium text-sm group-hover:gap-2 transition-all">
-                <span>Voir {tradeName.toLowerCase()}</span>
-                <ArrowRight size={16} />
-              </div>
-            </Link>
-          ))}
+                {/* Main cities preview */}
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                  {dept.mainCities.slice(0, 4).join(", ")}...
+                </p>
+
+                {/* Link indicator — anchor varié visible */}
+                <div className="flex items-center gap-1 text-joel-violet font-medium text-sm group-hover:gap-2 transition-all">
+                  <span>{anchorText}</span>
+                  <ArrowRight size={16} />
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Current department reminder */}

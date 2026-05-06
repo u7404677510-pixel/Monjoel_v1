@@ -2,28 +2,33 @@
 
 import { Phone, Star, MapPin, Clock, Shield, BadgeCheck, Users, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
 import { useState, useEffect, useCallback } from "react";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+
+// Lazy-load — modal devis n'est rendu qu'au clic CTA. Économise ~30 KB gzip sur le first paint.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 const carouselSlides = [
   {
-    src: "/hero-serrurerie.webp",
+    src: "/images/hero-serrurier.png",
     alt: "Serrurier professionnel Joël - Dépannage serrurerie Paris",
     label: "Serrurerie",
     color: "from-joel-violet/60",
   },
   {
-    src: "/hero-plomberie.webp",
+    src: "/images/hero-plombier.png",
     alt: "Plombier professionnel Joël - Dépannage plomberie Paris",
     label: "Plomberie",
-    color: "from-blue-600/60",
+    color: "from-joel-mauve/60",
   },
   {
-    src: "/hero-electricite.webp",
+    src: "/images/hero-electricien.png",
     alt: "Électricien professionnel Joël - Dépannage électricité Paris",
     label: "Électricité",
-    color: "from-amber-500/60",
+    color: "from-joel-yellow/60",
   },
 ];
 
@@ -75,10 +80,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100svh] lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
+    <section className="relative min-h-svh lg:min-h-screen flex items-center pt-20 lg:pt-20 overflow-hidden bg-white">
       {/* Mobile Background - CSS background-image excludes from LCP calculation */}
       <div className="absolute inset-0 lg:hidden hero-bg-main opacity-15">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/90 via-white/70 to-white" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 py-6 lg:py-16 w-full">
@@ -86,10 +91,10 @@ export default function Hero() {
           {/* Content - Always first on mobile - No animation to ensure LCP element is visible */}
           <div className="order-1">
             {/* Artisans disponibles - Urgence */}
-            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full text-sm font-medium mb-2">
+            <div className="inline-flex items-center gap-2 bg-joel-violet/5 border border-joel-violet/20 text-joel-violet px-3 py-1.5 rounded-full text-sm font-medium mb-2">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-joel-yellow opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-violet"></span>
               </span>
               <Users size={14} />
               <span>{artisansCount} artisans disponibles maintenant</span>
@@ -99,11 +104,11 @@ export default function Hero() {
             <div className="flex items-center gap-2 mb-3">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                  <Star key={i} size={16} className="text-joel-yellow fill-joel-yellow" />
                 ))}
               </div>
               <span className="text-sm font-semibold text-gray-700">4.9/5</span>
-              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (847 avis vérifiés)</span>
+              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (947 avis vérifiés)</span>
             </div>
 
             {/* Main title - SEO optimized */}
@@ -134,7 +139,7 @@ export default function Hero() {
                 href={`tel:${formatPhoneForTel(config.phone_number)}`}
                 onClick={handleCallClick}
                 data-placement="hero-main"
-                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 bg-joel-violet hover:bg-joel-violet text-white font-bold text-base sm:text-lg lg:text-xl px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 {/* Badge GRATUIT */}
                 <span className="absolute -top-2 -right-2 bg-joel-yellow text-gray-900 text-xs font-bold px-2 py-1 rounded-full shadow-md">
@@ -181,7 +186,7 @@ export default function Hero() {
                   <span className="text-sm font-medium">Legrand</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg">
-                  <Shield size={16} className="text-emerald-500" />
+                  <Shield size={16} className="text-joel-violet" />
                   <span className="text-sm font-medium">Artisan Confiance</span>
                 </div>
               </div>
@@ -193,7 +198,7 @@ export default function Hero() {
             <div className="relative max-w-lg mx-auto lg:max-w-none">
 
               {/* Carousel container */}
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden aspect-4/3 shadow-2xl">
                 {carouselSlides.map((slide, index) => (
                   <div
                     key={slide.src}
@@ -211,8 +216,8 @@ export default function Hero() {
                       priority={index === 0}
                     />
                     {/* Label overlay */}
-                    <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${slide.color} to-transparent px-6 py-4`}>
-                      <span className="text-white text-sm font-semibold bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                    <div className={`absolute bottom-0 left-0 right-0 bg-linear-to-t ${slide.color} to-transparent px-6 py-4`}>
+                      <span className="text-white text-sm font-semibold bg-white/20 backdrop-blur-xs px-3 py-1 rounded-full">
                         {slide.label}
                       </span>
                     </div>
@@ -223,14 +228,14 @@ export default function Hero() {
                 <button
                   onClick={prevSlide}
                   aria-label="Image précédente"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow hover:bg-white transition-all"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-xs rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-all"
                 >
                   <ChevronLeft size={18} className="text-gray-700" />
                 </button>
                 <button
                   onClick={nextSlide}
                   aria-label="Image suivante"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow hover:bg-white transition-all"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 bg-white/80 backdrop-blur-xs rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-all"
                 >
                   <ChevronRight size={18} className="text-gray-700" />
                 </button>
@@ -255,7 +260,7 @@ export default function Hero() {
               {/* Floating badge - Availability */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-4 py-3 border border-gray-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+                  <div className="w-10 h-10 bg-joel-violet rounded-xl flex items-center justify-center">
                     <Clock className="text-white" size={20} />
                   </div>
                   <div>
@@ -275,7 +280,7 @@ export default function Hero() {
 
           {/* Mobile carousel - full width below content */}
           <div className="lg:hidden order-2 relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-xl">
+            <div className="relative rounded-2xl overflow-hidden aspect-video shadow-xl">
               {carouselSlides.map((slide, index) => (
                 <div
                   key={slide.src}
@@ -291,8 +296,8 @@ export default function Hero() {
                     className="object-cover"
                     loading="lazy"
                   />
-                  <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${slide.color} to-transparent px-4 py-3`}>
-                    <span className="text-white text-xs font-semibold bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                  <div className={`absolute bottom-0 left-0 right-0 bg-linear-to-t ${slide.color} to-transparent px-4 py-3`}>
+                    <span className="text-white text-xs font-semibold bg-white/20 backdrop-blur-xs px-2.5 py-1 rounded-full">
                       {slide.label}
                     </span>
                   </div>

@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Pantin par Camille, archi étudiante locataire. Vrais prix dès 79€, 24h/24, anti-arnaque. Quartiers Église, Hoche, Ourcq, Quatre-Chemins.",
   h1: "Plombier à Pantin : le guide que j'aurais voulu avoir avant de signer mon T2 quai de l'Aisne",
-  introParagraph:
-    "OK alors. Imagine. Tu viens de signer un bail à 940€ charges comprises pour un T2 de 38 m² au troisième étage d'un immeuble années 80 quai de l'Aisne, Pantin (93500). Tu kiffes parce que tu sors enfin de Paris intra-muros où tu payais 1 100€ pour 22 m² rue de la Goutte d'Or, t'as gagné 16 m² de surface et un balcon qui donne sur le canal de l'Ourcq, t'es à 7 minutes à pied de la station Église-de-Pantin (M5) et à 14 minutes du RER E qui te dépose à Magenta en 8 minutes. T'as l'impression d'avoir hacké la vie parisienne. Et puis trois semaines plus tard, un dimanche soir vers 22h, en plein rendu de mémoire de master 2 (parce qu'évidemment, les pannes plomberie tombent toujours pendant les rendus), ton WC se met à déborder, eau qui remonte par la cuvette, panique. Bienvenue dans la vraie vie d'un appart pantinois années 80 dont les évacuations en fonte n'ont sans doute jamais été curées depuis la livraison du bâtiment. Moi c'est Camille Roussel, 26 ans, master 2 d'architecture à l'ENSA Paris-Belleville, locataire en colocation dans le 18e ET qui a passé six mois à faire mon mémoire de master 1 sur la transformation urbaine du canal de l'Ourcq côté Pantin, parce que franchement c'est l'un des chantiers urbains les plus passionnants de la métropole depuis dix ans. Je tiens le blog 'Mon appart, mes galères' (15k abonnés Insta) où je raconte les pannes, les bons plans et les arnaques évitées par des gens de ma génération. Cette page est pour toi si tu loues à Pantin — Église, Hoche, Mairie, Petit-Pantin, Sept-Arpents, Quatre-Chemins, Quartier de l'Ourcq, Courtillières — et que tu veux pas te faire avoir le jour où ton chauffe-eau lâche un samedi soir pendant que t'as ramené quelqu'un. Pantin c'est devenu en dix ans la ville la plus bobo du 93 (les Pantinois historiques le savent, certains s'en lassent et c'est compréhensible) : Hermès y a installé ses ateliers majeurs avenue Jean-Lolive, BETC est arrivé aux Magasins Généraux en 2016, BNP Paribas occupe les Grands Moulins, Chanel a posé ses pieds vers la Plaine, et la population a grimpé de 53 000 à environ 60 959 habitants selon les derniers chiffres d'Est Ensemble — l'INSEE estimant désormais la commune autour de 64 995 habitants en 2026 avec un tiers de la population qui a moins de 25 ans. Tu n'es pas seule à avoir débarqué récemment. Et bonne nouvelle : depuis le 1er janvier 2024, l'eau de Pantin n'est plus distribuée par Veolia mais par 'Eau publique par Est Ensemble', avec une politique tarifaire progressive et 10 000 litres gratuits par foyer/an. Mauvaise nouvelle : ton flexible IKEA reste un flexible IKEA, et ta vétusté reste ta vétusté. Je t'explique tout : les arnaques 'plombier urgence Pantin 24/7' à éviter, les vrais prix (Joël annonce dès 79€ TTC sur le débouchage, le 01 41 69 10 08 c'est le numéro à mettre dans tes contacts MAINTENANT), tes droits face à un proprio qui répond pas, et trois trucs préventifs qui te sauveront 200€ minimum dans l'année. Pose ton thé, lis ça calmement, tu me remercieras.",
+  introParagraph: `### Pantin en chiffres : la ville la plus bobo du 93
+
+Pantin c'est devenu en dix ans la **ville la plus bobo du 93**. **Hermès** y a installé ses ateliers majeurs **avenue Jean-Lolive**, **BETC** est arrivé aux **Magasins Généraux en 2016**, **BNP Paribas** occupe les **Grands Moulins**, **Chanel** a posé ses pieds vers la Plaine.
+
+La population a grimpé de **53 000 à environ 60 959 habitants** selon les derniers chiffres d'Est Ensemble — l'INSEE estimant désormais la commune autour de **64 995 habitants en 2026** avec **un tiers de la population qui a moins de 25 ans**.
+
+### Les quartiers et le bâti pantinois
+
+Cette page est pour toi si tu loues à Pantin — **Église, Hoche, Mairie, Petit-Pantin, Sept-Arpents, Quatre-Chemins, Quartier de l'Ourcq, Courtillières**.
+
+Le bâti combine les **barres et tours des grands ensembles construits entre 1955 et 1975** (**cités des Courtillières**, opération avenue de la Division-Leclerc, **Sept-Arpents**), les **vieilles maisons ouvrières et petits immeubles fin XIXe** rue Pierre-Brossolette ou rue Hoche (Pantin a été un poumon industriel majeur jusque dans les années 60, avec les **Grands Moulins**, les abattoirs, les industries chimiques), et les **opérations ZAC du Port** (livrées depuis 2017) avec la mutation du quartier Hoche autour de la **BAL** ouverte en 2017.
+
+### Le quotidien plomberie à Pantin : eau publique et vétusté
+
+Bonne nouvelle : depuis le **1er janvier 2024**, l'eau de Pantin n'est plus distribuée par Veolia mais par **« Eau publique par Est Ensemble »**, avec une politique tarifaire progressive et **10 000 litres gratuits par foyer/an**. Mauvaise nouvelle : ton **flexible IKEA reste un flexible IKEA**, et ta **vétusté reste ta vétusté**.
+
+Imagine. Tu viens de signer un bail à **940€ charges comprises** pour un T2 de 38 m² **quai de l'Aisne**. Trois semaines plus tard, ton WC se met à déborder. Bienvenue dans la vraie vie d'un appart pantinois années 80 dont les **évacuations en fonte** n'ont sans doute jamais été curées.
+
+### L'auteur de cette page
+
+Moi c'est **Camille Roussel**, **26 ans**, **master 2 d'architecture à l'ENSA Paris-Belleville**, locataire en colocation dans le 18e ET qui a passé **six mois** à faire mon mémoire de master 1 sur la transformation urbaine du **canal de l'Ourcq côté Pantin**. Je tiens le blog **« Mon appart, mes galères »** (**15k abonnés Insta**).
+
+### Joël à Pantin : tarif fixe annoncé en amont
+
+Joël annonce dès **79€ TTC** sur le débouchage, le **01 41 69 10 08** c'est le numéro à mettre dans tes contacts MAINTENANT. **24h/24** sans majoration nuit, week-end ou jour férié.`,
   sections: [
     {
       anchor: "qui-je-suis",

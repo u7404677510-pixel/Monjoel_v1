@@ -7,7 +7,10 @@
  *   - FAQPage (depuis faqLocale)
  *   - BreadcrumbList
  *   - Service (si page service)
- *   - AggregateRating (depuis témoignages)
+ *
+ * NOTE : pas d'AggregateRating ni de Review schema tant qu'on n'a pas
+ * d'avis Google réels collectés. Émettre des ratings fictifs = "structured
+ * data spam" → risque de manual action / pénalité Google.
  *
  * Différent du schema-generator standard : enrichi par les données rédactionnelles
  * et par l'auteur signataire.
@@ -21,7 +24,7 @@ import { getPersona } from "./personas";
 const BASE_URL = "https://monjoel.fr";
 const COMPANY_NAME = "Joël";
 const COMPANY_PHONE = "+33141691008";
-const COMPANY_EMAIL = "contact@monjoel.com";
+const COMPANY_EMAIL = "contact@monjoel.fr";
 
 export function generatePremiumSchemas(
   content: PremiumPageContent,
@@ -33,11 +36,6 @@ export function generatePremiumSchemas(
   const pageUrl = service
     ? `${BASE_URL}/${trade.slug}/${city.slug}/${service.slug}`
     : `${BASE_URL}/${trade.slug}/${city.slug}`;
-
-  const avgRating =
-    content.temoignages.length > 0
-      ? content.temoignages.reduce((acc, t) => acc + t.rating, 0) / content.temoignages.length
-      : 4.9;
 
   const schemas: any[] = [];
 
@@ -94,6 +92,8 @@ export function generatePremiumSchemas(
   });
 
   // --- LocalBusiness ---
+  // areaServed enrichi : ville + département + région — donne une lecture
+  // hiérarchique précise à Google plutôt qu'un seul niveau "City".
   const localBusiness: any = {
     "@context": "https://schema.org",
     "@type": tradeToLocalBusinessType(trade.slug),
@@ -111,26 +111,25 @@ export function generatePremiumSchemas(
       postalCode: city.postalCodes[0],
       addressCountry: "FR",
     },
-    areaServed: {
-      "@type": "City",
-      name: city.name,
-      containedIn: { "@type": "AdministrativeArea", name: city.departmentName },
-    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: city.name,
+        containedIn: { "@type": "AdministrativeArea", name: city.departmentName },
+      },
+      { "@type": "AdministrativeArea", name: `${city.departmentName} (${city.department})` },
+      { "@type": "AdministrativeArea", name: "Île-de-France" },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "00:00",
         closes: "23:59",
+        validFrom: "2024-01-01",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: avgRating.toFixed(1),
-      reviewCount: Math.max(content.temoignages.length, 947),
-      bestRating: "5",
-      worstRating: "1",
-    },
+    // Pas d'aggregateRating tant qu'on n'a pas d'avis Google réels collectés.
   };
 
   if (city.coordinates) {
@@ -171,9 +170,19 @@ export function generatePremiumSchemas(
         url: BASE_URL,
         telephone: COMPANY_PHONE,
       },
-      areaServed: {
-        "@type": "City",
-        name: city.name,
+      areaServed: [
+        {
+          "@type": "City",
+          name: city.name,
+          containedIn: { "@type": "AdministrativeArea", name: city.departmentName },
+        },
+        { "@type": "AdministrativeArea", name: `${city.departmentName} (${city.department})` },
+      ],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
       },
       offers: {
         "@type": "Offer",
@@ -190,25 +199,9 @@ export function generatePremiumSchemas(
     });
   }
 
-  // --- Reviews individuelles (boost AggregateRating) ---
-  for (const t of content.temoignages.slice(0, 5)) {
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "Review",
-      itemReviewed: {
-        "@type": "LocalBusiness",
-        name: `${COMPANY_NAME} — ${trade.name} ${city.name}`,
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: t.rating,
-        bestRating: "5",
-      },
-      author: { "@type": "Person", name: t.auteur },
-      datePublished: t.date,
-      reviewBody: t.texte,
-    });
-  }
+  // Pas de Reviews individuelles tant qu'on n'a pas de vrais témoignages
+  // collectés (les `temoignages` du contenu sont rédactionnels, pas vérifiables).
+  // À réactiver quand on aura un flux d'avis Google ou Trustpilot officiel.
 
   return JSON.stringify(schemas);
 }

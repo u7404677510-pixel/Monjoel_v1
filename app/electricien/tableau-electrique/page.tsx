@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Tableau Électrique Paris - Dépannage ou Remplacement 149€ | Électricien Joël",
-  description: "Tableau électrique en panne ? Électricien certifié intervient en 20 min à Paris & IDF. Prix fixe 149€ annoncé avant intervention. Conformité garantie. 01 41 69 10 08",
+  title: "Tableau Électrique Paris - Dépannage 149€ | Joël",
+  description: "Tableau électrique en panne ? Électricien certifié intervient en 20 min à Paris & IDF. Prix fixe 149€ annoncé avant. Conformité garantie. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/electricien/tableau-electrique",
+    languages: {
+      "fr-FR": "https://monjoel.fr/electricien/tableau-electrique",
+      "x-default": "https://monjoel.fr/electricien/tableau-electrique",
+    },
   },
 };
 

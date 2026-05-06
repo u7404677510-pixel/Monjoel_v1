@@ -5,21 +5,57 @@
  */
 
 import { extraCities } from "../../scripts/cities-extra";
+import rawCoords from "./cities-idf-coords.json";
 
-export interface City {
-  slug: string;
-  name: string;
-  postalCodes: string[];
-  department: string;
-  departmentName: string;
-  population?: number;
-  coordinates?: { lat: number; lng: number };
+// Le type est isolé dans `./cities-idf-types` pour permettre aux Client
+// Components d'importer SEULEMENT le type sans tirer le dataset (~20 KB gz)
+// dans le bundle JS public. Ré-export ici pour rétro-compat des imports.
+export type { City } from "./cities-idf-types";
+import type { City } from "./cities-idf-types";
+
+// ============================================
+// COORDONNÉES — mapping slug → [lat, lng]
+// ============================================
+// `cities-idf-coords.json` contient les centroïdes (mairies / centre-ville)
+// pour ~200 villes principales d'IDF. Pour les autres, on utilise le
+// centroïde du département en fallback (assez précis à l'échelle IDF
+// pour le tri par distance des villes voisines).
+
+const CITY_COORDS = rawCoords as unknown as Record<string, [number, number]>;
+
+const DEPT_CENTROIDS: Record<string, [number, number]> = {
+  "75": [48.8566, 2.3522],
+  "77": [48.6, 2.95],
+  "78": [48.85, 1.95],
+  "91": [48.55, 2.30],
+  "92": [48.85, 2.20],
+  "93": [48.92, 2.45],
+  "94": [48.78, 2.45],
+  "95": [49.05, 2.10],
+};
+
+function resolveCoords(slug: string, department: string): { lat: number; lng: number } {
+  const direct = CITY_COORDS[slug];
+  if (direct) {
+    return { lat: direct[0], lng: direct[1] };
+  }
+  const fallback = DEPT_CENTROIDS[department] ?? DEPT_CENTROIDS["75"];
+  return { lat: fallback[0], lng: fallback[1] };
+}
+
+type RawCity = Omit<City, "coordinates"> & { coordinates?: { lat: number; lng: number } };
+
+function withCoords(c: RawCity): City {
+  return {
+    ...c,
+    coordinates: c.coordinates ?? resolveCoords(c.slug, c.department),
+  };
 }
 
 // ============================================
 // PARIS (75) - 20 arrondissements
 // ============================================
-const paris: City[] = [
+const paris: RawCity[] = [
   { slug: "paris-1", name: "Paris 1er", postalCodes: ["75001"], department: "75", departmentName: "Paris", population: 16266 },
   { slug: "paris-2", name: "Paris 2e", postalCodes: ["75002"], department: "75", departmentName: "Paris", population: 20900 },
   { slug: "paris-3", name: "Paris 3e", postalCodes: ["75003"], department: "75", departmentName: "Paris", population: 34115 },
@@ -45,7 +81,7 @@ const paris: City[] = [
 // ============================================
 // HAUTS-DE-SEINE (92)
 // ============================================
-const hautsDeSeine: City[] = [
+const hautsDeSeine: RawCity[] = [
   { slug: "antony", name: "Antony", postalCodes: ["92160"], department: "92", departmentName: "Hauts-de-Seine", population: 62858 },
   { slug: "asnieres-sur-seine", name: "Asnières-sur-Seine", postalCodes: ["92600"], department: "92", departmentName: "Hauts-de-Seine", population: 86020 },
   { slug: "bagneux", name: "Bagneux", postalCodes: ["92220"], department: "92", departmentName: "Hauts-de-Seine", population: 41644 },
@@ -87,7 +123,7 @@ const hautsDeSeine: City[] = [
 // ============================================
 // SEINE-SAINT-DENIS (93)
 // ============================================
-const seineSaintDenis: City[] = [
+const seineSaintDenis: RawCity[] = [
   { slug: "aubervilliers", name: "Aubervilliers", postalCodes: ["93300"], department: "93", departmentName: "Seine-Saint-Denis", population: 89079 },
   { slug: "aulnay-sous-bois", name: "Aulnay-sous-Bois", postalCodes: ["93600"], department: "93", departmentName: "Seine-Saint-Denis", population: 86009 },
   { slug: "bagnolet", name: "Bagnolet", postalCodes: ["93170"], department: "93", departmentName: "Seine-Saint-Denis", population: 36060 },
@@ -133,7 +169,7 @@ const seineSaintDenis: City[] = [
 // ============================================
 // VAL-DE-MARNE (94)
 // ============================================
-const valDeMarne: City[] = [
+const valDeMarne: RawCity[] = [
   { slug: "ablon-sur-seine", name: "Ablon-sur-Seine", postalCodes: ["94480"], department: "94", departmentName: "Val-de-Marne", population: 5673 },
   { slug: "alfortville", name: "Alfortville", postalCodes: ["94140"], department: "94", departmentName: "Val-de-Marne", population: 45096 },
   { slug: "arcueil", name: "Arcueil", postalCodes: ["94110"], department: "94", departmentName: "Val-de-Marne", population: 21936 },
@@ -185,7 +221,7 @@ const valDeMarne: City[] = [
 // ============================================
 // VAL-D'OISE (95)
 // ============================================
-const valDOise: City[] = [
+const valDOise: RawCity[] = [
   { slug: "argenteuil", name: "Argenteuil", postalCodes: ["95100"], department: "95", departmentName: "Val-d'Oise", population: 111079 },
   { slug: "arnouville", name: "Arnouville", postalCodes: ["95400"], department: "95", departmentName: "Val-d'Oise", population: 14458 },
   { slug: "auvers-sur-oise", name: "Auvers-sur-Oise", postalCodes: ["95430"], department: "95", departmentName: "Val-d'Oise", population: 6867 },
@@ -240,7 +276,7 @@ const valDOise: City[] = [
 // ============================================
 // YVELINES (78)
 // ============================================
-const yvelines: City[] = [
+const yvelines: RawCity[] = [
   { slug: "acheres", name: "Achères", postalCodes: ["78260"], department: "78", departmentName: "Yvelines", population: 21367 },
   { slug: "andresy", name: "Andrésy", postalCodes: ["78570"], department: "78", departmentName: "Yvelines", population: 13172 },
   { slug: "aubergenville", name: "Aubergenville", postalCodes: ["78410"], department: "78", departmentName: "Yvelines", population: 12404 },
@@ -294,7 +330,7 @@ const yvelines: City[] = [
 // ============================================
 // ESSONNE (91)
 // ============================================
-const essonne: City[] = [
+const essonne: RawCity[] = [
   { slug: "arpajon", name: "Arpajon", postalCodes: ["91290"], department: "91", departmentName: "Essonne", population: 11101 },
   { slug: "athis-mons", name: "Athis-Mons", postalCodes: ["91200"], department: "91", departmentName: "Essonne", population: 35028 },
   { slug: "ballainvilliers", name: "Ballainvilliers", postalCodes: ["91160"], department: "91", departmentName: "Essonne", population: 4655 },
@@ -348,7 +384,7 @@ const essonne: City[] = [
 // ============================================
 // SEINE-ET-MARNE (77) - Villes principales
 // ============================================
-const seinEtMarne: City[] = [
+const seinEtMarne: RawCity[] = [
   { slug: "avon", name: "Avon", postalCodes: ["77210"], department: "77", departmentName: "Seine-et-Marne", population: 14098 },
   { slug: "brie-comte-robert", name: "Brie-Comte-Robert", postalCodes: ["77170"], department: "77", departmentName: "Seine-et-Marne", population: 18538 },
   { slug: "bussy-saint-georges", name: "Bussy-Saint-Georges", postalCodes: ["77600"], department: "77", departmentName: "Seine-et-Marne", population: 27416 },
@@ -393,7 +429,7 @@ const seinEtMarne: City[] = [
 // ============================================
 // EXPORT - Toutes les villes combinées
 // ============================================
-export const citiesIDF: City[] = [
+const rawCitiesIDF: RawCity[] = [
   ...paris,
   ...hautsDeSeine,
   ...seineSaintDenis,
@@ -402,8 +438,20 @@ export const citiesIDF: City[] = [
   ...yvelines,
   ...essonne,
   ...seinEtMarne,
-  ...(extraCities as City[]),
+  ...(extraCities as RawCity[]),
 ];
+
+// Dédoublonnage par slug : extraCities peut redéfinir des villes principales
+// (ex: avon, brie-comte-robert, villiers-le-bel). On garde la première occurrence
+// (= la version curée des arrays principaux par département).
+const seenSlugs = new Set<string>();
+export const citiesIDF: City[] = rawCitiesIDF
+  .filter((c) => {
+    if (seenSlugs.has(c.slug)) return false;
+    seenSlugs.add(c.slug);
+    return true;
+  })
+  .map(withCoords);
 
 // ============================================
 // FONCTIONS UTILITAIRES
@@ -424,31 +472,39 @@ export function getCitiesByDepartment(department: string): City[] {
 }
 
 /**
- * Obtenir les villes voisines (même département + départements limitrophes)
+ * Distance Haversine (km) entre deux points lat/lng.
+ * À l'échelle IDF (~150km de diamètre) la correction sphérique est négligeable
+ * mais reste correcte pour le tri.
+ */
+function haversineKm(
+  a: { lat: number; lng: number },
+  b: { lat: number; lng: number },
+): number {
+  const R = 6371;
+  const toRad = (deg: number) => (deg * Math.PI) / 180;
+  const dLat = toRad(b.lat - a.lat);
+  const dLon = toRad(b.lng - a.lng);
+  const lat1 = toRad(a.lat);
+  const lat2 = toRad(b.lat);
+  const x =
+    Math.sin(dLat / 2) ** 2 +
+    Math.sin(dLon / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+
+/**
+ * Obtenir les villes voisines triées par distance géographique réelle.
+ * Utilise les coordonnées (lat/lng) pour calculer la distance Haversine
+ * et retourner les `limit` villes les plus proches dans toute l'IDF.
  */
 export function getNearbyCities(city: City, limit: number = 10): City[] {
-  const sameDepartment = citiesIDF
-    .filter((c) => c.department === city.department && c.slug !== city.slug)
-    .slice(0, Math.ceil(limit * 0.7));
-  
-  // Départements limitrophes
-  const adjacentDepts: Record<string, string[]> = {
-    "75": ["92", "93", "94"],
-    "92": ["75", "93", "78", "95"],
-    "93": ["75", "92", "94", "95", "77"],
-    "94": ["75", "93", "77", "91"],
-    "95": ["92", "93", "78", "77"],
-    "78": ["92", "95", "91", "77"],
-    "91": ["94", "78", "77"],
-    "77": ["93", "94", "91", "95"],
-  };
-  
-  const adjacent = adjacentDepts[city.department] || [];
-  const nearbyFromAdjacent = citiesIDF
-    .filter((c) => adjacent.includes(c.department))
-    .slice(0, Math.floor(limit * 0.3));
-  
-  return [...sameDepartment, ...nearbyFromAdjacent].slice(0, limit);
+  const origin = city.coordinates;
+  return citiesIDF
+    .filter((c) => c.slug !== city.slug)
+    .map((c) => ({ city: c, dist: haversineKm(origin, c.coordinates) }))
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, limit)
+    .map((x) => x.city);
 }
 
 /**

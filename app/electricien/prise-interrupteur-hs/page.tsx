@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Prise ou Interrupteur HS Paris - Remplacement 59€ | Électricien Joël",
+  title: "Prise ou Interrupteur HS Paris - 59€ | Joël",
   description: "Prise qui grésille ou interrupteur HS ? Électricien certifié intervient en 20 min à Paris & IDF. Prix fixe 59€ annoncé avant intervention. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/electricien/prise-interrupteur-hs",
+    languages: {
+      "fr-FR": "https://monjoel.fr/electricien/prise-interrupteur-hs",
+      "x-default": "https://monjoel.fr/electricien/prise-interrupteur-hs",
+    },
   },
 };
 
@@ -56,7 +60,7 @@ const faqs = [
   },
   {
     question: "Vous intervenez en urgence ?",
-    answer: "Oui, 24h/24, 7j/7. Intervention en 20 min sur Paris et toute l'Île-de-France. Même tarif, sans majoration de nuit ou week-end.",
+    answer: "Oui, 24h/24, 7j/7. Intervention en 30 min sur Paris et toute l'Île-de-France. Même tarif, sans majoration de nuit ou week-end.",
   },
   {
     question: "Faut-il remplacer d'autres prises en même temps ?",

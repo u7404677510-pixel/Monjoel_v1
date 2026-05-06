@@ -1,10 +1,37 @@
 "use client";
 
-import { useState, useEffect } from "react";
+/**
+ * /client — Landing + login (magic link Supabase) de l'espace client MonJoël.
+ *
+ * États (machine à 4 nœuds) :
+ *  - landing : hero éditorial + 3 features + CTA → login
+ *  - login   : form email avec validation Zod → magic link Supabase
+ *  - sent    : confirmation envoi mail (peut revenir login pour autre email)
+ *  - logged  : déjà connecté → redirige immédiatement vers /interventions
+ *
+ * Animations : `initial={false}` partout (règle d'or — pas de flash au mount
+ * dans cas SSR streaming). Stagger fade-up sur les cards features.
+ */
+
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { createClient } from "@supabase/supabase-js";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { Mail, Loader2, CheckCircle, ArrowRight, Phone, Shield, Star, Clock } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { z } from "zod";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Clock,
+  Mail,
+  MessageSquareHeart,
+  ShieldCheck,
+  Sparkles,
+  Star,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
+type Step = "landing" | "login" | "sent" | "checking";
 
 function getSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -13,166 +40,320 @@ function getSupabase() {
   return createClient(url, key);
 }
 
-export default function ClientHomePage() {
-  const [step, setStep] = useState<"landing" | "login" | "sent" | "logged">("landing");
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [session, setSession] = useState<boolean>(false);
+const emailSchema = z
+  .string()
+  .min(1, "Veuillez saisir votre email")
+  .email("Adresse email invalide");
 
+const FEATURES = [
+  {
+    icon: Clock,
+    title: "Historique complet",
+    desc: "Toutes vos interventions, dates et statuts en un coup d'œil.",
+    accent: "bg-joel-violet/10 text-joel-violet",
+  },
+  {
+    icon: Star,
+    title: "Évaluations & avis",
+    desc: "Notez l'artisan et partagez votre expérience.",
+    accent: "bg-joel-yellow/30 text-joel-violet",
+  },
+  {
+    icon: MessageSquareHeart,
+    title: "Support 24h/24",
+    desc: "Joignez Joël à tout moment, jour comme nuit.",
+    accent: "bg-joel-violet/5 text-joel-violet",
+  },
+] as const;
+
+export default function ClientHomePage() {
+  const router = useRouter();
+  const [step, setStep] = useState<Step>("checking");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState<string>("");
+  const [loading, setLoading] = useState(false);
+
+  // On mount: if already logged → redirect to interventions
   useEffect(() => {
     const supabase = getSupabase();
-    if (!supabase) return;
+    if (!supabase) {
+      setStep("landing");
+      return;
+    }
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) { setSession(true); setStep("logged"); }
+      if (session) {
+        router.replace("/client/interventions");
+      } else {
+        setStep("landing");
+      }
     });
-  }, []);
+  }, [router]);
 
   const handleMagicLink = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    setLoading(true);
+
+    const parsed = emailSchema.safeParse(email.trim());
+    if (!parsed.success) {
+      setError(parsed.error.issues[0]?.message ?? "Email invalide");
+      return;
+    }
 
     const supabase = getSupabase();
-    if (!supabase) { setError("Service temporairement indisponible."); setLoading(false); return; }
+    if (!supabase) {
+      setError("Service temporairement indisponible. Réessayez dans un instant.");
+      return;
+    }
 
+    setLoading(true);
     const { error: authError } = await supabase.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: `${window.location.origin}/client/interventions` },
+      email: parsed.data,
+      options: {
+        emailRedirectTo: `${window.location.origin}/client/interventions`,
+      },
     });
+    setLoading(false);
 
     if (authError) {
-      setError("Erreur lors de l'envoi. Vérifiez l'adresse email.");
+      setError("Impossible d'envoyer le lien. Vérifiez votre adresse email.");
     } else {
       setStep("sent");
     }
-    setLoading(false);
   };
 
-  const handleLogout = async () => {
-    const supabase = getSupabase();
-    if (supabase) await supabase.auth.signOut();
-    setSession(false);
-    setStep("landing");
-  };
-
-  if (step === "logged") {
-    return (
-      <div className="max-w-xl mx-auto px-4 py-16 text-center">
-        <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <CheckCircle size={32} className="text-emerald-500" />
-        </div>
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Bienvenue dans votre espace</h1>
-        <p className="text-gray-500 mb-8">Consultez vos interventions et suivez vos demandes.</p>
-        <div className="space-y-3">
-          <Link href="/client/interventions"
-            className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-joel text-white font-semibold rounded-2xl hover:opacity-90 transition-opacity">
-            Mes interventions <ArrowRight size={18} />
-          </Link>
-          <button onClick={handleLogout} className="w-full py-3 bg-gray-100 text-gray-600 rounded-2xl text-sm hover:bg-gray-200 transition-colors">
-            Se déconnecter
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  if (step === "sent") {
-    return (
-      <div className="max-w-md mx-auto px-4 py-16 text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Mail size={36} className="text-blue-500" />
-          </div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-3">Email envoyé !</h1>
-          <p className="text-gray-500 mb-2">Nous avons envoyé un lien de connexion sécurisé à :</p>
-          <p className="font-semibold text-gray-800 mb-6">{email}</p>
-          <p className="text-sm text-gray-400 mb-6">Cliquez sur le lien dans votre email pour accéder à votre espace. Le lien expire dans 1 heure.</p>
-          <button onClick={() => setStep("login")} className="text-sm text-joel-violet hover:underline">
-            Essayer un autre email
-          </button>
-        </motion.div>
-      </div>
-    );
-  }
-
-  if (step === "login") {
-    return (
-      <div className="max-w-sm mx-auto px-4 py-12">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <button onClick={() => setStep("landing")} className="text-sm text-gray-400 hover:text-gray-600 mb-6 flex items-center gap-1">
-            ← Retour
-          </button>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Connexion</h1>
-          <p className="text-gray-500 text-sm mb-6">Entrez votre email — nous vous envoyons un lien de connexion sécurisé, sans mot de passe.</p>
-
-          <form onSubmit={handleMagicLink} className="space-y-4">
-            <div>
-              <label className="text-sm font-medium text-gray-700 mb-1.5 block">Votre email</label>
-              <div className="relative">
-                <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  required
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-joel-violet/30 focus:border-joel-violet outline-none text-sm"
-                  placeholder="votre@email.com"
-                />
-              </div>
-            </div>
-            {error && <p className="text-red-500 text-sm bg-red-50 px-3 py-2 rounded-lg">{error}</p>}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 bg-gradient-joel text-white font-semibold rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
-            >
-              {loading ? <Loader2 size={18} className="animate-spin" /> : "Recevoir mon lien"}
-            </button>
-          </form>
-
-          <div className="mt-4 flex items-center gap-1.5 justify-center text-xs text-gray-400">
-            <Shield size={12} />
-            <span>Connexion sécurisée — aucun mot de passe requis</span>
-          </div>
-        </motion.div>
-      </div>
-    );
-  }
-
-  // Landing
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">Mon espace client Joël</h1>
-        <p className="text-gray-500 max-w-md mx-auto">Consultez l'historique de vos interventions, vos devis et suivez vos demandes en temps réel.</p>
-      </motion.div>
+    <div className="relative">
+      {/* Halo radial décoratif derrière le hero */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(ellipse_at_top,rgba(112,85,167,0.10),transparent_60%)]"
+      />
 
-      {/* Features */}
-      <div className="grid sm:grid-cols-3 gap-4 mb-10">
-        {[
-          { icon: Clock, title: "Historique", desc: "Toutes vos interventions passées", color: "text-blue-500 bg-blue-50" },
-          { icon: Star, title: "Évaluations", desc: "Notez vos artisans", color: "text-amber-500 bg-amber-50" },
-          { icon: Phone, title: "Support", desc: "Contactez-nous facilement", color: "text-emerald-500 bg-emerald-50" },
-        ].map(f => (
-          <div key={f.title} className="bg-white rounded-2xl p-5 border border-gray-100 text-center">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3 ${f.color}`}>
-              <f.icon size={20} />
-            </div>
-            <p className="font-semibold text-gray-800 text-sm">{f.title}</p>
-            <p className="text-xs text-gray-400 mt-1">{f.desc}</p>
-          </div>
-        ))}
-      </div>
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-16">
+        <AnimatePresence mode="wait" initial={false}>
+          {step === "checking" && (
+            <motion.div
+              key="checking"
+              initial={false}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex justify-center py-24"
+            >
+              <div className="h-8 w-8 rounded-full border-2 border-joel-violet/20 border-t-joel-violet animate-spin" />
+            </motion.div>
+          )}
 
-      <div className="text-center">
-        <button
-          onClick={() => setStep("login")}
-          className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-lg shadow-joel-violet/20"
-        >
-          Accéder à mon espace <ArrowRight size={20} />
-        </button>
-        <p className="mt-4 text-sm text-gray-400">Connexion sans mot de passe — par email uniquement</p>
+          {step === "landing" && (
+            <motion.div
+              key="landing"
+              initial={false}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25 }}
+            >
+              {/* Hero éditorial */}
+              <div className="text-center max-w-2xl mx-auto">
+                <motion.span
+                  initial={false}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-joel-yellow/30 text-joel-violet text-xs font-semibold tracking-wide"
+                >
+                  <Sparkles size={13} />
+                  ESPACE CLIENT
+                </motion.span>
+                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-zinc-900 mt-5 leading-[1.1] tracking-tight">
+                  Bienvenue dans votre{" "}
+                  <span className="bg-gradient-joel bg-clip-text text-transparent">
+                    espace Joël
+                  </span>
+                </h1>
+                <p className="mt-4 text-zinc-600 text-base sm:text-lg">
+                  Suivez vos interventions, retrouvez vos factures, contactez-nous
+                  en un clic.
+                </p>
+
+                <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button
+                    size="lg"
+                    rightIcon={<ArrowRight size={18} />}
+                    onClick={() => setStep("login")}
+                    className="px-7"
+                  >
+                    Accéder à mon espace
+                  </Button>
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="secondary"
+                  >
+                    <a href="tel:+33141691008">Nous appeler — 24h/24</a>
+                  </Button>
+                </div>
+
+                <p className="mt-3 text-xs text-zinc-400 inline-flex items-center gap-1.5">
+                  <ShieldCheck size={12} />
+                  Connexion sécurisée par email — sans mot de passe.
+                </p>
+              </div>
+
+              {/* Features */}
+              <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {FEATURES.map((f, i) => (
+                  <motion.div
+                    key={f.title}
+                    initial={false}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.05 + i * 0.07,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                    whileHover={{ y: -3 }}
+                    className="group bg-white border border-zinc-200/80 rounded-2xl p-5 hover:border-joel-violet/30 hover:shadow-lg hover:shadow-joel-violet/5 transition-all"
+                  >
+                    <div
+                      className={`w-11 h-11 rounded-xl flex items-center justify-center mb-3 ${f.accent} group-hover:scale-110 transition-transform`}
+                    >
+                      <f.icon size={20} strokeWidth={2} />
+                    </div>
+                    <h3 className="font-semibold text-zinc-900 text-sm">
+                      {f.title}
+                    </h3>
+                    <p className="text-xs text-zinc-500 mt-1 leading-relaxed">
+                      {f.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {step === "login" && (
+            <motion.div
+              key="login"
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25 }}
+              className="max-w-md mx-auto"
+            >
+              <button
+                onClick={() => {
+                  setStep("landing");
+                  setError("");
+                }}
+                className="text-sm text-zinc-500 hover:text-joel-violet inline-flex items-center gap-1 mb-6"
+              >
+                <ArrowLeft size={14} /> Retour
+              </button>
+
+              <div className="bg-white border border-zinc-200 rounded-2xl shadow-xl shadow-joel-violet/5 p-7 sm:p-9">
+                <div className="w-12 h-12 rounded-xl bg-joel-violet/10 flex items-center justify-center mb-5">
+                  <Mail className="text-joel-violet" size={22} />
+                </div>
+                <h1 className="font-display text-2xl text-zinc-900">
+                  Connexion à votre espace
+                </h1>
+                <p className="text-sm text-zinc-500 mt-1.5">
+                  Entrez votre email — nous vous envoyons un lien sécurisé pour
+                  accéder à votre espace, sans mot de passe.
+                </p>
+
+                <form onSubmit={handleMagicLink} className="mt-6 space-y-4">
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="text-sm font-medium text-zinc-700 mb-1.5 block"
+                    >
+                      Votre adresse email
+                    </label>
+                    <Input
+                      id="email"
+                      type="email"
+                      autoComplete="email"
+                      autoFocus
+                      placeholder="vous@exemple.fr"
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (error) setError("");
+                      }}
+                      leftIcon={<Mail size={16} />}
+                      error={!!error}
+                      className="h-12"
+                    />
+                    {error && (
+                      <p
+                        role="alert"
+                        className="mt-2 text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2"
+                      >
+                        {error}
+                      </p>
+                    )}
+                  </div>
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full"
+                    loading={loading}
+                    rightIcon={!loading ? <ArrowRight size={18} /> : undefined}
+                  >
+                    Recevoir mon lien de connexion
+                  </Button>
+                </form>
+
+                <div className="mt-5 flex items-center gap-1.5 justify-center text-xs text-zinc-400">
+                  <ShieldCheck size={12} />
+                  Connexion sécurisée — aucun mot de passe requis.
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {step === "sent" && (
+            <motion.div
+              key="sent"
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="max-w-md mx-auto text-center pt-4"
+            >
+              <motion.div
+                initial={false}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: "spring", damping: 15, stiffness: 200 }}
+                className="w-20 h-20 mx-auto rounded-2xl bg-linear-to-br from-joel-violet to-joel-mauve text-white flex items-center justify-center shadow-xl shadow-joel-violet/30 mb-6"
+              >
+                <Mail size={32} />
+              </motion.div>
+              <h1 className="font-display text-2xl sm:text-3xl text-zinc-900">
+                Email envoyé !
+              </h1>
+              <p className="mt-3 text-zinc-600">
+                Nous avons envoyé un lien de connexion sécurisé à
+              </p>
+              <p className="mt-1 font-semibold text-joel-violet break-all">
+                {email}
+              </p>
+              <p className="mt-5 text-sm text-zinc-500 bg-joel-yellow-light/50 border border-joel-yellow/40 rounded-xl px-4 py-3 inline-block">
+                Cliquez sur le lien dans votre boîte mail pour accéder à votre
+                espace. Le lien expire dans 1&nbsp;heure.
+              </p>
+              <div className="mt-6">
+                <button
+                  onClick={() => {
+                    setStep("login");
+                    setEmail("");
+                  }}
+                  className="text-sm text-joel-violet hover:underline font-medium"
+                >
+                  Essayer avec un autre email
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

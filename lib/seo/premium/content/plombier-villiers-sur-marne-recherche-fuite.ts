@@ -11,8 +11,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Recherche de fuite à Villiers-sur-Marne (94350) : caméra thermique, gaz traceur, électroacoustique. Prix Joël fixe dès 149€ TTC, rapport assurance, 24h/24. 01 41 69 10 08.",
   h1: "Recherche de fuite à Villiers-sur-Marne : la méthode patrimoniale, sans destruction inutile",
-  introParagraph:
-    "Villiers-sur-Marne n'a pas la silhouette des banlieues qu'on traverse sans regarder. Cette commune du Val-de-Marne, qui compte 32 547 habitants au recensement INSEE 2022 et 33 313 habitants au 1er janvier 2026 selon les chiffres de la mairie, étalée sur 433 hectares aux confins est de la métropole, raconte un siècle et demi d'urbanisation pavillonnaire et collective dont les strates dictent au plombier des contraintes radicalement différentes d'une rue à l'autre. Sur les coteaux du Plateau, autour des avenues Médéric et Antoine-Watteau, ce sont les pavillons de meulière des années 1900-1930, leurs murs creux, leurs canalisations en plomb laminé encastrées dans des cloisons en plâtre sur lattis, qui dissimulent les fuites les plus difficiles à localiser. Au cœur du Bois de Gaumont, les pavillons des années 1950-1970 superposent des distributions cuivre soudées à l'étain-plomb, des dalles béton coulées sans gaine technique, des extensions ajoutées au fil des décennies sans plan d'ensemble. Aux Hautes Noues, aux Ponceaux, aux Perroquets, le parc social édifié dans les années 1960-1980 — qui représente une part significative des 14 499 logements communaux dont 69,3 % d'appartements selon l'INSEE — pose ses propres énigmes hydrauliques, avec des colonnes communes en acier galvanisé piquées par l'oxydation et des dalles préfabriquées qui rendent le diagnostic acrobatique. Et désormais, avec la promesse en cours d'achèvement du prolongement à l'ouest du RER E vers Mantes-la-Jolie — première phase ouverte le 6 mai 2024 jusqu'à Nanterre-La Folie, mise en service complète repoussée à fin 2029 selon Île-de-France Mobilités —, la ville accueille des programmes neufs RT 2012 et RE 2020 dont la plomberie multicouche en pieuvre n'a plus rien à voir avec celle des pavillons voisins. Mon métier d'architecte du patrimoine me conduit à conseiller régulièrement les copropriétés du Val-de-Marne sur ces questions techniques. J'écris cette page pour les Villiérains qui, voyant leur consommation d'eau gonfler sans raison, leur plafond s'auréoler la nuit, leur parquet se gondoler en pied de mur, hésitent à appeler un détecteur de fuite de peur de tomber sur l'un de ces opérateurs qui ouvrent des trous au hasard et facturent 1 200 € ce qui aurait dû en coûter 149. Le réseau Joël s'engage sur un prix fixe annoncé en amont — 149€ TTC pour une recherche de fuite avec rapport pour assurance — disponible 24 heures sur 24 sans majoration nuit ou week-end. Le numéro à composer reste le 01 41 69 10 08. Cette page veut leur donner les clefs pour comprendre comment se diagnostique vraiment une fuite cachée à Villiers-sur-Marne, et pourquoi la méthode patrimoniale qui s'y applique est, ici plus qu'ailleurs, la condition d'une intervention juste.",
+  introParagraph: `### Villiers-sur-Marne en chiffres : une commune patrimoniale du Val-de-Marne
+
+Villiers-sur-Marne compte **32 547 habitants** au recensement **INSEE 2022** et **33 313 habitants au 1er janvier 2026** selon les chiffres de la mairie, étalée sur **433 hectares** aux confins est de la métropole. La commune comprend **14 499 logements** dont **69,3 % d'appartements** selon l'INSEE.
+
+Avec le prolongement à l'ouest du **RER E vers Mantes-la-Jolie** — première phase ouverte le **6 mai 2024** jusqu'à **Nanterre-La Folie**, mise en service complète repoussée à **fin 2029** selon Île-de-France Mobilités —, la ville accueille des programmes neufs **RT 2012 et RE 2020**.
+
+### Le bâti villiérain : un siècle et demi d'urbanisation stratifiée
+
+Sur les coteaux du **Plateau**, autour des avenues **Médéric** et **Antoine-Watteau**, ce sont les **pavillons de meulière des années 1900-1930**, leurs murs creux, leurs **canalisations en plomb laminé** encastrées dans des cloisons en plâtre sur lattis, qui dissimulent les fuites les plus difficiles à localiser.
+
+Au cœur du **Bois de Gaumont**, les **pavillons des années 1950-1970** superposent des distributions **cuivre soudées à l'étain-plomb**, des dalles béton coulées sans gaine technique. Aux **Hautes Noues**, aux **Ponceaux**, aux **Perroquets**, le **parc social édifié dans les années 1960-1980** pose ses propres énigmes hydrauliques, avec des **colonnes communes en acier galvanisé** piquées par l'oxydation.
+
+### Le quotidien recherche de fuite à Villiers : ce que voient les Villiérains
+
+Cette page est pour les **Villiérains** qui, voyant leur **consommation d'eau gonfler sans raison**, leur **plafond s'auréoler la nuit**, leur **parquet se gondoler** en pied de mur, hésitent à appeler un détecteur de fuite de peur de tomber sur l'un de ces opérateurs qui **ouvrent des trous au hasard et facturent 1 200 €** ce qui aurait dû en coûter **149 €**.
+
+### L'auteur de cette page
+
+Mon métier d'**architecte du patrimoine** me conduit à conseiller régulièrement les copropriétés du Val-de-Marne sur ces questions techniques. Cette page veut donner les clefs pour comprendre comment se diagnostique vraiment une fuite cachée à Villiers-sur-Marne.
+
+### Joël à Villiers-sur-Marne : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé en amont** — **149 € TTC pour une recherche de fuite avec rapport pour assurance** — disponible **24 heures sur 24** sans majoration nuit ou week-end.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "fuite-cachee-enjeu-patrimonial-villiers",

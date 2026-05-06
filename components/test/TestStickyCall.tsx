@@ -19,7 +19,7 @@ export default function TestStickyCall() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-[60] md:hidden transition-transform duration-300 ${
+      className={`fixed bottom-0 left-0 right-0 z-60 md:hidden transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "translate-y-full"
       }`}
     >

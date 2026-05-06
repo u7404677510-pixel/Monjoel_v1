@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Phone, ArrowRight, Clock, Shield, Euro, MapPin, Building2 } from "lucide-react";
 import Link from "next/link";
 import { Department } from "@/lib/data/departments-idf";
 import { DepartmentPageContent } from "@/lib/seo/department-content";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // Numéro statique pour Google Ads et SEO
 const STATIC_PHONE = "01 41 69 10 08";
@@ -36,7 +37,7 @@ export default function DepartmentHero({ content }: DepartmentHeroProps) {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
+      <div className="absolute inset-0 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
 
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
@@ -51,20 +52,13 @@ export default function DepartmentHero({ content }: DepartmentHeroProps) {
             transition={{ duration: 0.6 }}
           >
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="hover:text-joel-violet transition-colors">
-                Accueil
-              </Link>
-              <span>/</span>
-              <Link
-                href={hubRoute}
-                className="hover:text-joel-violet transition-colors"
-              >
-                {tradeName}
-              </Link>
-              <span>/</span>
-              <span className="text-gray-700">{department.name}</span>
-            </div>
+            <Breadcrumbs
+              className="mb-6"
+              items={[
+                { label: tradeName, href: hubRoute },
+                { label: `${department.name} (${department.code})` },
+              ]}
+            />
 
             {/* Location badge */}
             <div className="inline-flex items-center gap-2 bg-joel-violet/10 text-joel-violet px-4 py-2 rounded-full text-sm font-medium mb-6">

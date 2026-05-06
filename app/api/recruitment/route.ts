@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { getSupabaseClient } from "@/lib/supabase";
 
 // Configuration
-const NOTIFICATION_EMAIL = "contact@monjoel.com";
+const NOTIFICATION_EMAIL = "contact@monjoel.fr";
 
 // Resend client
 const resend = process.env.RESEND_API_KEY

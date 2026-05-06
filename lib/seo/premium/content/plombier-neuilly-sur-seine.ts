@@ -11,8 +11,29 @@ export const content: PremiumPageContent = {
     "Gestionnaire de syndics depuis 22 ans, je décrypte les dégâts des eaux à Neuilly : IRSI, parties communes, prix Joël dès 79€. 01 41 69 10 08, 24h/24.",
   h1: "Plombier à Neuilly-sur-Seine (92200) : le guide d'une gestionnaire de copropriétés",
 
-  introParagraph:
-    "En 22 ans à gérer des immeubles à Neuilly-sur-Seine, j'ai vu mille fois ce cas se présenter. Un gardien qui appelle paniqué un samedi à 19h parce qu'une fuite traverse trois étages avenue Charles-de-Gaulle. Un copropriétaire qui signe sans regarder un devis à 1 480€ pour une chasse d'eau, persuadé que son syndic va payer. Une locataire qui se retrouve avec deux mois d'eau chaude coupée parce que personne ne sait si la colonne montante relève des parties communes ou privatives. Neuilly, c'est mon terrain : 187 immeubles dans mon portefeuille, dont une bonne moitié dans le 92, du haussmannien tardif autour de la rue de Chartres aux résidences post-1900 du Saint-James, en passant par les petits immeubles 1925-1935 de la rue Borghèse. Chaque adresse a ses pièges, chaque copropriété son histoire de plomberie, et chaque dégât des eaux la même question : qui paye quoi ? Cette page n'est pas un argumentaire commercial. C'est ce que j'aurais voulu lire la première fois qu'un copropriétaire de l'avenue de Madrid m'a appelée à 22h en me demandant pourquoi son plombier d'urgence venait de lui présenter une facture de 980€ pour ce qui aurait dû coûter 89€. Joël, le réseau d'artisans avec qui je travaille au quotidien sur Neuilly, applique un principe que tous les gestionnaires de syndics réclament depuis vingt ans : prix annoncé AVANT l'intervention, dès 79€ TTC, 24h/24 sans majoration nuit ou week-end. Le numéro à composer en cas de fuite, débouchage WC, recherche de fuite ou panne de chauffe-eau : 01 41 69 10 08. Le reste de cette page, c'est mon manuel de survie pour habitants de Neuilly — propriétaires, locataires, conseils syndicaux, gardiens.",
+  introParagraph: `### Neuilly-sur-Seine en chiffres : un terrain de gestionnaire
+
+En **22 ans** à gérer des immeubles à Neuilly-sur-Seine, j'ai vu mille fois ce cas se présenter. Neuilly, c'est mon terrain : **187 immeubles dans mon portefeuille**, dont une bonne moitié dans le 92.
+
+### Le bâti neuilléen : du haussmannien tardif au Saint-James
+
+Du **haussmannien tardif** autour de la **rue de Chartres** aux **résidences post-1900 du Saint-James**, en passant par les **petits immeubles 1925-1935 de la rue Borghèse**. Chaque adresse a ses pièges, chaque copropriété son histoire de plomberie.
+
+### Le quotidien plomberie à Neuilly : qui paye quoi ?
+
+Un gardien qui appelle paniqué un samedi à 19h parce qu'une fuite traverse trois étages **avenue Charles-de-Gaulle**. Un copropriétaire qui signe sans regarder un **devis à 1 480€** pour une chasse d'eau, persuadé que son syndic va payer. Une locataire qui se retrouve avec **deux mois d'eau chaude coupée** parce que personne ne sait si la **colonne montante** relève des **parties communes ou privatives**.
+
+Chaque dégât des eaux pose la même question : **qui paye quoi ?** Cette page n'est pas un argumentaire commercial. C'est ce que j'aurais voulu lire la première fois qu'un copropriétaire de l'**avenue de Madrid** m'a appelée à 22h en me demandant pourquoi son plombier d'urgence venait de lui présenter une **facture de 980€** pour ce qui aurait dû coûter **89€**.
+
+### L'auteur de cette page
+
+**Gestionnaire de syndics depuis 22 ans**, je décrypte les dégâts des eaux à Neuilly : **IRSI**, parties communes, parties privatives, et le manuel de survie pour habitants de Neuilly — propriétaires, locataires, conseils syndicaux, gardiens.
+
+### Joël à Neuilly-sur-Seine : tarif fixe annoncé en amont
+
+Joël, le réseau d'artisans avec qui je travaille au quotidien sur Neuilly, applique un principe que tous les gestionnaires de syndics réclament depuis vingt ans : **prix annoncé AVANT l'intervention**, **dès 79€ TTC**, **24h/24** sans majoration nuit ou week-end.
+
+Le numéro à composer en cas de fuite, débouchage WC, recherche de fuite ou panne de chauffe-eau : **01 41 69 10 08**.`,
 
   sections: [
     {
@@ -114,7 +135,7 @@ export const content: PremiumPageContent = {
       question:
         "Comment savoir si la fuite vient de la colonne commune ou de mon installation privative dans mon immeuble du boulevard Bineau ?",
       answer:
-        "Trois indices fiables. 1° La fuite est-elle visible dans la gaine technique commune (placard accessible depuis le palier ou les WC) ? Si oui, c'est commune. 2° Plusieurs voisins du même appartement vertical (étages alignés) ont-ils des problèmes similaires en même temps ? Si oui, colonne commune. 3° Quand vous fermez votre vanne d'arrêt privative (généralement sous l'évier ou dans les WC), la fuite continue-t-elle ? Si oui, ça vient d'avant votre compteur, donc commun. Si elle s'arrête, c'est privatif. En cas de doute, faites venir un professionnel comme Joël au 01 41 69 10 08 : un diagnostic en 20 minutes vous coûtera 79€ et vous évitera des semaines d'incertitude.",
+        "Trois indices fiables. 1° La fuite est-elle visible dans la gaine technique commune (placard accessible depuis le palier ou les WC) ? Si oui, c'est commune. 2° Plusieurs voisins du même appartement vertical (étages alignés) ont-ils des problèmes similaires en même temps ? Si oui, colonne commune. 3° Quand vous fermez votre vanne d'arrêt privative (généralement sous l'évier ou dans les WC), la fuite continue-t-elle ? Si oui, ça vient d'avant votre compteur, donc commun. Si elle s'arrête, c'est privatif. En cas de doute, faites venir un professionnel comme Joël au 01 41 69 10 08 : un diagnostic en 30 minutes vous coûtera 79€ et vous évitera des semaines d'incertitude.",
     },
     {
       question:

@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Paris 3e (Marais, Temple, Archives) : ouverture porte 89€, rideau métallique 149€, serrure 3 points 189€. Commerce et résidentiel, prix annoncé avant. 01 41 69 10 08.",
   h1: "Serrurier Paris 3e : ce que je dis aux commerçants du Marais (et aux résidents)",
-  introParagraph:
-    "Moi c'est Yannick Chen, restaurateur dans le 11e, propriétaire de deux boutiques dans le 20e, et ex-président de l'asso des commerçants du bas Belleville. Le 3e, je le connais comme ma poche : j'y ai des fournisseurs rue de Bretagne, un copain torréfacteur rue Charlot, un pote bijoutier rue des Francs-Bourgeois et je traîne au Marché des Enfants-Rouges au moins une fois par semaine. C'est pour ça qu'on m'a demandé d'écrire cette page : parce que dans le 3e, le serrurier ce n'est pas juste 'le mec qui ouvre une porte d'appart'. C'est aussi le mec que t'appelles quand ton rideau métallique reste à mi-hauteur un samedi à 19h45, alors que t'as 60 couverts qui arrivent à 20h. C'est le mec que t'appelles quand ta vitrine a été tapée à 4h du mat et que t'as 12 heures avant l'ouverture pour sécuriser. C'est aussi le mec que t'appelles quand tu rentres chez toi rue de Saintonge un jeudi soir et que ta clé tourne dans le vide. Le Marais, c'est 34 115 habitants, c'est l'arrondissement le plus dense de Paris en commerces de bouche, galeries, boutiques mode et hôtels boutiques, et c'est aussi un des terrains de chasse préférés des faux serruriers — ceux qui collent leur autocollant 'urgence 24h' à côté de chaque vespasienne. Joël, c'est l'opposé : prix annoncé AVANT, 89€ TTC pour une ouverture de porte claquée, 24h/24 sans majoration nuit ni dimanche, artisans qu'on a vérifiés un par un. 01 41 69 10 08, ça sonne dans un vrai bureau, pas dans un call center à 3000 km. Cette page, je l'écris pour mes voisins commerçants ET pour les résidents du Marais. Les deux ont les mêmes ennemis : le temps qui presse et les arnaqueurs qui le savent.",
+  introParagraph: `### Le 3e en chiffres : Marais, commerces de bouche, hôtels boutiques
+
+Le 3e arrondissement, c'est **34 115 habitants** sur **1,17 km²**, structurés autour de quatre quartiers administratifs : **Arts-et-Métiers, Enfants-Rouges, Archives, Sainte-Avoye**.
+
+C'est **l'arrondissement le plus dense de Paris en commerces de bouche, galeries, boutiques mode et hôtels boutiques**. Les axes structurants — **rue de Bretagne, rue des Francs-Bourgeois, rue Vieille-du-Temple, rue Charlot, rue de Turenne** — concentrent une activité commerciale et touristique permanente.
+
+### Le 3e côté serrurerie : commerce ET résidentiel
+
+Dans le 3e, le serrurier n'est pas juste celui qui ouvre une porte d'appart. C'est aussi celui qu'on appelle quand un **rideau métallique reste à mi-hauteur un samedi à 19h45**, avec 60 couverts qui arrivent à 20h. Celui qu'on appelle quand **une vitrine a été tapée à 4h du matin** et qu'il reste 12 heures avant l'ouverture pour sécuriser.
+
+C'est aussi le quartier où **les faux serruriers collent leurs autocollants "urgence 24h"** à côté de chaque vespasienne — un terrain de chasse privilégié pour les sociétés de racolage.
+
+### L'auteur de cette page
+
+Moi c'est **Yannick Chen**, restaurateur dans le 11e, propriétaire de deux boutiques dans le 20e, et **ex-président de l'asso des commerçants du bas Belleville**. Le 3e, je le connais comme ma poche : fournisseurs rue de Bretagne, copain torréfacteur rue Charlot, pote bijoutier rue des Francs-Bourgeois, et je traîne au **Marché des Enfants-Rouges** au moins une fois par semaine. Cette page, je l'écris pour mes voisins commerçants ET pour les résidents du Marais.
+
+### Joël à Paris 3e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89 € TTC** pour une ouverture de porte claquée, **24 heures sur 24, sans majoration nuit ni dimanche**, artisans vérifiés un par un.
+
+Le numéro à composer reste le **01 41 69 10 08** — un vrai bureau, pas un call center à 3000 km.`,
   sections: [
     {
       anchor: "rideau-bloque-dimanche-soir",

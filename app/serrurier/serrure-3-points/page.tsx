@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Installation serrure 3 points à Paris et Île-de-France. Prix fixe dès 189€, fourniture incluse. Serrure A2P disponible. Devis gratuit, artisan certifié.",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/serrure-3-points",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/serrure-3-points",
+      "x-default": "https://monjoel.fr/serrurier/serrure-3-points",
+    },
   },
   openGraph: {
     title: "Serrure 3 Points | Installation Prix Fixe | Joël",

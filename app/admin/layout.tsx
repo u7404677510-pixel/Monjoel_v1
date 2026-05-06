@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { createClient } from "@supabase/supabase-js";
 import Image from "next/image";
 import {
@@ -22,6 +22,7 @@ import {
   X,
   ExternalLink,
   Shield,
+  Image as ImageIcon,
 } from "lucide-react";
 
 function getSupabase() {
@@ -38,6 +39,7 @@ const menuItems = [
   { href: "/admin/artisans", label: "Artisans", icon: Wrench },
   { href: "/admin/telephone", label: "Téléphone", icon: Phone },
   { href: "/admin/contenu", label: "Contenu", icon: FileText },
+  { href: "/admin/medias", label: "Médias", icon: ImageIcon },
   { href: "/admin/seo", label: "SEO", icon: Search },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/admin/personnalisation", label: "Personnalisation", icon: Settings },
@@ -132,7 +134,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           {sidebarOpen ? (
             <Image src="/logo-white.webp" alt="Joël" width={80} height={28} className="h-7 w-auto" />
           ) : (
-            <div className="w-8 h-8 bg-gradient-joel rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 bg-gradient-joel rounded-lg flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-sm">J</span>
             </div>
           )}
@@ -153,7 +155,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 } ${!sidebarOpen && "justify-center"}`}
                 title={!sidebarOpen ? item.label : undefined}
               >
-                <item.icon size={18} className="flex-shrink-0" />
+                <item.icon size={18} className="shrink-0" />
                 {sidebarOpen && <span className="text-sm font-medium">{item.label}</span>}
               </Link>
             );
@@ -166,8 +168,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <div className="px-3 py-2 mb-1">
               <p className="text-xs text-gray-500 truncate">{userEmail}</p>
               <div className="flex items-center gap-1 mt-0.5">
-                <Shield size={10} className="text-emerald-400" />
-                <span className="text-[10px] text-emerald-400">Session sécurisée</span>
+                <Shield size={10} className="text-joel-yellow" />
+                <span className="text-[10px] text-joel-yellow">Session sécurisée</span>
               </div>
             </div>
           )}
@@ -245,6 +247,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <Link
             href="/"
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors"
           >
             <ExternalLink size={14} />

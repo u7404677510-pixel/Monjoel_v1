@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { MapPin, ChevronDown, ChevronUp } from "lucide-react";
-import { City } from "@/lib/data/cities-idf";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Department } from "@/lib/data/departments-idf";
+import { getDeptCityAnchor } from "@/lib/seo/anchor-variants";
 
 interface DepartmentCitiesProps {
   cities: City[];
@@ -51,21 +52,27 @@ export default function DepartmentCities({
 
         {/* Cities grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-          {displayedCities.map((city) => (
-            <Link
-              key={city.slug}
-              href={`/${tradeSlug}/${city.slug}`}
-              className="group flex items-center gap-2 bg-gray-50 hover:bg-joel-violet/10 rounded-lg px-4 py-3 transition-all border border-gray-100 hover:border-joel-violet/30"
-            >
-              <MapPin
-                size={16}
-                className="text-gray-400 group-hover:text-joel-violet transition-colors flex-shrink-0"
-              />
-              <span className="text-gray-700 group-hover:text-joel-violet transition-colors truncate">
-                {city.name}
-              </span>
-            </Link>
-          ))}
+          {displayedCities.map((city) => {
+            // Anchor varié — pool court car le titre H2 contextualise déjà
+            // ("Plombier dans le {dept}").
+            const anchorText = getDeptCityAnchor(city, tradeSlug);
+            return (
+              <Link
+                key={city.slug}
+                href={`/${tradeSlug}/${city.slug}`}
+                aria-label={anchorText}
+                className="group flex items-center gap-2 bg-gray-50 hover:bg-joel-violet/10 rounded-lg px-4 py-3 transition-all border border-gray-100 hover:border-joel-violet/30"
+              >
+                <MapPin
+                  size={16}
+                  className="text-gray-400 group-hover:text-joel-violet transition-colors shrink-0"
+                />
+                <span className="text-gray-700 group-hover:text-joel-violet transition-colors truncate">
+                  {anchorText}
+                </span>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Show more button */}

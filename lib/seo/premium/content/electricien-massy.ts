@@ -10,8 +10,39 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien à Massy (91300) : nouvelle série NF C 15-100 (août 2024), Atlantis, Vilgénis, Vilmorin, Pileu, IRVE gare TGV. Prix fixe dès 59€ TTC. Joël 01 41 69 10 08.",
   h1: "Électricien à Massy (91300) : le guide pédagogique signé Karim Benali",
-  introParagraph:
-    "Massy, c'est probablement le territoire francilien le plus difficile à appréhender d'un seul regard pour un électricien : 51 729 habitants au recensement INSEE 2023 (en hausse de +1,76 % sur 2017), 9,43 km² seulement, soit 5 486 habitants au kilomètre carré, et pourtant cinq univers urbains coexistent en quelques rues. À l'est, le quartier d'**affaires Atlantis** né de la requalification d'une ancienne zone industrielle autour du pôle gare et qui accueille depuis le tournant des années 2000 le siège social du groupe Carrefour, ainsi qu'EDF Renouvelables et de nombreux opérateurs tertiaires (selon les données de Paris Sud Aménagement et du quartier-atlantis.fr). Au sud-ouest, la **ZAC Vilgénis** déployée sur l'ancien site de formation Air France selon Paris Sud Aménagement — un parc habité de près de 1 000 logements sur 18 hectares en cours de livraison. Au nord-ouest, l'opération **Vilmorin** sur les anciens terrains historiques des pépinières du même nom : 1 600 logements pour 3 700 habitants, 12 000 m² de bureaux et 5 670 m² de commerces selon Paris Sud Aménagement, à proximité immédiate de la gare RER C. Au centre, le **Centre-ville Bièvre-Poterne**, et au sud-est l'urbanisation classique **Massy-Opéra / Massy-Europe / La Paix / Les Champarts**, sans oublier les secteurs **Pileu, Graviers, Clos-de-Villaine** au nord et **Pyramide** au cœur du tissu pavillonnaire historique. Et au-dessus de tout ça, le hub multimodal le plus dense du sud-francilien : RER B, RER C, gare TGV (cinq lignes grande vitesse selon Wikipédia), gare routière inaugurée par Île-de-France Mobilités en septembre 2025 (45 000 voyageurs/jour selon paris-sud-amenagement.fr), tramway T12 ouvert le 10 décembre 2023, et arrivée prévue de la ligne 18 du Grand Paris à l'horizon 2026-2027 selon paris-sud-amenagement.fr. Conséquence électrique : sur 9,43 km² je rencontre tous les profils possibles, du tableau Vilmorin RE2020 livré en 2025 conforme à la nouvelle série NF C 15-100, au tableau d'un pavillon Pileu jamais touché depuis 1968. Je suis Karim Benali, ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques pendant quatre ans, et formateur Qualifelec sur la mise aux normes des installations résidentielles. Cette page, je l'ai pensée comme un cours pédagogique à la disposition des Massicois — pour que vous compreniez ce qui se passe quand votre tableau Atlantis tombe parce qu'EDF a injecté une surtension sur la grappe, pourquoi votre pavillon Pileu garde encore des prises 2 broches dans la chambre du fond, ou comment la nouvelle norme NF C 15-100-7-722 publiée en août 2024 régit l'installation d'une borne IRVE sur votre place de stationnement Vilgénis. Mon objectif : vous permettre, quand vous appellerez Joël au 01 41 69 10 08, de savoir exactement ce que l'électricien doit chercher, et combien cela doit raisonnablement coûter. Le tarif Joël démarre à 59 € TTC pour un remplacement de prise standard, annoncé avant l'intervention, sans majoration nuit, week-end ou jour férié. Pas de devis qui passe de 80 € à 620 € entre la sonnette et la facture. Lisez tranquillement, ou en urgence : dans les deux cas, vous y gagnerez du temps, de la sécurité et probablement de l'argent.",
+  introParagraph: `### Massy en chiffres : densité, parc résidentiel, contexte
+
+Massy, c'est probablement le territoire francilien le plus difficile à appréhender d'un seul regard pour un électricien : **51 729 habitants** au recensement **INSEE 2023** (en hausse de **+1,76 %** sur 2017), **9,43 km²** seulement, soit **5 486 habitants au kilomètre carré**.
+
+Et pourtant cinq univers urbains coexistent en quelques rues.
+
+### Cinq univers urbains, cinq réalités électriques
+
+À l'est, le **quartier d'affaires Atlantis** né de la requalification d'une ancienne zone industrielle autour du pôle gare et qui accueille depuis le tournant des années 2000 le siège social du groupe **Carrefour**, ainsi qu'**EDF Renouvelables** et de nombreux opérateurs tertiaires.
+
+Au sud-ouest, la **ZAC Vilgénis** déployée sur l'ancien site de formation **Air France** — un parc habité de près de **1 000 logements sur 18 hectares** en cours de livraison.
+
+Au nord-ouest, l'opération **Vilmorin** sur les anciens terrains historiques des pépinières du même nom : **1 600 logements** pour **3 700 habitants**, **12 000 m² de bureaux** et **5 670 m² de commerces**, à proximité immédiate de la gare RER C.
+
+Au centre, le **Centre-ville Bièvre-Poterne**, et au sud-est l'urbanisation classique **Massy-Opéra / Massy-Europe / La Paix / Les Champarts**, sans oublier les secteurs **Pileu, Graviers, Clos-de-Villaine** au nord et **Pyramide** au cœur du tissu pavillonnaire historique.
+
+### Le hub multimodal le plus dense du sud-francilien
+
+Au-dessus de tout ça, le hub multimodal le plus dense du sud-francilien : **RER B**, **RER C**, **gare TGV** (cinq lignes grande vitesse), **gare routière** inaugurée par Île-de-France Mobilités en **septembre 2025** (45 000 voyageurs/jour), **tramway T12** ouvert le **10 décembre 2023**, et arrivée prévue de la **ligne 18 du Grand Paris** à l'horizon 2026-2027.
+
+Conséquence électrique : sur 9,43 km² je rencontre tous les profils possibles, du **tableau Vilmorin RE2020** livré en 2025 conforme à la nouvelle série **NF C 15-100**, au tableau d'un **pavillon Pileu jamais touché depuis 1968**.
+
+### L'auteur de cette page
+
+Je suis **Karim Benali**, **ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques pendant quatre ans, et **formateur Qualifelec** sur la mise aux normes des installations résidentielles.
+
+Cette page, je l'ai pensée comme un cours pédagogique à la disposition des Massicois — pour que vous compreniez ce qui se passe quand votre tableau Atlantis tombe parce qu'EDF a injecté une surtension sur la grappe, pourquoi votre pavillon Pileu garde encore des prises 2 broches dans la chambre du fond, ou comment la nouvelle **norme NF C 15-100-7-722** publiée en août 2024 régit l'installation d'une **borne IRVE** sur votre place de stationnement Vilgénis.
+
+### Joël à Massy : tarif fixe annoncé en amont
+
+Mon objectif : vous permettre, quand vous appellerez Joël au **01 41 69 10 08**, de savoir exactement ce que l'électricien doit chercher, et combien cela doit raisonnablement coûter. Le tarif Joël démarre à **59 € TTC** pour un remplacement de prise standard, annoncé avant l'intervention, sans majoration nuit, week-end ou jour férié.
+
+Pas de devis qui passe de 80 € à 620 € entre la sonnette et la facture. Lisez tranquillement, ou en urgence : dans les deux cas, vous y gagnerez du temps, de la sécurité et probablement de l'argent.`,
   sections: [
     {
       anchor: "nouvelle-serie-nfc-15-100-massy",

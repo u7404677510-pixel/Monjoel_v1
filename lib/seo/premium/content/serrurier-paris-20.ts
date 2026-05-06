@@ -10,15 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Enquête sur les serruriers du 20e (75020) : Belleville, Ménilmontant, Gambetta, Père-Lachaise. Mécanique des arnaques low-cost à 39€, vrais prix relevés. Joël dès 89€ TTC.",
   h1: "Serrurier Paris 20e : pourquoi Belleville, Ménilmontant et Gambetta sont devenus le terrain favori des arnaques low-cost (et comment s'en protéger)",
-  introParagraph: `Le 20e arrondissement n'est pas Paris-bourgeois. C'est l'autre Paris : 195 814 habitants, parmi les plus diverses sociologiquement et culturellement de la capitale, étalés des pentes de Belleville aux pavés de la rue Saint-Blaise, du cimetière du Père-Lachaise à la Porte de Bagnolet. C'est un arrondissement de primo-locataires, de jeunes actifs en ascension, d'immigrés de longue date, de familles ouvrières héritières du Paris populaire, et — depuis quinze ans — d'une vague continue de bobos en quête de mètres carrés moins chers qui ont colonisé Ménilmontant et le bas Père-Lachaise.
+  introParagraph: `### Le 20e en chiffres : population, sociologie, géographie
 
-Cette mosaïque-là, sur le marché du dépannage serrurerie d'urgence, intéresse au plus haut point les sociétés-écrans qui prospèrent depuis quinze ans en Île-de-France. Pourquoi ? Parce qu'elles savent que, statistiquement, le 20e concentre une proportion record de personnes qui n'ont jamais été propriétaires, qui découvrent leur première location autonome après une colocation étudiante, qui ne maîtrisent pas le marché du bâtiment, qui ne connaissent pas la DGCCRF, qui n'ont jamais eu à comparer trois devis dans leur vie. Le profil idéal pour signer une facture de 680€ à minuit sans la lire.
+Le 20e arrondissement compte **195 814 habitants** et concentre l'une des sociologies les plus diverses de la capitale, étalée **des pentes de Belleville aux pavés de la rue Saint-Blaise**, du **cimetière du Père-Lachaise à la Porte de Bagnolet**.
 
-Depuis 2010, dans le cadre d'enquêtes pour 60 Millions de Consommateurs puis pour la DGCCRF en mission de conseil indépendant, j'ai documenté un nombre croissant de litiges franciliens issus du 20e arrondissement. Le phénomène a explosé entre 2021 et 2025, avec une spécialisation marquée : ici, l'arnaque ne se présente pas comme premium ou techno-rassurante (comme on le voit dans le 11e ou dans les beaux quartiers de l'Ouest). Elle se présente comme low-cost. "Serrurier 39€", "ouverture 19€", "intervention 9€ déplacement". Toujours visible en première position sur Google quand on tape "serrurier Paris 20" depuis un téléphone géolocalisé Belleville ou Gambetta.
+C'est un arrondissement de **primo-locataires**, de jeunes actifs en ascension, d'immigrés de longue date, de **familles ouvrières héritières du Paris populaire**, et — depuis quinze ans — d'une vague continue de **bobos en quête de mètres carrés moins chers** qui ont colonisé Ménilmontant et le bas Père-Lachaise.
 
-Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise de l'arnaque "39€", étape par étape : du clic sur l'annonce sponsorisée jusqu'à la facture de 750€ encaissée porte ouverte. Vous y trouverez les vrais prix pratiqués par un artisan honnête dans le 20e, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît : signalement SignalConso, mise en demeure, médiation de la consommation, chargeback bancaire.
+### Le 20e côté arnaques : la cible des low-cost à 39€
 
-Joël (01 41 69 10 08) intervient dans le 20e à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Ce n'est pas un slogan, c'est l'inverse exact de ce que pratique l'écosystème dénoncé plus bas. Lisez. Et la prochaine fois qu'une porte claque rue de Belleville un samedi soir, ou rue de Bagnolet un dimanche matin, vous saurez quoi faire — et surtout ce qu'il NE faut PAS faire.`,
+Cette mosaïque intéresse les sociétés-écrans qui prospèrent depuis quinze ans en Île-de-France. Le 20e concentre une **proportion record de primo-locataires** qui ne maîtrisent pas le marché du bâtiment, ne connaissent pas la DGCCRF, et **n'ont jamais eu à comparer trois devis**. Le profil idéal pour signer une facture de **680 €** à minuit sans la lire.
+
+Le phénomène a explosé entre **2021 et 2025**, avec une spécialisation marquée : ici, l'arnaque se présente comme **low-cost** — "Serrurier 39€", "ouverture 19€", "intervention 9€ déplacement" — toujours visible en première position sur Google quand on tape "serrurier Paris 20" depuis un téléphone géolocalisé **Belleville ou Gambetta**.
+
+### L'auteur de cette page
+
+**Julien Vasseur**, journaliste d'enquête. Depuis 2010, j'ai documenté pour **60 Millions de Consommateurs** puis pour la **DGCCRF en mission de conseil indépendant** un nombre croissant de litiges franciliens issus du 20e. Recours concrets reconnus : **signalement SignalConso, mise en demeure, médiation de la consommation, chargeback bancaire**.
+
+### Joël à Paris 20e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée, **sans majoration nuit ni week-end**. C'est l'inverse exact de l'écosystème dénoncé plus bas.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "pourquoi-le-20e",

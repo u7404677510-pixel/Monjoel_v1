@@ -1,0 +1,75 @@
+name: CI — Lint + Types + Build
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# Annule les runs précédents sur la même PR (économise des minutes Actions)
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint (ESLint 9)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - run: npm ci --no-audit --no-fund
+
+      - run: npm run lint
+
+  typecheck:
+    name: TypeScript 6 (tsc --noEmit)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - run: npm ci --no-audit --no-fund
+
+      - run: npx tsc --noEmit
+
+  build:
+    name: Next 16 build (Turbopack)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: [lint, typecheck]
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Build (sans Sentry — pas de SENTRY_AUTH_TOKEN en CI publique)
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+
+      - name: Upload build artifact (debug si échec)
+        if: failure()
+        uses: actions/upload-artifact@v5
+        with:
+          name: next-build-error-${{ github.run_id }}
+          path: |
+            .next/build-manifest.json
+            .next/server/app/page.js
+          retention-days: 3

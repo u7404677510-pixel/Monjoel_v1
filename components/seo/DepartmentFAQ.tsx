@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { FAQItem } from "@/lib/seo/department-content";
 import { Department } from "@/lib/data/departments-idf";
@@ -49,7 +49,7 @@ export default function DepartmentFAQ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm"
+              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-xs"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -61,7 +61,7 @@ export default function DepartmentFAQ({
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
-                  className="flex-shrink-0"
+                  className="shrink-0"
                 >
                   <ChevronDown size={24} className="text-joel-violet" />
                 </motion.div>

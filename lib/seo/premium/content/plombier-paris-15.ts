@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier dans le 15e (Vaugirard, Convention, Beaugrenelle) : prix fixe annoncé avant intervention dès 79€, 24h/24 sans majoration. Devis sur 01 41 69 10 08.",
   h1: "Plombier Paris 15e — la voix de Mehdi, 28 ans sur le bâti du 15e",
-  introParagraph:
-    "Je m'appelle Mehdi Karim. Plombier-chauffagiste depuis 1998, formé chez les Compagnons du Devoir entre 1996 et 2000, et j'interviens dans le 15e arrondissement depuis bientôt vingt ans pour le réseau Joël. Le 15e, c'est le plus peuplé de Paris : 233 392 habitants sur 8,5 km², avec un bâti qui mélange l'haussmannien tardif autour de Cambronne, les barres post-Front de Seine entre Beaugrenelle et le quai de Grenelle, les petits immeubles des années 1930 du côté de la Convention, et puis ces dalles techniques des années 70-80 vers l'avenue Émile-Zola qui me donnent encore des sueurs froides quand on me demande de chercher une fuite.\n\nQuand on m'appelle pour un dépannage rue de Vaugirard, rue Lecourbe ou aux abords du parc Georges-Brassens, je sais déjà à 80% ce que je vais trouver avant même d'avoir poussé la porte. C'est ça l'avantage de l'expérience terrain sur un même territoire : les époques de construction laissent des signatures techniques très repérables, et chaque rue a ses pathologies récurrentes. La rue Mademoiselle, par exemple, a un réseau collectif vétuste qui produit des chutes de pression vespérales typiques. Le secteur Necker a beaucoup d'anciens raccords plomb à reprendre en cuivre. Et le Front de Seine, avec ses tours, c'est un autre monde — colonnes montantes en fonte, vannes générales par étage, contraintes de copropriété qu'aucun particulier ne devrait découvrir un dimanche soir.\n\nCette page est là pour vous donner les vrais prix d'une intervention dans le 15e, vous montrer comment je travaille, et vous éviter les arnaques qui pullulent sur ce code postal très ciblé par les sociétés-écran. Téléphone direct, sans intermédiaire et sans majoration nuit ni week-end : **01 41 69 10 08**. Prix fixe annoncé AVANT que je sorte la caisse à outils, dès 79€ TTC. Pas de surprise. Jamais.",
+  introParagraph: `### Le 15e en chiffres : le plus peuplé de Paris
+
+Le 15e, c'est **le plus peuplé de Paris** : **233 392 habitants** sur **8,5 km²**.
+
+### Quatre époques, quatre plomberies
+
+Le bâti mélange l'**haussmannien tardif autour de Cambronne**, les **barres post-Front de Seine** entre **Beaugrenelle** et le **quai de Grenelle**, les **petits immeubles des années 1930** du côté de la **Convention**, et puis ces **dalles techniques des années 70-80** vers l'**avenue Émile-Zola** qui me donnent encore des sueurs froides quand on me demande de chercher une fuite.
+
+### Le quotidien plomberie dans le 15e : signatures techniques
+
+Quand on m'appelle pour un dépannage **rue de Vaugirard**, **rue Lecourbe** ou aux abords du **parc Georges-Brassens**, je sais déjà à **80%** ce que je vais trouver avant même d'avoir poussé la porte. Les époques de construction laissent des **signatures techniques très repérables**, et chaque rue a ses pathologies récurrentes.
+
+La **rue Mademoiselle** a un réseau collectif vétuste qui produit des chutes de pression vespérales typiques. Le **secteur Necker** a beaucoup d'**anciens raccords plomb à reprendre en cuivre**. Et le **Front de Seine**, avec ses tours, c'est un autre monde — **colonnes montantes en fonte**, vannes générales par étage, contraintes de copropriété qu'aucun particulier ne devrait découvrir un dimanche soir.
+
+Cette page est là pour vous donner les vrais prix d'une intervention dans le 15e, vous montrer comment je travaille, et vous éviter les **arnaques** qui pullulent sur ce code postal très ciblé par les **sociétés-écran**.
+
+### L'auteur de cette page
+
+Je m'appelle **Mehdi Karim**. **Plombier-chauffagiste depuis 1998**, formé chez les **Compagnons du Devoir** entre 1996 et 2000, et j'interviens dans le 15e arrondissement depuis bientôt **vingt ans** pour le réseau Joël.
+
+### Joël à Paris 15e : tarif fixe annoncé en amont
+
+Téléphone direct, sans intermédiaire et **sans majoration nuit ni week-end** : **01 41 69 10 08**. **Prix fixe annoncé AVANT** que je sorte la caisse à outils, **dès 79€ TTC**. Pas de surprise. Jamais.`,
   sections: [
     {
       anchor: "histoire-bati-15e",

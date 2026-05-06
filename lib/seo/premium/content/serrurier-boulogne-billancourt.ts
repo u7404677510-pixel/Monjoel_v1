@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Boulogne-Billancourt (92100) : intervention dès 89€ TTC, prix annoncé avant. Ex-gendarme cambriolages 92 vous explique tout. Tel : 01 41 69 10 08.",
   h1: "Serrurier à Boulogne-Billancourt : le rapport d'un ex-gendarme cambriolages 92",
-  introParagraph:
-    "Je m'appelle Patrick Delcourt, adjudant-chef en retraite de la Section de Recherches de Versailles. Pendant 22 ans, j'ai instruit des cambriolages résidentiels dans les Hauts-de-Seine, dont une centaine sur la seule commune de Boulogne-Billancourt. Si vous lisez cette page, c'est que vous cherchez un serrurier à Boulogne — soit vous êtes devant une porte close, soit vous venez de subir une effraction, soit vous voulez sécuriser un appartement Trapèze ou une maison de ville à Billancourt. Je vais vous donner trois choses : 1° les chiffres réels de la délinquance d'appropriation à Boulogne-Billancourt, 2° les vulnérabilités précises du parc résidentiel boulonnais (rénové, années 70, ancien), 3° les tarifs honnêtes du réseau Joël (dès 89€ TTC, annoncés avant intervention) et la procédure exacte à suivre dans les 60 minutes après une effraction. Joël intervient 24h/24 sur la commune, sans majoration nuit ni week-end, au numéro 01 41 69 10 08. Le choix d'un serrurier n'est pas un choix de prix : c'est un choix de protection. Lisez les sections qui vous concernent, classez les informations, et faites votre choix en connaissance de cause.",
+  introParagraph: `### Boulogne-Billancourt en chiffres : population, patrimoine, parc résidentiel
+
+Boulogne-Billancourt compte **120 071 habitants** répartis sur **six quartiers** : Centre-ville, Trapèze, Billancourt, Parchamp, Silly-Gallieni et Pont-de-Sèvres. Le bâti mêle **résidences récentes haut de gamme du Trapèze** (anciens terrains Renault), **immeubles haussmanniens et années 30** du Centre, **immeubles 1960-1980** à Billancourt-Pont-de-Sèvres, et **maisons de ville** au Parchamp et Silly-Gallieni.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Les **Hauts-de-Seine (92)** figurent durablement parmi les départements franciliens les plus exposés à la délinquance d'appropriation, avec un taux d'environ **7,2 cambriolages pour 1 000 logements** selon les données du **SSMSI**. Boulogne-Billancourt, en raison de sa **densité bourgeoise** et de la présence de **logements de standing**, se situe statistiquement au-dessus de la moyenne départementale.
+
+Trois pics annuels constants documentés : **février-mars** (saison froide), **fin juin à mi-août** (départs en vacances), **fin décembre** (fêtes). Mode opératoire dominant : **effraction par la porte palière dans 62 % des cas**, par fenêtre ou balcon en RDC/1er étage dans **28 %**, par soupirail ou cave dans **10 %**.
+
+### L'auteur de cette page
+
+Je m'appelle **Patrick Delcourt**, **adjudant-chef en retraite de la Section de Recherches de Versailles**. Pendant **22 ans**, j'ai instruit des cambriolages résidentiels dans les Hauts-de-Seine, dont **une centaine sur la seule commune de Boulogne-Billancourt**. Le choix d'un serrurier n'est pas un choix de prix : c'est un choix de protection.
+
+### Joël à Boulogne-Billancourt : tarif fixe annoncé en amont
+
+Joël intervient **24h/24** sur la commune, **sans majoration nuit ni week-end**, dès **89 € TTC** annoncés avant intervention.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "stats-effraction-92",

@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Installation ou remplacement de WC. WC classique, suspendu, broyeur. Pose complète avec raccordement. Devis gratuit, artisan qualifié.",
   alternates: {
     canonical: "https://monjoel.fr/plombier/installation-wc",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/installation-wc",
+      "x-default": "https://monjoel.fr/plombier/installation-wc",
+    },
   },
   openGraph: {
     title: "Installation WC | Pose & Remplacement | Joël",

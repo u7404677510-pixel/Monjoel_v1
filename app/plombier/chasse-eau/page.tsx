@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Chasse d'eau qui fuit ou ne fonctionne plus ? Réparation et remplacement de mécanisme WC. Intervention rapide, prix fixe garanti.",
   alternates: {
     canonical: "https://monjoel.fr/plombier/chasse-eau",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/chasse-eau",
+      "x-default": "https://monjoel.fr/plombier/chasse-eau",
+    },
   },
   openGraph: {
     title: "Réparation Chasse d'Eau | Mécanisme WC | Joël",

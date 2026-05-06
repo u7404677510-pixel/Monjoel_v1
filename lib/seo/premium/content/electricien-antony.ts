@@ -4,307 +4,416 @@ export const content: PremiumPageContent = {
   trade: "electricien",
   citySlug: "antony",
   authorPersona: "karim-benali",
-  publishedAt: "2026-04-27",
-  updatedAt: "2026-04-27",
-  metaTitle: "Électricien Antony 92160 — Joël dès 59€ TTC, 24h/24",
+  publishedAt: "2026-05-04",
+  updatedAt: "2026-05-04",
+  metaTitle: "Électricien Antony (92160) — Joël 89€ TTC, 24h/24",
   metaDescription:
-    "Électricien à Antony : nouvelle série NF C 15-100 (2024), résidences Noyer-Doré, ZAC Jean-Zay, pavillons Pajeaud, RER B. Prix fixe dès 59€ TTC. Joël 01 41 69 10 08.",
-  h1: "Électricien à Antony (92160) : le guide pédagogique signé Karim Benali",
-  introParagraph:
-    "Antony, c'est probablement la commune la plus représentative de toute l'histoire urbaine francilienne en un seul territoire. 64 263 habitants au recensement INSEE 2023, 9,56 km², 6 722 habitants au km² — vous concentrez sur ce sol des grandes résidences collectives des années 60-80 héritées de la politique du logement social et intermédiaire (autour du Noyer-Doré, des Baconnets, de la Croix-de-Berny), des pavillons Pajeaud et Vissous typiques de l'urbanisme balnéaire des années 1900-1930, des opérations de rénovation contemporaines (Châtaigneraie, Jeanne-d'Arc), et la ZAC Jean-Zay inaugurée en octobre 2024 sur 8,5 hectares à proximité du parc de Sceaux selon Vallée Sud Aménagement. Et au cœur du dispositif, le nœud RER B / Orlyval qui fait d'Antony l'un des cinq points multimodaux les plus utilisés du sud-francilien, avec la gare d'Antony comme tête de pont vers l'aéroport Paris-Orly. Conséquence électrique : sur le terrain, j'interviens sur cinq générations de tableaux différentes selon la rue où vous habitez, et chaque génération demande une lecture spécifique de la nouvelle série NF C 15-100 publiée par AFNOR le 23 août 2024 et applicable obligatoirement depuis le 1er septembre 2025 selon Promotelec. Je suis Karim Benali, ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques pendant quatre ans, formateur Qualifelec sur la mise aux normes des installations résidentielles. Cette page, je l'ai pensée comme un cours pédagogique à la disposition des Antoniens — pour que vous compreniez ce qui se passe quand votre tableau de la résidence du Noyer-Doré déclenche dès que la cuisson démarre, pourquoi votre pavillon Pajeaud des années 30 garde encore des prises sans terre dans la chambre du fond, ou comment la nouvelle norme 2024 change la façon de protéger un circuit IRVE en parking privatif. Mon but : vous permettre, quand vous appellerez Joël au 01 41 69 10 08, de savoir exactement ce que l'électricien doit chercher, et combien cela doit raisonnablement coûter. Le tarif Joël démarre à 59 € TTC pour un remplacement de prise standard, annoncé avant l'intervention, sans majoration nuit, week-end ou jour férié. Pas de surprise, pas de devis qui passe de 80 € à 620 € entre la sonnette et la facture. Lisez tranquillement, ou en urgence : dans les deux cas, vous y gagnerez du temps, de la sécurité et probablement de l'argent.",
+    "Électricien Antony 92160 — Centre, Pajeaud, Croix-de-Berny, Antonypole. Diagnostic 89€ TTC, NF C 15-100, 24h/24 sans majoration. 01 41 69 10 08.",
+  h1: "Électricien Antony : intervenir entre pavillons 1900 et programmes neufs autour du Pôle Antonypole",
+  introParagraph: `### Antony en chiffres : densité, parc résidentiel, contexte
+
+Antony s'étire sur **9,6 km²** au sud des Hauts-de-Seine et compte **63 991 habitants** selon les chiffres **INSEE 2024**, ce qui en fait l'une des plus grandes communes du sud du département.
+
+La gare Antony, principal nœud d'échange de la commune, articule le **RER B**, le terminus de l'**Orlyval** (qui rejoint Paris-Orly en huit minutes) et le tramway **T10** mis en service le **24 juin 2023**.
+
+### Trois univers de bâti, trois réalités électriques
+
+Cette taille s'accompagne d'une mosaïque urbaine particulièrement variée qui pose des défis particuliers à l'électricien. D'abord le **pavillonnaire ouvrier 1900-1935** dans le quartier **Pajeaud** avec leurs installations électriques pour partie d'origine ou modernisées au coup par coup.
+
+Ensuite les **copropriétés des Trente Glorieuses** dans le secteur **Centre** et autour de l'**avenue Aristide-Briand** avec leurs tableaux électriques fréquemment vétustes, et le grand ensemble du **Noyer-Doré** édifié dans les années 1960-1970 dont le parc social a connu plusieurs vagues de réhabilitation.
+
+Enfin les **programmes ultra-contemporains** autour du **Pôle Antonypole** et le long de la ligne T10 du tramway, équipés des dernières générations de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers antoniens et je connais bien la spécificité de cette commune.
+
+Cette page s'adresse aux Antoniens qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Antony : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
-      anchor: "nouvelle-serie-nfc-15-100-antony",
-      title: "Nouvelle série NF C 15-100 (août 2024) : ce qui a réellement changé pour votre tableau antonien",
-      body:
-        "Soyons précis car beaucoup de mes confrères entretiennent un flou dommageable. Le 23 août 2024, AFNOR a publié une **nouvelle série de 21 normes NF C 15-100-X**, qui remplace l'ancien document unique de décembre 2002 (modifié par les amendements A1 à A5, le dernier ayant été l'amendement A5 de 2015-2016). Selon Promotelec et l'AFNOR, cette nouvelle architecture est devenue obligatoire pour toute installation neuve, extension ou rénovation significative depuis le 1er septembre 2025. Concrètement, en avril 2026, c'est cette série qui régit votre installation antonienne dès lors que vous touchez à autre chose qu'un simple remplacement à l'identique.\n\n**Pourquoi cette refonte change quelque chose pour vous, propriétaire à Antony ?** Parce qu'elle introduit cinq évolutions techniques qui n'existaient pas dans l'amendement A5, et que je dois pédagogiquement vous présenter.\n\n**Évolution 1 — Les DDR de type F et les DPDA.** La nouvelle série introduit le **DDR (Dispositif Différentiel à courant Résiduel) de type F**, sensible aux fréquences supérieures à 50 Hz générées par les variateurs de vitesse modernes (lave-linge inverter, PAC air-eau, certaines plaques induction haut de gamme). À côté, les **DPDA (Dispositifs de Protection contre les Défauts d'Arcs)** font leur entrée pour la première fois en résidentiel français. Un DPDA détecte les arcs électriques série dans une installation — typiquement une connexion qui se desserre lentement et chauffe sans déclencher de différentiel ni de magnétothermique. C'est la cause silencieuse de 30 % des incendies électriques résidentiels selon les statistiques que je manipule depuis mon expertise judiciaire. Sur les pavillons Pajeaud et les résidences anciennes du Noyer-Doré, la pose d'un DPDA en tête sur les circuits prises est aujourd'hui une recommandation forte — pas encore obligatoire en rénovation mais fortement conseillée.\n\n**Évolution 2 — La nouvelle norme NF C 15-100-7-722 sur l'IRVE.** Pour la première fois, l'installation des bornes de recharge pour véhicule électrique est sortie du Guide UTE C 15-722 et intégrée à la série. Selon Promotelec, chaque point de recharge AC doit désormais être **alimenté par un circuit spécialisé et protégé individuellement par un DDR 30 mA au moins de type A**. Si la borne est alimentée en triphasé (11 ou 22 kW), un DDR de type B est obligatoire pour détecter les courants de défaut continus lisses générés par l'électronique de la wallbox. Cette précision est utile à Antony car les nouveaux propriétaires de véhicules électriques se multiplient dans les ZAC récentes (Jean-Zay, Châtaigneraie) et les pavillons Pajeaud où les emplacements de stationnement permettent les wallbox.\n\n**Évolution 3 — Le parasurtenseur et la nouvelle distance limite à 10 mètres.** Selon Promotelec, l'indice kéraunique Nk (utilisé dans l'amendement A5) est remplacé par l'indice Nsg dans la nouvelle norme, et la **distance limite entre le parafoudre et l'équipement protégé passe à 10 mètres**. Concrètement à Antony : si votre parasurtenseur est posé en tête de tableau et que vous voulez protéger une box internet ou une télévision située à plus de 10 mètres, il faut un **second étage de protection** (parafoudre type 3 en pied d'appareil). Sur les pavillons Pajeaud avec coffret en sous-sol et équipements à l'étage, c'est devenu un point d'audit fréquent.\n\n**Évolution 4 — La performance feu des câbles.** Les **Euroclasses (Cca, Dca, Eca)** sont désormais intégrées pour la réaction au feu des conducteurs et câbles, en conformité avec le Règlement Produits de Construction européen. Sur les ERP (Établissements Recevant du Public) et les parties communes des copropriétés antoniennes, vos installateurs doivent désormais utiliser des câbles d'Euroclasse minimale Dca pour les chemins de câbles longs. Les câbles purement domestiques restent moins exigeants, mais l'évolution arrivera mécaniquement sur le résidentiel d'ici 2027-2028.\n\n**Évolution 5 — La nouvelle norme NF C 15-100-8-1 sur l'autoconsommation photovoltaïque.** Pour accompagner la transition énergétique, la série intègre désormais une norme dédiée aux générateurs d'énergie renouvelable raccordés au tableau résidentiel. Si vous envisagez de poser des panneaux solaires sur votre pavillon Pajeaud ou sur la toiture-terrasse de la ZAC Jean-Zay, vous tombez désormais dans un cadre normatif clair, avec des exigences précises sur le découplage automatique en cas de défaut réseau.\n\n**Période transitoire.** Selon les communications AFNOR, l'ancienne version (NF C 15-100 décembre 2002 + amendements A1 à A5) est restée valable pendant 12 mois après la publication, soit jusqu'au 23 août 2025. Depuis, toute nouvelle installation, extension ou rénovation significative à Antony doit suivre la nouvelle série. Les installations existantes conformes à l'ancienne version restent légales tant qu'elles ne subissent pas de rénovation lourde — vous n'avez aucune obligation rétroactive de mise à niveau si rien ne bouge.",
+      anchor: "antony-electricite-trois-univers-bati",
+      title: "Antony et son électricité : trois univers de bâti, trois réalités électriques",
+      body: `Pour comprendre les pannes électriques que l'on rencontre à Antony, il faut accepter la réalité d'une commune composite. La ville mêle, parfois dans la même rue, trois univers électriques qui réclament chacun une approche différente. Cette diversité, plus marquée à Antony que dans la plupart des communes du sud du 92, conditionne l'intervention de l'électricien autant que la formation qu'il a reçue.
+
+**Univers 1 : les pavillons ouvriers 1900-1935.** Concentrés dans les secteurs Pajeaud, La Fontaine, et certaines portions du Centre-ville historique, ces pavillons en meulière ou en brique apparente présentent une électricité d'origine partiellement remplacée au fil du temps. Les installations initiales datent de l'époque où l'électricité résidentielle était encore une nouveauté, avec des câblages en cuivre nu sur isolateurs en porcelaine, des fusibles à porcelaine, des prises 2P sans terre, parfois encore des poses au plâtre dans les murs. La plupart de ces installations ont été reprises au moins une fois dans les années 1960-1980 (passage au câblage isolé, ajout d'un tableau divisionnaire, mise à la terre partielle), puis parfois une seconde fois à partir des années 2000. Le tableau électrique typique est un assemblage hétérogène de plusieurs générations.
+
+**Univers 2 : les copropriétés des Trente Glorieuses et le grand ensemble du Noyer-Doré.** Les quartiers Centre, Croix-de-Berny, et le Noyer-Doré au sud présentent un parc résidentiel édifié massivement entre 1955 et 1980. Les installations électriques d'origine de ces immeubles obéissent à une logique de série : tableau Legrand, Schneider ou Merlin Gerin monté à la livraison, câblage en cuivre isolé PVC sous goulottes ou encastré, prises 2P+T standard, distribution avec fusibles porcelaine ou tabatière. Une partie significative de ce parc n'a jamais été mise aux normes NF C 15-100 actuelles, ce qui ne signifie pas nécessairement 'dangereux' mais peut signifier 'non conforme aux exigences modernes' : différentiel 30 mA absent ou insuffisant, mise à la terre incomplète, calibres de protection inadaptés à l'usage moderne. Le Noyer-Doré a fait l'objet d'opérations de réhabilitation partielle dans les années 2010 qui ont modernisé une portion du parc.
+
+**Univers 3 : les programmes neufs autour du Pôle Antonypole et le long du T10.** Édifiés depuis 2015 dans le cadre de l'opération d'aménagement structurant Antonypole et autour de la ligne T10 du tramway (mise en service le 24 juin 2023), ces résidences présentent des installations électriques entièrement conformes à la norme NF C 15-100 dans son amendement A4 (2008) puis A5 (2015). Tableau modulaire avec différentiel 30 mA en tête de chaque circuit, prises 2P+T systématiques, prises Communication RJ45 dans toutes les pièces principales, parfois infrastructures pour la recharge de véhicules électriques en parking. Les défaillances dans ce parc neuf sont rares mais peuvent survenir : disjoncteur défaillant, problème de connectique au niveau d'une prise, court-circuit ponctuel sur un appareil défectueux.
+
+Pour l'électricien qui intervient à Antony, cette diversité radicale impose une discipline d'observation que la plupart des opérateurs commerciaux du dépannage low-cost n'ont tout simplement pas. Le tableau électrique, c'est le cerveau de votre logement. À Antony, les installations des années 70 méritent attention. Ouvrir le bon panneau de protection, lire le bon repère, mesurer la bonne valeur — ce sont des gestes qui supposent une formation que tout artisan ne possède pas.`,
     },
     {
-      anchor: "5-generations-bati-electrique-antony",
-      title: "Cinq générations de bâti électrique à Antony : ce que je trouve réellement dans les tableaux",
-      body:
-        "Antony s'est construite par strates successives sur 9,56 km² selon les données INSEE 2023, et chaque strate raconte une époque réglementaire différente. Quand je décris à un confrère le profil électrique de la commune, je distingue cinq générations clairement identifiables.\n\n**Génération 1 — Les pavillons d'avant-guerre Pajeaud / Vissous (1900-1939).** Quartier Pajeaud à l'est, secteur Vissous au sud, certaines villas autour de la rue Auguste-Mounié et de l'avenue François-Molé. Petits pavillons de maître-ouvrier ou de retraité, anciennes villas balnéaires, parfois très joliment préservées. Tableaux d'origine quasi inexistants (réformés depuis longtemps), mais on tombe régulièrement sur des installations de génération 2 (années 50-70) jamais reprises depuis, avec porte-fusibles porcelaine, conducteurs sous gaine torsadée, et parfois des prises 2 broches sans terre dans les chambres et pièces secondaires. La mise à la terre par piquet de jardin oxydé est un grand classique de Pajeaud — j'ai mesuré dans une villa rue des Sources une terre à 1 200 ohms, soit largement au-dessus du seuil acceptable de 100 ohms imposé par la nouvelle série NF C 15-100 pour un schéma TT résidentiel.\n\n**Génération 2 — Les grandes résidences collectives 1960-1985 (Noyer-Doré, Baconnets, Croix-de-Berny).** C'est *la* spécificité antonienne, et c'est probablement le profil que je rencontre le plus souvent. Le quartier prioritaire du **Noyer-Doré** (3 600 habitants en 2020 selon Wikipédia, programme de rénovation urbaine achevé en 2014) concentre des centaines de logements en grandes barres et tours résidentielles. Les **Baconnets** au sud, autour de la gare RER B Les Baconnets, ont la même logique constructive. Et la **Croix-de-Berny** (aménagée depuis les années 1970 toujours selon Wikipédia) complète le tableau. Sur ces résidences, je trouve : tableaux métalliques avec porte-fusibles à cartouches, parfois un seul interrupteur différentiel 30 mA en tête (souvent ajouté tardivement dans les années 90), conducteurs cuivre 1,5 mm² ou 2,5 mm² selon les circuits, mise à la terre par conducteur de protection collectif d'immeuble plus ou moins entretenu. C'est sur ces tableaux que les pannes par surcharge sont les plus fréquentes aujourd'hui — parce que le câblage de 1972 n'avait pas anticipé la plaque induction 7 200 W de 2026.\n\n**Génération 3 — Les rénovations massives 1990-2010.** Partout dans Antony mais particulièrement dans le centre-ville Mounié et autour de l'avenue de la Division-Leclerc. Tableaux modulaires sur rail DIN, généralement deux interrupteurs différentiels 30 mA, disjoncteurs divisionnaires courbe C, étiquetage parfois fait, parfois oublié. Conformes à l'amendement A1 ou A2 de la NF C 15-100 (donc aux normes de leur époque mais pas aux exigences de la nouvelle série 2024), absence quasi systématique de parasurtenseur, calibres globalement adaptés mais nombre de circuits encore trop faible pour les usages 2026.\n\n**Génération 4 — Les programmes RT2012 (2013-2021).** Plusieurs opérations immobilières du centre-ville, dans le secteur Mounié et autour de la rue Velpeau, au nord vers la Croix-de-Berny avec la résidence de la Châtaigneraie, ainsi que sur des opérations interstitielles ailleurs dans la commune. Tableaux modulaires de grande capacité (souvent 4 rangées), GTL (Gaine Technique Logement) verticale conforme, plusieurs interrupteurs différentiels dont au moins un type A obligatoire pour les plaques induction et le lave-linge, parasurtenseur de type 2 souvent posé en série, prises commandées dans les chambres, RJ45 et coaxial dans la GTL.\n\n**Génération 5 — La ZAC Jean-Zay et les opérations RE2020 (2022-2026).** Le secteur le plus moderne d'Antony, inauguré en octobre 2024 selon Vallée Sud Aménagement, sur 8,5 hectares en lien avec le parc de Sceaux. Mêmes exigences que RT2012 sur l'électricité, mais avec l'attention nouvelle aux usages bas carbone : **pré-équipement IRVE systématique** (gaine et alimentation amont jusqu'à l'emplacement de stationnement), pompes à chaleur électriques pour le chauffage, ballons thermodynamiques. Et — avantage décisif pour ces logements neufs livrés après septembre 2025 — application directe de la nouvelle série NF C 15-100, donc DDR type F prévus, DPDA en option premium, parasurtenseur conforme à la nouvelle distance limite 10 m. Les premiers défauts apparaîtront vers 2030 sur les modules domotique non maintenus.",
+      anchor: "centre-pajeaud-pavillons-electricite-stratifiee",
+      title: "Centre, Pajeaud, La Fontaine : une électricité stratifiée à diagnostiquer avec rigueur",
+      body: `Les secteurs Centre, Pajeaud et La Fontaine d'Antony concentrent l'essentiel du bâti pavillonnaire 1900-1935 de la commune. L'électricité de ces pavillons et immeubles présente une stratification matérielle qui en fait l'un des terrains les plus complexes pour le diagnostic électrique en première couronne sud.
+
+Les installations d'origine, datant pour les programmes les plus anciens des années 1900-1925, étaient composées de câblages en cuivre nu sur isolateurs en porcelaine pour les distributions communes, de prises 2P sans terre, et de protection par fusibles porcelaine au tableau de palier. La distribution interne dans les pavillons suivait la même logique avec des câblages en montage apparent ou encastré dans le plâtre.
+
+Au cours du XXe siècle, ces installations ont été reprises au moins une fois — souvent à l'occasion d'une rénovation lourde dans les années 1960-1980. La reprise typique consistait à remplacer le tableau de palier par un tableau divisionnaire moderne (Legrand, Schneider, Hager), à passer les câblages en cuivre isolé PVC, à installer des prises 2P+T sur certains circuits (cuisine, salle de bain), et à ajouter une mise à la terre partielle. Les installations qui n'ont pas été reprises depuis cette date conservent un mélange caractéristique : tableau partiellement modernisé, câblages d'âges différents, prises mélangées 2P et 2P+T.
+
+Plus récemment, certains pavillons ont fait l'objet de rénovations électriques complètes dans le cadre de réhabilitations privatives. Ces rénovations apportent une mise aux normes complète NF C 15-100 : différentiel 30 mA en tête, prises 2P+T systématiques, calibres adaptés, protection contre les surtensions, parfois infrastructure de communication. Le contraste peut être saisissant entre deux pavillons voisins de la même rue, l'un en installation 1970 partiellement remplacée, l'autre en installation 2020 complètement rénovée.
+
+**Les pannes les plus fréquentes que je rencontre dans le bâti ancien antonien** concernent quatre catégories. Premièrement, les disjoncteurs qui sautent en boucle, presque toujours liés à une surcharge sur un circuit sous-dimensionné (typiquement la cuisine d'une installation 1970 qui doit aujourd'hui supporter four + plaque + lave-vaisselle + cafetière + grille-pain en simultané). Deuxièmement, les prises qui ne fonctionnent plus, généralement par défaut de connectique au niveau du domino ou du bornier. Troisièmement, les tableaux électriques anciens dont les fusibles se grillent fréquemment, signe d'une usure générale qui justifie une mise à niveau. Quatrièmement, les déclenchements intempestifs de différentiel, typiquement liés à une fuite de courant sur un appareil défectueux ou sur une portion de câblage dégradée.
+
+Avant tout diagnostic, on isole : disjoncteur général sur off, on commence par là. Cette discipline, élémentaire mais trop souvent escamotée, conditionne la sécurité de l'intervention et la qualité du diagnostic. Le tarif annoncé en amont au 01 41 69 10 08 — 89€ TTC pour un diagnostic électrique avec rapport — couvre l'intégralité de l'intervention, sans devis surprise.`,
     },
     {
-      anchor: "5-causes-disjoncteur-saute-antony",
-      title: "Les 5 vraies causes d'un disjoncteur qui saute à Antony (et la spécificité grande résidence)",
-      body:
-        "Quand un client antonien m'appelle parce que son disjoncteur saute, je commence toujours par poser trois questions : *quel* disjoncteur saute (le général ou un divisionnaire), *quand* il saute (à un moment précis, en pleine nuit, à intervalle régulier), et *combien* de fois il a sauté ces deux dernières semaines. Ces trois réponses orientent vers l'une des cinq causes ci-dessous, dans l'ordre de fréquence que j'observe sur le terrain antonien.\n\n**Cause 1 — La surcharge spécifique 'grande résidence années 70 mal redécoupée' (40 % des cas Antony).** Votre appartement du Noyer-Doré, des Baconnets ou de la Croix-de-Berny a été câblé entre 1965 et 1980 pour les usages de l'époque : éclairage halogène, télévision tube, hi-fi, électroménager standard. Aujourd'hui vous avez plaque induction 7 200 W, four 3 500 W, lave-vaisselle 2 200 W, lave-linge 2 400 W, parfois climatisation 1 800 W ajoutée plus tard, et tout ça mutualisé sur 4 ou 5 circuits seulement. Quand deux gros postes démarrent simultanément (le lave-vaisselle à 19h pendant que vous lancez le four), vous dépassez le calibre du divisionnaire qui les protège. Par exemple, sur un circuit prises 16 A nominal (3 680 W maximum), additionner four (3 500 W) + bouilloire (2 200 W) + grille-pain (900 W) = 6 600 W donne 28,7 A : vous êtes presque à deux fois le calibre, le magnétothermique déclenche en 5-15 minutes selon la courbe. Solution durable : redécoupage du tableau avec création de circuits dédiés. Coût Joël indicatif : 180 à 380 € TTC par circuit dédié, prix annoncé avant.\n\n**Cause 2 — Le défaut d'isolement (25 % des cas).** Cette fois, c'est l'interrupteur différentiel 30 mA qui saute, pas le divisionnaire. La différence est essentielle : le différentiel mesure l'écart entre le courant qui entre par la phase et celui qui repart par le neutre. S'il manque plus de 30 milliampères, c'est qu'ils partent ailleurs — dans la terre, dans une carcasse métallique, ou (cas grave) dans un corps humain. Cause typique à Antony : un vieux ballon d'eau chaude des années 90 dont la résistance commence à se piquer (microfissures de la gaine isolante), un lave-linge usé dont le moteur fuit légèrement, ou de l'humidité dans une boîte d'encastrement de salle de bain — fréquent sur les pavillons Pajeaud à toiture vieillissante avec infiltrations latentes.\n\n**Cause 3 — Le court-circuit franc (15 % des cas).** Phase et neutre se touchent directement, par exemple parce qu'un fil est dénudé dans une prise après un accrochage de meuble, parce qu'un clou a percé une gaine derrière un placo lors d'un montage de bibliothèque IKEA, ou parce qu'un appareil défaillant a fait fondre son cordon. L'intensité monte instantanément à plusieurs centaines d'ampères, le disjoncteur déclenche en quelques millisecondes. C'est le scénario que je traite en urgence : on isole, on identifie le circuit, on cherche le point de contact. À Antony, je l'ai vu plusieurs fois sur les rénovations rapides post-2010 où des spots encastrés ont été posés sans boîte DCL dans les T2 du centre-ville, avec connexions au domino directement dans l'isolant — recette pour court-circuit à moyen terme.\n\n**Cause 4 — Le différentiel vieillissant des résidences 1970-1985 (12 % des cas Antony).** Sur les tableaux des grandes résidences du Noyer-Doré, des Baconnets et de la Croix-de-Berny, les interrupteurs différentiels d'origine ou ajoutés en première rénovation ont aujourd'hui 30-40 ans. Le ressort qui maintient les contacts s'affaiblit, le bilame qui mesure l'écart se dérègle. Le module déclenche pour rien, à 20 mA au lieu de 30, parfois sans cause identifiable. Test simple, à faire vous-même : appuyez sur le bouton T (Test) une fois par mois ; si le différentiel ne tombe pas, il est mort et il faut le remplacer. Sur les tableaux de l'avenue Léon-Blum et de la rue Velpeau, ce diagnostic-là revient très souvent.\n\n**Cause 5 — La surtension réseau et l'absence de parasurtenseur (8 % des cas).** Plus rare mais réel : Enedis injecte une surtension dans le quartier suite à un orage, à une intervention sur un transformateur, ou à un défaut sur une ligne aérienne. Antony est à proximité du parc de Sceaux, du parc Heller, et de zones boisées qui exposent aux orages d'été classiques. Si votre installation absorbe le pic et qu'il n'y a pas de parasurtenseur en tête de tableau (généralement absent avant la nouvelle série NF C 15-100 sauf sur les programmes RT2012/RE2020 récents), un disjoncteur saute en aval ou — pire — un appareil grille. Si plusieurs voisins de votre résidence ont eu le même problème la même nuit, c'est probablement ça. Pose Joël d'un parasurtenseur type 2 conforme nouvelle norme : 189 € TTC, prix annoncé avant.",
+      anchor: "antonypole-t10-norme-nf-c-15-100-bati-neuf",
+      title: "Antonypole et T10 : la NF C 15-100 amendée et ses spécificités dans les programmes récents",
+      body: `Les programmes neufs édifiés depuis 2015 dans le cadre de l'opération d'aménagement Antonypole et le long du tramway T10 (mis en service le 24 juin 2023) présentent un parc résidentiel entièrement conforme à la norme NF C 15-100 dans ses amendements les plus récents. Cette norme, pilier réglementaire de l'électricité résidentielle française, définit avec précision les exigences en matière de circuits, de protection, de mise à la terre, d'équipement minimal par pièce. Les programmes antoniens récents ont été conçus dès l'origine selon ces exigences, ce qui en fait l'un des terrains les mieux équipés du sud du 92.
+
+**Concrètement, qu'est-ce que cela change pour l'occupant ?** Plusieurs choses. D'abord, la sécurité : chaque circuit (éclairage, prises, cuisine, salle de bain, lave-linge, four, etc.) est protégé en tête par un disjoncteur magnétothermique à courbe adaptée et par un dispositif différentiel 30 mA qui coupe le circuit en cas de fuite de courant vers la terre. Cette double protection, devenue un standard depuis l'amendement A4 de 2008, prévient efficacement les risques d'électrocution et d'incendie d'origine électrique.
+
+Ensuite, l'ergonomie : chaque pièce dispose d'un nombre minimal de prises 2P+T (5 dans le séjour pour une surface supérieure à 28 m², 3 dans une chambre, 6 dans la cuisine dont 4 au-dessus du plan de travail, etc.) et de points lumineux. Cette dotation, plus généreuse que dans les installations anciennes, correspond aux usages contemporains.
+
+Enfin, la modularité : le tableau électrique des programmes RT 2012 puis RE 2020 est généralement surdimensionné par rapport aux besoins immédiats, avec des emplacements libres qui permettent d'ajouter ultérieurement des circuits sans devoir refaire le tableau complet. Cette anticipation est précieuse pour qui souhaite, par exemple, installer une borne de recharge de véhicule électrique ou un système domotique étendu.
+
+**Les pannes que je rencontre dans le parc neuf d'Antonypole** présentent des caractéristiques propres. La plupart ne sont pas des défauts de l'installation elle-même mais des défaillances ponctuelles : disjoncteur unitaire défectueux (statistiquement rare mais possible), connectique défaillante au niveau d'une prise mal raccordée à la livraison, court-circuit ponctuel lié à un appareil électroménager défectueux. Plus rarement, un défaut d'origine du bâti peut générer des problèmes : ce type de défaut peut justifier l'activation de la garantie décennale du promoteur si la résidence a moins de dix ans.
+
+Pour les copropriétaires de ces résidences récentes, ma recommandation est de toujours demander, avant d'engager une intervention payante sur l'installation, si la défaillance peut relever de la garantie décennale. Le rapport technique remis par Joël (inclus dans le forfait de 89€ TTC pour un diagnostic) peut servir d'élément à charge dans une procédure auprès du promoteur.`,
     },
     {
-      anchor: "courbes-bcd-antony-pedagogie",
-      title: "Courbes B, C, D sur vos disjoncteurs : ce que la lettre signifie, et pourquoi un D sur un circuit prises est suspect",
-      body:
-        "Sur chaque disjoncteur divisionnaire de votre tableau antonien, vous lisez une lettre suivie d'un nombre : par exemple C16, B10, D32. Le nombre, c'est l'ampérage — le seuil au-dessus duquel le disjoncteur déclenche en surintensité. La lettre, en revanche, beaucoup moins de gens la comprennent. C'est elle qui détermine *à quelle vitesse* et *pour quel type d'appel de courant* votre disjoncteur va réagir. Pédagogie claire.\n\nLa norme NF EN 60898-1 (toujours référencée dans la nouvelle série NF C 15-100 publiée août 2024) définit trois courbes principales pour le résidentiel et le tertiaire léger.\n\n**Courbe B** : déclenchement magnétique entre 3 et 5 fois le calibre nominal. La courbe la plus sensible, conçue pour les circuits avec câbles longs et appels de courant faibles. Typiquement utilisée sur certains circuits d'éclairage classiques d'éclairage public ou de tertiaire léger, ou dans les installations avec beaucoup d'électronique sensible. Rare en résidentiel privé.\n\n**Courbe C** : déclenchement magnétique entre 5 et 10 fois le calibre nominal. La courbe **standard** dans tous les logements français modernes, celle qu'imposent en pratique les installations conformes à la NF C 15-100 (ancienne et nouvelle version). Elle absorbe les pics de démarrage normaux d'un lave-linge, d'un frigo, d'un aspirateur, d'un radiateur, sans déclencher pour rien. C'est ce que vous devriez voir sur 95 % des disjoncteurs de votre tableau résidentiel antonien.\n\n**Courbe D** : déclenchement magnétique entre 10 et 20 fois le calibre nominal. Réservée aux circuits avec appels de courant très importants au démarrage : moteurs lourds, transformateurs, certaines pompes industrielles, gros climatiseurs centralisés. Dans un appartement résidentiel, on n'en met *jamais*, sauf cas très particulier (pompe à chaleur avec compresseur lourd installée en 2022-2026, ascenseur privatif sur villa de standing, certaines bornes IRVE 22 kW triphasées).\n\nPourquoi ça compte concrètement à Antony ? Parce que je tombe régulièrement, sur les rénovations bricolées des années 2000-2015 dans le secteur Mounié ou les anciens pavillons rénovés à la va-vite de Pajeaud, sur des installations où un installateur peu scrupuleux a remplacé un C10 qui sautait par un D16, *sans changer la section du câble*. Résultat : en cas de court-circuit, le disjoncteur tolère plus longtemps une surintensité que le câble ne peut supporter. Le câble chauffe, son isolant fond, et on a un départ de feu derrière une plinthe. C'est exactement le genre de configuration que j'ai dû expertiser plusieurs fois en tant qu'expert judiciaire après sinistre. Si vous voyez une lettre D sur un disjoncteur d'un circuit prises ou éclairage classique de votre logement, faites diagnostiquer par un vrai électricien : ce n'est pas normal, et c'est dangereux.\n\n**Calibres standards à connaître pour votre tableau résidentiel antonien.** Selon la nouvelle série NF C 15-100 (et déjà selon l'amendement A5), voici les correspondances obligatoires : **éclairage** sur disjoncteur 10 A courbe C, en câble 1,5 mm², 8 points lumineux maximum par circuit. **Prises classiques** sur disjoncteur 16 A courbe C, en câble 2,5 mm², 8 prises maximum par circuit. **Prises de cuisine** sur circuit dédié 20 A courbe C, en câble 2,5 mm², jusqu'à 12 prises par circuit. **Plaque de cuisson induction** : circuit dédié obligatoire 32 A courbe C, en câble 6 mm², protégé par DDR 30 mA de **type A** (pas type AC). **Four** : circuit dédié 20 A courbe C, en câble 2,5 mm². **Lave-linge** : circuit dédié 16 A courbe C protégé par DDR type A. **Lave-vaisselle, sèche-linge, congélateur** : chacun sur circuit dédié 16 A courbe C. **Borne IRVE 7,4 kW monophasée** : circuit dédié 32 A courbe C, en câble 6 mm², protégé par DDR 30 mA type A (selon nouvelle norme NF C 15-100-7-722). **Borne IRVE 11 kW triphasée** : circuit dédié 16 A par phase, en câble 10 mm², protégé par **DDR type B** (impératif pour détecter les courants de défaut continus lisses).",
+      anchor: "noyer-dore-croix-berny-trente-glorieuses",
+      title: "Noyer-Doré, Croix-de-Berny : les copropriétés des Trente Glorieuses et leurs tableaux à mettre aux normes",
+      body: `Les quartiers Noyer-Doré au sud et Croix-de-Berny au nord-ouest concentrent une part significative du parc résidentiel antonien édifié entre 1955 et 1980. Tours et barres en R+10 ou R+15, copropriétés intermédiaires en béton banché habillé, opérations de logements sociaux gérées par les principaux bailleurs des Hauts-de-Seine sud. L'électricité de ces immeubles obéit à une logique de série caractéristique du bâti collectif de la période trente glorieuses.
+
+Les installations électriques d'origine étaient composées d'un tableau électrique posé à la livraison (Legrand, Schneider, Merlin Gerin selon les époques), d'un câblage en cuivre isolé PVC sous goulottes ou encastré, de prises 2P+T standard, de fusibles porcelaine ou tabatière selon les générations. Le calibre général était dimensionné pour les usages de l'époque (typiquement 9 kVA pour un appartement T3-T4), ce qui suffisait largement à l'usage moyen mais peut s'avérer insuffisant pour un foyer contemporain équipé en gros électroménager, en climatisation, voire en borne de recharge VE.
+
+Les pannes les plus fréquentes que je rencontre dans ce parc Trente Glorieuses sont, par ordre de prévalence : disjoncteur général ou divisionnaire qui saute en surcharge, déclenchement intempestif de différentiel sur un circuit dégradé, fusibles porcelaine qui se grillent fréquemment sur certains circuits, prises ou interrupteurs en fin de vie. Les pannes plus graves — court-circuit majeur, échauffement anormal au tableau, signes d'oxydation des bornes — relèvent d'une vétusté générale qui justifie une mise à niveau partielle ou complète.
+
+Pour le Noyer-Doré spécifiquement, les opérations de réhabilitation engagées dans les années 2010 ont modernisé une partie du parc, avec mise aux normes électrique partielle dans certains bâtiments. La situation est donc hétérogène : certains appartements ont une installation moderne, d'autres conservent l'installation d'origine vieillissante. Un diagnostic préalable permet d'identifier précisément le statut de l'installation avant toute intervention.
+
+**La question de la mise aux normes NF C 15-100** est fréquemment soulevée par les Antoniens qui découvrent leur installation électrique. Mon avis structuré : la mise aux normes complète n'est pas obligatoire pour un logement existant qui n'est pas l'objet de travaux. Elle n'est imposée légalement que dans deux cas : lors de travaux importants (rénovation totale d'une pièce nécessitant le passage d'un Consuel) et lors de la vente du bien (le Diagnostic Électrique Obligatoire dit DT-Élec doit être établi pour toute installation de plus de 15 ans). Pour le reste, l'occupant peut faire le choix raisonnable d'une mise à niveau partielle ciblée sur les éléments critiques : différentiel 30 mA en tête de circuits prises et salle de bain, mise à la terre des circuits qui n'en bénéficient pas, remplacement des fusibles porcelaine par des disjoncteurs modernes.
+
+Le coût d'une mise à niveau partielle ciblée se situe généralement entre 800€ et 2500€ TTC selon les éléments concernés et la complexité de l'installation. Une mise aux normes complète (remplacement intégral du tableau, refonte de la distribution, mise à la terre généralisée) coûte entre 3500€ et 8000€ TTC pour un appartement T3-T4, davantage pour un grand logement ou un pavillon. Joël chiffre en transparence avec descriptif technique précis, sans pression commerciale et sans surfacturation injustifiée.`,
     },
     {
-      anchor: "noyer-dore-baconnets-mise-aux-normes",
-      title: "Mon appartement au Noyer-Doré, aux Baconnets ou à la Croix-de-Berny : faut-il vraiment tout refaire ?",
-      body:
-        "C'est la question que je reçois le plus souvent à Antony, et la réponse honnête est : *ça dépend*. Un tableau électrique des années 70-80, en lui-même, n'est pas systématiquement dangereux. Il peut être en bon état mécanique, avec des fusibles à cartouches qui fonctionnent parfaitement et qui protègent correctement les circuits qu'ils sont censés protéger. La nouvelle série NF C 15-100 publiée en août 2024 (en vigueur obligatoire depuis le 1er septembre 2025 selon Promotelec) s'applique aux installations *neuves* et aux *rénovations significatives*. Elle n'oblige pas un propriétaire à refaire un tableau ancien tant qu'il fonctionne et qu'il ne présente pas de risque démontré.\n\nEn revanche, **sept points** doivent être vérifiés sur votre tableau d'avant 1990 dans une grande résidence du Noyer-Doré, des Baconnets ou de la Croix-de-Berny, et la présence d'un seul d'entre eux justifie une mise aux normes partielle ou totale.\n\n**Point 1 — La présence d'au moins un interrupteur différentiel 30 mA fonctionnel.** Si votre tableau n'en a aucun, vous n'avez aucune protection contre l'électrisation. C'est rédhibitoire. Mise aux normes obligatoire avant toute intervention. Coût indicatif Joël : à partir de 199 € TTC pose comprise, prix annoncé avant.\n\n**Point 2 — La liaison équipotentielle dans la salle de bain.** Tous les éléments métalliques (canalisation eau froide, eau chaude, vidange, baignoire, cabine de douche, sèche-serviettes électrique) doivent être reliés entre eux par un fil de cuivre vert/jaune et raccordés à la terre. Sur les résidences du Noyer-Doré et des Baconnets, je trouve souvent que cette liaison a été oubliée, ou coupée lors d'un remplacement de baignoire — particulièrement les rénovations partielles d'avant 2005. Reprise Joël : 180 à 380 € TTC selon accès.\n\n**Point 3 — Le calibre du disjoncteur d'abonné.** Si vous êtes encore en 30 A monophasé alors que vous avez plaque induction + four + lave-vaisselle + sèche-linge + climatisation, vous êtes sous-dimensionné en permanence et vous tirez sur l'installation. Demande de changement de puissance auprès de votre fournisseur (intervention Enedis facturée environ 50 à 150 € selon configuration).\n\n**Point 4 — La présence de fusibles à cartouches au lieu de disjoncteurs divisionnaires.** Les fusibles fonctionnent, mais ils ne sont plus aux normes pour les installations rénovées. Surtout, après un incident, ils ne sont pas réarmables : il faut remplacer la cartouche, et sur les calibres anciens (10 A, 16 A vieux modèle) pour des résidences livrées 1965-1975, trouver les pièces devient compliqué.\n\n**Point 5 — Le nombre de circuits.** La nouvelle série NF C 15-100 reconduit les exigences de l'amendement A5 : au minimum 8 circuits pour un T2, 12 pour un T3, 18 pour un T4, avec des circuits dédiés pour les gros postes (plaques, four, lave-linge, lave-vaisselle, sèche-linge, chauffe-eau). Les tableaux des résidences antoniennes des années 70 mutualisent souvent tout sur 4-6 circuits, ce qui explique les surcharges fréquentes.\n\n**Point 6 — La présence de marques de chauffe.** Ouvrez le tableau et regardez les bornes de connexion : si vous voyez du jaune-brun autour d'une vis, des traces noires, des plastiques fondus, n'attendez pas. C'est le signe d'un échauffement chronique, prélude à un départ de feu. Coupez le disjoncteur d'abonné et appelez immédiatement le 01 41 69 10 08.\n\n**Point 7 — L'absence de DDR type A pour la plaque induction (point spécifique nouvelle norme 2024).** Si vous avez fait installer une plaque induction dans les cinq dernières années sur votre tableau ancien sans changer le différentiel qui la protège, vous êtes très probablement encore sur un type AC. Or selon Promotelec et la nouvelle série NF C 15-100, l'induction (et le lave-linge) impose un DDR 30 mA de **type A** (sensible aux courants continus pulsés). Le type AC ancien ne sait pas correctement lire les défauts générés par l'onduleur de l'induction. Remplacement Joël : 129 € TTC pose comprise.\n\nMon conseil pédagogique : ne refaites *pas* tout par principe. Faites diagnostiquer par un électricien Joël (artisan certifié, prix annoncé avant) et discutez avec lui d'une mise aux normes *progressive*. Souvent, ajouter un interrupteur différentiel 30 mA type A, créer deux ou trois circuits dédiés, et reprendre la liaison équipotentielle salle de bain règle 80 % du problème pour un quart du budget d'une refonte complète. Fourchette typique sur un T3 antonien d'une résidence des années 70 à reprendre intelligemment : **600 à 1 400 € TTC**, fourniture et pose incluses, prix annoncé avant intervention. Si on vous annonce 4 800 € pour ça sans avoir ouvert votre tableau, c'est de l'arnaque caractérisée.",
+      anchor: "diagnostic-electrique-antony-methode",
+      title: "Diagnostiquer une panne électrique à Antony : la méthode en cinq étapes",
+      body: `Le diagnostic d'une panne électrique à Antony n'est jamais purement mécanique. La diversité du bâti antonien, du pavillon ouvrier 1900 à la résidence neuve RT 2012 d'Antonypole, impose une démarche structurée que je résume aux artisans en cinq étapes.
+
+**Première étape : la sécurisation préalable.** Avant tout diagnostic, on isole. Disjoncteur général sur off, vérification visuelle du tableau, identification des protections en place. Cette discipline élémentaire conditionne la sécurité de l'intervention et la qualité du diagnostic ultérieur. Trop d'interventions hâtives commencent par un coup de tournevis sans vérification préalable — c'est ainsi qu'on génère des accidents évitables.
+
+**Deuxième étape : l'écoute du client.** L'occupant connaît son installation mieux qu'il ne le croit. Il sait quel circuit a sauté, à quelle occasion, depuis quand le problème se manifeste, si c'est intermittent ou continu, s'il y a eu des travaux récents. Cette écoute préliminaire, qui prend dix à quinze minutes, oriente massivement le diagnostic et évite les fausses pistes.
+
+**Troisième étape : le diagnostic visuel et instrumental.** Examen du tableau électrique (état général, calibres en place, présence ou absence de différentiel 30 mA, traces d'échauffement, oxydation des bornes), mesure de la résistance de terre (norme NF C 15-100 : maximum 100 ohms pour un différentiel 30 mA, idéalement inférieur à 50 ohms), test des circuits avec un multimètre, vérification de la continuité de la mise à la terre. Cette phase mobilise les outils de l'électricien : multimètre, testeur de courant, mesureur de terre, parfois caméra thermique pour repérer un échauffement anormal au tableau.
+
+**Quatrième étape : l'identification de la cause.** À ce stade, le diagnostic doit pouvoir rattacher la panne à l'une des cinq causes dominantes des dysfonctionnements électriques résidentiels : surcharge sur un circuit sous-dimensionné, court-circuit ponctuel sur un appareil ou une portion de câblage, fuite de courant à la terre détectée par le différentiel, défaillance d'un composant unitaire (disjoncteur, prise, interrupteur), vétusté générale de l'installation. 95 % des pannes électriques résidentielles relèvent de l'une de ces cinq catégories.
+
+**Cinquième étape : la préconisation chiffrée.** Le diagnostic se conclut par une préconisation transparente : nature de la panne, options de réparation possibles (remplacement ciblé, mise à niveau partielle, mise aux normes complète), coût détaillé de chaque option, hiérarchisation des priorités si plusieurs interventions sont à envisager. Cette pédagogie, trop souvent escamotée par les opérateurs pressés, permet à l'occupant de prendre une décision éclairée plutôt que de subir une intervention imposée sous pression.
+
+Le forfait diagnostic Joël à 89€ TTC inclut l'intégralité de cette démarche, avec rapport remis sur place. C'est une discipline qui prend trente à soixante minutes selon la complexité de l'installation. Elle évite les remplacements inutiles imposés par des opérateurs qui facturent à l'urgence.`,
     },
     {
-      anchor: "irve-borne-recharge-antony",
-      title: "Installer une borne IRVE chez soi à Antony : ce que la nouvelle norme NF C 15-100-7-722 impose en 2026",
-      body:
-        "Avec la densité de cadres travaillant à Paris ou à Orly et habitant Antony, et avec la part croissante de véhicules électriques, je reçois plusieurs demandes par semaine d'installation de borne IRVE (Infrastructure de Recharge pour Véhicule Électrique) en parking privatif d'immeuble du Noyer-Doré ou de la Croix-de-Berny, en pavillon Pajeaud avec garage, et dans les nouvelles ZAC (Jean-Zay, Châtaigneraie). Voici ce que la pédagogie m'oblige à expliquer avant d'accepter le devis, *en intégrant les nouveautés de la série NF C 15-100 publiée août 2024 et applicable obligatoirement depuis septembre 2025*.\n\n**Première règle — IRVE n'est plus dans le Guide UTE C 15-722, mais dans la nouvelle norme NF C 15-100-7-722.** Selon Promotelec, la nouvelle série NF C 15-100 a intégré l'IRVE comme partie 7-722 spécifique. Cette intégration normative donne un cadre opposable plus clair, et impose explicitement : **circuit spécialisé** pour chaque point de recharge, **DDR 30 mA au moins de type A** pour les bornes monophasées AC, et type B pour les triphasées. Tout installateur qui vous propose une wallbox raccordée sur un circuit existant partagé est désormais hors clous normatifs.\n\n**Deuxième règle — Le décret 2017-26 distingue toujours trois modes de recharge.** Le **mode 1** (prise standard 16 A) est interdit pour la recharge VE en France depuis 2017, sauf pour de très petits véhicules. Le **mode 2** (chargeur embarqué dans le câble du véhicule, prise renforcée Green'Up) est toléré pour la recharge occasionnelle, mais dangereux en usage permanent : la prise chauffe, le contact se dégrade, c'est une cause majeure d'incendie de tableau. Le **mode 3** (borne dédiée installée à demeure, type wallbox) est la seule solution conforme et durable pour un usage quotidien. Tout installateur qui vous propose mode 1 ou mode 2 sur un usage permanent est hors clous.\n\n**Troisième règle — La qualification IRVE est obligatoire.** Depuis le décret 2017-26, seul un électricien titulaire de la qualification IRVE (mention IRVE niveau 1, 2 ou 3 selon la puissance) peut installer une borne supérieure à 3,7 kW. Les artisans Joël couvrant Antony disposent tous de la qualification IRVE niveau 1 (pour les bornes domestiques 7,4 et 11 kW), et le réseau mobilise un partenaire IRVE 2 pour les copropriétés équipées en triphasé. Vérifiez systématiquement la qualification : c'est un document opposable, indispensable pour faire jouer votre garantie décennale et obtenir l'éligibilité aux aides (crédit d'impôt, prime ADVENIR).\n\n**Quatrième règle — La protection différentielle type B pour le triphasé (rappel critique avec nouvelle norme 2024).** Une wallbox monophasée 7,4 kW (32 A) peut généralement se contenter d'un différentiel type A 30 mA dédié. Mais dès qu'on passe en triphasé (11 ou 22 kW), il faut un **différentiel type B** capable de détecter les courants de défaut continus lisses générés par l'électronique de la borne. Ces différentiels coûtent cher (180 à 350 € le module seul), mais sont absolument incontournables. Économiser dessus, c'est risquer une électrocution non détectée et une perte totale de garantie en cas de sinistre.\n\n**Cinquième règle — Le circuit dédié obligatoire depuis le tableau divisionnaire.** La borne IRVE doit avoir son propre départ dans le tableau, son propre disjoncteur, sa propre section de câble (au minimum 6 mm² pour 7,4 kW, 10 mm² pour 11 kW triphasé). Brancher une wallbox sur une prise existante en cuisine ou en garage est une faute professionnelle grave, et c'est pourtant ce que je découvre dans environ un cas sur cinq quand on m'appelle pour 'remettre en route une borne qui ne marche plus'. La cause est presque toujours là.\n\n**Sixième règle — Le compteur Linky et la puissance souscrite.** Brancher une wallbox 11 kW chez vous quand votre puissance souscrite est à 9 kVA, c'est garantir des disjonctions à chaque démarrage de charge. Avant tout devis IRVE, il faut un audit de vos appels de courant simultanés. Joël fait cet audit dans le devis (gratuit), et oriente si nécessaire vers une augmentation de puissance auprès de votre fournisseur.\n\n**Cas spécifique copropriété antonienne (Noyer-Doré, Baconnets, Croix-de-Berny, ZAC Jean-Zay).** Pour installer une borne IRVE en parking commun de copropriété, vous devez actionner le **droit à la prise** (loi LOM 2019, articles L113-16 à L113-18 du Code de la construction). Vous notifiez votre projet au syndic, qui inscrit le sujet à l'ordre du jour de la prochaine AG ; la copropriété ne peut pas s'opposer sauf motif sérieux et légitime (impossibilité technique caractérisée). Joël peut produire le devis et l'étude technique opposable pour soutenir votre dossier.\n\n**Fourchettes de prix Joël pour une borne IRVE résidentielle à Antony**, fourniture et pose comprises, prix annoncé avant : **890 à 1 950 € TTC** pour une wallbox 7,4 kW monophasée en pavillon Pajeaud, Vissous, ou parking privatif accessible d'une résidence du Noyer-Doré ; **1 600 à 3 200 € TTC** pour une wallbox 11 kW triphasée nécessitant la création d'un circuit dédié long et la pose d'un différentiel type B, fréquente sur les pavillons de standing du centre-ville Mounié et sur les nouvelles opérations RE2020 de la ZAC Jean-Zay. Devis chiffré sur place, garantie décennale, attestation Consuel pour les opérations qui le requièrent.",
+      anchor: "antony-rer-b-orlyval-t10-rapidite-intervention-electricien",
+      title: "Antony ville carrefour : RER B, Orlyval, T10 et la rapidité d'intervention électricien",
+      body: `Antony bénéficie d'une desserte en transport métropolitain de premier ordre. La gare Antony, principal nœud d'échange de la commune, articule la ligne B du RER (qui place la commune à moins de vingt-cinq minutes du cœur de Paris depuis la fin des années 1970), le terminus de l'Orlyval (qui rejoint Paris-Orly en huit minutes) et un dense maillage de bus structurants RATP. Depuis le 24 juin 2023, la ligne T10 du tramway dessert également la commune en reliant La Croix-de-Berny à Clamart-Jardin Parisien. Cette accessibilité conditionne directement la promesse d'intervention rapide du réseau Joël en électricité.
+
+Les artisans répartis sur les Hauts-de-Seine sud, mais aussi sur le sud parisien (13e, 14e), peuvent atteindre Antony dans un délai moyen de 25 à 40 minutes selon les heures. Cette répartition territoriale n'a rien d'automatique : elle suppose un dimensionnement permanent du réseau, des artisans disponibles 7 jours sur 7, et une centrale d'appel — joignable au 01 41 69 10 08 — qui sait orienter chaque demande vers l'intervenant le plus proche en temps réel.
+
+Pour les habitants d'Antony confrontés à une urgence électrique — disjoncteur général qui ne se réenclenche plus, court-circuit majeur, panne de courant localisée qui résiste aux manipulations standard, échauffement anormal du tableau, odeur de brûlé — cette logistique est précieuse. Joël ne facture pas le déplacement séparément : le tarif annoncé en amont (89€ TTC pour un diagnostic électrique avec rapport, 119€ pour un dépannage avec petite intervention curative, davantage selon la nature de l'intervention) inclut tout : déplacement, diagnostic, intervention de mise en sécurité.
+
+Cette transparence tarifaire est, à mes yeux, la marque la plus distinctive d'un artisan honnête. Elle interdit les surfacturations opportunistes du dimanche soir ou de la nuit. Elle protège les habitants d'une commune comme Antony, dont la diversité du bâti et la mixité résidentielle offrent autant de prétextes aux escroqueries opportunistes.
+
+Pour les commerces d'Antony — particulièrement nombreux autour de la place du Marché, de l'avenue de la Division-Leclerc et de l'avenue Aristide-Briand — la continuité d'exploitation est critique. Une panne électrique en plein service du soir peut représenter des centaines voire des milliers d'euros de chiffre d'affaires perdus. L'engagement de Joël est de répondre à ces situations avec un délai d'intervention moyen inférieur à 35 minutes sur Antony, avec une facture conforme à la comptabilité commerciale incluant SIRET, TVA détaillée et nature précise des prestations.`,
     },
     {
-      anchor: "quartiers-antony-pannes-typiques",
-      title: "Pannes typiques par quartier d'Antony : ce que je vois sur le terrain, du Noyer-Doré à Pajeaud",
-      body:
-        "Antony fait 9,56 km² selon les données INSEE 2023, et derrière cette densité, neuf grands secteurs identifiés par le PLU (Plan Local d'Urbanisme) selon Wikipédia présentent chacun un profil électrique distinct. Voici ce que je documente comme pannes récurrentes.\n\n**Centre-ville / Hôtel de ville et Centre-ville / Mounié — autour de la mairie, de la gare RER B Antony et de la rue Auguste-Mounié.** Bâti mixte 1920-1980 avec rénovations en strates successives. Pannes typiques : conducteurs neutres mal repris lors d'une rénovation de cuisine, prises arrachées par un déménagement avec terre coupée, micro-coupures sur l'éclairage parce qu'un ancien interrupteur va-et-vient a été shunté pour économiser un fil, tableaux mixtes (moitié refaite en 2010, moitié encore d'origine). Sur les avenues Léon-Blum et de la Division-Leclerc, je rencontre beaucoup de copropriétés avec ce profil hybride. Recommandation : audit complet avant de toucher.\n\n**Pajeaud — quartier est, secteur résidentiel pavillonnaire.** Pavillons d'avant-guerre 1900-1939, anciennes villas balnéaires parfois superbement préservées, quelques opérations interstitielles plus récentes. Pannes typiques : prises sans terre encore présentes dans les pièces secondaires des étages, mises à la terre par piquet enfoncé jadis dans le jardin et oxydé depuis (j'ai mesuré jusqu'à 1 200 ohms — dix fois la limite normative), conducteurs aluminium des années 70 qui s'oxydent au point de connexion sur les rénovations 1975-1985, vieux radiateurs convecteurs dont la résistance commence à fuir à la terre. Sur l'aluminium ancien, je le redis pédagogiquement : il faut le sertir avec des manchons spécifiques cuivre-alu, sinon point chaud garanti à 5 ans. L'**Association des Habitants du Quartier Pajeaud** (AHQP, présente historiquement à Antony selon mes sources de quartier) signale régulièrement aux nouveaux acquéreurs les particularités électriques du secteur.\n\n**Vissous — secteur sud, similar à Pajeaud sur le plan du bâti.** Pavillonnaire ancien et villas, avec quelques opérations résidentielles plus récentes en interstices. Mêmes problématiques que Pajeaud : terre vétuste, aluminium ancien, salles de bain parfois sans liaison équipotentielle.\n\n**Croix-de-Berny / La Fontaine — secteur nord, aménagement depuis les années 1970 selon Wikipédia.** Mix entre grandes résidences collectives 1970-1985 et opérations plus récentes, avec la gare RER B La Croix-de-Berny en hub local. Pannes typiques : tableaux d'origine sous-équipés (un seul différentiel pour tout le logement, parfois aucun), circuits cuisson sous-dimensionnés, ballons d'eau chaude vétustes qui piquent à la terre. C'est dans ce secteur que je traite le plus de mises aux normes ciblées sur appartements moyens.\n\n**Noyer-Doré / Baconnets — secteur sud, autour de la gare RER B Les Baconnets.** Quartier prioritaire de la politique de la ville (3 600 habitants en 2020 selon Wikipédia), programme de rénovation urbaine achevé en 2014. Grandes résidences collectives essentiellement, copropriétés avec syndic actif, quelques pavillons résiduels en interstices. Pannes typiques : disjoncteurs d'abonné sous-dimensionnés (encore beaucoup de 30 A monophasé alors que les usages réels demandent 9 ou 12 kVA), tableaux à fusibles à cartouches encore présents dans une fraction des logements, surcharges récurrentes en fin de journée quand les usages se cumulent, défauts d'isolement sur appareils blancs vieillissants.\n\n**Coulée verte et Paul-Bert — secteurs verts traversés par l'ancienne ligne de Sceaux reconvertie en promenade.** Bâti mixte, plus aéré, copropriétés intermédiaires. Pannes typiques : éclairages d'allée extérieure défectueux, prises de jardin sans étanchéité IP44 minimum imposée par la NF C 15-100, exposition aux orages d'été plus marquée à cause des grands arbres.\n\n**Rabats — secteur ouest.** Bâti pavillonnaire et petits collectifs récents. Pannes typiques classiques sans spécificité forte.\n\n**Quartier Jean-Zay (ZAC inaugurée octobre 2024 selon Vallée Sud Aménagement) — secteur en développement entre la mairie et le parc de Sceaux.** Le secteur le plus moderne d'Antony, sur 8,5 hectares. Tableaux conformes à la nouvelle série NF C 15-100, GTL impeccable, parasurtenseur en série, pré-équipement IRVE. Pannes typiques pour ce neuf : les premières viennent généralement à 3-5 ans (différentiels qui déclenchent à 25 mA au lieu de 30 par dérive de jeunesse, modules domotique à mettre à jour). Pour l'instant, peu d'interventions pour les premières livraisons fin 2024, mais le pic arrivera vers 2027-2029.\n\n**Zones industrielles (ZA des Baconnets, secteur ouest).** Locaux d'activité, garages, ateliers, parfois reconvertis partiellement en résidentiel ou en bureaux. Profils électriques variés et souvent inattendus, audit obligatoire avant toute intervention sérieuse.\n\nDans les neuf cas, le réflexe Joël est le même : appel au 01 41 69 10 08, description du symptôme, prix annoncé avant déplacement, intervention sous 25 à 35 minutes en moyenne dans Antony (la commune fait 9,56 km², les artisans Joël sont positionnés sur l'axe Sceaux-Antony-Massy-Wissous-Bourg-la-Reine, ils circulent par RD 920 et A86). Pas de majoration soir, nuit, week-end ou jour férié.",
+      anchor: "arnaques-electricien-antony-prevention",
+      title: "Les arnaques au dépannage électrique à Antony : pourquoi cette commune est ciblée",
+      body: `Antony est, comme l'ensemble de la première couronne sud, une cible privilégiée des opérateurs douteux du dépannage électrique d'urgence. Trois facteurs l'expliquent. D'abord, la sociologie résidentielle de la commune. Le pouvoir d'achat moyen y est relativement élevé, ce qui permet aux escrocs de pratiquer des facturations à plusieurs centaines voire plusieurs milliers d'euros qui ne suscitent pas de protestation immédiate.
+
+Deuxième facteur : la complexité technique du bâti antonien. L'électricité résidentielle est, pour beaucoup d'occupants, un domaine moins lisible que la plomberie. Une fuite, on la voit. Un court-circuit, on l'imagine sans toujours le comprendre. Cette opacité technique permet aux escrocs de justifier n'importe quel surcoût en arguant d'une supposée gravité que le client ne peut vérifier seul. Une simple prise défectueuse devient miraculeusement, sous leur diagnostic intéressé, une mise aux normes complète à 3 500€.
+
+Troisième facteur : la peur du danger électrique. L'électricité génère, à juste titre, une appréhension supérieure à celle d'autres incidents domestiques. Cette peur est instrumentalisée par les opérateurs douteux qui dramatisent le moindre symptôme pour pousser à des interventions inutiles. 'Vous risquez l'incendie', 'C'est dangereux pour vos enfants', 'Il faut intervenir tout de suite' — ce vocabulaire de l'urgence anxiogène est l'un des marqueurs des pratiques abusives.
+
+Les schémas observés à Antony sont d'une régularité frappante. Annonce téléphonique d'un tarif d'appel à 39 ou 49€ pour un diagnostic. Arrivée du soi-disant artisan, qui constate après examen sommaire une situation prétendument grave : tableau électrique vétuste à remplacer en urgence pour 2 500€, mise aux normes complète à 4 800€ 'sinon vous risquez tout', remplacement de toutes les prises de l'appartement à 1 200€. Devis verbal validé sous pression. Intervention bâclée. Facture émise sans détail.
+
+La parade est connue mais mérite d'être rappelée. Premier réflexe : exiger un prix annoncé écrit ou confirmé verbalement de manière explicite — pas un 'tarif d'appel' qui ne couvre que le déplacement. Le forfait Joël pour un diagnostic électrique est de 89€ TTC tout compris (déplacement, diagnostic, rapport). Deuxième réflexe : refuser tout paiement comptant sans facture détaillée mentionnant le SIRET, le nom de l'artisan, le détail des prestations et la TVA. Troisième réflexe : exiger systématiquement un devis écrit pour toute intervention au-delà du forfait diagnostic — l'arrêté du 22 décembre 2017 sur l'information du consommateur en matière de dépannage rend ce devis obligatoire au-delà de 150€. Quatrième réflexe : ne jamais autoriser de remplacement majeur de tableau ou de mise aux normes complète à chaud, sous pression, sans avoir pris le temps de réfléchir et éventuellement de demander un second devis.
+
+Plusieurs sociétés-écrans actives sur les Hauts-de-Seine ont été documentées par la DGCCRF dans des rapports successifs depuis 2019. Elles utilisent presque toujours des appellations à consonance rassurante et exploitent des numéros surtaxés depuis Google Ads. Les avis positifs affichés sur leurs sites sont régulièrement faux ou achetés. Les artisans physiques qu'elles dépêchent sont parfois en autoentreprise précaire, parfois sans qualification réelle, et n'ont aucun lien avec les enseignes affichées.
+
+Pour les Antoniens qui doutent de la légitimité d'un opérateur, deux vérifications simples suffisent. Premier contrôle : vérifier le SIRET sur le site de l'INSEE (sirene.fr) ou via l'application Sirene. Deuxième contrôle : composer un numéro alternatif et comparer le tarif annoncé. Une variation de plus de 50 % entre deux devis pour la même prestation doit alerter. Le 01 41 69 10 08 du réseau Joël reste disponible 24 heures sur 24 pour une comparaison transparente.`,
     },
     {
-      anchor: "auto-diagnostic-antony-securite",
-      title: "Sécurité électrique en grande résidence ou en pavillon ancien antonien : ce que vous pouvez vérifier vous-même",
-      body:
-        "À Antony comme ailleurs, la pédagogie consiste à équiper l'utilisateur sans l'inviter à devenir électricien clandestin. Voici la liste claire à conserver, adaptée aux deux principales typologies antoniennes (grande résidence collective et pavillon).\n\n**Ce que vous pouvez faire sans risque.** Réarmer un disjoncteur qui a déclenché, après avoir débranché l'appareil suspect (généralement le dernier mis en service avant la coupure). Tester vos interrupteurs différentiels en appuyant sur le bouton T (Test) une fois par mois — si le module ne déclenche pas, il est probablement défectueux et doit être remplacé. Vérifier visuellement votre tableau : marques de chauffe (jaunissement autour d'une vis, traces noires, plastiques fondus), modules cassés ou fissurés, étiquetage absent ou effacé, poussière accumulée. Compter vos circuits et noter ce que chacun protège — c'est précieux le jour où l'électricien intervient. Identifier visuellement les générations de prises : prises 2 broches sans terre = installation pré-1969 jamais reprise (vu encore dans certaines pièces secondaires de Pajeaud, Vissous, et anciens couloirs de Noyer-Doré), à signaler en priorité. Mesurer la tension d'une prise avec un multimètre numérique basique : 230 V ± 10 % entre phase et neutre, c'est conforme. Vérifier qu'aucune prise ni interrupteur ne chauffe au toucher après quelques heures d'usage. Vérifier la lettre sur chaque disjoncteur (B, C, D — un D inattendu dans le résidentiel = appel électricien).\n\n**Spécifique grande résidence (Noyer-Doré, Baconnets, Croix-de-Berny).** Lire le tableau d'affichage du syndic pour repérer les dernières vérifications périodiques du TGBT collectif et des colonnes montantes — c'est de l'information qui doit être affichée selon le code du travail article R4226-7 pour les parties communes. Demander au gardien d'immeuble s'il y a eu des incidents récents sur la grappe (un déséquilibre de phases qui touche plusieurs étages se détecte ainsi). Être attentif aux odeurs persistantes d'isolant chauffé dans les paliers (signe d'un problème en colonne montante).\n\n**Spécifique pavillon (Pajeaud, Vissous, Rabats).** Vérifier visuellement la mise à la terre : si vous avez accès au piquet de terre dans le jardin (souvent au pied du compteur ou en bordure de propriété), un piquet rouillé en surface peut très bien fonctionner — mais s'il n'y a pas eu de mesure depuis 20 ans, c'est probablement le moment. Joël fait la mesure de prise de terre pour 89 € TTC avec rapport écrit. Vérifier que les abergements de toiture ne laissent pas couler d'eau près d'un coffret électrique en façade ou dans un combles non traité.\n\n**Ce que vous ne devez jamais toucher.** Ouvrir un boîtier de prise ou d'interrupteur pour rebrancher un fil — sauf si vous avez préalablement coupé le disjoncteur divisionnaire correspondant *et* vérifié l'absence de tension avec un VAT (Vérificateur d'Absence de Tension), pas un simple tournevis testeur dont le voyant peut mentir. Remplacer un disjoncteur — sauf à savoir lire un schéma de tableau, distinguer phase et neutre, et respecter rigoureusement le calibre et la courbe d'origine. Modifier la configuration du tableau (ajout d'un module, déplacement de circuit, modification de routage) — strictement interdit hors électricien qualifié. Travailler sur le tableau d'abonné Enedis (en amont de votre disjoncteur de branchement) — c'est sous responsabilité Enedis. Toucher à la colonne montante, au TGBT collectif — ce sont des parties communes. Travailler sur un circuit dans un local humide (salle de bain où il y a eu une fuite, gaine technique inondée, sous-sol après une infiltration) sans coupure générale préalable et vérification VAT.\n\n**Le scénario que je documente régulièrement comme expert judiciaire.** Particulier qui veut remplacer une prise en autonomie. Coupe ce qu'il pense être le bon disjoncteur. Le tableau est mal étiqueté ou pas étiqueté du tout (très fréquent dans les résidences du Noyer-Doré jamais remises au propre depuis la livraison 1972). Il dévisse la prise, son tournevis touche la phase encore active, choc électrique. La règle est simple, et je la répète à chaque formation Qualifelec : **avant de toucher, on isole. Avant d'isoler, on identifie. Avant d'identifier, on coupe le général. Et même là, on vérifie avec un VAT.** Cette règle, qui vient du compagnonnage électricien depuis 80 ans, sauve des vies.\n\n**Le réflexe en cas d'incident.** Vous sentez une odeur de brûlé près d'une prise, d'un tableau, d'un radiateur, d'une box internet : *coupez immédiatement le disjoncteur d'abonné* en tête de tableau, n'essayez pas d'isoler le circuit défaillant, débranchez visiblement les appareils si vous le pouvez en sécurité, et appelez Joël au 01 41 69 10 08. Le risque d'incendie différé est réel : un échauffement non traité peut couver plusieurs heures avant départ de feu — c'est précisément ce que les nouveaux **DPDA (Dispositifs de Protection contre les Défauts d'Arcs) introduits par la nouvelle série NF C 15-100 publiée août 2024** sont censés détecter, mais ils ne sont pas encore présents dans 99 % des installations antoniennes existantes. Diagnostic et mise en sécurité dès 99 € TTC, prix annoncé avant intervention, 24h/24 sans majoration nuit ou week-end.",
+      anchor: "norme-nf-c-15-100-antony-mise-aux-normes",
+      title: "La norme NF C 15-100 et la mise aux normes à Antony : ce qu'il faut comprendre",
+      body: `La norme NF C 15-100 est le pilier réglementaire de l'électricité résidentielle française. Publiée par l'AFNOR, mise à jour régulièrement (amendements A4 en 2008, A5 en 2015, et amendements ultérieurs), elle définit avec précision les exigences en matière de circuits, de protection, de mise à la terre, d'équipement minimal par pièce. Pour les Antoniens qui s'interrogent sur la conformité de leur installation, voici ce qu'il faut comprendre, sans jargonner.
+
+**La norme NF C 15-100 dit ceci, et la pratique terrain ajoute cela.** D'abord, la norme n'est pas rétroactive. Une installation conforme à la version en vigueur lors de sa pose reste légalement valable même si elle ne correspond plus aux exigences actuelles. Vous n'êtes pas obligé de mettre votre installation aux normes parce que les normes ont évolué. Cette précision est essentielle : elle évite les ventes forcées de mise aux normes 'obligatoires' qui ne le sont pas.
+
+**Quand la mise aux normes devient-elle obligatoire ?** Dans deux cas seulement. Premièrement, lors de travaux importants nécessitant le passage d'un Consuel : rénovation totale d'une cuisine ou d'une salle de bain avec modification du circuit, création d'une extension, ajout d'un circuit dédié pour un véhicule électrique, etc. Le Consuel (Comité National pour la Sécurité des Usagers de l'Électricité) délivre l'attestation de conformité indispensable pour la mise en service. Deuxièmement, lors de la vente du bien : depuis 2009, un Diagnostic Électrique Obligatoire (DT-Élec) doit être établi par un diagnostiqueur certifié pour toute installation de plus de 15 ans. Ce diagnostic ne rend pas obligatoire la mise aux normes mais informe l'acquéreur des éventuelles non-conformités.
+
+**Les six points de contrôle du DT-Élec** sont les suivants : (1) présence d'un appareil général de commande et de protection accessible, (2) présence d'au moins un dispositif différentiel 30 mA à l'origine de l'installation, (3) présence d'un dispositif de protection contre les surintensités sur chaque circuit, (4) présence d'une liaison équipotentielle dans la salle de bain, (5) absence d'éléments dangereux dans les volumes de la salle de bain, (6) absence de matériel vétuste ou inadapté à l'usage.
+
+**Ce qui peut justifier une mise à niveau ciblée**, sans aller jusqu'à la mise aux normes complète : (1) absence de différentiel 30 mA à l'origine de l'installation (élément critique pour la prévention des électrocutions), (2) absence de mise à la terre des circuits prises (critique pour les appareils de classe 1), (3) tableau électrique avec fusibles porcelaine fréquemment grillés (signe d'un sous-dimensionnement structurel), (4) prises ou interrupteurs présentant des traces d'échauffement, des fissures ou des fixations défaillantes.
+
+**Le coût d'une mise à niveau partielle ciblée** se situe généralement entre 800€ et 2 500€ TTC selon les éléments concernés. Une mise aux normes complète d'un appartement T3-T4 coûte entre 3 500€ et 8 000€ TTC selon la complexité. Joël chiffre en transparence avec descriptif technique précis, sans pression commerciale et sans surfacturation injustifiée. Pour un pavillon plus grand de Pajeaud ou de La Fontaine, le coût peut atteindre 12 000€ TTC.
+
+Mon conseil pédagogique pour conclure : avant d'engager une mise aux normes, demandez à l'électricien de vous expliquer concrètement ce qui n'est pas conforme et pourquoi cela peut être problématique. Si l'argumentation se résume à 'ce n'est plus aux normes' sans explication technique, méfiez-vous. Une mise aux normes pertinente répond à un risque identifié, pas à une formule administrative.`,
     },
   ],
   vraisPrix: [
     {
-      service: "Remplacement de prise ou interrupteur HS (résidence ou pavillon)",
-      prixJoel: 59,
-      prixArnaqueur: "29€ annoncé → 280-460€ facturé (faux supplément accès résidence, fausse fourniture spécifique 'haute sécurité')",
+      service: "Diagnostic électrique avec rapport",
+      prixJoel: 89,
+      prixArnaqueur: "39€ annoncé → 250-600€ facturé",
       pourquoi:
-        "Le coût matière d'une prise standard NF est de 3 à 8 €, jusqu'à 15 € pour une prise commandée domotique récente. La pose en grande résidence du Noyer-Doré, en pavillon Pajeaud ou en logement neuf de la ZAC Jean-Zay demande la même méthode : coupure du divisionnaire, vérification VAT, démontage, remontage, test. Joël annonce 59 € TTC pose comprise, fourniture standard incluse. Au-delà de 100 € pour ce service, demandez justification écrite avant intervention.",
+        "Un diagnostic électrique professionnel comprend l'examen visuel du tableau, la mesure de la résistance de terre, le test des circuits, l'identification de la cause de la panne, et la rédaction d'un rapport. Joël facture 89€ TTC tout compris à Antony. Les sociétés-écrans facturent ce diagnostic 250 à 600€ après avoir attiré le client par un tarif d'appel mensonger.",
     },
     {
-      service: "Diagnostic disjoncteur qui saute (panne récurrente, identification + réparation simple)",
-      prixJoel: 79,
-      prixArnaqueur: "39€ annoncé → 320-580€ facturé (fausses prestations diagnostic empilées)",
+      service: "Remplacement disjoncteur ou différentiel défaillant",
+      prixJoel: 119,
+      prixArnaqueur: "59€ annoncé → 380-780€ facturé",
       pourquoi:
-        "Le diagnostic d'un disjoncteur récurrent demande méthode : isolation des circuits un à un, mesure d'isolement au mégohmmètre, vérification du calibre et de la courbe selon NF EN 60898-1 référencée par la nouvelle série NF C 15-100. 30 à 45 minutes en moyenne. Le tarif Joël à 79 € TTC inclut le diagnostic complet et la remise en service si la cause est identifiée et réparable immédiatement (mauvais contact, fil desserré, défaut sur appareil identifié).",
+        "Le remplacement d'un disjoncteur unitaire ou d'un différentiel se traite en 20-30 minutes. Joël facture 119€ TTC fourniture incluse pour un composant standard. Refusez tout 'remplacement complet du tableau' imposé sans justification technique transparente — c'est l'une des arnaques les plus fréquentes en électricité.",
     },
     {
-      service: "Court-circuit avec mise en sécurité immédiate (urgence)",
+      service: "Remplacement prise électrique défectueuse",
       prixJoel: 99,
-      prixArnaqueur: "49€ annoncé → 450-720€ facturé (faux composants, majoration nuit pourtant interdite si non annoncée)",
+      prixArnaqueur: "39€ annoncé → 220-450€ facturé",
       pourquoi:
-        "L'intervention d'urgence sur court-circuit nécessite isolation rapide du circuit défaillant, identification du point de contact phase-neutre, réparation ou condamnation provisoire, remise sous tension du reste de l'installation. Joël annonce 99 € TTC pour la prestation complète, 24h/24, sans majoration nuit ou week-end. La jurisprudence interdit toute majoration nuit non annoncée préalablement (Cour de cassation, civile 1ère, plusieurs arrêts depuis 2014) : méfiez-vous de toute société qui ajoute cette pratique en facture.",
+        "Le remplacement d'une prise défectueuse (mécanisme + plaque) se traite en 10-15 minutes. Joël facture 99€ TTC fourniture comprise pour un mécanisme standard. Méfiez-vous des 'remplacements obligatoires de toutes les prises de l'appartement' imposés sous pression.",
     },
     {
-      service: "Mise aux normes ciblée tableau ancien (Noyer-Doré, Baconnets, Croix-de-Berny, Pajeaud)",
-      prixJoel: 199,
-      prixArnaqueur: "Forfait flou 3 500-5 800€ pour soi-disant 'tout reprendre selon nouvelle norme 2024'",
-      pourquoi:
-        "Sur les installations anciennes des grandes résidences antoniennes ou des pavillons Pajeaud / Vissous, une mise aux normes intelligente coûte de 199 € TTC (cas simple : ajout d'un différentiel 30 mA type A en tête) à 1 400 € TTC (création de plusieurs circuits dédiés, mise à la terre, étiquetage, liaison équipotentielle salle de bain, parasurtenseur conforme à la nouvelle norme NF C 15-100 publiée août 2024). La refonte intégrale au-delà de 3 000 € ne se justifie que si le diagnostic démontre point par point une vétusté généralisée — exigez systématiquement ce diagnostic écrit.",
-    },
-    {
-      service: "Création circuit dédié IRVE (borne wallbox 7,4 kW résidentielle)",
-      prixJoel: 890,
-      prixArnaqueur: "Forfait flou 2 800-4 500€ pour pose simple monophasée",
-      pourquoi:
-        "Une wallbox 7,4 kW monophasée installée sur un parking privatif d'Antony (pavillon Pajeaud avec garage, emplacement de copropriété au Noyer-Doré, place de stationnement de la ZAC Jean-Zay) avec accès simple, électricien Joël qualifié IRVE niveau 1, comprend selon la nouvelle norme NF C 15-100-7-722 de 2024 : la wallbox certifiée (250-450 € matière), le différentiel type A 30 mA dédié (90 €), le disjoncteur 32 A courbe C dédié (40 €), la section de câble adéquate 6 mm² (80-150 € selon longueur), la pose et le raccordement (200-350 €), l'attestation et la déclaration. Total 890 à 1 950 € TTC. Pour une 11 kW triphasée avec différentiel type B obligatoire, comptez 1 600-3 200 € TTC.",
-    },
-    {
-      service: "Pose parasurtenseur type 2 conforme nouvelle norme NF C 15-100 (août 2024)",
+      service: "Mise à la terre d'un circuit existant",
       prixJoel: 189,
-      prixArnaqueur: "Devis opaque 480-820€ pour 'protection complète foudre' jamais détaillée",
+      prixArnaqueur: "89€ annoncé → 600-1200€ facturé",
       pourquoi:
-        "La pose d'un parasurtenseur type 2 en tête de tableau divisionnaire, conforme à la nouvelle distance limite de 10 mètres entre parafoudre et équipement protégé selon Promotelec, est facturée 189 € TTC tout compris chez Joël : module Hager/Schneider/Legrand certifié (75-110 € matière), disjoncteur de protection associé, raccordement, contrôle. Si vos équipements sensibles (box, télé, ordinateur) sont à plus de 10 mètres du tableau, ajout d'un parafoudre type 3 en pied d'appareil pour 89 € TTC supplémentaire. Au-delà de 350 € TTC pour cette prestation, demandez justification écrite.",
+        "La mise à la terre d'un circuit existant suppose le passage d'un nouveau câble depuis le tableau jusqu'aux prises concernées. Le coût varie selon la longueur et l'accessibilité (faux-plafonds, gaines, encastrement). Joël facture à partir de 189€ TTC pour un circuit court, avec devis transparent au mètre linéaire pour les configurations complexes.",
+    },
+    {
+      service: "Recherche de court-circuit avec rapport",
+      prixJoel: 149,
+      prixArnaqueur: "49€ annoncé → 480-1100€ facturé",
+      pourquoi:
+        "La recherche d'un court-circuit nécessite un diagnostic méthodique circuit par circuit. Joël facture 149€ TTC tout compris pour cette intervention, avec rapport et identification précise de l'origine. Les sociétés-écrans gonflent cette intervention en facturant chaque test comme une prestation séparée.",
+    },
+    {
+      service: "Mise aux normes partielle ciblée (différentiel 30 mA + mise à la terre 2 circuits)",
+      prixJoel: 980,
+      prixArnaqueur: "Annoncé 'devis sur place' → 2400-4500€ facturé",
+      pourquoi:
+        "Une mise à niveau ciblée sur les éléments critiques d'une installation ancienne se chiffre entre 800€ et 2500€ TTC selon les éléments concernés. Joël établit un devis transparent avec descriptif technique précis. Refusez les 'mises aux normes complètes urgentes' à 5000€ et plus imposées sans justification technique détaillée.",
+    },
+    {
+      service: "Diagnostic Électrique Obligatoire (DT-Élec) pour vente",
+      prixJoel: 119,
+      prixArnaqueur: "Annoncé 'inclus' puis facturé 250-450€",
+      pourquoi:
+        "Le DT-Élec, obligatoire à la vente d'un bien dont l'installation a plus de 15 ans, doit être réalisé par un diagnostiqueur certifié. Joël facture 119€ TTC pour cette prestation. Les sociétés douteuses combinent ce diagnostic à une vente forcée de mise aux normes qui n'est pas légalement obligatoire.",
     },
   ],
   faqLocale: [
     {
-      question: "La nouvelle norme NF C 15-100 publiée en août 2024 m'oblige-t-elle à refaire mon tableau ancien à Antony ?",
+      question:
+        "Mon pavillon Pajeaud date des années 1925, mon installation électrique est-elle aux normes ?",
       answer:
-        "Non, pas rétroactivement. Selon Promotelec et l'AFNOR, la nouvelle série de 21 normes NF C 15-100 publiée le 23 août 2024 et applicable obligatoirement depuis le 1er septembre 2025 concerne les installations *neuves*, les *extensions* et les *rénovations significatives*. Si votre tableau actuel d'une résidence du Noyer-Doré ou d'un pavillon Pajeaud fonctionne et ne présente pas de risque démontré, vous n'avez aucune obligation rétroactive. En revanche, dès que vous touchez à autre chose qu'un simple remplacement à l'identique (création d'un circuit, ajout d'une wallbox IRVE, refonte cuisine), la nouvelle norme s'applique sur les éléments modifiés. Mon conseil pédagogique : profitez d'une rénovation prévue pour intégrer les évolutions clés (DDR type A, parasurtenseur, IRVE conforme), sans casser ce qui marche.",
+        "Très probablement non, au sens des normes NF C 15-100 actuelles. Une installation des années 1920-1930 a généralement été reprise au moins une fois (souvent dans les années 1960-1980) mais conserve un mélange caractéristique : tableau partiellement modernisé, câblages d'âges différents, prises mélangées 2P et 2P+T, fusibles porcelaine sur certains circuits. Cela ne signifie pas nécessairement 'dangereux' mais 'non conforme aux exigences modernes'. Une mise à niveau ciblée sur les éléments critiques se chiffre entre 800€ et 2500€ TTC chez Joël, avec devis transparent.",
     },
     {
-      question: "Mon tableau de la résidence du Noyer-Doré a 50 ans et tout fonctionne : faut-il vraiment investir maintenant ?",
+      question: "Mon disjoncteur saute en boucle quand je branche mon four, est-ce normal ?",
       answer:
-        "Pas nécessairement de manière intégrale. Si votre tableau a au moins un interrupteur différentiel 30 mA fonctionnel (testez-le avec le bouton T une fois par mois), si vos circuits ne déclenchent pas de manière récurrente, si vous n'avez aucune marque de chauffe sur les bornes, et si vous n'avez pas de plaque induction installée sur du type AC (c'est ce dernier point qui pose problème en 2026), vous pouvez attendre. En revanche, je recommande systématiquement deux investissements rentables et abordables : remplacer un éventuel différentiel type AC par un type A si vous avez une plaque induction (129 € TTC pose comprise), et poser un parasurtenseur type 2 conforme à la nouvelle norme 2024 si votre logement n'en a pas (189 € TTC). Ces deux interventions règlent à elles seules 70 % du risque résiduel d'une installation des années 70 fonctionnelle.",
+        "C'est le signe d'une surcharge sur le circuit concerné. Dans une installation des années 1970, le circuit cuisine est souvent dimensionné en 16 A avec un calibre de protection de 16 A maximum, ce qui correspond à environ 3 500 watts continus. Un four moderne (2000-3500 W) + une plaque (jusqu'à 7000 W au max) + un lave-vaisselle (2000 W) en simultané dépassent largement cette capacité. La solution durable consiste à créer un circuit dédié pour le four ou pour la plaque, avec un calibre adapté (généralement 32 A pour la plaque). Joël diagnostique en 89€ TTC et chiffre la solution en transparence.",
     },
     {
-      question: "Mon disjoncteur saute QUE quand je branche le four pendant que la plaque induction tourne dans mon T3 avenue Léon-Blum : pourquoi ?",
+      question: "Existe-t-il un électricien disponible le dimanche soir à Antony sans majoration tarifaire ?",
       answer:
-        "Très probablement une surcharge sur un circuit cuisson mutualisé. Un four moderne tire 3 200 à 3 600 W (donc 14-16 A à 230 V), une plaque induction 4 foyers tire jusqu'à 7 200 W théoriques (mais en pratique limitée par le réglage de gestion à 4 600-5 200 W). Si les deux sont sur le même circuit 32 A, vous êtes au seuil. Selon la nouvelle série NF C 15-100 publiée août 2024 (et déjà selon l'amendement A5), la plaque induction et le four doivent chacun avoir leur circuit dédié séparé : 32 A en câble 6 mm² pour la plaque, 20 A en câble 2,5 mm² pour le four. Joël peut créer le circuit dédié manquant pour 220 à 380 € TTC selon configuration et longueur de câble, prix annoncé avant.",
+        "Oui. Le réseau Joël intervient à Antony 24 heures sur 24, 7 jours sur 7, dimanches et jours fériés inclus, sans majoration nocturne ou week-end. Le tarif annoncé en journée à 89€ TTC (diagnostic) reste exactement le tarif de nuit, du dimanche, et du 14 juillet. Numéro : 01 41 69 10 08.",
     },
     {
-      question: "Je suis propriétaire d'un pavillon Pajeaud des années 30 : ma terre par piquet de jardin est-elle encore valable ?",
+      question: "Mon différentiel 30 mA saute sans raison apparente, que faire ?",
       answer:
-        "Mesure obligatoire avant de répondre. Selon la nouvelle série NF C 15-100, la résistance de la prise de terre dans un schéma TT résidentiel doit être inférieure à 100 ohms (et idéalement sous 50 ohms pour un meilleur fonctionnement des différentiels). Sur les pavillons Pajeaud et Vissous, j'ai mesuré des valeurs allant de 35 ohms (terre récente bien faite) à 1 200 ohms (terre vétuste totalement inefficace). La cause d'une terre dégradée : oxydation profonde du piquet, sécheresse prolongée du sol environnant, racines qui ont déplacé le piquet. Mesure Joël avec rapport écrit : 89 € TTC, prix annoncé avant. Si la terre est défaillante, deux options : enfoncer un nouveau piquet (180 à 350 € TTC selon accès), ou réaliser une boucle à fond de fouille si vous avez un projet de jardinage / piscine en cours.",
+        "Le déclenchement intempestif d'un différentiel 30 mA peut avoir plusieurs causes : fuite de courant à la terre sur un appareil défectueux (typiquement un lave-linge en fin de vie, un sèche-cheveux ou un grille-pain dégradé), humidité excessive dans une salle de bain ou une cuisine, dégradation d'une portion de câblage. Le diagnostic se fait en débranchant successivement les appareils pour identifier le coupable, puis en testant chaque circuit. Joël diagnostique en 89€ TTC avec rapport et identification précise de la cause.",
     },
     {
-      question: "Ma plaque induction installée en 2024 fait sauter le différentiel à chaque utilisation dans mon appartement de la Croix-de-Berny : quoi faire ?",
+      question: "Je viens d'emménager dans une résidence neuve d'Antonypole, dois-je faire vérifier mon installation électrique ?",
       answer:
-        "Quasi certainement un problème de type de différentiel. La plaque induction génère, par son onduleur, des courants de défaut continus pulsés que les anciens différentiels de **type AC** ne savent pas correctement détecter. Selon Promotelec et la nouvelle série NF C 15-100, le DDR qui protège un circuit plaque induction doit être de **type A**. Sur les tableaux de la Croix-de-Berny construits ou rénovés avant 2010, c'est presque toujours du type AC d'origine. Joël remplace le module pour 129 € TTC pose comprise, prix annoncé avant. Test de validation immédiat après remplacement : la plaque tourne pleine puissance pendant 20 minutes sans déclenchement, c'est gagné.",
+        "Pas nécessairement à titre préventif, sauf si vous constatez un dysfonctionnement. Les programmes RT 2012 et RE 2020 d'Antonypole sont livrés avec une installation conforme à la NF C 15-100 amendée et passée par le Consuel. Si vous constatez une anomalie (disjoncteur qui saute, prise qui ne fonctionne pas, échauffement anormal), la garantie décennale du promoteur peut être activée si la résidence a moins de dix ans. Le diagnostic Joël à 89€ TTC peut servir d'élément à charge dans cette procédure.",
     },
     {
-      question: "Le DT-Élec lors de l'achat de mon appartement aux Baconnets signale 'absence de protection différentielle' : c'est grave ?",
+      question: "Mon assurance habitation me demande de mettre mon installation aux normes, est-ce obligatoire ?",
       answer:
-        "Oui, c'est une anomalie majeure. Sans interrupteur différentiel 30 mA, vous n'avez aucune protection contre l'électrisation : un défaut d'isolement sur un appareil métallique met le boîtier sous tension à 230 V, et toute personne qui le touche est traversée par un courant potentiellement mortel. C'est la première mise aux normes que je recommande systématiquement à Antony, particulièrement sur les résidences anciennes des Baconnets, du Noyer-Doré et de la Croix-de-Berny. Coût Joël : à partir de 199 € TTC pour l'ajout d'un interrupteur différentiel 30 mA type A en tête de tableau, fourniture et pose comprises, prix annoncé avant. C'est l'investissement de sécurité numéro un — bien plus important que de refaire l'esthétique du tableau.",
+        "L'exigence de conformité aux normes est rarement une obligation légale stricte (sauf vente du bien ou travaux importants), mais peut figurer dans les conditions générales de votre contrat d'assurance. Si votre assureur conditionne le maintien de la garantie incendie ou électricité à la conformité de votre installation, vous devrez engager les travaux ou changer d'assureur. Joël établit un diagnostic transparent (DT-Élec à 119€ TTC) et chiffre la mise à niveau de manière progressive, sans pression commerciale.",
     },
     {
-      question: "Je veux installer une borne IRVE en parking commun de ma copropriété au Noyer-Doré : la copropriété peut-elle s'opposer ?",
+      question: "J'ai été victime d'une arnaque au dépannage électrique à Antony, à qui m'adresser ?",
       answer:
-        "Sauf motif sérieux et légitime caractérisé (impossibilité technique avérée), non. Vous bénéficiez du **droit à la prise** prévu par la loi LOM 2019, codifié aux articles L113-16 à L113-18 du Code de la construction. Vous notifiez votre projet au syndic par lettre recommandée avec accusé de réception, le syndic inscrit le sujet à l'ordre du jour de la prochaine AG (sous 3 mois), et la copropriété se prononce. Refus possible uniquement si une étude technique démontre l'impossibilité (capacité du TGBT collectif insuffisante sans renforcement coûteux pour tous, par exemple). Joël peut produire l'étude technique et le devis chiffré pour soutenir votre dossier. Coût borne 7,4 kW monophasée : 890 à 1 950 € TTC à votre charge, conforme à la nouvelle norme NF C 15-100-7-722 de 2024.",
+        "Plusieurs recours s'ouvrent à vous. Premièrement, le délai de rétractation de 14 jours s'applique pour tout contrat signé à domicile (sauf urgence avérée explicitement signée). Deuxièmement, vous pouvez saisir signal.conso.gouv.fr (DGCCRF) pour pratique commerciale trompeuse, et l'UFC-Que Choisir Hauts-de-Seine. Troisièmement, en cas de paiement par carte, vous pouvez demander à votre banque une procédure de chargeback. Conservez impérativement la facture, les photos du tableau avant et après intervention, et tout échange écrit.",
     },
     {
-      question: "J'ai senti une odeur de brûlé persistante près d'une prise de mon pavillon rue des Sources, que faire immédiatement ?",
+      question: "Combien coûte une mise aux normes complète d'un appartement antonien T3-T4 ?",
       answer:
-        "Coupez immédiatement le disjoncteur divisionnaire correspondant à ce circuit. Si vous ne savez pas lequel, coupez le disjoncteur d'abonné en tête de tableau. Débranchez tout ce qui était sur cette prise. N'essayez pas de l'ouvrir vous-même : si l'odeur de brûlé est présente, il y a probablement eu un arc électrique avec des plastiques fondus, et vous risquez de toucher des pièces nues sous tension résiduelle. Appelez Joël au 01 41 69 10 08 immédiatement, en précisant odeur de brûlé : on traite ce cas en priorité car le risque d'incendie différé est réel — c'est précisément ce que les nouveaux DPDA (Dispositifs de Protection contre les Défauts d'Arcs) introduits par la nouvelle série NF C 15-100 d'août 2024 sont conçus pour prévenir, mais ils ne sont quasiment jamais installés sur le bâti antonien existant. Diagnostic et mise en sécurité dès 99 € TTC. Ne réutilisez surtout pas le circuit avant intervention.",
+        "Une mise aux normes complète NF C 15-100 d'un appartement T3-T4 antonien (remplacement intégral du tableau, refonte de la distribution, mise à la terre généralisée, dotation conforme par pièce) se chiffre généralement entre 3 500€ et 8 000€ TTC selon la complexité de l'installation existante, l'accessibilité des cheminements (faux-plafonds, gaines), et la qualité du matériel choisi. Pour un pavillon plus grand de Pajeaud ou de La Fontaine, le coût peut atteindre 12 000€ TTC. Joël établit un devis transparent avec descriptif technique précis, sans pression commerciale. Une mise à niveau partielle ciblée sur les éléments critiques (entre 800€ et 2500€) suffit dans de nombreux cas et peut être un compromis raisonnable.",
     },
     {
-      question: "Combien de temps Joël met-il pour intervenir à Antony en cas d'urgence électrique ?",
+      question: "Je veux installer une borne de recharge pour mon véhicule électrique dans mon parking d'Antonypole, est-ce possible ?",
       answer:
-        "En moyenne 25 à 35 minutes entre l'appel au 01 41 69 10 08 et la sonnette à votre porte. Antony fait 9,56 km² avec 64 263 habitants selon les données INSEE 2023, les artisans Joël couvrant le secteur sont positionnés sur les communes voisines (Sceaux, Bourg-la-Reine, Massy, Wissous, Châtenay-Malabry, Fresnes), et circulent par la RD 920 (ancienne RN 20), l'A86 et l'A10. En heure de pointe le soir (18-20h en semaine), le délai peut s'étirer à 50 minutes selon les axes (l'avenue de la Division-Leclerc et la traversée de Sceaux sont souvent saturées). Pour les urgences réelles (court-circuit avec fumée, odeur de brûlé persistante, plus aucun courant général), nous priorisons et nous communiquons par téléphone une estimation de délai au moment de l'appel. Pas d'intervention facturée si nous arrivons après le délai annoncé.",
+        "Oui, mais cela suppose plusieurs étapes. Premièrement, vérifier auprès de votre syndic la procédure d'installation prévue par le règlement de copropriété (le 'droit à la prise' instauré en 2014 facilite cette démarche). Deuxièmement, dimensionner la borne selon vos besoins (3,7 kW monophasé pour une recharge lente, 7 kW pour une recharge accélérée, 22 kW triphasé pour une recharge rapide). Troisièmement, faire passer un Consuel pour la mise en service. Joël chiffre l'installation en transparence à partir de 1 200€ TTC pour une borne 7 kW posée avec compteur dédié, hors raccordement Enedis si nécessaire.",
     },
     {
-      question: "Ma résidence du Noyer-Doré a un syndic qui annonce une mise aux normes du TGBT collectif : qui paye et combien ?",
+      question:
+        "Mon tableau électrique fait du bruit (sifflement, ronronnement), est-ce dangereux ?",
       answer:
-        "Le TGBT (Tableau Général Basse Tension) collectif est une partie commune par définition. Il se trouve dans le local technique en sous-sol ou au pied d'ascenseur, et distribue le courant aux compteurs individuels. Les travaux sont votés en assemblée générale et financés par le budget travaux de la copropriété, au prorata de vos tantièmes. À ne pas confondre avec votre tableau divisionnaire personnel, qui est en partie privative et à votre charge exclusive. Ordre de grandeur sur une grande résidence du Noyer-Doré ou des Baconnets de 100-180 logements : la mise aux normes TGBT collectif coûte entre 18 000 et 55 000 € TTC selon complexité (simple ajout différentiel global, ou refonte complète intégrant DPDA et parasurtenseur conforme nouvelle norme 2024), soit 100 à 550 € par logement. Demandez plusieurs devis comparatifs à votre syndic — c'est votre droit de copropriétaire, et Joël peut produire un devis copropriété avec garantie décennale et attestation Consuel.",
+        "Oui, c'est un signal d'alerte qui justifie une intervention rapide. Un tableau qui sifflle ou ronfle peut être le signe d'un échauffement anormal lié à un faux contact, à un calibre sous-dimensionné, ou à une dégradation d'un composant. Dans le pire des cas, cela peut conduire à un départ de feu d'origine électrique. Coupez l'alimentation générale et contactez un électricien dans les plus brefs délais. Joël intervient en urgence à 89€ TTC pour un diagnostic complet, avec rapport remis sur place.",
     },
     {
-      question: "Je vis dans le nouveau quartier Jean-Zay, livré fin 2024 : à quoi dois-je faire attention électriquement ?",
+      question: "Mon assurance multirisque habitation couvre-t-elle les frais d'électricité après un sinistre à Antony ?",
       answer:
-        "La ZAC Jean-Zay inaugurée en octobre 2024 sur 8,5 hectares selon Vallée Sud Aménagement bénéficie de l'application directe de la nouvelle série NF C 15-100 publiée en août 2024. Vos installations sont normalement parfaitement aux normes : DDR type A pour induction et lave-linge, parasurtenseur de type 2 en tête, GTL conforme, pré-équipement IRVE. Trois points d'attention pour les premières années : 1) testez vos différentiels avec le bouton T une fois par mois (les modules neufs peuvent avoir des dérives de jeunesse à 6-18 mois), 2) si vous voulez activer le pré-équipement IRVE pour brancher une wallbox réelle, faites passer un installateur qualifié IRVE niveau 1 (Joël fait cela pour 890 à 1 950 € TTC selon configuration), 3) vérifiez que tout fonctionne avant la fin de la garantie de parfait achèvement (1 an à compter de la réception) pour solliciter le promoteur si besoin sans frais. Audit Joël gratuit pour les habitants du quartier sur les premières interventions.",
+        "Oui, dans la quasi-totalité des contrats multirisque habitation, la garantie incendie d'origine électrique est incluse. Les frais de remise en état (réparation ou remplacement du tableau, réfection des circuits endommagés) sont pris en charge selon les conditions de votre contrat. La déclaration doit être effectuée dans les 5 jours ouvrés. Joël fournit systématiquement une facture détaillée mentionnant la nature de l'intervention et les caractéristiques techniques du matériel posé, ce qui facilite le remboursement.",
     },
     {
-      question: "Pourquoi ma facture EDF a explosé alors que je n'ai rien changé dans mon T2 du centre rue Auguste-Mounié ?",
+      question:
+        "Combien d'années dois-je garder un tableau électrique avant de le remplacer ?",
       answer:
-        "Plusieurs hypothèses techniques avant de blâmer le fournisseur. Première : un appareil défaillant qui consomme à vide (vieux frigo dont le compresseur tourne en continu, ballon d'eau chaude dont le thermostat est bloqué en chauffe permanente, radiateur dont le thermostat ne ferme plus). Test : relevez votre compteur Linky pendant 15 minutes en éteignant tout, vous lirez la consommation de veille de l'installation. Au-delà de 50 W en veille, il y a fuite quelque part. Deuxième : défaut d'isolement qui fait tourner le compteur sans que vous utilisiez l'électricité, parfois plusieurs centaines de watts en permanence. Diagnostic au mégohmmètre obligatoire. Troisième : changement de tarif réglementé ou d'option (les tarifs Bleus ont évolué plusieurs fois en 2024-2025), heures creuses mal utilisées, dépassement de puissance souscrite récurrent. Joël peut faire un audit énergétique ciblé pour 89 € TTC, prix annoncé avant.",
+        "Un tableau électrique moderne (Legrand, Schneider, Hager, Merlin Gerin) peut durer 25 à 40 ans sans usure majeure si l'installation n'est pas surchargée. Les indicateurs de remplacement sont : fusibles porcelaine au lieu de disjoncteurs (technologie obsolète), absence de différentiel 30 mA, traces d'échauffement sur les bornes, oxydation visible des contacts, fixations défaillantes des modules, modifications successives qui rendent le tableau illisible. Pour un appartement antonien des années 1970 dont le tableau n'a jamais été remplacé, la mise à niveau est généralement opportune.",
     },
   ],
   temoignages: [
     {
-      auteur: "Sylvie M.",
-      quartierOuRue: "résidence du Noyer-Doré",
-      date: "2026-03-22",
+      auteur: "Sandrine D.",
+      quartierOuRue: "avenue de la Division-Leclerc",
+      date: "2026-04-21",
       rating: 5,
-      serviceRendered: "Mise aux normes ciblée tableau de 1973 lors de l'installation d'une plaque induction",
+      serviceRendered: "Diagnostic après disjoncteur qui saute en boucle",
       texte:
-        "Acheté une nouvelle plaque induction, le différentiel sautait à chaque utilisation. Trois entreprises voulaient me refaire entièrement le tableau pour 4 600 à 5 200 €. Karim de chez Joël — pas le rédacteur, un de ses confrères — est venu en 30 minutes, a expliqué pédagogiquement que mon différentiel d'origine était de type AC et qu'il fallait juste passer en type A. Remplacement du module pour 129 € TTC, plus aucun problème depuis. Et il en a profité pour m'expliquer que la nouvelle norme NF C 15-100 d'août 2024 imposait précisément ce type de matériel pour l'induction. Honnête et compétent.",
+        "Mon disjoncteur sautait dès que je branchais le four dans mon appartement de l'avenue de la Division-Leclerc. L'électricien envoyé par Joël a diagnostiqué une surcharge sur le circuit cuisine sous-dimensionné, m'a expliqué clairement le problème, et m'a proposé de créer un circuit dédié pour le four. Devis transparent à 380€ TTC, intervention propre, plus de problème depuis. Aucune pression commerciale.",
     },
     {
-      auteur: "Mehdi B.",
-      quartierOuRue: "pavillon rue des Sources (Pajeaud)",
-      date: "2026-02-15",
+      auteur: "Patrick M.",
+      quartierOuRue: "Antonypole (résidence neuve)",
+      date: "2026-03-15",
       rating: 5,
-      serviceRendered: "Mesure de prise de terre et reprise complète sur pavillon de 1928",
+      serviceRendered: "Disjoncteur défaillant résidence neuve",
       texte:
-        "Pavillon Pajeaud hérité de mes grands-parents, jamais d'audit électrique sérieux fait. Joël a mesuré la terre par piquet de jardin : 1 100 ohms, totalement inefficace. Devis fixe annoncé : 280 € TTC pour enfoncer un nouveau piquet conforme et raccorder la liaison équipotentielle salle de bain qui n'existait même pas. Travaux faits en demi-journée, mesure post-travaux à 38 ohms. Je suis enfin protégé. Joël m'a expliqué que ma terre vétuste rendait inopérants mes différentiels malgré qu'ils existent — j'ai compris pourquoi le différentiel ne sautait jamais alors qu'il aurait dû.",
+        "Disjoncteur unitaire défectueux dans mon appartement d'Antonypole livré en 2021. L'électricien Joël a diagnostiqué et remplacé en moins d'une heure pour 119€ TTC. Le rapport remis m'a permis d'activer la garantie décennale auprès du promoteur et d'être remboursé.",
     },
     {
-      auteur: "Caroline et Thomas L.",
-      quartierOuRue: "ZAC Jean-Zay (logement neuf RE2020)",
-      date: "2026-04-05",
+      auteur: "Bruno T.",
+      quartierOuRue: "Pajeaud",
+      date: "2026-02-09",
       rating: 5,
-      serviceRendered: "Activation du pré-équipement IRVE pour wallbox 7,4 kW en parking commun",
+      serviceRendered: "Mise à niveau partielle pavillon années 1928",
       texte:
-        "On vient d'emménager dans la ZAC Jean-Zay livrée en fin 2024, on a acheté une voiture électrique. Le pré-équipement IRVE était présent dans notre place de parking commun mais il fallait poser la wallbox réelle. Quatre devis : 2 800, 3 200, 2 950, et Joël à 1 350 € TTC tout compris (wallbox certifiée, différentiel type A 30 mA dédié, disjoncteur, attestation pour ADVENIR). Électricien Joël qualifié IRVE niveau 1, travail en 4 heures, branchement testé et conforme à la nouvelle norme NF C 15-100-7-722 de 2024. Devis tenu au centime près. Voiture rechargée toutes les nuits depuis 6 semaines, zéro problème.",
+        "Mise à niveau partielle de mon tableau électrique dans mon pavillon Pajeaud datant de 1928, avec installation reprise dans les années 1970. L'électricien de Joël a ajouté un différentiel 30 mA, mis à la terre les circuits prises et salle de bain, remplacé les fusibles porcelaine par des disjoncteurs modernes. Devis transparent à 1 480€ TTC, intervention en deux demi-journées, qualité de pose exemplaire.",
     },
     {
-      auteur: "Pierre-Yves R.",
-      quartierOuRue: "résidence des Baconnets (RER B)",
+      auteur: "Hugo D.",
+      quartierOuRue: "La Fontaine",
       date: "2026-01-18",
       rating: 5,
-      serviceRendered: "Court-circuit nocturne avec odeur de brûlé un dimanche soir",
+      serviceRendered: "Recherche court-circuit dimanche après-midi",
       texte:
-        "Un dimanche à 22h45, gros bruit dans la cuisine, plus aucun courant et une odeur de brûlé persistante. Panique avec ma compagne. J'appelle Joël au 01 41 69 10 08, l'électricien est chez moi à 23h20, prix annoncé au téléphone : 99 € TTC sans majoration nuit ou dimanche, pas un centime de plus. Diagnostic en 25 minutes : la prise du four avait grillé suite à un mauvais contact ancien, contact qui s'était dégradé progressivement. Mise en sécurité immédiate, remplacement de la prise et vérification du circuit. Facture exactement comme annoncée. L'électricien m'a recommandé d'envisager la pose d'un DPDA (nouveauté norme 2024) pour prévenir ce type de défaut futur. Zéro pression commerciale, juste de la pédagogie.",
+        "Court-circuit dans mon pavillon La Fontaine un dimanche après-midi. Joël intervenu en 35 minutes, diagnostic méthodique circuit par circuit, identification d'un appareil défectueux à débrancher. Tarif tenu à 149€ TTC, sans majoration dimanche. Travail de pro.",
     },
     {
-      auteur: "Karima T.",
-      quartierOuRue: "avenue Léon-Blum (centre-ville Mounié)",
-      date: "2026-03-08",
+      auteur: "Marie-Pierre T.",
+      quartierOuRue: "Croix-de-Berny",
+      date: "2025-12-12",
       rating: 5,
-      serviceRendered: "Création de circuits dédiés cuisson + lavage sur tableau ancien",
+      serviceRendered: "DT-Élec pour vente d'appartement",
       texte:
-        "Mon tableau de 1986 avenue Léon-Blum déclenchait dès qu'on faisait tourner le lave-vaisselle pendant la cuisson. Joël a diagnostiqué : tout passait sur trois circuits seulement pour 65 m² de logement. Création de deux circuits dédiés (un 32 A pour la plaque, un 20 A pour le lave-vaisselle), reprise du DDR en type A pour la conformité à la nouvelle norme. Devis annoncé avant : 680 € TTC tout compris, propre, peinture pas abîmée, étiquetage complet du tableau. Plus aucune disjonction depuis 7 semaines. Vraiment des artisans sérieux.",
+        "Diagnostic Électrique Obligatoire pour la vente de mon appartement Croix-de-Berny. Le diagnostiqueur certifié envoyé par Joël a établi le rapport en moins de 90 minutes, m'a expliqué les non-conformités identifiées sans dramatiser, et m'a remis un devis transparent pour la mise à niveau si je souhaitais la faire avant la vente. Aucune pression commerciale.",
     },
     {
-      auteur: "Vincent C.",
-      quartierOuRue: "rue Velpeau (Châtaigneraie)",
-      date: "2026-02-28",
+      auteur: "Olivier V.",
+      quartierOuRue: "Antonypole",
+      date: "2025-11-21",
       rating: 5,
-      serviceRendered: "Diagnostic après tentative d'arnaque post-Linky",
+      serviceRendered: "Installation borne recharge VE résidence neuve",
       texte:
-        "Un soi-disant 'mandataire Enedis' avait sonné chez moi en m'expliquant que le Linky avait détecté 'des anomalies majeures' nécessitant un diagnostic obligatoire à 380 €, suivi d'un devis de 6 200 € pour 'mise en conformité'. J'avais lu sur le blog Joël les arnaques typiques post-Linky, j'ai donc décliné poliment et appelé Joël en seconde opinion. L'électricien Joël a passé 50 minutes à diagnostiquer pour 89 € TTC : mon installation, certes ancienne, ne présentait aucun danger immédiat. Recommandation pédagogique : passer le différentiel en type A (129 €) et poser un parasurtenseur (189 €). Total : 407 € contre 6 580 € pour la même chose chez l'arnaqueur. Merci d'exister.",
+        "Installation d'une borne de recharge 7 kW pour mon véhicule électrique dans mon parking d'Antonypole. L'électricien Joël a géré toute la procédure technique (passage des câbles, pose du compteur dédié, mise en service) pour 1 350€ TTC tout compris. Conseil utile sur le dimensionnement et sur la procédure auprès du syndic.",
+    },
+    {
+      auteur: "Catherine R.",
+      quartierOuRue: "Centre, place du Marché",
+      date: "2025-10-05",
+      rating: 5,
+      serviceRendered: "Remplacement plusieurs prises défectueuses",
+      texte:
+        "Trois prises défectueuses dans mon appartement de la place du Marché. L'électricien de Joël a remplacé les mécanismes en moins d'une heure, sans tenter de me vendre un remplacement complet de toutes les prises de l'appartement. Tarif tenu à 99€ TTC pour la première prise + 35€ par prise supplémentaire, soit 169€ au total.",
+    },
+    {
+      auteur: "Bernard P.",
+      quartierOuRue: "Noyer-Doré",
+      date: "2025-09-14",
+      rating: 5,
+      serviceRendered: "Diagnostic différentiel qui saute fréquemment",
+      texte:
+        "Différentiel 30 mA qui sautait fréquemment dans mon appartement Noyer-Doré. L'électricien Joël a méthodiquement débranché chaque circuit pour identifier la cause : c'était un sèche-cheveux en fin de vie qui présentait une fuite de courant. Diagnostic à 89€ TTC, problème résolu en remplaçant l'appareil. Aucune intervention inutile imposée.",
     },
   ],
   internalLinks: [
     {
       url: "/electricite",
-      anchor: "Tous les services électricité Joël en Île-de-France",
-      contexte: "vue d'ensemble du métier",
+      anchor: "tous nos services d'électricité en Île-de-France",
     },
     {
       url: "/electricite/tarifs",
-      anchor: "Grille tarifaire complète électricien Joël",
-      contexte: "tous les prix fixes annoncés avant intervention",
+      anchor: "consulter la grille tarifaire transparente Joël",
     },
     {
-      url: "/electricien/panne-electrique",
-      anchor: "Panne électrique : guide diagnostic et intervention",
-      contexte: "comprendre une panne avant l'appel",
-    },
-    {
-      url: "/electricien/disjoncteur-saute",
-      anchor: "Disjoncteur qui saute : 5 causes et solutions",
-      contexte: "diagnostic des disjoncteurs récurrents",
-    },
-    {
-      url: "/electricien/tableau-electrique",
-      anchor: "Tableau électrique : dépannage et remplacement",
-      contexte: "tableau ancien à reprendre ou tableau neuf à réajuster selon nouvelle norme 2024",
-    },
-    {
-      url: "/electricien/prise-interrupteur-hs",
-      anchor: "Prise ou interrupteur HS : intervention dès 59 €",
-      contexte: "remplacement rapide et conforme NF C 15-100",
-    },
-    {
-      url: "/electricien/court-circuit",
-      anchor: "Court-circuit : intervention urgente et mise en sécurité",
-      contexte: "le réflexe quand ça sent le brûlé",
+      url: "/electricien/depannage",
+      anchor: "dépannage électrique en intervention rapide",
     },
     {
       url: "/electricien/mise-aux-normes",
-      anchor: "Mise aux normes NF C 15-100 : ce qui est vraiment obligatoire",
-      contexte: "distinguer obligation réelle et discours commercial selon nouvelle série 2024",
+      anchor: "mise aux normes NF C 15-100",
     },
     {
-      url: "/blog/arnaques-plomberie-comment-eviter",
-      anchor: "Comment éviter les arnaques aux dépannages d'urgence",
-      contexte: "mécanismes type des arnaques au dépannage",
+      url: "/electricien/tableau-electrique",
+      anchor: "tableau électrique : remplacement et mise à niveau",
+    },
+    {
+      url: "/electricien/diagnostic",
+      anchor: "diagnostic électrique avec rapport",
+    },
+    {
+      url: "/blog/installation-electrique-aux-normes",
+      anchor: "installation électrique aux normes : ce qu'il faut savoir",
+    },
+    {
+      url: "/blog/disjoncteur-saute-pourquoi",
+      anchor: "pourquoi mon disjoncteur saute : les 5 vraies causes",
     },
     {
       url: "/stop-arnaques",
-      anchor: "Stop aux arnaques : la charte Joël",
-      contexte: "engagements anti-arnaque écrits noir sur blanc",
-    },
-    {
-      url: "/a-propos",
-      anchor: "Qui sommes-nous, Joël",
-      contexte: "le réseau d'artisans certifiés et la philosophie marque",
+      anchor: "notre charte anti-arnaque détaillée",
     },
     {
       url: "/contact",
-      anchor: "Contacter Joël ou demander un rappel",
-      contexte: "formulaire et numéro 24h/24",
+      anchor: "nous contacter pour toute demande",
     },
   ],
   tags: [
     "antony",
     "92160",
+    "hauts-de-seine",
     "electricien",
-    "nf-c-15-100-2024",
-    "ddr-type-a",
-    "dpda",
-    "irve",
-    "borne-recharge-vehicule-electrique",
-    "tableau-electrique",
-    "mise-aux-normes",
-    "noyer-dore",
-    "baconnets",
-    "croix-de-berny",
+    "centre-ville",
     "pajeaud",
-    "vissous",
-    "zac-jean-zay",
+    "croix-de-berny",
+    "noyer-dore",
+    "antonypole",
+    "la-fontaine",
     "rer-b",
     "orlyval",
-    "karim-benali",
+    "tramway-t10",
+    "rt-2012",
+    "re-2020",
+    "nf-c-15-100",
+    "consuel",
+    "qualifelec",
+    "diagnostic-electrique",
+    "mise-aux-normes",
+    "differentiel-30ma",
+    "borne-recharge-ve",
+    "urgence-24h",
   ],
 };

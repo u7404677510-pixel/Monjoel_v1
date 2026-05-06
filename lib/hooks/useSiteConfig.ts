@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase";
 
 interface SiteConfig {
   phone_number: string;
@@ -24,49 +23,62 @@ const defaultConfig: SiteConfig = {
   show_phone: true,
   show_cta_phone: true,
   show_cta_devis: true,
-  cta_devis_url: "#quote-form", // Ancre vers le formulaire de devis (sera créé)
+  cta_devis_url: "#quote-form",
 };
 
+// Module-level cache: shared across all useSiteConfig instances on the page
+let cachedConfig: SiteConfig | null = null;
+let inflight: Promise<SiteConfig> | null = null;
+
+async function loadSiteConfig(): Promise<SiteConfig> {
+  if (cachedConfig) return cachedConfig;
+  if (inflight) return inflight;
+
+  inflight = (async () => {
+    try {
+      const res = await fetch("/api/site-config");
+      if (!res.ok) return defaultConfig;
+      const data = await res.json();
+      const merged: SiteConfig = {
+        phone_number: data?.phone_number || defaultConfig.phone_number,
+        primary_color: data?.primary_color || defaultConfig.primary_color,
+        secondary_color: data?.secondary_color || defaultConfig.secondary_color,
+        show_testimonials: data?.show_testimonials ?? defaultConfig.show_testimonials,
+        show_quiz: data?.show_quiz ?? defaultConfig.show_quiz,
+        show_phone: data?.show_phone ?? defaultConfig.show_phone,
+        show_cta_phone: data?.show_cta_phone ?? defaultConfig.show_cta_phone,
+        show_cta_devis: data?.show_cta_devis ?? defaultConfig.show_cta_devis,
+        cta_devis_url: data?.cta_devis_url || defaultConfig.cta_devis_url,
+      };
+      cachedConfig = merged;
+      return merged;
+    } catch {
+      return defaultConfig;
+    }
+  })();
+
+  return inflight;
+}
+
 export function useSiteConfig() {
-  const [config, setConfig] = useState<SiteConfig>(defaultConfig);
-  const [loading, setLoading] = useState(true);
+  const [config, setConfig] = useState<SiteConfig>(cachedConfig ?? defaultConfig);
+  const [loading, setLoading] = useState(!cachedConfig);
 
   useEffect(() => {
-    async function fetchConfig() {
-      // If supabase is not configured, use default config
-      if (!supabase) {
-        setLoading(false);
-        return;
-      }
-
-      try {
-        const { data, error } = await supabase
-          .from("site_config")
-          .select("*")
-          .single();
-
-        if (error) throw error;
-        if (data) {
-          setConfig({
-            phone_number: data.phone_number || defaultConfig.phone_number,
-            primary_color: data.primary_color || defaultConfig.primary_color,
-            secondary_color: data.secondary_color || defaultConfig.secondary_color,
-            show_testimonials: data.show_testimonials ?? defaultConfig.show_testimonials,
-            show_quiz: data.show_quiz ?? defaultConfig.show_quiz,
-            show_phone: data.show_phone ?? defaultConfig.show_phone,
-            show_cta_phone: data.show_cta_phone ?? defaultConfig.show_cta_phone,
-            show_cta_devis: data.show_cta_devis ?? defaultConfig.show_cta_devis,
-            cta_devis_url: data.cta_devis_url || defaultConfig.cta_devis_url,
-          });
+    let cancelled = false;
+    loadSiteConfig()
+      .then((data) => {
+        if (!cancelled) {
+          setConfig(data);
+          setLoading(false);
         }
-      } catch (err) {
-        console.error("Error fetching site config:", err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchConfig();
+      })
+      .catch(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return { config, loading };

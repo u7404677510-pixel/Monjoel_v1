@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien à Courbevoie : tours La Défense, bâti Bécon, radiateurs Atlantic, expats multi-prises, NF C 15-100. Prix fixe dès 59€ TTC. Joël 01 41 69 10 08.",
   h1: "Électricien à Courbevoie (92400) : le guide pédagogique signé Karim Benali",
-  introParagraph:
-    "Courbevoie, c'est probablement la commune la plus bicéphale d'Île-de-France d'un point de vue électrique. D'un côté, La Défense — la première tour livrée en 1960, des dizaines d'autres depuis, et tout autour, les résidences haut de gamme du Faubourg de l'Arche, de Cœur Défense et des immeubles de prestige boulevard Aristide-Briand. De l'autre, la ville historique : Bécon-les-Bruyères avec ses petits collectifs 1900-1930 autour de la gare Transilien L, le centre ancien autour de la place de l'Hôtel-de-Ville, les maisons de ville de l'avenue Marceau et de l'avenue de Verdun, le quartier Charras et le secteur Gambetta. Entre les deux, des centaines de logements rénovés à des époques très différentes, et surtout — particularité courbevoisienne — une densité d'expatriés exceptionnelle. Cadres internationaux des sièges de Total, EDF, Engie, KPMG, Aviva implantés à La Défense, qui débarquent avec leurs appareils 110 V américains, leurs transformateurs, leurs multiprises au format britannique ou européen continental, et toute une logistique électrique qu'aucun installateur français des années 90 n'avait anticipée. Je suis Karim Benali, ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques pendant quatre ans, formateur Qualifelec sur la mise aux normes des installations résidentielles. J'ai écrit cette page pour les Courbevoisiens — propriétaires, locataires, expats, gestionnaires de copropriété, gardiens d'immeuble — qui veulent comprendre ce qui se passe dans leur tableau quand un disjoncteur tombe à 23h, pourquoi leurs vieux radiateurs Atlantic des années 90 commencent à griller, ou comment brancher en toute sécurité un transformateur 220/110 V pour un grille-pain rapporté de Boston. Quand vous appellerez Joël au 01 41 69 10 08, vous saurez exactement ce que l'électricien doit chercher, et combien cela doit raisonnablement coûter. Le tarif Joël démarre à 59 € TTC pour un remplacement de prise standard, annoncé avant intervention, sans majoration nuit, week-end ou jour férié. Pas de surprise, pas de devis qui passe de 70 € à 540 € entre la sonnette et la facture. Lisez tranquillement, ou en urgence : dans les deux cas, vous y gagnerez du temps, de la sécurité et probablement de l'argent.",
+  introParagraph: `### Courbevoie, une commune bicéphale d'un point de vue électrique
+
+Courbevoie, c'est probablement la commune la plus bicéphale d'Île-de-France d'un point de vue électrique. D'un côté, **La Défense** — la première tour livrée en **1960**, des dizaines d'autres depuis, et tout autour, les résidences haut de gamme du **Faubourg de l'Arche**, de **Cœur Défense** et des immeubles de prestige **boulevard Aristide-Briand**.
+
+De l'autre, la ville historique : **Bécon-les-Bruyères** avec ses petits collectifs **1900-1930** autour de la gare Transilien L, le centre ancien autour de la **place de l'Hôtel-de-Ville**, les maisons de ville de l'**avenue Marceau** et de l'**avenue de Verdun**, le quartier **Charras** et le secteur **Gambetta**.
+
+### La spécificité courbevoisienne : une densité d'expatriés exceptionnelle
+
+Entre les deux, des centaines de logements rénovés à des époques très différentes, et surtout — particularité courbevoisienne — une **densité d'expatriés exceptionnelle**.
+
+Cadres internationaux des sièges de **Total, EDF, Engie, KPMG, Aviva** implantés à La Défense, qui débarquent avec leurs **appareils 110 V américains**, leurs transformateurs, leurs multiprises au format britannique ou européen continental, et toute une logistique électrique qu'aucun installateur français des années 90 n'avait anticipée.
+
+### L'auteur de cette page
+
+Je suis **Karim Benali**, **ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques pendant quatre ans, **formateur Qualifelec** sur la mise aux normes des installations résidentielles.
+
+J'ai écrit cette page pour les Courbevoisiens — propriétaires, locataires, expats, gestionnaires de copropriété, gardiens d'immeuble — qui veulent comprendre ce qui se passe dans leur tableau quand un disjoncteur tombe à 23h, pourquoi leurs vieux radiateurs Atlantic des années 90 commencent à griller, ou comment brancher en toute sécurité un transformateur 220/110 V pour un grille-pain rapporté de Boston.
+
+### Joël à Courbevoie : tarif fixe annoncé en amont
+
+Quand vous appellerez Joël au **01 41 69 10 08**, vous saurez exactement ce que l'électricien doit chercher, et combien cela doit raisonnablement coûter. Le tarif Joël démarre à **59 € TTC** pour un remplacement de prise standard, annoncé avant intervention, sans majoration nuit, week-end ou jour férié.
+
+Pas de surprise, pas de devis qui passe de 70 € à 540 € entre la sonnette et la facture. Lisez tranquillement, ou en urgence : dans les deux cas, vous y gagnerez du temps, de la sécurité et probablement de l'argent.`,
   sections: [
     {
       anchor: "courbevoie-bicephale-electrique",

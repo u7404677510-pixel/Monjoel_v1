@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "Installation serrure multipoints Paris & IDF. 3, 5 ou 7 points dès 249€. Certification A2P, protection maximale. Devis gratuit, artisan certifié.",
   alternates: {
     canonical: "https://monjoel.fr/serrurier/serrure-multipoints",
+    languages: {
+      "fr-FR": "https://monjoel.fr/serrurier/serrure-multipoints",
+      "x-default": "https://monjoel.fr/serrurier/serrure-multipoints",
+    },
   },
   openGraph: {
     title: "Serrure Multipoints | 3, 5, 7 Points | Joël",

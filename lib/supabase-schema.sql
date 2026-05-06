@@ -152,3 +152,22 @@ ALTER TABLE recruitment_applications ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Allow public read" ON recruitment_applications FOR SELECT USING (true);
 CREATE POLICY "Allow anon write" ON recruitment_applications FOR ALL USING (true);
 
+-- =============================================
+-- CACHE SEARCH CONSOLE (dashboard /admin/seo)
+-- =============================================
+-- Stocke les snapshots du sync GSC. On garde l'historique (1 ligne / sync)
+-- pour pouvoir tracker la tendance et debugger un sync foireux.
+CREATE TABLE IF NOT EXISTS seo_search_console_cache (
+  id BIGSERIAL PRIMARY KEY,
+  payload JSONB NOT NULL,
+  synced_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_seo_gsc_cache_synced_at
+  ON seo_search_console_cache(synced_at DESC);
+
+ALTER TABLE seo_search_console_cache ENABLE ROW LEVEL SECURITY;
+-- Pas de lecture publique (données admin)
+CREATE POLICY "Allow service write" ON seo_search_console_cache FOR ALL USING (true);
+

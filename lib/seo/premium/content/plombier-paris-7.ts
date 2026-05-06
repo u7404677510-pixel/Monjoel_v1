@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Paris 7e — interventions sensibles en bâti haussmannien et secteur ABF. Prix Joël annoncé dès 79€ TTC, 24h/24, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Paris 7e : intervenir sur l'eau dans un bâti haussmannien sans le trahir",
-  introParagraph:
-    "Le 7e arrondissement n'est pas un quartier comme les autres. Édifié pour l'essentiel entre 1853 et 1910, sous l'impulsion conjointe d'Haussmann et des grands lotisseurs du Faubourg Saint-Germain, il rassemble sur 4,09 km² près de 51 367 habitants logés dans des immeubles dont la valeur patrimoniale impose à l'artisan plombier une discipline particulière. Quand on intervient rue de Grenelle, rue du Bac ou avenue Bosquet, on ne touche pas seulement à des canalisations : on travaille sur un édifice pré-existant, souvent inscrit, parfois classé, presque toujours soumis aux règles de l'Architecte des Bâtiments de France pour tout ce qui touche aux façades, aux cages d'escalier ou aux courettes intérieures. Une fuite d'eau dans un appartement de la rue Saint-Dominique, une remontée d'évacuation rue de Babylone, un chauffe-eau en panne dans un cinquième étage du Gros-Caillou : ce sont autant d'interventions sensibles dont la résolution réclame de comprendre comment l'immeuble a été conçu, avec quels matériaux, et selon quelle logique hydraulique. Mon travail d'architecte du patrimoine me conduit à collaborer régulièrement avec les artisans du réseau Joël sur ces chantiers exigeants. J'ai voulu écrire cette page pour les habitants du 7e qui, confrontés à un dégât des eaux la nuit ou à un dimanche, hésitent à appeler un plombier de peur de tomber sur l'un de ces opérateurs douteux qui gonflent les factures et abîment les ouvrages. Joël annonce un prix fixe avant intervention, à partir de 79€ TTC, sans majoration nuit ou week-end. Cette transparence n'est pas un argument commercial : c'est la première condition pour qu'un artisan accepte de prendre le temps qu'exige une intervention en bâti ancien.",
+  introParagraph: `### Le 7e en chiffres : un arrondissement patrimonial
+
+Le 7e arrondissement n'est pas un quartier comme les autres. Édifié pour l'essentiel entre **1853 et 1910**, sous l'impulsion conjointe d'**Haussmann** et des grands lotisseurs du **Faubourg Saint-Germain**, il rassemble sur **4,09 km²** près de **51 367 habitants**.
+
+### Un bâti haussmannien sous contrôle ABF
+
+Quand on intervient **rue de Grenelle**, **rue du Bac** ou **avenue Bosquet**, on ne touche pas seulement à des canalisations : on travaille sur un édifice pré-existant, **souvent inscrit, parfois classé**, presque toujours soumis aux règles de l'**Architecte des Bâtiments de France** pour tout ce qui touche aux façades, aux cages d'escalier ou aux courettes intérieures.
+
+### Le quotidien plomberie dans le 7e : interventions sensibles
+
+Une fuite d'eau dans un appartement de la **rue Saint-Dominique**, une remontée d'évacuation **rue de Babylone**, un chauffe-eau en panne dans un cinquième étage du **Gros-Caillou** : ce sont autant d'**interventions sensibles** dont la résolution réclame de comprendre comment l'immeuble a été conçu, avec quels matériaux, et selon quelle logique hydraulique.
+
+J'ai voulu écrire cette page pour les habitants du 7e qui, confrontés à un dégât des eaux la nuit ou un dimanche, hésitent à appeler un plombier de peur de tomber sur l'un de ces **opérateurs douteux** qui gonflent les factures et abîment les ouvrages.
+
+### L'auteur de cette page
+
+Mon travail d'**architecte du patrimoine** me conduit à collaborer régulièrement avec les artisans du réseau Joël sur ces chantiers exigeants. La **valeur patrimoniale** du 7e impose à l'artisan plombier une **discipline particulière**.
+
+### Joël à Paris 7e : tarif fixe annoncé en amont
+
+Joël annonce un **prix fixe avant intervention**, à partir de **79€ TTC**, **24 heures sur 24**, sans majoration nuit ou week-end. Cette transparence n'est pas un argument commercial : c'est la **première condition** pour qu'un artisan accepte de prendre le temps qu'exige une intervention en bâti ancien.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "histoire-hydraulique-7e",

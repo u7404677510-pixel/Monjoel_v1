@@ -29,7 +29,7 @@ interface KPICardProps {
 
 function KPICard({ title, value, change, changeType, icon, target }: KPICardProps) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+    <div className="bg-white rounded-xl p-6 shadow-xs border border-gray-100">
       <div className="flex items-start justify-between mb-4">
         <div className="w-10 h-10 bg-joel-violet/10 rounded-lg flex items-center justify-center">
           {icon}
@@ -38,7 +38,7 @@ function KPICard({ title, value, change, changeType, icon, target }: KPICardProp
           <div
             className={`flex items-center gap-1 text-sm font-medium ${
               changeType === "up"
-                ? "text-emerald-600"
+                ? "text-joel-violet"
                 : changeType === "down"
                 ? "text-red-600"
                 : "text-gray-500"
@@ -74,9 +74,9 @@ function Task({ title, status, priority }: TaskProps) {
       <div
         className={`w-5 h-5 rounded-full flex items-center justify-center ${
           status === "done"
-            ? "bg-emerald-100 text-emerald-600"
+            ? "bg-joel-violet/10 text-joel-violet"
             : status === "in_progress"
-            ? "bg-amber-100 text-amber-600"
+            ? "bg-joel-yellow/20 text-joel-violet"
             : "bg-gray-100 text-gray-400"
         }`}
       >
@@ -98,7 +98,7 @@ function Task({ title, status, priority }: TaskProps) {
           priority === "high"
             ? "bg-red-100 text-red-700"
             : priority === "medium"
-            ? "bg-amber-100 text-amber-700"
+            ? "bg-joel-yellow/20 text-joel-violet"
             : "bg-gray-100 text-gray-600"
         }`}
       >
@@ -166,8 +166,8 @@ export default function ExtinctionDashboard() {
                 <option value="last">Semaine dernière</option>
                 <option value="month">Ce mois</option>
               </select>
-              <div className="flex items-center gap-2 bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-lg">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+              <div className="flex items-center gap-2 bg-joel-violet/20 text-joel-yellow px-4 py-2 rounded-lg">
+                <div className="w-2 h-2 bg-joel-violet rounded-full animate-pulse" />
                 <span className="text-sm font-medium">A/B Test Actif</span>
               </div>
             </div>
@@ -243,7 +243,7 @@ export default function ExtinctionDashboard() {
 
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Tasks */}
-          <div className="lg:col-span-2 bg-white rounded-xl shadow-sm p-6">
+          <div className="lg:col-span-2 bg-white rounded-xl shadow-xs p-6">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-bold text-gray-900">Actions Semaine 1</h2>
               <span className="text-sm text-gray-500">
@@ -258,7 +258,7 @@ export default function ExtinctionDashboard() {
           </div>
 
           {/* Nemesis Watch */}
-          <div className="bg-white rounded-xl shadow-sm p-6">
+          <div className="bg-white rounded-xl shadow-xs p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
               <AlertTriangle size={20} className="text-red-500" />
               Surveillance Némesis
@@ -278,7 +278,7 @@ export default function ExtinctionDashboard() {
                       className={`text-xs px-2 py-1 rounded-full ${
                         n.threat === "CRITIQUE"
                           ? "bg-red-100 text-red-700"
-                          : "bg-amber-100 text-amber-700"
+                          : "bg-joel-yellow/20 text-joel-violet"
                       }`}
                     >
                       {n.threat}
@@ -291,8 +291,8 @@ export default function ExtinctionDashboard() {
 
             <div className="mt-6 pt-6 border-t border-gray-100">
               <h3 className="font-medium text-gray-900 mb-3">Arme Secrète</h3>
-              <div className="bg-emerald-50 rounded-lg p-4">
-                <p className="text-sm text-emerald-800">
+              <div className="bg-joel-violet/5 rounded-lg p-4">
+                <p className="text-sm text-joel-violet">
                   <strong>Angle &quot;Zéro Arnaque&quot;</strong> - Aucun concurrent ne l&apos;utilise.
                   Variante C déployée en A/B test.
                 </p>

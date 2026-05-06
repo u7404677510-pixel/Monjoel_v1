@@ -9,10 +9,14 @@ import ServicePricingHighlight from "@/components/sections/ServicePricingHighlig
 import ServiceTrustSection from "@/components/sections/ServiceTrustSection";
 
 export const metadata: Metadata = {
-  title: "Dégât des Eaux Paris - Urgence 20 min | Plombier Joël Prix Fixe",
+  title: "Dégât des Eaux Paris - Urgence 20 min 129€ | Joël",
   description: "Dégât des eaux ? Plombier stoppe la fuite en 20 min à Paris & IDF. Constat + réparation + aide assurance. Prix fixe 129€ annoncé avant. 01 41 69 10 08",
   alternates: {
     canonical: "https://monjoel.fr/plombier/degat-des-eaux",
+    languages: {
+      "fr-FR": "https://monjoel.fr/plombier/degat-des-eaux",
+      "x-default": "https://monjoel.fr/plombier/degat-des-eaux",
+    },
   },
 };
 

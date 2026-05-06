@@ -2,25 +2,39 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Phone, Clock, Shield, ChevronDown, MapPin, Calendar, User, Star } from "lucide-react";
-import { City } from "@/lib/data/cities-idf";
+import type { City } from "@/lib/data/cities-idf-types";
 import { Trade, Service } from "@/lib/data/services-definition";
 import { PremiumPageContent } from "@/lib/seo/premium/types";
 import { getPersona } from "@/lib/seo/premium/personas";
 import { Markdown } from "@/lib/seo/premium/renderMarkdown";
-import QuickQuoteForm from "@/components/QuickQuoteForm";
+import type { ContextualLink } from "@/lib/seo/premium/contextualLinks";
+import MidPageCTA from "@/components/MidPageCTA";
+import Breadcrumbs from "@/components/Breadcrumbs";
+
+// Lazy-load — modal devis ouvert seulement au clic CTA. Critique sur les 7869 pages premium SEO.
+const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
+  ssr: false,
+});
 
 interface PremiumPageRendererProps {
   content: PremiumPageContent;
   trade: Trade;
   city: City;
   service?: Service;
+  /**
+   * Liens contextuels (calculés serveur) à injecter DANS le corps des sections.
+   * Map sectionIndex → ContextualLink. Renforce le maillage interne profond
+   * (≠ menu/footer/breadcrumbs) — boost SEO de pertinence locale.
+   */
+  contextualLinks?: Map<number, ContextualLink>;
 }
 
 const PHONE = "01 41 69 10 08";
 const PHONE_INTL = "+33141691008";
 
-export default function PremiumPageRenderer({ content, trade, city, service }: PremiumPageRendererProps) {
+export default function PremiumPageRenderer({ content, trade, city, service, contextualLinks }: PremiumPageRendererProps) {
   const persona = getPersona(content.authorPersona);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(0);
@@ -34,25 +48,24 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
       {/* HERO PREMIUM avec auteur */}
       {/* ============================================ */}
       <section className="relative pt-28 pb-12 md:pt-32 md:pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
+        <div className="absolute inset-0 bg-linear-to-br from-joel-violet/5 via-white to-joel-mauve/5" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-joel-violet/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-joel-mauve/10 rounded-full blur-3xl" />
 
         <div className="relative max-w-5xl mx-auto px-5 md:px-8">
           {/* Breadcrumb */}
-          <nav aria-label="Fil d'Ariane" className="text-sm text-gray-500 mb-6">
-            <Link href="/" className="hover:text-joel-violet">Accueil</Link>
-            <span className="mx-2">›</span>
-            <Link href={`/${trade.slug}`} className="hover:text-joel-violet">{trade.name}</Link>
-            <span className="mx-2">›</span>
-            <Link href={`/${trade.slug}/${city.slug}`} className="hover:text-joel-violet">{city.name}</Link>
-            {service && (
-              <>
-                <span className="mx-2">›</span>
-                <span className="text-gray-700">{service.name}</span>
-              </>
-            )}
-          </nav>
+          <Breadcrumbs
+            className="mb-6"
+            items={[
+              { label: trade.name, href: `/${trade.slug}` },
+              ...(service
+                ? [
+                    { label: city.name, href: `/${trade.slug}/${city.slug}` },
+                    { label: service.name },
+                  ]
+                : [{ label: city.name }]),
+            ]}
+          />
 
           {/* H1 + intro */}
           <h1 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -129,21 +142,43 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
 
       {/* ============================================ */}
       {/* SECTIONS RÉDACTIONNELLES */}
+      {/* + injection des liens contextuels (maillage interne profond) */}
       {/* ============================================ */}
       <section className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-5 md:px-8">
-          {content.sections.map((sec) => (
-            <article key={sec.anchor} id={sec.anchor} className="mb-12 scroll-mt-24">
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-5 border-l-4 border-joel-violet pl-4">
-                {sec.title}
-              </h2>
-              <div>
-                <Markdown>{sec.body}</Markdown>
-              </div>
-            </article>
-          ))}
+          {content.sections.map((sec, idx) => {
+            const link = contextualLinks?.get(idx);
+            return (
+              <article key={sec.anchor} id={sec.anchor} className="mb-12 scroll-mt-24">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-5 border-l-4 border-joel-violet pl-4">
+                  {sec.title}
+                </h2>
+                <div>
+                  <Markdown>{sec.body}</Markdown>
+                </div>
+                {link && (
+                  // Lien contextuel : phrase narrative en italique discret,
+                  // intégrée à la suite de la section. Voix Joël, pas un encart.
+                  // <div> (et non <p>) car Markdown génère son propre <p> interne.
+                  <div className="mt-5 text-gray-600 italic text-base leading-relaxed border-l-2 border-joel-violet/30 pl-4 [&>p]:mb-0 [&>p]:italic [&>p]:text-gray-600">
+                    <Markdown>{link.sentence}</Markdown>
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
       </section>
+
+      {/* ============================================ */}
+      {/* CTA MI-PAGE — boost conversion entre sections rédac et bloc prix */}
+      {/* ============================================ */}
+      <MidPageCTA
+        title={`Besoin d'un ${trade.name.toLowerCase()} à ${city.name} ?`}
+        subtitle="Devis instantané · prix fixe annoncé avant intervention"
+        placement={`premium_${trade.slug}_${city.slug}${service ? `_${service.slug}` : ""}`}
+        trade={tradeToTradeType(trade.slug)}
+      />
 
       {/* ============================================ */}
       {/* VRAIS PRIX VS ARNAQUES */}
@@ -192,7 +227,7 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
                       className="w-full flex justify-between items-start gap-4 p-5 text-left hover:bg-gray-50 transition"
                     >
                       <span className="font-semibold text-gray-900">{item.question}</span>
-                      <ChevronDown className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
+                      <ChevronDown className={`w-5 h-5 text-gray-400 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
                     </button>
                     {open && (
                       <div className="px-5 pb-5 text-gray-700 leading-relaxed">
@@ -211,17 +246,17 @@ export default function PremiumPageRenderer({ content, trade, city, service }: P
       {/* TÉMOIGNAGES GÉOLOCALISÉS */}
       {/* ============================================ */}
       {content.temoignages.length > 0 && (
-        <section id="temoignages" className="py-12 md:py-16 bg-gradient-to-br from-joel-violet/5 to-joel-mauve/5 scroll-mt-24">
+        <section id="temoignages" className="py-12 md:py-16 bg-linear-to-br from-joel-violet/5 to-joel-mauve/5 scroll-mt-24">
           <div className="max-w-5xl mx-auto px-5 md:px-8">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
               Ils nous ont fait confiance à {city.name}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {content.temoignages.map((t, i) => (
-                <figure key={i} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                <figure key={i} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-xs">
                   <div className="flex items-center gap-1 mb-3">
                     {Array.from({ length: 5 }).map((_, k) => (
-                      <Star key={k} className={`w-4 h-4 ${k < t.rating ? "fill-yellow-400 text-yellow-400" : "text-gray-200"}`} />
+                      <Star key={k} className={`w-4 h-4 ${k < t.rating ? "fill-joel-yellow text-joel-yellow" : "text-gray-200"}`} />
                     ))}
                   </div>
                   <blockquote className="text-gray-700 italic mb-4 leading-relaxed">« {t.texte} »</blockquote>

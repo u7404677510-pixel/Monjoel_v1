@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien à Levallois-Perret par Joël : panne, disjoncteur, tableau, mise aux normes NF C 15-100. Prix fixe dès 59€ TTC, annoncé avant. 01 41 69 10 08.",
   h1: "Électricien à Levallois-Perret (92300) : le guide pédagogique signé Karim Benali",
-  introParagraph:
-    "Le tableau électrique, c'est le cerveau de votre logement. À Levallois-Perret, je vois des installations qui racontent toute l'histoire urbaine de la ville : du petit immeuble post-haussmannien autour de la rue Anatole-France aux tours des années 80 du Front de Seine, en passant par les bureaux reconvertis en lofts du Quartier Eiffel. Chaque époque a sa logique de câblage, son calibre de disjoncteur, sa façon — parfois bonne, parfois discutable — d'avoir interprété la NF C 15-100. Je suis Karim Benali, ingénieur électricien diplômé de Centrale Paris en 2008, expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques pendant quatre ans, et formateur Qualifelec sur la mise aux normes des installations résidentielles. J'ai écrit cette page pour que vous compreniez ce qui se passe dans votre logement levalloisien quand un disjoncteur saute, quand une prise grille, quand votre tableau de 1985 commence à montrer des signes inquiétants. Mon but n'est pas de vous faire peur — c'est de vous équiper. Quand vous appellerez Joël au 01 41 69 10 08, vous saurez exactement ce que l'électricien vient diagnostiquer, ce qu'il doit chercher, et combien cela doit raisonnablement coûter. Le prix Joël démarre à 59 € TTC pour un remplacement de prise, et il est annoncé avant l'intervention. Pas de surprise, pas de majoration nuit ou week-end, pas de devis qui passe de 70 à 480 € entre le moment où l'artisan franchit la porte et celui où il vous tend l'addition. Cette page va prendre le temps qu'il faut. Lisez-la avant l'urgence, ou pendant : dans les deux cas, vous y gagnerez.",
+  introParagraph: `### Levallois-Perret : trois époques racontées par les tableaux électriques
+
+Le **tableau électrique**, c'est le cerveau de votre logement. À Levallois-Perret, je vois des installations qui racontent toute l'histoire urbaine de la ville : du **petit immeuble post-haussmannien** autour de la **rue Anatole-France** aux **tours des années 80** du **Front de Seine**, en passant par les **bureaux reconvertis en lofts** du **Quartier Eiffel**.
+
+Chaque époque a sa logique de câblage, son calibre de disjoncteur, sa façon — parfois bonne, parfois discutable — d'avoir interprété la **NF C 15-100**.
+
+### L'auteur de cette page
+
+Je suis **Karim Benali**, **ingénieur électricien diplômé de Centrale Paris en 2008**, **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques pendant quatre ans, et **formateur Qualifelec** sur la mise aux normes des installations résidentielles.
+
+J'ai écrit cette page pour que vous compreniez ce qui se passe dans votre logement levalloisien quand un disjoncteur saute, quand une prise grille, quand votre **tableau de 1985** commence à montrer des signes inquiétants. Mon but n'est pas de vous faire peur — c'est de vous équiper.
+
+### Joël à Levallois-Perret : tarif fixe annoncé en amont
+
+Quand vous appellerez Joël au **01 41 69 10 08**, vous saurez exactement ce que l'électricien vient diagnostiquer, ce qu'il doit chercher, et combien cela doit raisonnablement coûter.
+
+Le prix Joël démarre à **59 € TTC** pour un remplacement de prise, et il est annoncé avant l'intervention. Pas de surprise, pas de majoration nuit ou week-end, pas de devis qui passe de 70 à 480 € entre le moment où l'artisan franchit la porte et celui où il vous tend l'addition.
+
+Cette page va prendre le temps qu'il faut. Lisez-la avant l'urgence, ou pendant : dans les deux cas, vous y gagnerez.`,
   sections: [
     {
       anchor: "lire-tableau-electrique-levallois",
@@ -170,7 +187,7 @@ export const content: PremiumPageContent = {
       rating: 5,
       serviceRendered: "Diagnostic disjoncteur qui sautait toutes les nuits",
       texte:
-        "Mon disjoncteur tombait systématiquement vers 2h du matin depuis trois semaines. J'avais appelé un autre dépanneur qui m'avait facturé 280 € pour soi-disant 'reprogrammer le tableau' et le problème continuait. Karim de chez Joël est venu en 25 minutes, a sorti un mégohmmètre dont je découvrais l'existence, et a identifié en 20 minutes que c'était mon vieux ballon d'eau chaude qui fuyait à la terre pendant la chauffe nocturne. Remplacement de la résistance le lendemain, plus rien depuis. Tarif annoncé avant : 79 € pour le diagnostic. Honnête et compétent.",
+        "Mon disjoncteur tombait systématiquement vers 2h du matin depuis trois semaines. J'avais appelé un autre dépanneur qui m'avait facturé 280 € pour soi-disant 'reprogrammer le tableau' et le problème continuait. Karim de chez Joël est venu en 25 minutes, a sorti un mégohmmètre dont je découvrais l'existence, et a identifié en 30 minutes que c'était mon vieux ballon d'eau chaude qui fuyait à la terre pendant la chauffe nocturne. Remplacement de la résistance le lendemain, plus rien depuis. Tarif annoncé avant : 79 € pour le diagnostic. Honnête et compétent.",
     },
     {
       auteur: "Mehdi B.",

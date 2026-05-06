@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Melun 77000 — préfecture Seine-et-Marne, vieux Melun médiéval, Almont, Saint-Liesne. Prix Joël annoncé dès 79€ TTC, 24h/24, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Melun : intervenir sur l'eau dans une préfecture où mille ans de bâti se côtoient",
-  introParagraph:
-    "Melun n'est pas une banlieue de Paris : c'est une vraie ville, une préfecture, capitale historique de la Seine-et-Marne, posée sur les deux rives d'un fleuve qui l'a faite et qui la tient. 41 816 habitants y vivent sur un peu plus de huit kilomètres carrés, dans un tissu bâti dont la singularité m'a toujours frappée. On y trouve, à quelques pas les uns des autres, une collégiale gothique du XIIe siècle (Notre-Dame de Melun), une église flamboyante achevée à la Renaissance (Saint-Aspais), des maisons médiévales sauvegardées dans le vieux Melun, des hôtels classiques du XVIIIe le long de la Seine, des immeubles bourgeois de la fin du XIXe et du début du XXe avenue Thiers, des grands ensembles des années 1960-1970 sur les hauteurs de l'Almont et du Plateau de Schuman, et des résidences contemporaines qui bordent désormais la voie verte aménagée le long de la Seine. Cette stratification matérielle, plus dense encore que dans bien des arrondissements parisiens parce qu'elle court sur près d'un millénaire, conditionne directement le travail du plombier. Une fuite dans une maison à pans de bois de la rue Saint-Aspais ne se traite pas comme une fuite dans un T3 d'une barre de l'avenue Gallieni. Un dégât des eaux dans un immeuble bourgeois face au pont aux Fruits ne s'aborde pas comme une panne de chaudière dans un programme neuf de Saint-Barthélémy. Mon expérience d'architecte du patrimoine, formée à l'École de Chaillot et nourrie par mes interventions de conseil auprès des collectivités séquano-marnaises, me conduit à insister sur ce point : la justesse du diagnostic est tout, et elle commence par la lecture du bâti. Pour les habitants de Melun confrontés à une urgence de plomberie, le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC, 24 heures sur 24, sans majoration nuit ou week-end. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Melun en chiffres : la préfecture de Seine-et-Marne
+
+Melun n'est pas une banlieue de Paris : c'est une vraie ville, une **préfecture**, **capitale historique de la Seine-et-Marne**, posée sur les deux rives d'un fleuve qui l'a faite et qui la tient. **41 816 habitants** y vivent sur un peu plus de **huit kilomètres carrés**.
+
+### Mille ans de bâti côte à côte
+
+On y trouve, à quelques pas les uns des autres, une **collégiale gothique du XIIe siècle (Notre-Dame de Melun)**, une **église flamboyante achevée à la Renaissance (Saint-Aspais)**, des **maisons médiévales sauvegardées dans le vieux Melun**, des **hôtels classiques du XVIIIe** le long de la Seine, des **immeubles bourgeois de la fin du XIXe et du début du XXe avenue Thiers**, des **grands ensembles des années 1960-1970** sur les hauteurs de l'**Almont** et du **Plateau de Schuman**, et des **résidences contemporaines** qui bordent désormais la voie verte aménagée le long de la Seine.
+
+### Le quotidien plomberie à Melun : pourquoi le diagnostic compte
+
+Cette stratification matérielle, plus dense encore que dans bien des arrondissements parisiens parce qu'elle court sur **près d'un millénaire**, conditionne directement le travail du plombier. Une fuite dans une **maison à pans de bois de la rue Saint-Aspais** ne se traite pas comme une fuite dans un **T3 d'une barre de l'avenue Gallieni**. Un dégât des eaux dans un **immeuble bourgeois face au pont aux Fruits** ne s'aborde pas comme une panne de chaudière dans un **programme neuf de Saint-Barthélémy**.
+
+### L'auteur de cette page
+
+Mon expérience d'**architecte du patrimoine**, formée à l'**École de Chaillot** et nourrie par mes interventions de conseil auprès des **collectivités séquano-marnaises**, me conduit à insister sur ce point : la **justesse du diagnostic** est tout, et elle commence par la lecture du bâti.
+
+### Joël à Melun : tarif fixe annoncé en amont
+
+Pour les habitants de Melun confrontés à une urgence de plomberie, le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC**, **24 heures sur 24**, sans majoration nuit ou week-end.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "melun-prefecture-bati-millenaire",

@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Nanterre (92000) : tours Provinces-Françaises, La Défense, Université, Mont-Valérien. Prix fixe dès 79€ TTC, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Plombier Nanterre — Mehdi, 28 ans terrain de la préfecture aux tours du Plateau",
-  introParagraph:
-    "Mehdi Karim, plombier-chauffagiste depuis 1998, formation chez les Compagnons du Devoir entre 1996 et 2000. Nanterre, je l'ai dans les jambes depuis bientôt douze ans pour le réseau Joël, et c'est l'une des communes les plus instructives de toute la petite couronne pour qui s'intéresse vraiment au bâti et aux réseaux d'eau. 96 673 habitants, préfecture des Hauts-de-Seine, mais surtout cinq strates de construction empilées sur 12,2 km² qui forment un vrai catalogue d'urbanisme français : le centre ancien autour de la rue Maurice-Thorez et de la rue de la République (immeubles de rapport 1900-1930, parfois encore plus vieux derrière l'église Sainte-Geneviève), les barres et tours des grands ensembles 1965-1977 (cité Pablo-Picasso, cité Provinces-Françaises, Plateau, Petit-Nanterre), les résidences années 1980-2000 du quartier de l'Université, les copropriétés contemporaines de la ZAC Seine-Arche et du quartier Hoche, et puis tout le mastodonte tertiaire de La Défense côté ouest qui déborde administrativement sur Nanterre depuis Coupole, CNIT et Esplanade.\n\nQuand je sors de mon véhicule avenue Joliot-Curie, avenue Pablo-Picasso, place de la Boule ou aux abords de Nanterre-Préfecture, je sais déjà à 80% ce que je vais trouver avant d'avoir poussé la porte. C'est ce qu'on appelle, chez les Compagnons, la lecture du chantier : on regarde la façade, le hall d'immeuble, le type de boîtes aux lettres, les compteurs en sous-sol, et la moitié du diagnostic est déjà posée. À Nanterre, ce qui complique l'exercice par rapport à Paris intra-muros, c'est l'eau du SEDIF : le syndicat des eaux d'Île-de-France distribue ici une eau particulièrement dure (TH autour de 30°f, contre 22-25°f à Paris), et le calcaire bouffe les résistances de cumulus, entartre les colonnes en acier galva des tours, et fatigue prématurément les robinetteries. Tout plombier sérieux à Nanterre intègre ce paramètre dans son diagnostic.\n\nCette page est là pour vous donner les vrais prix d'une intervention à Nanterre, vous expliquer pourquoi cette ville est ciblée par les sociétés-écran qui transforment un débouchage WC en facture à 600€, et surtout vous donner les bons réflexes avant d'appeler qui que ce soit. Numéro direct, sans plateforme intermédiaire ni majoration : **01 41 69 10 08**. Prix fixe annoncé AVANT que je sorte la première clé, dès 79€ TTC. 24h/24, dimanches et jours fériés compris, sans la moindre majoration. Jamais.",
+  introParagraph: `### Nanterre en chiffres : préfecture des Hauts-de-Seine
+
+Nanterre, c'est **96 673 habitants**, **préfecture des Hauts-de-Seine**, mais surtout **cinq strates de construction empilées sur 12,2 km²** qui forment un vrai catalogue d'urbanisme français.
+
+### Cinq strates de bâti sur une seule commune
+
+Le **centre ancien** autour de la rue Maurice-Thorez et de la rue de la République (immeubles de rapport **1900-1930**, parfois encore plus vieux derrière l'**église Sainte-Geneviève**), les **barres et tours des grands ensembles 1965-1977** (cité **Pablo-Picasso**, cité **Provinces-Françaises**, **Plateau**, **Petit-Nanterre**), les **résidences années 1980-2000 du quartier de l'Université**, les **copropriétés contemporaines de la ZAC Seine-Arche et du quartier Hoche**, et puis tout le mastodonte tertiaire de **La Défense** côté ouest qui déborde administrativement sur Nanterre depuis **Coupole, CNIT et Esplanade**.
+
+### Le quotidien plomberie à Nanterre : le calcaire du SEDIF
+
+Quand je sors de mon véhicule **avenue Joliot-Curie**, **avenue Pablo-Picasso**, **place de la Boule** ou aux abords de Nanterre-Préfecture, je sais déjà à **80%** ce que je vais trouver avant d'avoir poussé la porte. C'est ce qu'on appelle, chez les Compagnons, la **lecture du chantier**.
+
+À Nanterre, ce qui complique l'exercice par rapport à Paris intra-muros, c'est l'eau du **SEDIF** : le syndicat des eaux d'Île-de-France distribue ici une eau particulièrement dure (**TH autour de 30°f, contre 22-25°f à Paris**), et le calcaire bouffe les résistances de cumulus, entartre les colonnes en **acier galva des tours**, et fatigue prématurément les robinetteries.
+
+Cette page est là pour vous donner les vrais prix d'une intervention à Nanterre, vous expliquer pourquoi cette ville est ciblée par les **sociétés-écran** qui transforment un débouchage WC en facture à **600€**, et surtout vous donner les bons réflexes avant d'appeler qui que ce soit.
+
+### L'auteur de cette page
+
+**Mehdi Karim**, **plombier-chauffagiste depuis 1998**, formation chez les **Compagnons du Devoir** entre 1996 et 2000. Nanterre, je l'ai dans les jambes depuis bientôt **douze ans** pour le réseau Joël, et c'est l'une des communes les plus instructives de toute la petite couronne pour qui s'intéresse vraiment au bâti et aux réseaux d'eau.
+
+### Joël à Nanterre : tarif fixe annoncé en amont
+
+Numéro direct, sans plateforme intermédiaire ni majoration : **01 41 69 10 08**. **Prix fixe annoncé AVANT** que je sorte la première clé, **dès 79€ TTC**. **24h/24**, dimanches et jours fériés compris, sans la moindre majoration. Jamais.`,
   sections: [
     {
       anchor: "cinq-strates-nanterre",

@@ -12,7 +12,7 @@ import { Phone, Clock, Truck, CreditCard, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Dépannage Urgence 24h/24 | Joël - Test A",
-  description: "Serrurier, plombier, électricien en urgence. Intervention en 20 minutes. Prix fixe, sans majoration.",
+  description: "Serrurier, plombier, électricien en urgence. Intervention en 30 minutes. Prix fixe, sans majoration.",
   robots: {
     index: false,
     follow: false,
@@ -82,7 +82,7 @@ function ProcessSection() {
                   <div className="w-24 h-24 bg-gradient-joel rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Icon size={36} className="text-white" />
                   </div>
-                  <span className="absolute -top-2 w-8 h-8 bg-joel-yellow text-gray-900 font-bold rounded-full flex items-center justify-center text-sm shadow" style={{ right: 'calc(50% - 60px)' }}>
+                  <span className="absolute -top-2 w-8 h-8 bg-joel-yellow text-gray-900 font-bold rounded-full flex items-center justify-center text-sm shadow-sm" style={{ right: 'calc(50% - 60px)' }}>
                     {step.number}
                   </span>
                 </div>
@@ -105,7 +105,7 @@ function ProcessSection() {
 // Stats section
 function StatsSection() {
   const stats = [
-    { value: "20 min", label: "Intervention moyenne" },
+    { value: "30 min", label: "Intervention moyenne" },
     { value: "947", label: "Avis 5 étoiles" },
     { value: "0€", label: "Majoration nuit" },
     { value: "24h/24", label: "Disponibilité" },

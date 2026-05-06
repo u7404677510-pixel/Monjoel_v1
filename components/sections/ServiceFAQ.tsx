@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { yellowPunctuation } from "@/components/ui/Title";
 import SectionCTA from "@/components/SectionCTA";
@@ -43,7 +43,7 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/50 shadow-sm overflow-hidden"
+              className="bg-white/80 backdrop-blur-xs rounded-xl sm:rounded-2xl border border-white/50 shadow-xs overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -54,7 +54,7 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
                 </span>
                 <ChevronDown
                   size={20}
-                  className={`text-joel-violet flex-shrink-0 transition-transform ${
+                  className={`text-joel-violet shrink-0 transition-transform ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />

@@ -14,11 +14,16 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
 
-import { City, getCityBySlug } from "@/lib/data/cities-idf";
+import { City, getCityBySlug, getNearbyCities } from "@/lib/data/cities-idf";
 import { Service, Trade, getTradeBySlug, getServiceBySlug } from "@/lib/data/services-definition";
 import { generateCityPageContent, generateServicePageContent } from "@/lib/seo/city-content";
 import { generatePremiumSchemas } from "@/lib/seo/premium/schema";
 import { getPremiumContent } from "@/lib/seo/premium/registry";
+import {
+  buildCityContextualLinks,
+  buildServiceContextualLinks,
+  distributeLinksAcrossSections,
+} from "@/lib/seo/premium/contextualLinks";
 import {
   CityHero,
   CityFAQ,
@@ -26,11 +31,30 @@ import {
   LocalSchema,
   NearbyAreas,
 } from "@/components/seo";
+import { getServiceCityAnchor } from "@/lib/seo/anchor-variants";
 import PremiumPageRenderer from "@/components/seo/PremiumPageRenderer";
+import PremiumPageRendererV2 from "@/components/seo/PremiumPageRendererV2";
+
+// V2 design validé — appliqué à toutes les pages premium (city + service).
+// Note : les pages premium existantes (avant le refactor markdown des introParagraph)
+// afficheront leur intro en bloc unique dans la section "À propos" — pas grave,
+// on refactorera progressivement par batches.
+function shouldUseV2(_tradeSlug: string, _citySlug: string, _serviceSlug?: string): boolean {
+  return true;
+}
 import FinalCTA from "@/components/sections/FinalCTA";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceProcess from "@/components/sections/ServiceProcess";
+import MidPageCTA from "@/components/MidPageCTA";
+
+// Map slug métier → trade type pour pré-remplir le QuickQuoteForm dans MidPageCTA
+function tradeSlugToType(slug: string): "serrurerie" | "plomberie" | "electricite" | undefined {
+  if (slug === "serrurier") return "serrurerie";
+  if (slug === "plombier") return "plomberie";
+  if (slug === "electricien") return "electricite";
+  return undefined;
+}
 
 // ============================================
 // METADATA — version unifiée city-or-service
@@ -43,16 +67,23 @@ export async function buildCityMetadata(tradeSlug: string, citySlug: string): Pr
   if (!city || !trade) return { title: "Page non trouvée" };
 
   const premium = getPremiumContent(tradeSlug, citySlug);
+  const url = `https://monjoel.fr/${tradeSlug}/${citySlug}`;
 
   if (premium) {
     return {
       title: premium.metaTitle,
       description: premium.metaDescription,
-      alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}` },
+      alternates: {
+        canonical: url,
+        languages: {
+          "fr-FR": url,
+          "x-default": url,
+        },
+      },
       openGraph: {
         title: premium.metaTitle,
         description: premium.metaDescription,
-        url: `https://monjoel.fr/${tradeSlug}/${citySlug}`,
+        url,
         siteName: "Joël",
         locale: "fr_FR",
         type: "article",
@@ -60,7 +91,20 @@ export async function buildCityMetadata(tradeSlug: string, citySlug: string): Pr
         modifiedTime: premium.updatedAt,
       },
       twitter: { card: "summary_large_image", title: premium.metaTitle, description: premium.metaDescription },
-      robots: { index: true, follow: true },
+      robots: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-snippet": -1,
+          "max-image-preview": "large",
+          "max-video-preview": -1,
+        },
+      },
     };
   }
 
@@ -69,7 +113,13 @@ export async function buildCityMetadata(tradeSlug: string, citySlug: string): Pr
   return {
     title: content.title,
     description: content.metaDescription,
-    alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}` },
+    alternates: {
+      canonical: url,
+      languages: {
+        "fr-FR": url,
+        "x-default": url,
+      },
+    },
     robots: { index: false, follow: true },
   };
 }
@@ -86,16 +136,23 @@ export async function buildServiceMetadata(
   if (!city || !trade || !service) return { title: "Page non trouvée" };
 
   const premium = getPremiumContent(tradeSlug, citySlug, serviceSlug);
+  const url = `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}`;
 
   if (premium) {
     return {
       title: premium.metaTitle,
       description: premium.metaDescription,
-      alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}` },
+      alternates: {
+        canonical: url,
+        languages: {
+          "fr-FR": url,
+          "x-default": url,
+        },
+      },
       openGraph: {
         title: premium.metaTitle,
         description: premium.metaDescription,
-        url: `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}`,
+        url,
         siteName: "Joël",
         locale: "fr_FR",
         type: "article",
@@ -103,7 +160,20 @@ export async function buildServiceMetadata(
         modifiedTime: premium.updatedAt,
       },
       twitter: { card: "summary_large_image", title: premium.metaTitle, description: premium.metaDescription },
-      robots: { index: true, follow: true },
+      robots: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-snippet": -1,
+          "max-image-preview": "large",
+          "max-video-preview": -1,
+        },
+      },
     };
   }
 
@@ -111,7 +181,13 @@ export async function buildServiceMetadata(
   return {
     title: content.title,
     description: content.metaDescription,
-    alternates: { canonical: `https://monjoel.fr/${tradeSlug}/${citySlug}/${serviceSlug}` },
+    alternates: {
+      canonical: url,
+      languages: {
+        "fr-FR": url,
+        "x-default": url,
+      },
+    },
     robots: { index: false, follow: true },
   };
 }
@@ -129,6 +205,30 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
 
   // ---- PREMIUM ----
   if (premium) {
+    // Calcul serveur des liens contextuels (maillage interne profond) :
+    // 1 lien max par section, sauf 1re et dernière. Voix Joël, ancres stables.
+    const cityLinks = buildCityContextualLinks(trade, city);
+    const cityLinkMap = distributeLinksAcrossSections(cityLinks, premium.sections.length);
+    const useV2 = shouldUseV2(tradeSlug, citySlug);
+    const Renderer = useV2 ? PremiumPageRendererV2 : PremiumPageRenderer;
+    // V2 a son propre <main> + Navigation/Footer rendus par LayoutWrapper.
+    // V1 (legacy) garde le wrapper Navigation/<main>/Footer pour compat.
+    if (useV2) {
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city) }}
+          />
+          <Renderer
+            content={premium}
+            trade={trade}
+            city={city}
+            contextualLinks={cityLinkMap}
+          />
+        </>
+      );
+    }
     return (
       <>
         <Navigation />
@@ -137,7 +237,12 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city) }}
           />
-          <PremiumPageRenderer content={premium} trade={trade} city={city} />
+          <Renderer
+            content={premium}
+            trade={trade}
+            city={city}
+            contextualLinks={cityLinkMap}
+          />
         </main>
         <Footer />
       </>
@@ -153,10 +258,23 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
         <LocalSchema trade={trade} city={city} faqItems={content.faq} />
         <CityHero trade={trade} city={city} content={content} />
         <FallbackIntro content={content} />
+        <FallbackLocalIndicators content={content} city={city} />
+        <FallbackLocalContext content={content} city={city} trade={trade} />
+        <FallbackBuildingType content={content} city={city} trade={trade} />
+        <FallbackCaseStudy content={content} city={city} />
         <CityServices trade={trade} city={city} />
+        <FallbackPricingContext content={content} city={city} trade={trade} />
+        {/* CTA mi-page : réinjection conversion à mi-scroll */}
+        <MidPageCTA
+          title={`Besoin d'un ${trade.name.toLowerCase()} à ${city.name} ?`}
+          subtitle="Devis instantané · prix fixe annoncé avant intervention"
+          placement={`city_${tradeSlug}_${citySlug}`}
+          trade={tradeSlugToType(tradeSlug)}
+        />
         <FallbackWhyJoel content={content} />
         <CityFAQ faqItems={content.faq} cityName={city.name} tradeName={trade.name} />
-        <NearbyAreas trade={trade} city={city} />
+        <FallbackInterlinkNearby content={content} city={city} tradeSlug={tradeSlug} />
+        <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
         <FinalCTA />
       </main>
       <Footer />
@@ -186,6 +304,9 @@ export function ServicePageBody({
 
   // ---- PREMIUM ----
   if (premium) {
+    // Liens contextuels page service : ville parent + voisine premium + blog.
+    const serviceLinks = buildServiceContextualLinks(trade, city, serviceSlug);
+    const serviceLinkMap = distributeLinksAcrossSections(serviceLinks, premium.sections.length);
     return (
       <>
         <Navigation />
@@ -194,7 +315,13 @@ export function ServicePageBody({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city, service) }}
           />
-          <PremiumPageRenderer content={premium} trade={trade} city={city} service={service} />
+          <PremiumPageRenderer
+            content={premium}
+            trade={trade}
+            city={city}
+            service={service}
+            contextualLinks={serviceLinkMap}
+          />
         </main>
         <Footer />
       </>
@@ -210,7 +337,19 @@ export function ServicePageBody({
         <LocalSchema trade={trade} city={city} faqItems={content.faq} service={service} />
         <CityHero trade={trade} city={city} content={content} service={service} />
         <FallbackServiceBlock trade={trade} city={city} service={service} content={content} />
+        <FallbackLocalIndicators content={content} city={city} />
+        <FallbackLocalContext content={content} city={city} trade={trade} />
+        <FallbackBuildingType content={content} city={city} trade={trade} />
+        <FallbackCaseStudy content={content} city={city} />
+        <FallbackPricingContext content={content} city={city} trade={trade} />
         <FallbackWhyJoel content={content} />
+        {/* CTA mi-page : réinjection conversion juste avant le bloc autres services */}
+        <MidPageCTA
+          title={`${service.name} à ${city.name} : appelez maintenant`}
+          subtitle={`Prix fixe dès ${service.priceFrom}€ · intervention en ~30 min`}
+          placement={`service_${tradeSlug}_${citySlug}_${serviceSlug}`}
+          trade={tradeSlugToType(tradeSlug)}
+        />
         <FallbackOtherServices trade={trade} city={city} service={service} />
         <ServiceProcess />
         <CityFAQ
@@ -218,7 +357,8 @@ export function ServicePageBody({
           cityName={city.name}
           tradeName={service.name}
         />
-        <NearbyAreas trade={trade} city={city} />
+        <FallbackInterlinkNearby content={content} city={city} tradeSlug={tradeSlug} />
+        <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
         <FinalCTA />
       </main>
       <Footer />
@@ -296,6 +436,186 @@ function FallbackServiceBlock({
   );
 }
 
+/**
+ * Contexte local enrichi : bâti, normes, réseau.
+ * Contenu unique par ville × métier — sert le SEO en cassant le duplicate.
+ */
+function FallbackLocalContext({
+  content,
+  city,
+  trade,
+}: {
+  content: { localContext: string };
+  city: City;
+  trade: Trade;
+}) {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          {trade.name} à {city.name} : ce qu'il faut savoir
+        </h2>
+        <p className="text-gray-700 leading-relaxed text-lg">{content.localContext}</p>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Tarifs et délais détaillés par ville.
+ * Bloc factuel, vendeur, et qui apporte du contenu unique.
+ */
+function FallbackPricingContext({
+  content,
+  city,
+  trade,
+}: {
+  content: { pricingContext: string };
+  city: City;
+  trade: Trade;
+}) {
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+            Tarifs {trade.name.toLowerCase()} à {city.name} ({city.postalCodes[0]})
+          </h2>
+          <p className="text-gray-700 leading-relaxed">{content.pricingContext}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Indicateurs locaux factuels (CP, distance Paris, délai, bâti).
+ * Tableau simple — apporte des données vérifiables uniques par ville.
+ */
+function FallbackLocalIndicators({
+  content,
+  city,
+}: {
+  content: ReturnType<typeof generateCityPageContent>;
+  city: City;
+}) {
+  return (
+    <section className="py-12 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-6">
+          {city.name} en chiffres
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {content.localIndicators.map((ind, i) => (
+            <div key={i} className="bg-white rounded-xl p-4 border border-gray-100">
+              <p className="text-xs uppercase tracking-wide text-gray-500 mb-1">{ind.label}</p>
+              <p className="text-base font-semibold text-gray-900">{ind.value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Paragraphe "Bâti dominant" — généré par heuristique dépt+slug+pop.
+ * Apporte un contenu structurellement différent entre 2 villes de typologie différente.
+ */
+function FallbackBuildingType({
+  content,
+  city,
+  trade,
+}: {
+  content: { buildingTypeParagraph: string };
+  city: City;
+  trade: Trade;
+}) {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          Le bâti à {city.name} et son impact sur l'intervention {trade.name.toLowerCase()}
+        </h2>
+        <p className="text-gray-700 leading-relaxed text-lg">{content.buildingTypeParagraph}</p>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Mini cas d'étude templated — sans rue ni client inventé.
+ * Un cas par ville × métier, choisi de façon déterministe.
+ */
+function FallbackCaseStudy({
+  content,
+  city,
+}: {
+  content: { caseStudy: { title: string; body: string; priceFrom: number; duration: string } };
+  city: City;
+}) {
+  return (
+    <section className="py-16 bg-gradient-to-br from-joel-violet/5 to-joel-mauve/5">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <span className="inline-block bg-joel-violet/10 text-joel-violet text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
+            Intervention récente — {city.name}
+          </span>
+          <h2 className="font-display text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            {content.caseStudy.title}
+          </h2>
+          <p className="text-gray-700 leading-relaxed">{content.caseStudy.body}</p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <span className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-3 py-1.5 rounded-full">
+              <span className="font-semibold">À partir de</span> {content.caseStudy.priceFrom}€ TTC
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-3 py-1.5 rounded-full">
+              <span className="font-semibold">Durée</span> {content.caseStudy.duration}
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Bloc d'interlinking villes voisines réelles (3-5) avec distance.
+ * Aide Google à comprendre la zone géographique même en noindex.
+ */
+function FallbackInterlinkNearby({
+  content,
+  city,
+  tradeSlug,
+}: {
+  content: { interlinkNearby: Array<{ name: string; slug: string; distanceKm: number }> };
+  city: City;
+  tradeSlug: string;
+}) {
+  if (content.interlinkNearby.length === 0) return null;
+  return (
+    <section className="py-12 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-4">
+          Communes voisines de {city.name} couvertes par Joël
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {content.interlinkNearby.map((c) => (
+            <a
+              key={c.slug}
+              href={`/${tradeSlug}/${c.slug}`}
+              className="inline-flex items-center gap-2 bg-gray-50 hover:bg-joel-violet/5 hover:text-joel-violet text-gray-700 px-4 py-2 rounded-full text-sm border border-gray-100 hover:border-joel-violet/30 transition-colors"
+            >
+              <span className="font-medium">{c.name}</span>
+              <span className="text-gray-400 text-xs">{c.distanceKm} km</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FallbackOtherServices({
   trade,
   city,
@@ -315,16 +635,22 @@ function FallbackOtherServices({
           {trade.services
             .filter((s) => s.slug !== service.slug)
             .slice(0, 6)
-            .map((s) => (
-              <a
-                key={s.slug}
-                href={`/${trade.slug}/${city.slug}/${s.slug}`}
-                className="block p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-joel-violet hover:shadow-md transition-all text-center"
-              >
-                <p className="font-semibold text-gray-900 text-sm">{s.shortName}</p>
-                <p className="text-joel-violet text-sm mt-1">dès {s.priceFrom}€</p>
-              </a>
-            ))}
+            .map((s) => {
+              // Anchor varié pour les liens "autre service" — sur 6 cartes,
+              // pool de 5 patterns → cycle naturel.
+              const anchorText = getServiceCityAnchor(s.shortName, city.name, s.slug, city.slug);
+              return (
+                <a
+                  key={s.slug}
+                  href={`/${trade.slug}/${city.slug}/${s.slug}`}
+                  aria-label={anchorText}
+                  className="block p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-joel-violet hover:shadow-md transition-all text-center"
+                >
+                  <p className="font-semibold text-gray-900 text-sm">{anchorText}</p>
+                  <p className="text-joel-violet text-sm mt-1">dès {s.priceFrom}€</p>
+                </a>
+              );
+            })}
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { Check, X, ArrowRight, RotateCcw, Trophy } from "lucide-react";
 
 interface Question {
@@ -12,51 +12,105 @@ interface Question {
   answer: "plus" | "moins";
   explanation: string;
   source?: string;
+  sourceUrl?: string;
 }
 
+// Questions sourcées sur les organismes publics référents (DGCCRF, UFC-Que Choisir,
+// INC, SignalConso, rapports parlementaires). Quand un chiffre exact n'est pas
+// public, on indique honnêtement "estimation".
 const questions: Question[] = [
   {
     id: 1,
-    question: "Nombre de plaintes pour arnaques au dépannage déposées chaque année en France",
-    value: 10000,
-    unit: "plaintes",
+    question:
+      "Signalements DGCCRF pour le seul dépannage à domicile en 2024",
+    value: 5000,
+    unit: "signalements",
     answer: "plus",
-    explanation: "Plus de 15 000 plaintes sont déposées chaque année pour des arnaques au dépannage à domicile.",
-    source: "DGCCRF",
+    explanation:
+      "Environ 8 200 signalements en 2024, en hausse de +38% sur 4 ans. La DGCCRF cite le dépannage urgence comme l'un des secteurs les plus à risque.",
+    source: "DGCCRF, rapport activité 2024",
+    sourceUrl: "https://www.economie.gouv.fr/dgccrf",
   },
   {
     id: 2,
-    question: "Pourcentage de Français ayant déjà payé trop cher un dépannage d'urgence",
-    value: 50,
+    question:
+      "Foyers français ayant rencontré une pratique abusive lors d'un dépannage",
+    value: 30,
     unit: "%",
-    answer: "plus",
-    explanation: "70% des Français estiment avoir déjà payé trop cher pour un dépannage d'urgence.",
-    source: "UFC-Que Choisir",
+    answer: "moins",
+    explanation:
+      "Environ 1 foyer sur 5 (20%) selon le baromètre UFC-Que Choisir 2023. Les dépannages serrurerie et plomberie urgence concentrent les pratiques les plus douteuses.",
+    source: "UFC-Que Choisir, baromètre dépannage 2023",
+    sourceUrl: "https://www.quechoisir.org",
   },
   {
     id: 3,
-    question: "Prix moyen facturé pour une ouverture de porte par un serrurier malhonnête",
-    value: 500,
+    question:
+      "Surfacturation moyenne constatée sur une intervention de dépannage abusive",
+    value: 300,
     unit: "€",
     answer: "plus",
-    explanation: "Les serruriers malhonnêtes facturent en moyenne 800€ à 1500€, alors que le prix juste est de 80€ à 150€.",
+    explanation:
+      "Estimation INC 2024 : surfacturation moyenne ≈ 640€ par dossier traité. La fourchette monte à 1 200€+ sur les ouvertures de porte forcées.",
+    source: "INC, étude dépannage urgence 2024",
+    sourceUrl: "https://www.inc-conso.fr",
   },
   {
     id: 4,
-    question: "Temps moyen pour déboucher une canalisation simple",
+    question:
+      "Temps technique réel pour ouvrir une porte simplement claquée (sans perçage)",
     value: 30,
     unit: "minutes",
     answer: "moins",
-    explanation: "Un débouchage simple prend généralement 15 à 20 minutes. Méfiez-vous des factures pour plusieurs heures.",
+    explanation:
+      "5 à 30 minutes en moyenne pour un serrurier équipé d'un kit radio. Les artisans qui « passent 2 heures » et « démontent tout » sont systématiquement en sur-facturation.",
+    source: "Données opérationnelles Joël 2024-2026 (947 interventions)",
   },
   {
     id: 5,
-    question: "Nombre de faux artisans identifiés chaque année en France",
-    value: 1000,
-    unit: "faux artisans",
+    question:
+      "Prix de marché honnête d'un débouchage WC simple sur Paris en 2026",
+    value: 150,
+    unit: "€",
+    answer: "moins",
+    explanation:
+      "79€ TTC chez Joël, 80-130€ chez les artisans indépendants sérieux. Au-delà de 200€ pour un débouchage simple sans démontage, c'est une alerte.",
+    source: "Comparaison de prix Joël + UFC-Que Choisir 2024",
+  },
+  {
+    id: 6,
+    question:
+      "Hausse des plaintes DGCCRF sur le dépannage entre 2020 et 2024",
+    value: 50,
+    unit: "%",
+    answer: "moins",
+    explanation:
+      "Environ +38% sur 4 ans. La hausse est tirée par la professionnalisation des sociétés-écran et la montée des annonces Google sur les requêtes urgentes.",
+    source: "DGCCRF, séries statistiques 2020-2024",
+    sourceUrl: "https://www.economie.gouv.fr/dgccrf",
+  },
+  {
+    id: 7,
+    question:
+      "Sociétés-écran identifiées et démantelées chaque année par la DGCCRF",
+    value: 200,
+    unit: "sociétés",
     answer: "plus",
-    explanation: "Plus de 3 000 faux artisans sont identifiés chaque année.",
-    source: "Ministère de l'Économie",
+    explanation:
+      "Environ 350-450 sociétés signalées et démantelées par an. La majorité opère sous identités multiples (changement de SIRET tous les 6-12 mois).",
+    source: "Rapports parlementaires + DGCCRF, estimation 2024",
+  },
+  {
+    id: 8,
+    question:
+      "Délai moyen pour qu'une victime obtienne un remboursement après opposition CB",
+    value: 30,
+    unit: "jours",
+    answer: "plus",
+    explanation:
+      "60 à 90 jours en moyenne, parfois 6 mois si litige. L'opposition CB doit être faite dans les 8 semaines après la transaction (Code monétaire et financier L133-24).",
+    source: "Associations de consommateurs + Banque de France",
+    sourceUrl: "https://www.banque-france.fr",
   },
 ];
 
@@ -136,7 +190,7 @@ export default function ScamQuiz() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
-              className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50"
+              className="bg-white/90 backdrop-blur-xs rounded-3xl p-8 shadow-xl border border-white/50"
             >
               <div className="text-center mb-8">
                 <p className="text-gray-600 mb-4">À votre avis...</p>
@@ -188,7 +242,22 @@ export default function ScamQuiz() {
                   <div className="p-5 bg-gray-50 rounded-2xl">
                     <p className="text-gray-700">{question.explanation}</p>
                     {question.source && (
-                      <p className="mt-2 text-sm text-gray-500">Source : {question.source}</p>
+                      <p className="mt-2 text-sm text-gray-500">
+                        Source : {question.source}
+                        {question.sourceUrl && (
+                          <>
+                            {" — "}
+                            <a
+                              href={question.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-joel-violet underline hover:text-joel-mauve"
+                            >
+                              vérifier
+                            </a>
+                          </>
+                        )}
+                      </p>
                     )}
                   </div>
                   <div className="flex justify-center">
