@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Saint-Maur-des-Fossés (94100/94210) : La Varenne, Adamville, Vieux Saint-Maur, Le Parc. Prix fixe dès 79€ TTC, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Plombier Saint-Maur-des-Fossés — Mehdi, 28 ans terrain de la boucle de la Marne",
-  introParagraph:
-    "Mehdi Karim, plombier-chauffagiste depuis 1998, formation Compagnons du Devoir entre 1996 et 2000. Saint-Maur-des-Fossés, je l'ai dans les jambes depuis bientôt onze ans pour le réseau Joël, et c'est sans doute la commune la plus singulière techniquement de tout le Val-de-Marne pour qui s'intéresse au bâti francilien. 76 303 habitants au dernier recensement INSEE de 2024, presque entièrement enserrés dans une boucle de la Marne qui dessine ce péninsule urbain unique en Île-de-France, deux codes postaux historiques (94100 pour le centre, 94210 pour La Varenne-Saint-Hilaire), une densité de 6 756 habitants au km² qui place la ville au-dessus de bien des arrondissements parisiens, et surtout huit quartiers — La Varenne, Champignol, Saint-Maur Créteil, Les Mûriers, Adamville, Le Parc, La Pie et Vieux Saint-Maur — qui sont autant de mondes hydrauliques et architecturaux différents.\n\nQuand je sors de mon véhicule avenue Foch, avenue Joffre, rue du Pont-de-Créteil, rue de la République ou aux abords de la place des Marronniers à La Varenne, je sais déjà à 80% ce que je vais trouver avant d'avoir poussé la porte. C'est la lecture du chantier que les Compagnons enseignent : on regarde la façade, le portail de la villa, la marquise, le type de boîtes aux lettres, et la moitié du diagnostic est déjà posée. Ce qui complique l'exercice à Saint-Maur par rapport à Paris ou à Nanterre, c'est la diversité du parc bâti qu'on trouve sur quelques centaines de mètres : 35,9% des résidences principales datent de la reconstruction 1946-1970 selon l'INSEE, 17% de l'entre-deux-guerres, et près de 10% d'avant 1919 — les fameuses villas Belle Époque de La Varenne et les bourgeoises maisons d'Adamville. Toutes ces strates cohabitent sur une commune où la nappe alluviale de la Marne joue un rôle hydraulique souterrain qu'aucun plombier extérieur ne soupçonne s'il n'y a pas travaillé.\n\nL'eau, elle, vient du SEDIF via L'Eau d'Île-de-France (delegation Veolia depuis le 1er juillet 2016), traitée à l'usine de Choisy-le-Roi à partir de la Seine, et arrive à votre robinet avec une dureté mesurée à 26,5°f fin 2025 — eau classée \"dure\", calcaire actif. C'est un peu moins extrême que sur le 92 nord, mais c'est encore largement de quoi entartrer une résistance de cumulus en moins de dix ans, gripper un mitigeur thermostatique ou bouffer un joint torique. Tout plombier sérieux à Saint-Maur intègre ce paramètre dans son diagnostic.\n\nCette page est là pour vous donner les vrais prix d'une intervention à Saint-Maur-des-Fossés, vous expliquer pourquoi cette commune cossue est tout particulièrement ciblée par les sociétés-écran qui transforment un débouchage WC en facture à 600€, et surtout vous donner les bons réflexes avant d'appeler qui que ce soit. Numéro direct, sans plateforme intermédiaire ni majoration : **01 41 69 10 08**. Prix fixe annoncé AVANT que je sorte la première clé, dès 79€ TTC. 24h/24, dimanches et jours fériés compris, sans la moindre majoration. Jamais.",
+  introParagraph: `### Saint-Maur-des-Fossés en chiffres : une presqu'île unique en Île-de-France
+
+Saint-Maur-des-Fossés compte **76 303 habitants** au dernier recensement **INSEE 2024**, presque entièrement enserrés dans une **boucle de la Marne** qui dessine cette péninsule urbaine unique en Île-de-France. **Deux codes postaux historiques** (**94100** pour le centre, **94210** pour La Varenne-Saint-Hilaire), une **densité de 6 756 habitants au km²**.
+
+L'eau vient du **SEDIF via L'Eau d'Île-de-France** (délégation Veolia depuis le **1er juillet 2016**), traitée à l'**usine de Choisy-le-Roi** à partir de la Seine, avec une **dureté mesurée à 26,5°f fin 2025** — eau classée **« dure »**, calcaire actif.
+
+### Le bâti saint-maurien : huit quartiers, autant de mondes hydrauliques
+
+Saint-Maur compte **huit quartiers** — **La Varenne, Champignol, Saint-Maur Créteil, Les Mûriers, Adamville, Le Parc, La Pie et Vieux Saint-Maur** — qui sont autant de mondes hydrauliques et architecturaux différents. **Avenue Foch**, **avenue Joffre**, **rue du Pont-de-Créteil**, **rue de la République** ou la **place des Marronniers à La Varenne** racontent toutes une histoire différente.
+
+Selon l'INSEE, **35,9 % des résidences principales** datent de la **reconstruction 1946-1970**, **17 %** de l'**entre-deux-guerres**, et près de **10 % d'avant 1919** — les fameuses **villas Belle Époque de La Varenne** et les **bourgeoises maisons d'Adamville**. Toutes ces strates cohabitent sur une commune où la **nappe alluviale de la Marne** joue un rôle hydraulique souterrain.
+
+### Le quotidien plomberie à Saint-Maur : ce que disent les chiffres
+
+Cette commune cossue est tout particulièrement ciblée par les **sociétés-écran qui transforment un débouchage WC en facture à 600 €**. Le calcaire actif (26,5°f) entartre une résistance de cumulus en moins de dix ans, grippe un mitigeur thermostatique ou bouffe un joint torique.
+
+### L'auteur de cette page
+
+**Mehdi Karim**, **plombier-chauffagiste depuis 1998**, **formation Compagnons du Devoir entre 1996 et 2000**. Saint-Maur-des-Fossés, je l'ai dans les jambes depuis **bientôt onze ans pour le réseau Joël**, et c'est sans doute la commune la plus singulière techniquement de tout le Val-de-Marne pour qui s'intéresse au bâti francilien.
+
+### Joël à Saint-Maur : tarif fixe annoncé en amont
+
+Numéro direct, sans plateforme intermédiaire ni majoration : **01 41 69 10 08**. **Prix fixe annoncé AVANT** que je sorte la première clé, **dès 79 € TTC**. **24h/24**, dimanches et jours fériés compris, sans la moindre majoration. Jamais.`,
   sections: [
     {
       anchor: "huit-quartiers-saint-maur",

@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Villejuif 94800 — Centre, Pasteur, Hautes-Bruyères, Louis-Aragon. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Villejuif : sécurité résidentielle dans une commune métamorphosée par la ligne 14",
-  introParagraph:
-    "Villejuif a profondément changé depuis l'ouverture de la station Villejuif – Gustave-Roussy sur la ligne 14 du métro le 18 janvier 2025. Cette desserte renouvelée, qui place désormais la commune à moins de vingt minutes du cœur de Paris et à dix minutes de l'aéroport d'Orly, a redéfini son attractivité résidentielle. Avec ses 57 995 habitants au 1er janvier 2024 selon les chiffres INSEE, étalée sur 5,3 km² dans le sud du Val-de-Marne, la ville présente une mosaïque urbaine héritée d'un siècle d'urbanisations successives : pavillonnaire ouvrier 1900-1935 dans le Centre et à Pasteur, grand ensemble des Hautes-Bruyères édifié dans les années 1960-1970, copropriétés intermédiaires à Louis-Aragon et Lozaits, et désormais programmes neufs RT 2012 et RE 2020 qui sortent de terre depuis 2018 dans le sillage de la ligne 14. Cette diversité urbaine, jointe à l'augmentation continue de l'attractivité métropolitaine, fait de Villejuif une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-de-marnais pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Villejuif à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Villejuif en chiffres : population, ligne 14, parc résidentiel
+
+Villejuif a profondément changé depuis l'ouverture de la station **Villejuif – Gustave-Roussy sur la ligne 14 du métro le 18 janvier 2025**. Cette desserte place désormais la commune à **moins de vingt minutes du cœur de Paris** et à **dix minutes de l'aéroport d'Orly**.
+
+Avec ses **57 995 habitants au 1er janvier 2024** selon les chiffres INSEE, étalée sur **5,3 km²** dans le sud du **Val-de-Marne**, la ville présente une mosaïque urbaine héritée d'un siècle d'urbanisations successives.
+
+### Bâti : pavillonnaire, grand ensemble et neuf RE 2020
+
+Le parc résidentiel se décompose en : **pavillonnaire ouvrier 1900-1935** dans le Centre et à Pasteur, **grand ensemble des Hautes-Bruyères édifié dans les années 1960-1970**, **copropriétés intermédiaires à Louis-Aragon et Lozaits**, et désormais **programmes neufs RT 2012 et RE 2020** qui sortent de terre depuis 2018 dans le sillage de la ligne 14.
+
+### Pourquoi Villejuif attire les opérateurs douteux
+
+Cette diversité urbaine, jointe à **l'augmentation continue de l'attractivité métropolitaine**, fait de Villejuif une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-de-marnais pour y avoir mené plusieurs formations municipales.
+
+### Joël à Villejuif : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée, **sans majoration nuit ni week-end**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "villejuif-quartiers-bati-a-proteger",

@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Courbevoie 92400 — Faubourg de l'Arche, Bécon, Centre, Cœur de Ville, La Défense. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Courbevoie : sécurité résidentielle dans une commune sous l'ombre de la Défense",
-  introParagraph:
-    "Courbevoie compte environ 81 218 habitants selon les dernières estimations de population publiées par l'INSEE pour 2026, avec un chiffre légal 2023 récent en hausse de 1,2 % sur un an. Cette densité — l'une des plus élevées des Hauts-de-Seine sur 4,16 km² — s'organise autour de plusieurs grands secteurs : Faubourg de l'Arche au nord-est en lisière directe du quartier d'affaires de la Défense, Bécon au nord-ouest autour de la gare Bécon-les-Bruyères, Cœur de Ville historique autour de la mairie et de l'église Saint-Pierre-Saint-Paul, Centre autour de l'hôtel de ville, Charras-Champs-Philippe au sud-est en transition entre la Défense et le centre, Marceau à l'ouest, Gambetta au nord-ouest, et la partie courbevoisienne de La Défense au sud-est qui héberge plusieurs des plus hauts immeubles de la région parisienne. Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : pavillonnaire bourgeois fin XIXe et Belle Époque dans Bécon et Marceau, immeubles de rapport haussmanniens et post-haussmanniens dans le Cœur de Ville, copropriétés des Trente Glorieuses dans Charras et Champs-Philippe, et désormais grandes tours résidentielles RT 2012 et RE 2020 sorties de terre dans le sillage du quartier de l'Arche depuis 2010. Cette diversité urbaine, jointe à une rotation locative significative dans plusieurs secteurs liée à la proximité du pôle économique de la Défense (cadres expatriés, jeunes actifs, locations courte durée), fait de Courbevoie une cible privilégiée des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Courbevoie à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Courbevoie en chiffres : population, patrimoine, parc résidentiel
+
+Courbevoie compte environ **81 218 habitants** selon les dernières estimations de population publiées par l'**INSEE pour 2026**, avec un chiffre légal 2023 en hausse de **1,2 %** sur un an. Cette densité — **l'une des plus élevées des Hauts-de-Seine** sur **4,16 km²** — s'organise autour de plusieurs grands secteurs : **Faubourg de l'Arche** en lisière directe de la **Défense**, Bécon, Cœur de Ville, Centre, Charras-Champs-Philippe, Marceau, Gambetta, et la partie courbevoisienne de **La Défense**.
+
+Cette nomenclature recouvre une mosaïque urbaine : **pavillonnaire bourgeois fin XIXe et Belle Époque** dans Bécon et Marceau, **immeubles de rapport haussmanniens et post-haussmanniens** dans le Cœur de Ville, copropriétés des Trente Glorieuses dans Charras et Champs-Philippe, et désormais grandes tours résidentielles **RT 2012 et RE 2020** sorties de terre dans le sillage du quartier de l'Arche depuis 2010.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine, jointe à une **rotation locative significative** liée à la proximité du pôle économique de la Défense (**cadres expatriés, jeunes actifs, locations courte durée**), fait de Courbevoie une cible privilégiée des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Courbevoie : tarif fixe annoncé en amont
+
+Joël intervient à Courbevoie à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "courbevoie-quartiers-bati-a-proteger",

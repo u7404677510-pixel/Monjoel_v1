@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Maisons-Alfort 94700 — Centre, Charentonneau, Vert-de-Maisons, Liberté, Juilliottes. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Maisons-Alfort : sécurité résidentielle dans une commune des bords de Marne au caractère résidentiel marqué",
-  introParagraph:
-    "Maisons-Alfort, commune des bords de Marne à 8,4 km au sud-est de Paris, compte 58 355 habitants en 2024 selon les chiffres INSEE et 57 422 habitants au 1er janvier 2025, étalée sur 5,40 km² découpés par l'INSEE en 23 quartiers statistiques regroupant les grandes zones cohérentes : Centre autour de la place du Général-Leclerc et de l'église Saint-Remi, Charentonneau au nord-ouest le long de la Marne et de la Seine (confluent), Vert-de-Maisons à l'ouest autour de la station RER D éponyme, Liberté au sud autour de la station de métro ligne 8, Juilliottes au sud-est, Place-de-l'Hôtel-de-Ville au cœur, Stade-Bernard-Vergnaud et Buttes-Halage côté ouest, Plateau au sud, Convention au sud-est. Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : pavillonnaire bourgeois 1900-1935 le long de la Marne et dans Centre-Charentonneau, immeubles de rapport Belle Époque dans le Centre, copropriétés des Trente Glorieuses à Vert-de-Maisons et autour de Liberté, copropriétés intermédiaires des années 1980-2000 dans plusieurs secteurs, et désormais programmes neufs RT 2012 et RE 2020 qui sortent de terre depuis 2010 dans plusieurs poches résidentielles. La commune accueille également plusieurs établissements emblématiques (École nationale vétérinaire d'Alfort, Hôpital intercommunal). Cette diversité urbaine, jointe à un profil résidentiel marqué par la présence familiale et bourgeoise des bords de Marne, fait de Maisons-Alfort une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-de-marnais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Maisons-Alfort à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Maisons-Alfort en chiffres : population, patrimoine, parc résidentiel
+
+Maisons-Alfort, commune des bords de Marne à **8,4 km au sud-est de Paris**, compte **58 355 habitants en 2024** selon les chiffres **INSEE** et **57 422 habitants au 1er janvier 2025**, étalée sur **5,40 km²** découpés en **23 quartiers statistiques** : Centre, Charentonneau, Vert-de-Maisons, Liberté, Juilliottes, Place-de-l'Hôtel-de-Ville, Stade-Bernard-Vergnaud, Buttes-Halage, Plateau et Convention.
+
+Cette nomenclature recouvre une mosaïque urbaine : **pavillonnaire bourgeois 1900-1935** le long de la Marne et dans Centre-Charentonneau, **immeubles de rapport Belle Époque** dans le Centre, **copropriétés des Trente Glorieuses** à Vert-de-Maisons et autour de Liberté, copropriétés intermédiaires des années 1980-2000, et désormais programmes neufs **RT 2012 et RE 2020** depuis 2010. La commune accueille également plusieurs établissements emblématiques (**École nationale vétérinaire d'Alfort**, **Hôpital intercommunal**).
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine, jointe à un **profil résidentiel marqué par la présence familiale et bourgeoise des bords de Marne**, fait de Maisons-Alfort une cible des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-de-marnais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Maisons-Alfort : tarif fixe annoncé en amont
+
+Joël intervient à Maisons-Alfort à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "maisons-alfort-quartiers-bati-a-proteger",

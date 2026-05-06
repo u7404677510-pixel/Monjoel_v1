@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Clamart 92140 — Centre, Plaine, Gare, Petit-Clamart, Jardin Parisien, Galvents-Corby. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Clamart : intervenir entre Bas-Clamart en meulière, Petit-Clamart Trente Glorieuses et programmes neufs",
-  introParagraph:
-    "Clamart compte 55 019 habitants pour 8,79 km² selon les populations légales INSEE, répartis en sept quartiers officiels : Centre, Plaine, Gare, Petit-Clamart-Trivaux-Garenne, Jardin parisien-Panorama-Soleil levant, Galvents-Corby et Percy-Schneider. La commune se distingue par sa division en deux entités séparées par la forêt de Meudon (forêt domaniale étendue) : le Bas-Clamart historique organisé autour de la place Hunebelle et de l'église Saint-Pierre-et-Saint-Paul d'un côté, et le Petit-Clamart de l'autre, urbanisé massivement à partir des années 1960 sur les anciens champs de pois qui faisaient la spécialité agricole de la commune. Cette double identité se reflète dans le bâti résidentiel : pavillons en meulière des années 1900-1930 dans le Centre et la Plaine, immeubles bourgeois début XXe le long des grands axes, copropriétés des Trente Glorieuses massives au Petit-Clamart, et programmes neufs récents notamment dans la ZAC Panorama autour du nouveau quartier qui s'étend depuis 2010. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers clamartois et je connais bien la spécificité de cette ville. Cette page s'adresse aux Clamartois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Clamart en chiffres : densité, parc résidentiel, contexte
+
+Clamart compte **55 019 habitants** pour **8,79 km²** selon les populations légales **INSEE**, répartis en **sept quartiers officiels** : Centre, Plaine, Gare, Petit-Clamart-Trivaux-Garenne, Jardin parisien-Panorama-Soleil levant, Galvents-Corby et Percy-Schneider.
+
+La commune se distingue par sa division en deux entités séparées par la **forêt de Meudon** : le **Bas-Clamart historique** organisé autour de la place Hunebelle et de l'église Saint-Pierre-et-Saint-Paul d'un côté, et le **Petit-Clamart** de l'autre, urbanisé massivement à partir des **années 1960** sur les anciens champs de pois qui faisaient la spécialité agricole de la commune.
+
+### Le bâti clamartois : quatre époques cohabitent
+
+Cette double identité se reflète dans le bâti résidentiel. D'abord les **pavillons en meulière des années 1900-1930** dans le **Centre** et la **Plaine**.
+
+Ensuite les **immeubles bourgeois début XXe** le long des grands axes, et les **copropriétés des Trente Glorieuses** massives au **Petit-Clamart**.
+
+Enfin les **programmes neufs récents** notamment dans la **ZAC Panorama** autour du nouveau quartier qui s'étend depuis 2010, équipés de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers clamartois et je connais bien la spécificité de cette ville.
+
+Cette page s'adresse aux Clamartois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Clamart : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-clamart-trois-univers",

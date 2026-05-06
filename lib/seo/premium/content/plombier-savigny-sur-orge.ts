@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Savigny-sur-Orge 91600 — Centre, Davout, Grand-Vaux, Champagne, Prés-Saint-Martin. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Savigny-sur-Orge : intervenir entre le château Davout, le pavillonnaire ancien et la vallée de l'Orge",
-  introParagraph:
-    "Savigny-sur-Orge est, avec ses 37 190 habitants au dernier recensement INSEE et environ 37 200 habitants en 2026 selon les modèles de projection, l'une des grandes communes de l'Essonne et l'une des villes structurantes du nord du département. Étalée sur près de 7 km² dans la vallée de l'Orge, à 18 kilomètres de la place d'Italie et desservie par la ligne C du RER (gare de Savigny-sur-Orge), la commune présente une mosaïque urbaine d'une diversité remarquable. À Savigny, le bâti raconte son histoire jusque dans ses canalisations : centre-ville organisé autour de l'église Saint-Martin et du château Davout (acquis en 1802 par le maréchal Davout et son épouse Aimée Leclerc, devenu aujourd'hui le lycée Jean-Baptiste-Corot), pavillonnaire dominant des années 1900-1960 qui constitue l'essentiel du tissu urbain, copropriétés intermédiaires et grands ensembles édifiés entre 1965 et 1985 dans certains secteurs (Grand-Vaux), et désormais opérations RT 2012 puis RE 2020 qui ponctuent les réaménagements urbains. La commune, profondément pavillonnaire dans sa dominante, conserve un caractère résidentiel calme qui en fait l'une des villes les plus prisées de la première couronne sud-est essonnienne. En vingt-deux ans à gérer des copropriétés en petite couronne, j'ai accompagné plusieurs immeubles savinais dans leurs interventions de plomberie, et je peux le dire : Savigny réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. Cette page s'adresse aux Savinais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Savigny-sur-Orge en chiffres : une grande commune de l'Essonne
+
+Savigny-sur-Orge compte **37 190 habitants** au dernier recensement INSEE et environ **37 200 habitants en 2026** selon les modèles de projection, ce qui en fait l'une des grandes communes de l'**Essonne**.
+
+Étalée sur près de **7 km²** dans la **vallée de l'Orge**, à **18 kilomètres de la place d'Italie** et desservie par la **ligne C du RER** (gare de Savigny-sur-Orge), la commune conserve un caractère résidentiel calme qui en fait l'une des villes les plus prisées de la première couronne sud-est essonnienne.
+
+### Le bâti savinais : pavillonnaire dominant et patrimoine napoléonien
+
+À Savigny, le bâti raconte son histoire : **centre-ville** organisé autour de l'**église Saint-Martin** et du **château Davout** (acquis en **1802 par le maréchal Davout** et son épouse Aimée Leclerc, devenu aujourd'hui le **lycée Jean-Baptiste-Corot**), **pavillonnaire dominant des années 1900-1960** qui constitue l'essentiel du tissu urbain, **copropriétés intermédiaires et grands ensembles édifiés entre 1965 et 1985** dans certains secteurs (**Grand-Vaux**), et désormais opérations **RT 2012 puis RE 2020**.
+
+### Le quotidien plomberie à Savigny : ce que voient les Savinais
+
+Cette page s'adresse aux **Savinais** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Vingt-deux ans à gérer des copropriétés en petite couronne**, j'ai accompagné plusieurs immeubles savinais dans leurs interventions de plomberie. Savigny réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir.
+
+### Joël à Savigny-sur-Orge : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "savigny-bati-pavillonnaire-vallee-orge",

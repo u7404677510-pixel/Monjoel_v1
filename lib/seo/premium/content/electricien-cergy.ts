@@ -10,8 +10,33 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Cergy 95000 — Cergy-Préfecture, Cergy-Saint-Christophe, Cergy-Le-Haut, Axe Majeur. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Cergy : intervenir entre Cergy-Préfecture années 70, Saint-Christophe années 80 et Cergy-Le-Haut années 90",
-  introParagraph:
-    "Cergy compte 67 000 habitants pour 11,55 km² selon les populations légales INSEE (recensement 2022 authentifié), commune emblématique de la ville nouvelle de Cergy-Pontoise dont la création fut décidée par décret en 1969 et dont la construction s'est étalée sur trois décennies. Cette spécificité génétique de ville nouvelle conditionne radicalement le parc résidentiel : pratiquement toutes les constructions cergyssoises datent de la période 1970-2010, déployées en trois grandes vagues qui correspondent aux trois principaux quartiers : Cergy-Préfecture (le plus ancien, urbanisé dans les années 1970 autour de la gare RER A et de la préfecture du Val-d'Oise inaugurée en 1970), Cergy-Saint-Christophe (urbanisé dans les années 1980 autour de la gare RER A éponyme et de l'Axe Majeur signé Dani Karavan), et Cergy-Le-Haut (urbanisé dans les années 1990 sur les hauts plateaux). Cette stratification temporelle se reflète directement dans la qualité et la conformité des installations électriques que je rencontre. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers cergyssois et je connais bien la spécificité de cette ville nouvelle. Cette page s'adresse aux Cergyssois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Cergy en chiffres : densité, parc résidentiel, contexte
+
+Cergy compte **67 000 habitants** pour **11,55 km²** selon les populations légales **INSEE** (recensement 2022 authentifié), commune emblématique de la **ville nouvelle de Cergy-Pontoise** dont la création fut décidée par décret en **1969** et dont la construction s'est étalée sur trois décennies.
+
+### Trois vagues d'urbanisation, trois réalités électriques
+
+Cette spécificité génétique de ville nouvelle conditionne radicalement le parc résidentiel : pratiquement toutes les constructions cergyssoises datent de la période **1970-2010**, déployées en trois grandes vagues qui correspondent aux trois principaux quartiers.
+
+D'abord **Cergy-Préfecture** (le plus ancien, urbanisé dans les **années 1970** autour de la gare RER A et de la préfecture du Val-d'Oise inaugurée en 1970).
+
+Ensuite **Cergy-Saint-Christophe** (urbanisé dans les **années 1980** autour de la gare RER A éponyme et de l'**Axe Majeur** signé Dani Karavan).
+
+Enfin **Cergy-Le-Haut** (urbanisé dans les **années 1990** sur les hauts plateaux).
+
+Cette stratification temporelle se reflète directement dans la qualité et la conformité des installations électriques que je rencontre.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers cergyssois et je connais bien la spécificité de cette ville nouvelle.
+
+Cette page s'adresse aux Cergyssois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Cergy : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-cergy-trois-vagues-ville-nouvelle",

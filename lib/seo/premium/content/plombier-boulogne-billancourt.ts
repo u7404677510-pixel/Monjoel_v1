@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Boulogne-Billancourt 92100 — Trapèze, Île Seguin, Centre, Billancourt. Prix Joël annoncé dès 79€ TTC, intervention 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Plombier Boulogne-Billancourt : intervenir dans la ville la plus dense d'Europe, du Trapèze à la mairie",
-  introParagraph:
-    "Boulogne-Billancourt n'est pas une banlieue. À six kilomètres de la place de l'Étoile, sur la rive droite de la Seine au sud-ouest immédiat de Paris, la commune compte 119 645 habitants pour 6,17 km², ce qui en fait l'une des villes les plus densément peuplées d'Europe avec un peu plus de 19 400 habitants au kilomètre carré selon les données INSEE 2024. Cette densité radicale, jointe à l'extraordinaire diversité d'un bâti qui mêle l'haussmannien tardif des avenues du Centre, l'Art déco majestueux de la rue Denfert-Rochereau, les barres et tours des années 1960-1970 du quartier des Princes, et désormais les programmes ultra-contemporains du Trapèze édifiés sur les anciennes friches Renault, fait de la ville un terrain de jeu hydraulique d'une complexité que peu de communes franciliennes égalent. En 28 ans de métier, j'ai eu l'occasion d'intervenir des dizaines de fois à Boulogne, et je peux le dire d'expérience : on n'aborde pas une fuite avenue Jean-Baptiste-Clément comme on aborde une chasse d'eau bouchée dans une résidence neuve du Trapèze, parce que les distributions, les pressions, les contraintes patrimoniales et les enjeux de copropriété n'ont à peu près rien à voir. Cette page s'adresse aux Boulonnais qui, confrontés à une fuite un soir, à un dégât des eaux un dimanche, à un chauffe-eau en panne en plein hiver, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08. Les pages qui suivent veulent donner aux Boulonnais les clefs pour comprendre, sur leur ville et son histoire urbaine, ce qui distingue un dépannage juste d'une arnaque opportuniste.",
+  introParagraph: `### Boulogne-Billancourt en chiffres : la ville la plus dense d'Europe
+
+Boulogne-Billancourt compte **119 645 habitants** pour **6,17 km²**, ce qui en fait l'une des villes les **plus densément peuplées d'Europe** avec un peu plus de **19 400 habitants au kilomètre carré** selon les données INSEE 2024.
+
+À **six kilomètres de la place de l'Étoile**, sur la rive droite de la Seine au sud-ouest immédiat de Paris, la commune est née de la **fusion en 1925** du vieux village de **Boulogne-sur-Seine** et de **Billancourt**, ancien hameau ouvrier transformé par l'implantation des **usines Renault** sur l'île Seguin à partir de 1898.
+
+### Le bâti boulonnais : une diversité radicale
+
+Cette densité s'accompagne d'une extraordinaire diversité d'un bâti qui mêle l'**haussmannien tardif** des avenues du Centre, l'**Art déco majestueux** de la rue Denfert-Rochereau, les **barres et tours des années 1960-1970** du quartier des Princes, et désormais les **programmes ultra-contemporains du Trapèze** édifiés sur les anciennes friches Renault.
+
+### Le quotidien plomberie à Boulogne : ce que ça implique
+
+On n'aborde pas une fuite **avenue Jean-Baptiste-Clément** comme on aborde une chasse d'eau bouchée dans une **résidence neuve du Trapèze** : les distributions, les pressions, les contraintes patrimoniales et les enjeux de copropriété n'ont à peu près rien à voir.
+
+Cette page s'adresse aux Boulonnais qui, confrontés à une fuite un soir, à un dégât des eaux un dimanche, à un chauffe-eau en panne en plein hiver, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**28 ans de métier** dans la plomberie, avec des dizaines d'interventions à Boulogne. Cette page veut donner aux Boulonnais les clefs pour comprendre, sur leur ville et son histoire urbaine, ce qui **distingue un dépannage juste d'une arnaque opportuniste**.
+
+### Joël à Boulogne-Billancourt : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "boulogne-densite-bati-mosaique",

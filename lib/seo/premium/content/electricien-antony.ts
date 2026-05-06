@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Antony 92160 — Centre, Pajeaud, Croix-de-Berny, Antonypole. Diagnostic 89€ TTC, NF C 15-100, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Électricien Antony : intervenir entre pavillons 1900 et programmes neufs autour du Pôle Antonypole",
-  introParagraph:
-    "Antony s'étire sur 9,6 km² au sud des Hauts-de-Seine et compte 63 991 habitants selon les chiffres INSEE 2024, ce qui en fait l'une des plus grandes communes du sud du département. Cette taille s'accompagne d'une mosaïque urbaine particulièrement variée qui pose des défis particuliers à l'électricien : pavillonnaire ouvrier 1900-1935 dans le quartier Pajeaud avec leurs installations électriques pour partie d'origine ou modernisées au coup par coup, copropriétés des Trente Glorieuses dans le secteur Centre et autour de l'avenue Aristide-Briand avec leurs tableaux électriques fréquemment vétustes, grand ensemble du Noyer-Doré édifié dans les années 1960-1970 dont le parc social a connu plusieurs vagues de réhabilitation, et désormais programmes ultra-contemporains autour du Pôle Antonypole et le long de la ligne T10 du tramway (mise en service le 24 juin 2023) équipés des dernières générations de tableaux modulaires conformes à la norme NF C 15-100 amendée. La gare Antony, principal nœud d'échange de la commune, articule le RER B, le terminus de l'Orlyval (qui rejoint Paris-Orly en huit minutes) et le tramway T10. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers antoniens et je connais bien la spécificité de cette commune. Cette page s'adresse aux Antoniens qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Antony en chiffres : densité, parc résidentiel, contexte
+
+Antony s'étire sur **9,6 km²** au sud des Hauts-de-Seine et compte **63 991 habitants** selon les chiffres **INSEE 2024**, ce qui en fait l'une des plus grandes communes du sud du département.
+
+La gare Antony, principal nœud d'échange de la commune, articule le **RER B**, le terminus de l'**Orlyval** (qui rejoint Paris-Orly en huit minutes) et le tramway **T10** mis en service le **24 juin 2023**.
+
+### Trois univers de bâti, trois réalités électriques
+
+Cette taille s'accompagne d'une mosaïque urbaine particulièrement variée qui pose des défis particuliers à l'électricien. D'abord le **pavillonnaire ouvrier 1900-1935** dans le quartier **Pajeaud** avec leurs installations électriques pour partie d'origine ou modernisées au coup par coup.
+
+Ensuite les **copropriétés des Trente Glorieuses** dans le secteur **Centre** et autour de l'**avenue Aristide-Briand** avec leurs tableaux électriques fréquemment vétustes, et le grand ensemble du **Noyer-Doré** édifié dans les années 1960-1970 dont le parc social a connu plusieurs vagues de réhabilitation.
+
+Enfin les **programmes ultra-contemporains** autour du **Pôle Antonypole** et le long de la ligne T10 du tramway, équipés des dernières générations de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers antoniens et je connais bien la spécificité de cette commune.
+
+Cette page s'adresse aux Antoniens qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Antony : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "antony-electricite-trois-univers-bati",

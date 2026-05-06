@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Aulnay-sous-Bois 93600 — Vieux-Pays, Rose-des-Vents, Mitry-Ambourget, Gros-Saule. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Aulnay-sous-Bois : sécurité résidentielle dans une commune-mosaïque entre pavillonnaire historique et grand ensemble",
-  introParagraph:
-    "Aulnay-sous-Bois, troisième commune la plus peuplée de Seine-Saint-Denis, compte 86 360 habitants au recensement INSEE 2024, étalée sur 16,20 km² découpés par l'INSEE en plusieurs grands quartiers : Vieux-Pays au nord-ouest autour du centre historique et de l'église Saint-Sulpice, Rose-des-Vents au sud (l'emblématique Cité des 3000 édifiée dans les années 1960-1975, l'un des plus grands ensembles franciliens), Mitry-Ambourget au sud-est autour de la station RER B éponyme, Gros-Saule au sud-ouest, Nonneville à l'ouest, Pont-de-l'Union au sud, Chanteloup au nord-est, Maximilien-Robespierre au sud, La Roseraie à l'est, Étangs au sud-est, Tour-Eiffel au nord, et Hôtel-de-Ville au cœur. Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : Vieux-Pays médiéval-rural avec ses maisons en meulière 1880-1930, pavillonnaire ouvrier 1900-1935 dans le secteur Nonneville-Tour-Eiffel-Chanteloup, grand ensemble Rose-des-Vents (Cité des 3000) édifié dans les années 1960-1975 sur des plans de l'urbaniste Émile Aillaud, copropriétés intermédiaires des Trente Glorieuses dans plusieurs secteurs, et désormais programmes neufs RT 2012 et RE 2020 qui sortent de terre depuis 2010 dans plusieurs poches résidentielles dans le sillage de la requalification urbaine du sud de la commune. Cette diversité urbaine extrême, jointe à une mixité sociale très marquée, fait d'Aulnay-sous-Bois une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain séquano-dionysien pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Aulnay-sous-Bois à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Aulnay-sous-Bois en chiffres : population, patrimoine, parc résidentiel
+
+Aulnay-sous-Bois, **troisième commune la plus peuplée de Seine-Saint-Denis**, compte **86 360 habitants** au recensement **INSEE 2024**, étalée sur **16,20 km²** découpés en plusieurs grands quartiers : Vieux-Pays, Rose-des-Vents, Mitry-Ambourget, Gros-Saule, Nonneville, Pont-de-l'Union, Chanteloup, Maximilien-Robespierre, La Roseraie, Étangs, Tour-Eiffel et Hôtel-de-Ville.
+
+Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : **Vieux-Pays médiéval-rural** avec ses maisons en meulière **1880-1930**, **pavillonnaire ouvrier 1900-1935** dans le secteur Nonneville-Tour-Eiffel-Chanteloup, **grand ensemble Rose-des-Vents (Cité des 3000)** édifié dans les années 1960-1975 sur des plans de l'urbaniste **Émile Aillaud**, copropriétés intermédiaires des Trente Glorieuses, et désormais programmes neufs **RT 2012 et RE 2020** depuis 2010.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine extrême, jointe à une **mixité sociale très marquée**, fait d'Aulnay-sous-Bois une cible des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain séquano-dionysien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Aulnay-sous-Bois : tarif fixe annoncé en amont
+
+Joël intervient à Aulnay-sous-Bois à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "aulnay-quartiers-bati-a-proteger",

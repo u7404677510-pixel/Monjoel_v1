@@ -10,8 +10,33 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Clamart 92140 — Centre, Plaine, Gare, Petit-Clamart, Trivaux, Jardin parisien. Prix Joël annoncé dès 79€ TTC, intervention 24h/24. 01 41 69 10 08.",
   h1: "Plombier Clamart : intervenir entre Bas-Clamart historique et Petit-Clamart de l'après-guerre",
-  introParagraph:
-    "Clamart a deux visages, séparés par une forêt. Au nord, le Bas-Clamart, ancien village médiéval devenu commune historique, organisé autour de l'église Saint-Pierre-Saint-Paul et de la place Hunebelle, conserve l'identité d'un centre ancien densifié au fil du temps avec des immeubles bourgeois 1900-1930, des copropriétés des Trente Glorieuses et quelques opérations contemporaines. Au sud, séparé par la forêt de Meudon-Clamart, le Petit-Clamart est né beaucoup plus tard : urbanisé à partir des années 1960 sur d'anciennes parcelles agricoles et de petits-pois cultivés jusque-là par les maraîchers franciliens, il accueille aujourd'hui un parc de logements collectifs édifiés en grande partie entre 1965 et 1985, complété par les opérations plus récentes du Trivaux-Garenne. Avec ses 55 019 habitants pour 8,8 km² selon les données INSEE, Clamart se trouve dans les Hauts-de-Seine sud, frontalière de Châtillon, Meudon, Le Plessis-Robinson, Bagneux, et Issy-les-Moulineaux. La commune compte officiellement sept quartiers : Centre, Plaine, Gare, Petit-Clamart-Trivaux-Garenne, Jardin parisien-Panorama-Soleil levant, Galvents-Corby et Percy-Schneider. En 28 ans de plomberie en Île-de-France, j'ai eu l'occasion d'intervenir des dizaines de fois à Clamart, et je peux le dire d'expérience : on n'aborde pas une fuite dans un pavillon en meulière du Jardin parisien comme on aborde une chasse d'eau dans une copropriété du Petit-Clamart, ni comme on aborde une chaudière dans une résidence neuve à proximité de la gare. Cette page s'adresse aux Clamartois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Clamart en chiffres : deux villes séparées par une forêt
+
+Clamart compte **55 019 habitants** pour **8,8 km²** selon les données INSEE, dans les Hauts-de-Seine sud, frontalière de Châtillon, Meudon, Le Plessis-Robinson, Bagneux et Issy-les-Moulineaux.
+
+La commune a deux visages, séparés par la **forêt domaniale de Meudon-Clamart**. La commune compte officiellement **sept quartiers** : **Centre, Plaine, Gare, Petit-Clamart-Trivaux-Garenne, Jardin parisien-Panorama-Soleil levant, Galvents-Corby et Percy-Schneider**.
+
+### Le bâti clamartois : Bas-Clamart historique et Petit-Clamart d'après-guerre
+
+Au nord, le **Bas-Clamart**, ancien village médiéval devenu commune historique, organisé autour de l'**église Saint-Pierre-Saint-Paul** et de la **place Hunebelle**, conserve l'identité d'un centre ancien densifié avec des **immeubles bourgeois 1900-1930**, des **copropriétés des Trente Glorieuses** et quelques opérations contemporaines.
+
+Au sud, le **Petit-Clamart** est né beaucoup plus tard : urbanisé à partir des **années 1960** sur d'anciennes parcelles agricoles et de petits-pois cultivés jusque-là par les maraîchers franciliens. Il accueille un parc de **logements collectifs édifiés en grande partie entre 1965 et 1985**, complété par les opérations plus récentes du **Trivaux-Garenne**.
+
+### Le quotidien plomberie à Clamart : ce que ça implique
+
+On n'aborde pas une fuite dans un **pavillon en meulière du Jardin parisien** comme on aborde une chasse d'eau dans une **copropriété du Petit-Clamart**, ni comme on aborde une chaudière dans une **résidence neuve à proximité de la gare**.
+
+Cette page s'adresse aux Clamartois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**28 ans de plomberie en Île-de-France**, avec des dizaines d'interventions à Clamart. Cette page veut donner aux Clamartois les clefs pour distinguer **un dépannage juste d'une arnaque opportuniste**.
+
+### Joël à Clamart : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "clamart-deux-villes-foret-meudon",

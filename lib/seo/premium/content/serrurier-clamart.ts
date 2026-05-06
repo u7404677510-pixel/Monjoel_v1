@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Clamart 92140 — Centre, Trivaux-Garenne, Bas-Clamart, Petit-Clamart. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Clamart : sécurité résidentielle dans une commune entre haut et bas",
-  introParagraph:
-    "Clamart est l'une des grandes communes du sud-ouest des Hauts-de-Seine avec 58 576 habitants selon les données INSEE 2024 répartis sur 8,8 km², et une géographie particulière qui structure profondément la vie résidentielle : un haut, sur les coteaux où s'étendent les pavillonnaires bourgeois et les forêts urbaines (Bois de Clamart, Bois de Meudon), et un bas, vers la plaine où se concentrent les grands ensembles et les zones d'activités. La commune a vu son accessibilité métropolitaine considérablement renforcée ces dernières années : la ligne 13 du métro continue de desservir le terminus Châtillon-Montrouge à proximité, le tramway T6 (Châtillon-Montrouge ↔ Viroflay-Rive-Droite) traverse la commune en plusieurs arrêts, et le tramway T10 (depuis le 24 juin 2023) dessert également une partie du territoire jusqu'à Jardin Parisien. Cette accessibilité, jointe à la qualité résidentielle de la commune et à la présence de nombreux secteurs en transformation, fait de Clamart une cible privilégiée des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain clamartois pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Clamart à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Clamart en chiffres : population, patrimoine, parc résidentiel
+
+Clamart est l'une des grandes communes du sud-ouest des Hauts-de-Seine avec **58 576 habitants** selon les données **INSEE 2024** répartis sur **8,8 km²**.
+
+Sa géographie particulière structure profondément la vie résidentielle : **un haut**, sur les coteaux où s'étendent les **pavillonnaires bourgeois** et les forêts urbaines (Bois de Clamart, Bois de Meudon), et **un bas**, vers la plaine où se concentrent les **grands ensembles** et les zones d'activités.
+
+L'accessibilité métropolitaine s'est considérablement renforcée : **ligne 13 du métro** au terminus Châtillon-Montrouge à proximité, **tramway T6** (Châtillon-Montrouge ↔ Viroflay-Rive-Droite), et **tramway T10** depuis le **24 juin 2023**.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette accessibilité, jointe à la **qualité résidentielle de la commune** et à la présence de nombreux secteurs en transformation, fait de Clamart une cible privilégiée des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain clamartois pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Clamart : tarif fixe annoncé en amont
+
+Joël intervient à Clamart à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "clamart-quartiers-bati-a-proteger",

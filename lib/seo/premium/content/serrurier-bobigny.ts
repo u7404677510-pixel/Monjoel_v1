@@ -10,13 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Enquête sur les serruriers de Bobigny (93000) : mécanique des arnaques low-cost, vrais prix relevés, recours DGCCRF. Joël intervient dès 89€ TTC, prix annoncé.",
   h1: "Serrurier Bobigny (93000) : enquête sur un marché ciblé en bordure de tribunal",
-  introParagraph: `Bobigny n'est pas une ville comme une autre dans la cartographie des arnaques au dépannage. Préfecture de la Seine-Saint-Denis depuis 1964, siège du tribunal judiciaire le plus chargé de France après celui de Paris, point de jonction entre le terminus du métro 5 (Bobigny-Pablo-Picasso), quatre stations du tram T1 et seize lignes de bus, la ville concentre 54 145 habitants (population municipale INSEE 2024) sur un territoire singulièrement dense, où cohabitent un parc de tours et de barres des années 60-70 — Karl-Marx, Pablo-Picasso, Hôtel-de-Ville, le quartier des Étoiles d'Émile Aillaud — et un nouveau Cœur-de-Ville livré début 2025 par Altarea entre la mairie et la préfecture.
+  introParagraph: `### Bobigny en chiffres : population, patrimoine, parc résidentiel
 
-Pour les sociétés-écrans qui industrialisent la captation d'appels en serrurerie d'urgence, ce profil est presque idéal. Densité de portes au mètre carré, rotation locative élevée dans certaines tours d'habitat social en cours de réhabilitation ANRU, public mixte populaire historiquement sous-équipé en informations consommateurs, et un point unique : Bobigny figure parmi les communes du 93 où les chiffres de plaintes "défaut d'information précontractuelle" en serrurerie ont bondi de plus de 90% lors de la dernière vague d'enquête nationale DGCCRF. Quand vous tapez "serrurier Bobigny 93" sur votre téléphone à 22h un dimanche, ce n'est pas un artisan local que vous trouvez en tête de Google : ce sont des plateformes domiciliées ailleurs, qui sous-traitent la course à la commission.
+Bobigny est la **préfecture de la Seine-Saint-Denis depuis 1964** et le siège du **tribunal judiciaire le plus chargé de France après celui de Paris**. La commune concentre **54 145 habitants** (population municipale **INSEE 2024**) sur un territoire singulièrement dense.
 
-Depuis 2010, dans le cadre d'enquêtes pour 60 Millions de Consommateurs puis comme conseil indépendant pour la DGCCRF, j'ai documenté plusieurs centaines de litiges franciliens. Bobigny revient régulièrement, souvent associée à ses voisines Aubervilliers, Bondy, Aulnay-sous-Bois et Bagnolet — les cinq villes que les chiffres SSMSI 2024 placent en tête départementale pour les cambriolages, mais aussi pour les plaintes consuméristes liées aux interventions d'urgence. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+Le tissu urbain mêle un **parc de tours et de barres des années 60-70** — Karl-Marx, Pablo-Picasso, Hôtel-de-Ville, le **quartier des Étoiles d'Émile Aillaud** — et un nouveau **Cœur-de-Ville livré début 2025 par Altarea** entre la mairie et la préfecture. Point de jonction entre le terminus du **métro 5** (Bobigny-Pablo-Picasso), **quatre stations du tram T1** et **seize lignes de bus**.
 
-Joël (01 41 69 10 08) intervient à Bobigny à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Ce n'est pas un slogan, c'est l'inverse exact de ce que pratique l'écosystème dénoncé plus bas. Lisez. Et la prochaine fois qu'une porte claque avenue Karl-Marx, avenue Henri-Barbusse ou avenue Édouard-Vaillant à minuit, vous saurez quoi faire.`,
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Pour les **sociétés-écrans** qui industrialisent la captation d'appels en serrurerie d'urgence, ce profil est presque idéal. Bobigny figure parmi les communes du 93 où les chiffres de plaintes "**défaut d'information précontractuelle**" en serrurerie ont **bondi de plus de 90%** lors de la dernière vague d'enquête nationale **DGCCRF**.
+
+Bobigny revient régulièrement aux côtés d'**Aubervilliers, Bondy, Aulnay-sous-Bois et Bagnolet** — les cinq villes que les chiffres **SSMSI 2024** placent en tête départementale pour les cambriolages, mais aussi pour les plaintes consuméristes liées aux interventions d'urgence.
+
+### L'auteur de cette page
+
+Depuis **2010**, dans le cadre d'enquêtes pour **60 Millions de Consommateurs** puis comme conseil indépendant pour la **DGCCRF**, j'ai documenté **plusieurs centaines de litiges franciliens**. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Bobigny : tarif fixe annoncé en amont
+
+Joël intervient à Bobigny à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "pourquoi-bobigny",

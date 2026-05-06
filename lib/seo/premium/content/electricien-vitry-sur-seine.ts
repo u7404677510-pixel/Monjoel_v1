@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Vitry-sur-Seine 94400 — Centre, 8-Mai-1945, Ardoines, Seine-Gare-Vitry, Plateau. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Vitry-sur-Seine : intervenir entre grands ensembles 1960-70, ZAC Seine-Gare-Vitry et tissu pavillonnaire",
-  introParagraph:
-    "Vitry-sur-Seine compte 95 282 habitants pour 11,68 km² selon les populations légales INSEE 2024 (recensement 2022 authentifié), troisième commune la plus peuplée du Val-de-Marne après Saint-Maur et Champigny. La ville s'étend en bord de Seine entre Ivry-sur-Seine au nord et Choisy-le-Roi au sud, avec une histoire industrielle lourde liée à l'implantation des thermiques EDF (centrale de Vitry démantelée), des établissements pharmaceutiques (Sanofi historique), et de nombreuses activités de logistique. Cette histoire industrielle se reflète dans le bâti résidentiel : des grands ensembles emblématiques des années 1960-1970 dans les quartiers 8-Mai-1945, Balzac, Plateau, des immeubles ouvriers et faubouriens hérités du XIXe et début XXe le long de la Seine, des secteurs pavillonnaires plus tardifs sur le coteau, et une mutation urbaine accélérée depuis 2010 avec la ZAC Seine-Gare-Vitry (4 100 logements à terme dans le quartier des Ardoines, autour de la gare RER C). Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers vitriots et je connais bien la spécificité de cette ville. Cette page s'adresse aux Vitriots qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Vitry-sur-Seine en chiffres : densité, parc résidentiel, contexte
+
+Vitry-sur-Seine compte **95 282 habitants** pour **11,68 km²** selon les populations légales **INSEE 2024** (recensement 2022 authentifié), **troisième commune la plus peuplée du Val-de-Marne** après Saint-Maur et Champigny.
+
+La ville s'étend en bord de **Seine** entre **Ivry-sur-Seine** au nord et **Choisy-le-Roi** au sud, avec une histoire industrielle lourde liée à l'implantation des **thermiques EDF** (centrale de Vitry démantelée), des établissements pharmaceutiques (**Sanofi historique**), et de nombreuses activités de logistique.
+
+### Le bâti vitriot : héritages industriels et mutation urbaine
+
+Cette histoire industrielle se reflète dans le bâti résidentiel. D'abord des **grands ensembles emblématiques des années 1960-1970** dans les quartiers **8-Mai-1945**, **Balzac**, **Plateau**.
+
+Ensuite des **immeubles ouvriers et faubouriens hérités du XIXe et début XXe** le long de la Seine, et des secteurs pavillonnaires plus tardifs sur le coteau.
+
+Enfin une mutation urbaine accélérée depuis **2010** avec la **ZAC Seine-Gare-Vitry** (**4 100 logements** à terme dans le quartier des **Ardoines**, autour de la gare RER C), avec des résidences neuves conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers vitriots et je connais bien la spécificité de cette ville.
+
+Cette page s'adresse aux Vitriots qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Vitry-sur-Seine : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-vitry-quatre-univers",

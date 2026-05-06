@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Vincennes (94300) : intervention dès 89€ TTC, prix annoncé avant. Ex-gendarme cambriolages 94 décortique vos vulnérabilités. Tel : 01 41 69 10 08.",
   h1: "Serrurier à Vincennes : l'audit d'un ex-gendarme cambriolages du Val-de-Marne",
-  introParagraph:
-    "Je suis Patrick Delcourt, adjudant-chef en retraite de la Section de Recherches de Versailles, et formateur indépendant en sûreté résidentielle depuis 2023. Pendant 31 ans, j'ai croisé toutes les facettes de la délinquance d'appropriation en Île-de-France, et plus particulièrement dans le Val-de-Marne où j'ai été détaché à plusieurs reprises pour des opérations conjointes BRDP 94. Vincennes (94300, 49 621 habitants) m'est familière : ville résidentielle bourgeoise adossée au château et au bois, parc immobilier dense entre haussmannien et années 1900-1930, fortes copropriétés, maisons de ville en lisière du bois, marché de Vincennes le mardi, samedi et dimanche, RER A Vincennes, ligne 1 Château de Vincennes, Bérault, et accès Saint-Mandé. Cette densité de transports + ce niveau de vie en font une cible récurrente, mais surtout une cible apprenable pour qui sait scanner une porte palière. Si vous êtes tombé sur cette page, c'est pour l'une de quatre raisons : vous êtes devant une porte close, vous venez de subir une effraction, vous voulez sécuriser un appartement ou une maison de ville, ou vous comparez les serruriers du 94. Je vais vous donner quatre choses : 1° la cartographie réelle des cambriolages à Vincennes par quartier, 2° les vulnérabilités précises du parc résidentiel vincennois (haussmannien, années 1900-1930, années 70, maisons de ville), 3° les tarifs honnêtes du réseau Joël (dès 89€ TTC, annoncés avant intervention, sans majoration nuit ni week-end), 4° le protocole exact à suivre dans les 60 minutes après une effraction. Joël intervient 24h/24 sur la commune au 01 41 69 10 08. Lisez les sections qui vous concernent, classez les informations, faites votre choix en connaissance de cause.",
+  introParagraph: `### Vincennes en chiffres : population, densité, parc résidentiel
+
+Vincennes (**94300**) compte **49 621 habitants** sur seulement **1,91 km²**, l'une des **densités les plus fortes du Val-de-Marne**. Ville résidentielle bourgeoise adossée au **château et au bois**, parc immobilier dense entre **haussmannien et années 1900-1930**, fortes copropriétés, **maisons de ville en lisière du bois**.
+
+Marchés le **mardi, samedi et dimanche**. Transports : **RER A Vincennes**, **ligne 1 Château de Vincennes, Bérault**, accès Saint-Mandé.
+
+### Cambriolages : les chiffres SSMSI 94
+
+Le **Val-de-Marne (94)** figure parmi les départements franciliens à exposition modérée mais soutenue, avec un taux d'environ **6,4 cambriolages pour 1 000 logements** selon les remontées du **SSMSI**. Vincennes présente un profil particulier : **moins de logements sociaux que la moyenne 94, davantage de propriétaires occupants**, beaucoup de **copropriétés haussmanniennes et années 1900-1930 valorisées**, et un parc de **maisons de ville recherché en lisière du bois**.
+
+Le mode opératoire dominant relevé sur les procès-verbaux : **effraction par la porte palière dans 58 % des cas**, par fenêtre ou balcon en rez-de-chaussée et premier étage dans **31 %**, par soupirail, cave ou cour intérieure dans **11 %**.
+
+### L'auteur de cette page
+
+Je suis **Patrick Delcourt**, **adjudant-chef en retraite de la Section de Recherches de Versailles**, et formateur indépendant en sûreté résidentielle depuis 2023. Pendant **31 ans**, j'ai croisé toutes les facettes de la délinquance d'appropriation en Île-de-France, et plus particulièrement dans le Val-de-Marne où j'ai été détaché à plusieurs reprises pour des **opérations conjointes BRDP 94**.
+
+### Joël à Vincennes : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, dès **89 € TTC**, **sans majoration nuit ni week-end**. Joël intervient **24h/24** sur la commune.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "stats-effraction-94-vincennes",

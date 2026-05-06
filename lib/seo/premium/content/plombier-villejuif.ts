@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Villejuif 94800 — Centre, Pasteur, Hautes Bruyères, Lozaits, Aragon. Prix Joël fixe dès 79€ TTC, sans majoration nuit/week-end. 01 41 69 10 08.",
   h1: "Plombier Villejuif : la commune métamorphosée par la ligne 14, et son bâti qui dicte les pannes",
-  introParagraph:
-    "Villejuif est une commune qui change vite. À l'arrivée de la ligne 14 du métro à la station Villejuif – Gustave-Roussy ouverte le 18 janvier 2025, qui place désormais la commune à moins de vingt minutes du centre de Paris et à dix minutes de l'aéroport d'Orly, s'ajoute la mutation continue d'un tissu urbain hérité d'un siècle d'urbanisations successives. Avec ses 57 995 habitants au 1er janvier 2024 selon les derniers chiffres INSEE, étalée sur 5,3 km² aux portes sud du Val-de-Marne, Villejuif présente une mosaïque de bâtis qui rend chaque intervention de plomberie singulière. À soixante-dix ans, dont quarante passés à Évry comme ingénieur hydraulicien à EDF puis depuis quelques années comme bénévole à l'UFC-Que Choisir, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Villejuif raconte la sienne en sept quartiers officiels que la mairie reconnaît : Gripons-Pasteur au nord, Paul-Brousse à l'est, le Centre-ville autour de l'avenue de la République, Louis-Aragon-Vaux-de-Rome au sud-ouest, Zola-Lion-d'Or, Hautes-Bruyères-Esselières au sud, et Épi-d'Or-Lozaits-Lilas. Chacun de ces quartiers a son âge, son bâti, sa typologie hydraulique. Le pavillonnaire ouvrier des années 1920-1930 du Centre n'a rien à voir avec les barres des Hautes-Bruyères édifiées dans les années 1960-1970, ni avec les programmes neufs RT 2012 et RE 2020 qui sortent de terre depuis 2018 dans le sillage de la ligne 14. Cette page s'adresse aux Villejuifois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08. Cette page veut, à mon humble échelle de vieux hydraulicien, leur expliquer comment fonctionne vraiment la plomberie de leur ville, et pourquoi un peu de patience avant d'appeler protège mieux qu'on ne l'imagine.",
+  introParagraph: `### Villejuif en chiffres : une commune qui change vite
+
+Villejuif compte **57 995 habitants au 1er janvier 2024** selon les derniers chiffres INSEE, étalée sur **5,3 km²** aux portes sud du **Val-de-Marne**. À l'arrivée de la **ligne 14 du métro** à la station **Villejuif – Gustave-Roussy ouverte le 18 janvier 2025**, qui place désormais la commune à **moins de vingt minutes du centre de Paris** et à **dix minutes de l'aéroport d'Orly**, s'ajoute la mutation continue d'un tissu urbain hérité d'un siècle d'urbanisations successives.
+
+### Le bâti villejuifois : sept quartiers officiels
+
+Villejuif raconte son eau en **sept quartiers officiels** : **Gripons-Pasteur** au nord, **Paul-Brousse** à l'est, le **Centre-ville** autour de l'avenue de la République, **Louis-Aragon-Vaux-de-Rome** au sud-ouest, **Zola-Lion-d'Or**, **Hautes-Bruyères-Esselières** au sud, et **Épi-d'Or-Lozaits-Lilas**.
+
+Le **pavillonnaire ouvrier des années 1920-1930** du Centre n'a rien à voir avec les **barres des Hautes-Bruyères édifiées dans les années 1960-1970**, ni avec les **programmes neufs RT 2012 et RE 2020** qui sortent de terre **depuis 2018** dans le sillage de la ligne 14.
+
+### Le quotidien plomberie à Villejuif : ce que voient les Villejuifois
+
+Cette page s'adresse aux **Villejuifois** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À **soixante-dix ans**, dont **quarante passés à Évry comme ingénieur hydraulicien à EDF** puis depuis quelques années comme **bénévole à l'UFC-Que Choisir**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Cette page veut, à mon humble échelle de vieux hydraulicien, expliquer comment fonctionne vraiment la plomberie de votre ville.
+
+### Joël à Villejuif : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "villejuif-7-quartiers-mosaique-bati",

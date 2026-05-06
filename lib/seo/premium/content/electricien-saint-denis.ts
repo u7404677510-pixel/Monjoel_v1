@@ -10,8 +10,35 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Saint-Denis 93200 — Centre, Pleyel-Confluence, Plaine, Franc-Moisin, Floréal. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Saint-Denis : intervenir entre cité médiévale, grands ensembles 1960 et programmes neufs Pleyel",
-  introParagraph:
-    "Saint-Denis compte 113 116 habitants selon les populations légales INSEE 2024 (recensement 2022 authentifié), répartis sur 12,4 km² à la limite nord de Paris. C'est l'une des communes les plus diverses de la première couronne francilienne, mêlant un centre médiéval historique organisé autour de la basilique Saint-Denis nécropole des rois de France, des immeubles ouvriers de la fin du XIXe et du début du XXe siècle hérités de l'industrialisation autour de la Plaine, des grands ensembles emblématiques des années 1960-1970 (Franc-Moisin, Floréal, Allende), et un vaste secteur ZAC Pleyel-Confluence transformé radicalement depuis 2010 et particulièrement depuis les Jeux Olympiques 2024 (village olympique reconverti, franchissement urbain Pleyel inauguré en juin 2024). Cette mosaïque de bâti pose des défis spécifiques à l'électricien : installations stratifiées des immeubles ouvriers, tableaux des grands ensembles HLM dont la mise aux normes relève souvent du bailleur, et programmes neufs entièrement conformes à la NF C 15-100 amendée. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers dionysiens et je connais bien la spécificité de cette ville. Cette page s'adresse aux Dionysiens qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Saint-Denis en chiffres : densité, parc résidentiel, contexte
+
+Saint-Denis compte **113 116 habitants** selon les populations légales **INSEE 2024** (recensement 2022 authentifié), répartis sur **12,4 km²** à la limite nord de Paris.
+
+### Le bâti dionysien : du médiéval aux Jeux Olympiques 2024
+
+C'est l'une des communes les plus diverses de la première couronne francilienne. D'abord un **centre médiéval historique** organisé autour de la **basilique Saint-Denis** nécropole des rois de France.
+
+Ensuite des **immeubles ouvriers de la fin du XIXe et du début du XXe siècle** hérités de l'industrialisation autour de la **Plaine**.
+
+Puis des **grands ensembles emblématiques des années 1960-1970** : **Franc-Moisin**, **Floréal**, **Allende**.
+
+Enfin un vaste secteur **ZAC Pleyel-Confluence** transformé radicalement depuis 2010 et particulièrement depuis les **Jeux Olympiques 2024** (village olympique reconverti, **franchissement urbain Pleyel** inauguré en **juin 2024**).
+
+### Trois réalités électriques sur un même territoire
+
+Cette mosaïque de bâti pose des défis spécifiques à l'électricien : **installations stratifiées** des immeubles ouvriers, **tableaux des grands ensembles HLM** dont la mise aux normes relève souvent du bailleur, et **programmes neufs** entièrement conformes à la **NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers dionysiens et je connais bien la spécificité de cette ville.
+
+Cette page s'adresse aux Dionysiens qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Saint-Denis : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-saint-denis-quatre-univers",

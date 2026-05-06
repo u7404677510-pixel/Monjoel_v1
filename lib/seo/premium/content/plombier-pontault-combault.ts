@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Pontault-Combault 77340 — Centre, Berchères, Mairie-Rouxel, Orme-au-Charron, Bois-Notre-Dame. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Pontault-Combault : intervenir entre le pavillonnaire dominant, les Berchères et le bois Notre-Dame",
-  introParagraph:
-    "Pontault-Combault est, avec ses 39 096 habitants au dernier recensement INSEE et environ 38 700 habitants en 2026 selon les modèles de projection, l'une des plus grandes communes de Seine-et-Marne et l'une des villes structurantes de l'est francilien. Étalée sur près de 11 km² entre le bois Notre-Dame et les territoires agricoles de Brie, à 25 kilomètres à l'est de Paris, la commune présente une mosaïque urbaine d'une dominante pavillonnaire remarquable. Le territoire est desservi par le RER E (gare d'Émerainville – Pontault-Combault à proximité) et plusieurs lignes de bus structurantes. À Pontault-Combault, le bâti raconte son histoire jusque dans ses canalisations : centre-ville organisé autour de la mairie et de la rue de Paris, pavillonnaire dominant des années 1900-1990 qui constitue l'essentiel du tissu urbain, copropriétés intermédiaires édifiées entre 1965 et 1990 dans certains secteurs, et désormais opérations RT 2012 puis RE 2020 qui ponctuent les opérations urbaines récentes. La commune compte officiellement 11 quartiers IRIS selon le découpage statistique INSEE : Orme au Charron, Berchères Sud, Cimetière Est, Mairie Rouxel Nord, Berchères Nord, Centre Commercial, Cimetière Ouest, Mairie Rouxel Sud-Ouest, Mairie Rouxel Sud-Est, Ingres, et Bois Notre-Dame. En vingt-deux ans à gérer des copropriétés en petite couronne, j'ai accompagné plusieurs immeubles pontellois dans leurs interventions de plomberie, et je peux le dire : Pontault-Combault réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. Cette page s'adresse aux Pontellois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Pontault-Combault en chiffres : une grande commune de Seine-et-Marne
+
+Pontault-Combault compte **39 096 habitants** au dernier recensement INSEE et environ **38 700 habitants en 2026** selon les modèles de projection, ce qui en fait l'une des plus grandes communes de Seine-et-Marne et l'une des villes structurantes de l'est francilien.
+
+Étalée sur près de **11 km²** entre le bois Notre-Dame et les territoires agricoles de Brie, à **25 kilomètres à l'est de Paris**, la commune est desservie par le **RER E** (gare d'Émerainville – Pontault-Combault à proximité) et plusieurs lignes de bus structurantes.
+
+### Le bâti pontellois : une dominante pavillonnaire et 11 quartiers IRIS
+
+À Pontault-Combault, le bâti raconte son histoire jusque dans ses canalisations : **centre-ville** organisé autour de la mairie et de la rue de Paris, **pavillonnaire dominant des années 1900-1990** qui constitue l'essentiel du tissu urbain, **copropriétés intermédiaires édifiées entre 1965 et 1990** dans certains secteurs, et désormais opérations **RT 2012 puis RE 2020**.
+
+La commune compte officiellement **11 quartiers IRIS** selon le découpage statistique INSEE : **Orme au Charron, Berchères Sud, Cimetière Est, Mairie Rouxel Nord, Berchères Nord, Centre Commercial, Cimetière Ouest, Mairie Rouxel Sud-Ouest, Mairie Rouxel Sud-Est, Ingres, et Bois Notre-Dame**.
+
+### Le quotidien plomberie à Pontault-Combault : ce que voient les Pontellois
+
+Cette page s'adresse aux **Pontellois** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Vingt-deux ans à gérer des copropriétés en petite couronne**, j'ai accompagné plusieurs immeubles pontellois dans leurs interventions de plomberie. Pontault-Combault réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir.
+
+### Joël à Pontault-Combault : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "pontault-bati-pavillonnaire-dominant-onze-quartiers",

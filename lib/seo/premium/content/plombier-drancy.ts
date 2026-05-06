@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Drancy 93700 — Centre, Cité de la Muette, Avenir-Parisien, Économie, Petit-Drancy. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Drancy : intervenir entre la Muette historique et le pavillonnaire des Trente Glorieuses",
-  introParagraph:
-    "Drancy est, avec ses 70 269 habitants au dernier recensement INSEE et environ 72 400 habitants estimés en 2026 selon les modèles de projection, l'une des plus grandes communes de la Seine-Saint-Denis et l'une des villes structurantes du nord de la première couronne. Étalée sur près de 7,76 km² à l'est de Saint-Denis et au nord du Bourget, à seulement 9 kilomètres de la porte de la Villette, la commune présente une mosaïque urbaine d'une diversité que peu de villes franciliennes égalent : centre-ville organisé autour de la place de l'Hôtel-de-Ville et de l'église Sainte-Louise-de-Marillac, pavillonnaire ouvrier des années 1900-1950 hérité de l'urbanisation maraîchère puis industrielle, grands ensembles édifiés entre 1960 et 1980 dans plusieurs secteurs, et désormais opérations RE 2020 qui sortent de terre depuis quelques années. Le quartier de la Cité de la Muette, classé Monument historique depuis 2001, occupe une place singulière dans le bâti drancéen : édifié à partir de 1931 sur les plans des architectes Eugène Beaudouin et Marcel Lods, c'est l'un des tout premiers grands ensembles de logement social français, et c'est aussi le site du camp d'internement de Drancy pendant la Seconde Guerre mondiale, marqué aujourd'hui par le mémorial de la Shoah qui jouxte les bâtiments. La commune compte officiellement 29 quartiers selon le découpage statistique INSEE. Conseillère en économie sociale et familiale depuis quatorze ans, j'ai accompagné des centaines de familles drancéennes dans leurs galères de dépannage urgent. Et je peux le dire : Drancy figure parmi les communes franciliennes où les escroqueries au dépannage de plomberie causent le plus de dégâts financiers à des familles déjà fragilisées. Cette page s'adresse aux Drancéens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Drancy en chiffres : une ville structurante du nord de la première couronne
+
+Drancy compte **70 269 habitants** au dernier recensement INSEE et environ **72 400 habitants estimés en 2026**, l'une des plus grandes communes de la Seine-Saint-Denis.
+
+Étalée sur près de **7,76 km²** à l'est de Saint-Denis et au nord du Bourget, à seulement **9 kilomètres de la porte de la Villette**, la commune compte officiellement **29 quartiers** selon le découpage statistique INSEE.
+
+### Le bâti drancéen : pavillonnaire ouvrier, Cité de la Muette et grand ensemble
+
+Le **centre-ville** est organisé autour de la place de l'Hôtel-de-Ville et de l'**église Sainte-Louise-de-Marillac**. La commune présente un **pavillonnaire ouvrier des années 1900-1950** hérité de l'urbanisation maraîchère puis industrielle, des **grands ensembles édifiés entre 1960 et 1980**, et désormais des opérations **RE 2020**.
+
+Le quartier de la **Cité de la Muette**, **classé Monument historique depuis 2001**, occupe une place singulière : édifié à partir de **1931** sur les plans des architectes **Eugène Beaudouin et Marcel Lods**, c'est l'un des tout premiers grands ensembles de logement social français, et c'est aussi le site du **camp d'internement de Drancy** pendant la Seconde Guerre mondiale, marqué aujourd'hui par le **mémorial de la Shoah**.
+
+### Le quotidien plomberie à Drancy : ce que ça implique
+
+Drancy figure parmi les communes franciliennes où les **escroqueries au dépannage de plomberie causent le plus de dégâts financiers** à des familles déjà fragilisées. Cette page s'adresse aux Drancéens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Conseillère en économie sociale et familiale depuis quatorze ans**, j'ai accompagné des centaines de familles drancéennes dans leurs galères de dépannage urgent.
+
+### Joël à Drancy : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "drancy-bati-stratifie-pavillonnaire-ouvrier-grand-ensemble",

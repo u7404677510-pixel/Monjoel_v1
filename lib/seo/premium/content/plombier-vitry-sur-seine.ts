@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Vitry-sur-Seine 94400 — Centre-ville, Plateau, Ardoines, Port-à-l'Anglais, 8-mai-1945. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Vitry-sur-Seine : intervenir dans la quatrième ville du Val-de-Marne, du Centre aux Ardoines",
-  introParagraph:
-    "Vitry-sur-Seine est, avec ses 93 963 habitants au dernier recensement INSEE et un peu moins de 100 000 habitants estimés en 2026, la quatrième commune la plus peuplée du Val-de-Marne et l'une des grandes villes de la première couronne sud parisienne. Étalée sur 11 km² entre la Seine à l'est et le plateau briard à l'ouest, la commune présente une mosaïque urbaine d'une singularité remarquable : centre-ville reconstruit après-guerre autour de l'avenue de l'Abbé-Roger-Derry et de la place de la Mairie, plateau pavillonnaire des années 1900-1930 sur la partie haute de la commune, grands ensembles édifiés dans les années 1960-1970 dans plusieurs quartiers, et désormais ZAC Seine-Gare-Vitry et programmes neufs RT 2012/RE 2020 qui sortent de terre depuis 2018 le long du fleuve. En vingt-deux ans à gérer des copropriétés en petite couronne sud, j'ai accompagné des dizaines d'immeubles vitriots dans leurs interventions de plomberie, et je peux le dire : Vitry réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. La commune compte officiellement onze quartiers reconnus par la mairie : Centre-ville, Clos-Langlois, Commune-de-Paris, Vitry-Sud-Ardoines, Paul-Froment-8-mai-1945, Port-à-l'Anglais, Gare-Jean-Jaurès, Fort, Plateau, Moulin-Vert, et un onzième en évolution selon les opérations en cours. Cette page s'adresse aux Vitriots qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08. Cette page veut, à l'aune de mon expérience de gestionnaire, donner aux Vitriots les clefs pour distinguer un dépannage juste d'une arnaque opportuniste, et pour défendre leurs droits dans les procédures collectives qui suivent souvent un sinistre.",
+  introParagraph: `### Vitry-sur-Seine en chiffres : la quatrième commune du Val-de-Marne
+
+Vitry-sur-Seine compte **93 963 habitants** au dernier recensement INSEE et un peu moins de **100 000 habitants estimés en 2026**, ce qui en fait la **quatrième commune la plus peuplée du Val-de-Marne** et l'une des grandes villes de la première couronne sud parisienne.
+
+Étalée sur **11 km²** entre la Seine à l'est et le plateau briard à l'ouest, la commune compte officiellement **onze quartiers** reconnus par la mairie : **Centre-ville, Clos-Langlois, Commune-de-Paris, Vitry-Sud-Ardoines, Paul-Froment-8-mai-1945, Port-à-l'Anglais, Gare-Jean-Jaurès, Fort, Plateau, Moulin-Vert**, et un onzième en évolution.
+
+### Le bâti vitriot : une mosaïque singulière
+
+Vitry présente une mosaïque urbaine d'une singularité remarquable : **centre-ville reconstruit après-guerre** autour de l'**avenue de l'Abbé-Roger-Derry** et de la place de la Mairie, **plateau pavillonnaire des années 1900-1930** sur la partie haute de la commune, **grands ensembles édifiés dans les années 1960-1970** dans plusieurs quartiers, et désormais **ZAC Seine-Gare-Vitry** et programmes neufs **RT 2012/RE 2020** qui sortent de terre **depuis 2018** le long du fleuve.
+
+### Le quotidien plomberie à Vitry : ce que voient les Vitriots
+
+Cette page s'adresse aux **Vitriots** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Vingt-deux ans à gérer des copropriétés en petite couronne sud**, j'ai accompagné des dizaines d'immeubles vitriots dans leurs interventions de plomberie. Cette page veut donner aux Vitriots les clefs pour distinguer un dépannage juste d'une arnaque opportuniste, et pour défendre leurs droits dans les procédures collectives qui suivent souvent un sinistre.
+
+### Joël à Vitry-sur-Seine : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "vitry-onze-quartiers-mosaique-urbaine",

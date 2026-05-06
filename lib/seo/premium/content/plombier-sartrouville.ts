@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Sartrouville 78500 — Centre-ville, Vaudoires, Plateau, Buchères, Cité-des-Indes. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Sartrouville : intervenir entre les bords de Seine, le pavillonnaire dominant et la Cité des Indes",
-  introParagraph:
-    "Sartrouville est, avec ses 51 599 habitants au dernier recensement INSEE et environ 52 484 habitants estimés en 2026 selon les modèles de projection, l'une des plus grandes communes des Yvelines et l'une des villes structurantes du nord-est du département. Étalée sur près de 8 km² sur la rive droite de la Seine, à 18 kilomètres au nord-ouest de Paris, la commune présente une mosaïque urbaine d'une diversité remarquable. Le territoire est desservi par le RER A (gare de Sartrouville) et la ligne L du Transilien, ce qui en fait un hub structurant du nord des Yvelines. À Sartrouville, le bâti raconte son histoire jusque dans ses canalisations : centre-ville organisé autour de l'église Saint-Martin et de la mairie, pavillonnaire dominant des années 1900-1960 sur la majorité du territoire, copropriétés intermédiaires édifiées entre 1965 et 1990, grands ensembles édifiés dans certains secteurs (Cité des Indes notamment), et désormais opérations RT 2012 puis RE 2020 qui ponctuent les opérations urbaines récentes. La commune est officiellement découpée en 22 quartiers IRIS selon le découpage statistique INSEE. En vingt-deux ans à gérer des copropriétés en petite couronne, j'ai accompagné plusieurs immeubles sartrouvillois dans leurs interventions de plomberie, et je peux le dire : Sartrouville réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. Cette page s'adresse aux Sartrouvillois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Sartrouville en chiffres : une grande commune des Yvelines
+
+Sartrouville compte **51 599 habitants** au dernier recensement INSEE et environ **52 484 habitants estimés en 2026** selon les modèles de projection, ce qui en fait l'une des plus grandes communes des **Yvelines** et l'une des villes structurantes du nord-est du département.
+
+Étalée sur près de **8 km²** sur la rive droite de la Seine, à **18 kilomètres au nord-ouest de Paris**, la commune est desservie par le **RER A** (gare de Sartrouville) et la **ligne L du Transilien**.
+
+### Le bâti sartrouvillois : 22 quartiers IRIS et une mosaïque historique
+
+À Sartrouville, le bâti raconte son histoire : **centre-ville** organisé autour de l'**église Saint-Martin** et de la mairie, **pavillonnaire dominant des années 1900-1960** sur la majorité du territoire, **copropriétés intermédiaires édifiées entre 1965 et 1990**, **grands ensembles** édifiés dans certains secteurs (**Cité des Indes** notamment), et désormais opérations **RT 2012 puis RE 2020**.
+
+La commune est officiellement découpée en **22 quartiers IRIS** selon le découpage statistique INSEE.
+
+### Le quotidien plomberie à Sartrouville : ce que voient les Sartrouvillois
+
+Cette page s'adresse aux **Sartrouvillois** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Vingt-deux ans à gérer des copropriétés en petite couronne**, j'ai accompagné plusieurs immeubles sartrouvillois dans leurs interventions de plomberie. Sartrouville réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir.
+
+### Joël à Sartrouville : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "sartrouville-bati-stratifie-pavillonnaire-cite-indes",

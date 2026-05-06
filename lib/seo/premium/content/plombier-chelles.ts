@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Chelles 77500 — Centre, Mairie, Aulnoy, Coudreaux, Brosse. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Chelles : intervenir entre la sous-préfecture du nord 77, le pavillonnaire historique et les Coudreaux",
-  introParagraph:
-    "Chelles est, avec ses 54 372 habitants au dernier recensement INSEE et environ 54 957 habitants estimés en 2026 selon les modèles de projection, l'une des plus grandes communes de Seine-et-Marne et la sous-préfecture du nord du département. Étalée sur près de 15 km² sur la rive droite de la Marne, à 18 kilomètres à l'est de Paris, la commune présente une mosaïque urbaine d'une diversité remarquable. Le territoire est desservi par le RER E (gare de Chelles – Gournay) et la ligne P du Transilien, ce qui en fait un hub structurant de l'est francilien. À soixante-dix ans, dont quarante passés à EDF comme ingénieur hydraulicien puis depuis quelques années comme bénévole à l'UFC-Que Choisir Essonne, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Chelles raconte la sienne avec une diversité que peu de communes franciliennes égalent : centre historique organisé autour de l'église Saint-André et de l'ancienne abbaye de Chelles (fondée au VIIe siècle, importante abbaye royale franque), pavillonnaire dominant des années 1900-1960 sur la majorité du territoire, copropriétés intermédiaires édifiées entre 1965 et 1990, grands ensembles édifiés dans certains secteurs (Coudreaux, Mont-Châlats), et désormais opérations RT 2012 puis RE 2020 qui ponctuent les opérations urbaines récentes. Cette page s'adresse aux Chellois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Chelles en chiffres : la sous-préfecture du nord 77
+
+Chelles compte **54 372 habitants** au dernier recensement INSEE et environ **54 957 habitants estimés en 2026**, l'une des plus grandes communes de Seine-et-Marne et la **sous-préfecture du nord du département**.
+
+Étalée sur près de **15 km²** sur la rive droite de la Marne, à **18 kilomètres à l'est de Paris**, la commune est desservie par le **RER E** (gare de **Chelles – Gournay**) et la **ligne P du Transilien**, ce qui en fait un hub structurant de l'est francilien.
+
+### Le bâti chellois : abbaye royale, pavillonnaire et grand ensemble
+
+Chelles raconte sa plomberie avec une diversité que peu de communes franciliennes égalent : **centre historique** organisé autour de l'**église Saint-André** et de l'ancienne **abbaye de Chelles** (fondée au **VIIe siècle**, importante abbaye royale franque), **pavillonnaire dominant des années 1900-1960** sur la majorité du territoire, copropriétés intermédiaires édifiées entre **1965 et 1990**, **grands ensembles** édifiés dans certains secteurs (**Coudreaux, Mont-Châlats**), et désormais opérations **RT 2012 puis RE 2020**.
+
+### Le quotidien plomberie à Chelles : ce que ça implique
+
+Cette page s'adresse aux Chellois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À **soixante-dix ans**, dont **quarante passés à EDF comme ingénieur hydraulicien** puis depuis quelques années comme **bénévole à l'UFC-Que Choisir Essonne**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau.
+
+### Joël à Chelles : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "chelles-bati-stratifie-abbaye-quartiers",

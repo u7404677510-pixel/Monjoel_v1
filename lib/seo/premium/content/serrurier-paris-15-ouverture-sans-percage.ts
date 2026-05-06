@@ -11,8 +11,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Ouverture porte sans perçage Paris 15 (75015) — Vaugirard, Necker, Grenelle, Javel. 89€ TTC fixe, 24h/24, sans dégât, sans majoration. 01 41 69 10 08.",
   h1: "Ouverture de porte sans perçage à Paris 15e : la technique radio dans le plus grand arrondissement parisien",
-  introParagraph:
-    "Le 15e arrondissement de Paris est le plus peuplé de la capitale avec environ 230 000 habitants — 10,5 % de la population parisienne — et l'un des plus étendus avec 8,5 km². Il se subdivise en quatre quartiers administratifs : Saint-Lambert au sud-ouest, Necker au nord-est près de Montparnasse, Grenelle au nord, et Javel à l'ouest le long de la Seine. Cette grande taille s'accompagne d'une caractéristique structurelle qui nous intéresse particulièrement : un parc immobilier majoritairement composé d'immeubles de la fin du XIXe siècle (haussmanniens et post-haussmanniens dans le secteur Necker-Vaugirard), de la première moitié du XXe siècle (immeubles de rapport modestes dans Grenelle, Saint-Lambert, Javel), et désormais de programmes plus récents dont une part significative est équipée de portes blindées modernes munies de cylindres haute sécurité ou de systèmes radio. Cette diversité de portes a une conséquence directe pour l'occupant qui claque sa porte en sortant les poubelles, en posant un sac dehors, ou en répondant rapidement à un visiteur : la majorité de ces portes peuvent être ouvertes sans aucun perçage, sans aucun dégât, par la technique professionnelle dite 'radio' (carte plastique souple normée, technique de la pige, crochetage léger). Cette intervention est facturée 89€ TTC chez Joël à Paris 15e, prix fixe annoncé avant déplacement, sans majoration nuit, week-end ou jour férié. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne et observé en parallèle des centaines d'interventions d'urgence de serrurerie sur les portes parisiennes. Cette page est conçue comme un guide complet de l'ouverture de porte sans perçage à Paris 15e : pourquoi cette technique est presque toujours possible, dans quels cas elle ne l'est pas, comment éviter les arnaques au perçage abusif, et combien cela coûte vraiment. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Le 15e en chiffres : population, taille, quartiers
+
+Le 15e arrondissement est **le plus peuplé de la capitale** avec environ **230 000 habitants** — **10,5 % de la population parisienne** — et l'un des plus étendus avec **8,5 km²**. Il se subdivise en quatre quartiers administratifs : **Saint-Lambert** au sud-ouest, **Necker** au nord-est près de Montparnasse, **Grenelle** au nord, et **Javel** à l'ouest le long de la Seine.
+
+### Parc immobilier : un mix de portes anciennes et modernes
+
+Le parc immobilier mêle **immeubles haussmanniens et post-haussmanniens dans le secteur Necker-Vaugirard**, **immeubles de rapport modestes dans Grenelle, Saint-Lambert, Javel** (première moitié du XXe siècle), et programmes plus récents équipés de **portes blindées munies de cylindres haute sécurité ou de systèmes radio**.
+
+### Ouverture sans perçage : la technique radio
+
+La majorité de ces portes peuvent être ouvertes **sans aucun perçage, sans aucun dégât**, par la technique professionnelle dite "radio" : **carte plastique souple normée, technique de la pige, crochetage léger**. C'est la situation typique de la **porte claquée** (sac de poubelles posé dehors, visiteur, sortie rapide).
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne et observé en parallèle des centaines d'interventions d'urgence de serrurerie sur les portes parisiennes.
+
+### Joël à Paris 15e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, à **89 € TTC** pour une ouverture sans perçage, **sans majoration nuit, week-end ou jour férié**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "porte-claquee-vs-fermee-cle-paris-15",

@@ -11,8 +11,31 @@ export const content: PremiumPageContent = {
     "Gestionnaire de syndics depuis 22 ans, je décrypte la plomberie des copros de Cergy : ville nouvelle, IRSI, vrais prix Joël dès 79€. 01 41 69 10 08, 24h/24.",
   h1: "Plombier à Cergy (95000 / 95800) : le manuel d'une gestionnaire de copropriétés sur la ville-nouvelle préfecture",
 
-  introParagraph:
-    "En 22 ans à gérer des immeubles, j'ai appris à classer les villes du Grand Paris en familles techniques. Cergy n'appartient à aucune des familles classiques de mon portefeuille de 187 immeubles. Ce n'est ni Paris haussmannien, ni les vieilles communes pavillonnaires des Hauts-de-Seine, ni les bourgs anciens du nord 78. Cergy, c'est la ville nouvelle. Conçue à partir de 1969, sortie de terre essentiellement entre 1972 et 2000, prolongée encore aujourd'hui par les écoquartiers de la Bastide et des Bords de l'Oise. Préfecture du Val-d'Oise depuis 1969, 66 322 habitants, université Cergy-Paris (CY), trois gares RER A (Cergy-Préfecture, Cergy-Saint-Christophe, Cergy-le-Haut), une boucle de l'Oise qui ceint la ville sur près de 12 kilomètres, des dalles piétonnes pensées dans les années 70 (mail des Cerclades, Axe-Majeur), et surtout un parc de copropriétés très spécifique : familles, primo-accédants, classes moyennes, locatif important, syndics présents, ascenseurs, parkings souterrains, chauffages collectifs gaz dans pas mal d'immeubles 80-90. Tout ça crée des problèmes de plomberie qu'on ne rencontre nulle part ailleurs en Île-de-France à cette intensité : multicouche fragile des années 2000-2010, ballons Atlantic 200L de masse posés en série dans des cuisines fermées, boucles d'eau chaude sanitaire (ECS) dans les grandes copros qui se grippent, problèmes d'équilibrage thermique dans les colonnes communes, et une géographie urbaine éclatée en trois pôles (Préfecture, Saint-Christophe, le-Haut) plus le Bas Cergy ancien village. Cette page n'est pas un argumentaire commercial. C'est ce que j'aurais voulu trouver la première fois qu'un copropriétaire du mail des Cerclades m'a appelée à 21h un mardi parce que sa salle de bain était sous 4 cm d'eau et que son syndic ne répondait pas. Joël, le réseau d'artisans avec lequel je travaille au quotidien sur la Préfecture du Val-d'Oise, applique trois règles que j'ai mis dix ans à imposer chez mes prestataires habituels : prix annoncé AVANT intervention, plomberie dès 79€ TTC, 24h/24 sans majoration nuit ou week-end. Numéro à composer en cas de fuite, débouchage WC, recherche de fuite, panne de chauffe-eau ou ballon : 01 41 69 10 08. Le reste de la page est mon manuel de survie pour les habitants de Cergy : copropriétaires occupants, locataires, conseils syndicaux, gardiens, propriétaires bailleurs.",
+  introParagraph: `### Cergy en chiffres : la ville nouvelle préfecture du 95
+
+Cergy compte **66 322 habitants**, **préfecture du Val-d'Oise depuis 1969**, conçue à partir de **1969** et sortie de terre essentiellement entre **1972 et 2000**, prolongée encore aujourd'hui par les **écoquartiers de la Bastide et des Bords de l'Oise**.
+
+Trois gares **RER A** (**Cergy-Préfecture, Cergy-Saint-Christophe, Cergy-le-Haut**), une boucle de l'**Oise** qui ceint la ville sur près de **12 kilomètres**, l'**université Cergy-Paris (CY)**, et des dalles piétonnes pensées dans les années 70 (**mail des Cerclades, Axe-Majeur**).
+
+### Le bâti cergyssois : une géographie éclatée en trois pôles
+
+Cergy n'appartient à aucune des familles classiques. Ce n'est ni Paris haussmannien, ni les vieilles communes pavillonnaires des Hauts-de-Seine, ni les bourgs anciens du nord 78. C'est **la ville nouvelle**.
+
+Une géographie urbaine éclatée en trois pôles (**Préfecture, Saint-Christophe, le-Haut**) plus le **Bas Cergy ancien village**, et un parc de copropriétés très spécifique : familles, primo-accédants, classes moyennes, locatif important, syndics présents, ascenseurs, parkings souterrains, **chauffages collectifs gaz** dans pas mal d'immeubles 80-90.
+
+### Le quotidien plomberie à Cergy : ce que ça implique
+
+Tout ça crée des problèmes de plomberie qu'on ne rencontre nulle part ailleurs en Île-de-France à cette intensité : **multicouche fragile des années 2000-2010**, **ballons Atlantic 200L** posés en série dans des cuisines fermées, **boucles d'eau chaude sanitaire (ECS)** dans les grandes copros qui se grippent, problèmes d'**équilibrage thermique** dans les colonnes communes.
+
+### L'auteur de cette page
+
+**22 ans à gérer des immeubles**, un portefeuille de **187 immeubles** classés en familles techniques. Cette page n'est pas un argumentaire commercial. C'est ce que j'aurais voulu trouver la première fois qu'un copropriétaire du **mail des Cerclades** m'a appelée à 21h un mardi parce que sa salle de bain était sous **4 cm d'eau** et que son syndic ne répondait pas.
+
+### Joël à Cergy : tarif fixe annoncé en amont
+
+Joël applique trois règles que j'ai mis dix ans à imposer chez mes prestataires : **prix annoncé AVANT intervention**, plomberie dès **79 € TTC**, **24h/24** sans majoration nuit ou week-end.
+
+Numéro à composer en cas de fuite, débouchage WC, recherche de fuite, panne de chauffe-eau ou ballon : **01 41 69 10 08**.`,
 
   sections: [
     {

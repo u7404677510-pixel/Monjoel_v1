@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Issy-les-Moulineaux 92130 — Centre, ZAC Léon-Blum, Val-de-Seine, Corentin-Celton, Mairie d'Issy. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Issy-les-Moulineaux : intervenir dans la commune en mutation, du Val-de-Seine à la ZAC Léon-Blum",
-  introParagraph:
-    "Issy-les-Moulineaux est une commune qui change vite. Avec ses 68 449 habitants au 1er janvier 2026 selon les chiffres officiels de la mairie issus du recensement INSEE 2023 (effectif au 1er janvier 2026 puisque 2023 est l'année médiane du cycle de recensement 2021-2025), étalée sur 4,25 km² aux portes sud-ouest de Paris, longeant la Seine sur près de trois kilomètres, Issy a connu en quarante ans une transformation que peu de communes franciliennes ont égalée. À soixante-dix ans, dont quarante passés à EDF comme ingénieur hydraulicien puis depuis quelques années comme bénévole à l'UFC-Que Choisir, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Issy raconte la sienne en plusieurs grands secteurs que la mairie reconnaît : Centre-Bourg-Auguste-Gervais autour de la mairie historique, Val-de-Seine et bords de Seine où les anciennes friches industrielles ont laissé place aux opérations contemporaines, secteur Léon-Blum-Corentin-Celton autour du métro éponyme et de la ZAC Léon-Blum, Mairie-d'Issy-Les Hauts-d'Issy au sud-ouest, Plateau-Sud autour du fort d'Issy reconverti, et plusieurs autres sous-secteurs. La commune bénéficie depuis quelques années d'une desserte métropolitaine renouvelée : deux gares RER C (Issy et Issy–Val de Seine), deux stations de la ligne 12 du métro (Mairie d'Issy terminus et Corentin Celton), le tramway T2 qui longe la Seine, et bientôt la ligne 15 sud du Grand Paris Express. Cette page s'adresse aux Isséens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08. Cette page veut, à mon humble échelle de vieux hydraulicien, expliquer aux Isséens comment fonctionne vraiment la plomberie de leur ville.",
+  introParagraph: `### Issy-les-Moulineaux en chiffres : une commune qui change vite
+
+Issy-les-Moulineaux compte **68 449 habitants** au 1er janvier 2026 selon les chiffres officiels de la mairie issus du recensement INSEE 2023, étalée sur **4,25 km²** aux portes sud-ouest de Paris, **longeant la Seine sur près de trois kilomètres**.
+
+Issy a connu en **quarante ans une transformation** que peu de communes franciliennes ont égalée.
+
+### Les grands secteurs : une mosaïque urbaine
+
+Issy raconte son histoire en plusieurs grands secteurs que la mairie reconnaît : **Centre-Bourg-Auguste-Gervais** autour de la mairie historique, **Val-de-Seine et bords de Seine** où les anciennes friches industrielles ont laissé place aux opérations contemporaines, secteur **Léon-Blum-Corentin-Celton** autour du métro éponyme et de la ZAC Léon-Blum, **Mairie-d'Issy-Les Hauts-d'Issy** au sud-ouest, **Plateau-Sud** autour du fort d'Issy reconverti, et plusieurs autres sous-secteurs.
+
+La commune bénéficie d'une desserte métropolitaine renouvelée : deux gares **RER C** (Issy et Issy–Val de Seine), deux stations de la **ligne 12 du métro** (Mairie d'Issy terminus et Corentin Celton), le **tramway T2** qui longe la Seine, et bientôt la **ligne 15 sud du Grand Paris Express**.
+
+### Le quotidien plomberie à Issy : pourquoi se méfier des plateformes
+
+Cette page s'adresse aux Isséens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **600 à 1 500€** ce qui aurait dû en coûter **89€** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À soixante-dix ans, dont **quarante passés à EDF comme ingénieur hydraulicien** puis depuis quelques années comme **bénévole à l'UFC-Que Choisir**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Cette page veut, à mon humble échelle de **vieux hydraulicien**, expliquer aux Isséens comment fonctionne vraiment la plomberie de leur ville.
+
+### Joël à Issy-les-Moulineaux : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un débouchage WC ou **89€** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "issy-secteurs-mosaique-bati",

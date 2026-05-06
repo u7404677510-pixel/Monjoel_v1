@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Sarcelles 95200 — Lochères, Vieux-Pays, Watteau, Sarcelles-Village. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Sarcelles : sécurité résidentielle dans la commune-symbole du grand ensemble français",
-  introParagraph:
-    "Sarcelles, commune emblématique du Val-d'Oise au sud-est de l'agglomération parisienne, compte 59 806 habitants au recensement INSEE 2026 (chiffre estimé en hausse continue), étalée sur 8,46 km² découpés par l'INSEE en plusieurs grands quartiers : Lochères au sud (l'emblématique grand ensemble édifié dans les années 1955-1970, l'un des plus grands de France et quartier prioritaire de la politique de la ville référencé QP095033), Vieux-Pays au nord-ouest (centre historique préservé), Sarcelles-Village au nord-est (autre noyau historique), Cholettes-Sablons à l'est, Rosiers-Chantepie au centre, Saint-Brice limite est, et Flanades-Saint-Saëns au cœur du grand ensemble. Cette nomenclature recouvre une mosaïque urbaine extrêmement contrastée héritée d'un siècle d'urbanisations successives : Vieux-Pays médiéval-rural avec son église Saint-Pierre-et-Saint-Paul du XIIe siècle classée Monument historique, Sarcelles-Village également médiéval-rural avec son tissu urbain ancien préservé, pavillonnaire ouvrier 1900-1935 dans plusieurs poches, et surtout le grand ensemble emblématique Sarcelles-Lochères édifié dans les années 1955-1970 sur des plans de l'urbaniste Roger Boileau et de l'architecte Jacques-Henri Labourdette pour accueillir notamment les pieds-noirs et juifs venus d'Algérie après la guerre d'indépendance. Ce grand ensemble est l'un des plus grands de France et a marqué profondément l'histoire de l'urbanisme français — au point que le terme \"sarcellite\" a un temps désigné les difficultés sociales de ce type d'urbanisation. Cette diversité urbaine extrême, jointe à une mixité sociale très marquée et à la présence d'une importante communauté multiculturelle, fait de Sarcelles une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-d'oisien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Sarcelles à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Sarcelles en chiffres : population, superficie, parc résidentiel
+
+Sarcelles, commune emblématique du **Val-d'Oise** au sud-est de l'agglomération parisienne, compte **59 806 habitants** au recensement INSEE 2026 (chiffre estimé en hausse continue), étalée sur **8,46 km²**.
+
+L'INSEE découpe la commune en plusieurs grands quartiers : **Lochères** au sud (le grand ensemble emblématique édifié dans les années 1955-1970, **quartier prioritaire de la politique de la ville référencé QP095033**), **Vieux-Pays** au nord-ouest (centre historique préservé), **Sarcelles-Village** au nord-est, **Cholettes-Sablons**, **Rosiers-Chantepie**, **Saint-Brice** et **Flanades-Saint-Saëns** au cœur du grand ensemble.
+
+### Le grand ensemble Sarcelles-Lochères : un patrimoine urbain unique
+
+Le grand ensemble Sarcelles-Lochères a été édifié dans les années **1955-1970** sur des plans de l'urbaniste **Roger Boileau** et de l'architecte **Jacques-Henri Labourdette**. C'est **l'un des plus grands de France** et il a marqué profondément l'histoire de l'urbanisme français — au point que le terme **"sarcellite"** a un temps désigné les difficultés sociales de ce type d'urbanisation.
+
+Le **Vieux-Pays** conserve son **église Saint-Pierre-et-Saint-Paul du XIIe siècle classée Monument historique**, l'une des plus anciennes du Val-d'Oise.
+
+### Pourquoi Sarcelles attire les opérateurs douteux
+
+Cette **diversité urbaine extrême**, jointe à une **mixité sociale très marquée** et à la présence d'une **importante communauté multiculturelle**, fait de Sarcelles une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-d'oisien pour y avoir mené plusieurs formations municipales.
+
+### Joël à Sarcelles : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée, **sans majoration nuit ni week-end**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "sarcelles-quartiers-bati-a-proteger",

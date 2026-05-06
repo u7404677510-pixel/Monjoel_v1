@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Issy-les-Moulineaux 92130 — Centre, Val-de-Seine, Corentin-Celton, Forum-Seine. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Issy-les-Moulineaux : sécurité résidentielle dans une commune métamorphosée par la ligne 12 et le quartier d'affaires Val-de-Seine",
-  introParagraph:
-    "Issy-les-Moulineaux, commune des Hauts-de-Seine en première couronne sud-ouest, compte 68 449 habitants au 1er janvier 2026 selon les chiffres INSEE, étalée sur 4,25 km² découpés par l'INSEE en 18 zones IRIS regroupant les quartiers cohérents : Centre autour de la mairie, Corentin-Celton au sud-est autour de la station de métro éponyme (ligne 12), Val-de-Seine et Forum-Seine au nord-ouest dans le quartier d'affaires sorti de terre depuis 2000, Les Épinettes et Les Varennes au sud, La Ferme et Parc Henri-Barbusse à l'ouest, Voisembert et Matrat au nord, Travailleurs et Verdi au centre. Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : pavillonnaire ouvrier 1900-1935 dans le secteur des Épinettes et autour de Voisembert, immeubles de rapport Belle Époque dans le Centre, copropriétés des Trente Glorieuses à Corentin-Celton et autour de la Mairie d'Issy, et désormais grandes opérations résidentielles et tertiaires RT 2012 et RE 2020 qui ont profondément transformé le Val-de-Seine et le Forum-Seine depuis 2000 dans le sillage de l'arrivée de la ligne 12 (prolongement Mairie-d'Issy en 1934, modernisation 2010) et de l'aménagement du quartier d'affaires Seine-Ouest qui héberge désormais des sièges sociaux comme Microsoft France, Bouygues Telecom, ou Cisco. Cette diversité urbaine, jointe à un profil bourgeois marqué (revenu médian au-dessus de la moyenne francilienne) et à une rotation locative significative dans le Val-de-Seine où s'installent cadres et expatriés du pôle Seine-Ouest, fait d'Issy-les-Moulineaux une cible privilégiée des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Issy-les-Moulineaux à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Issy-les-Moulineaux en chiffres : population, patrimoine, parc résidentiel
+
+Issy-les-Moulineaux, commune des Hauts-de-Seine en première couronne sud-ouest, compte **68 449 habitants** au **1er janvier 2026** selon les chiffres **INSEE**, étalée sur **4,25 km²** découpés en **18 zones IRIS** : Centre autour de la mairie, Corentin-Celton (ligne 12), Val-de-Seine et Forum-Seine au nord-ouest, Les Épinettes, Les Varennes, La Ferme, Parc Henri-Barbusse, Voisembert, Matrat, Travailleurs et Verdi.
+
+Cette nomenclature recouvre une mosaïque urbaine : **pavillonnaire ouvrier 1900-1935** dans le secteur des Épinettes, **immeubles de rapport Belle Époque** dans le Centre, **copropriétés des Trente Glorieuses** à Corentin-Celton, et désormais grandes opérations **RT 2012 et RE 2020** qui ont profondément transformé le **Val-de-Seine** et le **Forum-Seine** depuis 2000. Le quartier d'affaires Seine-Ouest héberge désormais des sièges comme **Microsoft France, Bouygues Telecom, Cisco**.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine, jointe à un **profil bourgeois marqué** (**revenu médian au-dessus de la moyenne francilienne**) et à une **rotation locative significative** dans le Val-de-Seine où s'installent **cadres et expatriés** du pôle Seine-Ouest, fait d'Issy-les-Moulineaux une cible privilégiée des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Issy-les-Moulineaux : tarif fixe annoncé en amont
+
+Joël intervient à Issy-les-Moulineaux à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "issy-quartiers-bati-a-proteger",

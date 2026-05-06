@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Rueil-Malmaison 92500 — Centre, Plaine-Gare, Mont-Valérien, Buzenval, Plateau. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Rueil-Malmaison : intervenir dans la troisième ville des Hauts-de-Seine, du château de Malmaison au RER A",
-  introParagraph:
-    "Rueil-Malmaison est l'une des grandes communes de l'ouest des Hauts-de-Seine : 80 842 habitants au recensement INSEE 2022 authentifié par décret du 31 décembre 2024, et environ 81 200 habitants estimés en 2026. Étalée sur 14 km² entre la Seine au nord et le massif boisé du Mont-Valérien au sud, à six kilomètres de la place de l'Étoile, la commune présente un bâti d'une diversité radicale qu'il faut savoir lire pour intervenir avec justesse en plomberie. La mairie reconnaît officiellement plusieurs grands quartiers que l'INSEE découpe à des fins statistiques en trente-et-un secteurs : le Centre-ville autour de la mairie, la Plaine-Gare entre la gare RER A et la zone d'activités Rueil-sur-Seine, le Plateau-Mont-Valérien sur les hauteurs au sud, Buzenval au nord-ouest avec sa ligne de tramway T2, Fouilleuse, Closeaux, Pince-Vins, Plaine-Gare et plusieurs autres. La ville conserve par ailleurs un patrimoine historique majeur, notamment le château de Malmaison acquis en 1799 par Joséphine de Beauharnais, qui a donné son nom à la commune en 1928. En 28 ans de métier, j'ai eu l'occasion d'intervenir des dizaines de fois à Rueil, et je peux le dire d'expérience : on n'aborde pas une fuite avenue Paul-Doumer dans un immeuble bourgeois 1920 comme on aborde une chasse d'eau dans une copropriété récente du Plateau, parce que les distributions, les pressions, les contraintes patrimoniales et les enjeux de copropriété n'ont à peu près rien à voir. Cette page s'adresse aux Rueillois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Rueil-Malmaison en chiffres : une grande commune de l'ouest des Hauts-de-Seine
+
+Rueil-Malmaison compte **80 842 habitants** au recensement **INSEE 2022** authentifié par décret du **31 décembre 2024**, et environ **81 200 habitants estimés en 2026**. Étalée sur **14 km²** entre la Seine au nord et le massif boisé du **Mont-Valérien** au sud, à **six kilomètres de la place de l'Étoile**.
+
+### Le bâti rueillois : une diversité radicale et 31 secteurs IRIS
+
+La commune présente un bâti d'une diversité radicale qu'il faut savoir lire pour intervenir avec justesse en plomberie. La mairie reconnaît officiellement plusieurs grands quartiers que l'INSEE découpe à des fins statistiques en **trente-et-un secteurs** : le **Centre-ville** autour de la mairie, la **Plaine-Gare** entre la gare **RER A** et la zone d'activités Rueil-sur-Seine, le **Plateau-Mont-Valérien** sur les hauteurs au sud, **Buzenval** au nord-ouest avec sa ligne de **tramway T2**, **Fouilleuse**, **Closeaux**, **Pince-Vins** et plusieurs autres.
+
+La ville conserve un patrimoine historique majeur, notamment le **château de Malmaison** acquis en **1799 par Joséphine de Beauharnais**, qui a donné son nom à la commune en **1928**.
+
+### Le quotidien plomberie à Rueil : ce que voient les Rueillois
+
+On n'aborde pas une fuite **avenue Paul-Doumer** dans un immeuble bourgeois 1920 comme on aborde une chasse d'eau dans une copropriété récente du Plateau. Cette page s'adresse aux **Rueillois** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+En **28 ans de métier**, j'ai eu l'occasion d'intervenir des dizaines de fois à Rueil. Les distributions, les pressions, les contraintes patrimoniales et les enjeux de copropriété n'ont à peu près rien à voir d'un quartier à l'autre.
+
+### Joël à Rueil-Malmaison : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "rueil-quartiers-bati-mosaique-rer-a",

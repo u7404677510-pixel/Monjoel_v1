@@ -11,8 +11,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Débouchage WC Paris 17e (Batignolles, Ternes, Plaine-Monceau, Épinettes, Clichy-Batignolles). Prix Joël 79€ TTC fixe annoncé, sans majoration. 01 41 69 10 08.",
   h1: "Débouchage WC à Paris 17e (75017) : la méthode pour cinq quartiers, cinq plomberies",
-  introParagraph:
-    "Le 17e arrondissement de Paris échappe aux récits convenus que l'on tient sur la capitale. Sur 5,67 km², il rassemble 161 206 habitants logés dans des trames urbaines si différentes qu'elles racontent presque cinq villes superposées : la Plaine-Monceau du grand bourgeois Second Empire, les Ternes haussmanniennes des rentiers cossus, les Batignolles post-haussmanniennes devenues bobo après 1990, les Épinettes ouvrières restées populaires plus longtemps qu'on ne l'imagine, et désormais la ZAC Clichy-Batignolles, ce front pionnier de la construction RT 2012 et bientôt RE 2020 qui a fait sortir de terre, autour du nouveau tribunal judiciaire et du parc Martin-Luther-King, près de 3 400 logements neufs depuis 2014. Cette diversité urbaine se traduit, pour le plombier, par cinq typologies hydrauliques distinctes — et donc cinq approches différentes du débouchage WC. Cette page s'adresse aux habitants du 17e qui, confrontés à un WC bouché un dimanche soir, à une urgence sanitaire en pleine semaine, à un problème récurrent de chasse d'eau, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 380 à 720€ ce qui aurait dû en coûter 79 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC simple, 24 heures sur 24, 7 jours sur 7, sans majoration nuit ou week-end. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Le 17e en chiffres : presque cinq villes superposées
+
+Le 17e arrondissement échappe aux récits convenus. Sur **5,67 km²**, il rassemble **161 206 habitants** logés dans des trames urbaines si différentes qu'elles racontent presque **cinq villes superposées**.
+
+### Cinq quartiers, cinq plomberies
+
+La **Plaine-Monceau** du grand bourgeois Second Empire, les **Ternes haussmanniennes** des rentiers cossus, les **Batignolles post-haussmanniennes** devenues bobo après 1990, les **Épinettes ouvrières** restées populaires plus longtemps qu'on ne l'imagine, et désormais la **ZAC Clichy-Batignolles**, ce front pionnier de la construction **RT 2012 et bientôt RE 2020** qui a fait sortir de terre, autour du nouveau **tribunal judiciaire** et du **parc Martin-Luther-King**, près de **3 400 logements neufs depuis 2014**.
+
+### Débouchage WC dans le 17e : pourquoi se méfier des plateformes
+
+Cette diversité urbaine se traduit, pour le plombier, par **cinq typologies hydrauliques distinctes** — et donc cinq approches différentes du débouchage WC. Cette page s'adresse aux habitants du 17e qui, confrontés à un WC bouché un dimanche soir, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **380 à 720€** ce qui aurait dû en coûter **79€** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Architecte du patrimoine** de formation, j'ai accompagné depuis vingt ans des interventions sensibles dans le bâti francilien. Le 17e arrondissement fait partie des secteurs où la **finesse de lecture du bâti** conditionne directement la qualité d'une intervention de plomberie.
+
+### Joël à Paris 17e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un débouchage WC simple, **24 heures sur 24, 7 jours sur 7**, sans majoration nuit ou week-end.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "vrai-prix-debouchage-wc-paris-17",

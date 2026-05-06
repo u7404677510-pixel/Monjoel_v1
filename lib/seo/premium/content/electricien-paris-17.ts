@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Paris 17e 75017 — Plaine Monceau, Ternes, Batignolles, Épinettes, Clichy-Batignolles. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Paris 17e : intervenir entre Plaine Monceau bourgeoise, HBM des Épinettes et ZAC Clichy-Batignolles",
-  introParagraph:
-    "Le 17e arrondissement compte 161 206 habitants pour 5,67 km² selon les populations légales INSEE 2024, soit environ 28 400 hab/km², répartis en quatre quartiers officiels : Ternes, Plaine-de-Monceaux, Batignolles, Épinettes. Cette diversité administrative recouvre une diversité de bâti exceptionnelle qui pose des défis spécifiques à l'électricien : immeubles haussmanniens et post-haussmanniens cossus de la Plaine Monceau et des Ternes, immeubles de rapport 1880-1930 du sud des Batignolles, ensembles HBM (Habitations à Bon Marché) en briques rouges des Épinettes édifiés dans les années 1920-1930, copropriétés des Trente Glorieuses ponctuelles, et le vaste secteur ZAC Clichy-Batignolles inauguré progressivement depuis 2010 sur les anciennes emprises ferroviaires Cardinet, avec des résidences neuves conformes aux dernières exigences de la NF C 15-100. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers du 17e et je connais bien la spécificité de ce tissu urbain socialement clivé entre nord populaire et sud bourgeois. Cette page s'adresse aux habitants du 17e qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes pour vendre, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Le 17e en chiffres : densité, parc résidentiel, contexte
+
+Le 17e arrondissement compte **161 206 habitants** pour **5,67 km²** selon les populations légales **INSEE 2024**, soit **environ 28 400 hab/km²**, répartis en **quatre quartiers officiels** : **Ternes**, **Plaine-de-Monceaux**, **Batignolles**, **Épinettes**.
+
+### Le bâti : du haussmannien cossu aux HBM 1920
+
+Cette diversité administrative recouvre une diversité de bâti exceptionnelle qui pose des défis spécifiques à l'électricien. D'abord les **immeubles haussmanniens et post-haussmanniens** cossus de la **Plaine Monceau** et des **Ternes**.
+
+Ensuite les **immeubles de rapport 1880-1930** du sud des **Batignolles**, et les **ensembles HBM** (Habitations à Bon Marché) en briques rouges des **Épinettes** édifiés dans les **années 1920-1930**.
+
+Puis les **copropriétés des Trente Glorieuses** ponctuelles, et le vaste secteur **ZAC Clichy-Batignolles** inauguré progressivement depuis **2010** sur les anciennes emprises ferroviaires **Cardinet**, avec des résidences neuves conformes aux dernières exigences de la **NF C 15-100**.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers du 17e et je connais bien la spécificité de ce tissu urbain socialement clivé entre nord populaire et sud bourgeois.
+
+Cette page s'adresse aux habitants du 17e qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes pour vendre, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Paris 17 : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-paris-17-quatre-univers",

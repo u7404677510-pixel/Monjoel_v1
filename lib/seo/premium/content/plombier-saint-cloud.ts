@@ -11,8 +11,29 @@ export const content: PremiumPageContent = {
     "Gestionnaire de syndics depuis 22 ans, je décrypte la plomberie de coteau à Saint-Cloud : pente, IRSI, parties communes. Joël dès 79€. 01 41 69 10 08, 24h/24.",
   h1: "Plombier à Saint-Cloud (92210) : le manuel d'une gestionnaire de copropriétés sur la ville-coteau",
 
-  introParagraph:
-    "En 22 ans de métier, j'ai gardé un fichier spécial pour Saint-Cloud. Pas par sentimentalisme — par nécessité technique. Parce que Saint-Cloud n'est pas une ville comme les autres dans mon portefeuille de 187 immeubles. Quand je gère une copropriété rue Dailly ou avenue du Maréchal-Foch, je ne raisonne pas comme avenue Charles-de-Gaulle à Neuilly, ni comme à Boulogne ou Levallois. Saint-Cloud, c'est une ville-coteau. Une ville qui dégringole de Montretout (plus de 165 mètres d'altitude, vue panoramique sur Paris depuis le belvédère) jusqu'à la Seine en bas, secteur Pont-de-Saint-Cloud, à moins de 30 mètres. Cent trente-cinq mètres de dénivelé sur trois kilomètres. Et tout ce qui dégringole, y compris les eaux usées, obéit à des lois hydrauliques qu'aucun plombier improvisé ne maîtrise. C'est la raison pour laquelle, quand un copropriétaire des Coteaux m'appelle un dimanche matin parce que sa salle de bain refoule, je ne lui envoie jamais le premier numéro qui passe — je compose le 01 41 69 10 08, le réseau Joël, parce qu'eux savent ce qu'est une évacuation contrariée par une pente trop forte. Saint-Cloud, c'est aussi un mix architectural rare : sur les hauteurs, des villas familiales de 200 à 600 m² datant de 1900-1935 (Montretout, partie haute des Coteaux, Coutureau), au centre des immeubles de standing années 30 et années 60-80 (rue Royale, rue Dailly, boulevard de la République), et en bas, vers le Val d'Or et le Bas-Saint-Cloud, des résidences plus modestes mais avec leurs propres défis (proximité Seine, nappe phréatique haute). Ajoutez à ça : 29 957 habitants, deux gares SNCF (Saint-Cloud et Le Val d'Or sur la ligne Paris Saint-Lazare-Versailles), le tramway T2 qui descend vers Pont-de-Sèvres pour rejoindre la ligne 9, le grand parc de Saint-Cloud à l'ouest, l'hippodrome au sud-ouest, et le Lycée Suger qui draine une bonne partie de la jeunesse locale. Cette page, c'est ce que je voudrais que chaque habitant de Saint-Cloud lise AVANT son premier appel à un plombier. Joël, le réseau d'artisans avec lequel je travaille, applique trois engagements que je n'ai jamais vus respectés ailleurs : prix annoncé AVANT intervention, plomberie dès 79€ TTC, 24h/24 sans majoration nuit ni week-end. Numéro à composer : 01 41 69 10 08. Le reste de la page est mon manuel pratique pour propriétaires, locataires, conseils syndicaux et gardiens de Saint-Cloud.",
+  introParagraph: `### Saint-Cloud en chiffres : une ville-coteau de 29 957 habitants
+
+Saint-Cloud compte **29 957 habitants** et bénéficie d'une desserte exceptionnelle : **deux gares SNCF** (**Saint-Cloud** et **Le Val d'Or** sur la ligne Paris Saint-Lazare-Versailles), le **tramway T2** qui descend vers Pont-de-Sèvres pour rejoindre la **ligne 9**, le **grand parc de Saint-Cloud** à l'ouest, l'**hippodrome** au sud-ouest, et le **Lycée Suger**.
+
+Saint-Cloud, c'est une **ville-coteau**. Une ville qui dégringole de **Montretout** (plus de **165 mètres d'altitude**, vue panoramique sur Paris depuis le belvédère) jusqu'à la Seine en bas, secteur **Pont-de-Saint-Cloud**, à moins de **30 mètres**. **Cent trente-cinq mètres de dénivelé sur trois kilomètres**.
+
+### Le bâti clodoaldien : trois étages d'architecture
+
+Saint-Cloud, c'est un **mix architectural rare** : sur les hauteurs, des **villas familiales de 200 à 600 m²** datant de **1900-1935** (**Montretout**, partie haute des **Coteaux**, **Coutureau**), au centre des **immeubles de standing années 30 et années 60-80** (**rue Royale**, **rue Dailly**, **boulevard de la République**), et en bas, vers le **Val d'Or** et le **Bas-Saint-Cloud**, des résidences plus modestes avec leurs propres défis (**proximité Seine, nappe phréatique haute**).
+
+### Le quotidien plomberie à Saint-Cloud : ce que disent les chiffres
+
+Tout ce qui dégringole, y compris les eaux usées, obéit à des lois hydrauliques qu'aucun plombier improvisé ne maîtrise. Quand un copropriétaire des **Coteaux** appelle un dimanche matin parce que sa salle de bain refoule, on ne lui envoie jamais le premier numéro qui passe.
+
+### L'auteur de cette page
+
+En **22 ans de métier**, j'ai gardé un fichier spécial pour Saint-Cloud. Pas par sentimentalisme — par nécessité technique. Saint-Cloud n'est pas une ville comme les autres dans mon **portefeuille de 187 immeubles**. Cette page, c'est ce que je voudrais que chaque habitant de Saint-Cloud lise AVANT son premier appel à un plombier.
+
+### Joël à Saint-Cloud : tarif fixe annoncé en amont
+
+Joël, le réseau d'artisans avec lequel je travaille, applique trois engagements que je n'ai jamais vus respectés ailleurs : **prix annoncé AVANT intervention**, **plomberie dès 79 € TTC**, **24h/24 sans majoration nuit ni week-end**.
+
+Numéro à composer : **01 41 69 10 08**.`,
 
   sections: [
     {

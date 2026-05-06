@@ -11,8 +11,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Blindage porte Paris 11 (75011) — Bastille, Voltaire, Oberkampf, Père-Lachaise. Blindage A2P 1 étoile pose comprise 690€ TTC fixe, 24h/24. 01 41 69 10 08.",
   h1: "Blindage de porte à Paris 11e : la solution patrimoniale pour sécuriser une porte ancienne d'immeuble haussmannien",
-  introParagraph:
-    "Le 11e arrondissement de Paris compte 142 583 habitants au recensement INSEE 2021 répartis sur 366,6 hectares, soit une densité de 38 851 habitants au kilomètre carré qui en fait l'un des arrondissements les plus denses d'Europe. Cette densité s'accompagne d'une caractéristique structurelle qui nous intéresse particulièrement pour le blindage de porte : le parc immobilier ancien y domine massivement. Selon les données INSEE, le 11e compte 100 908 logements, dont une part très significative édifiée entre 1850 et 1930 (immeubles de rapport haussmanniens du Second Empire, immeubles post-haussmanniens de la Belle Époque, immeubles de rapport modestes des années 1900-1925, lofts industriels reconvertis dans les anciennes manufactures de meubles du faubourg Saint-Antoine). Les portes palières d'origine de ces immeubles, particulièrement dans le triangle Bastille-Voltaire-Père-Lachaise et autour des rues Oberkampf, Saint-Maur, de la Roquette et Charonne, sont esthétiquement remarquables (boiseries d'époque, ferronneries Art nouveau ou Art déco, peintures historiques) mais mécaniquement vulnérables aux techniques modernes d'effraction. Leur structure en bois plein non renforcé, leurs paumelles fragiles, leur épaisseur souvent inférieure à 40 mm, et leur cadre dormant parfois fissuré ou désaxé, ne résistent pas à une attaque outillée déterminée. Le blindage de porte est, dans ce contexte, la solution patrimoniale par excellence : il renforce mécaniquement la porte d'origine sans la remplacer, préservant ainsi l'esthétique extérieure côté palier (essentielle pour les copropriétés avec règlement intérieur strict) tout en apportant une résistance mécanique comparable à celle d'un bloc-porte blindé moderne. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne, dont une part importante sur des immeubles parisiens du 11e équipés de portes anciennes. Cette page est conçue comme un guide complet du blindage de porte dans le bâti ancien parisien : pourquoi le faire, dans quelles configurations, quel type de blindage choisir, quel artisan choisir, et combien cela coûte vraiment. Joël intervient à Paris 11e à prix fixe annoncé avant déplacement, dès 690€ TTC pour un blindage de porte avec cylindre A2P 1 étoile inclus — sans majoration nuit, week-end ni jour férié. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Le 11e en chiffres : population, parc résidentiel, bâti ancien
+
+Le 11e arrondissement compte **142 583 habitants** au recensement INSEE 2021 sur 366,6 hectares, soit une densité de **38 851 habitants au kilomètre carré** — l'un des arrondissements les plus denses d'Europe.
+
+Selon les données INSEE, le 11e compte **100 908 logements**, dont une part très significative édifiée entre **1850 et 1930** : immeubles de rapport haussmanniens du Second Empire, post-haussmanniens de la Belle Époque, immeubles de rapport modestes des années 1900-1925, **lofts industriels reconvertis dans les anciennes manufactures de meubles du faubourg Saint-Antoine**.
+
+### Portes anciennes : ce que dit l'expérience terrain
+
+Les portes palières d'origine de ces immeubles — triangle **Bastille-Voltaire-Père-Lachaise**, rues **Oberkampf, Saint-Maur, de la Roquette et Charonne** — sont esthétiquement remarquables (boiseries d'époque, ferronneries Art nouveau ou Art déco) mais mécaniquement vulnérables.
+
+Leur **structure en bois plein non renforcé**, leurs **paumelles fragiles**, leur **épaisseur souvent inférieure à 40 mm**, et leur **cadre dormant parfois fissuré ou désaxé**, ne résistent pas à une attaque outillée déterminée.
+
+### Pourquoi le blindage : la solution patrimoniale
+
+Le blindage de porte est, dans ce contexte, **la solution patrimoniale par excellence** : il renforce mécaniquement la porte d'origine sans la remplacer, préservant l'esthétique extérieure côté palier (essentielle pour les copropriétés avec règlement intérieur strict) tout en apportant une résistance mécanique comparable à celle d'un bloc-porte blindé moderne.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne, dont une part importante sur des immeubles du 11e équipés de portes anciennes.
+
+### Joël à Paris 11e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **690 € TTC** pour un **blindage de porte avec cylindre A2P 1 étoile inclus**, **sans majoration nuit, week-end ni jour férié**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "pourquoi-blinder-porte-paris-11",

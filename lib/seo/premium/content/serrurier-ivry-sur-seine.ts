@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Ivry 94200 — Centre-Gagarine, Ivry-Port, Petit-Ivry, Marat. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Ivry-sur-Seine : sécurité résidentielle dans une commune en pleine mutation aux portes de Paris",
-  introParagraph:
-    "Ivry-sur-Seine est l'une des communes les plus denses du Val-de-Marne avec 65 064 habitants au recensement INSEE 2024 répartis sur 4,1 km², ce qui en fait l'une des communes de la première couronne sud les plus jeunes et les plus en mouvement. La ville se compose officiellement de six quartiers — Petit-Ivry, Centre-ville Gagarine, Marat-Parmentier, Monmousseau-Vérollot, Ivry-Port et Louis-Bertrand / Mirabeau-Semard — qui présentent chacun leurs caractéristiques résidentielles. Cette diversité urbaine s'inscrit dans une géographie particulière : une bordure de Seine industrielle en pleine reconversion (Ivry-Port), un centre dense aux abords de la mairie et de la station Mairie d'Ivry de la ligne 7, des quartiers populaires hérités des grandes opérations d'urbanisme des Trente Glorieuses (Gagarine, Monmousseau-Vérollot), et désormais des programmes neufs RT 2012 et RE 2020 qui transforment les anciennes friches industrielles. La commune est desservie par la ligne 7 du métro (stations Pierre et Marie Curie et Mairie d'Ivry), par le RER C (gare d'Ivry-sur-Seine), par le tramway T9 et par sept lignes de bus. Cette accessibilité métropolitaine, jointe à la rotation locative significative dans certains quartiers et à la proximité immédiate de Paris, fait d'Ivry une cible privilégiée des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain ivryien pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Ivry-sur-Seine à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Ivry-sur-Seine en chiffres : population, patrimoine, parc résidentiel
+
+Ivry-sur-Seine est l'une des communes les plus denses du Val-de-Marne avec **65 064 habitants** au recensement **INSEE 2024** répartis sur **4,1 km²**. La ville se compose officiellement de **six quartiers** — Petit-Ivry, Centre-ville Gagarine, Marat-Parmentier, Monmousseau-Vérollot, Ivry-Port et Louis-Bertrand / Mirabeau-Semard.
+
+Cette diversité urbaine s'inscrit dans une géographie particulière : une **bordure de Seine industrielle en pleine reconversion** (Ivry-Port), un centre dense aux abords de la station **Mairie d'Ivry (ligne 7)**, des quartiers populaires hérités des **grandes opérations d'urbanisme des Trente Glorieuses** (Gagarine, Monmousseau-Vérollot), et désormais des programmes neufs **RT 2012 et RE 2020** sur les anciennes friches industrielles.
+
+La commune est desservie par la **ligne 7 du métro**, le **RER C**, le **tramway T9** et **sept lignes de bus**.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette accessibilité métropolitaine, jointe à la **rotation locative significative** dans certains quartiers et à la **proximité immédiate de Paris**, fait d'Ivry une cible privilégiée des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain ivryien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Ivry-sur-Seine : tarif fixe annoncé en amont
+
+Joël intervient à Ivry-sur-Seine à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "ivry-quartiers-bati-a-proteger",

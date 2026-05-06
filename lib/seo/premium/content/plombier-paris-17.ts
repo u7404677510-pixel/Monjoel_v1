@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Paris 17e — Batignolles, Ternes, Plaine-Monceau, Épinettes, Clichy-Batignolles. Prix Joël annoncé dès 79€ TTC, 24h/24, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Paris 17e : un arrondissement de cinq villes, cinq plomberies, une seule exigence",
-  introParagraph:
-    "Le 17e arrondissement échappe aux récits convenus que l'on tient sur Paris. Sur 5,67 km², il rassemble 167 288 habitants logés dans des trames urbaines si différentes qu'elles racontent presque cinq villes superposées : la Plaine-Monceau du grand bourgeois second Empire, les Ternes haussmanniennes des rentiers cossus, les Batignolles post-haussmanniennes devenues bobo après 1990, les Épinettes ouvrières restées populaires plus longtemps qu'on ne l'imagine, et désormais la ZAC Clichy-Batignolles, ce front pionnier de la construction RT 2012 et bientôt RE 2020 qui a fait sortir de terre, autour du nouveau tribunal judiciaire et du parc Martin-Luther-King, près de 3 400 logements neufs depuis 2014. Mon métier d'architecte du patrimoine me conduit à observer ces strates avec une certaine passion, parce qu'elles dictent à l'artisan plombier des contraintes radicalement opposées d'une rue à l'autre. Une fuite avenue de Wagram, un ballon d'eau chaude à remplacer rue de Tocqueville, un dégât des eaux dans une copropriété récente du boulevard Berthier, un débouchage urgent dans une boutique de la rue de Lévis : ce sont quatre interventions qui n'ont presque rien à voir techniquement, alors qu'elles relèvent du même arrondissement. Les habitants du 17e méritent que l'on commence par leur dire cette vérité simple, parce qu'elle conditionne le bon choix d'artisan. Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC, 24 heures sur 24 et 7 jours sur 7, sans majoration nuit ou week-end. Cette discipline tarifaire est la seule manière de garantir qu'un dépannage à 23h rue des Dames soit traité avec la même rigueur qu'une mise aux normes programmée rue Cardinet.",
+  introParagraph: `### Le 17e en chiffres : presque cinq villes superposées
+
+Le 17e arrondissement échappe aux récits convenus. Sur **5,67 km²**, il rassemble **167 288 habitants** logés dans des trames urbaines si différentes qu'elles racontent presque **cinq villes superposées**.
+
+### Cinq quartiers, cinq bâtis
+
+La **Plaine-Monceau** du grand bourgeois Second Empire, les **Ternes haussmanniennes** des rentiers cossus, les **Batignolles post-haussmanniennes** devenues bobo après 1990, les **Épinettes ouvrières** restées populaires plus longtemps qu'on ne l'imagine, et désormais la **ZAC Clichy-Batignolles**, ce front pionnier de la construction **RT 2012 et bientôt RE 2020** qui a fait sortir de terre, autour du nouveau **tribunal judiciaire** et du **parc Martin-Luther-King**, près de **3 400 logements neufs depuis 2014**.
+
+### Le quotidien plomberie dans le 17e : cinq plomberies, une exigence
+
+Une fuite **avenue de Wagram**, un ballon d'eau chaude à remplacer **rue de Tocqueville**, un dégât des eaux dans une copropriété récente du **boulevard Berthier**, un débouchage urgent dans une boutique de la **rue de Lévis** : ce sont **quatre interventions qui n'ont presque rien à voir techniquement**, alors qu'elles relèvent du même arrondissement.
+
+Les habitants du 17e méritent que l'on commence par leur dire cette vérité simple, parce qu'elle conditionne le bon choix d'artisan.
+
+### L'auteur de cette page
+
+Mon métier d'**architecte du patrimoine** me conduit à observer ces strates avec une certaine passion, parce qu'elles dictent à l'artisan plombier des **contraintes radicalement opposées** d'une rue à l'autre.
+
+### Joël à Paris 17e : tarif fixe annoncé en amont
+
+Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC**, **24 heures sur 24 et 7 jours sur 7**, sans majoration nuit ou week-end. Cette **discipline tarifaire** est la seule manière de garantir qu'un dépannage à 23h **rue des Dames** soit traité avec la même rigueur qu'une mise aux normes programmée **rue Cardinet**.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "cinq-quartiers-cinq-batis",

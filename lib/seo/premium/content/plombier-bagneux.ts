@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Bagneux 92220 — Centre, ZAC Victor-Hugo, Lucie-Aubrac, Pierre-Plate, Tertre. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Bagneux : intervenir dans la commune métamorphosée par la ligne 4, du Centre à la ZAC Victor-Hugo",
-  introParagraph:
-    "Bagneux est, avec ses 44 572 habitants au dernier recensement INSEE et environ 46 200 habitants estimés en 2026, l'une des communes du sud des Hauts-de-Seine en mutation rapide. Étalée sur 4,2 km² entre Montrouge au nord, Châtillon à l'ouest, Cachan et Arcueil au sud, la commune connaît depuis le prolongement de la ligne 4 du métro arrivé en 2022 (avec la station Lucie-Aubrac) une transformation profonde de son tissu urbain. La future ouverture de la ligne 15 du Grand Paris Express (mise en service espérée en 2026), avec une station Lucie-Aubrac également au croisement avec la ligne 4, doit encore renforcer cette dynamique. La mairie reconnaît plusieurs grands secteurs : le Centre-ville autour de la mairie historique, la ZAC éco-quartier Victor-Hugo créée en 2011 dans la perspective de l'arrivée de la ligne 4 (qui doit accueillir à terme 2 200 nouveaux logements ainsi que des bureaux, commerces et équipements publics), le quartier de la Pierre-Plate au sud, le secteur du Tertre, et plusieurs sous-secteurs qui structurent la commune. Je m'appelle Nadia Zerrouki, je suis conseillère en économie sociale et familiale, fondatrice du cabinet 'Vrai Prix Vrai Service'. Depuis quatorze ans, j'aide des familles franciliennes à reprendre la main sur leur budget face à des dépenses contraintes qui les broient. À Bagneux, j'accompagne chaque mois plusieurs familles dont le quotidien a basculé après un dépannage plomberie mal négocié. Cette page s'adresse aux Balnéolais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Bagneux en chiffres : une commune métamorphosée par la ligne 4
+
+Bagneux compte **44 572 habitants** au dernier recensement INSEE et environ **46 200 habitants estimés en 2026**, l'une des communes du sud des Hauts-de-Seine en mutation rapide.
+
+Étalée sur **4,2 km²** entre Montrouge au nord, Châtillon à l'ouest, Cachan et Arcueil au sud, la commune connaît depuis le **prolongement de la ligne 4 du métro arrivé en 2022** (avec la station **Lucie-Aubrac**) une transformation profonde de son tissu urbain. La future ouverture de la **ligne 15 du Grand Paris Express** (mise en service espérée en **2026**) doit encore renforcer cette dynamique.
+
+### Le bâti balnéolais : un patchwork de quartiers
+
+La mairie reconnaît plusieurs grands secteurs : le **Centre-ville** autour de la mairie historique, la **ZAC éco-quartier Victor-Hugo** créée en **2011** dans la perspective de l'arrivée de la ligne 4 (qui doit accueillir à terme **2 200 nouveaux logements** ainsi que des bureaux, commerces et équipements publics), le quartier de la **Pierre-Plate** au sud, le secteur du **Tertre**, et plusieurs sous-secteurs qui structurent la commune.
+
+### Le quotidien plomberie à Bagneux : ce que ça implique
+
+Cette page s'adresse aux Balnéolais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+Je m'appelle **Nadia Zerrouki**, je suis **conseillère en économie sociale et familiale**, fondatrice du cabinet **"Vrai Prix Vrai Service"**. Depuis **quatorze ans**, j'aide des familles franciliennes à reprendre la main sur leur budget face à des dépenses contraintes qui les broient. À Bagneux, j'accompagne chaque mois plusieurs familles dont le quotidien a basculé après un dépannage plomberie mal négocié.
+
+### Joël à Bagneux : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "bagneux-quartiers-mosaique-ligne-4",

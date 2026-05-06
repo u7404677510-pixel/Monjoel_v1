@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier dans le 9e par Camille, archi étudiante. Vrais prix dès 79€, 24h/24, anti-arnaque. Témoignages Pigalle, Saint-Georges, Trinité, Opéra.",
   h1: "Plombier à Paris 9 : ce que j'aurais voulu savoir avant ma première fuite dans mon studio entre Pigalle et Saint-Georges",
-  introParagraph:
-    "OK alors. Imagine. Tu viens de signer un bail à 1 280€/mois pour 24 m² rue de Maubeuge (75009), tu te dis que tu kiffes, tu vas pouvoir descendre à pied chez Sébastien Gaudard rue des Martyrs le dimanche matin pour ton chausson aux pommes, t'as Notre-Dame-de-Lorette à 4 minutes de marche pour le métro, t'as l'impression d'avoir réussi ta vie de jeune adulte. Et puis trois semaines plus tard, un jeudi soir vers 23h, tu rentres d'un dîner rue Cadet, tu pousses la porte, et tu marches pieds nus dans une flaque de 6 cm d'eau qui occupe la moitié de ta cuisine ouverte. Bienvenue dans la vraie vie d'un appart parisien fin XIXe avec des canalisations d'origine. Moi c'est Camille Roussel, 26 ans, master 2 d'architecture à l'ENSA Paris-Belleville, locataire en colocation dans le 18e ET qui a passé deux ans à faire des stages dans une agence d'archi rue Drouot — donc le 9e, j'y ai mes habitudes pro et mes potes y ont quasiment toutes vécu. Je tiens le blog 'Mon appart, mes galères' (15k abonnés Insta) où je raconte les pannes, les bons plans et les arnaques évitées par des gens de ma génération. Cette page est pour toi si tu loues dans le 9e arrondissement — Pigalle, Saint-Georges, Bréda, Faubourg-Montmartre, Cadet, Trinité, Opéra, Drouot, du côté des Folies-Bergère ou plus haut vers Anvers — et que tu veux pas te faire avoir le jour où ton chauffe-eau lâche un samedi soir avant un brunch où tu dois recevoir tes parents. Le 9e c'est un mille-feuilles bizarre : pré-haussmannien chic et silencieux côté square d'Orléans, haussmannien dense côté rue La Fayette, vibrant et bordélique côté Pigalle, touristique pur côté Galeries Lafayette. Du coup les pannes plomberie n'ont rien à voir d'un quartier à l'autre. Je t'explique tout : les arnaques 'plombier urgence Paris 9' à éviter, les vrais prix (Joël annonce dès 79€ TTC sur le débouchage, 01 41 69 10 08 c'est le numéro à mettre dans tes contacts MAINTENANT pas demain), tes droits en tant que locataire face à un proprio qui te répond pas, et trois trucs préventifs qui m'ont sauvé la mise plusieurs fois. C'est parti — pose ton verre de blanc, lis ça calmement, tu me remercieras.",
+  introParagraph: `### Le 9e en chiffres : un arrondissement contrasté
+
+Tu viens de signer un bail à **1 280 €/mois pour 24 m²** rue de Maubeuge (**75009**), tu descends à pied chez Sébastien Gaudard rue des Martyrs le dimanche matin, tu as **Notre-Dame-de-Lorette à 4 minutes** de marche. Et puis trois semaines plus tard, un jeudi soir vers **23 h**, tu marches pieds nus dans une flaque de **6 cm d'eau** dans ta cuisine ouverte. Bienvenue dans la vraie vie d'un appart parisien fin XIXe avec des canalisations d'origine.
+
+### Le bâti du 9e : un mille-feuilles bizarre
+
+Le 9e c'est un mille-feuilles bizarre : **pré-haussmannien chic et silencieux** côté square d'Orléans, **haussmannien dense** côté rue La Fayette, **vibrant et bordélique** côté Pigalle, **touristique pur** côté Galeries Lafayette. Cette page est pour toi si tu loues dans le 9e — **Pigalle, Saint-Georges, Bréda, Faubourg-Montmartre, Cadet, Trinité, Opéra, Drouot**, du côté des Folies-Bergère ou plus haut vers Anvers.
+
+Du coup les pannes plomberie n'ont rien à voir d'un quartier à l'autre.
+
+### Le quotidien plomberie dans le 9e : ce que disent les chiffres
+
+Tu veux pas te faire avoir le jour où ton **chauffe-eau lâche un samedi soir** avant un brunch où tu dois recevoir tes parents. Je t'explique tout : les arnaques **« plombier urgence Paris 9 »** à éviter, les vrais prix, tes droits en tant que locataire face à un proprio qui te répond pas, et **trois trucs préventifs** qui m'ont sauvé la mise plusieurs fois.
+
+### L'auteur de cette page
+
+Moi c'est **Camille Roussel, 26 ans**, master 2 d'architecture à l'**ENSA Paris-Belleville**, locataire en colocation dans le 18e ET qui a passé **deux ans à faire des stages dans une agence d'archi rue Drouot** — donc le 9e, j'y ai mes habitudes pro et mes potes y ont quasiment toutes vécu. Je tiens le blog **« Mon appart, mes galères »** (**15k abonnés Insta**) où je raconte les pannes, les bons plans et les arnaques évitées par des gens de ma génération.
+
+### Joël à Paris 9 : tarif fixe annoncé en amont
+
+Joël annonce dès **79 € TTC sur le débouchage**, **01 41 69 10 08** c'est le numéro à mettre dans tes contacts MAINTENANT pas demain. C'est parti — pose ton verre de blanc, lis ça calmement, tu me remercieras.`,
   sections: [
     {
       anchor: "qui-je-suis",

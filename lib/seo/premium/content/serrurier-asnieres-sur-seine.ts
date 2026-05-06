@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Asnières 92600 — Centre, Bords-de-Seine, Hauts-d'Asnières, Voltaire-Flachat. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Asnières-sur-Seine : sécurité résidentielle dans une commune des Hauts-de-Seine en pleine mutation urbaine",
-  introParagraph:
-    "Asnières-sur-Seine compte environ 93 941 habitants selon les dernières données INSEE disponibles, ce qui en fait l'une des communes les plus peuplées des Hauts-de-Seine. Étalée sur 4,82 km² découpés par l'INSEE en 32 quartiers, la ville s'organise autour de plusieurs grands secteurs : Centre-ville autour de la gare et de la mairie, Hauts-d'Asnières au nord-ouest (quartier prioritaire identifié en 2024 sous le nom de QN09210M), Voltaire-Flachat au sud-est, Agnettes au nord, Champetier à l'ouest, Bords-de-Seine au sud, Quartier-Béarn et Centre-Maintenance. Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : pavillonnaire ouvrier 1900-1935 dans Voltaire et au Champetier, immeubles haussmanniens et Belle Époque dans le Centre et le long du boulevard Voltaire, grand ensemble des Hauts-d'Asnières édifié dans les années 1960-1975, copropriétés intermédiaires des Trente Glorieuses dans plusieurs secteurs, et désormais programmes neufs RT 2012 et RE 2020 qui sortent de terre depuis 2018 dans le sillage des opérations d'aménagement, en particulier autour de la future ligne 15 du Grand Paris Express prévue pour 2030. Cette diversité urbaine, jointe à une rotation locative significative dans plusieurs secteurs, fait d'Asnières-sur-Seine une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Asnières-sur-Seine à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Asnières-sur-Seine en chiffres : population, patrimoine, parc résidentiel
+
+Asnières-sur-Seine compte environ **93 941 habitants** selon les dernières données **INSEE** disponibles, ce qui en fait l'une des communes les plus peuplées des Hauts-de-Seine. Étalée sur **4,82 km²** découpés par l'INSEE en **32 quartiers**, la ville s'organise autour du Centre-ville, des **Hauts-d'Asnières** (quartier prioritaire identifié en 2024 sous le nom de **QN09210M**), Voltaire-Flachat, Agnettes, Champetier, Bords-de-Seine, Quartier-Béarn et Centre-Maintenance.
+
+Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : **pavillonnaire ouvrier 1900-1935** dans Voltaire et au Champetier, **immeubles haussmanniens et Belle Époque** dans le Centre, **grand ensemble des Hauts-d'Asnières** édifié dans les années 1960-1975, et désormais programmes neufs **RT 2012 et RE 2020** depuis 2018 dans le sillage de la future **ligne 15 du Grand Paris Express** prévue pour 2030.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine, jointe à une **rotation locative significative** dans plusieurs secteurs, fait d'Asnières-sur-Seine une cible des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Asnières-sur-Seine : tarif fixe annoncé en amont
+
+Joël intervient à Asnières-sur-Seine à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "asnieres-quartiers-bati-a-proteger",

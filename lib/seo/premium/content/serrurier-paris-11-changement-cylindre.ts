@@ -11,8 +11,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Changement cylindre Paris 11 (75011) — Bastille, Voltaire, Père-Lachaise. Cylindre A2P 1 étoile posé 149€ TTC fixe, 24h/24, sans majoration. 01 41 69 10 08.",
   h1: "Changement de cylindre à Paris 11e : pourquoi le passage à l'A2P n'est pas un luxe dans le bâti ancien",
-  introParagraph:
-    "Le 11e arrondissement de Paris compte 142 583 habitants au recensement INSEE 2021 répartis sur 366,6 hectares, soit une densité de 38 851 habitants au kilomètre carré qui fait du 11e l'un des arrondissements les plus denses d'Europe. Cette densité s'accompagne d'une caractéristique structurelle qui nous intéresse particulièrement : le parc immobilier ancien y domine massivement. Selon les données INSEE, le 11e compte 100 908 logements, dont une part très significative édifiée entre 1850 et 1930 (immeubles de rapport haussmanniens du Second Empire, immeubles post-haussmanniens de la Belle Époque, immeubles de rapport modestes des années 1900-1925). Une partie importante de ces immeubles, en particulier dans le triangle Bastille - Voltaire - Père-Lachaise et autour de la rue de la Roquette, du faubourg Saint-Antoine, des rues Oberkampf et Saint-Maur, conserve encore des cylindres simples non certifiés A2P, parfois en place depuis l'après-guerre. Ces cylindres sont, pour qui sait les attaquer, vulnérables à toutes les techniques modernes d'effraction : crochetage en moins de 3 minutes, casse en moins de 90 secondes, bumping en quelques secondes. Le passage à un cylindre A2P 1 étoile minimum constitue, dans ce contexte, le geste de sécurisation le plus rationnel et le plus rapide qu'un occupant puisse poser. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne, dont une part importante sur des immeubles parisiens du 11e équipés de cylindres simples vétustes. Cette page est conçue comme un guide complet du changement de cylindre dans le bâti ancien parisien : pourquoi le faire, quand le faire, quel niveau A2P choisir, quel artisan choisir, et combien cela coûte vraiment. Joël intervient à Paris 11e à prix fixe annoncé avant déplacement, dès 149€ TTC pour la pose d'un cylindre A2P 1 étoile fourni — sans majoration nuit, week-end ni jour férié. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Le 11e en chiffres : population, parc résidentiel, bâti ancien
+
+Le 11e arrondissement compte **142 583 habitants** au recensement INSEE 2021 sur 366,6 hectares, soit une densité de **38 851 habitants au kilomètre carré** — l'un des arrondissements les plus denses d'Europe.
+
+Selon les données INSEE, le 11e compte **100 908 logements**, dont une part très significative édifiée entre **1850 et 1930** : immeubles haussmanniens du Second Empire, post-haussmanniens de la Belle Époque, immeubles de rapport modestes des années 1900-1925.
+
+### Cylindres anciens : un parc vulnérable
+
+Une partie importante de ces immeubles — triangle **Bastille-Voltaire-Père-Lachaise**, rue de la **Roquette**, **faubourg Saint-Antoine**, rues **Oberkampf et Saint-Maur** — conserve encore des **cylindres simples non certifiés A2P**, parfois en place depuis l'après-guerre.
+
+Ces cylindres sont vulnérables à toutes les techniques modernes : **crochetage en moins de 3 minutes, casse en moins de 90 secondes, bumping en quelques secondes**.
+
+### Pourquoi l'A2P : le geste de sécurisation rationnel
+
+Le passage à un **cylindre A2P 1 étoile minimum** constitue le geste de sécurisation **le plus rationnel et le plus rapide** qu'un occupant puisse poser dans le bâti ancien parisien.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne, dont une part importante sur des immeubles du 11e équipés de cylindres simples vétustes.
+
+### Joël à Paris 11e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **149 € TTC** pour la pose d'un **cylindre A2P 1 étoile fourni**, **sans majoration nuit, week-end ni jour férié**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "pourquoi-changer-cylindre-paris-11",

@@ -11,8 +11,33 @@ export const content: PremiumPageContent = {
     "Gestionnaire de syndics depuis 22 ans, je décrypte la plomberie de Fontenay-aux-Roses : IRSI, parties communes, prix Joël dès 79€. 01 41 69 10 08, 24h/24.",
   h1: "Plombier à Fontenay-aux-Roses (92260) : le manuel d'une gestionnaire de copropriétés sur la ville-jardin du 92 sud",
 
-  introParagraph:
-    "En 22 ans de gestion d'immeubles, j'ai gardé un dossier spécial pour Fontenay-aux-Roses. Pas par hasard. Parce que cette commune de 24 586 habitants (population municipale légale INSEE 2022, en vigueur depuis le 1er janvier 2025) coincée entre Sceaux, Châtenay-Malabry, Bagneux, Le Plessis-Robinson et Clamart est l'un des terrains les plus singuliers de mon portefeuille de 187 immeubles franciliens. Une ville-jardin bourgeoise du 92 sud, 80,3% de logements collectifs et 15,6% de maisons individuelles selon le dossier complet INSEE 2022, 42,8% de propriétaires occupants, un revenu médian de 26 990€ par unité de consommation (chiffres INSEE 2021) qui la place parmi les communes confortables des Hauts-de-Seine sans atteindre les niveaux de Neuilly ou Saint-Cloud. Quand je gère une copropriété rue Boucicaut, avenue Albert-Petit ou rue Boris-Vildé, je ne raisonne pas comme à Neuilly (plus dense, plus haussmannien tardif), ni comme à Saint-Cloud (ville-coteau dénivelée), ni comme à Cergy (ville nouvelle des années 70-2000). Fontenay, c'est un mix très spécifique : des copros 1960-1990 nombreuses dans le secteur Centre, Mairie et Pervenches, des petits immeubles bourgeois 1925-1935 disséminés rue Jean-Jaurès, rue de la Mairie et rue Boucicaut, des résidences plus récentes vers les Sentiers et la Coulée verte (post-2000), des poches pavillonnaires denses aux Buttes, Renards et hauteurs des Pervenches, le tout traversé par la coulée verte du sud parisien (ancien chemin de fer Paris-Limours), bordé par le grand parc Sainte-Barbe et le parc Laboissière. Trois axes structurent les déplacements : le RER B station Fontenay-aux-Roses (ligne saturée mais directe vers Saint-Michel, Châtelet, Gare du Nord), le tramway T6 dont les arrêts les plus proches sont côté Châtillon-Montrouge en limite, et un réseau de bus qui dessert le coteau. Présence universitaire majeure avec le campus de la Faculté Jean Monnet de Paris-Saclay (Droit, Économie, Management) au 27 avenue Lombart, qui draine plusieurs milliers d'étudiants et de jeunes actifs locataires dans la commune et alentour. Cette page n'est pas un argumentaire commercial. C'est ce que j'aurais voulu trouver la première fois qu'une copropriétaire de l'avenue Jeanne-et-Maurice-Dolivet m'a appelée à 22h45 un mardi parce que sa salle de bain était sous 3 cm d'eau et que son syndic était injoignable depuis quatre heures. Joël, le réseau d'artisans avec qui je travaille au quotidien sur le 92 sud, applique trois règles que tout gestionnaire de copropriétés réclame depuis vingt ans sans les obtenir : prix annoncé AVANT intervention, plomberie dès 79€ TTC, 24h/24 sans majoration nuit ou week-end. Numéro à composer en cas de fuite, débouchage WC, recherche de fuite, panne de chauffe-eau ou ballon : 01 41 69 10 08. Le reste de la page est mon manuel pratique pour les habitants de Fontenay-aux-Roses : copropriétaires occupants, locataires, conseils syndicaux, gardiens, propriétaires bailleurs, et les nombreux étudiants ou jeunes actifs qui louent dans la commune.",
+  introParagraph: `### Fontenay-aux-Roses en chiffres : la ville-jardin bourgeoise du 92 sud
+
+Fontenay-aux-Roses compte **24 586 habitants** (population municipale légale **INSEE 2022**, en vigueur depuis le **1er janvier 2025**), coincée entre Sceaux, Châtenay-Malabry, Bagneux, Le Plessis-Robinson et Clamart.
+
+Une ville-jardin bourgeoise du 92 sud, **80,3 % de logements collectifs** et **15,6 % de maisons individuelles** selon le dossier complet INSEE 2022, **42,8 % de propriétaires occupants**, un **revenu médian de 26 990 €** par unité de consommation (INSEE 2021).
+
+### Le bâti fontenaysien : un mix très spécifique
+
+Fontenay, c'est un mix très spécifique : des **copros 1960-1990** nombreuses dans le secteur **Centre, Mairie et Pervenches**, des **petits immeubles bourgeois 1925-1935** disséminés rue **Jean-Jaurès, rue de la Mairie et rue Boucicaut**, des **résidences plus récentes** vers les **Sentiers et la Coulée verte** (post-2000), des **poches pavillonnaires denses** aux **Buttes, Renards et hauteurs des Pervenches**.
+
+Trois axes structurent les déplacements : le **RER B station Fontenay-aux-Roses**, le **tramway T6** côté Châtillon-Montrouge en limite, et un réseau de bus. Présence universitaire majeure avec le campus de la **Faculté Jean Monnet de Paris-Saclay** au 27 avenue Lombart.
+
+### Le quotidien plomberie à Fontenay : ce que ça implique
+
+Cette page n'est pas un argumentaire commercial. C'est ce que j'aurais voulu trouver la première fois qu'une copropriétaire de l'**avenue Jeanne-et-Maurice-Dolivet** m'a appelée à **22h45** un mardi parce que sa salle de bain était sous **3 cm d'eau** et que son syndic était injoignable depuis quatre heures.
+
+C'est mon manuel pratique pour les habitants : copropriétaires occupants, locataires, conseils syndicaux, gardiens, propriétaires bailleurs, et les nombreux **étudiants ou jeunes actifs** qui louent dans la commune.
+
+### L'auteur de cette page
+
+**22 ans de gestion d'immeubles**, un portefeuille de **187 immeubles franciliens**. Quand je gère une copropriété rue Boucicaut, je ne raisonne pas comme à Neuilly, ni comme à Saint-Cloud, ni comme à Cergy.
+
+### Joël à Fontenay-aux-Roses : tarif fixe annoncé en amont
+
+Joël applique trois règles que tout gestionnaire de copropriétés réclame depuis vingt ans : **prix annoncé AVANT intervention**, plomberie dès **79 € TTC**, **24h/24** sans majoration nuit ou week-end.
+
+Numéro à composer en cas de fuite, débouchage WC, recherche de fuite, panne de chauffe-eau ou ballon : **01 41 69 10 08**.`,
 
   sections: [
     {

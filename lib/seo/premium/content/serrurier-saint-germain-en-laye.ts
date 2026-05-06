@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Saint-Germain-en-Laye (78100) : intervention dès 89€ TTC, prix annoncé avant. Ex-BRDP 78 vous décortique vos vulnérabilités. Tel : 01 41 69 10 08.",
   h1: "Serrurier à Saint-Germain-en-Laye : le rapport de terrain d'un ex-gendarme BRDP 78",
-  introParagraph:
-    "Je m'appelle Patrick Delcourt, adjudant-chef en retraite de la Section de Recherches de Versailles, et formateur indépendant en sûreté résidentielle depuis 2023. Saint-Germain-en-Laye n'est pas une commune parmi d'autres pour moi : pendant 22 ans en cellule cambriolages BRDP 78, c'était mon secteur direct. Le commissariat de Saint-Germain, le château, la forêt domaniale, la terrasse Le Nôtre, le marché du mardi et du vendredi sur la place du Marché-Neuf — j'y ai instruit ou supervisé plusieurs centaines de procédures. Selon l'INSEE (recensement 2022), la commune compte 45 286 habitants concentrés sur 48,3 km² dont la majorité en forêt domaniale ; le bâti résidentiel se déploie en réalité sur une frange dense entre le château, la gare RER A terminus et le bois de Saint-Germain. Ce profil est singulier : ville royale historique, bourgeoise aisée, fortement résidentielle, avec un parc immobilier de standing (grandes villas Coteaux, immeubles bourgeois centre-ville, résidences Bel-Air et Pereire, terrasses sur la Seine). Cette concentration de valeur attire un type précis de délinquance d'appropriation, documenté dans les remontées du Service Statistique Ministériel de la Sécurité Intérieure (SSMSI). Selon le bilan SSMSI 2024, le département des Yvelines a enregistré 4 255 cambriolages de logements, avec une augmentation préoccupante du taux par habitant entre 2023 et 2024. Si vous lisez cette page, c'est pour l'une de quatre raisons : vous êtes devant une porte close, vous venez de subir une effraction, vous voulez sécuriser une villa des Coteaux ou un appartement bourgeois centre-ville, ou vous comparez les serruriers du 78. Je vais vous donner quatre choses : 1° la cartographie réelle des cambriolages à Saint-Germain par quartier issue de mes années BRDP, 2° les vulnérabilités précises du parc résidentiel saint-germanois, 3° les tarifs honnêtes du réseau Joël (dès 89€ TTC, annoncés avant intervention, sans majoration nuit ni week-end), 4° le protocole exact à suivre dans les 60 minutes après une effraction. Joël intervient 24h/24 sur la commune au 01 41 69 10 08. Lisez les sections qui vous concernent, classez les informations, faites votre choix en connaissance de cause.",
+  introParagraph: `### Saint-Germain-en-Laye en chiffres : population, patrimoine, parc résidentiel
+
+Selon l'INSEE (recensement 2022), Saint-Germain-en-Laye compte **45 286 habitants** concentrés sur **48,3 km²** dont la majorité en forêt domaniale. Le bâti résidentiel se déploie sur une frange dense entre le **château, la gare RER A terminus et le bois de Saint-Germain**.
+
+Profil singulier : **ville royale historique, bourgeoise aisée, fortement résidentielle**, avec un parc immobilier de standing — **grandes villas Coteaux, immeubles bourgeois centre-ville, résidences Bel-Air et Pereire, terrasses sur la Seine**.
+
+### Cambriolages : les chiffres SSMSI 2024
+
+Selon le bilan **SSMSI 2024**, le département des **Yvelines a enregistré 4 255 cambriolages de logements**, soit un taux d'environ **2,89 cambriolages pour 1 000 habitants** ou environ **7,2 pour 1 000 logements**. L'évolution est défavorable : ce taux est passé d'environ **6,8 à 7,2 pour 1 000 logements** entre juillet 2023 et juin 2024 selon les remontées **Interstats**.
+
+Le département a par ailleurs enregistré **65 839 crimes et délits** sur l'année (**44,8 infractions pour 1 000 habitants**, source SSMSI 2024).
+
+### L'auteur de cette page
+
+Je m'appelle **Patrick Delcourt**, **adjudant-chef en retraite de la Section de Recherches de Versailles**, et formateur indépendant en sûreté résidentielle depuis 2023. Saint-Germain-en-Laye n'est pas une commune parmi d'autres : pendant **22 ans en cellule cambriolages BRDP 78**, c'était mon secteur direct. Le commissariat, le château, la forêt domaniale, la terrasse Le Nôtre, le marché du mardi et du vendredi sur la place du Marché-Neuf — j'y ai instruit ou supervisé **plusieurs centaines de procédures**.
+
+### Joël à Saint-Germain-en-Laye : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, dès **89 € TTC**, **sans majoration nuit ni week-end**. Joël intervient **24h/24** sur la commune.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "stats-cambriolage-yvelines-saint-germain",

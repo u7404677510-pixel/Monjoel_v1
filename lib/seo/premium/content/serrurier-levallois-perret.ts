@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Levallois-Perret 92300 — Centre, Front-de-Seine, Villiers, Anatole-France. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Levallois-Perret : sécurité résidentielle dans la commune la plus dense de France après Paris",
-  introParagraph:
-    "Levallois-Perret est l'une des communes les plus densément peuplées de France après Paris : environ 68 620 habitants pour 2,42 km² seulement, soit une densité de 28 254 habitants au kilomètre carré qui en fait la commune la plus dense des Hauts-de-Seine. Cette concentration urbaine, exceptionnelle, s'organise autour de plusieurs grands secteurs identifiés par l'INSEE en 24 quartiers statistiques : Centre autour de la mairie et de l'église Saint-Justin, Front-de-Seine à l'ouest le long de la rive et de l'île de la Jatte, Villiers au sud-est autour de la station Anatole-France de la ligne 3, Mermoz au nord-ouest autour de la station Louise-Michel, Anatole-France-Marjolin à l'est, Les Champs-de-Bataille au nord-est, Trébois et Eiffel au nord. Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations successives : immeubles de rapport haussmanniens et post-haussmanniens 1880-1930 qui dominent massivement le bâti levalloisien, hôtels particuliers Belle Époque sur l'île de la Jatte et le Front-de-Seine, copropriétés des Trente Glorieuses dans certains secteurs, et désormais grandes opérations résidentielles et tertiaires RT 2012 et RE 2020 qui sortent de terre depuis 2010 dans le sillage de la requalification du quartier d'affaires Eiffel. Cette diversité urbaine, jointe à un profil bourgeois marqué (revenu médian parmi les plus élevés des Hauts-de-Seine) et à une rotation locative significative dans plusieurs secteurs, fait de Levallois-Perret une cible privilégiée des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie, où la valeur des biens à protéger justifie aux yeux des escrocs des tentatives de surfacturation extrêmes. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Levallois-Perret à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Levallois-Perret en chiffres : population, patrimoine, parc résidentiel
+
+Levallois-Perret est **l'une des communes les plus densément peuplées de France après Paris** : environ **68 620 habitants** pour **2,42 km²** seulement, soit une **densité de 28 254 habitants au kilomètre carré** qui en fait **la commune la plus dense des Hauts-de-Seine**. Cette concentration s'organise en **24 quartiers statistiques INSEE** : Centre, Front-de-Seine, Villiers, Mermoz, Anatole-France-Marjolin, Champs-de-Bataille, Trébois et Eiffel.
+
+Cette nomenclature recouvre une mosaïque urbaine héritée d'un siècle d'urbanisations : **immeubles de rapport haussmanniens et post-haussmanniens 1880-1930** qui dominent massivement le bâti levalloisien, **hôtels particuliers Belle Époque** sur l'**île de la Jatte** et le Front-de-Seine, copropriétés des Trente Glorieuses, et désormais grandes opérations **RT 2012 et RE 2020** depuis 2010 dans le sillage de la requalification du quartier d'affaires **Eiffel**.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine, jointe à un **profil bourgeois marqué** (**revenu médian parmi les plus élevés des Hauts-de-Seine**) et à une **rotation locative significative**, fait de Levallois-Perret une cible privilégiée des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie, où la valeur des biens à protéger justifie aux yeux des escrocs des **tentatives de surfacturation extrêmes**.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain altoséquanais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Levallois-Perret : tarif fixe annoncé en amont
+
+Joël intervient à Levallois-Perret à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "levallois-quartiers-bati-a-proteger",

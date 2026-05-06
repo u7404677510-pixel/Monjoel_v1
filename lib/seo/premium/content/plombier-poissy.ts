@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Poissy 78300 — Centre historique, Beauregard, Saint-Exupéry, Bourgogne, Technoparc Stellantis. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Poissy : intervenir entre la collégiale Notre-Dame, la cité royale historique et le Technoparc Stellantis",
-  introParagraph:
-    "Poissy est, avec ses 40 983 habitants au dernier recensement INSEE et environ 42 585 habitants estimés en 2026 selon les modèles de projection, l'une des plus anciennes cités royales d'Île-de-France et l'une des villes structurantes du nord-ouest des Yvelines. Étalée sur la rive gauche de la Seine à 25 kilomètres au nord-ouest de Paris, la commune présente une mosaïque urbaine d'une diversité remarquable. Le territoire est desservi par le RER A (terminus Poissy) et la ligne J du Transilien, ce qui en fait un hub structurant. Quand j'arrive chez un client à Poissy, la première chose que je regarde c'est l'âge du bâti et son histoire. Et la ville en a beaucoup : Poissy est l'une des plus anciennes cités royales franciliennes, lieu de naissance de Louis IX (saint Louis) en 1214 et de Philippe III, lieu de baptême plusieurs fois royal, avant d'être supplantée à partir du XVe siècle par Saint-Germain-en-Laye. La collégiale Notre-Dame de Poissy, classée Monument historique, conserve la cuve baptismale dans laquelle saint Louis aurait été baptisé. Le quartier historique conserve une trame médiévale et Renaissance partiellement préservée. Le territoire accueille aussi l'usine Stellantis (ex-Peugeot, anciennement Simca-Chrysler) qui constitue depuis le XXe siècle l'un des grands sites industriels franciliens. Plombier-chauffagiste depuis 28 ans, ex-Compagnon du Devoir, je connais bien le bâti pisciacais. Cette page s'adresse aux Pisciacais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Poissy en chiffres : une cité royale des Yvelines
+
+Poissy compte **40 983 habitants** au dernier recensement INSEE et environ **42 585 habitants estimés en 2026** selon les modèles de projection. Étalée sur la rive gauche de la Seine à **25 kilomètres au nord-ouest de Paris**, la commune est l'une des **plus anciennes cités royales d'Île-de-France** et l'une des villes structurantes du nord-ouest des Yvelines.
+
+Le territoire est desservi par le **RER A (terminus Poissy)** et la **ligne J du Transilien**, ce qui en fait un hub structurant.
+
+### Le bâti pisciacais : une mosaïque historique et industrielle
+
+Quand j'arrive chez un client à Poissy, la première chose que je regarde c'est l'âge du bâti et son histoire. La ville en a beaucoup : lieu de naissance de **Louis IX (saint Louis) en 1214** et de Philippe III, lieu de baptême plusieurs fois royal, avant d'être supplantée à partir du XVe siècle par Saint-Germain-en-Laye.
+
+La **collégiale Notre-Dame de Poissy**, classée Monument historique, conserve la cuve baptismale dans laquelle saint Louis aurait été baptisé. Le quartier historique conserve une **trame médiévale et Renaissance** partiellement préservée. Le territoire accueille aussi l'**usine Stellantis** (ex-Peugeot, anciennement Simca-Chrysler) qui constitue depuis le XXe siècle l'un des grands sites industriels franciliens.
+
+### Le quotidien plomberie à Poissy : ce que voient les Pisciacais
+
+Cette page s'adresse aux **Pisciacais** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Plombier-chauffagiste depuis 28 ans**, **ex-Compagnon du Devoir**, je connais bien le bâti pisciacais.
+
+### Joël à Poissy : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "poissy-bati-cite-royale-stellantis-quartiers",

@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Fontenay-sous-Bois 94120 — Val de Fontenay, Bois-Cadet, Larris, Centre-ville, Plateau. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Fontenay-sous-Bois : intervenir entre Val de Fontenay, le pavillonnaire bourgeois et la lisière du Bois de Vincennes",
-  introParagraph:
-    "Fontenay-sous-Bois est, avec ses 53 424 habitants au dernier recensement INSEE et environ 52 600 habitants estimés en 2026 selon les modèles de projection, l'une des grandes communes du Val-de-Marne et l'une des villes structurantes de l'est parisien immédiat. Étalée sur seulement 5,56 km² avec une densité de 9 602 habitants par km², la commune jouit d'une situation rare : adossée au Bois de Vincennes immédiatement à l'ouest (la commune en a perdu plus d'un tiers de son territoire en 1929 quand Paris a annexé le Bois), à 8 kilomètres de la place de la Bastille, desservie par deux gares RER d'importance — Fontenay-sous-Bois sur la ligne A et Val de Fontenay, gare d'interconnexion entre les lignes A et E. À Fontenay, le bâti raconte son histoire jusque dans ses canalisations : centre-ville organisé autour de l'église Saint-Germain-l'Auxerrois, plateau pavillonnaire des années 1900-1935 sur la partie haute de la commune, immeubles haussmanniens tardifs et opérations de la reconstruction d'après-guerre dans les artères centrales, grands ensembles édifiés dans certains secteurs à partir des années 1960, opérations urbaines majeures de Val de Fontenay aménagées depuis les années 1970-1990, et désormais opérations RT 2012 puis RE 2020 qui complètent le tissu urbain. Architecte du patrimoine de formation, j'ai accompagné depuis vingt ans plusieurs interventions sensibles dans le bâti francilien, et Fontenay-sous-Bois fait partie des communes où la finesse de lecture du bâti conditionne directement la qualité d'une intervention de plomberie. Cette page s'adresse aux Fontenaysiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Fontenay-sous-Bois en chiffres : une grande commune du Val-de-Marne
+
+Fontenay-sous-Bois compte **53 424 habitants** au dernier recensement INSEE et environ **52 600 habitants** estimés en 2026 selon les modèles de projection. Étalée sur seulement **5,56 km²** avec une **densité de 9 602 habitants par km²**, c'est l'une des villes structurantes de l'est parisien immédiat.
+
+La commune jouit d'une situation rare : **adossée au Bois de Vincennes** immédiatement à l'ouest (elle en a perdu plus d'un tiers de son territoire en 1929 quand Paris a annexé le Bois), à **8 kilomètres de la place de la Bastille**, desservie par deux gares RER d'importance — **Fontenay-sous-Bois** sur la ligne A et **Val de Fontenay**, gare d'interconnexion entre les lignes A et E.
+
+### Un bâti stratifié entre plateau pavillonnaire et Val de Fontenay
+
+À Fontenay, le bâti raconte son histoire jusque dans ses canalisations : **centre-ville** organisé autour de l'église Saint-Germain-l'Auxerrois, **plateau pavillonnaire des années 1900-1935** sur la partie haute de la commune, immeubles haussmanniens tardifs et **opérations de la reconstruction d'après-guerre** dans les artères centrales.
+
+S'y ajoutent les **grands ensembles** édifiés dans certains secteurs à partir des années 1960, les **opérations urbaines majeures de Val de Fontenay** aménagées depuis les années 1970-1990, et désormais les **opérations RT 2012 puis RE 2020** qui complètent le tissu urbain.
+
+### Le quotidien plomberie à Fontenay : pourquoi le diagnostic compte
+
+Cette page s'adresse aux Fontenaysiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **600 à 1 500€** ce qui aurait dû en coûter **89€** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Architecte du patrimoine** de formation, j'ai accompagné depuis **vingt ans** plusieurs interventions sensibles dans le bâti francilien, et Fontenay-sous-Bois fait partie des communes où la **finesse de lecture du bâti** conditionne directement la qualité d'une intervention de plomberie.
+
+### Joël à Fontenay-sous-Bois : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un débouchage WC ou **89€** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "fontenay-bati-mosaique-quartiers-bois-vincennes",

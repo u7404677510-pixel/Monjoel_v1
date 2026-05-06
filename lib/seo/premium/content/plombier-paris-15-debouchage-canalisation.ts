@@ -11,8 +11,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Débouchage canalisation Paris 15e (Vaugirard, Convention, Beaugrenelle, Cambronne). Prix Joël 99€ TTC fixe annoncé, sans majoration nuit/week-end. 01 41 69 10 08.",
   h1: "Débouchage de canalisation à Paris 15e (75015) : la méthode pour un arrondissement de 233 000 habitants",
-  introParagraph:
-    "Je m'appelle Mehdi Karim. Plombier-chauffagiste depuis 1998, formé chez les Compagnons du Devoir entre 1996 et 2000, et j'interviens dans le 15e arrondissement de Paris depuis bientôt vingt ans pour le réseau Joël. Le 15e, c'est l'arrondissement le plus peuplé de Paris : 230 390 habitants au recensement INSEE 2022, environ 228 846 personnes estimées en 2025 sur 8,5 km². C'est aussi un terrain de jeu hydraulique d'une complexité que peu d'arrondissements parisiens égalent : haussmannien tardif autour de Cambronne et de la place Adolphe-Chérioux, post-haussmannien et années 1930 du côté de la Convention et de Saint-Lambert, opérations Front-de-Seine et Beaugrenelle des années 1970 (avec leurs vingt-deux tours résidentielles emblématiques), opérations RT 2012 et RE 2020 plus récentes côté Boucicaut et nouveau Vaugirard. Sur cette page je vous explique précisément comment je traite un débouchage de canalisation dans le 15e : quelles techniques pour quelle pathologie, quel prix fixe annoncé en amont (99€ TTC tout compris chez Joël, sans majoration nuit ni week-end), et comment éviter les arnaques qui pullulent sur ce code postal. Le numéro à composer reste le 01 41 69 10 08 — disponible 24 heures sur 24, 7 jours sur 7, dimanches et jours fériés inclus.",
+  introParagraph: `### Le 15e en chiffres : l'arrondissement le plus peuplé de Paris
+
+Le 15e, c'est **l'arrondissement le plus peuplé de Paris** : **230 390 habitants** au recensement INSEE 2022, environ **228 846 personnes** estimées en 2025 sur **8,5 km²**.
+
+### Un bâti d'une complexité hydraulique rare
+
+C'est un terrain de jeu hydraulique d'une complexité que peu d'arrondissements parisiens égalent : **haussmannien tardif** autour de **Cambronne** et de la **place Adolphe-Chérioux**, **post-haussmannien et années 1930** du côté de la **Convention** et de **Saint-Lambert**, **opérations Front-de-Seine et Beaugrenelle** des années 1970 (avec leurs **vingt-deux tours résidentielles** emblématiques), **opérations RT 2012 et RE 2020** plus récentes côté **Boucicaut** et nouveau **Vaugirard**.
+
+### Débouchage de canalisation dans le 15e : la méthode
+
+Sur cette page je vous explique précisément comment je traite un **débouchage de canalisation** dans le 15e : quelles techniques pour quelle pathologie, et comment éviter les **arnaques** qui pullulent sur ce code postal.
+
+### L'auteur de cette page
+
+Je m'appelle **Mehdi Karim**. **Plombier-chauffagiste depuis 1998**, formé chez les **Compagnons du Devoir** entre 1996 et 2000, et j'interviens dans le 15e arrondissement de Paris depuis bientôt **vingt ans** pour le réseau Joël.
+
+### Joël à Paris 15e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention** : **99€ TTC tout compris** pour un débouchage de canalisation, **sans majoration nuit ni week-end**, **24h/24, 7j/7**, dimanches et jours fériés inclus.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "vrai-prix-debouchage-paris-15",

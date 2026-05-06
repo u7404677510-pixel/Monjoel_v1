@@ -11,8 +11,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Débouchage canalisation Quincy-sous-Sénart dès 99€ TTC, prix annoncé AVANT, 24h/24 sans majoration. Guide budget familles par Nadia Zerrouki, conseillère ESF. Tél 01 41 69 10 08.",
   h1: "Débouchage de canalisation à Quincy-sous-Sénart (91480) : le vrai prix expliqué aux familles, sans peur et sans piège",
-  introParagraph:
-    "Je m'appelle Nadia Zerrouki, je suis conseillère en économie sociale et familiale, fondatrice du cabinet 'Vrai Prix Vrai Service'. Depuis quatorze ans, j'aide des familles franciliennes à reprendre la main sur leur budget face à des dépenses contraintes qui les broient. À Quincy-sous-Sénart, petite commune de 9 491 habitants selon le recensement INSEE 2022 (la population estimée 2024 grimpe à environ 9 538 habitants selon DécomptesPublics.fr), nichée à la lisière sud-est du département 91 entre la forêt de Sénart et la vallée de l'Yerres, j'accompagne chaque mois une dizaine de familles dont le quotidien a basculé après un dépannage plomberie mal négocié. Une canalisation de cuisine bouchée un dimanche soir rue du Lavoir, un évier qui refuse de se vider depuis trois semaines dans un pavillon de la rue Pasteur, une douche qui remonte un soir de janvier dans une copropriété près de l'avenue Pierre-Brossolette : selon le numéro composé en panique, la même intervention se règle entre 99€ et 720€. L'écart entre ces deux mondes, pour une famille quincéenne dont le revenu médian par unité de consommation tourne autour de 23 930€ par an selon les données INSEE 2021, c'est cinq à six semaines de courses englouties en moins d'une heure. C'est ce qui sépare une fin de mois calme d'un découvert qui mettra trois mois à se résorber. Et quand on sait que 14% des Quincéens vivent sous le seuil de pauvreté selon la même source INSEE, et que ce taux grimpe à 29% chez les locataires, on comprend pourquoi la facture d'un débouchage peut faire vaciller un foyer. Cette page n'est pas une plaquette commerciale. C'est le guide que j'aurais voulu remettre, en consultation, à toutes les mères, à tous les pères, à tous les retraités de Quincy-sous-Sénart que j'ai vu sortir d'une intervention sonnés, factures en main, persuadés qu'ils n'auraient jamais dû ouvrir leur porte. Vous y trouverez le vrai prix d'un débouchage de canalisation pratiqué par Joël (annoncé AVANT intervention, fixe à 99€ TTC, sans majoration la nuit, le week-end ni les jours fériés), les pièges propres au bâti quincéen entre pavillons anciens et petites résidences récentes, les aides spécifiques à l'Essonne (CCAS de Quincy au 5 rue de Combs-la-Ville, FSL 91 piloté par le Conseil départemental, Caf 91, ADIL 91) que personne ne pense à mobiliser, et les questions concrètes que je reçois en consultation. Le numéro à composer en cas d'urgence : 01 41 69 10 08.",
+  introParagraph: `### Quincy-sous-Sénart en chiffres : une commune à la lisière sud-est du 91
+
+Quincy-sous-Sénart est une petite commune de **9 491 habitants** selon le recensement **INSEE 2022** (la population estimée 2024 grimpe à environ **9 538 habitants** selon DécomptesPublics.fr), nichée à la lisière sud-est du département **91** entre la **forêt de Sénart** et la **vallée de l'Yerres**.
+
+Le **revenu médian par unité de consommation** des familles quincéennes tourne autour de **23 930 € par an** selon les données **INSEE 2021**. **14 % des Quincéens** vivent sous le seuil de pauvreté selon la même source INSEE, et ce taux grimpe à **29 % chez les locataires**.
+
+### Le bâti quincéen : entre pavillons anciens et petites résidences récentes
+
+Une **canalisation de cuisine bouchée** un dimanche soir **rue du Lavoir**, un **évier qui refuse de se vider** depuis trois semaines dans un pavillon de la **rue Pasteur**, une **douche qui remonte** un soir de janvier dans une copropriété près de l'**avenue Pierre-Brossolette** : selon le numéro composé en panique, la même intervention se règle entre **99 € et 720 €**.
+
+### Le quotidien plomberie à Quincy-sous-Sénart : ce que disent les chiffres
+
+L'écart entre ces deux mondes, pour une famille quincéenne, c'est **cinq à six semaines de courses englouties** en moins d'une heure. C'est ce qui sépare une fin de mois calme d'un découvert qui mettra trois mois à se résorber. La facture d'un débouchage peut faire vaciller un foyer.
+
+### L'auteur de cette page
+
+Je m'appelle **Nadia Zerrouki**, je suis **conseillère en économie sociale et familiale**, fondatrice du cabinet **« Vrai Prix Vrai Service »**. Depuis **quatorze ans**, j'aide des familles franciliennes à reprendre la main sur leur budget face à des dépenses contraintes qui les broient. J'accompagne chaque mois **une dizaine de familles** dont le quotidien a basculé après un dépannage plomberie mal négocié.
+
+Vous y trouverez aussi les **aides spécifiques à l'Essonne** (**CCAS de Quincy** au 5 rue de Combs-la-Ville, **FSL 91** piloté par le Conseil départemental, **Caf 91**, **ADIL 91**) que personne ne pense à mobiliser.
+
+### Joël à Quincy-sous-Sénart : tarif fixe annoncé en amont
+
+Le vrai prix d'un débouchage de canalisation pratiqué par Joël est **annoncé AVANT intervention, fixe à 99 € TTC**, sans majoration la nuit, le week-end ni les jours fériés.
+
+Le numéro à composer en cas d'urgence : **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "vrai-prix-debouchage-quincy",

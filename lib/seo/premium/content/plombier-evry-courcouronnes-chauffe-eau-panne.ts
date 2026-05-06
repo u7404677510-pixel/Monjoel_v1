@@ -11,8 +11,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plus d'eau chaude à Évry-Courcouronnes ? Diagnostic chauffe-eau dès 109€ TTC, intervention 24h/24 sans majoration. Toutes marques (Atlantic, Sauter, Thermor, De Dietrich). Réparation ou remplacement, prix annoncé avant.",
   h1: "Chauffe-eau en panne à Évry-Courcouronnes : le guide technique d'un plombier qui en démonte trois par semaine ici",
-  introParagraph:
-    "Mehdi Karim, plombier-chauffagiste, vingt-huit ans de métier, formation Compagnons du Devoir entre 1996 et 2000. Quand on m'a confié l'écriture de cette page, j'ai d'abord dit que je n'étais pas écrivain, je suis plombier. Mais en regardant les statistiques d'appels qui remontent du standard Joël pour Évry-Courcouronnes, j'ai accepté : sur cette commune de 67 638 habitants, les pannes de chauffe-eau représentent à elles seules près d'un appel sur trois en plomberie, et c'est un chiffre que je ne vois nulle part ailleurs en Île-de-France à ce niveau, même pas dans le 13e arrondissement de Paris où j'ai pourtant fait beaucoup de dépannages cumulus. Si vous lisez ces lignes, vous êtes probablement dans l'une de ces situations : votre douche est froide ce matin, votre cumulus fait disjoncter le tableau, l'eau ressort tiède au mieux, ou alors une flaque commence à s'étendre sous votre ballon dans le placard du couloir. Avant d'aller plus loin, le numéro à composer si la situation est critique — ballon qui fuit massivement, odeur de brûlé, disjoncteur qui ne tient plus — c'est le 01 41 69 10 08, intervention en vingt à trente minutes, prix annoncé avant, 109€ TTC pour démarrer un diagnostic chauffe-eau, 24h sur 24 sans majoration nuit ou week-end. Cette page n'est pas un argumentaire commercial. C'est ce que je raconte aux clients quand on attend que le ballon se vide, debout dans leur cuisine ou leur salle de bain : l'anatomie d'un chauffe-eau, les cinq pannes que je vois passer à Évry semaine après semaine, pourquoi l'eau de l'Essonne tue ces appareils plus vite qu'ailleurs, comment faire la différence entre une réparation à 200€ et un remplacement nécessaire à 900€, et surtout comment ne pas se faire vendre un ballon neuf alors qu'une simple résistance suffirait. Lisez calmement, vous saurez tout en quinze minutes. Et si vous êtes pressé parce que ça déborde, sautez direct à la section diagnostic à 5 minutes ou appelez maintenant.",
+  introParagraph: `### Évry-Courcouronnes en chiffres : la commune où les chauffe-eau lâchent
+
+Sur cette commune de **67 638 habitants**, les **pannes de chauffe-eau représentent à elles seules près d'un appel sur trois** en plomberie, un chiffre que je ne vois nulle part ailleurs en Île-de-France à ce niveau, même pas dans le 13e arrondissement de Paris où j'ai pourtant fait beaucoup de dépannages cumulus.
+
+### Pourquoi votre chauffe-eau est en panne
+
+Si vous lisez ces lignes, vous êtes probablement dans l'une de ces situations : **votre douche est froide ce matin**, **votre cumulus fait disjoncter le tableau**, **l'eau ressort tiède** au mieux, ou alors **une flaque commence à s'étendre sous votre ballon** dans le placard du couloir.
+
+L'**eau de l'Essonne dure à 25-30 °f** tue ces appareils plus vite qu'ailleurs : la résistance blindée s'entartre en **4 à 6 ans**, l'**anode magnésium** se consomme en **18 à 30 mois**, le **groupe de sécurité** dure **4 à 6 ans** contre 8 à 10 en zone douce.
+
+### Le quotidien chauffe-eau à Évry : ce que ça implique
+
+Cette page va vous expliquer : l'**anatomie d'un chauffe-eau**, les **cinq pannes** que je vois passer à Évry semaine après semaine, pourquoi l'eau tue ces appareils plus vite qu'ailleurs, comment faire la différence entre une **réparation à 200 €** et un **remplacement nécessaire à 900 €**, et surtout comment **ne pas se faire vendre un ballon neuf** alors qu'une simple résistance suffirait.
+
+### L'auteur de cette page
+
+**Mehdi Karim**, plombier-chauffagiste, **vingt-huit ans de métier**, formation **Compagnons du Devoir entre 1996 et 2000**. Quand on m'a confié l'écriture de cette page, j'ai d'abord dit que je n'étais pas écrivain — je suis plombier. C'est ce que je raconte aux clients quand on attend que le ballon se vide, debout dans leur cuisine ou leur salle de bain.
+
+### Joël à Évry-Courcouronnes : tarif fixe annoncé en amont
+
+Le numéro à composer si la situation est critique — ballon qui fuit massivement, odeur de brûlé, disjoncteur qui ne tient plus — c'est le **01 41 69 10 08**.
+
+Intervention en **vingt à trente minutes**, **prix annoncé avant**, **109 € TTC** pour démarrer un diagnostic chauffe-eau, **24h sur 24** sans majoration nuit ou week-end.`,
   sections: [
     {
       anchor: "anatomie-chauffe-eau",

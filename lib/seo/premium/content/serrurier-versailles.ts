@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Versailles 78000 — Notre-Dame, Saint-Louis, Montreuil, Chantiers, Clagny. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Versailles : sécurité résidentielle dans la préfecture des Yvelines au patrimoine bourgeois exigeant",
-  introParagraph:
-    "Versailles, sous-préfecture des Yvelines et résidence royale entre 1682 et 1789, compte environ 84 095 habitants selon les chiffres INSEE 2023, étalée sur 26,18 km² découpés par l'INSEE en 36 quartiers. La ville se structure principalement autour de huit quartiers principaux dont Notre-Dame au nord-est de l'avenue de Paris, Saint-Louis au sud-ouest face au château, Montreuil à l'est, Chantiers autour de la gare éponyme, Clagny-Glatigny au nord, Porchefontaine à l'est en lisière de la forêt de Versailles, Jussieu et Bernard-de-Jussieu. Cette nomenclature recouvre une mosaïque urbaine héritée de quatre siècles d'urbanisations successives : hôtels particuliers du Grand Siècle dans les quartiers Notre-Dame et Saint-Louis, immeubles haussmanniens fin XIXe sur l'avenue de Paris et le boulevard de la Reine, immeubles de rapport Belle Époque autour de la gare des Chantiers, pavillonnaire bourgeois 1900-1935 dans Clagny et Porchefontaine, copropriétés des Trente Glorieuses à Bernard-de-Jussieu, et programmes neufs RT 2012 et RE 2020 disséminés depuis les années 2010. Cette diversité, jointe au profil bourgeois marqué d'une part importante des occupants (revenu médian au-dessus de la moyenne francilienne), fait de Versailles une cible de choix pour les opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie, où la valeur des biens à protéger justifie aux yeux des escrocs des tentatives de surfacturation extrêmes. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne, dont une part importante sur le territoire versaillais que je connais comme ma poche pour y avoir vécu et travaillé. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Versailles à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Versailles en chiffres : population, superficie, quartiers
+
+Versailles, **sous-préfecture des Yvelines** et résidence royale entre **1682 et 1789**, compte environ **84 095 habitants** selon les chiffres INSEE 2023, étalée sur **26,18 km²** découpés par l'INSEE en **36 quartiers**.
+
+La ville se structure principalement autour de **huit quartiers principaux** : **Notre-Dame** au nord-est de l'avenue de Paris, **Saint-Louis** au sud-ouest face au château, **Montreuil** à l'est, **Chantiers** autour de la gare, **Clagny-Glatigny** au nord, **Porchefontaine** à l'est en lisière de la forêt, **Jussieu** et **Bernard-de-Jussieu**.
+
+### Bâti patrimonial : quatre siècles d'urbanisation
+
+Cette nomenclature recouvre une mosaïque urbaine héritée de quatre siècles : **hôtels particuliers du Grand Siècle** dans Notre-Dame et Saint-Louis, **immeubles haussmanniens fin XIXe** sur l'avenue de Paris et le boulevard de la Reine, **immeubles de rapport Belle Époque** autour de la gare des Chantiers, **pavillonnaire bourgeois 1900-1935** dans Clagny et Porchefontaine, **copropriétés des Trente Glorieuses** à Bernard-de-Jussieu, et **programmes neufs RT 2012 et RE 2020** depuis 2010.
+
+### Pourquoi Versailles attire les opérateurs douteux
+
+Cette diversité, jointe au **profil bourgeois marqué** d'une part importante des occupants (**revenu médian au-dessus de la moyenne francilienne**), fait de Versailles une cible de choix pour les opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie, où la valeur des biens à protéger justifie aux yeux des escrocs des **tentatives de surfacturation extrêmes**.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne, dont une part importante sur le territoire versaillais que je connais comme ma poche pour y avoir vécu et travaillé.
+
+### Joël à Versailles : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée, **sans majoration nuit ni week-end**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "versailles-quartiers-bati-a-proteger",

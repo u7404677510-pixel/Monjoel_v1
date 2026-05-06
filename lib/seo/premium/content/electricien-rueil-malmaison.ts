@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Rueil 92500 — Centre, Buzenval, Mont-Valérien, Plaine-Gare. Diagnostic 89€ TTC, NF C 15-100, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Électricien Rueil-Malmaison : intervenir entre pavillons bourgeois 1880 et programmes neufs RT 2012",
-  introParagraph:
-    "Rueil-Malmaison est l'une des plus grandes communes des Hauts-de-Seine par la superficie : 14,7 km² qui s'étirent depuis les coteaux du Mont-Valérien jusqu'aux rives de la Seine, et 78 195 habitants au recensement INSEE 2024. Cette taille s'accompagne d'une mosaïque urbaine que l'on retrouve rarement dans la première couronne ouest, et qui pose des défis particuliers à l'électricien : pavillonnaire bourgeois 1880-1935 dans le secteur Buzenval-Mont-Valérien avec leurs installations électriques pour partie d'origine ou modernisées au coup par coup, copropriétés des Trente Glorieuses dans les quartiers Centre et Châtaigneraie avec leurs tableaux électriques fréquemment vétustes, programmes ultra-contemporains autour de la Plaine-Gare et le long du futur prolongement à l'ouest du RER E équipés des dernières générations de tableaux modulaires conformes à la norme NF C 15-100 amendée. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers rueillois et je connais bien la spécificité de cette commune. Cette page s'adresse aux Rueillois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Rueil-Malmaison en chiffres : densité, parc résidentiel, contexte
+
+Rueil-Malmaison est l'une des plus grandes communes des Hauts-de-Seine par la superficie : **14,7 km²** qui s'étirent depuis les coteaux du **Mont-Valérien** jusqu'aux rives de la **Seine**, et **78 195 habitants** au recensement **INSEE 2024**.
+
+### Trois univers de bâti, trois réalités électriques
+
+Cette taille s'accompagne d'une mosaïque urbaine que l'on retrouve rarement dans la première couronne ouest, et qui pose des défis particuliers à l'électricien.
+
+D'abord le **pavillonnaire bourgeois 1880-1935** dans le secteur **Buzenval-Mont-Valérien** avec leurs installations électriques pour partie d'origine ou modernisées au coup par coup.
+
+Ensuite les **copropriétés des Trente Glorieuses** dans les quartiers **Centre** et **Châtaigneraie** avec leurs tableaux électriques fréquemment vétustes.
+
+Enfin les **programmes ultra-contemporains** autour de la **Plaine-Gare** et le long du futur prolongement à l'ouest du **RER E**, équipés des dernières générations de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers rueillois et je connais bien la spécificité de cette commune.
+
+Cette page s'adresse aux Rueillois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Rueil-Malmaison : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "rueil-electricite-trois-univers-bati",

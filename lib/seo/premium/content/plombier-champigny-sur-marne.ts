@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Champigny-sur-Marne 94500 — Bois l'Abbé, Coeuilly, Plant, Centre, Tremblay. Prix Joël fixe dès 79€ TTC, sans majoration nuit/week-end. 01 41 69 10 08.",
   h1: "Plombier Champigny-sur-Marne : intervenir dans une commune en mutation entre Bois l'Abbé et future ligne 15",
-  introParagraph:
-    "Champigny-sur-Marne est une commune en mouvement. Avec ses 78 367 habitants au recensement INSEE 2022 et environ 78 838 estimés en 2025, étalée sur 11 km² dans le nord-est du Val-de-Marne, la ville accueillera prochainement deux gares du Grand Paris Express qui transformeront durablement son attractivité : la gare Champigny Centre, point d'interopérabilité entre les lignes 15 sud et 15 est dont l'ouverture est prévue début 2027, et la gare Bry–Villiers–Champigny, point de connexion avec le RER E et les lignes P du Transilien. Cette mutation s'inscrit dans une géographie urbaine déjà riche : le centre historique organisé autour de l'église Saint-Saturnin, le quartier des Coteaux qui descend vers la Marne avec ses pavillons cossus, le secteur du Plant qui constitue le premier développement résidentiel hors centre, le Coeuilly qui a longtemps vécu comme un hameau autonome, et bien sûr le grand ensemble du Bois l'Abbé édifié à l'extrême est de la commune dans les années 1960-1970 sur les terrains qui appartenaient jusqu'à la Révolution à l'Abbaye de Saint-Maur-des-Fossés. À soixante-dix ans, ex-ingénieur hydraulicien à EDF, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Champigny raconte la sienne en cette dualité entre un bâti ancien préservé et un grand ensemble en pleine réhabilitation ANRU, entre un présent ordinaire et un futur métropolitain qui s'écrit sous nos yeux. Cette page s'adresse aux Campinois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Champigny-sur-Marne en chiffres : une commune en mouvement
+
+Champigny-sur-Marne compte **78 367 habitants** au recensement INSEE 2022 et environ **78 838 estimés en 2025**, étalée sur **11 km²** dans le nord-est du Val-de-Marne.
+
+La ville accueillera prochainement **deux gares du Grand Paris Express** qui transformeront durablement son attractivité : la gare **Champigny Centre**, point d'interopérabilité entre les **lignes 15 sud et 15 est** dont l'ouverture est prévue **début 2027**, et la gare **Bry–Villiers–Champigny**, point de connexion avec le **RER E** et les lignes P du Transilien.
+
+### Le bâti campinois : une mosaïque qui dicte les pannes
+
+Cette mutation s'inscrit dans une géographie urbaine déjà riche : le **centre historique** organisé autour de l'**église Saint-Saturnin**, le quartier des **Coteaux** qui descend vers la Marne avec ses pavillons cossus, le secteur du **Plant** qui constitue le premier développement résidentiel hors centre, le **Coeuilly** qui a longtemps vécu comme un hameau autonome, et bien sûr le grand ensemble du **Bois l'Abbé** édifié à l'extrême est de la commune dans les **années 1960-1970** sur les terrains qui appartenaient jusqu'à la Révolution à l'**Abbaye de Saint-Maur-des-Fossés**.
+
+### Le quotidien plomberie à Champigny : ce que ça implique
+
+Champigny raconte sa plomberie en cette dualité entre un **bâti ancien préservé** et un **grand ensemble en pleine réhabilitation ANRU**, entre un présent ordinaire et un futur métropolitain qui s'écrit sous nos yeux.
+
+Cette page s'adresse aux Campinois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À **soixante-dix ans**, **ex-ingénieur hydraulicien à EDF**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Cette page veut donner aux Campinois les clefs pour distinguer **un dépannage juste d'une arnaque opportuniste**.
+
+### Joël à Champigny-sur-Marne : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "champigny-six-quartiers-mosaique-bati",

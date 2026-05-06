@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Versailles (78000) : intervention en 20-30 min, prix Joël annoncé avant — dès 79€ TTC, 24h/24 sans majoration. Conseils d'un ex-EDF.",
   h1: "Plombier à Versailles (78000) : ce qu'un vieil hydraulicien aimerait vous dire avant que vous appeliez",
-  introParagraph:
-    "Bonjour, je m'appelle René Salvador. J'ai 71 ans et j'ai passé quarante ans à EDF, dans l'hydraulique, à m'occuper de pompes, de canalisations et de réseaux qui n'avaient pas le droit de tomber en panne. Aujourd'hui je suis bénévole à l'UFC-Que Choisir Essonne, et je tiens des permanences pour les particuliers qui se sont fait piéger par un dépannage à 600€ pour une chasse d'eau. Versailles, je connais : ma fille y a habité onze ans rue de la Paroisse, et j'y suis intervenu plus de fois qu'on ne croit pour des amis du quartier Notre-Dame ou de Montbauron. Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un dimanche soir, peut-être avec une panique dans la voix. Je vais essayer de faire deux choses à la fois. Vous expliquer pourquoi votre ballon d'eau chaude souffre tant à Versailles — c'est l'eau, c'est le calcaire, c'est le bâti — et comment Joël, ce réseau d'artisans pour qui je tiens cette rubrique, vous évite les pièges classiques du dépannage francilien : prix annoncé avant, intervention en moins de trente minutes, 79€ TTC pour démarrer, pas de majoration la nuit ni le dimanche. Le numéro à composer si l'eau monte déjà : 01 41 69 10 08. Maintenant, asseyez-vous deux minutes, je vais vous raconter ce que personne ne vous dira sur les tuyaux de votre ville.",
+  introParagraph: `### Versailles en chiffres : une ville historique des Yvelines
+
+Versailles, je connais : ma fille y a habité **onze ans rue de la Paroisse**, et j'y suis intervenu plus de fois qu'on ne croit pour des amis du **quartier Notre-Dame** ou de **Montbauron**.
+
+### Le bâti versaillais : pourquoi votre ballon souffre tant
+
+Je vais vous expliquer pourquoi votre **ballon d'eau chaude** souffre tant à Versailles — c'est l'**eau**, c'est le **calcaire**, c'est le **bâti**.
+
+### Le quotidien plomberie à Versailles : ce que disent les chiffres
+
+Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un **dimanche soir**, peut-être avec une panique dans la voix. Je tiens des permanences pour les particuliers qui se sont fait piéger par un **dépannage à 600 € pour une chasse d'eau**.
+
+### L'auteur de cette page
+
+Je m'appelle **René Salvador**. J'ai **71 ans** et j'ai passé **quarante ans à EDF**, dans l'**hydraulique**, à m'occuper de pompes, de canalisations et de réseaux qui n'avaient pas le droit de tomber en panne. Aujourd'hui je suis **bénévole à l'UFC-Que Choisir Essonne**.
+
+### Joël à Versailles : tarif fixe annoncé en amont
+
+Joël, ce réseau d'artisans pour qui je tiens cette rubrique, vous évite les pièges classiques du dépannage francilien : **prix annoncé avant**, **intervention en moins de trente minutes**, **79 € TTC pour démarrer**, **pas de majoration la nuit ni le dimanche**.
+
+Le numéro à composer si l'eau monte déjà : **01 41 69 10 08**. Maintenant, asseyez-vous deux minutes, je vais vous raconter ce que personne ne vous dira sur les tuyaux de votre ville.`,
   sections: [
     {
       anchor: "calcaire-versailles",

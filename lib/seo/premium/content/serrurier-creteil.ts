@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Créteil 94000 — Centre, Mont-Mesly, Bleuets-Bordières, Lac, Brèche. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Créteil : sécurité résidentielle dans la préfecture du Val-de-Marne et son archipel de quartiers contrastés",
-  introParagraph:
-    "Créteil, préfecture du Val-de-Marne et siège du conseil départemental, compte 92 859 habitants au recensement INSEE 2022 — chiffre estimé à 94 677 pour 2026. Étalée sur 11,46 km² découpés par l'INSEE en plusieurs grands quartiers, la ville s'organise autour de plusieurs grandes zones cohérentes : Centre Ancien autour de l'église Saint-Christophe et de la mairie historique, Mont-Mesly au sud-est dans le grand ensemble emblématique des années 1955-1965, Bleuets-Bordières-Pinsons au sud, Lac autour du lac de Créteil et de la station Créteil-Préfecture (ligne 8), Brèche et Préfecture au cœur administratif, Échat-Bois-l'Abbé au nord-est, Palais autour de l'Hôtel de Ville moderne et du palais des sports, Buttes-Halage et la Habette au sud-est, et enfin la Source et Ormetteau à l'est. Cette nomenclature recouvre une mosaïque urbaine héritée d'un demi-siècle d'urbanisations successives : Centre Ancien hérité du XIXe siècle, grand ensemble du Mont-Mesly édifié dans les années 1955-1965 (l'un des premiers grands ensembles français, conçu par l'architecte Charles-Gustave Stoskopf), pavillonnaire ouvrier 1900-1935 dans certains secteurs, urbanisations modernes des années 1970-1980 autour du Lac et du nouveau centre administratif (préfecture, palais des sports, Hôtel de Ville moderne édifiés après le déplacement du chef-lieu cristolien depuis Sceaux en 1965), copropriétés intermédiaires et programmes neufs RT 2012 et RE 2020 qui sortent de terre depuis 2010. Cette diversité urbaine, combinée à une mixité sociale marquée, fait de Créteil une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-de-marnais pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Créteil à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Créteil en chiffres : population, patrimoine, parc résidentiel
+
+Créteil, **préfecture du Val-de-Marne** et siège du conseil départemental, compte **92 859 habitants** au recensement **INSEE 2022** — chiffre estimé à **94 677 pour 2026**. Étalée sur **11,46 km²**, la ville s'organise autour de plusieurs grandes zones cohérentes : Centre Ancien, **Mont-Mesly**, Bleuets-Bordières-Pinsons, Lac, Brèche et Préfecture, Échat-Bois-l'Abbé, Palais, Buttes-Halage, la Habette, la Source et Ormetteau.
+
+Cette nomenclature recouvre une mosaïque héritée d'un demi-siècle d'urbanisations : **Centre Ancien hérité du XIXe siècle**, **grand ensemble du Mont-Mesly édifié dans les années 1955-1965** (l'un des premiers grands ensembles français, conçu par l'architecte **Charles-Gustave Stoskopf**), **pavillonnaire ouvrier 1900-1935** dans certains secteurs, urbanisations modernes des années 1970-1980 autour du Lac et du nouveau centre administratif (édifiés après le déplacement du chef-lieu cristolien depuis Sceaux en **1965**), et programmes neufs **RT 2012 et RE 2020** depuis 2010.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine, combinée à une **mixité sociale marquée**, fait de Créteil une cible des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-de-marnais pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Créteil : tarif fixe annoncé en amont
+
+Joël intervient à Créteil à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "creteil-quartiers-bati-a-proteger",

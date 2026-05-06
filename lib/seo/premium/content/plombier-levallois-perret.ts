@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Levallois-Perret 92300 — Centre, Anatole France, Louise Michel, Front-de-Seine, Bécon. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Levallois-Perret : intervenir dans la ville la plus dense de France, du Front-de-Seine à la place de la mairie",
-  introParagraph:
-    "Levallois-Perret est, avec ses 68 092 habitants au dernier recensement INSEE et une superficie de seulement 2,4 km², l'une des villes les plus densément peuplées d'Europe — et selon plusieurs comparateurs spécialisés la commune française au taux de densité résidentielle parmi les plus élevés en métropole. À six kilomètres de la place de l'Étoile, sur la rive droite de la Seine au nord-ouest immédiat de Paris, la commune présente un bâti d'une singularité historique : elle est née de la fusion en 1867 puis 1875 du domaine de Champerret, des hameaux de Courcelles et de Villiers, autour d'une opération immobilière conduite par Nicolas Levallois et Jean-Édouard Perret-Lequeur. Cette double origine confère à Levallois une trame urbaine unique, organisée selon un quadrillage rectiligne qui rappelle les cités industrielles du XIXe siècle, mêlée aujourd'hui à un parc immobilier des Trente Glorieuses puis aux opérations contemporaines du Front-de-Seine et des bords de Seine. À Levallois-Perret, le bâti raconte son histoire jusque dans ses canalisations : l'haussmannien tardif des avenues Anatole-France et Aristide-Briand côtoie le post-haussmannien de la rue Trézel, les barres et tours en R+15 du secteur Eiffel-Aristide-Briand, les opérations de standing récentes du Front-de-Seine et les programmes RE 2020 des friches Citroën reconverties. Cette mosaïque, dans une commune si dense, impose à l'artisan une discipline de diagnostic dont les opérateurs commerciaux du dépannage low-cost n'ont tout simplement pas la culture. Cette page s'adresse aux Levalloisiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Levallois-Perret en chiffres : la ville la plus dense de France
+
+Levallois-Perret compte **68 092 habitants** au dernier recensement INSEE pour une superficie de seulement **2,4 km²**, ce qui en fait l'une des **villes les plus densément peuplées d'Europe** — et selon plusieurs comparateurs spécialisés la **commune française au taux de densité résidentielle parmi les plus élevés** en métropole.
+
+À **six kilomètres de la place de l'Étoile**, sur la rive droite de la Seine au nord-ouest immédiat de Paris, la commune est née de la fusion en **1867 puis 1875** du domaine de Champerret et des hameaux de Courcelles et de Villiers, autour d'une opération immobilière conduite par **Nicolas Levallois et Jean-Édouard Perret-Lequeur**.
+
+### Un bâti en damier, de l'haussmannien aux friches Citroën
+
+Cette double origine confère à Levallois une **trame urbaine unique**, organisée selon un **quadrillage rectiligne** qui rappelle les cités industrielles du XIXe siècle, mêlée aujourd'hui à un **parc immobilier des Trente Glorieuses** puis aux **opérations contemporaines du Front-de-Seine** et des bords de Seine.
+
+L'**haussmannien tardif** des avenues **Anatole-France** et **Aristide-Briand** côtoie le **post-haussmannien** de la rue **Trézel**, les **barres et tours en R+15** du secteur **Eiffel-Aristide-Briand**, les **opérations de standing récentes du Front-de-Seine** et les **programmes RE 2020 des friches Citroën reconverties**.
+
+### Le quotidien plomberie à Levallois : pourquoi la discipline compte
+
+Cette mosaïque, dans une commune si dense, impose à l'artisan une **discipline de diagnostic** dont les opérateurs commerciaux du dépannage low-cost n'ont tout simplement pas la culture. Cette page s'adresse aux Levalloisiens qui, confrontés à une fuite ou à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **600 à 1 500€** ce qui aurait dû en coûter **89€** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Architecte du patrimoine** de formation, j'ai accompagné depuis plusieurs années des interventions sensibles dans le bâti francilien. Levallois-Perret fait partie des communes où la **finesse de lecture du bâti** conditionne directement la qualité d'une intervention de plomberie.
+
+### Joël à Levallois-Perret : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un débouchage WC ou **89€** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "levallois-densite-bati-mosaique",

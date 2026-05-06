@@ -10,8 +10,33 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Versailles 78000 — Notre-Dame, Saint-Louis, Montreuil, Chantiers, Porchefontaine, Clagny. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Versailles : intervenir entre hôtels particuliers Notre-Dame, lotissements années 30 et copropriétés post-1955",
-  introParagraph:
-    "Versailles compte 83 918 habitants pour 26,18 km² selon les populations légales INSEE 2024 (recensement 2022 authentifié), répartis en huit conseils de quartier établis depuis 1977 : Chantiers, Clagny-Glatigny, Jussieu-Petit-Bois-Picardie, Montreuil, Notre-Dame, Porchefontaine, Saint-Louis et Satory. Cette structuration administrative recouvre un patrimoine bâti d'une qualité exceptionnelle qui pose des défis spécifiques à l'électricien : hôtels particuliers et immeubles de rapport XVIIIe siècle des quartiers Notre-Dame et Saint-Louis, immeubles bourgeois XIXe-début XXe le long de l'avenue de Saint-Cloud et du boulevard de la Reine, lotissements pavillonnaires des années 1920-1930 dans les quartiers Chantiers, Clagny-Glatigny, Porchefontaine et Montreuil, copropriétés des Trente Glorieuses ponctuelles, et programmes neufs récents notamment dans le secteur Satory en cours de transformation. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers versaillais et je connais bien la spécificité de cette ville patrimoniale. Cette page s'adresse aux Versaillais qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Versailles en chiffres : densité, parc résidentiel, contexte
+
+Versailles compte **83 918 habitants** pour **26,18 km²** selon les populations légales **INSEE 2024** (recensement 2022 authentifié), répartis en **huit conseils de quartier** établis depuis **1977** : **Chantiers**, **Clagny-Glatigny**, **Jussieu-Petit-Bois-Picardie**, **Montreuil**, **Notre-Dame**, **Porchefontaine**, **Saint-Louis** et **Satory**.
+
+### Le bâti versaillais : un patrimoine d'une qualité exceptionnelle
+
+Cette structuration administrative recouvre un patrimoine bâti d'une qualité exceptionnelle qui pose des défis spécifiques à l'électricien.
+
+D'abord les **hôtels particuliers et immeubles de rapport XVIIIe siècle** des quartiers **Notre-Dame** et **Saint-Louis**.
+
+Ensuite les **immeubles bourgeois XIXe-début XXe** le long de l'**avenue de Saint-Cloud** et du **boulevard de la Reine**.
+
+Puis les **lotissements pavillonnaires des années 1920-1930** dans les quartiers **Chantiers**, **Clagny-Glatigny**, **Porchefontaine** et **Montreuil**, et les **copropriétés des Trente Glorieuses** ponctuelles.
+
+Enfin les **programmes neufs récents** notamment dans le secteur **Satory** en cours de transformation, équipés de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers versaillais et je connais bien la spécificité de cette ville patrimoniale.
+
+Cette page s'adresse aux Versaillais qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Versailles : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-versailles-quatre-univers",

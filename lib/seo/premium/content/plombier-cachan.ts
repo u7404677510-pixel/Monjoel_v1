@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Cachan 94230 — Centre, Coteau, Plateau, Lumières, ENS Paris-Saclay. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Cachan : intervenir entre l'aqueduc Médicis, l'ENS et le pavillonnaire bourgeois du Coteau",
-  introParagraph:
-    "Cachan est, avec ses 31 103 habitants au dernier recensement INSEE et environ 30 600 habitants estimés en 2026 selon les modèles de projection, l'une des communes les plus denses du Val-de-Marne (densité d'environ 11 500 habitants par km² sur seulement 2,7 km²). Située immédiatement au sud de Paris, à 6 kilomètres seulement de la porte d'Orléans, la commune partage avec Arcueil, Gentilly et Bagneux une géographie de coteau marquée par le passage emblématique des aqueducs qui alimentent Paris en eau potable depuis le XVIIe siècle. À Cachan, le bâti raconte son histoire jusque dans ses canalisations : centre-ville organisé autour de la mairie et de la place Jacques-Carat, plateau pavillonnaire bourgeois des années 1900-1935 sur la partie haute, immeubles de la reconstruction d'après-guerre dans le centre, opérations résidentielles édifiées entre 1965 et 1990 dans plusieurs secteurs, et désormais opérations RT 2012 puis RE 2020. La commune accueille depuis 1956 l'École normale supérieure (depuis 2020 transférée au plateau de Saclay sous le nom d'ENS Paris-Saclay, mais l'ancien campus cachanais reste un repère architectural), ainsi que plusieurs établissements d'enseignement supérieur structurants. Le territoire est traversé par l'aqueduc des eaux de Rungis (classé Monument historique, partagé avec Rungis, Fresnes, L'Haÿ-les-Roses, Arcueil, Gentilly et Paris 14e) ainsi que par les vestiges de l'aqueduc Médicis du XVIIe siècle. Architecte du patrimoine de formation, j'ai accompagné depuis vingt ans plusieurs interventions sensibles dans le bâti francilien, et Cachan fait partie des communes où la finesse de lecture du bâti conditionne directement la qualité d'une intervention de plomberie. Cette page s'adresse aux Cachanais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Cachan en chiffres : une commune dense au sud de Paris
+
+Cachan compte **31 103 habitants** au dernier recensement INSEE et environ **30 600 habitants estimés en 2026**, l'une des communes **les plus denses du Val-de-Marne** (densité d'environ **11 500 habitants par km²** sur seulement **2,7 km²**).
+
+Située immédiatement au sud de Paris, à **6 kilomètres seulement de la porte d'Orléans**, la commune partage avec Arcueil, Gentilly et Bagneux une **géographie de coteau** marquée par le passage emblématique des **aqueducs** qui alimentent Paris en eau potable depuis le **XVIIe siècle**.
+
+### Le bâti cachanais : du Coteau à l'ENS
+
+À Cachan, le bâti raconte son histoire jusque dans ses canalisations : **centre-ville** organisé autour de la mairie et de la **place Jacques-Carat**, **plateau pavillonnaire bourgeois des années 1900-1935** sur la partie haute, **immeubles de la reconstruction** d'après-guerre dans le centre, opérations résidentielles édifiées entre **1965 et 1990**, et désormais opérations **RT 2012 puis RE 2020**.
+
+La commune accueille depuis **1956** l'**École normale supérieure** (depuis 2020 transférée au plateau de Saclay sous le nom d'**ENS Paris-Saclay**). Le territoire est traversé par l'**aqueduc des eaux de Rungis** (classé Monument historique) ainsi que par les vestiges de l'**aqueduc Médicis du XVIIe siècle**.
+
+### Le quotidien plomberie à Cachan : ce que ça implique
+
+Cachan fait partie des communes où la **finesse de lecture du bâti conditionne directement la qualité** d'une intervention de plomberie. Cette page s'adresse aux Cachanais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Architecte du patrimoine de formation**, j'ai accompagné depuis **vingt ans** plusieurs interventions sensibles dans le bâti francilien. Cette page veut donner aux Cachanais les clefs pour distinguer **un dépannage juste d'une arnaque opportuniste**.
+
+### Joël à Cachan : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "cachan-bati-coteau-aqueducs-mosaique",

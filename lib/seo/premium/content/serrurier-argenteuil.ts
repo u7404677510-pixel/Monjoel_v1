@@ -10,15 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Enquête sur les serruriers d'Argenteuil (95100, Val-d'Oise) : pavillons, résidences populaires, tours années 60-80. Mécanique des arnaques low-cost. Joël dès 89€ TTC.",
   h1: "Serrurier Argenteuil (95100) : pourquoi la troisième ville d'Île-de-France hors Paris est devenue la cible massive des arnaques low-cost (et comment s'en protéger)",
-  introParagraph: `Argenteuil n'est pas Paris. C'est une autre échelle, un autre tissu, un autre quotidien. 111 079 habitants, troisième ville d'Île-de-France hors capitale derrière Boulogne-Billancourt et Saint-Denis, étalée entre la Seine au sud et les coteaux au nord, Argenteuil concentre dans ses limites communales tout ce qui fait la spécificité du Val-d'Oise populaire : un parc pavillonnaire considérable hérité de l'urbanisation des années 1920-1950, des résidences modestes des années 1960-1980 (les fameuses tours du Val Notre-Dame, du quartier Joliot-Curie, du Mont-Valérien), des copropriétés dégradées en cours de réhabilitation, et une longue ceinture de petits collectifs pavillonnaires en bordure de la Seine et autour des coteaux d'Orgemont et de Champigny.
+  introParagraph: `### Argenteuil en chiffres : population, patrimoine, parc résidentiel
 
-Cette mosaïque-là, sur le marché du dépannage serrurerie d'urgence, intéresse au plus haut point les sociétés-écrans qui prospèrent depuis quinze ans en Île-de-France. Pourquoi ? Parce qu'Argenteuil cumule trois facteurs qu'aucun arrondissement parisien ne réunit aussi nettement : un volume démographique élevé (donc beaucoup de portes claquées par an), un pouvoir d'achat moyen plus contraint qu'à Paris (donc une sensibilité maximale aux tarifs d'appel "39€"), et — surtout — un habitat majoritairement pavillonnaire ou en petit collectif périphérique qui rend chaque domicile structurellement isolé : pas de gardien d'immeuble, pas de syndic actif présent en cas d'urgence, pas de voisin de palier à appeler en renfort à minuit. La victime est seule face à l'intervenant qui sonne à sa porte.
+Argenteuil compte **111 079 habitants** et constitue la **troisième ville d'Île-de-France hors capitale** derrière Boulogne-Billancourt et Saint-Denis. Étalée entre la Seine au sud et les coteaux au nord, la commune concentre tout ce qui fait la spécificité du Val-d'Oise populaire.
 
-Depuis 2010, dans le cadre d'enquêtes pour 60 Millions de Consommateurs puis pour la DGCCRF en mission de conseil indépendant, j'ai documenté un nombre croissant de litiges franciliens issus du Val-d'Oise, et Argenteuil revient avec une régularité qui n'est plus statistiquement explicable par sa seule démographie. La commune est ciblée. Méthodiquement. Le profil sociologique des victimes est radicalement différent de celui qu'on observe à Paris intra-muros : ici, ce ne sont pas des étudiants ni des jeunes cadres, ce sont des ouvriers, des employés, des retraités modestes, des familles monoparentales, des aides-soignantes en horaires décalés, des artisans qui rentrent de chantier à 22h et trouvent leur porte claquée. Public structurellement vulnérable aux pratiques abusives, parce que pressé, fatigué, peu informé du droit de la consommation, et souvent en situation budgétaire tendue qui rend le coût d'une mauvaise décision particulièrement lourd.
+On y trouve un **parc pavillonnaire considérable** hérité de l'urbanisation des **années 1920-1950**, des **résidences modestes des années 1960-1980** (tours du Val Notre-Dame, quartier Joliot-Curie, Mont-Valérien), des **copropriétés dégradées en cours de réhabilitation**, et une longue ceinture de petits collectifs pavillonnaires en bordure de la Seine et autour des coteaux d'**Orgemont** et de **Champigny**.
 
-Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise de l'arnaque low-cost adaptée au contexte argenteuillais, la cartographie des quartiers où elle sévit le plus, les vrais prix pratiqués par un artisan honnête, les normes A2P à exiger sur tout devis, et les recours concrets reconnus par la DGCCRF.
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
 
-Joël (01 41 69 10 08) intervient à Argenteuil à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Ce n'est pas un slogan, c'est l'inverse exact de ce que pratique l'écosystème dénoncé plus bas. Lisez. Et la prochaine fois qu'une porte claquera boulevard Héloïse ou avenue Gabriel-Péri à 23h, vous saurez quoi faire — et surtout ce qu'il ne faut PAS faire.`,
+Cette mosaïque intéresse au plus haut point les **sociétés-écrans** qui prospèrent depuis quinze ans en Île-de-France. Argenteuil cumule trois facteurs qu'aucun arrondissement parisien ne réunit aussi nettement : un **volume démographique élevé** (beaucoup de portes claquées par an), un **pouvoir d'achat moyen plus contraint** qu'à Paris (sensibilité maximale aux tarifs d'appel "**39 €**"), et un habitat **majoritairement pavillonnaire** qui rend chaque domicile structurellement isolé.
+
+Pas de gardien d'immeuble, pas de syndic actif présent en cas d'urgence, pas de voisin de palier à appeler en renfort à minuit. La victime est seule face à l'intervenant qui sonne à sa porte.
+
+### L'auteur de cette page
+
+Depuis **2010**, dans le cadre d'enquêtes pour **60 Millions de Consommateurs** puis pour la **DGCCRF** en mission de conseil indépendant, j'ai documenté un nombre croissant de litiges franciliens issus du Val-d'Oise. Argenteuil revient avec une régularité qui n'est plus statistiquement explicable par sa seule démographie. La commune est ciblée méthodiquement. Le profil sociologique des victimes : ouvriers, employés, retraités modestes, familles monoparentales, aides-soignantes en horaires décalés, artisans qui rentrent de chantier à 22h.
+
+### Joël à Argenteuil : tarif fixe annoncé en amont
+
+Joël intervient à Argenteuil à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "pourquoi-argenteuil",

@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Sceaux 92330 — Centre, Robinson, Parc-de-Sceaux, Charaire, Plessis-Piquet. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Sceaux : intervenir dans la ville résidentielle du sud des Hauts-de-Seine, du Centre au parc Le Nôtre",
-  introParagraph:
-    "Sceaux est, avec ses 19 952 habitants au dernier recensement INSEE, l'une des plus petites communes des Hauts-de-Seine — mais aussi l'une des plus prestigieuses. Étalée sur 3,6 km² au sud du département, la ville bénéficie d'un cadre exceptionnel marqué par le domaine départemental de Sceaux : 181 hectares au total (dont 121 sur la commune de Sceaux et 60 sur Antony voisine), un parc dessiné à la fin du XVIIe siècle par André Le Nôtre à la demande de Colbert puis de son fils le marquis de Seignelay, abritant un château qui depuis 1937 accueille les collections du musée du domaine départemental de Sceaux. La ville est desservie par trois gares de la ligne B du RER : Sceaux, Robinson (terminus de la branche Robinson) et Parc-de-Sceaux. À Sceaux, le bâti raconte son histoire jusque dans ses canalisations : maisons bourgeoises de la fin du XIXe et du début du XXe siècles, pavillons cossus de l'entre-deux-guerres, immeubles bourgeois autour de la rue Houdan et de l'avenue Jules-Guesde, copropriétés intermédiaires des années 1960-1985, et opérations résidentielles plus récentes. La sociologie résidentielle scéenne est l'une des plus aisées du département, avec une forte présence de cadres supérieurs, de professions libérales, d'enseignants-chercheurs (la commune accueille notamment plusieurs établissements d'enseignement supérieur, dont historiquement l'École Normale Supérieure de Fontenay-aux-Roses dans la commune voisine, ainsi que la faculté Jean-Monnet rattachée à l'université Paris-Saclay). Cette page s'adresse aux Scéens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Sceaux en chiffres : une commune prestigieuse des Hauts-de-Seine
+
+Sceaux compte **19 952 habitants** au dernier recensement INSEE, ce qui en fait l'une des plus petites communes des **Hauts-de-Seine** — mais aussi l'une des plus prestigieuses. Étalée sur **3,6 km²** au sud du département, desservie par **trois gares de la ligne B du RER** : **Sceaux**, **Robinson** (terminus de la branche Robinson) et **Parc-de-Sceaux**.
+
+La ville bénéficie d'un cadre exceptionnel marqué par le **domaine départemental de Sceaux** : **181 hectares** au total (dont **121 sur Sceaux** et **60 sur Antony**), un parc dessiné à la fin du XVIIe siècle par **André Le Nôtre** à la demande de **Colbert** puis du marquis de Seignelay, abritant un château qui depuis **1937** accueille les collections du musée du domaine départemental.
+
+### Le bâti scéen : maisons bourgeoises et patrimoine résidentiel
+
+À Sceaux, le bâti raconte son histoire : **maisons bourgeoises de la fin du XIXe et du début du XXe siècles**, **pavillons cossus de l'entre-deux-guerres**, **immeubles bourgeois autour de la rue Houdan et de l'avenue Jules-Guesde**, **copropriétés intermédiaires des années 1960-1985**, et opérations résidentielles plus récentes.
+
+La sociologie résidentielle scéenne est l'une des plus aisées du département, avec une forte présence de **cadres supérieurs**, de **professions libérales**, d'**enseignants-chercheurs** (la **faculté Jean-Monnet** rattachée à l'**université Paris-Saclay**).
+
+### Le quotidien plomberie à Sceaux : ce que voient les Scéens
+
+Cette page s'adresse aux **Scéens** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Vingt-deux ans à gérer des copropriétés en petite couronne**, j'ai accompagné plusieurs immeubles scéens dans leurs interventions de plomberie. Sceaux réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir.
+
+### Joël à Sceaux : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "sceaux-quartiers-bati-bourgeois-residentiel",

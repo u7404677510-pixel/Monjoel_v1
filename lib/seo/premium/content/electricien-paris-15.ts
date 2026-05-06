@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Paris 15e 75015 — Vaugirard, Beaugrenelle, Necker, Javel, Saint-Lambert. Diagnostic 79€ TTC, NF C 15-100, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Électricien Paris 15e : intervenir entre immeubles années 30, tours Beaugrenelle et résidences 1970",
-  introParagraph:
-    "Le 15e arrondissement est, de loin, le plus peuplé de Paris : 230 390 habitants pour 8,5 km² selon les populations légales INSEE 2024, soit environ 27 000 hab/km², et représente à lui seul plus de 10 % de la population parisienne. Cette taille s'accompagne d'une diversité de bâti exceptionnelle qui pose des défis particuliers à l'électricien : immeubles bourgeois 1880-1930 du quartier Necker autour de l'hôpital, immeubles années 30 de Vaugirard et Saint-Lambert dont l'art déco fait l'identité visuelle de l'arrondissement, copropriétés des Trente Glorieuses dans tout le secteur Javel et le Front-de-Seine, tours de Beaugrenelle édifiées dans les années 1970 et progressivement réhabilitées depuis, sans oublier les programmes neufs récents qui se sont multipliés depuis 2010 sur les dents creuses et les anciens sites industriels (Boucicaut, Citroën-Cévennes). Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers du 15e arrondissement et je connais bien la spécificité de cet arrondissement extrêmement vaste et hétérogène. Cette page s'adresse aux habitants du 15e qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes pour vendre, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 79 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Le 15e en chiffres : l'arrondissement le plus peuplé de Paris
+
+Le 15e arrondissement est, de loin, le plus peuplé de Paris : **230 390 habitants** pour **8,5 km²** selon les populations légales **INSEE 2024**, soit **environ 27 000 hab/km²**, et représente à lui seul **plus de 10 %** de la population parisienne.
+
+### Une diversité de bâti exceptionnelle
+
+Cette taille s'accompagne d'une diversité de bâti exceptionnelle qui pose des défis particuliers à l'électricien. D'abord les **immeubles bourgeois 1880-1930** du quartier **Necker** autour de l'hôpital.
+
+Ensuite les **immeubles années 30** de **Vaugirard** et **Saint-Lambert** dont l'**art déco** fait l'identité visuelle de l'arrondissement.
+
+Puis les **copropriétés des Trente Glorieuses** dans tout le secteur **Javel** et le **Front-de-Seine**, et les **tours de Beaugrenelle** édifiées dans les **années 1970** et progressivement réhabilitées depuis.
+
+Sans oublier les **programmes neufs récents** qui se sont multipliés depuis 2010 sur les dents creuses et les anciens sites industriels (**Boucicaut**, **Citroën-Cévennes**), équipés de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers du 15e arrondissement et je connais bien la spécificité de cet arrondissement extrêmement vaste et hétérogène.
+
+Cette page s'adresse aux habitants du 15e qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes pour vendre, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 79 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Paris 15 : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-paris-15-tableau-quatre-univers",

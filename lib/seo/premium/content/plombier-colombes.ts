@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Colombes (92700) : intervention en 20-30 min, prix Joël annoncé avant — dès 79€ TTC, 24h/24 sans majoration. Conseils d'un vieil hydraulicien.",
   h1: "Plombier à Colombes (92700) : ce qu'un vieil hydraulicien voudrait expliquer aux familles du 92 avant qu'elles décrochent",
-  introParagraph:
-    "Bonjour, je m'appelle René Salvador. J'ai 71 ans et j'ai passé quarante ans à EDF dans l'hydraulique, à m'occuper de pompes, de réseaux et de canalisations qui n'avaient pas le droit de tomber en panne. Aujourd'hui je suis bénévole à l'UFC-Que Choisir, et je tiens des permanences pour les particuliers qui se sont fait piéger par un dépannage à 600€ pour une chasse d'eau bricolée. Colombes, je connais : pendant mes années d'activité, j'ai été détaché plusieurs fois sur le poste source qui alimente une bonne part du nord du 92, et j'avais des collègues d'astreinte qui habitaient rue Jules-Ferry ou avenue de l'Europe — eux me racontaient leurs galères de ballon Atlantic à bout de souffle, exactement comme leurs voisins du Petit-Colombes ou des Fossés-Jean. Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un mardi soir avec une fuite qui dégouline, peut-être un dimanche matin avec un cumulus qui ne donne plus rien. Colombes, c'est une grosse banlieue de 85 368 habitants, posée entre la Seine et la boucle de Gennevilliers, à dix minutes du nord parisien par le Transilien J. C'est aussi un patchwork de bâtis : centre ancien autour de l'église Saint-Pierre Saint-Paul, résidences des années 60-80 typiques de la banlieue francilienne, pavillons sur le Plateau et autour du Stade Yves-du-Manoir, opérations ZAC plus récentes. Chaque époque a ses pathologies de plomberie, et chaque famille mérite qu'on lui parle franc. Je vais essayer de faire deux choses à la fois. Vous expliquer pourquoi votre installation souffre tant ici — l'eau dure du SEDIF, les ballons des résidences années 70 désormais à bout, le multicouche bas de gamme des opérations 90 — et comment Joël, ce réseau d'artisans pour qui je tiens cette rubrique, vous évite les pièges classiques du dépannage francilien : prix annoncé avant, intervention en moins de trente minutes, 79€ TTC pour démarrer, pas de majoration la nuit ni le dimanche. Le numéro à composer si l'eau monte déjà : 01 41 69 10 08. Maintenant, asseyez-vous deux minutes, je vais vous raconter ce que personne ne vous dira sur les tuyaux de Colombes.",
+  introParagraph: `### Colombes en chiffres : grosse banlieue 92 entre Seine et boucle de Gennevilliers
+
+Colombes, c'est une grosse banlieue de **85 368 habitants**, posée entre la **Seine** et la **boucle de Gennevilliers**, à **dix minutes du nord parisien** par le **Transilien J** (gares de Colombes et du Stade).
+
+### Le bâti colombien : un patchwork de quartiers
+
+C'est aussi un patchwork de bâtis : **centre ancien** autour de l'**église Saint-Pierre Saint-Paul**, **résidences des années 60-80** typiques de la banlieue francilienne, **pavillons sur le Plateau** et autour du **Stade Yves-du-Manoir** (qui accueille les JO 2024 de hockey sur gazon), opérations ZAC plus récentes.
+
+Le **Petit-Colombes** s'est massivement urbanisé après-guerre, les **Fossés-Jean** ont vu pousser leurs **grands ensembles dans les années 60** avec colonnes communes et ballons devenus aussi vieux que leurs occupants. **Vieux-Colombes** garde un charme village, et le quartier **Agent-Sarre** fait la transition avec La Garenne-Colombes.
+
+### Le quotidien plomberie à Colombes : ce que ça implique
+
+Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un mardi soir avec une fuite qui dégouline, peut-être un dimanche matin avec un cumulus qui ne donne plus rien.
+
+Je vais vous expliquer pourquoi votre installation souffre tant ici : l'**eau dure du SEDIF**, les **ballons des résidences années 70** désormais à bout, le **multicouche bas de gamme des opérations 90**. Chaque époque a ses pathologies, et chaque famille mérite qu'on lui parle franc.
+
+### L'auteur de cette page
+
+Je m'appelle **René Salvador**. J'ai **71 ans** et j'ai passé **quarante ans à EDF dans l'hydraulique**. Aujourd'hui je suis **bénévole à l'UFC-Que Choisir**, et je tiens des permanences pour les particuliers qui se sont fait piéger par un dépannage à **600 €** pour une chasse d'eau bricolée.
+
+### Joël à Colombes : tarif fixe annoncé en amont
+
+Joël, ce réseau d'artisans pour qui je tiens cette rubrique, vous évite les pièges classiques : **prix annoncé avant**, intervention en moins de trente minutes, **79 € TTC** pour démarrer, **pas de majoration la nuit ni le dimanche**.
+
+Le numéro à composer si l'eau monte déjà : **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "colombes-banlieue-bati",

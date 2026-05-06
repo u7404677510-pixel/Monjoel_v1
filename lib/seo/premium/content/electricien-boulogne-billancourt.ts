@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Boulogne-Billancourt 92100 — Trapèze, Île Seguin, Centre, Princes. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Électricien Boulogne-Billancourt : intervenir entre Trapèze ultra-moderne et immeubles bourgeois 1900",
-  introParagraph:
-    "Boulogne-Billancourt est l'une des communes les plus denses d'Europe : 119 645 habitants pour 6,17 km² selon les données INSEE 2024, soit un peu plus de 19 400 habitants par kilomètre carré. Cette densité radicale s'accompagne d'une diversité de bâti exceptionnelle qui pose des défis particuliers à l'électricien : immeubles bourgeois 1880-1930 du Centre avec leurs installations électriques pour partie d'origine ou modernisées au coup par coup, copropriétés des Trente Glorieuses des quartiers Princes ou Marcel-Sembat avec leurs tableaux électriques fréquemment vétustes, programmes ultra-contemporains du Trapèze et de l'Île Seguin équipés des dernières générations de tableaux modulaires conformes à la norme NF C 15-100 amendée. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers boulonnais et je connais bien la spécificité de cette ville. Cette page s'adresse aux Boulonnais qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Boulogne-Billancourt en chiffres : densité, parc résidentiel, contexte
+
+Boulogne-Billancourt est l'une des communes les plus denses d'Europe : **119 645 habitants** pour **6,17 km²** selon les données **INSEE 2024**, soit un peu plus de **19 400 habitants par kilomètre carré**.
+
+### Trois univers de bâti, trois réalités électriques
+
+Cette densité radicale s'accompagne d'une diversité de bâti exceptionnelle qui pose des défis particuliers à l'électricien. D'abord les **immeubles bourgeois 1880-1930** du **Centre** avec leurs installations électriques pour partie d'origine ou modernisées au coup par coup.
+
+Ensuite les **copropriétés des Trente Glorieuses** des quartiers **Princes** ou **Marcel-Sembat** avec leurs tableaux électriques fréquemment vétustes.
+
+Enfin les **programmes ultra-contemporains** du **Trapèze** et de l'**Île Seguin** équipés des dernières générations de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers boulonnais et je connais bien la spécificité de cette ville.
+
+Cette page s'adresse aux Boulonnais qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Boulogne-Billancourt : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "boulogne-electricite-trois-univers-bati",

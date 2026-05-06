@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Antony 92160 — Centre, ZAC Jean-Zay, Pajeaud, Croix-de-Berny, Fontaine-Michalon. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Antony : intervenir dans le sud des Hauts-de-Seine, entre pavillonnaire ancien et ZAC Jean-Zay",
-  introParagraph:
-    "Antony est, avec ses 64 263 habitants au recensement INSEE de 2023 et près de 65 000 habitants estimés en 2026, l'une des grandes communes du sud des Hauts-de-Seine, à la frontière de l'Essonne. Étalée sur 9,56 km² entre la Coulée verte du sud parisien à l'est et le parc de Sceaux à l'ouest, traversée par l'autoroute A86 et par la ligne B du RER qui dessert trois gares antoniennes (Antony, La Croix-de-Berny et Fontaine-Michalon), la ville présente un bâti mosaïque qu'il faut savoir lire pour intervenir avec justesse en plomberie. La mairie reconnaît officiellement vingt-sept quartiers que l'INSEE découpe à des fins statistiques, mais on les regroupe pratiquement en quelques grands secteurs : le Centre-ville autour de la place du Marché et de la mairie, le quartier Pajeaud à l'est, La Croix-de-Berny au nord, Fontaine-Michalon au sud, le secteur de la Bièvre vers l'ouest, et désormais la ZAC Jean-Zay inaugurée en octobre 2024 qui doit accueillir à terme 1 080 logements neufs (dont 580 logements étudiants et 500 logements familiaux) sur onze hectares à l'est de la commune. En vingt-deux ans à gérer des copropriétés en petite couronne sud, j'ai accompagné des dizaines d'immeubles antoniens dans leurs interventions de plomberie, et je peux le dire : Antony réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. Cette page s'adresse aux Antoniens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08. Cette page veut, à l'aune de mon expérience de gestionnaire, donner aux Antoniens les clefs pour distinguer un dépannage juste d'une arnaque opportuniste, et pour défendre leurs droits dans les procédures collectives qui suivent souvent un sinistre.",
+  introParagraph: `### Antony en chiffres : une grande commune du sud des Hauts-de-Seine
+
+Antony compte **64 263 habitants** au recensement INSEE de 2023 et près de **65 000 habitants estimés en 2026**, l'une des grandes communes du sud des Hauts-de-Seine, à la frontière de l'Essonne.
+
+Étalée sur **9,56 km²** entre la Coulée verte du sud parisien à l'est et le parc de Sceaux à l'ouest, la ville est traversée par l'**autoroute A86** et par la **ligne B du RER** qui dessert trois gares antoniennes (Antony, La Croix-de-Berny et Fontaine-Michalon).
+
+### Le bâti antonien : une mosaïque de quartiers
+
+La mairie reconnaît officiellement **vingt-sept quartiers** que l'INSEE découpe à des fins statistiques, mais on les regroupe pratiquement en quelques grands secteurs : le **Centre-ville** autour de la place du Marché et de la mairie, le quartier **Pajeaud** à l'est, **La Croix-de-Berny** au nord, **Fontaine-Michalon** au sud, le secteur de la **Bièvre** vers l'ouest.
+
+S'y ajoute désormais la **ZAC Jean-Zay** inaugurée en octobre 2024, qui doit accueillir à terme **1 080 logements neufs** (dont **580 logements étudiants** et **500 logements familiaux**) sur **onze hectares** à l'est de la commune.
+
+### Le quotidien plomberie à Antony : ce que ça implique
+
+Antony réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. Cette page s'adresse aux Antoniens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Gestionnaire de copropriétés en petite couronne sud depuis vingt-deux ans**, j'ai accompagné des dizaines d'immeubles antoniens dans leurs interventions de plomberie. Cette page veut, à l'aune de mon expérience, donner aux Antoniens les clefs pour **distinguer un dépannage juste d'une arnaque opportuniste**, et pour défendre leurs droits dans les procédures collectives qui suivent souvent un sinistre.
+
+### Joël à Antony : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "antony-quartiers-mosaique-rer-b",

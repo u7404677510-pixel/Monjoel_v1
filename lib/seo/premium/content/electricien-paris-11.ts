@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Paris 11e 75011 — Bastille, Voltaire, Folie-Méricourt, Saint-Ambroise. Diagnostic 79€ TTC, NF C 15-100, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Électricien Paris 11e : intervenir entre Bastille révolutionnaire et immeubles 1900 à mettre aux normes",
-  introParagraph:
-    "Le 11e arrondissement compte 143 411 habitants pour 3,67 km² selon les populations légales INSEE 2024, soit l'une des densités les plus élevées de la capitale (environ 39 000 hab/km²). Cette densité, héritée des opérations haussmanniennes tardives et des immeubles de rapport édifiés entre 1880 et 1930 autour de la Bastille, du Faubourg-Saint-Antoine, du boulevard Voltaire, des quartiers Folie-Méricourt et Saint-Ambroise, façonne directement la nature des installations électriques que je rencontre quand j'interviens sur l'arrondissement. La quasi-totalité du parc résidentiel du 11e a été édifié avant l'apparition des normes électriques modernes : on y trouve des installations d'origine partiellement reprises au XXe siècle, des tableaux électriques hétérogènes assemblés au fil des décennies, des copropriétés où coexistent dans le même immeuble un appartement entièrement rénové en 2022 et un appartement dont l'installation date pour l'essentiel de 1965. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers du 11e arrondissement et je connais bien la spécificité de ce tissu urbain extrêmement dense et hétérogène. Cette page s'adresse aux habitants du 11e qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes pour vendre, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 79 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Le 11e en chiffres : un arrondissement parmi les plus denses de la capitale
+
+Le 11e arrondissement compte **143 411 habitants** pour **3,67 km²** selon les populations légales **INSEE 2024**, soit l'une des densités les plus élevées de la capitale (**environ 39 000 hab/km²**).
+
+### Le bâti : des opérations haussmanniennes tardives au tissu hétérogène
+
+Cette densité, héritée des **opérations haussmanniennes tardives** et des **immeubles de rapport édifiés entre 1880 et 1930** autour de la **Bastille**, du **Faubourg-Saint-Antoine**, du **boulevard Voltaire**, des quartiers **Folie-Méricourt** et **Saint-Ambroise**, façonne directement la nature des installations électriques que je rencontre quand j'interviens sur l'arrondissement.
+
+La quasi-totalité du parc résidentiel du 11e a été édifié avant l'apparition des normes électriques modernes : on y trouve des installations d'origine partiellement reprises au XXe siècle, des **tableaux électriques hétérogènes** assemblés au fil des décennies, des copropriétés où coexistent dans le même immeuble un appartement entièrement rénové en 2022 et un appartement dont l'installation date pour l'essentiel de **1965**.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers du 11e arrondissement et je connais bien la spécificité de ce tissu urbain extrêmement dense et hétérogène.
+
+Cette page s'adresse aux habitants du 11e qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes pour vendre, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 79 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Paris 11 : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-paris-11-tableau-trois-univers",

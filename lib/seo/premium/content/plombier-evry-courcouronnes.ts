@@ -10,8 +10,33 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Évry-Courcouronnes (91000) : intervention en 20-30 min, prix Joël annoncé avant — dès 79€ TTC, 24h/24 sans majoration. Conseils d'un ex-EDF Essonne.",
   h1: "Plombier à Évry-Courcouronnes (91000) : ce qu'un vieil hydraulicien essonnien voudrait vous dire avant de décrocher",
-  introParagraph:
-    "Bonjour, je m'appelle René Salvador. J'ai 71 ans, je suis né à Évry en 1955 — bien avant qu'on imagine y construire une ville nouvelle — et j'ai passé quarante ans à EDF dans l'hydraulique, à courir entre les centrales, les pompes et les réseaux qui n'avaient pas le droit de tomber en panne. Aujourd'hui je suis bénévole à l'UFC-Que Choisir Essonne, et chaque semaine je tiens des permanences à Corbeil et à Évry pour les particuliers qui se sont fait piéger par un dépannage à 700€ pour une chasse d'eau bricolée. Évry-Courcouronnes, je connais comme ma poche : j'ai vu sortir de terre les Pyramides en 1976, j'ai assisté à l'inauguration de la cathédrale de la Résurrection conçue par Mario Botta, j'ai suivi la fusion des deux communes en 2019, et j'ai vu les premiers ballons Atlantic des résidences de la place des Droits-de-l'Homme rendre l'âme un par un. Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un dimanche soir avec une fuite qui dégouline du plafond, peut-être un mardi matin avec un chauffe-eau qui ne donne plus rien. Je vais essayer de faire deux choses à la fois. Vous expliquer pourquoi votre installation souffre tant ici — l'eau dure du sous-sol crayeux essonnien, les réseaux ville nouvelle qui ont quarante ans bien tassés, les choix d'équipement des promoteurs des années 70 — et comment Joël, ce réseau d'artisans pour qui je tiens cette rubrique, vous évite les pièges classiques du dépannage francilien : prix annoncé avant, intervention en moins de trente minutes, 79€ TTC pour démarrer, pas de majoration la nuit ni le dimanche. Le numéro à composer si l'eau monte déjà : 01 41 69 10 08. Maintenant, asseyez-vous deux minutes, je vais vous raconter ce que personne ne vous dira sur les tuyaux d'Évry.",
+  introParagraph: `### Évry-Courcouronnes en chiffres : la commune la plus peuplée de l'Essonne
+
+La fusion d'Évry et de Courcouronnes en **2019** a créé une commune de **67 638 habitants**, désormais la **commune la plus peuplée de l'Essonne**.
+
+Évry a été désignée en **1969** comme l'une des **cinq villes nouvelles d'Île-de-France**, avec Cergy-Pontoise, Saint-Quentin-en-Yvelines, Marne-la-Vallée et Melun-Sénart.
+
+### Le bâti évryen : une ville sortie de terre en quinze ans
+
+Vous y trouvez les **Pyramides** — quartier emblématique aux toits en gradins conçu par **Michel Andrault et Pierre Parat** entre **1973 et 1979** —, **Bois-Sauvage** (1976-1980), le **centre commercial Évry 2** ouvert en 1975 (alors le plus grand d'Europe), et la **cathédrale de la Résurrection** signée **Mario Botta**.
+
+Toute cette construction se fait avec les techniques de l'époque : **cuivre soudé étain**, **PVC série échappement**, et déjà les premières expérimentations de **PER première génération**.
+
+### Le quotidien plomberie à Évry : ce que ça implique
+
+Cette page, je l'écris pour vous, qui cherchez sans doute un plombier en urgence, peut-être un dimanche soir avec une fuite qui dégouline du plafond, peut-être un mardi matin avec un chauffe-eau qui ne donne plus rien.
+
+Je vais vous expliquer pourquoi votre installation souffre tant ici : l'**eau dure du sous-sol crayeux essonnien**, les **réseaux ville nouvelle qui ont quarante ans bien tassés**, les **choix d'équipement des promoteurs des années 70**.
+
+### L'auteur de cette page
+
+Je m'appelle **René Salvador**. J'ai **71 ans**, je suis **né à Évry en 1955** — bien avant qu'on imagine y construire une ville nouvelle — et j'ai passé **quarante ans à EDF dans l'hydraulique**. Aujourd'hui je suis **bénévole à l'UFC-Que Choisir Essonne**, et chaque semaine je tiens des permanences à Corbeil et à Évry pour les particuliers qui se sont fait piéger par un dépannage à **700 €** pour une chasse d'eau bricolée.
+
+### Joël à Évry-Courcouronnes : tarif fixe annoncé en amont
+
+Joël vous évite les pièges classiques : **prix annoncé avant**, intervention en moins de trente minutes, **79 € TTC** pour démarrer, **pas de majoration la nuit ni le dimanche**.
+
+Le numéro à composer si l'eau monte déjà : **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "ville-nouvelle-evry",

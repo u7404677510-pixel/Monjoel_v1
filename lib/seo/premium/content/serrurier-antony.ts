@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Antony 92160 — Centre, Pajeaud, Croix-de-Berny, Pôle. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Antony : sécurité résidentielle dans une commune carrefour entre RER B, T10 et Orlyval",
-  introParagraph:
-    "Antony s'étire sur 9,6 km² au sud du département des Hauts-de-Seine et compte 63 991 habitants selon les chiffres INSEE 2024, ce qui en fait l'une des communes les plus peuplées du sud du 92. Cette taille s'accompagne d'une diversité urbaine inhabituelle dans la première couronne : pavillonnaire ouvrier des années 1900-1935 dans le quartier Pajeaud, vastes ensembles résidentiels de l'après-guerre dans le secteur du Noyer-Doré, copropriétés intermédiaires des années 1960-1980 le long de l'avenue Aristide-Briand et du quartier de la Croix-de-Berny, programmes neufs RT 2012 et RE 2020 qui sortent depuis 2018 dans le sillage du Pôle Antonypole. La gare Antony, principal nœud d'échange de la commune, articule le RER B, le terminus de l'Orlyval (qui rejoint Paris-Orly en huit minutes) et un dense maillage de bus. Depuis le 24 juin 2023, la ligne T10 du tramway dessert également la commune en reliant La Croix-de-Berny à Clamart-Jardin Parisien. Cette accessibilité métropolitaine renforcée fait d'Antony une cible privilégiée des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain antonien pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Antony à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Antony en chiffres : population, patrimoine, parc résidentiel
+
+Antony s'étire sur **9,6 km²** au sud du département des Hauts-de-Seine et compte **63 991 habitants** selon les chiffres **INSEE 2024**, ce qui en fait l'une des communes les plus peuplées du sud du 92.
+
+Cette taille s'accompagne d'une diversité urbaine inhabituelle dans la première couronne : **pavillonnaire ouvrier des années 1900-1935** dans le quartier Pajeaud, **vastes ensembles résidentiels de l'après-guerre** dans le secteur du Noyer-Doré, copropriétés intermédiaires des années 1960-1980 le long de l'avenue Aristide-Briand et du quartier de la **Croix-de-Berny**, programmes neufs **RT 2012 et RE 2020** dans le sillage du Pôle Antonypole.
+
+La gare Antony articule le **RER B**, le terminus de l'**Orlyval** (Paris-Orly en huit minutes) et, depuis le **24 juin 2023**, la ligne **T10** du tramway reliant La Croix-de-Berny à Clamart-Jardin Parisien.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette accessibilité métropolitaine renforcée fait d'Antony une cible privilégiée des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+Selon les données **SSMSI 2024**, les Hauts-de-Seine ont enregistré **4 864 cambriolages de logement**, en recul par rapport à 2023 (**5 791**), avec un taux de **2,95 cambriolages pour 1 000 logements** qui place le département au **52e rang national**.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain antonien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Antony : tarif fixe annoncé en amont
+
+Joël intervient à Antony à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "antony-quartiers-bati-a-proteger",

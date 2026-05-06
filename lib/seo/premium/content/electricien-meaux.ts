@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Meaux 77100 — Cathédrale, Marché, Beauval, Pierre Collinet, Hôtel-de-Ville. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Meaux : intervenir entre cité médiévale Cathédrale, grands ensembles Beauval-Pierre Collinet et lotissements pavillonnaires",
-  introParagraph:
-    "Meaux compte 53 000 habitants selon les populations légales INSEE (recensement 2022 authentifié, ville la plus peuplée de Seine-et-Marne), sous-préfecture du département dont la préfecture est à Melun, et siège du diocèse historique. La ville s'organise autour d'un méandre de la Marne qui sépare la vieille ville (au nord, dite Quartier Cathédrale autour de la Cathédrale Saint-Étienne dont la construction s'étend du XIIe au XVIe siècle) de la ville plus récente (au sud, dite Quartier Marché). Cette double identité urbaine se reflète dans le bâti résidentiel : tissu médiéval et XVIIIe-XIXe siècles dans le Quartier Cathédrale, immeubles bourgeois XIXe-début XXe le long des grands axes, lotissements pavillonnaires de l'entre-deux-guerres et des Trente Glorieuses dans les quartiers périphériques, et surtout les vastes grands ensembles de Beauval (édifié dans les années 1960-1970) et de la Pierre Collinet (édifié 1959-1965 selon les plans de Marcel Lods, comportant à l'origine 1 848 logements répartis dans six immeubles de quinze étages et trois tours de vingt-deux étages). Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers meldois et je connais bien la spécificité de cette ville. Cette page s'adresse aux Meldois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Meaux en chiffres : densité, parc résidentiel, contexte
+
+Meaux compte **53 000 habitants** selon les populations légales **INSEE** (recensement 2022 authentifié, **ville la plus peuplée de Seine-et-Marne**), **sous-préfecture du département** dont la préfecture est à Melun, et siège du diocèse historique.
+
+La ville s'organise autour d'un méandre de la **Marne** qui sépare la vieille ville (au nord, dite **Quartier Cathédrale** autour de la **Cathédrale Saint-Étienne** dont la construction s'étend du XIIe au XVIe siècle) de la ville plus récente (au sud, dite **Quartier Marché**).
+
+### Le bâti meldois : du médiéval aux grands ensembles
+
+Cette double identité urbaine se reflète dans le bâti résidentiel. D'abord un **tissu médiéval et XVIIIe-XIXe siècles** dans le **Quartier Cathédrale**.
+
+Ensuite des **immeubles bourgeois XIXe-début XXe** le long des grands axes, et des **lotissements pavillonnaires de l'entre-deux-guerres et des Trente Glorieuses** dans les quartiers périphériques.
+
+Et surtout les vastes **grands ensembles de Beauval** (édifié dans les **années 1960-1970**) et de la **Pierre Collinet** (édifié **1959-1965** selon les plans de **Marcel Lods**, comportant à l'origine **1 848 logements** répartis dans six immeubles de quinze étages et trois tours de vingt-deux étages).
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers meldois et je connais bien la spécificité de cette ville.
+
+Cette page s'adresse aux Meldois qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Meaux : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-meaux-quatre-univers",

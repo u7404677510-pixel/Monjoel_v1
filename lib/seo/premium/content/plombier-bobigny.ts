@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Bobigny 93000 — Étoile, Édouard-Vaillant, Pont-de-Pierre, Centre-ville, Karl-Marx. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Bobigny : intervenir dans la préfecture de Seine-Saint-Denis, du Centre administratif aux grands ensembles",
-  introParagraph:
-    "Bobigny est, avec ses 55 270 habitants au dernier recensement INSEE authentifié au 31 décembre 2024 et environ 55 200 habitants en 2026, la préfecture de la Seine-Saint-Denis et le siège de l'arrondissement de Bobigny. Étalée sur près de 6 km² à 9 kilomètres du centre de Paris, à l'est immédiat de la capitale, la commune présente une mosaïque urbaine d'une diversité remarquable : centre administratif autour de la préfecture et de la cité Paul-Eluard, grands ensembles édifiés entre 1965 et 1985 dans plusieurs secteurs, campus universitaire de l'Université Sorbonne Paris Nord (ex-Paris 13) qui constitue un pôle structurant, et désormais opérations RE 2020 qui sortent de terre dans le cadre des réaménagements en cours. Bobigny est une commune où le revenu moyen par habitant (16 330 €) reste inférieur à la moyenne nationale (20 590 €) et où la part de population au chômage (12,1 %) reste supérieure à la moyenne nationale, ce qui en fait un territoire où l'enjeu de la protection des ménages contre les arnaques au dépannage est particulièrement vif. Conseillère en économie sociale et familiale depuis quatorze ans, j'ai accompagné des centaines de familles balbyniennes dans leurs galères de dépannage urgent. Et je peux le dire : Bobigny figure parmi les communes franciliennes où les escroqueries au dépannage de plomberie causent le plus de dégâts financiers à des familles déjà fragilisées. Cette page s'adresse aux Balbyniens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Bobigny en chiffres : la préfecture de Seine-Saint-Denis
+
+Bobigny compte **55 270 habitants** au dernier recensement INSEE authentifié au **31 décembre 2024** et environ **55 200 habitants en 2026**, la **préfecture de la Seine-Saint-Denis** et le siège de l'arrondissement de Bobigny.
+
+Étalée sur près de **6 km²** à **9 kilomètres du centre de Paris**, à l'est immédiat de la capitale, la commune présente un revenu moyen par habitant de **16 330 €** (inférieur à la moyenne nationale de **20 590 €**), avec une part de population au chômage de **12,1 %**.
+
+### Le bâti balbynien : du Centre administratif aux grands ensembles
+
+La commune présente une mosaïque urbaine d'une diversité remarquable : **centre administratif** autour de la préfecture et de la **cité Paul-Eluard**, **grands ensembles édifiés entre 1965 et 1985** dans plusieurs secteurs, campus universitaire de l'**Université Sorbonne Paris Nord** (ex-Paris 13) qui constitue un pôle structurant, et désormais **opérations RE 2020** qui sortent de terre dans le cadre des réaménagements en cours.
+
+### Le quotidien plomberie à Bobigny : ce que ça implique
+
+Bobigny figure parmi les communes franciliennes où les **escroqueries au dépannage de plomberie causent le plus de dégâts financiers** à des familles déjà fragilisées. Cette page s'adresse aux Balbyniens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Conseillère en économie sociale et familiale depuis quatorze ans**, j'ai accompagné des centaines de familles balbyniennes dans leurs galères de dépannage urgent. Et je peux le dire : l'enjeu de la **protection des ménages contre les arnaques au dépannage** est particulièrement vif sur ce territoire.
+
+### Joël à Bobigny : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "bobigny-prefecture-grand-ensemble-campus-mosaique",

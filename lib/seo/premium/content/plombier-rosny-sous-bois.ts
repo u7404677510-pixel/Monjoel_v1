@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Rosny-sous-Bois 93110 — Centre, Marnaudes, Bois-Perrier, Boissière, Coteaux, Rosny Sud. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Rosny-sous-Bois : intervenir dans la commune de l'Est francilien, du Centre à Bois-Perrier",
-  introParagraph:
-    "Rosny-sous-Bois est, avec ses 47 368 habitants au 1er janvier 2025 et environ 47 200 habitants estimés en 2026, l'une des grandes communes de la Seine-Saint-Denis. Étalée sur 5,9 km² entre Bagnolet à l'ouest et Villemomble à l'est, à seulement quatre kilomètres de la porte de Bagnolet, la commune bénéficie d'une desserte métropolitaine particulièrement dense : deux gares RER E (Rosny–Bois-Perrier et Rosny-sous-Bois), trois stations de la ligne 11 du métro depuis le prolongement inauguré le 13 juin 2024 (avec le terminus Rosny–Bois-Perrier qui constitue désormais l'une des principales portes d'entrée de l'Est francilien), l'autoroute A86 qui longe le sud-est de la commune, et le célèbre centre commercial Westfield Rosny 2 situé à l'intersection des autoroutes A3 et A86, l'un des plus importants de France. La municipalité reconnaît officiellement quatre quartiers distincts : Marnaudes – Bois-Perrier (au nord), La Boissière – Coteaux Beauclair (à l'ouest), Rosny Sud (au sud, exclusivement résidentiel), et le Centre-ville. À soixante-dix ans, dont quarante passés à EDF comme ingénieur hydraulicien puis depuis quelques années comme bénévole à l'UFC-Que Choisir, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Rosny raconte la sienne avec une diversité que peu de communes franciliennes égalent. Cette page s'adresse aux Rosnéens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Rosny-sous-Bois en chiffres : une grande commune de Seine-Saint-Denis
+
+Rosny-sous-Bois compte **47 368 habitants** au **1er janvier 2025** et environ **47 200 habitants estimés en 2026**, ce qui en fait l'une des grandes communes de la **Seine-Saint-Denis**. Étalée sur **5,9 km²** entre Bagnolet à l'ouest et Villemomble à l'est, à seulement **quatre kilomètres de la porte de Bagnolet**.
+
+La commune bénéficie d'une desserte métropolitaine particulièrement dense : deux gares **RER E** (**Rosny–Bois-Perrier** et **Rosny-sous-Bois**), **trois stations de la ligne 11 du métro** depuis le prolongement inauguré le **13 juin 2024**, l'**autoroute A86**, et le célèbre **centre commercial Westfield Rosny 2** à l'intersection des autoroutes A3 et A86.
+
+### Le bâti rosnéen : quatre quartiers reconnus
+
+La municipalité reconnaît officiellement quatre quartiers distincts : **Marnaudes – Bois-Perrier** (au nord), **La Boissière – Coteaux Beauclair** (à l'ouest), **Rosny Sud** (au sud, exclusivement résidentiel), et le **Centre-ville**.
+
+Rosny raconte son eau avec une diversité que peu de communes franciliennes égalent.
+
+### Le quotidien plomberie à Rosny : ce que voient les Rosnéens
+
+Cette page s'adresse aux **Rosnéens** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À **soixante-dix ans**, dont **quarante passés à EDF** comme **ingénieur hydraulicien** puis depuis quelques années comme **bénévole à l'UFC-Que Choisir**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau.
+
+### Joël à Rosny-sous-Bois : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "rosny-quatre-quartiers-mosaique-bati",

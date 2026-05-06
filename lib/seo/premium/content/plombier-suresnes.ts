@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Suresnes 92150 — Centre, Cité-jardins, Mont-Valérien, Pas-Saint-Maurice, Village Anglais. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Suresnes : intervenir au pied du Mont-Valérien, du Centre à la Cité-jardins",
-  introParagraph:
-    "Suresnes est, avec ses 49 494 habitants au dernier recensement INSEE (mise à jour du 18 décembre 2025) après 48 956 en 2023, l'une des communes patrimoniales de l'ouest des Hauts-de-Seine. Étalée sur 3,77 km² entre la Seine au nord et le massif boisé du Mont-Valérien au sud, à six kilomètres de la place de l'Étoile, la commune présente un bâti qui mêle des influences variées : pavillonnaire bourgeois du Centre, copropriétés des Trente Glorieuses, mais surtout l'extraordinaire Cité-jardins édifiée à partir de 1921 sous l'impulsion d'Henri Sellier — l'une des opérations de logement social les plus emblématiques de France, classée pour partie au titre des monuments historiques. La mairie reconnaît officiellement quinze quartiers que l'INSEE découpe à des fins statistiques. Parmi les plus identifiables : le Centre-ville autour de la mairie, la Cité-jardins caractérisée par ses immeubles en briques, le Village Anglais le long de la Seine, le Pas-Saint-Maurice avec son aspect rural préservé, le secteur du Mont-Valérien sur les hauteurs (qui culmine à 162 mètres d'altitude, point le plus haut de la région parisienne). À soixante-dix ans, dont quarante passés à EDF comme ingénieur hydraulicien puis depuis quelques années comme bénévole à l'UFC-Que Choisir, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Suresnes raconte la sienne avec une diversité que peu de communes franciliennes égalent. Cette page s'adresse aux Suresnois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Suresnes en chiffres : une commune patrimoniale des Hauts-de-Seine
+
+Suresnes compte **49 494 habitants** au dernier recensement INSEE (mise à jour du **18 décembre 2025**) après **48 956 en 2023**, ce qui en fait l'une des communes patrimoniales de l'ouest des Hauts-de-Seine. Étalée sur **3,77 km²** entre la Seine au nord et le massif boisé du **Mont-Valérien** au sud, à **six kilomètres de la place de l'Étoile**.
+
+### Le bâti suresnois : 15 quartiers, dont la Cité-jardins d'Henri Sellier
+
+La commune présente un bâti qui mêle des influences variées : **pavillonnaire bourgeois du Centre**, **copropriétés des Trente Glorieuses**, mais surtout l'extraordinaire **Cité-jardins édifiée à partir de 1921 sous l'impulsion d'Henri Sellier** — l'une des opérations de logement social les plus emblématiques de France, **classée pour partie au titre des monuments historiques**.
+
+La mairie reconnaît officiellement **quinze quartiers**. Parmi les plus identifiables : le **Centre-ville**, la **Cité-jardins** caractérisée par ses immeubles en briques, le **Village Anglais** le long de la Seine, le **Pas-Saint-Maurice** avec son aspect rural préservé, le secteur du **Mont-Valérien** sur les hauteurs (qui culmine à **162 mètres d'altitude**, point le plus haut de la région parisienne).
+
+### Le quotidien plomberie à Suresnes : ce que voient les Suresnois
+
+Cette page s'adresse aux **Suresnois** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À **soixante-dix ans**, dont **quarante passés à EDF** comme **ingénieur hydraulicien** puis depuis quelques années comme **bénévole à l'UFC-Que Choisir**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Suresnes raconte la sienne avec une diversité que peu de communes franciliennes égalent.
+
+### Joël à Suresnes : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "suresnes-quartiers-mosaique-bati",

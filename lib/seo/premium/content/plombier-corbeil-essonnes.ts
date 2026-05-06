@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Corbeil-Essonnes 91100 — Centre, Tarterêts, Robinson, Moulin-Galant, Pressoir-Prompt. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Corbeil-Essonnes : intervenir entre le centre historique de la sous-préfecture, les Tarterêts et la vallée de la Seine",
-  introParagraph:
-    "Corbeil-Essonnes est, avec ses 52 683 habitants au dernier recensement INSEE et environ 55 415 habitants estimés en 2026 selon les modèles de projection, l'une des plus grandes communes de l'Essonne et l'une des sous-préfectures du département. Étalée sur près de 11 km² au confluent de la Seine et de l'Essonne, à 32 kilomètres au sud de Paris, la commune présente une mosaïque urbaine d'une diversité remarquable. Le territoire est desservi par trois gares de la ligne D du RER (Corbeil-Essonnes, Essonnes-Robinson, Moulin-Galant), ce qui en fait un hub structurant du sud essonnien. À soixante-dix ans, dont quarante passés à EDF comme ingénieur hydraulicien puis depuis quelques années comme bénévole à l'UFC-Que Choisir Essonne, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Corbeil raconte la sienne avec une diversité que peu de communes essonniennes égalent : centre historique organisé autour de la cathédrale Saint-Spire (édifice classé Monument historique, l'un des plus anciens monuments religieux de la région), pavillonnaire ouvrier des années 1900-1960 hérité du passé industriel important de la commune, grands ensembles édifiés à partir des années 1960 dans plusieurs quartiers (Tarterêts notamment), centre commercial et tertiaire récent, et désormais opérations RT 2012 puis RE 2020 qui sortent de terre depuis quelques années. Cette page s'adresse aux Corbeil-Essonnois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Corbeil-Essonnes en chiffres : la sous-préfecture du sud essonnien
+
+Corbeil-Essonnes compte **52 683 habitants** au dernier recensement INSEE et environ **55 415 habitants estimés en 2026**, l'une des plus grandes communes de l'Essonne et l'une des **sous-préfectures du département**.
+
+Étalée sur près de **11 km²** au **confluent de la Seine et de l'Essonne**, à **32 kilomètres au sud de Paris**, la commune est desservie par **trois gares de la ligne D du RER** (**Corbeil-Essonnes, Essonnes-Robinson, Moulin-Galant**), ce qui en fait un hub structurant du sud essonnien.
+
+### Le bâti corbeillais : un patrimoine stratifié
+
+Corbeil raconte sa plomberie avec une diversité que peu de communes essonniennes égalent : **centre historique** organisé autour de la **cathédrale Saint-Spire** (édifice **classé Monument historique**, l'un des plus anciens monuments religieux de la région), **pavillonnaire ouvrier des années 1900-1960** hérité du passé industriel, **grands ensembles édifiés à partir des années 1960** dans plusieurs quartiers (**Tarterêts** notamment), centre commercial et tertiaire récent, et désormais opérations **RT 2012 puis RE 2020**.
+
+### Le quotidien plomberie à Corbeil-Essonnes : ce que ça implique
+
+Cette page s'adresse aux Corbeil-Essonnois qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À **soixante-dix ans**, dont **quarante passés à EDF comme ingénieur hydraulicien** puis depuis quelques années comme **bénévole à l'UFC-Que Choisir Essonne**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau.
+
+### Joël à Corbeil-Essonnes : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "corbeil-bati-stratifie-saint-spire-tarterets",

@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Noisy-le-Grand 93160 — Mont d'Est, Champy, Pavé-Neuf, Centre-ville, Bas-Heurts. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Noisy-le-Grand : intervenir entre Mont d'Est, ville nouvelle et pavillonnaire historique",
-  introParagraph:
-    "Noisy-le-Grand est, avec ses 72 978 habitants au dernier recensement INSEE et environ 74 600 habitants estimés en 2026 selon les modèles de projection, l'une des plus grandes communes de la Seine-Saint-Denis et l'une des villes structurantes de l'est francilien. Étalée sur près de 13 km² entre la Marne au sud et la forêt domaniale au nord, à seulement 16 kilomètres de la porte de Vincennes, la commune présente une mosaïque urbaine d'une singularité remarquable : centre-ville historique organisé autour de l'église Saint-Sulpice, pavillonnaire des années 1900-1960 sur les coteaux, ZAC Mont d'Est édifiée à partir des années 1970-1980 dans le cadre de l'aménagement de la ville nouvelle de Marne-la-Vallée (premier secteur opérationnel), et désormais opérations RT 2012 puis RE 2020 qui ponctuent la commune. Le quartier du Mont d'Est, qui concentre les Espaces et Arènes de Picasso (les Camemberts d'Emile Aillaud) ainsi que plusieurs ensembles architecturaux remarquables des années 1980, occupe une place singulière dans le bâti francilien : c'est l'un des laboratoires d'expérimentation architecturale de la ville nouvelle, avec des partis pris urbains qui ont marqué l'histoire de l'architecture postmoderne française. En vingt-deux ans à gérer des copropriétés en petite couronne, j'ai accompagné des dizaines d'immeubles noiséens dans leurs interventions de plomberie, et je peux le dire : Noisy-le-Grand réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. Cette page s'adresse aux Noiséens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Noisy-le-Grand en chiffres : grande commune de l'Est francilien
+
+Noisy-le-Grand compte **72 978 habitants** au dernier recensement INSEE et environ **74 600 habitants** estimés en 2026, étalée sur près de **13 km²** entre la **Marne** au sud et la **forêt domaniale** au nord, à seulement **16 kilomètres de la porte de Vincennes**.
+
+C'est l'une des **plus grandes communes de la Seine-Saint-Denis** et l'une des villes structurantes de l'est francilien.
+
+### Une mosaïque entre ville historique et ville nouvelle
+
+La commune présente une mosaïque urbaine d'une singularité remarquable : **centre-ville historique** organisé autour de l'**église Saint-Sulpice**, **pavillonnaire des années 1900-1960** sur les coteaux, **ZAC Mont d'Est** édifiée à partir des années 1970-1980 dans le cadre de l'aménagement de la **ville nouvelle de Marne-la-Vallée** (premier secteur opérationnel), et désormais **opérations RT 2012 puis RE 2020**.
+
+Le quartier du **Mont d'Est** concentre les **Espaces et Arènes de Picasso** (les **Camemberts d'Emile Aillaud**) ainsi que plusieurs ensembles architecturaux remarquables des années 1980 — l'un des **laboratoires d'expérimentation architecturale** de la ville nouvelle, qui a marqué l'histoire de l'**architecture postmoderne française**.
+
+### Le quotidien plomberie à Noisy : pourquoi le diagnostic compte
+
+Cette page s'adresse aux Noiséens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **600 à 1 500€** ce qui aurait dû en coûter **89€** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+En **vingt-deux ans** à **gérer des copropriétés en petite couronne**, j'ai accompagné des **dizaines d'immeubles noiséens** dans leurs interventions de plomberie. Noisy-le-Grand réclame une **connaissance fine de son bâti et de ses procédures** pour ne pas se faire avoir.
+
+### Joël à Noisy-le-Grand : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un débouchage WC ou **89€** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "noisy-le-grand-mosaique-quartiers",

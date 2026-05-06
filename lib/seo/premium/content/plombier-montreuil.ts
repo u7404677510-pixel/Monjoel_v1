@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Montreuil dès 79€ TTC, prix annoncé AVANT, 24h/24 sans majoration. Guide budget familles par Nadia Zerrouki, conseillère ESF. Tél 01 41 69 10 08.",
   h1: "Plombier à Montreuil (93100) : le vrai prix d'un dépannage, expliqué pour les familles",
-  introParagraph:
-    "Je m'appelle Nadia Zerrouki, je suis conseillère en économie sociale et familiale, et depuis quatorze ans j'aide des familles franciliennes à reprendre le contrôle de leur budget. À Montreuil, où j'accompagne aujourd'hui une trentaine de familles par mois entre la Croix-de-Chavaux, le Bas-Montreuil, République et le quartier Bel-Air, le dépannage plomberie est l'une des trois dépenses imprévues qui font basculer un budget mensuel dans le rouge. Une fuite à 23h dans une copropriété de l'avenue de la Résistance, un WC bouché un dimanche après-midi rue Étienne-Marcel, un chauffe-eau qui lâche en plein hiver dans une cité de la Noue : la facture peut passer de 79€ à 850€ selon l'artisan que vous appelez. Cet écart de 770€, pour une famille de quatre, c'est l'équivalent de six semaines de courses. C'est ce qui sépare une fin de mois sereine d'un découvert qui mettra trois mois à se résorber. Cette page n'est pas une plaquette commerciale. C'est le guide que j'aurais aimé donner à toutes les familles de Montreuil que j'ai vu pleurer dans mon bureau parce qu'elles avaient signé un devis à 600€ pour déboucher des toilettes. Vous y trouverez les vrais prix pratiqués par Joël (annoncés AVANT intervention, fixes, sans majoration la nuit ni le week-end), les pièges spécifiques à Montreuil avec son bâti hétérogène, les aides du CCAS de Montreuil et du FSL Seine-Saint-Denis que vous pouvez mobiliser, et les questions concrètes que je reçois chaque semaine en consultation. Le numéro à composer en cas d'urgence : 01 41 69 10 08.",
+  introParagraph: `### Montreuil en chiffres : ce que vivent les familles
+
+À Montreuil, j'accompagne aujourd'hui une **trentaine de familles par mois** entre la **Croix-de-Chavaux**, le **Bas-Montreuil**, **République** et le **quartier Bel-Air**. Le dépannage plomberie est l'une des **trois dépenses imprévues** qui font basculer un budget mensuel dans le rouge.
+
+Une fuite à 23h dans une copropriété de l'**avenue de la Résistance**, un WC bouché un dimanche après-midi **rue Étienne-Marcel**, un chauffe-eau qui lâche en plein hiver dans une **cité de la Noue** : la facture peut passer de **79€ à 850€** selon l'artisan que vous appelez. Cet écart de **770€**, pour une famille de quatre, c'est l'équivalent de **six semaines de courses**.
+
+### Le bâti montreuillois : hétérogène, du Bas-Montreuil à la Noue
+
+Cette page recense les **pièges spécifiques à Montreuil** avec son **bâti hétérogène**, qui couvre du faubourg ancien aux grands ensembles.
+
+### Le quotidien plomberie à Montreuil : aides et vrais prix
+
+Vous y trouverez les vrais prix pratiqués par Joël (**annoncés AVANT intervention**, fixes, sans majoration la nuit ni le week-end), les **aides du CCAS de Montreuil** et du **FSL Seine-Saint-Denis** que vous pouvez mobiliser, et les questions concrètes que je reçois chaque semaine en consultation.
+
+Cette page n'est pas une plaquette commerciale. C'est le guide que j'aurais aimé donner à toutes les familles de Montreuil que j'ai vu pleurer dans mon bureau parce qu'elles avaient signé un devis à **600€** pour déboucher des toilettes.
+
+### L'auteur de cette page
+
+Je m'appelle **Nadia Zerrouki**, je suis **conseillère en économie sociale et familiale**, et depuis **quatorze ans** j'aide des familles franciliennes à reprendre le contrôle de leur budget.
+
+### Joël à Montreuil : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention** : **79€** pour un WC bouché, **89€** pour une fuite simple, **99€** pour un dégât des eaux ou une canalisation à déboucher au furet, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer en cas d'urgence : **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "comprendre-vrai-prix",

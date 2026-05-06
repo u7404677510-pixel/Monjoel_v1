@@ -10,8 +10,27 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Champigny 94500 — Centre, Bois-l'Abbé, Plateau, Coeuilly, Mordacs. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Champigny-sur-Marne : sécurité résidentielle dans une commune entre coteaux pavillonnaires et grands ensembles",
-  introParagraph:
-    "Champigny-sur-Marne s'étend sur 11,3 km² dans le Val-de-Marne et compte 78 838 habitants selon les estimations 2025, ce qui en fait l'une des plus grandes communes du département. Cette taille s'accompagne d'une diversité urbaine particulièrement marquée, héritée d'un siècle d'urbanisations successives dans une géographie contraignante : pavillonnaire ouvrier 1900-1935 sur les coteaux du Plateau et du Bois-l'Abbé, grands ensembles édifiés dans les années 1960-1980 au Bois-l'Abbé, à l'Égalité, au Plateau, aux Mordacs et aux Quatre Cités (les cinq quartiers prioritaires de la commune), copropriétés intermédiaires dans les secteurs Coeuilly et Bord-de-Marne, programmes neufs RT 2012 et RE 2020 en bordure de Marne ou autour des futurs équipements du Grand Paris. La commune est desservie par les RER A (gare Champigny–Saint-Maur, dite gare des Boullereaux–Champigny côté Champigny) et E (gare Les Boullereaux–Champigny). La future ligne 15 sud du Grand Paris Express, dont la mise en service est prévue progressivement à partir de 2026, viendra encore renforcer cette accessibilité avec une station Champigny-Centre. Cette mosaïque urbaine, jointe à la rotation locative significative dans les grands ensembles, fait de Champigny une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain campinois pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Champigny-sur-Marne à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Champigny-sur-Marne en chiffres : population, patrimoine, parc résidentiel
+
+Champigny-sur-Marne s'étend sur **11,3 km²** dans le Val-de-Marne et compte **78 838 habitants** selon les estimations 2025, ce qui en fait l'une des plus grandes communes du département.
+
+Cette taille s'accompagne d'une diversité urbaine particulièrement marquée : **pavillonnaire ouvrier 1900-1935** sur les coteaux du Plateau et du Bois-l'Abbé, **grands ensembles édifiés dans les années 1960-1980** au Bois-l'Abbé, à l'Égalité, au Plateau, aux Mordacs et aux Quatre Cités (**les cinq quartiers prioritaires** de la commune), copropriétés intermédiaires dans Coeuilly et Bord-de-Marne, programmes neufs **RT 2012 et RE 2020** en bordure de Marne.
+
+La commune est desservie par les **RER A et E**. La **future ligne 15 sud du Grand Paris Express**, dont la mise en service est prévue progressivement **à partir de 2026**, viendra encore renforcer cette accessibilité avec une station **Champigny-Centre**.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette mosaïque urbaine, jointe à la **rotation locative significative** dans les grands ensembles, fait de Champigny une cible des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain campinois pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Champigny-sur-Marne : tarif fixe annoncé en amont
+
+Joël intervient à Champigny-sur-Marne à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "champigny-quartiers-bati-a-proteger",

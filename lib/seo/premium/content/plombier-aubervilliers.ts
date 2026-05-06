@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier à Aubervilliers (93300) par Camille, archi étudiante. Vrais prix dès 79€, 24h/24, anti-arnaque. Quartiers Centre, Maladrerie, Marais, Landy.",
   h1: "Plombier à Aubervilliers : le guide locataire que j'aurais voulu avoir avant ma première fuite à la cité du Marché",
-  introParagraph:
-    "Bon. Imagine. Tu viens de poser tes cartons dans un T1 de 26 m² au troisième étage d'une barre des années 70 avenue Jean-Jaurès, Aubervilliers (93300), tu paies 720€ charges comprises, tu kiffes parce que t'es à 6 minutes à pied de la station Aubervilliers de la M12 prolongée et à 12 minutes de la fac Sorbonne Paris Nord côté campus de Saint-Denis. T'as réussi à avoir un appart avec un vrai bureau pour bosser ton mémoire, t'as une fenêtre qui donne sur le marché du Centre, et t'es à un RER B (Aubervilliers-La Courneuve) de Paris quand t'as envie de sortir. Tu te dis que c'est gagné. Et puis trois semaines plus tard, un mardi soir vers 21h, en plein deadline de rendu de partiel, tu entends un crachotement bizarre dans la salle de bain, tu vas voir, et le flexible de ton chauffe-eau électrique a éclaté. Eau partout. Tu paniques. Bienvenue dans la vraie vie d'un appart locatif Aubervilliers en barre HBM des années 70 dont la plomberie n'a jamais été refaite depuis. Moi c'est Camille Roussel, 26 ans, master 2 d'architecture à l'ENSA Paris-Belleville, locataire en colocation dans le 18e ET qui a passé une année entière à faire des relevés et des chartes urbaines sur Aubervilliers en M1 (projet de fin de cycle sur la requalification de la cité du Marché). Je tiens le blog 'Mon appart, mes galères' (15k abonnés Insta) où je raconte les pannes, les bons plans et les arnaques évitées par des gens de ma génération. Cette page est pour toi si tu loues à Aubervilliers — Centre, Quartier du Marais, Maladrerie, Émile-Dubois, Émile-Sadi-Carnot, Vallès–La Frette, Pont-Blanc, Cristino-Garcia, Landy, ou même côté Front-Populaire au sud — et que tu veux pas te faire avoir le jour où ton WC se bouche un dimanche soir avant un partiel le lundi matin. Aubervilliers c'est une ville en pleine mutation : grosse population populaire historique, jeunes actifs primo-locataires qui arrivent depuis cinq ans grâce au prix au mètre carré (encore moitié moins cher que Paris intra-muros), étudiants de la Sorbonne Paris Nord et du Conservatoire National Supérieur de Musique de Paris (CNSMDP) installé à La Villette mais dont beaucoup d'élèves se logent ici, ouvriers de la ZAC Centre-Ville et nouveaux fonctionnaires qui suivent la M12 qui arrive enfin. Du coup les pannes plomberie vont du tuyau plomb d'avant-guerre dans une vieille maison de la rue Heurtault au flexible IKEA mort dans un T2 récemment rénové ZAC. Je t'explique tout : les arnaques 'plombier urgence Aubervilliers' à éviter à tout prix, les vrais prix (Joël annonce dès 79€ TTC sur le débouchage, le 01 41 69 10 08 c'est le numéro à mettre dans tes contacts MAINTENANT, pas demain quand tu seras paniquée), tes droits en tant que locataire face à un proprio bailleur privé qui te répond pas (très fréquent ici), et trois trucs préventifs qui te sauveront 200€ au moins dans l'année. Allez, on y va — pose ton thé, lis ça calmement, tu me remercieras.",
+  introParagraph: `### Aubervilliers en chiffres : une ville en pleine mutation
+
+Bienvenue dans la vraie vie d'un appart locatif **Aubervilliers (93300)**. Une ville en pleine mutation : grosse population populaire historique, **jeunes actifs primo-locataires** qui arrivent depuis cinq ans grâce au prix au mètre carré (**encore moitié moins cher que Paris intra-muros**), étudiants de la **Sorbonne Paris Nord** et du **CNSMDP**, ouvriers de la ZAC Centre-Ville et nouveaux fonctionnaires qui suivent la **M12 prolongée** (Aubervilliers ouverte en 2022).
+
+### Le bâti d'Aubervilliers : cinq univers de plomberie
+
+Cette page est pour toi si tu loues à Aubervilliers — **Centre, Quartier du Marais, Maladrerie, Émile-Dubois, Émile-Sadi-Carnot, Vallès–La Frette, Pont-Blanc, Cristino-Garcia, Landy**, ou même côté **Front-Populaire** au sud.
+
+Du coup les pannes plomberie vont du **tuyau plomb d'avant-guerre** dans une vieille maison de la rue Heurtault au **flexible IKEA mort** dans un T2 récemment rénové ZAC. Tu peux être en barre HBM des années 70 dont la plomberie n'a jamais été refaite, en cité Émile-Dubois (Renée Gailhoustet, **classée monument historique depuis 2008**), en grand ensemble des **4 000 logements (1957-1965)**, ou en programme neuf RT 2012.
+
+### Le quotidien plomberie à Aubervilliers : ce que ça implique
+
+Tu paies **600-900 € de loyer pour 20-35 m²**, tu as un proprio bailleur privé qui te répond pas (très fréquent ici) ou un bailleur social parfois injoignable. Le jour où ton WC se bouche un dimanche soir avant un partiel le lundi matin, tu veux **pas te faire avoir**.
+
+Je t'explique tout : les arnaques **"plombier urgence Aubervilliers"** à éviter à tout prix, les vrais prix, tes droits en tant que locataire, et trois trucs préventifs qui te sauveront **200 € au moins dans l'année**.
+
+### L'auteur de cette page
+
+Moi c'est **Camille Roussel**, 26 ans, **master 2 d'architecture à l'ENSA Paris-Belleville**, qui a passé une année entière à faire des relevés et des chartes urbaines sur Aubervilliers en M1 (projet de fin de cycle sur la **requalification de la cité du Marché**). Je tiens le blog **"Mon appart, mes galères" (15k abonnés Insta)** où je raconte les pannes, les bons plans et les arnaques évitées par des gens de ma génération.
+
+### Joël à Aubervilliers : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** sur le débouchage, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le **01 41 69 10 08** c'est le numéro à mettre dans tes contacts MAINTENANT, pas demain quand tu seras paniquée.`,
   sections: [
     {
       anchor: "qui-je-suis",

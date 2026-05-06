@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Électricien Créteil 94000 — Centre Ancien, Mont-Mesly, Bleuets, Préfecture, Lévrière, Lacs. Diagnostic dès 89€ TTC, NF C 15-100, 24h/24. 01 41 69 10 08.",
   h1: "Électricien Créteil : intervenir entre Centre Ancien, grands ensembles Mont-Mesly et secteur Préfecture années 70",
-  introParagraph:
-    "Créteil compte 89 934 habitants pour 11,46 km² selon les populations légales INSEE (recensement 2022 authentifié), préfecture du Val-de-Marne depuis 1969 et siège de l'évêché. La ville présente une mosaïque urbaine particulièrement contrastée qui pose des défis spécifiques à l'électricien : un Centre Ancien organisé autour de l'église Saint-Christophe (XIIe-XVIIe siècles) avec son tissu d'origine villageoise, des grands ensembles emblématiques des années 1960-1970 (Mont-Mesly édifié à partir de 1955, Bleuets d'Émile Aillaud livrés en 1962), un secteur Préfecture entièrement aménagé dans les années 1970 autour de la station de métro inaugurée en 1973 avec ses immeubles et ses bureaux caractéristiques de l'urbanisme moderniste, des opérations résidentielles plus récentes autour des lacs (lac de Créteil et zone des Lacs), et des programmes neufs récents notamment dans les zones d'aménagement comme la Pointe-du-Lac. Ingénieur électricien diplômé de Centrale Paris en 2008, ancien expert judiciaire pour la Cour d'Appel de Paris sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et formateur Qualifelec sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers cristoliens et je connais bien la spécificité de cette ville. Cette page s'adresse aux Cristoliens qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 800 à 2000€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 89€ TTC pour un diagnostic électrique avec rapport, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Créteil en chiffres : densité, parc résidentiel, contexte
+
+Créteil compte **89 934 habitants** pour **11,46 km²** selon les populations légales **INSEE** (recensement 2022 authentifié), **préfecture du Val-de-Marne** depuis **1969** et siège de l'évêché.
+
+### Le bâti cristolien : une mosaïque urbaine contrastée
+
+La ville présente une mosaïque urbaine particulièrement contrastée qui pose des défis spécifiques à l'électricien. D'abord un **Centre Ancien** organisé autour de l'**église Saint-Christophe** (XIIe-XVIIe siècles) avec son tissu d'origine villageoise.
+
+Ensuite des **grands ensembles emblématiques des années 1960-1970** : le **Mont-Mesly** édifié à partir de **1955**, les **Bleuets** d'Émile Aillaud livrés en **1962**.
+
+Puis un **secteur Préfecture** entièrement aménagé dans les **années 1970** autour de la station de métro inaugurée en **1973**, avec ses immeubles et ses bureaux caractéristiques de l'urbanisme moderniste.
+
+Enfin des opérations résidentielles plus récentes autour des **lacs** (lac de Créteil et zone des Lacs), et des **programmes neufs récents** notamment dans les zones d'aménagement comme la **Pointe-du-Lac**, équipés de tableaux modulaires conformes à la **norme NF C 15-100** amendée.
+
+### L'auteur de cette page
+
+**Ingénieur électricien diplômé de Centrale Paris en 2008**, ancien **expert judiciaire pour la Cour d'Appel de Paris** sur les sinistres électriques résidentiels, je suis aujourd'hui consultant indépendant et **formateur Qualifelec** sur la mise aux normes des installations électriques. J'interviens régulièrement sur des dossiers cristoliens et je connais bien la spécificité de cette ville.
+
+Cette page s'adresse aux Cristoliens qui, confrontés à un disjoncteur qui saute en boucle, à une prise qui ne fonctionne plus, à un tableau électrique douteux ou à un projet de mise aux normes, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **800 à 2000€** ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête.
+
+### Joël à Créteil : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **89€ TTC** pour un diagnostic électrique avec rapport, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "electricien-creteil-quatre-univers",

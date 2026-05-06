@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier dans le 18e par Camille, locataire studette à Lamarck. Vrais prix dès 79€, 24h/24, anti-arnaque. Témoignages rue Lepic, Abbesses, Goutte d'Or.",
   h1: "Plombier à Paris 18 : le guide que j'aurais aimé lire avant ma première fuite à 7h du mat",
-  introParagraph:
-    "Bon. Imagine. Il est 7h12 un mardi matin de novembre, tu dors dans ta studette de 16m² rue Custine (75018), le radiateur grince, et tu entends ce 'flop' typique. Tu ouvres un œil. Y a une mare au pied du lit. Bienvenue dans ma vie de l'année dernière. Moi c'est Camille, 26 ans, master 2 d'archi à l'ENSA Paris-Belleville, locataire dans le 18e depuis trois ans (deux changements d'appart, trois fuites, une nuit blanche à 4h du mat à éponger avec mes serviettes de toilette). J'ai créé le blog 'Mon appart, mes galères' pour partager ce que personne ne te dit quand tu signes ton premier bail à 23 ans. Ce guide-là, c'est tout ce que j'ai appris sur les plombiers du 18e arrondissement — entre Abbesses, Lamarck-Caulaincourt, Marx-Dormoy, Jules-Joffrin, la Goutte d'Or et Porte de la Chapelle. Les arnaques que j'ai évitées (et celle que je n'ai PAS évitée, on en reparle), les vrais prix qu'on devrait te dire avant l'intervention, le numéro qui m'a sauvée un dimanche soir avant Noël (01 41 69 10 08, je le tape de tête maintenant, tu vois le niveau), et surtout ce que ton bail dit vraiment quand le siphon de l'évier se met à déborder pendant que ton proprio est en vacances aux Maldives. Honnêtement, si tu loues dans le 18e — que ce soit une chambre de bonne sous les toits rue Lepic, un T1 années 70 vers Marx-Dormoy ou une coloc à la Goutte d'Or — tu vas avoir une fuite tôt ou tard. C'est mathématique. Le bâti du 18e, c'est un mix complètement déjanté entre immeubles fin XIXe à canalisations en plomb, barres années 70 vers Porte de la Chapelle, et petites surfaces rénovées à l'arrache pour faire du locatif. Du coup, autant être prête. C'est parti.",
+  introParagraph: `### Le 18e en chiffres : ce que vit un locataire
+
+Si tu loues dans le 18e — que ce soit une **chambre de bonne sous les toits rue Lepic**, un **T1 années 70 vers Marx-Dormoy** ou une **coloc à la Goutte d'Or** — tu vas avoir une **fuite tôt ou tard**. C'est mathématique.
+
+### Le bâti du 18e : un mix complètement déjanté
+
+Le bâti du 18e, c'est un mix entre **immeubles fin XIXe à canalisations en plomb**, **barres années 70 vers Porte de la Chapelle**, et **petites surfaces rénovées à l'arrache** pour faire du locatif.
+
+Ce guide couvre les quartiers : **Abbesses, Lamarck-Caulaincourt, Marx-Dormoy, Jules-Joffrin, la Goutte d'Or, Porte de la Chapelle**.
+
+### Le quotidien plomberie dans le 18e : ce que personne ne te dit
+
+Imagine. Il est **7h12 un mardi matin de novembre**, tu dors dans ta **studette de 16m² rue Custine** (75018), le radiateur grince, et tu entends ce « flop » typique. Y a une **mare au pied du lit**.
+
+Tu trouveras ici les **arnaques** que j'ai évitées (et celle que je n'ai PAS évitée), les **vrais prix** qu'on devrait te dire avant l'intervention, et surtout ce que **ton bail dit vraiment** quand le siphon de l'évier se met à déborder pendant que ton proprio est en vacances aux Maldives.
+
+### L'auteur de cette page
+
+Moi c'est **Camille**, **26 ans**, **master 2 d'archi à l'ENSA Paris-Belleville**, **locataire dans le 18e depuis trois ans** (deux changements d'appart, trois fuites, une nuit blanche à 4h du mat à éponger avec mes serviettes de toilette). J'ai créé le blog **« Mon appart, mes galères »** pour partager ce que personne ne te dit quand tu signes ton premier bail à 23 ans.
+
+### Joël à Paris 18e : tarif fixe annoncé en amont
+
+Le numéro qui m'a sauvée un dimanche soir avant Noël : **01 41 69 10 08** (je le tape de tête maintenant). **Prix fixe annoncé AVANT** intervention, **dès 79€ TTC**, **24h/24** sans majoration nuit, week-end ou jour férié.`,
   sections: [
     {
       anchor: "qui-je-suis",

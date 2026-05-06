@@ -10,8 +10,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Saint-Denis 93200 — Centre-Basilique, Pleyel, Franc-Moisin, Floréal, Plaine. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Saint-Denis : intervenir dans la sous-préfecture du 93, de la Basilique aux quartiers nord",
-  introParagraph:
-    "Saint-Denis est, avec ses 113 116 habitants au dernier recensement INSEE et environ 151 000 habitants estimés en 2026 selon les modèles de projection, l'une des plus grandes communes de la Seine-Saint-Denis et l'une des sous-préfectures les plus peuplées de France. Étalée sur près de 12 km² au nord immédiat de Paris, à seulement quelques kilomètres de la porte de la Chapelle, la commune présente une mosaïque urbaine d'une ampleur que peu de villes franciliennes égalent : centre historique organisé autour de la Basilique royale (édifice classé qui abrite les sépultures des rois de France), grands ensembles édifiés entre 1955 et 1985 dans les quartiers Franc-Moisin, Floréal-Allende-Mutuelle, Cosmonautes, Joliot-Curie, ZAC du Stade de France livrée à l'occasion de la coupe du monde de football 1998 et profondément remaniée depuis, quartier Pleyel transformé pour les Jeux olympiques 2024 avec le village olympique dédié aux athlètes, et désormais opérations RE 2020 qui sortent de terre depuis quelques années. La commune comprend officiellement 39 quartiers selon le découpage statistique INSEE. Conseillère en économie sociale et familiale depuis quatorze ans, j'ai accompagné des centaines de familles dyonisiennes dans leurs galères de dépannage urgent. Et je peux le dire : Saint-Denis figure parmi les communes franciliennes où les escroqueries au dépannage de plomberie causent le plus de dégâts financiers à des familles déjà fragilisées. Cette page s'adresse aux Dyonisiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08. Cette page veut, à l'aune de mon expérience d'accompagnement budgétaire, donner aux Dyonisiens les clefs pour distinguer un dépannage juste d'une arnaque opportuniste, et pour défendre leurs droits dans les procédures collectives qui suivent souvent un sinistre.",
+  introParagraph: `### Saint-Denis en chiffres : une sous-préfecture parmi les plus peuplées de France
+
+Saint-Denis compte **113 116 habitants** au dernier recensement INSEE et environ **151 000 habitants estimés en 2026** selon les modèles de projection, ce qui en fait l'une des plus grandes communes de la **Seine-Saint-Denis** et l'une des sous-préfectures les plus peuplées de France.
+
+Étalée sur près de **12 km²** au nord immédiat de Paris, à seulement quelques kilomètres de la porte de la Chapelle, la commune comprend officiellement **39 quartiers** selon le découpage statistique INSEE.
+
+### Le bâti dyonisien : centre historique, grands ensembles et JO 2024
+
+Saint-Denis présente une mosaïque urbaine que peu de villes franciliennes égalent : **centre historique** organisé autour de la **Basilique royale** (édifice classé qui abrite les sépultures des rois de France), **grands ensembles édifiés entre 1955 et 1985** dans les quartiers **Franc-Moisin**, **Floréal-Allende-Mutuelle**, **Cosmonautes**, **Joliot-Curie**, **ZAC du Stade de France** livrée à l'occasion de la coupe du monde de football **1998** et remaniée depuis, **quartier Pleyel** transformé pour les **Jeux olympiques 2024** avec le village olympique, et désormais opérations **RE 2020**.
+
+### Le quotidien plomberie à Saint-Denis : ce que voient les Dyonisiens
+
+Saint-Denis figure parmi les communes franciliennes où les **escroqueries au dépannage de plomberie causent le plus de dégâts financiers** à des familles déjà fragilisées. Cette page s'adresse aux **Dyonisiens** qui hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Conseillère en économie sociale et familiale depuis quatorze ans**, j'ai accompagné des centaines de familles dyonisiennes dans leurs galères de dépannage urgent. Cette page veut donner aux Dyonisiens les clefs pour distinguer un dépannage juste d'une arnaque opportuniste, et pour défendre leurs droits dans les procédures collectives qui suivent souvent un sinistre.
+
+### Joël à Saint-Denis : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "saint-denis-bati-mosaique-historique-grand-ensemble",

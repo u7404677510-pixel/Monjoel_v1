@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Cergy 95000 — Préfecture, Axe-Majeur-Horloge, Hauts-de-Cergy, Grand-Centre, Saint-Christophe. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Cergy : sécurité résidentielle dans une ville nouvelle au bâti contrasté entre programmes 1970 et neuf RE 2020",
-  introParagraph:
-    "Cergy, ville-centre de l'agglomération de Cergy-Pontoise et siège de la préfecture du Val-d'Oise, compte 70 000 habitants au recensement INSEE 2024 (chiffre estimé à 73 000 pour 2026), étalée sur 11,33 km² découpés par l'INSEE en plusieurs grands quartiers : Préfecture-Hauts-de-Cergy au nord-ouest autour du nouveau quartier d'affaires, Axe-Majeur-Horloge au cœur (quartier prioritaire de la politique de la ville référencé QN09511M), Grand-Centre autour de la station Cergy-Préfecture (RER A), Cergy-le-Haut à l'ouest (terminus de la ligne RER A et du Transilien L), Cergy-Saint-Christophe au nord (gare RER A intermédiaire), Hauts-de-Cergy au nord-ouest, et Cergy-Village au sud-est (le centre historique avec son église Saint-Christophe et son charme rural préservé). Cette nomenclature recouvre une mosaïque urbaine héritée d'un demi-siècle d'urbanisations successives — Cergy étant l'une des cinq villes nouvelles franciliennes lancées dans le cadre du SDAURP de 1965 : Cergy-Village hérité du XIXe siècle (centre rural d'origine), grand-ensemble Axe-Majeur-Horloge édifié dans les années 1970-1985 (l'Axe Majeur étant l'œuvre emblématique de l'artiste Dani Karavan, débutée en 1980), Préfecture et Grand-Centre édifiés dans les années 1975-1990 dans le cadre du plan d'urbanisme de la ville nouvelle, copropriétés intermédiaires des années 1985-2005 dans Cergy-le-Haut et Cergy-Saint-Christophe, et désormais grands programmes résidentiels et tertiaires RT 2012 et RE 2020 qui sortent de terre depuis 2010 dans plusieurs poches résidentielles, notamment dans les Hauts-de-Cergy. Cette diversité urbaine, jointe à une mixité sociale marquée et à la présence d'une importante population étudiante (CY Cergy Paris Université, ESSEC), fait de Cergy une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-d'oisien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Cergy à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Cergy en chiffres : population, patrimoine, parc résidentiel
+
+Cergy, **ville-centre de l'agglomération de Cergy-Pontoise** et **siège de la préfecture du Val-d'Oise**, compte **70 000 habitants** au recensement **INSEE 2024** (estimé à **73 000** pour 2026), étalée sur **11,33 km²** découpés en plusieurs grands quartiers : Préfecture-Hauts-de-Cergy, Axe-Majeur-Horloge (quartier prioritaire référencé **QN09511M**), Grand-Centre, Cergy-le-Haut, Cergy-Saint-Christophe et Cergy-Village.
+
+Cette nomenclature recouvre une mosaïque héritée d'un demi-siècle d'urbanisations — Cergy étant **l'une des cinq villes nouvelles franciliennes** lancées dans le cadre du **SDAURP de 1965** : Cergy-Village hérité du XIXe siècle, **grand-ensemble Axe-Majeur-Horloge** édifié dans les années 1970-1985 (l'Axe Majeur étant l'œuvre emblématique de **Dani Karavan**, débutée en 1980), Préfecture et Grand-Centre édifiés dans les années 1975-1990, et désormais programmes **RT 2012 et RE 2020** depuis 2010.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette diversité urbaine, jointe à une **mixité sociale marquée** et à la présence d'une importante **population étudiante** (CY Cergy Paris Université, ESSEC), fait de Cergy une cible des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain val-d'oisien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Cergy : tarif fixe annoncé en amont
+
+Joël intervient à Cergy à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "cergy-quartiers-bati-a-proteger",

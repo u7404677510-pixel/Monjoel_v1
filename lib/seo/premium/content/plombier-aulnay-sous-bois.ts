@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Aulnay-sous-Bois 93600 — Vieux-Pays, Rose-des-Vents, Mitry, Ambourget, Garonor. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Aulnay-sous-Bois : intervenir entre Vieux-Pays médiéval et grand ensemble du nord du 93",
-  introParagraph:
-    "Aulnay-sous-Bois est, avec ses 89 196 habitants au dernier recensement INSEE et environ 89 100 habitants estimés en 2026, l'une des plus grandes communes de la Seine-Saint-Denis et l'une des plus étendues de l'Île-de-France (16 km²). Étalée entre le canal de l'Ourcq au sud et l'autoroute A1 au nord, à seulement 12 kilomètres de Paris, la commune présente une mosaïque urbaine d'une diversité remarquable : centre historique organisé autour de l'église Saint-Sulpice (édifice du XIIe siècle qui constitue le cœur du Vieux-Pays), pavillonnaire des années 1900-1960 dans la moitié sud, et grands ensembles édifiés à partir de 1969 dans la partie nord. Le quartier de la Rose-des-Vents, construit en 1969 sur d'anciennes parcelles agricoles pour loger les ouvriers de l'usine Citroën voisine, concentre à lui seul environ 24 000 habitants — soit près de 30 % de la population aulnaysienne — sur seulement 4 % du territoire communal. À soixante-dix ans, dont quarante passés à EDF comme ingénieur hydraulicien puis depuis quelques années comme bénévole à l'UFC-Que Choisir, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Aulnay raconte la sienne avec une diversité que peu de communes franciliennes égalent. Cette page s'adresse aux Aulnaysiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Aulnay-sous-Bois en chiffres : une grande commune du nord du 93
+
+Aulnay-sous-Bois compte **89 196 habitants** au dernier recensement INSEE et environ **89 100 habitants estimés en 2026**, l'une des plus grandes communes de la Seine-Saint-Denis et l'une des plus étendues de l'Île-de-France (**16 km²**).
+
+Étalée entre le **canal de l'Ourcq** au sud et l'**autoroute A1** au nord, à seulement **12 kilomètres de Paris**, la commune présente une mosaïque urbaine d'une diversité remarquable.
+
+### Le bâti aulnaysien : du Vieux-Pays médiéval au grand ensemble
+
+On y trouve un **centre historique** organisé autour de l'**église Saint-Sulpice** (édifice du **XIIe siècle**, cœur du **Vieux-Pays**), un **pavillonnaire des années 1900-1960** dans la moitié sud, et de **grands ensembles édifiés à partir de 1969** dans la partie nord.
+
+Le quartier de la **Rose-des-Vents**, construit en **1969** sur d'anciennes parcelles agricoles pour loger les ouvriers de l'usine Citroën voisine, concentre à lui seul **environ 24 000 habitants** — soit près de **30 % de la population aulnaysienne** — sur seulement **4 % du territoire communal**.
+
+### Le quotidien plomberie à Aulnay : ce que ça implique
+
+Cette page s'adresse aux Aulnaysiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+À **soixante-dix ans**, dont **quarante passés à EDF comme ingénieur hydraulicien** puis depuis quelques années comme **bénévole à l'UFC-Que Choisir**, j'ai pris l'habitude d'écouter les villes avant de parler de leur eau. Aulnay raconte la sienne avec une diversité que peu de communes franciliennes égalent.
+
+### Joël à Aulnay-sous-Bois : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "aulnay-bati-deux-villes-vieux-pays-rose-des-vents",

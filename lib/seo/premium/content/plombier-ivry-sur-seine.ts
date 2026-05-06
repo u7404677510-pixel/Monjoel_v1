@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Ivry-sur-Seine dès 79€ TTC, prix annoncé AVANT, 24h/24 sans majoration. Guide budget familles par Nadia Zerrouki, conseillère ESF. Tél 01 41 69 10 08.",
   h1: "Plombier à Ivry-sur-Seine (94200) : le vrai prix d'un dépannage, expliqué pour les familles du Val-de-Marne",
-  introParagraph:
-    "Je m'appelle Nadia Zerrouki, je suis conseillère en économie sociale et familiale et fondatrice du cabinet 'Vrai Prix Vrai Service'. Depuis quatorze ans, j'aide des familles franciliennes à reprendre la main sur leur budget face à des dépenses contraintes qui les broient. À Ivry-sur-Seine, où j'anime une permanence mensuelle dans un local prêté par le réseau associatif local et où je suis en lien étroit avec les travailleuses sociales du secteur, je rencontre chaque mois entre vingt et trente familles pour qui le dépannage plomberie a basculé en crise financière. Une fuite à 23h dans une copropriété de l'avenue Maurice-Thorez, un WC bouché un dimanche après-midi rue Marat, un chauffe-eau qui rend l'âme un soir de janvier dans une tour de Pierre-et-Marie-Curie : selon le numéro composé en panique, la même panne se règle entre 79€ et 850€. L'écart entre ces deux mondes, pour une famille ivryenne qui vit avec un revenu médian autour de 1 760€ par adulte, c'est six semaines de courses. C'est ce qui sépare une fin de mois calme d'un découvert qui mettra trois mois à se résorber. Cette page n'est pas une plaquette commerciale. C'est le guide que j'aurais voulu remettre, en consultation, à toutes les mères, à tous les pères, à tous les retraités d'Ivry que j'ai vu sortir d'une intervention sonnés, factures en main, persuadés qu'ils n'auraient pas dû appeler. Vous y trouverez les vrais prix pratiqués par Joël (annoncés AVANT intervention, fixes, sans majoration la nuit, le week-end ni les jours fériés), les pièges propres au bâti ivryen avec ses copropriétés des années 60-70 et ses rénovations récentes côté Ivry-Confluences, les aides spécifiques au Val-de-Marne (CCAS d'Ivry, FSL 94, Caf 94, ADIL 94) que personne ne pense à mobiliser, et les questions concrètes que je reçois en consultation. Le numéro à composer en cas d'urgence : 01 41 69 10 08.",
+  introParagraph: `### Ivry-sur-Seine en chiffres : ce que vivent les familles
+
+À Ivry-sur-Seine, je rencontre chaque mois entre **vingt et trente familles** pour qui le dépannage plomberie a basculé en crise financière. Une fuite à 23h dans une copropriété de l'**avenue Maurice-Thorez**, un WC bouché un dimanche après-midi **rue Marat**, un chauffe-eau qui rend l'âme un soir de janvier dans une **tour de Pierre-et-Marie-Curie** : selon le numéro composé en panique, la même panne se règle entre **79€ et 850€**.
+
+L'écart entre ces deux mondes, pour une famille ivryenne qui vit avec un **revenu médian autour de 1 760€ par adulte**, c'est **six semaines de courses**. C'est ce qui sépare une fin de mois calme d'un découvert qui mettra trois mois à se résorber.
+
+### Le bâti ivryen : copropriétés 60-70 et rénovations Ivry-Confluences
+
+Cette page s'attache aux pièges propres au **bâti ivryen** avec ses **copropriétés des années 60-70** et ses **rénovations récentes côté Ivry-Confluences**.
+
+### Le quotidien plomberie à Ivry : aides et vrais prix
+
+Vous y trouverez les vrais prix pratiqués par Joël (**annoncés AVANT intervention**, fixes, sans majoration la nuit, le week-end ni les jours fériés), et les **aides spécifiques au Val-de-Marne** (**CCAS d'Ivry, FSL 94, Caf 94, ADIL 94**) que personne ne pense à mobiliser.
+
+Cette page n'est pas une plaquette commerciale. C'est le guide que j'aurais voulu remettre, en consultation, à toutes les mères, à tous les pères, à tous les retraités d'Ivry que j'ai vu sortir d'une intervention sonnés, factures en main.
+
+### L'auteur de cette page
+
+Je m'appelle **Nadia Zerrouki**, je suis **conseillère en économie sociale et familiale** et fondatrice du cabinet **« Vrai Prix Vrai Service »**. Depuis **quatorze ans**, j'aide des familles franciliennes à reprendre la main sur leur budget face à des dépenses contraintes qui les broient. À Ivry-sur-Seine, j'anime une **permanence mensuelle** dans un local prêté par le réseau associatif local et je suis en lien étroit avec les travailleuses sociales du secteur.
+
+### Joël à Ivry-sur-Seine : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un WC bouché, **89€** pour une fuite simple, **99€** pour un dégât des eaux, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer en cas d'urgence : **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "vrai-prix-ivry",

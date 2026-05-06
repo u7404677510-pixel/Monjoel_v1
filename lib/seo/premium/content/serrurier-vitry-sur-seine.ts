@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Vitry 94400 — Centre, 8-mai-1945, Port-à-l'Anglais, Ardoines. Ouverture porte claquée 89€ TTC, A2P, 24h/24. 01 41 69 10 08.",
   h1: "Serrurier Vitry-sur-Seine : sécurité résidentielle dans la plus grande commune du Val-de-Marne",
-  introParagraph:
-    "Vitry-sur-Seine est la plus grande commune du Val-de-Marne par la population avec 93 963 habitants au recensement INSEE 2024 et environ 96 718 habitants estimés en 2025, et l'une des plus étendues avec 11,7 km² qui s'étirent depuis le coteau du Centre jusqu'aux rives industrielles de la Seine. Cette taille s'accompagne d'une diversité urbaine particulièrement marquée que la ville elle-même résume en trois grandes zones : le centre, où se concentrent de nombreuses cités HLM ; les quartiers périphériques, plus pavillonnaires et de classe moyenne ; et la vaste zone industrielle qui longe la Seine, autour des Ardoines. À cette stratification s'ajoutent les programmes neufs RT 2012 et RE 2020 qui sortent depuis la fin des années 2010 dans le sillage des opérations d'aménagement majeures, notamment autour des Ardoines où la future ligne 15 sud du Grand Paris Express ouvrira une gare. Vitry est également célèbre pour le MAC VAL, premier musée d'art contemporain installé en banlieue parisienne, ouvert en 2005, qui occupe 13 000 m² place de la Libération. La commune est desservie par le RER C (gares Vitry-sur-Seine et Les Ardoines) et par la ligne T9 du tramway. Cette mosaïque urbaine, jointe à la rotation locative significative dans certains quartiers, fait de Vitry une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain vitriot pour y avoir mené plusieurs formations municipales et travaillé sur de nombreux dossiers d'enquête. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Vitry-sur-Seine à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Vitry-sur-Seine en chiffres : population, superficie, parc résidentiel
+
+Vitry-sur-Seine est la **plus grande commune du Val-de-Marne par la population** avec **93 963 habitants** au recensement INSEE 2024 et environ **96 718 habitants estimés en 2025**, et l'une des plus étendues avec **11,7 km²** qui s'étirent **depuis le coteau du Centre jusqu'aux rives industrielles de la Seine**.
+
+La ville résume sa diversité en trois grandes zones : **le centre, où se concentrent de nombreuses cités HLM** ; **les quartiers périphériques, plus pavillonnaires et de classe moyenne** ; et **la vaste zone industrielle qui longe la Seine, autour des Ardoines**.
+
+### Patrimoine et grandes opérations
+
+À cette stratification s'ajoutent les **programmes neufs RT 2012 et RE 2020** qui sortent depuis la fin des années 2010, notamment autour des **Ardoines où la future ligne 15 sud du Grand Paris Express ouvrira une gare**.
+
+Vitry est également célèbre pour le **MAC VAL**, **premier musée d'art contemporain installé en banlieue parisienne**, ouvert en 2005, qui occupe **13 000 m²** place de la Libération. La commune est desservie par le **RER C** (gares Vitry-sur-Seine et Les Ardoines) et par la **ligne T9 du tramway**.
+
+### Pourquoi Vitry attire les opérateurs douteux
+
+Cette mosaïque urbaine, jointe à la **rotation locative significative dans certains quartiers**, fait de Vitry une cible des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain vitriot pour y avoir mené plusieurs formations municipales.
+
+### Joël à Vitry-sur-Seine : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée, **sans majoration nuit ni week-end**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "vitry-quartiers-bati-a-proteger",

@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Maisons-Alfort 94700 — Centre-Vert-de-Maisons, Charentonneau, Liberté, Juilliottes, École vétérinaire. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Maisons-Alfort : intervenir entre l'École vétérinaire d'Alfort, les bords de Marne et le pavillonnaire de la Liberté",
-  introParagraph:
-    "Maisons-Alfort est, avec ses 57 422 habitants au dernier recensement INSEE 2025 et environ 58 800 habitants estimés en 2026, l'une des plus grandes communes du Val-de-Marne et l'une des villes structurantes de la première couronne sud-est de Paris. Étalée sur près de 5 km² entre la Marne et le bois de Vincennes, à seulement 7 kilomètres de la place de la Bastille, la commune présente une mosaïque urbaine d'une singularité remarquable. À Maisons-Alfort, le bâti raconte son histoire jusque dans ses canalisations : centre historique organisé autour de l'église Sainte-Agnès et de la place du Clocher, pavillonnaire bourgeois et mixte des années 1900-1960 dans plusieurs quartiers, immeubles de la reconstruction d'après-guerre le long des grandes avenues, et désormais opérations RT 2012 puis RE 2020 qui ponctuent les opérations urbaines récentes. La commune accueille depuis 1766 l'École nationale vétérinaire d'Alfort, l'une des plus anciennes institutions d'enseignement supérieur français, dont le campus historique de 10 hectares est partagé avec l'Anses. Architecte du patrimoine de formation, j'ai accompagné depuis vingt ans plusieurs interventions sensibles dans le bâti francilien, et Maisons-Alfort fait partie des communes où la finesse de lecture du bâti conditionne directement la qualité d'une intervention de plomberie. Cette page s'adresse aux Maisonnais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Maisons-Alfort en chiffres : grande commune du Val-de-Marne
+
+Maisons-Alfort compte **57 422 habitants** au dernier recensement INSEE 2025 et environ **58 800 habitants** estimés en 2026, étalée sur près de **5 km²** entre la **Marne** et le **bois de Vincennes**, à seulement **7 kilomètres de la place de la Bastille**.
+
+C'est l'une des **plus grandes communes du Val-de-Marne** et l'une des villes structurantes de la première couronne sud-est de Paris.
+
+### Un bâti stratifié entre Marne, Vincennes et École vétérinaire
+
+À Maisons-Alfort, le bâti raconte son histoire : **centre historique** organisé autour de l'**église Sainte-Agnès** et de la **place du Clocher**, **pavillonnaire bourgeois et mixte des années 1900-1960** dans plusieurs quartiers, **immeubles de la reconstruction d'après-guerre** le long des grandes avenues, et désormais **opérations RT 2012 puis RE 2020** qui ponctuent les opérations urbaines récentes.
+
+La commune accueille depuis **1766** l'**École nationale vétérinaire d'Alfort**, l'une des plus anciennes institutions d'enseignement supérieur français, dont le campus historique de **10 hectares** est partagé avec l'**Anses**.
+
+### Le quotidien plomberie à Maisons-Alfort : pourquoi le diagnostic compte
+
+Cette page s'adresse aux Maisonnais qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **600 à 1 500€** ce qui aurait dû en coûter **89€** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Architecte du patrimoine** de formation, j'ai accompagné depuis **vingt ans** plusieurs interventions sensibles dans le bâti francilien. Maisons-Alfort fait partie des communes où la **finesse de lecture du bâti** conditionne directement la qualité d'une intervention de plomberie.
+
+### Joël à Maisons-Alfort : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un débouchage WC ou **89€** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "maisons-alfort-bati-mosaique-quartiers",

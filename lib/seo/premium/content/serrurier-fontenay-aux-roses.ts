@@ -10,8 +10,25 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Serrurier Fontenay-aux-Roses 92260 — Scarron, Blagis, Gare-la Roue. Ouverture porte claquée 89€ TTC, A2P, 24h/24 sans majoration. 01 41 69 10 08.",
   h1: "Serrurier Fontenay-aux-Roses : sécurité résidentielle dans une commune entre Sceaux et Bagneux",
-  introParagraph:
-    "Fontenay-aux-Roses est l'une des plus petites communes des Hauts-de-Seine par la superficie — 2,55 km² seulement — et l'une des plus denses par la population, avec 24 772 habitants au recensement INSEE du 1er janvier 2024. Située au sud du département entre Sceaux, Bagneux, Châtenay-Malabry, Le Plessis-Robinson et Clamart, la ville bénéficie d'une desserte en transports métropolitains de premier ordre : la gare Fontenay-aux-Roses du RER B au centre, le tramway T6 qui dessert plusieurs arrêts communaux, un maillage de bus structurants. Cette accessibilité, jointe à la qualité résidentielle de la commune et à la présence d'établissements d'enseignement supérieur reconnus (campus du CEA, ENS Lyon site Paris-Saclay), en fait une cible privilégiée des opérateurs douteux du dépannage d'urgence — particulièrement en serrurerie. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain fontenaysien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper. Vous y trouverez la mécanique précise des arnaques au dépannage serrurerie, les vrais prix pratiqués par un artisan honnête, les normes A2P qui doivent figurer sur tout devis sérieux, et les recours concrets que la DGCCRF reconnaît. Joël intervient à Fontenay-aux-Roses à prix fixe annoncé avant déplacement, dès 89€ TTC pour une porte claquée — sans majoration nuit ni week-end. Ce n'est pas un slogan, c'est l'inverse exact de ce que pratique une partie de l'écosystème dénoncé plus bas. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Fontenay-aux-Roses en chiffres : population, patrimoine, parc résidentiel
+
+Fontenay-aux-Roses est **l'une des plus petites communes des Hauts-de-Seine par la superficie — 2,55 km² seulement** — et **l'une des plus denses par la population**, avec **24 772 habitants** au recensement **INSEE du 1er janvier 2024**.
+
+Située au sud du département entre Sceaux, Bagneux, Châtenay-Malabry, Le Plessis-Robinson et Clamart, la ville bénéficie d'une desserte en transports métropolitains de premier ordre : la **gare Fontenay-aux-Roses du RER B** au centre, le **tramway T6** qui dessert plusieurs arrêts communaux, un maillage de bus structurants.
+
+### Cambriolages : les chiffres SSMSI / sécurité résidentielle
+
+Cette accessibilité, jointe à la **qualité résidentielle de la commune** et à la présence d'établissements d'enseignement supérieur reconnus (**campus du CEA**, **ENS Lyon site Paris-Saclay**), en fait une cible privilégiée des **opérateurs douteux du dépannage d'urgence** — particulièrement en serrurerie.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne. Aujourd'hui formateur en sûreté résidentielle pour copropriétés et collectivités, je connais le terrain fontenaysien pour y avoir mené plusieurs formations municipales. Cette page n'a pas vocation à dramatiser. Elle a vocation à équiper.
+
+### Joël à Fontenay-aux-Roses : tarif fixe annoncé en amont
+
+Joël intervient à Fontenay-aux-Roses à **prix fixe annoncé avant déplacement**, dès **89 € TTC** pour une porte claquée — **sans majoration nuit ni week-end**.
+
+Le numéro à composer reste le **01 41 69 10 08**, joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "fontenay-onze-blocs-iris-bati-residentiel",

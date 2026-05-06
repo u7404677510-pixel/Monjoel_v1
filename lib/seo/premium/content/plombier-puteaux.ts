@@ -10,8 +10,31 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Puteaux 92800 — Centre, Bergères, La Défense, Lorilleux, Coteaux. Prix Joël annoncé dès 79€ TTC, sans majoration. 01 41 69 10 08.",
   h1: "Plombier Puteaux : intervenir entre l'ancien village et La Défense, du Centre à l'éco-quartier des Bergères",
-  introParagraph:
-    "Puteaux est, avec ses 44 941 habitants au dernier recensement INSEE, l'une des communes les plus emblématiques de la mutation francilienne. Sur seulement 3,19 km² entre la Seine au nord-est et le plateau du Mont-Valérien au sud-ouest, à cinq kilomètres de la place de l'Étoile, la commune accueille à la fois l'ancien village historique de Puteaux (attesté dès le XIIIe siècle) et la moitié du quartier d'affaires de La Défense — premier quartier d'affaires européen — dont la gare ferroviaire emblématique située au cœur du quartier d'affaires se trouve administrativement sur le territoire putéolien. Les transports en commun y sont d'une densité exceptionnelle : RER A, RER E, ligne 1 du métro, tramway T2, lignes Transilien U et L, plus le futur prolongement de la ligne 15 du Grand Paris Express. La mairie reconnaît plusieurs grands secteurs : le Centre-ville autour de la mairie historique et de la gare SNCF de Puteaux, le quartier des Bergères au sud-ouest où l'éco-quartier éponyme a sorti de terre depuis 2010 plusieurs milliers de logements neufs (12 690 habitants selon le dernier décompte), le quartier Lorilleux, le secteur des Coteaux, et bien sûr la portion putéolienne de La Défense. En vingt-deux ans à gérer des copropriétés en petite couronne ouest, j'ai accompagné des dizaines d'immeubles putéoliens dans leurs interventions de plomberie, et je peux le dire : Puteaux réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir. Cette page s'adresse aux Putéoliens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Puteaux en chiffres : entre village et premier quartier d'affaires européen
+
+Puteaux compte **44 941 habitants** au dernier recensement INSEE, sur seulement **3,19 km²** entre la Seine au nord-est et le plateau du Mont-Valérien au sud-ouest, à **cinq kilomètres de la place de l'Étoile**.
+
+Les transports en commun y sont d'une densité exceptionnelle : **RER A, RER E, ligne 1 du métro, tramway T2, lignes Transilien U et L**, plus le futur prolongement de la **ligne 15 du Grand Paris Express**.
+
+### Le bâti putéolien : du village du XIIIe siècle à La Défense
+
+La commune accueille à la fois l'**ancien village historique de Puteaux** (attesté dès le **XIIIe siècle**) et la moitié du quartier d'affaires de **La Défense — premier quartier d'affaires européen** — dont la gare ferroviaire emblématique se trouve administrativement sur le territoire putéolien.
+
+La mairie reconnaît plusieurs grands secteurs : le **Centre-ville** autour de la mairie historique et de la gare SNCF, le **quartier des Bergères** au sud-ouest où l'éco-quartier éponyme a sorti de terre depuis 2010 plusieurs milliers de logements neufs (**12 690 habitants** selon le dernier décompte), le **quartier Lorilleux**, le **secteur des Coteaux**, et bien sûr la portion putéolienne de **La Défense**.
+
+### Le quotidien plomberie à Puteaux : ce que voient les Putéoliens
+
+Cette page s'adresse aux **Putéoliens** qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Vingt-deux ans à gérer des copropriétés en petite couronne ouest**, j'ai accompagné des dizaines d'immeubles putéoliens dans leurs interventions de plomberie. Puteaux réclame une connaissance fine de son bâti et de ses procédures pour ne pas se faire avoir.
+
+### Joël à Puteaux : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 €** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "puteaux-quartiers-defense-village-mosaique",

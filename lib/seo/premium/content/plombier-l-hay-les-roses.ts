@@ -10,8 +10,33 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier L'Haÿ-les-Roses 94240 — Centre, Jardin Parisien, Lallier-Bicêtre, Petit Robinson, Blondeaux. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier L'Haÿ-les-Roses : intervenir entre la Roseraie historique, le Jardin Parisien et le pavillonnaire des Blondeaux",
-  introParagraph:
-    "L'Haÿ-les-Roses est, avec ses 31 398 habitants au dernier recensement INSEE et environ 31 200 habitants en 2026 selon les données récentes (en légère décroissance de 0,5 % par rapport à l'année précédente), l'une des sous-préfectures du Val-de-Marne et l'une des communes structurantes de la couronne sud parisienne. Étalée sur près de 4 km² entre Cachan à l'ouest et Chevilly-Larue à l'est, à seulement 8 kilomètres de la porte d'Italie, la commune doit la seconde partie de son nom à la Roseraie du Val-de-Marne — créée en 1894 par Jules Gravereaux et qui rassemble aujourd'hui 3 300 espèces et variétés de roses, l'une des plus importantes collections au monde. C'est en mai 1914 que le nom officiel de la commune devient L'Haÿ-les-Roses en hommage à cette Roseraie de renommée mondiale. À L'Haÿ, le bâti raconte son histoire jusque dans ses canalisations : centre historique organisé autour de l'église Saint-Léonard, six grands quartiers reconnus par la mairie (Les Blondeaux, Le Centre, Le Jardin Parisien, Lallier-Bicêtre, Le Petit Robinson, La Vallée-aux-Renards), pavillonnaire bourgeois et mixte des années 1900-1960, immeubles de la reconstruction d'après-guerre dans le centre, copropriétés intermédiaires et opérations résidentielles édifiées entre 1960 et 1990, et désormais opérations RT 2012 puis RE 2020 qui complètent le tissu. La commune est aussi marquée par le drame de juillet 2023 qui a touché la maison du maire et a profondément remué la communauté locale. Architecte du patrimoine de formation, j'ai accompagné depuis vingt ans plusieurs interventions sensibles dans le bâti francilien, et L'Haÿ fait partie des communes où la finesse de lecture du bâti conditionne directement la qualité d'une intervention de plomberie. Cette page s'adresse aux Haÿssiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### L'Haÿ-les-Roses en chiffres : sous-préfecture du Val-de-Marne
+
+L'Haÿ-les-Roses compte **31 398 habitants** au dernier recensement INSEE et environ **31 200 habitants** en 2026 (en légère décroissance de **0,5 %** par rapport à l'année précédente). Étalée sur près de **4 km²** entre Cachan à l'ouest et Chevilly-Larue à l'est, à seulement **8 kilomètres de la porte d'Italie**.
+
+La commune doit la seconde partie de son nom à la **Roseraie du Val-de-Marne** — créée en **1894 par Jules Gravereaux** et qui rassemble aujourd'hui **3 300 espèces et variétés de roses**, l'une des plus importantes collections au monde. C'est en **mai 1914** que le nom officiel de la commune devient L'Haÿ-les-Roses.
+
+### Six quartiers et un bâti stratifié
+
+L'Haÿ se structure en six grands quartiers reconnus par la mairie : **Les Blondeaux, Le Centre, Le Jardin Parisien, Lallier-Bicêtre, Le Petit Robinson, La Vallée-aux-Renards**, organisés autour du centre historique et de l'**église Saint-Léonard**.
+
+Le bâti combine **pavillonnaire bourgeois et mixte des années 1900-1960**, **immeubles de la reconstruction d'après-guerre** dans le centre, **copropriétés intermédiaires et opérations résidentielles édifiées entre 1960 et 1990**, et désormais **opérations RT 2012 puis RE 2020** qui complètent le tissu.
+
+La commune est aussi marquée par le **drame de juillet 2023** qui a touché la maison du maire et a profondément remué la communauté locale.
+
+### Le quotidien plomberie à L'Haÿ : pourquoi le diagnostic compte
+
+Cette page s'adresse aux Haÿssiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant **600 à 1 500€** ce qui aurait dû en coûter **89€** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**Architecte du patrimoine** de formation, j'ai accompagné depuis **vingt ans** plusieurs interventions sensibles dans le bâti francilien. L'Haÿ fait partie des communes où la **finesse de lecture du bâti** conditionne directement la qualité d'une intervention de plomberie.
+
+### Joël à L'Haÿ-les-Roses : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79€ TTC** pour un débouchage WC ou **89€** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "lhay-bati-six-quartiers-roseraie",

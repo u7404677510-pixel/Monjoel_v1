@@ -10,8 +10,33 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Plombier Courbevoie 92400 — Centre, Bécon-les-Bruyères, Faubourg-de-l'Arche, La Défense, Marceau. Prix Joël annoncé dès 79€ TTC. 01 41 69 10 08.",
   h1: "Plombier Courbevoie : intervenir dans la cinquième ville des Hauts-de-Seine, du Faubourg-de-l'Arche à Bécon",
-  introParagraph:
-    "Courbevoie est, avec ses 81 945 habitants au recensement INSEE 2022 et environ 82 200 habitants estimés en 2025, la cinquième commune la plus peuplée des Hauts-de-Seine. Étalée sur seulement 4,2 km² entre La Défense au sud-ouest et la Seine au nord, à six kilomètres de la place de l'Étoile, la ville présente une densité résidentielle exceptionnelle qui en fait l'une des communes les plus compactes d'Île-de-France. Le revenu moyen par habitant y est de 32 080 € selon les chiffres INSEE, soit plus de 11 000 € au-dessus de la moyenne nationale. La mairie reconnaît plusieurs grands secteurs : le Centre-ville autour de la mairie, Bécon-les-Bruyères au nord-est autour de la gare SNCF historique, le Faubourg-de-l'Arche au sud-ouest qui prolonge La Défense en territoire courbevoisien, le quartier Marceau, le quartier Charras et plusieurs sous-secteurs que l'INSEE découpe à des fins statistiques en trente-et-un quartiers. Cette diversité urbaine — ville ancienne du Centre, bâti bourgeois de Bécon, gratte-ciels du Faubourg-de-l'Arche, copropriétés intermédiaires de Marceau — fait de Courbevoie un terrain de jeu hydraulique d'une complexité remarquable. En 28 ans de métier, j'ai eu l'occasion d'intervenir des dizaines de fois à Courbevoie, et je peux le dire d'expérience : on n'aborde pas une fuite avenue Marceau dans un immeuble bourgeois 1900 comme on aborde une chasse d'eau dans une tour récente du Faubourg-de-l'Arche. Cette page s'adresse aux Courbevoisiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une plateforme de racolage facturant 600 à 1 500€ ce qui aurait dû en coûter 89 — et chercher un peu plus loin un artisan honnête. Le réseau Joël s'engage sur un prix fixe annoncé avant intervention, à partir de 79€ TTC pour un débouchage WC ou 89€ pour une fuite localisée, 24 heures sur 24, sans majoration nuit, week-end ou jour férié. Le numéro à composer reste le 01 41 69 10 08.",
+  introParagraph: `### Courbevoie en chiffres : la cinquième ville des Hauts-de-Seine
+
+Courbevoie compte **81 945 habitants** au recensement INSEE 2022 et environ **82 200 habitants estimés en 2025**, la **cinquième commune la plus peuplée des Hauts-de-Seine**.
+
+Étalée sur seulement **4,2 km²** entre **La Défense** au sud-ouest et la **Seine** au nord, à **six kilomètres de la place de l'Étoile**, la ville présente une densité résidentielle exceptionnelle. Le **revenu moyen par habitant** y est de **32 080 €** selon les chiffres INSEE, soit plus de **11 000 € au-dessus de la moyenne nationale**.
+
+### Le bâti courbevoisien : entre La Défense et Bécon
+
+La mairie reconnaît plusieurs grands secteurs : le **Centre-ville** autour de la mairie, **Bécon-les-Bruyères** au nord-est autour de la gare SNCF historique, le **Faubourg-de-l'Arche** au sud-ouest qui prolonge La Défense en territoire courbevoisien, le quartier **Marceau**, le quartier **Charras** et plusieurs sous-secteurs que l'INSEE découpe à des fins statistiques en **trente-et-un quartiers**.
+
+Cette diversité urbaine — **ville ancienne du Centre**, **bâti bourgeois de Bécon**, **gratte-ciels du Faubourg-de-l'Arche**, **copropriétés intermédiaires de Marceau** — fait de Courbevoie un terrain de jeu hydraulique d'une complexité remarquable.
+
+### Le quotidien plomberie à Courbevoie : ce que ça implique
+
+On n'aborde pas une fuite **avenue Marceau dans un immeuble bourgeois 1900** comme on aborde une chasse d'eau dans une **tour récente du Faubourg-de-l'Arche**.
+
+Cette page s'adresse aux Courbevoisiens qui, confrontés à une fuite, à un dégât des eaux, à un chauffe-eau en panne, hésitent entre composer le premier numéro qui apparaît sur Google — qui les conduira presque toujours à une **plateforme de racolage facturant 600 à 1 500 €** ce qui aurait dû en coûter **89 €** — et chercher un peu plus loin un artisan honnête.
+
+### L'auteur de cette page
+
+**28 ans de métier**, avec des dizaines d'interventions à Courbevoie. Cette page veut donner aux Courbevoisiens les clefs pour distinguer **un dépannage juste d'une arnaque opportuniste**.
+
+### Joël à Courbevoie : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant intervention**, à partir de **79 € TTC** pour un débouchage WC ou **89 € TTC** pour une fuite localisée, **24 heures sur 24**, sans majoration nuit, week-end ou jour férié.
+
+Le numéro à composer reste le **01 41 69 10 08**.`,
   sections: [
     {
       anchor: "courbevoie-quartiers-defense-secteur-mosaique",

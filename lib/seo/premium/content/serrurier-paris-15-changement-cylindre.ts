@@ -11,8 +11,29 @@ export const content: PremiumPageContent = {
   metaDescription:
     "Changement cylindre Paris 15 (75015) — Vaugirard, Convention, Pasteur, Beaugrenelle. Cylindre A2P 1 étoile posé 149€ TTC fixe, 24h/24. 01 41 69 10 08.",
   h1: "Changement de cylindre à Paris 15e : pourquoi le passage à l'A2P n'est pas un luxe dans le plus grand arrondissement parisien",
-  introParagraph:
-    "Le 15e arrondissement de Paris est le plus grand et le plus peuplé des vingt arrondissements de la capitale, avec environ 230 000 habitants répartis sur 8,48 km². Cette taille exceptionnelle s'accompagne d'une caractéristique structurelle qui nous intéresse particulièrement pour le changement de cylindre : un parc immobilier ancien massif, dominé par les immeubles de rapport édifiés entre 1880 et 1955. L'arrondissement, officiellement appelé arrondissement de Vaugirard du nom de son ancien village rattaché à Paris en 1860, s'organise autour de plusieurs grands quartiers historiques : Vaugirard et Saint-Lambert au sud-ouest et au cœur, Convention au sud autour de l'avenue éponyme, Pasteur autour de l'institut éponyme et de l'hôpital Necker au nord-est, Beaugrenelle au nord-ouest le long de la Seine, Falguière à l'est limite Montparnasse, et Grenelle au nord. Le secteur Vaugirard-Convention concentre principalement des immeubles de rapport familiaux de 5 à 7 étages, souvent sans ascenseur dans les bâtiments antérieurs à 1950 — typologie héritée de la grande urbanisation parisienne du début du XXe siècle. Une part très significative de ces immeubles, particulièrement dans le secteur Vaugirard-Saint-Lambert et autour des rues Vaugirard, Convention, Lecourbe, Cambronne, Croix-Nivert, conserve encore des cylindres simples non certifiés A2P, parfois en place depuis l'après-guerre. Ces cylindres sont, pour qui sait les attaquer, vulnérables à toutes les techniques modernes d'effraction : crochetage en moins de 3 minutes, casse en moins de 90 secondes, bumping en quelques secondes. Le passage à un cylindre A2P 1 étoile minimum constitue, dans ce contexte, le geste de sécurisation le plus rationnel et le plus rapide qu'un occupant puisse poser. Adjudant-chef de gendarmerie pendant 31 ans, dont 22 en Section de Recherches Versailles et en Cellule Cambriolages BRDP 78, j'ai traité plus de 4 000 dossiers de cambriolages résidentiels en région parisienne, dont une part importante sur des immeubles parisiens du 15e équipés de cylindres simples vétustes. Cette page est conçue comme un guide complet du changement de cylindre dans le bâti ancien parisien : pourquoi le faire, quand le faire, quel niveau A2P choisir, quel artisan choisir, et combien cela coûte vraiment. Joël intervient à Paris 15e à prix fixe annoncé avant déplacement, dès 149€ TTC pour la pose d'un cylindre A2P 1 étoile fourni — sans majoration nuit, week-end ni jour férié. Le 01 41 69 10 08 reste joignable 24 heures sur 24.",
+  introParagraph: `### Le 15e en chiffres : population, taille, parc résidentiel
+
+Le 15e arrondissement est **le plus grand et le plus peuplé** des vingt arrondissements de la capitale : environ **230 000 habitants** sur **8,48 km²**. Officiellement appelé **arrondissement de Vaugirard** du nom de son ancien village rattaché à Paris en 1860, il s'organise autour de plusieurs grands quartiers historiques : **Vaugirard et Saint-Lambert** au sud-ouest, **Convention** au sud, **Pasteur** au nord-est, **Beaugrenelle** au nord-ouest le long de la Seine, **Falguière** à l'est limite Montparnasse, et **Grenelle** au nord.
+
+### Bâti ancien : un parc dominé par 1880-1955
+
+Le secteur **Vaugirard-Convention** concentre principalement des **immeubles de rapport familiaux de 5 à 7 étages**, souvent **sans ascenseur dans les bâtiments antérieurs à 1950**. Une part très significative de ces immeubles — secteur Vaugirard-Saint-Lambert, rues **Vaugirard, Convention, Lecourbe, Cambronne, Croix-Nivert** — conserve encore des **cylindres simples non certifiés A2P**, parfois en place depuis l'après-guerre.
+
+Ces cylindres sont vulnérables à toutes les techniques modernes : **crochetage en moins de 3 minutes, casse en moins de 90 secondes, bumping en quelques secondes**.
+
+### Pourquoi l'A2P : le geste de sécurisation rationnel
+
+Le passage à un **cylindre A2P 1 étoile minimum** constitue le geste de sécurisation **le plus rationnel et le plus rapide** qu'un occupant puisse poser dans le bâti ancien parisien.
+
+### L'auteur de cette page
+
+**Adjudant-chef de gendarmerie pendant 31 ans**, dont 22 en **Section de Recherches Versailles et Cellule Cambriolages BRDP 78**, j'ai traité **plus de 4 000 dossiers de cambriolages résidentiels** en région parisienne, dont une part importante sur des immeubles du 15e équipés de cylindres simples vétustes.
+
+### Joël à Paris 15e : tarif fixe annoncé en amont
+
+Le réseau Joël s'engage sur un **prix fixe annoncé avant déplacement**, dès **149 € TTC** pour la pose d'un **cylindre A2P 1 étoile fourni**, **sans majoration nuit, week-end ni jour férié**.
+
+Le **01 41 69 10 08** reste joignable **24 heures sur 24**.`,
   sections: [
     {
       anchor: "pourquoi-changer-cylindre-paris-15",
