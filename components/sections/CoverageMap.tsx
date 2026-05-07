@@ -321,9 +321,9 @@ function DepartmentSidePanel({
             </span>
           </div>
 
-          {/* CTA principal — métier sélectionné */}
+          {/* CTA principal — métier sélectionné (page département /plombier-75 etc.) */}
           <Link
-            href={`${trade.hub === "/plomberie" ? "/plombier" : trade.hub === "/serrurerie" ? "/serrurier" : "/electricien"}/${dept.slug}`}
+            href={`${trade.hub === "/plomberie" ? "/plombier" : trade.hub === "/serrurerie" ? "/serrurier" : "/electricien"}-${dept.code}`}
             className="group flex items-center justify-between gap-3 px-5 py-4 rounded-2xl bg-joel-yellow text-joel-violet font-bold text-sm sm:text-base shadow-xl shadow-joel-yellow/30 hover:shadow-joel-yellow/50 hover:-translate-y-0.5 transition-all mb-5"
           >
             <span className="inline-flex items-center gap-2">
@@ -360,7 +360,7 @@ function DepartmentSidePanel({
               {TRADES.filter((t) => t.slug !== trade.slug).map((t) => (
                 <Link
                   key={t.slug}
-                  href={`/${t.slug}/${dept.slug}`}
+                  href={`/${t.slug}-${dept.code}`}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/8 hover:bg-joel-yellow/20 border border-white/10 hover:border-joel-yellow/40 text-white/85 hover:text-white transition-colors"
                 >
                   <t.icon size={11} />
@@ -679,7 +679,7 @@ export default function CoverageMap() {
                 {isOpen && (
                   <div className="px-4 pb-4 pt-1 space-y-2 border-t border-white/10">
                     <Link
-                      href={`/${trade.slug}/${dept.slug}`}
+                      href={`/${trade.slug}-${dept.code}`}
                       className="flex items-center justify-between px-4 py-3 bg-joel-yellow text-joel-violet font-bold text-sm rounded-xl shadow-md shadow-joel-yellow/30"
                     >
                       <span className="inline-flex items-center gap-2">

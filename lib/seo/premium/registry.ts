@@ -349,6 +349,20 @@ export function listPremiumByKind(kind: "city" | "service"): PremiumPageContent[
   );
 }
 
+/**
+ * Retourne uniquement les slugs de villes qui ont une page PREMIUM ville
+ * (sans service) pour le métier donné. Utile pour filtrer les composants
+ * qui listent des villes (DepartmentCities, NearbyAreas, etc.) afin de ne
+ * pas exposer de liens vers des URLs qui retournent 410 Gone.
+ */
+export function getPremiumCitySlugsForTrade(trade: string): Set<string> {
+  return new Set(
+    premiumPages
+      .filter((p) => p.trade === trade && !p.serviceSlug)
+      .map((p) => p.citySlug),
+  );
+}
+
 export function getPremiumStats() {
   const cityPages = listPremiumByKind("city");
   const servicePages = listPremiumByKind("service");

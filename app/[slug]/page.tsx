@@ -6,6 +6,7 @@ import {
   generateDepartmentPageContent,
 } from "@/lib/seo/department-content";
 import { generateDepartmentSchema } from "@/lib/seo/schema-generator";
+import { getPremiumCitySlugsForTrade } from "@/lib/seo/premium/registry";
 import ClientSchema from "@/components/ClientSchema";
 import DepartmentHero from "@/components/seo/DepartmentHero";
 import DepartmentCities from "@/components/seo/DepartmentCities";
@@ -156,12 +157,20 @@ export default async function DepartmentPage({ params }: DepartmentPageProps) {
         </div>
       </section>
 
-      {/* Cities grid */}
-      <DepartmentCities
-        cities={content.cities}
-        department={content.department}
-        tradeSlug={content.trade!.slug}
-      />
+      {/* Cities grid — filtré aux villes premium uniquement (les autres
+          retournent 410 via le proxy, pas la peine d'y linker) */}
+      {(() => {
+        const premiumSlugs = getPremiumCitySlugsForTrade(content.trade!.slug);
+        const premiumCities = content.cities.filter((c) => premiumSlugs.has(c.slug));
+        if (premiumCities.length === 0) return null;
+        return (
+          <DepartmentCities
+            cities={premiumCities}
+            department={content.department}
+            tradeSlug={content.trade!.slug}
+          />
+        );
+      })()}
 
       {/* Services available */}
       <DepartmentServices
