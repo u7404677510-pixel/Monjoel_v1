@@ -18,7 +18,7 @@ import { City, getCityBySlug, getNearbyCities } from "@/lib/data/cities-idf";
 import { Service, Trade, getTradeBySlug, getServiceBySlug } from "@/lib/data/services-definition";
 import { generateCityPageContent, generateServicePageContent } from "@/lib/seo/city-content";
 import { generatePremiumSchemas } from "@/lib/seo/premium/schema";
-import { getPremiumContent } from "@/lib/seo/premium/registry";
+import { getPremiumContent, getPremiumCitySlugsForTrade } from "@/lib/seo/premium/registry";
 import {
   buildCityContextualLinks,
   buildServiceContextualLinks,
@@ -274,7 +274,15 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
         <FallbackWhyJoel content={content} />
         <CityFAQ faqItems={content.faq} cityName={city.name} tradeName={trade.name} />
         <FallbackInterlinkNearby content={content} city={city} tradeSlug={tradeSlug} />
-        <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
+        {(() => {
+          // Filtrer les villes voisines aux villes PREMIUM uniquement,
+          // pour ne jamais linker vers une page qui retourne 410 Gone.
+          const premiumSlugs = getPremiumCitySlugsForTrade(trade.slug);
+          const nearbyAll = getNearbyCities(city, 16);
+          const nearbyPremium = nearbyAll.filter((c) => premiumSlugs.has(c.slug)).slice(0, 8);
+          if (nearbyPremium.length === 0) return null;
+          return <NearbyAreas trade={trade} city={city} nearbyCities={nearbyPremium} />;
+        })()}
         <FinalCTA />
       </main>
       <Footer />
@@ -358,7 +366,15 @@ export function ServicePageBody({
           tradeName={service.name}
         />
         <FallbackInterlinkNearby content={content} city={city} tradeSlug={tradeSlug} />
-        <NearbyAreas trade={trade} city={city} nearbyCities={getNearbyCities(city, 8)} />
+        {(() => {
+          // Filtrer les villes voisines aux villes PREMIUM uniquement,
+          // pour ne jamais linker vers une page qui retourne 410 Gone.
+          const premiumSlugs = getPremiumCitySlugsForTrade(trade.slug);
+          const nearbyAll = getNearbyCities(city, 16);
+          const nearbyPremium = nearbyAll.filter((c) => premiumSlugs.has(c.slug)).slice(0, 8);
+          if (nearbyPremium.length === 0) return null;
+          return <NearbyAreas trade={trade} city={city} nearbyCities={nearbyPremium} />;
+        })()}
         <FinalCTA />
       </main>
       <Footer />
@@ -592,7 +608,11 @@ function FallbackInterlinkNearby({
   city: City;
   tradeSlug: string;
 }) {
-  if (content.interlinkNearby.length === 0) return null;
+  // Filtrer aux villes voisines qui sont premium pour ce trade,
+  // sinon le lien retournerait 410 Gone via le proxy.
+  const premiumSlugs = getPremiumCitySlugsForTrade(tradeSlug);
+  const visible = content.interlinkNearby.filter((c) => premiumSlugs.has(c.slug));
+  if (visible.length === 0) return null;
   return (
     <section className="py-12 bg-white">
       <div className="max-w-4xl mx-auto px-6">
@@ -600,7 +620,7 @@ function FallbackInterlinkNearby({
           Communes voisines de {city.name} couvertes par Joël
         </h2>
         <div className="flex flex-wrap gap-2">
-          {content.interlinkNearby.map((c) => (
+          {visible.map((c) => (
             <a
               key={c.slug}
               href={`/${tradeSlug}/${c.slug}`}
@@ -642,7 +662,9 @@ function FallbackOtherServices({
               return (
                 <a
                   key={s.slug}
-                  href={`/${trade.slug}/${city.slug}/${s.slug}`}
+                  // On link vers le service hub statique (/plombier/fuite-eau)
+                  // plutôt que vers la combinaison ville+service (410 Gone).
+                  href={`/${trade.slug}/${s.slug}`}
                   aria-label={anchorText}
                   className="block p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-joel-violet hover:shadow-md transition-all text-center"
                 >

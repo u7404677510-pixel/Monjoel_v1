@@ -40,7 +40,9 @@ export default function CityServices({ trade, city }: CityServicesProps) {
               transition={{ delay: index * 0.1 }}
             >
               <Link
-                href={`/${trade.slug}/${city.slug}/${service.slug}`}
+                // Lien vers le service hub statique (toujours 200 OK) plutôt
+                // que la combinaison ville+service (410 Gone via le proxy).
+                href={`/${trade.slug}/${service.slug}`}
                 className="group block bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-joel-violet hover:shadow-xl transition-all h-full"
               >
                 {/* Urgency badge */}
