@@ -192,6 +192,62 @@ import { content as electricienParis10 } from "./content/electricien-paris-10";
 import { content as electricienParis12 } from "./content/electricien-paris-12";
 import { content as electricienParis14 } from "./content/electricien-paris-14";
 
+// -- Batch 13 + 14 — Compléter arrondissements partiels + villes IDF (11 mai 2026)
+// Plombier
+import { content as plombierParis3 } from "./content/plombier-paris-3";
+import { content as plombierParis11 } from "./content/plombier-paris-11";
+import { content as plombierParis16 } from "./content/plombier-paris-16";
+import { content as plombierParis20 } from "./content/plombier-paris-20";
+import { content as plombierArgenteuil } from "./content/plombier-argenteuil";
+import { content as plombierSarcelles } from "./content/plombier-sarcelles";
+// Serrurier
+import { content as serrurierParis7 } from "./content/serrurier-paris-7";
+import { content as serrurierParis9 } from "./content/serrurier-paris-9";
+import { content as serrurierParis13 } from "./content/serrurier-paris-13";
+import { content as serrurierParis17 } from "./content/serrurier-paris-17";
+import { content as serrurierParis18 } from "./content/serrurier-paris-18";
+import { content as serrurierParis19 } from "./content/serrurier-paris-19";
+import { content as serrurierAubervilliers } from "./content/serrurier-aubervilliers";
+import { content as serrurierChelles } from "./content/serrurier-chelles";
+import { content as serrurierColombes } from "./content/serrurier-colombes";
+import { content as serrurierDrancy } from "./content/serrurier-drancy";
+import { content as serrurierEvryCourcouronnes } from "./content/serrurier-evry-courcouronnes";
+import { content as serrurierFontenaySousBois } from "./content/serrurier-fontenay-sous-bois";
+import { content as serrurierMontreuil } from "./content/serrurier-montreuil";
+import { content as serrurierNeuillySurSeine } from "./content/serrurier-neuilly-sur-seine";
+import { content as serrurierNoisyLeGrand } from "./content/serrurier-noisy-le-grand";
+import { content as serrurierPantin } from "./content/serrurier-pantin";
+import { content as serrurierSaintMaurDesFosses } from "./content/serrurier-saint-maur-des-fosses";
+// Électricien
+import { content as electricienParis3 } from "./content/electricien-paris-3";
+import { content as electricienParis7 } from "./content/electricien-paris-7";
+import { content as electricienParis9 } from "./content/electricien-paris-9";
+import { content as electricienParis13 } from "./content/electricien-paris-13";
+import { content as electricienParis16 } from "./content/electricien-paris-16";
+import { content as electricienParis18 } from "./content/electricien-paris-18";
+import { content as electricienParis19 } from "./content/electricien-paris-19";
+import { content as electricienParis20 } from "./content/electricien-paris-20";
+import { content as electricienArgenteuil } from "./content/electricien-argenteuil";
+import { content as electricienAsnieresSurSeine } from "./content/electricien-asnieres-sur-seine";
+import { content as electricienAubervilliers } from "./content/electricien-aubervilliers";
+import { content as electricienAulnaySousBois } from "./content/electricien-aulnay-sous-bois";
+import { content as electricienBobigny } from "./content/electricien-bobigny";
+import { content as electricienChampignySurMarne } from "./content/electricien-champigny-sur-marne";
+import { content as electricienChelles } from "./content/electricien-chelles";
+import { content as electricienColombes } from "./content/electricien-colombes";
+import { content as electricienDrancy } from "./content/electricien-drancy";
+import { content as electricienEvryCourcouronnes } from "./content/electricien-evry-courcouronnes";
+import { content as electricienFontenaySousBois } from "./content/electricien-fontenay-sous-bois";
+import { content as electricienIvrySurSeine } from "./content/electricien-ivry-sur-seine";
+import { content as electricienMaisonsAlfort } from "./content/electricien-maisons-alfort";
+import { content as electricienMontreuil } from "./content/electricien-montreuil";
+import { content as electricienNeuillySurSeine } from "./content/electricien-neuilly-sur-seine";
+import { content as electricienNoisyLeGrand } from "./content/electricien-noisy-le-grand";
+import { content as electricienPantin } from "./content/electricien-pantin";
+import { content as electricienSaintMaurDesFosses } from "./content/electricien-saint-maur-des-fosses";
+import { content as electricienSarcelles } from "./content/electricien-sarcelles";
+import { content as electricienVillejuif } from "./content/electricien-villejuif";
+
 // ============================================
 // REGISTRE
 // ============================================
@@ -352,6 +408,59 @@ const _allPremiumPages: PremiumPageContent[] = [
   electricienParis10,
   electricienParis12,
   electricienParis14,
+  // Batch 13 — combler les 10 arrondissements Paris partiels (11 mai 2026, +18 pages)
+  plombierParis3,
+  plombierParis11,
+  plombierParis16,
+  plombierParis20,
+  serrurierParis7,
+  serrurierParis9,
+  serrurierParis13,
+  serrurierParis17,
+  serrurierParis18,
+  serrurierParis19,
+  electricienParis3,
+  electricienParis7,
+  electricienParis9,
+  electricienParis13,
+  electricienParis16,
+  electricienParis18,
+  electricienParis19,
+  electricienParis20,
+  // Batch 14 — compléter villes IDF importantes avec métiers manquants (11 mai 2026, +33 pages)
+  plombierArgenteuil,
+  plombierSarcelles,
+  serrurierAubervilliers,
+  serrurierChelles,
+  serrurierColombes,
+  serrurierDrancy,
+  serrurierEvryCourcouronnes,
+  serrurierFontenaySousBois,
+  serrurierMontreuil,
+  serrurierNeuillySurSeine,
+  serrurierNoisyLeGrand,
+  serrurierPantin,
+  serrurierSaintMaurDesFosses,
+  electricienArgenteuil,
+  electricienAsnieresSurSeine,
+  electricienAubervilliers,
+  electricienAulnaySousBois,
+  electricienBobigny,
+  electricienChampignySurMarne,
+  electricienChelles,
+  electricienColombes,
+  electricienDrancy,
+  electricienEvryCourcouronnes,
+  electricienFontenaySousBois,
+  electricienIvrySurSeine,
+  electricienMaisonsAlfort,
+  electricienMontreuil,
+  electricienNeuillySurSeine,
+  electricienNoisyLeGrand,
+  electricienPantin,
+  electricienSaintMaurDesFosses,
+  electricienSarcelles,
+  electricienVillejuif,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
