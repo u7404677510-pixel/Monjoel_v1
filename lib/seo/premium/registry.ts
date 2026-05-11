@@ -97,6 +97,16 @@ import { content as plombierSartrouville } from "./content/plombier-sartrouville
 import { content as plombierPoissy } from "./content/plombier-poissy";
 // -- Plombier Batch 11 — Paris orphelins mai 2026 (post-désindexation, Mega Swarm)
 import { content as plombierParis19 } from "./content/plombier-paris-19";
+// -- Plombier Batch 12 — 9 arrondissements Paris orphelins (mai 2026)
+import { content as plombierParis1 } from "./content/plombier-paris-1";
+import { content as plombierParis2 } from "./content/plombier-paris-2";
+import { content as plombierParis4 } from "./content/plombier-paris-4";
+import { content as plombierParis5 } from "./content/plombier-paris-5";
+import { content as plombierParis6 } from "./content/plombier-paris-6";
+import { content as plombierParis8 } from "./content/plombier-paris-8";
+import { content as plombierParis10 } from "./content/plombier-paris-10";
+import { content as plombierParis12 } from "./content/plombier-paris-12";
+import { content as plombierParis14 } from "./content/plombier-paris-14";
 
 // -- Serrurier (pages ville)
 import { content as serrurierParis11 } from "./content/serrurier-paris-11";
@@ -139,6 +149,16 @@ import { content as serrurierParis11BlindagePorte } from "./content/serrurier-pa
 import { content as serrurierParis15ChangementCylindre } from "./content/serrurier-paris-15-changement-cylindre";
 // -- Serrurier Batch 11 — Paris orphelins mai 2026 (post-désindexation, Mega Swarm)
 import { content as serrurierParis16 } from "./content/serrurier-paris-16";
+// -- Serrurier Batch 12 — 9 arrondissements Paris orphelins (mai 2026)
+import { content as serrurierParis1 } from "./content/serrurier-paris-1";
+import { content as serrurierParis2 } from "./content/serrurier-paris-2";
+import { content as serrurierParis4 } from "./content/serrurier-paris-4";
+import { content as serrurierParis5 } from "./content/serrurier-paris-5";
+import { content as serrurierParis6 } from "./content/serrurier-paris-6";
+import { content as serrurierParis8 } from "./content/serrurier-paris-8";
+import { content as serrurierParis10 } from "./content/serrurier-paris-10";
+import { content as serrurierParis12 } from "./content/serrurier-paris-12";
+import { content as serrurierParis14 } from "./content/serrurier-paris-14";
 
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
@@ -161,6 +181,16 @@ import { content as electricienVitrySurSeine } from "./content/electricien-vitry
 import { content as electricienClamart } from "./content/electricien-clamart";
 import { content as electricienCergy } from "./content/electricien-cergy";
 import { content as electricienMeaux } from "./content/electricien-meaux";
+// -- Électricien Batch 12 — 9 arrondissements Paris orphelins (mai 2026)
+import { content as electricienParis1 } from "./content/electricien-paris-1";
+import { content as electricienParis2 } from "./content/electricien-paris-2";
+import { content as electricienParis4 } from "./content/electricien-paris-4";
+import { content as electricienParis5 } from "./content/electricien-paris-5";
+import { content as electricienParis6 } from "./content/electricien-paris-6";
+import { content as electricienParis8 } from "./content/electricien-paris-8";
+import { content as electricienParis10 } from "./content/electricien-paris-10";
+import { content as electricienParis12 } from "./content/electricien-paris-12";
+import { content as electricienParis14 } from "./content/electricien-paris-14";
 
 // ============================================
 // REGISTRE
@@ -293,6 +323,35 @@ const _allPremiumPages: PremiumPageContent[] = [
   // Cibles : arrondissements parisiens 0-trade premium identifiés par gap analysis
   plombierParis19,
   serrurierParis16,
+  // Batch 12 — 9 arrondissements Paris orphelins × 3 trades (mai 2026, +27 pages)
+  // Couverture étendue : Paris 1, 2, 4, 5, 6, 8, 10, 12, 14 sur les 3 métiers
+  plombierParis1,
+  plombierParis2,
+  plombierParis4,
+  plombierParis5,
+  plombierParis6,
+  plombierParis8,
+  plombierParis10,
+  plombierParis12,
+  plombierParis14,
+  serrurierParis1,
+  serrurierParis2,
+  serrurierParis4,
+  serrurierParis5,
+  serrurierParis6,
+  serrurierParis8,
+  serrurierParis10,
+  serrurierParis12,
+  serrurierParis14,
+  electricienParis1,
+  electricienParis2,
+  electricienParis4,
+  electricienParis5,
+  electricienParis6,
+  electricienParis8,
+  electricienParis10,
+  electricienParis12,
+  electricienParis14,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
