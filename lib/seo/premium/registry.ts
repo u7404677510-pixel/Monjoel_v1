@@ -248,6 +248,18 @@ import { content as electricienSaintMaurDesFosses } from "./content/electricien-
 import { content as electricienSarcelles } from "./content/electricien-sarcelles";
 import { content as electricienVillejuif } from "./content/electricien-villejuif";
 
+// -- Batch 15 — Villes émergentes GSC (21 mai 2026, +9 pages)
+// 3 villes identifiées via GSC comme ayant ≥130 imp/mois sans page premium
+import { content as plombierNeuillySurMarne } from "./content/plombier-neuilly-sur-marne";
+import { content as serrurierNeuillySurMarne } from "./content/serrurier-neuilly-sur-marne";
+import { content as electricienNeuillySurMarne } from "./content/electricien-neuilly-sur-marne";
+import { content as plombierVillemomble } from "./content/plombier-villemomble";
+import { content as serrurierVillemomble } from "./content/serrurier-villemomble";
+import { content as electricienVillemomble } from "./content/electricien-villemomble";
+import { content as plombierCormeillesEnParisis } from "./content/plombier-cormeilles-en-parisis";
+import { content as serrurierCormeillesEnParisis } from "./content/serrurier-cormeilles-en-parisis";
+import { content as electricienCormeillesEnParisis } from "./content/electricien-cormeilles-en-parisis";
+
 // ============================================
 // REGISTRE
 // ============================================
@@ -461,6 +473,16 @@ const _allPremiumPages: PremiumPageContent[] = [
   electricienSaintMaurDesFosses,
   electricienSarcelles,
   electricienVillejuif,
+  // Batch 15 — Villes émergentes GSC (21 mai 2026, +9 pages)
+  plombierNeuillySurMarne,
+  serrurierNeuillySurMarne,
+  electricienNeuillySurMarne,
+  plombierVillemomble,
+  serrurierVillemomble,
+  electricienVillemomble,
+  plombierCormeillesEnParisis,
+  serrurierCormeillesEnParisis,
+  electricienCormeillesEnParisis,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
