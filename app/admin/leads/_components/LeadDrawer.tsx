@@ -27,6 +27,8 @@ import {
   PlusCircle,
   Trash2,
   User,
+  UserCheck,
+  Send,
   Wrench,
   X,
 } from "lucide-react";
@@ -54,6 +56,9 @@ import {
   useLeadAuditLogs,
   type AuditLogEntry,
 } from "@/lib/hooks/admin-queries";
+import { useArtisans } from "@/lib/hooks/use-artisans";
+import type { Artisan } from "@/lib/schemas/artisan";
+import { useCreateIntervention } from "@/lib/hooks/interventions-queries";
 import { STATUS_CONFIG, TRADE_CONFIG, formatDateTime, timeAgo } from "./shared";
 
 interface Props {
@@ -65,14 +70,20 @@ interface Props {
 export function LeadDrawer({ lead, open, onOpenChange }: Props) {
   const [notes, setNotes] = useState("");
   const [status, setStatus] = useState<LeadStatus>("new");
+  const [selectedArtisanId, setSelectedArtisanId] = useState("");
+  const [scheduledAt, setScheduledAt] = useState("");
   const updateLead = useUpdateLead();
   const deleteLead = useDeleteLead();
+  const createIntervention = useCreateIntervention();
+  const { data: artisans } = useArtisans();
 
   // Sync local form state when lead changes
   useEffect(() => {
     if (lead) {
       setNotes(lead.notes ?? "");
       setStatus((lead.status as LeadStatus) ?? "new");
+      setSelectedArtisanId("");
+      setScheduledAt("");
     }
   }, [lead]);
 
@@ -121,6 +132,50 @@ export function LeadDrawer({ lead, open, onOpenChange }: Props) {
   };
 
   const handleConvert = () => handleStatusChange("converted");
+
+  // ── Dispatch : artisans éligibles (actifs, métier + département du lead) ──
+  const dept = (lead.postal_code ?? "").slice(0, 2);
+  const activeArtisans = (artisans ?? []).filter((a) => a.status !== "inactive");
+  const matching = activeArtisans.filter(
+    (a) =>
+      (!lead.trade || a.trades.includes(lead.trade)) &&
+      (!dept || a.zones.includes(dept))
+  );
+  // Si aucun ne matche exactement, on propose tous les actifs (dispatch non bloqué).
+  const eligibleArtisans: Artisan[] =
+    matching.length > 0 ? matching : activeArtisans;
+  const usingFallback = matching.length === 0 && activeArtisans.length > 0;
+
+  const handleDispatch = async () => {
+    if (!selectedArtisanId) {
+      toast.error("Choisis un artisan à assigner");
+      return;
+    }
+    const artisan = eligibleArtisans.find((a) => a.id === selectedArtisanId);
+    const artisanLabel = artisan
+      ? `${artisan.first_name} ${artisan.last_name}`
+      : undefined;
+    try {
+      await createIntervention.mutateAsync({
+        lead_id: lead.id,
+        artisan_id: selectedArtisanId,
+        artisan_label: artisanLabel,
+        scheduled_at: scheduledAt ? new Date(scheduledAt).toISOString() : null,
+        status: scheduledAt ? "scheduled" : "pending",
+      });
+      // Reflète le dispatch côté UI : le lead devient "converti".
+      setStatus("converted");
+      toast.success(
+        artisanLabel
+          ? `Intervention dispatchée à ${artisanLabel}`
+          : "Intervention dispatchée"
+      );
+      setSelectedArtisanId("");
+      setScheduledAt("");
+    } catch (e) {
+      toast.error("Échec du dispatch : " + (e as Error).message);
+    }
+  };
 
   return (
     <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
@@ -273,6 +328,74 @@ export function LeadDrawer({ lead, open, onOpenChange }: Props) {
                   )}
                 </SelectContent>
               </Select>
+            </section>
+
+            {/* Assigner un artisan (dispatch R6) */}
+            <section className="space-y-2">
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                Assigner un artisan
+              </h3>
+              {eligibleArtisans.length === 0 ? (
+                <p className="text-xs text-zinc-500">
+                  Aucun artisan actif
+                  {lead.trade ? ` en ${lead.trade}` : ""}
+                  {dept ? ` · dépt ${dept}` : ""}. Ajoute-en dans{" "}
+                  <span className="font-medium">Admin → Artisans</span>.
+                </p>
+              ) : (
+                <div className="space-y-2">
+                  <Select
+                    value={selectedArtisanId}
+                    onValueChange={setSelectedArtisanId}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Choisir un artisan…" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {eligibleArtisans.map((a) => (
+                        <SelectItem key={a.id} value={a.id}>
+                          {a.first_name} {a.last_name} · ⭐ {a.rating} ·{" "}
+                          {a.zones.join("/") || "—"}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {usingFallback && (
+                    <p className="text-[11px] text-amber-600">
+                      Aucun artisan ne couvre exactement{" "}
+                      {lead.trade ?? "ce métier"}/dépt {dept || "?"} — liste de
+                      tous les actifs.
+                    </p>
+                  )}
+                  <div className="space-y-1">
+                    <label
+                      htmlFor="dispatch-scheduled"
+                      className="flex items-center gap-1.5 text-[11px] uppercase tracking-wide text-zinc-400"
+                    >
+                      <Calendar size={11} />
+                      Planifier (optionnel)
+                    </label>
+                    <input
+                      id="dispatch-scheduled"
+                      type="datetime-local"
+                      value={scheduledAt}
+                      onChange={(e) => setScheduledAt(e.target.value)}
+                      className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-800 focus:border-joel-violet focus:ring-2 focus:ring-joel-violet/20 outline-hidden"
+                    />
+                  </div>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    className="w-full"
+                    onClick={handleDispatch}
+                    loading={createIntervention.isPending}
+                    disabled={!selectedArtisanId}
+                    leftIcon={<Send size={13} />}
+                  >
+                    Dispatcher l&apos;intervention
+                  </Button>
+                </div>
+              )}
             </section>
 
             {/* Notes */}
@@ -441,6 +564,12 @@ const AUDIT_ACTION_META: Record<
     iconColor: "text-joel-violet",
     iconBg: "bg-joel-violet/15",
   },
+  assigned: {
+    icon: UserCheck,
+    label: "Artisan assigné",
+    iconColor: "text-emerald-600",
+    iconBg: "bg-emerald-50",
+  },
 };
 
 function getActionMeta(action: string) {
@@ -541,6 +670,15 @@ function AuditEventDescription({ event }: { event: AuditLogEntry }) {
       <p className="text-zinc-600 mt-0.5">
         {source ? `via ${source}` : "Création manuelle"}
         {trade ? ` · ${trade}` : ""}
+      </p>
+    );
+  }
+
+  if (event.action === "assigned") {
+    const artisan = meta.artisan as string | null | undefined;
+    return (
+      <p className="text-zinc-600 mt-0.5">
+        {artisan ? `Assigné à ${artisan}` : "Artisan assigné"}
       </p>
     );
   }

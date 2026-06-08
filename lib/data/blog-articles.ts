@@ -805,7 +805,7 @@ Chez Joël, notre modèle repose sur la transparence :
 - Devis écrit avant intervention
 - Pas de perçage inutile
 - Paiement par carte accepté
-- 947 avis vérifiés
+- Avis Google vérifiés
 
 📞 **Un serrurier de confiance ?** Appelez le 01 41 69 10 08
     `

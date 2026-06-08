@@ -119,7 +119,7 @@ export default function ExtinctionDashboard() {
     cpc: { value: "18.50€", change: "-2€", type: "up" as const, target: "<20€" },
     conversions: { value: "127", change: "+18%", type: "up" as const },
     cpa: { value: "52€", change: "-5€", type: "up" as const, target: "<50€" },
-    reviews: { value: "947", change: "+12", type: "up" as const, target: "1500" },
+    reviews: { value: "—", change: "+12", type: "up" as const, target: "1500" },
     position: { value: "2.3", change: "-0.2", type: "up" as const, target: "<2" },
   };
 
@@ -306,7 +306,7 @@ export default function ExtinctionDashboard() {
           <h2 className="text-lg font-bold mb-6">Objectifs 90 Jours</h2>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
             {[
-              { label: "Avis Google", current: "947", target: "1500+" },
+              { label: "Avis Google", current: "—", target: "1500+" },
               { label: "Position Ads", current: "2.3", target: "Top 2" },
               { label: "CTR", current: "6.8%", target: ">8%" },
               { label: "Taux Conv.", current: "~10%", target: ">15%" },

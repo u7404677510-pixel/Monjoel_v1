@@ -29,6 +29,11 @@ export interface Lead {
   notes: string | null;
   created_at: string;
   updated_at: string;
+  /** Liaison au compte client (RLS). Optionnels — null pour un lead anonyme. */
+  user_id?: string | null;
+  email?: string | null;
+  urgency?: string | null;
+  urgency_label?: string | null;
 }
 
 export interface StatusMeta {

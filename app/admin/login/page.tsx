@@ -1,18 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { createClient } from "@supabase/supabase-js";
+import { getSupabaseClient } from "@/lib/supabase";
 import { motion } from "motion/react";
 import { Mail, Lock, Eye, EyeOff, ArrowLeft, Loader2, Shield } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
-function getSupabase() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key);
-}
 
 export default function AdminLoginPage() {
   const [mode, setMode] = useState<"password" | "magic">("password");
@@ -28,7 +21,7 @@ export default function AdminLoginPage() {
     setError("");
     setLoading(true);
 
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (!supabase) {
       setError("Configuration Supabase manquante. Contactez l'administrateur.");
       setLoading(false);
@@ -50,7 +43,7 @@ export default function AdminLoginPage() {
     setError("");
     setLoading(true);
 
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (!supabase) {
       setError("Configuration Supabase manquante.");
       setLoading(false);
@@ -59,7 +52,9 @@ export default function AdminLoginPage() {
 
     const { error: authError } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/admin` },
+      // PKCE : le lien magique renvoie vers /auth/callback (route publique) qui
+      // échange le code contre une session et pose les cookies, puis redirige.
+      options: { emailRedirectTo: `${window.location.origin}/auth/callback?next=/admin` },
     });
 
     if (authError) {

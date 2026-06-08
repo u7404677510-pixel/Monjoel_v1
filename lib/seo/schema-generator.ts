@@ -64,17 +64,17 @@ const TRADE_IMAGES: Record<string, string[]> = {
   plombier: [
     `${BASE_URL}/logo.webp`,
     `${BASE_URL}/og-default.jpg`,
-    `${BASE_URL}/images/plombier-intervention.jpg`,
+    `${BASE_URL}/images/hero-plombier.jpg`,
   ],
   serrurier: [
     `${BASE_URL}/logo.webp`,
     `${BASE_URL}/og-default.jpg`,
-    `${BASE_URL}/images/serrurier-intervention.jpg`,
+    `${BASE_URL}/images/hero-serrurier.jpg`,
   ],
   electricien: [
     `${BASE_URL}/logo.webp`,
     `${BASE_URL}/og-default.jpg`,
-    `${BASE_URL}/images/electricien-intervention.jpg`,
+    `${BASE_URL}/images/hero-electricien.jpg`,
   ],
 };
 

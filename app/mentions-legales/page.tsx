@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -80,9 +81,9 @@ export default function MentionsLegalesPage() {
             </p>
             <p>
               Pour plus d'informations, consultez notre{" "}
-              <a href="/confidentialite" className="text-joel-violet hover:underline">
+              <Link href="/confidentialite" className="text-joel-violet hover:underline">
                 Politique de confidentialité
-              </a>.
+              </Link>.
             </p>
 
             <h2>7. Cookies</h2>

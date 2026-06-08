@@ -12,6 +12,7 @@
  *  - Inactifs > 7j (zinc) — warning si > 5
  */
 
+import { useState } from "react";
 import { motion } from "motion/react";
 import { CheckCircle2, Activity, AlertTriangle, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,9 @@ interface KPIRowProps {
 }
 
 export function KPIRow({ artisans, loading }: KPIRowProps) {
-  const now = Date.now();
+  // `now` figé au montage : Date.now() est impur en render (React Compiler).
+  // Snapshot KPI, pas de tick live → une valeur stable suffit.
+  const [now] = useState(() => Date.now());
   const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
 
   const active = artisans.filter((a) => a.status === "active");

@@ -34,6 +34,7 @@ Audit Mehdi sur dashboard Supabase :
 3. **Colonne `notes`** sur `recruitment_applications` ?
 4. **Activer RLS** sur `leads` + `interventions` + `artisans` avec policies appropriées (uniquement avant deploy prod).
 5. **Table `audit_logs`** — à créer pour activer le drawer "Historique" du lead. Voir bloc SQL section 6 ci-dessous. Le code est déjà branché : `lib/audit-logs.ts` (insert best-effort, swallow `42P01`) et `lib/hooks/admin-queries.ts → useLeadAuditLogs()` (lecture, retourne `[]` si table absente). Sans la migration, l'UI affiche simplement "Pas d'événements".
+6. **Table `contact_messages`** — ⚠️ **à créer** pour que le formulaire `/contact` persiste les messages. Voir bloc SQL section 7 ci-dessous. Le code est déjà branché : `app/api/contact/route.ts` insère via service_role. Sans la migration, l'insert DB échoue ; la route bascule sur l'email Resend seul (et renvoie `502` si l'email échoue aussi).
 
 Tant que ces points ne sont pas validés, **NE PAS** exécuter les migrations ci-dessous.
 
@@ -288,6 +289,49 @@ create policy "Authenticated can insert audit_logs"
 
 ---
 
+## 7. Table `contact_messages` (formulaire de contact public)
+
+**Pourquoi** : persister les messages du formulaire `/contact`. Avant cette table, le formulaire n'envoyait **rien** (faux écran de succès, 100% des leads perdus). La route `app/api/contact/route.ts` insère désormais ici via la clé **service_role** (l'insert bypass RLS — aucune policy `insert` publique n'est donc nécessaire, ce qui est plus sûr que la clé ANON).
+
+```sql
+create table if not exists contact_messages (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  request_type text not null default 'autre'
+    check (request_type in ('question', 'reclamation', 'recrutement', 'presse', 'autre')),
+  subject text not null,
+  message text not null,
+  status text not null default 'new'
+    check (status in ('new', 'read', 'replied', 'archived')),
+  created_at timestamp with time zone default now()
+);
+
+create index if not exists idx_contact_messages_status on contact_messages (status);
+create index if not exists idx_contact_messages_request_type on contact_messages (request_type);
+create index if not exists idx_contact_messages_created_at on contact_messages (created_at desc);
+
+alter table contact_messages enable row level security;
+
+-- Pas de policy INSERT publique : la route serveur écrit via service_role (bypass RLS).
+-- Lecture / mise à jour réservées à l'admin authentifié (drawer leads contact).
+create policy "Authenticated can read contact_messages"
+  on contact_messages for select
+  using (auth.role() = 'authenticated');
+
+create policy "Authenticated can update contact_messages"
+  on contact_messages for update
+  using (auth.role() = 'authenticated');
+```
+
+**Pré-requis env** : `SUPABASE_SERVICE_ROLE_KEY` doit être défini côté serveur (Vercel + `.env.local`). Sans cette clé, l'insert est skip et la route retombe sur l'email seul ; si l'email Resend est lui aussi indisponible, la route renvoie `502` et le front affiche le repli téléphone (plus de faux succès).
+
+**Routage par `request_type`** (géré côté route, pas SQL) :
+- `reclamation` → email à priorité haute, objet distinct `🔴 RÉCLAMATION …`.
+- `recrutement` → en plus de `contact_messages`, insert best-effort dans `recruitment_applications` (téléphone/métiers/zone vides car non collectés par le formulaire contact ; le `message` est préfixé pour tracer l'origine).
+
+---
+
 ## Workflow d'exécution
 
 1. **Aller** dans le dashboard Supabase → SQL Editor
@@ -310,6 +354,7 @@ Une fois tout exécuté, tester :
 | 4. recruitment.notes | Ouvrir drawer candidature admin, ajouter note, vérifier persistance |
 | 5. interventions | Insérer manuellement une intervention test, vérifier qu'elle apparaît dans `/admin` KPI artisans + `/artisan/missions` |
 | 6. audit_logs | Changer le statut d'un lead, vérifier qu'une ligne audit_logs est insérée |
+| 7. contact_messages | Soumettre le formulaire `/contact` → vérifier la ligne en DB + l'email reçu sur contact@monjoel.fr. Tester un type `reclamation` (objet email prioritaire) et `recrutement` (ligne aussi dans recruitment_applications) |
 
 ---
 
@@ -318,6 +363,7 @@ Une fois tout exécuté, tester :
 Chaque migration est réversible :
 
 ```sql
+-- 7. drop table contact_messages cascade;
 -- 6. drop table audit_logs cascade;
 -- 5. drop table interventions cascade;
 -- 4. alter table recruitment_applications drop column if exists notes;

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import * as Sentry from "@sentry/nextjs";
 import { getSupabaseClient } from "@/lib/supabase";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 // Configuration
 const NOTIFICATION_EMAIL = "contact@monjoel.fr";
@@ -17,6 +19,14 @@ interface QuoteRequest {
   urgency?: "urgent" | "today" | "planned";
   postalCode: string;
   phone: string;
+  /** Optionnel — présent quand un client connecté soumet (lie le lead à son compte). */
+  email?: string;
+  /** Optionnel — id Supabase Auth du client connecté, si soumission depuis l'espace client. */
+  userId?: string;
+  /** Honeypot anti-bot (R8) — doit être vide ; rempli ⇒ bot, soumission ignorée. */
+  company?: string;
+  /** Attribution marketing (gclid/utm/landing) capturée côté client (lib/attribution.ts). */
+  attribution?: Record<string, string>;
   recaptchaToken?: string;
 }
 
@@ -41,9 +51,33 @@ async function verifyRecaptcha(token: string): Promise<{ success: boolean; score
     
     return { success: data.success, score: data.score };
   } catch (error) {
-    console.error("reCAPTCHA verification error:", error);
-    return { success: false };
+    // FAIL-OPEN : une panne réseau / timeout côté Google ne doit JAMAIS
+    // bloquer un vrai lead. On autorise (le honeypot + le rate-limit + le
+    // score reCAPTCHA quand il répond restent les garde-fous anti-bot).
+    console.error("reCAPTCHA verification error (fail-open, autorisé):", error);
+    return { success: true };
   }
+}
+
+// Clés d'attribution autorisées (whitelist) — alignées avec lib/attribution.ts
+// et les colonnes de la table leads (cf. supabase-migration.sql).
+const ATTR_KEYS = [
+  "gclid", "gbraid", "wbraid",
+  "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+  "landing_page", "referrer",
+] as const;
+
+function sanitizeAttribution(raw: unknown): Record<string, string> {
+  const out: Record<string, string> = {};
+  if (raw && typeof raw === "object") {
+    for (const key of ATTR_KEYS) {
+      const value = (raw as Record<string, unknown>)[key];
+      if (typeof value === "string" && value.trim()) {
+        out[key] = value.trim().slice(0, 512);
+      }
+    }
+  }
+  return out;
 }
 
 const urgencyLabels: Record<string, string> = {
@@ -61,6 +95,12 @@ interface LeadData {
   postalCode: string;
   phone: string;
   phoneRaw: string;
+  /** Email du client (null si soumission anonyme). Sert à lier le lead au compte. */
+  email: string | null;
+  /** id Supabase Auth du client (null si soumission anonyme). */
+  userId: string | null;
+  /** Attribution marketing (gclid/utm/landing/referrer) — colonnes de la table leads. */
+  attribution: Record<string, string>;
   timestamp: string;
   source: string;
 }
@@ -102,7 +142,7 @@ const problemToTrade: Record<string, string> = {
 // ============================================
 // FONCTION 1: Notification WhatsApp Business
 // ============================================
-async function sendWhatsAppNotification(leadData: LeadData): Promise<void> {
+async function sendWhatsAppNotification(leadData: LeadData): Promise<boolean> {
   const message = `🚨 *NOUVELLE DEMANDE*
 
 ${leadData.urgencyLabel}
@@ -127,7 +167,7 @@ ${leadData.urgencyLabel}
       throw new Error(`CallMeBot error: ${response.status}`);
     }
     console.log("✅ WhatsApp notification sent via CallMeBot");
-    return;
+    return true;
   }
 
   // Option 2: API WhatsApp Business officielle (si configurée)
@@ -157,22 +197,23 @@ ${leadData.urgencyLabel}
       throw new Error(`WhatsApp API error: ${error}`);
     }
     console.log("✅ WhatsApp notification sent via Business API");
-    return;
+    return true;
   }
 
   // Aucune API configurée - log warning
   console.warn("⚠️ WhatsApp notification skipped: No API key configured");
+  return false;
 }
 
 // ============================================
 // FONCTION 2: Sauvegarde dans Supabase
 // ============================================
-async function saveToSupabase(leadData: LeadData): Promise<void> {
+async function saveToSupabase(leadData: LeadData): Promise<boolean> {
   const supabase = getSupabaseClient();
-  
+
   if (!supabase) {
     console.warn("⚠️ Supabase not configured, skipping database save");
-    return;
+    return false;
   }
 
   const { error } = await supabase.from("leads").insert([{
@@ -181,6 +222,11 @@ async function saveToSupabase(leadData: LeadData): Promise<void> {
     trade: leadData.trade,
     postal_code: leadData.postalCode,
     phone: leadData.phoneRaw,
+    email: leadData.email,          // lie le lead au compte client (RLS: email = auth.email())
+    user_id: leadData.userId,       // idem via user_id (RLS: user_id = auth.uid())
+    urgency: leadData.urgency,
+    urgency_label: leadData.urgencyLabel,
+    ...leadData.attribution,        // gclid / utm_* / landing_page / referrer (colonnes leads)
     source: leadData.source,
     status: "new",
   }]);
@@ -190,15 +236,16 @@ async function saveToSupabase(leadData: LeadData): Promise<void> {
   }
   
   console.log("✅ Lead saved to Supabase");
+  return true;
 }
 
 // ============================================
 // FONCTION 3: Notification Email via Resend
 // ============================================
-async function sendEmailNotification(leadData: LeadData): Promise<void> {
+async function sendEmailNotification(leadData: LeadData): Promise<boolean> {
   if (!resend) {
     console.warn("⚠️ Resend not configured, skipping email notification");
-    return;
+    return false;
   }
 
   const emailHtml = `
@@ -274,6 +321,7 @@ async function sendEmailNotification(leadData: LeadData): Promise<void> {
   }
   
   console.log("✅ Email notification sent via Resend");
+  return true;
 }
 
 // ============================================
@@ -283,11 +331,41 @@ export async function POST(request: NextRequest) {
   try {
     const body: QuoteRequest = await request.json();
 
+    // Honeypot anti-bot (R8) : si le champ piège "company" est rempli, c'est un
+    // bot. On renvoie un faux succès (200) pour ne pas lui révéler le filtre,
+    // mais on ne sauvegarde / ne notifie RIEN.
+    if (typeof body.company === "string" && body.company.trim() !== "") {
+      console.warn("🚫 Honeypot déclenché sur /api/quote — soumission ignorée (bot)");
+      return NextResponse.json({
+        success: true,
+        message: "Demande reçue ! Nous vous rappelons dans les 2 minutes.",
+      });
+    }
+
     // Validation
     if (!body.problem || !body.postalCode || !body.phone) {
       return NextResponse.json(
         { error: "Tous les champs sont requis" },
         { status: 400 }
+      );
+    }
+
+    // Rate-limit anti-spam (R8) — APRÈS le honeypot, AVANT le traitement.
+    // Deux clés : par IP (flood général) et par téléphone (flood ciblé). Le
+    // helper est FAIL-OPEN : si la migration n'est pas appliquée ou si l'RPC
+    // échoue, il renvoie true → on ne bloque JAMAIS un vrai lead.
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const phoneKey = body.phone.replace(/\s/g, "");
+    const rlSupabase = getSupabaseClient();
+    const [ipOk, phoneOk] = await Promise.all([
+      checkRateLimit(rlSupabase, `quote:ip:${ip}`, 5, 600),
+      checkRateLimit(rlSupabase, `quote:phone:${phoneKey}`, 3, 600),
+    ]);
+    if (!ipOk || !phoneOk) {
+      console.warn(`🚦 Rate-limit /api/quote dépassé (ip=${ip})`);
+      return NextResponse.json(
+        { error: "Trop de demandes. Réessayez dans quelques minutes ou appelez-nous." },
+        { status: 429 }
       );
     }
 
@@ -335,6 +413,25 @@ export async function POST(request: NextRequest) {
     // Formatage du téléphone pour affichage
     const formattedPhone = cleanPhone.replace(/(\d{2})(?=\d)/g, "$1 ");
 
+    // Liaison optionnelle à un compte client (soumission depuis l'espace client).
+    // On valide légèrement : l'email/user_id ne servent qu'à RETROUVER ses propres
+    // leads — la RLS lit toujours auth.uid()/auth.email() de la SESSION, jamais ces
+    // valeurs, donc un spoof ne permet aucune exfiltration.
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const email =
+      typeof body.email === "string" && emailRegex.test(body.email.trim())
+        ? body.email.trim().toLowerCase()
+        : null;
+    const uuidRegex =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    const userId =
+      typeof body.userId === "string" && uuidRegex.test(body.userId)
+        ? body.userId
+        : null;
+
+    // Attribution marketing (R9) — sanitize : clés connues, string, tronquées.
+    const attribution = sanitizeAttribution(body.attribution);
+
     // Préparer les données du lead
     const urgency = body.urgency || "urgent";
     const leadData: LeadData = {
@@ -346,6 +443,9 @@ export async function POST(request: NextRequest) {
       postalCode: body.postalCode,
       phone: formattedPhone,
       phoneRaw: cleanPhone,
+      email,
+      userId,
+      attribution,
       timestamp: new Date().toISOString(),
       source: "website_quote_form",
     };
@@ -359,15 +459,41 @@ export async function POST(request: NextRequest) {
       sendEmailNotification(leadData),
     ]);
 
-    // Log des résultats
+    // Remonter chaque canal en échec vers Sentry (sinon allSettled les avale
+    // silencieusement — c'est exactement la fuite de lead qu'on corrige : R5).
     const channels = ["WhatsApp", "Supabase", "Email"];
     results.forEach((result, index) => {
       if (result.status === "rejected") {
         console.error(`❌ ${channels[index]} failed:`, result.reason);
+        Sentry.captureException(result.reason, {
+          tags: { route: "quote", channel: channels[index] },
+        });
       }
     });
 
-    // Réponse succès (même si certaines notifications échouent)
+    // Le lead n'est réellement « capturé » que si AU MOINS un canal durable a
+    // abouti : WhatsApp (rappel immédiat), Supabase (CRM admin) ou email équipe.
+    // Si les trois ont échoué / sont absents → on NE renvoie PAS un faux succès :
+    // statut 502 + repli téléphone, pour ne jamais perdre un lead en silence.
+    const captured = results.some(
+      (r) => r.status === "fulfilled" && r.value === true,
+    );
+
+    if (!captured) {
+      Sentry.captureMessage(
+        "Quote lead NON capturé — tous les canaux ont échoué",
+        { level: "error", tags: { route: "quote" } },
+      );
+      return NextResponse.json(
+        {
+          error: `Votre demande n'a pas pu être enregistrée. Appelez-nous vite au ${PHONE_NUMBER}.`,
+          phone: PHONE_NUMBER,
+        },
+        { status: 502 },
+      );
+    }
+
+    // Réponse succès (au moins un canal durable a réussi)
     return NextResponse.json({
       success: true,
       message: "Demande reçue ! Nous vous rappelons dans les 2 minutes.",

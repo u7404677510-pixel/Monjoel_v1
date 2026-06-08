@@ -117,7 +117,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                 </div>
                 <div className="flex items-center gap-1 3xl:gap-2 bg-white px-3 3xl:px-4 py-1.5 3xl:py-2 rounded-full shadow-xs ring-1 ring-joel-violet/10">
                   <Star size={14} className="text-joel-yellow fill-joel-yellow 3xl:w-5 3xl:h-5" />
-                  <span className="text-sm 3xl:text-base 5xl:text-lg font-medium">4.9/5 (947 avis)</span>
+                  <span className="text-sm 3xl:text-base 5xl:text-lg font-medium">Avis Google vérifiés</span>
                 </div>
               </div>
 
@@ -262,8 +262,8 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                 >
                   <Star size={14} className="text-joel-yellow fill-joel-yellow" />
                   <div className="leading-tight">
-                    <p className="text-xs font-bold">4.9/5</p>
-                    <p className="text-[10px] text-white/80">947 avis Google</p>
+                    <p className="text-xs font-bold">Avis Google</p>
+                    <p className="text-[10px] text-white/80">vérifiés</p>
                   </div>
                 </motion.div>
               </div>
@@ -413,8 +413,7 @@ export default function TradeVarianteB({ config, variant }: TradeVarianteBProps)
                       <Star key={i} size={14} className="text-joel-yellow fill-joel-yellow" />
                     ))}
                   </div>
-                  <span className="font-bold text-gray-900 text-sm">4.9/5</span>
-                  <span className="text-gray-400 text-xs">· 947 avis Google</span>
+                  <span className="font-bold text-gray-900 text-sm">Avis Google vérifiés</span>
                 </div>
               </div>
 

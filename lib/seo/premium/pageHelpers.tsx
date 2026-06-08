@@ -43,8 +43,6 @@ function shouldUseV2(_tradeSlug: string, _citySlug: string, _serviceSlug?: strin
   return true;
 }
 import FinalCTA from "@/components/sections/FinalCTA";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import MidPageCTA from "@/components/MidPageCTA";
 
@@ -211,8 +209,9 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
     const cityLinkMap = distributeLinksAcrossSections(cityLinks, premium.sections.length);
     const useV2 = shouldUseV2(tradeSlug, citySlug);
     const Renderer = useV2 ? PremiumPageRendererV2 : PremiumPageRenderer;
-    // V2 a son propre <main> + Navigation/Footer rendus par LayoutWrapper.
-    // V1 (legacy) garde le wrapper Navigation/<main>/Footer pour compat.
+    // Navigation + <main id="main-content"> + Footer sont fournis par
+    // components/LayoutWrapper.tsx pour ces routes publiques. On ne rend ici
+    // que le contenu (V2 comme V1 legacy) pour éviter le double landmark.
     if (useV2) {
       return (
         <>
@@ -231,20 +230,16 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
     }
     return (
       <>
-        <Navigation />
-        <main>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city) }}
-          />
-          <Renderer
-            content={premium}
-            trade={trade}
-            city={city}
-            contextualLinks={cityLinkMap}
-          />
-        </main>
-        <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city) }}
+        />
+        <Renderer
+          content={premium}
+          trade={trade}
+          city={city}
+          contextualLinks={cityLinkMap}
+        />
       </>
     );
   }
@@ -253,9 +248,7 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
   const content = generateCityPageContent(trade, city);
   return (
     <>
-      <Navigation />
-      <main>
-        <LocalSchema trade={trade} city={city} faqItems={content.faq} />
+      <LocalSchema trade={trade} city={city} faqItems={content.faq} />
         <CityHero trade={trade} city={city} content={content} />
         <FallbackIntro content={content} />
         <FallbackLocalIndicators content={content} city={city} />
@@ -284,8 +277,6 @@ export function CityPageBody({ tradeSlug, citySlug }: { tradeSlug: string; cityS
           return <NearbyAreas trade={trade} city={city} nearbyCities={nearbyPremium} />;
         })()}
         <FinalCTA />
-      </main>
-      <Footer />
     </>
   );
 }
@@ -317,21 +308,17 @@ export function ServicePageBody({
     const serviceLinkMap = distributeLinksAcrossSections(serviceLinks, premium.sections.length);
     return (
       <>
-        <Navigation />
-        <main>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city, service) }}
-          />
-          <PremiumPageRenderer
-            content={premium}
-            trade={trade}
-            city={city}
-            service={service}
-            contextualLinks={serviceLinkMap}
-          />
-        </main>
-        <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: generatePremiumSchemas(premium, trade, city, service) }}
+        />
+        <PremiumPageRenderer
+          content={premium}
+          trade={trade}
+          city={city}
+          service={service}
+          contextualLinks={serviceLinkMap}
+        />
       </>
     );
   }
@@ -340,9 +327,7 @@ export function ServicePageBody({
   const content = generateServicePageContent(trade, service, city);
   return (
     <>
-      <Navigation />
-      <main>
-        <LocalSchema trade={trade} city={city} faqItems={content.faq} service={service} />
+      <LocalSchema trade={trade} city={city} faqItems={content.faq} service={service} />
         <CityHero trade={trade} city={city} content={content} service={service} />
         <FallbackServiceBlock trade={trade} city={city} service={service} content={content} />
         <FallbackLocalIndicators content={content} city={city} />
@@ -376,8 +361,6 @@ export function ServicePageBody({
           return <NearbyAreas trade={trade} city={city} nearbyCities={nearbyPremium} />;
         })()}
         <FinalCTA />
-      </main>
-      <Footer />
     </>
   );
 }

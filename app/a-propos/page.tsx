@@ -62,7 +62,7 @@ function AProposHeroCTA() {
       </a>
       <span className="inline-flex items-center gap-2 text-xs text-gray-500">
         <Star size={12} className="fill-joel-yellow text-joel-yellow" />
-        <span>4.9/5 sur 947 avis Google · Disponible 24h/24</span>
+        <span>Avis Google vérifiés · Disponible 24h/24</span>
       </span>
     </div>
   );

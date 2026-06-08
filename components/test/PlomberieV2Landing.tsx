@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Phone, Star, Shield, Check, Clock, ArrowRight,
   ChevronDown, Droplets, MapPin, Award, Quote
@@ -168,8 +169,7 @@ export default function PlomberieV2Landing() {
                   <Star key={i} size={18} className="text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
-              <span className="text-white font-bold">4.9/5</span>
-              <span className="text-white/60 text-sm">sur Google (947 avis vérifiés)</span>
+              <span className="text-white/60 text-sm">Avis Google vérifiés</span>
             </div>
 
             {/* CTAs */}
@@ -215,7 +215,7 @@ export default function PlomberieV2Landing() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 md:divide-x md:divide-white/20">
             {[
-              { icon: Star, value: "4.9/5 Google", sub: "947 avis vérifiés" },
+              { icon: Star, value: "Avis Google", sub: "Vérifiés" },
               { icon: Clock, value: "20 min maxi", sub: "Paris & IDF" },
               { icon: Shield, value: "Prix fixe", sub: "Annoncé avant départ" },
               { icon: Phone, value: "24h/24 • 7j/7", sub: "Sans majoration" },
@@ -375,7 +375,7 @@ export default function PlomberieV2Landing() {
             <div>
               <p className="text-p1-blue font-bold text-sm uppercase tracking-widest mb-2">Ce qu'ils en disent</p>
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900">
-                947 clients ne se sont pas trompés.
+                Ils ne se sont pas trompés.
               </h2>
             </div>
             <div className="flex items-center gap-3 bg-white rounded-2xl px-5 py-3 shadow-xs border border-blue-100 shrink-0">
@@ -385,7 +385,7 @@ export default function PlomberieV2Landing() {
                 ))}
               </div>
               <div>
-                <p className="font-bold text-gray-900 text-sm">4.9 / 5</p>
+                <p className="font-bold text-gray-900 text-sm">Avis vérifiés</p>
                 <p className="text-gray-400 text-xs">Google Reviews</p>
               </div>
             </div>
@@ -504,8 +504,8 @@ export default function PlomberieV2Landing() {
             <span className="text-white/40 text-sm">— Plomberie d'urgence Paris & IDF</span>
           </div>
           <div className="flex items-center gap-6 text-white/40 text-xs">
-            <a href="/mentions-legales" className="hover:text-white/70 transition-colors">Mentions légales</a>
-            <a href="/confidentialite" className="hover:text-white/70 transition-colors">Confidentialité</a>
+            <Link href="/mentions-legales" className="hover:text-white/70 transition-colors">Mentions légales</Link>
+            <Link href="/confidentialite" className="hover:text-white/70 transition-colors">Confidentialité</Link>
           </div>
         </div>
       </footer>

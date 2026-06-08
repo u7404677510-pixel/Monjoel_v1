@@ -5,6 +5,8 @@ import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { Send, CheckCircle, Phone, MapPin, Wrench, Loader2, X } from "lucide-react";
 import { useSiteConfig, formatPhoneForTel } from "@/lib/hooks/useSiteConfig";
+import { supabase } from "@/lib/supabase";
+import { getAttribution } from "@/lib/attribution";
 
 type TradeType = "serrurerie" | "plomberie" | "electricite";
 
@@ -112,6 +114,8 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
   const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isMounted, setIsMounted] = useState(false);
+  // Honeypot anti-bot (R8) — doit rester vide ; rempli ⇒ soumission ignorée serveur.
+  const [company, setCompany] = useState("");
 
   const problemList = getProblemList(trade);
   const problemLabel = trade ? tradeLabel[trade] : "Votre problème";
@@ -186,10 +190,29 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
     try {
       const recaptchaToken = await getRecaptchaToken();
 
+      // Si un client est connecté (ex: "Nouvelle demande" depuis l'espace
+      // client), on lie le lead à son compte pour qu'il le retrouve dans
+      // /client/interventions. Sinon lead anonyme (lié plus tard côté admin).
+      let email: string | undefined;
+      let userId: string | undefined;
+      try {
+        if (supabase) {
+          const {
+            data: { session },
+          } = await supabase.auth.getSession();
+          if (session?.user) {
+            email = session.user.email ?? undefined;
+            userId = session.user.id;
+          }
+        }
+      } catch {
+        /* pas de session disponible → soumission anonyme */
+      }
+
       const response = await fetch("/api/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, recaptchaToken }),
+        body: JSON.stringify({ ...formData, email, userId, company, attribution: getAttribution(), recaptchaToken }),
       });
 
       if (response.ok) {
@@ -201,10 +224,16 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
             form_trade: trade ?? "global",
           });
         }
-        if (typeof window !== "undefined" && typeof window.gtag === "function") {
-          window.gtag("event", "conversion", {
-            send_to: "AW-17805011663/devis_form_success",
-          });
+        // Conversion Google Ads — label piloté par env (plus de valeur en dur
+        // invalide) ; ne se déclenche QUE si défini. GTM écoute par ailleurs
+        // l'event dataLayer `quote_form_success` poussé juste au-dessus.
+        const adsConversionLabel = process.env.NEXT_PUBLIC_GADS_CONVERSION_LABEL;
+        if (
+          adsConversionLabel &&
+          typeof window !== "undefined" &&
+          typeof window.gtag === "function"
+        ) {
+          window.gtag("event", "conversion", { send_to: adsConversionLabel });
         }
       } else {
         throw new Error("Erreur lors de l'envoi");
@@ -270,6 +299,21 @@ export default function QuickQuoteForm({ variant = "inline", onClose, defaultSer
         <p className="text-gray-600 text-sm">
           Décrivez votre problème, nous vous rappelons immédiatement.
         </p>
+      </div>
+
+      {/* Honeypot anti-bot (R8) — champ invisible et hors-tab : un humain ne le
+          remplit jamais, beaucoup de bots oui. Rempli ⇒ soumission ignorée côté
+          serveur. aria-hidden + tabIndex -1 = invisible lecteurs d'écran/clavier. */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}>
+        <label htmlFor="qq-company">Ne pas remplir ce champ</label>
+        <input
+          id="qq-company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+        />
       </div>
 
       {/* Problem select — contextuel selon trade */}

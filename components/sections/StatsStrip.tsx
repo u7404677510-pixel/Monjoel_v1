@@ -9,7 +9,7 @@
 
 const stats = [
   { value: "15 000+", label: "interventions réalisées" },
-  { value: "4.9/5", label: "sur Google (947 avis)" },
+  { value: "Devis", label: "gratuit & sans engagement" },
   { value: "30 min", label: "délai moyen d'arrivée" },
   { value: "100%", label: "prix fixe garanti" },
 ];

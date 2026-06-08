@@ -479,8 +479,7 @@ export default function HeroCinematic() {
               className="fill-joel-yellow text-joel-yellow"
               aria-hidden="true"
             />
-            <span className="font-semibold text-white">4.9</span>
-            <span>(947)</span>
+            <span className="font-semibold text-white">Avis Google vérifiés</span>
           </span>
         </motion.div>
 

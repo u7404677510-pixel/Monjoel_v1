@@ -208,7 +208,7 @@ export default function JoelUberHomepage() {
         <Container>
           <div className="flex items-center justify-between" style={{ height: 64 }}>
             {/* Logo */}
-            <a href="/" className="flex items-center cursor-pointer select-none">
+            <Link href="/" className="flex items-center cursor-pointer select-none">
               <Image
                 src="/logo-white.webp"
                 alt="Joël"
@@ -216,7 +216,7 @@ export default function JoelUberHomepage() {
                 height={28}
                 className="h-7 w-auto object-contain"
               />
-            </a>
+            </Link>
 
             {/* Nav links */}
             <div className="hidden md:flex items-center gap-8">
@@ -236,7 +236,7 @@ export default function JoelUberHomepage() {
             {/* Right actions */}
             <div className="hidden md:flex items-center gap-4">
               <span style={{ color: "#fff", fontSize: 13, opacity: 0.7 }}>🌍 Paris, FR</span>
-              <a href="/contact" style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}>Aide</a>
+              <Link href="/contact" style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}>Aide</Link>
               <a href="#" style={{ color: "#fff", fontSize: 14, textDecoration: "none", opacity: 0.8 }}>Connexion</a>
               <a
                 href={PHONE_TEL}
@@ -422,9 +422,9 @@ export default function JoelUberHomepage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <BtnPrimary href="#">Se connecter à mon compte</BtnPrimary>
-                <a href="/recrutement" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
+                <Link href="/recrutement" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
                   Créer un compte
-                </a>
+                </Link>
               </div>
             </div>
             <div style={{ borderRadius: 16, height: 360, position: "relative", overflow: "hidden" }}>
@@ -483,9 +483,9 @@ export default function JoelUberHomepage() {
                   <p style={{ fontSize: 15, lineHeight: 1.6, color: "#1A1A1A" }}>{item.text}</p>
                 </div>
               ))}
-              <a href="/cgu" style={{ color: "#6B6B6B", fontSize: 14, textDecoration: "underline" }}>
+              <Link href="/cgu" style={{ color: "#6B6B6B", fontSize: 14, textDecoration: "underline" }}>
                 Voir les conditions générales
-              </a>
+              </Link>
             </div>
 
             {/* Image planifier — 3e colonne desktop */}
@@ -686,9 +686,9 @@ export default function JoelUberHomepage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <BtnPrimary href="/recrutement">Commencer</BtnPrimary>
-                <a href="/a-propos" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
+                <Link href="/a-propos" style={{ color: "#000", fontSize: 15, fontWeight: 500, textDecoration: "underline", display: "flex", alignItems: "center" }}>
                   Découvrir nos solutions pro →
-                </a>
+                </Link>
               </div>
             </div>
             <div style={{ borderRadius: 16, height: 400, position: "relative", overflow: "hidden" }}>
@@ -743,7 +743,7 @@ export default function JoelUberHomepage() {
         <Container>
           {/* Top row */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-8" style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src="/logo-white.webp"
                 alt="Joël"
@@ -751,7 +751,7 @@ export default function JoelUberHomepage() {
                 height={28}
                 className="h-7 w-auto object-contain"
               />
-            </a>
+            </Link>
             <div className="flex items-center gap-2" style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>
               <span style={{ color: "#4CAF50" }}>✅</span>
               <span>Tous les services opérationnels · 24h/24 · 7j/7</span>
@@ -760,9 +760,9 @@ export default function JoelUberHomepage() {
 
           {/* Help link */}
           <div className="py-6" style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
-            <a href="/contact" style={{ color: "#fff", fontSize: 15, fontWeight: 600, textDecoration: "none" }}>
+            <Link href="/contact" style={{ color: "#fff", fontSize: 15, fontWeight: 600, textDecoration: "none" }}>
               Accéder au centre d'aide →
-            </a>
+            </Link>
           </div>
 
           {/* 4 columns */}

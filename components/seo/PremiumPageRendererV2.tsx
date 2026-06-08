@@ -530,7 +530,7 @@ export default function PremiumPageRendererV2({
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-zinc-700 text-xs font-semibold shadow-xs ring-1 ring-joel-violet/10">
                   <Star size={12} className="text-joel-yellow fill-joel-yellow" />
-                  4.9/5 (947 avis)
+                  Avis Google vérifiés
                 </span>
               </motion.div>
 
@@ -675,8 +675,8 @@ export default function PremiumPageRendererV2({
                 >
                   <Star size={13} className="text-joel-yellow fill-joel-yellow" />
                   <div className="leading-tight">
-                    <p className="text-xs font-bold">4.9/5</p>
-                    <p className="text-[10px] text-white/80">947 avis Google</p>
+                    <p className="text-xs font-bold">Avis Google</p>
+                    <p className="text-[10px] text-white/80">vérifiés</p>
                   </div>
                 </motion.div>
               </div>
@@ -1061,8 +1061,7 @@ export default function PremiumPageRendererV2({
                     <Star key={i} size={15} className="text-joel-yellow fill-joel-yellow" />
                   ))}
                 </div>
-                <span className="font-bold text-zinc-900 text-sm">4.9/5</span>
-                <span className="text-zinc-400 text-xs">· {content.temoignages.length} avis locaux</span>
+                <span className="text-zinc-400 text-xs">{content.temoignages.length} avis locaux</span>
               </div>
             </motion.div>
 
@@ -1381,7 +1380,7 @@ export default function PremiumPageRendererV2({
               <div className="mt-7 pt-7 border-t border-white/15 flex flex-wrap items-center justify-center gap-6 text-xs text-white/70">
                 <span className="inline-flex items-center gap-1.5">
                   <Star size={12} className="text-joel-yellow fill-joel-yellow" />
-                  4.9/5 · 947 avis Google
+                  Avis Google vérifiés
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Shield size={12} className="text-joel-yellow" />

@@ -1,4 +1,5 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { createBrowserClient } from '@supabase/ssr';
 
 // Lazy initialization to avoid issues during SSG build
 let supabaseInstance: SupabaseClient | null = null;
@@ -19,7 +20,15 @@ function getSupabaseClient(): SupabaseClient | null {
     return null;
   }
 
-  supabaseInstance = createClient(supabaseUrl, supabaseAnonKey);
+  // Navigateur : client cookie-based (@supabase/ssr) → la session est lisible
+  // côté serveur (proxy + route handlers via getUser()) ET partagée par tous
+  // les clients navigateur (login, layout admin, hooks data RLS-authenticated).
+  // Serveur (API routes) : client anon classique, sans session persistée, pour
+  // les inserts publics (leads, recrutement…). Comportement serveur inchangé.
+  supabaseInstance =
+    typeof window === 'undefined'
+      ? createClient(supabaseUrl, supabaseAnonKey)
+      : (createBrowserClient(supabaseUrl, supabaseAnonKey) as SupabaseClient);
   return supabaseInstance;
 }
 
@@ -90,6 +99,11 @@ export interface Lead {
   notes: string | null;
   created_at: string;
   updated_at: string;
+  /** Liaison au compte client (RLS). Optionnels — null pour un lead anonyme. */
+  user_id?: string | null;
+  email?: string | null;
+  urgency?: string | null;
+  urgency_label?: string | null;
 }
 
 export interface RecruitmentApplication {
@@ -104,5 +118,16 @@ export interface RecruitmentApplication {
   status: string;
   created_at: string;
   updated_at: string;
+}
+
+export interface ContactMessage {
+  id: string;
+  name: string;
+  email: string;
+  request_type: 'question' | 'reclamation' | 'recrutement' | 'presse' | 'autre';
+  subject: string;
+  message: string;
+  status: 'new' | 'read' | 'replied' | 'archived';
+  created_at: string;
 }
 

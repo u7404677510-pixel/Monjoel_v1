@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { getSupabaseClient } from "@/lib/supabase";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 // Configuration
 const NOTIFICATION_EMAIL = "contact@monjoel.fr";
@@ -184,6 +185,24 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: "Numéro de téléphone invalide." },
         { status: 400 }
+      );
+    }
+
+    // Rate-limit anti-spam (R8) — AVANT le traitement. Deux clés : par IP
+    // (flood général) et par téléphone (flood ciblé). FAIL-OPEN : si la
+    // migration n'est pas appliquée ou si l'RPC échoue, le helper renvoie
+    // true → on ne bloque JAMAIS une vraie candidature.
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const rlSupabase = getSupabaseClient();
+    const [ipOk, phoneOk] = await Promise.all([
+      checkRateLimit(rlSupabase, `recruitment:ip:${ip}`, 5, 600),
+      checkRateLimit(rlSupabase, `recruitment:phone:${cleanPhone}`, 3, 600),
+    ]);
+    if (!ipOk || !phoneOk) {
+      console.warn(`🚦 Rate-limit /api/recruitment dépassé (ip=${ip})`);
+      return NextResponse.json(
+        { error: "Trop de demandes. Réessayez dans quelques minutes ou appelez-nous." },
+        { status: 429 }
       );
     }
 

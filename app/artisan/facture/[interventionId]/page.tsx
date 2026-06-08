@@ -62,7 +62,7 @@ export default function FacturePage() {
 
         let problemLabel: string | null = null;
         let postalCode: string | null = iv?.postal_code ?? null;
-        let address: string | null = iv?.address ?? null;
+        const address: string | null = iv?.address ?? null;
         let clientPhone: string | null = null;
 
         if (iv?.lead_id) {

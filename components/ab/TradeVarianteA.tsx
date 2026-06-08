@@ -132,7 +132,7 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
             {/* Trust badge */}
             <div className="flex items-center gap-2 3xl:gap-3 bg-white/10 backdrop-blur-xs px-4 3xl:px-5 py-2 3xl:py-3 rounded-full w-fit">
               <Star size={18} className="text-joel-yellow fill-joel-yellow 3xl:w-6 3xl:h-6" />
-              <span className="text-white text-sm 3xl:text-base 5xl:text-lg font-medium">4.9/5 (947 avis Google)</span>
+              <span className="text-white text-sm 3xl:text-base 5xl:text-lg font-medium">Avis Google vérifiés</span>
             </div>
 
             {/* Prix */}
@@ -155,7 +155,7 @@ export default function TradeVarianteA({ config, variant }: TradeVarianteAProps)
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 3xl:gap-10 text-center">
             {[
               { value: "30 min", label: "Intervention moyenne" },
-              { value: "947", label: "Avis 5 étoiles" },
+              { value: "Vérifiés", label: "Avis Google" },
               { value: "0€", label: "Majoration nuit" },
               { value: "24h/24", label: "Disponibilité" },
             ].map((stat) => (

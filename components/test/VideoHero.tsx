@@ -102,7 +102,7 @@ export default function VideoHero({
           <div className="flex flex-wrap gap-4 mb-8">
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-4 py-2 rounded-full">
               <Star size={18} className="text-yellow-400 fill-yellow-400" />
-              <span className="text-white text-sm font-medium">4.9/5 (947 avis Google)</span>
+              <span className="text-white text-sm font-medium">Avis Google vérifiés</span>
             </div>
           </div>
 

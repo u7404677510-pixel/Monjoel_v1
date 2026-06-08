@@ -7,7 +7,7 @@ import { getTradeBySlug } from "@/lib/data/services-definition";
 
 export const metadata: Metadata = {
   title: "Électricien d'urgence Paris & Île-de-France | Dès 59€",
-  description: "Électricien d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Panne, disjoncteur, tableau. Intervention 30 min, à partir de 59€. 01 41 69 10 08",
+  description: "Électricien d'urgence Paris & IDF. Panne, disjoncteur, tableau. Intervention 30 min, à partir de 59€. 01 41 69 10 08",
   keywords: [
     "électricien urgence Paris",
     "électricien Île-de-France",

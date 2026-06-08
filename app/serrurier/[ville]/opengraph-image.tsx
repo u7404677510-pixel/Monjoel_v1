@@ -250,14 +250,14 @@ export default async function Image({
           >
             <div
               style={{
-                fontSize: 96,
+                fontSize: 64,
                 fontWeight: 800,
                 color: COLORS.violet,
                 lineHeight: 1,
                 letterSpacing: "-0.03em",
               }}
             >
-              4.9★
+              Prix fixe
             </div>
             <div
               style={{
@@ -268,7 +268,7 @@ export default async function Image({
                 letterSpacing: "0.02em",
               }}
             >
-              947 avis
+              Sans arnaque
             </div>
             <div
               style={{
@@ -280,7 +280,7 @@ export default async function Image({
                 letterSpacing: "0.12em",
               }}
             >
-              Google
+              24h/24
             </div>
           </div>
 
