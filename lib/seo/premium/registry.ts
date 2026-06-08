@@ -176,6 +176,15 @@ import { content as serrurierEnghienLesBainsReproductionCles } from "./content/s
 import { content as serrurierLevalloisPerretReproductionCles } from "./content/serrurier-levallois-perret-reproduction-cles";
 import { content as serrurierNanterreReproductionCles } from "./content/serrurier-nanterre-reproduction-cles";
 import { content as serrurierArgenteuilReproductionCles } from "./content/serrurier-argenteuil-reproduction-cles";
+// -- Serrurier Batch 18 — reproduction-cles × grandes villes GSC (2026-06-08)
+import { content as serrurierBoulogneBillancourtReproductionCles } from "./content/serrurier-boulogne-billancourt-reproduction-cles";
+import { content as serrurierMontreuilReproductionCles } from "./content/serrurier-montreuil-reproduction-cles";
+import { content as serrurierCreteilReproductionCles } from "./content/serrurier-creteil-reproduction-cles";
+import { content as serrurierVitrySurSeineReproductionCles } from "./content/serrurier-vitry-sur-seine-reproduction-cles";
+import { content as serrurierIvrySurSeineReproductionCles } from "./content/serrurier-ivry-sur-seine-reproduction-cles";
+import { content as serrurierAntonyReproductionCles } from "./content/serrurier-antony-reproduction-cles";
+import { content as serrurierSarcellesReproductionCles } from "./content/serrurier-sarcelles-reproduction-cles";
+import { content as serrurierMeauxReproductionCles } from "./content/serrurier-meaux-reproduction-cles";
 import { content as serrurierAsnieresSurSeineCoffreFort } from "./content/serrurier-asnieres-sur-seine-coffre-fort";
 import { content as serrurierVitrySurSeineCoffreFort } from "./content/serrurier-vitry-sur-seine-coffre-fort";
 import { content as serrurierGennevilliersCoffreFort } from "./content/serrurier-gennevilliers-coffre-fort";
@@ -519,6 +528,15 @@ const _allPremiumPages: PremiumPageContent[] = [
   serrurierLevalloisPerretReproductionCles,
   serrurierNanterreReproductionCles,
   serrurierArgenteuilReproductionCles,
+  // Batch 18 — reproduction-cles × grandes villes GSC (2026-06-08)
+  serrurierBoulogneBillancourtReproductionCles,
+  serrurierMontreuilReproductionCles,
+  serrurierCreteilReproductionCles,
+  serrurierVitrySurSeineReproductionCles,
+  serrurierIvrySurSeineReproductionCles,
+  serrurierAntonyReproductionCles,
+  serrurierSarcellesReproductionCles,
+  serrurierMeauxReproductionCles,
   serrurierAsnieresSurSeineCoffreFort,
   serrurierVitrySurSeineCoffreFort,
   serrurierGennevilliersCoffreFort,
