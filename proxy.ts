@@ -304,6 +304,12 @@ export async function proxy(request: NextRequest) {
   }
 
   // /[trade]/[ville]/[service]
+  // reproduction-cles : service de nouveau ciblé (cf. registry, BLOCKED vidé).
+  // Villes premium → rendu (200). Villes PAS encore premium → 308 vers la page
+  // ville (ces URLs rankent — mieux qu'un 410, en attendant leur promotion premium).
+  if (third === "reproduction-cles" && !isPremiumService(trade, second, third)) {
+    return permanentRedirect(request, `/${trade}/${second}`);
+  }
   if (!isPremiumService(trade, second, third)) return gone();
   return NextResponse.next();
 }
