@@ -100,6 +100,15 @@ import { content as plombierConflansSainteHonorineDebouchageWc } from "./content
 import { content as plombierDammarieLesLysDebouchageWc } from "./content/plombier-dammarie-les-lys-debouchage-wc";
 import { content as plombierHouillesDebouchageWc } from "./content/plombier-houilles-debouchage-wc";
 import { content as plombierLHayLesRosesDebouchageWc } from "./content/plombier-l-hay-les-roses-debouchage-wc";
+// -- Plombier Batch 20 — fuite-eau (visible) × villes GSC (2026-06-08)
+import { content as plombierAlfortvilleFuiteEau } from "./content/plombier-alfortville-fuite-eau";
+import { content as plombierBezonsFuiteEau } from "./content/plombier-bezons-fuite-eau";
+import { content as plombierGagnyFuiteEau } from "./content/plombier-gagny-fuite-eau";
+import { content as plombierGifSurYvetteFuiteEau } from "./content/plombier-gif-sur-yvette-fuite-eau";
+import { content as plombierMalakoffFuiteEau } from "./content/plombier-malakoff-fuite-eau";
+import { content as plombierMassyFuiteEau } from "./content/plombier-massy-fuite-eau";
+import { content as plombierNoisielFuiteEau } from "./content/plombier-noisiel-fuite-eau";
+import { content as plombierPuteauxFuiteEau } from "./content/plombier-puteaux-fuite-eau";
 // -- Plombier Batch 9 — extension Vague 3 mai 2026 (banlieues 93/94)
 import { content as plombierSaintDenis } from "./content/plombier-saint-denis";
 import { content as plombierAulnaySousBois } from "./content/plombier-aulnay-sous-bois";
@@ -563,6 +572,15 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierDammarieLesLysDebouchageWc,
   plombierHouillesDebouchageWc,
   plombierLHayLesRosesDebouchageWc,
+  // Batch 20 — fuite-eau (visible) × villes GSC (2026-06-08)
+  plombierAlfortvilleFuiteEau,
+  plombierBezonsFuiteEau,
+  plombierGagnyFuiteEau,
+  plombierGifSurYvetteFuiteEau,
+  plombierMalakoffFuiteEau,
+  plombierMassyFuiteEau,
+  plombierNoisielFuiteEau,
+  plombierPuteauxFuiteEau,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
