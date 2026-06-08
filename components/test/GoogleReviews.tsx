@@ -59,8 +59,7 @@ export default function GoogleReviews() {
                       <Star key={i} size={16} className="text-yellow-400 fill-yellow-400 3xl:w-5 3xl:h-5 5xl:w-6 5xl:h-6" />
                     ))}
                   </div>
-                  <span className="font-bold text-gray-900 3xl:text-lg 5xl:text-xl">4.9</span>
-                  <span className="text-gray-500 3xl:text-lg 5xl:text-xl">(947 avis)</span>
+                  <span className="text-gray-500 3xl:text-lg 5xl:text-xl">Avis vérifiés</span>
                 </div>
               </div>
             </div>

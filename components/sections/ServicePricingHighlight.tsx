@@ -82,13 +82,10 @@ export default function ServicePricingHighlight({
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left — prix + features */}
               <div>
-                {/* Rating */}
+                {/* Trust signal */}
                 <div className="flex items-center gap-2 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} className="text-joel-yellow fill-joel-yellow" />
-                  ))}
-                  <span className="text-sm font-semibold text-gray-700">4.9/5</span>
-                  <span className="text-sm text-gray-500">(947 avis)</span>
+                  <Star size={16} className="text-joel-yellow fill-joel-yellow" />
+                  <span className="text-sm font-semibold text-gray-700">Avis Google vérifiés</span>
                 </div>
 
                 {/* Prix */}

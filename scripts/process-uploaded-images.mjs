@@ -1,20 +1,23 @@
 /**
- * scripts/process-uploaded-images.js
+ * scripts/process-uploaded-images.mjs
  *
  * Convertit les PNG ChatGPT déposées par Mehdi dans public/ vers JPG optimisés
  * aux dimensions cibles (cover crop), renomme aux noms attendus par les slots
  * et range dans public/images/ ou public/videos/. Préserve les originaux dans
  * public/_originals/.
  *
- * Lancement : `node scripts/process-uploaded-images.js`
+ * Lancement : `node scripts/process-uploaded-images.mjs`
  *
  * Dépendances : `sharp` (déjà installé en devDependencies).
  */
 
-const sharp = require("sharp");
-const fs = require("fs").promises;
-const fsSync = require("fs");
-const path = require("path");
+import sharp from "sharp";
+import * as fs from "node:fs/promises";
+import fsSync from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const PUBLIC_DIR = path.join(__dirname, "..", "public");
 const IMAGES_DIR = path.join(PUBLIC_DIR, "images");

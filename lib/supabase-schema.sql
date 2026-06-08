@@ -2,6 +2,17 @@
 -- SCHEMA SUPABASE POUR JOËL
 -- Exécute ce script dans l'éditeur SQL de Supabase
 -- =============================================
+--
+-- ⚠️  SÉCURITÉ / RLS — SOURCE DE VÉRITÉ = lib/supabase-migration.sql
+-- Ce fichier est l'INSTALL DE BASE (tables + policies minimales). Les policies
+-- RLS ci-dessous basées sur `auth.role() = 'authenticated'` sont VOLONTAIREMENT
+-- minimales et NE protègent PAS contre un client auto-inscrit (l'inscription OTP
+-- de /client est ouverte → tout inscrit est 'authenticated'). Le durcissement
+-- réel (table profiles + rôles + is_admin(), lecture `leads` scopée client/admin)
+-- est dans lib/supabase-migration.sql, à exécuter TOUJOURS ENSUITE. Sur une base
+-- existante c'est la migration qui fait foi (elle DROP+remplace ces policies).
+-- NE JAMAIS s'arrêter à ce fichier seul en prod.
+-- =============================================
 
 -- Table de configuration générale du site
 CREATE TABLE IF NOT EXISTS site_config (
@@ -133,24 +144,61 @@ ALTER TABLE seo_pages ENABLE ROW LEVEL SECURITY;
 ALTER TABLE analytics_config ENABLE ROW LEVEL SECURITY;
 ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
 
--- Politique pour lecture publique (le site peut lire)
-CREATE POLICY "Allow public read" ON site_config FOR SELECT USING (true);
-CREATE POLICY "Allow public read" ON content FOR SELECT USING (true);
-CREATE POLICY "Allow public read" ON partners FOR SELECT USING (true);
-CREATE POLICY "Allow public read" ON seo_pages FOR SELECT USING (true);
+-- ─────────────────────────────────────────────────────────────────────────
+-- Lecture publique : le site public lit la config (téléphone, couleurs,
+-- contenu, SEO, IDs analytics). Ces données finissent de toute façon dans le
+-- HTML/JS envoyé au navigateur.
+-- ─────────────────────────────────────────────────────────────────────────
+CREATE POLICY "Allow public read" ON site_config      FOR SELECT USING (true);
+CREATE POLICY "Allow public read" ON content          FOR SELECT USING (true);
+CREATE POLICY "Allow public read" ON partners         FOR SELECT USING (true);
+CREATE POLICY "Allow public read" ON seo_pages        FOR SELECT USING (true);
 CREATE POLICY "Allow public read" ON analytics_config FOR SELECT USING (true);
 
--- Politique pour écriture (pour l'admin - à sécuriser avec auth plus tard)
-CREATE POLICY "Allow anon write" ON site_config FOR ALL USING (true);
-CREATE POLICY "Allow anon write" ON content FOR ALL USING (true);
-CREATE POLICY "Allow anon write" ON partners FOR ALL USING (true);
-CREATE POLICY "Allow anon write" ON seo_pages FOR ALL USING (true);
-CREATE POLICY "Allow anon write" ON analytics_config FOR ALL USING (true);
-CREATE POLICY "Allow anon write" ON leads FOR ALL USING (true);
+-- ─────────────────────────────────────────────────────────────────────────
+-- Écriture : réservée à l'admin authentifié (JWT Supabase Auth → role
+-- 'authenticated'). anon NE PEUT PLUS écrire. FOR ALL couvre INSERT/UPDATE/
+-- DELETE ; le SELECT reste ouvert via "Allow public read" ci-dessus (OR).
+-- ⚠️ "authenticated" = admin ici. Voir supabase-migration.sql pour le
+--    durcissement (table `admins` / custom claim) si inscription publique.
+-- ─────────────────────────────────────────────────────────────────────────
+CREATE POLICY "admin_write_site_config" ON site_config
+  FOR ALL USING (auth.role() = 'authenticated') WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "admin_write_content" ON content
+  FOR ALL USING (auth.role() = 'authenticated') WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "admin_write_partners" ON partners
+  FOR ALL USING (auth.role() = 'authenticated') WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "admin_write_seo" ON seo_pages
+  FOR ALL USING (auth.role() = 'authenticated') WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "admin_write_analytics" ON analytics_config
+  FOR ALL USING (auth.role() = 'authenticated') WITH CHECK (auth.role() = 'authenticated');
 
+-- ─────────────────────────────────────────────────────────────────────────
+-- Leads : INSERT public (formulaire devis via clé anon) + gestion admin.
+-- PAS de SELECT public — les leads contiennent des numéros de téléphone.
+-- ─────────────────────────────────────────────────────────────────────────
+CREATE POLICY "public_insert_leads" ON leads
+  FOR INSERT WITH CHECK (true);
+CREATE POLICY "admin_select_leads" ON leads
+  FOR SELECT USING (auth.role() = 'authenticated');
+CREATE POLICY "admin_update_leads" ON leads
+  FOR UPDATE USING (auth.role() = 'authenticated');
+CREATE POLICY "admin_delete_leads" ON leads
+  FOR DELETE USING (auth.role() = 'authenticated');
+
+-- ─────────────────────────────────────────────────────────────────────────
+-- Candidatures recrutement : INSERT public + gestion admin.
+-- PAS de SELECT public — nom / email / téléphone des postulants = PII.
+-- ─────────────────────────────────────────────────────────────────────────
 ALTER TABLE recruitment_applications ENABLE ROW LEVEL SECURITY;
-CREATE POLICY "Allow public read" ON recruitment_applications FOR SELECT USING (true);
-CREATE POLICY "Allow anon write" ON recruitment_applications FOR ALL USING (true);
+CREATE POLICY "public_insert_recruitment" ON recruitment_applications
+  FOR INSERT WITH CHECK (true);
+CREATE POLICY "admin_select_recruitment" ON recruitment_applications
+  FOR SELECT USING (auth.role() = 'authenticated');
+CREATE POLICY "admin_update_recruitment" ON recruitment_applications
+  FOR UPDATE USING (auth.role() = 'authenticated');
+CREATE POLICY "admin_delete_recruitment" ON recruitment_applications
+  FOR DELETE USING (auth.role() = 'authenticated');
 
 -- =============================================
 -- CACHE SEARCH CONSOLE (dashboard /admin/seo)
@@ -168,6 +216,11 @@ CREATE INDEX IF NOT EXISTS idx_seo_gsc_cache_synced_at
   ON seo_search_console_cache(synced_at DESC);
 
 ALTER TABLE seo_search_console_cache ENABLE ROW LEVEL SECURITY;
--- Pas de lecture publique (données admin)
-CREATE POLICY "Allow service write" ON seo_search_console_cache FOR ALL USING (true);
+-- Données admin : aucun accès public. La lecture est réservée à l'admin
+-- authentifié ; les écritures (sync GSC) passent par la clé service_role
+-- (lib/seo/seo-cache.ts) qui bypass RLS — donc PAS de policy d'écriture.
+-- (L'ancien "Allow service write FOR ALL USING (true)" ouvrait en réalité la
+--  lecture ET l'écriture à anon, car FOR ALL inclut SELECT.)
+CREATE POLICY "admin_read_gsc_cache" ON seo_search_console_cache
+  FOR SELECT USING (auth.role() = 'authenticated');
 

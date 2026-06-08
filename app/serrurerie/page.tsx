@@ -7,7 +7,7 @@ import { getTradeBySlug } from "@/lib/data/services-definition";
 
 export const metadata: Metadata = {
   title: "Serrurier d'urgence Paris & Île-de-France | Dès 89€",
-  description: "Serrurier d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Intervention 30 min, à partir de 89€. Sans majoration 24h/24. 01 41 69 10 08",
+  description: "Serrurier d'urgence Paris & IDF. Intervention 30 min, à partir de 89€. Sans majoration 24h/24. 01 41 69 10 08",
   keywords: [
     "serrurier urgence Paris",
     "serrurier Île-de-France",

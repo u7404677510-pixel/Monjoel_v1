@@ -9,7 +9,7 @@
  *   ┌─────────────────────────────────────────────────────────┐
  *   │  [encart fixe gauche]      │  marquee logos lents →     │
  *   │  CERTIFIÉ                   │  [Vachette] [Bricard] ...  │
- *   │  4.9★ · 947 avis           │                             │
+ *   │  Avis Google vérifiés      │                             │
  *   │  Assurés · Garantis 2 ans  │                             │
  *   └─────────────────────────────────────────────────────────┘
  *
@@ -71,7 +71,7 @@ export default function TrustStrip() {
       className="relative border-y border-joel-violet/15 bg-linear-to-r from-joel-yellow-light/60 via-white to-joel-yellow-light/60 py-10 md:py-12"
     >
       <p className="sr-only">
-        Artisans certifiés, 4.9 étoiles sur 947 avis Google, assurés en
+        Artisans certifiés, avis Google vérifiés, assurés en
         responsabilité civile professionnelle, pièces garanties 2 ans. Marques
         et assurances reconnues : Vachette, Bricard, Picard, Fichet, MAIF, AXA,
         Allianz, Groupama, Macif, Matmut.
@@ -91,16 +91,14 @@ export default function TrustStrip() {
             <span className="h-px w-8 bg-joel-yellow" aria-hidden="true" />
           </div>
 
-          {/* Stat principale : 4.9★ · 947 avis Google */}
+          {/* Stat principale : avis Google vérifiés */}
           <p className="mt-3 text-sm leading-relaxed">
             <span className="text-joel-yellow" aria-hidden="true">
               ★
             </span>
             <span className="ml-1 font-display text-base font-bold text-joel-violet">
-              4.9
+              Avis Google vérifiés
             </span>
-            <span className="text-zinc-400"> · </span>
-            <span className="font-medium text-zinc-700">947 avis Google</span>
           </p>
 
           {/* Sous-texte : assurances + garanties */}

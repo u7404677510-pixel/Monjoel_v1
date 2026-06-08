@@ -214,6 +214,10 @@ function exportCSV(rows: RecruitmentApplication[]) {
 // ─── Composant principal ────────────────────────────────────────────────────
 
 export default function RecrutementAdminPage() {
+  // `now` figé au montage : Date.now() est impur dans un useMemo (React Compiler).
+  // Snapshot des KPIs, pas de tick live → une valeur stable suffit.
+  const [now] = useState(() => Date.now());
+
   // ── Filtres ──
   const [selectedTrades, setSelectedTrades] = useState<string[]>([]);
   const [selectedZones, setSelectedZones] = useState<string[]>([]);
@@ -279,7 +283,6 @@ export default function RecrutementAdminPage() {
 
   // KPIs (sur dataset complet, pas filtré recherche, mais ok ici car filters globales appliqués)
   const kpis = useMemo(() => {
-    const now = Date.now();
     const sevenDays = 7 * 24 * 3_600_000;
     const fourteenDays = 14 * 24 * 3_600_000;
 
@@ -321,7 +324,7 @@ export default function RecrutementAdminPage() {
           : `${Math.round(avgHours / 24)}j`;
 
     return { last7, delta, acceptanceRate, avgDisplay };
-  }, [applications]);
+  }, [applications, now]);
 
   // ── Actions ──
   const handleStatusChange = useCallback(

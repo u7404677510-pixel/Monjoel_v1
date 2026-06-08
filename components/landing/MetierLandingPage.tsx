@@ -31,6 +31,7 @@
  */
 
 import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import {
   Phone,
@@ -746,7 +747,7 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-zinc-700 text-xs font-semibold shadow-xs ring-1 ring-joel-violet/10">
                   <Star size={12} className="text-joel-yellow fill-joel-yellow" />
-                  4.9/5 (947 avis)
+                  Avis Google vérifiés
                 </span>
               </motion.div>
 
@@ -908,8 +909,8 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
                 >
                   <Star size={13} className="text-joel-yellow fill-joel-yellow" />
                   <div className="leading-tight">
-                    <p className="text-xs font-bold">4.9/5</p>
-                    <p className="text-[10px] text-white/80">947 avis Google</p>
+                    <p className="text-xs font-bold">Avis Google</p>
+                    <p className="text-[10px] text-white/80">vérifiés</p>
                   </div>
                 </motion.div>
               </div>
@@ -1095,9 +1096,9 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
             <div className="border-t border-zinc-200 px-7 py-4 bg-zinc-50">
               <p className="text-sm text-zinc-600">
                 On a écrit le mécanisme complet :{" "}
-                <a href="/stop-arnaques" className="text-joel-violet font-semibold hover:underline">
+                <Link href="/stop-arnaques" className="text-joel-violet font-semibold hover:underline">
                   comprendre comment l&apos;arnaque au dépannage fonctionne
-                </a>
+                </Link>
                 <ChevronRight size={14} className="inline ml-0.5" />
               </p>
             </div>
@@ -1147,13 +1148,13 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
               </motion.div>
             ))}
             {/* Mini-CTA mobile vers /stop-arnaques */}
-            <a
+            <Link
               href="/stop-arnaques"
               className="block text-center px-5 py-4 rounded-2xl bg-joel-violet/5 ring-1 ring-joel-violet/15 text-sm text-joel-violet font-semibold"
             >
               Comprendre l&apos;arnaque au dépannage
               <ChevronRight size={14} className="inline ml-0.5" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1400,13 +1401,8 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
               </h2>
             </div>
             <div className="flex items-center gap-2.5 bg-white rounded-2xl px-5 py-3 shadow-sm ring-1 ring-zinc-100 shrink-0">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={15} className="text-joel-yellow fill-joel-yellow" />
-                ))}
-              </div>
-              <span className="font-bold text-zinc-900 text-sm">4.9/5</span>
-              <span className="text-zinc-400 text-xs">· 947 avis Google</span>
+              <Star size={15} className="text-joel-yellow fill-joel-yellow" />
+              <span className="font-bold text-zinc-900 text-sm">Avis Google vérifiés</span>
             </div>
           </motion.div>
 
@@ -1509,7 +1505,7 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
               <div className="mt-7 pt-7 border-t border-white/15 flex flex-wrap items-center justify-center gap-6 text-xs text-white/70">
                 <span className="inline-flex items-center gap-1.5">
                   <Star size={12} className="text-joel-yellow fill-joel-yellow" />
-                  4.9/5 · 947 avis Google
+                  Avis Google vérifiés
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Shield size={12} className="text-joel-yellow" />

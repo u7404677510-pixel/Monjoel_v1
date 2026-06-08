@@ -7,6 +7,7 @@ import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import TelClickTracker from "@/components/TelClickTracker";
 import ConditionalSticky from "@/components/ConditionalSticky";
+import AttributionTracker from "@/components/AttributionTracker";
 import { Providers } from "./providers";
 
 // Lazy-load — apparait après 3s (cf. WhatsAppFloat.tsx). Inutile dans le bundle initial.
@@ -293,6 +294,9 @@ export default function RootLayout({
 
         {/* Tel Click Tracker pour conversions Google Ads */}
         <TelClickTracker />
+
+        {/* Capture d'attribution marketing (gclid / utm) — 1er contact, client-only */}
+        <AttributionTracker />
 
         {/* Providers globaux — TanStack Query, Sonner, Radix Tooltip
             (encapsule site public + /admin + /client + /artisan) */}

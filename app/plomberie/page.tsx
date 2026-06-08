@@ -7,7 +7,7 @@ import { getTradeBySlug } from "@/lib/data/services-definition";
 
 export const metadata: Metadata = {
   title: "Plombier d'urgence Paris & Île-de-France | Dès 79€",
-  description: "Plombier d'urgence Paris & IDF ⭐ 4.9/5 (947 avis). Fuite, WC, chauffe-eau. Intervention 30 min, à partir de 79€. Sans majoration. 01 41 69 10 08",
+  description: "Plombier d'urgence Paris & IDF. Fuite, WC, chauffe-eau. Intervention 30 min, à partir de 79€. Sans majoration. 01 41 69 10 08",
   keywords: [
     "plombier urgence Paris",
     "plombier Île-de-France",

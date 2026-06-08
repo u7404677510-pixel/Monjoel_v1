@@ -91,7 +91,7 @@ export default function PhotoHero({
                 ))}
               </div>
               <span className="text-sm text-gray-600">
-                <span className="font-bold">4.9/5</span> sur 947 avis Google
+                <span className="font-bold">Avis Google vérifiés</span>
               </span>
             </div>
           </div>

@@ -88,13 +88,8 @@ export default function PlomberieHero({ title, subtitle, description, servicePri
             <div
               className="flex items-center gap-2 mb-3"
             >
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="text-joel-yellow fill-joel-yellow" />
-                ))}
-              </div>
-              <span className="text-sm font-semibold text-gray-700">4.9/5</span>
-              <span className="text-sm text-gray-500 hidden xs:inline">sur Google (947 avis vérifiés)</span>
+              <Star size={16} className="text-joel-yellow fill-joel-yellow" />
+              <span className="text-sm font-semibold text-gray-700">Avis Google vérifiés</span>
             </div>
             {/* Main title */}
             <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 lg:mb-4 leading-[1.15]">

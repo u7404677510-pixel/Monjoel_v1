@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -164,9 +165,9 @@ export default function CGUPage() {
             <h2>Article 13 - Données personnelles</h2>
             <p>
               Les données personnelles collectées sont traitées conformément à notre{" "}
-              <a href="/confidentialite" className="text-joel-violet hover:underline">
+              <Link href="/confidentialite" className="text-joel-violet hover:underline">
                 Politique de confidentialité
-              </a>{" "}
+              </Link>{" "}
               et au RGPD.
             </p>
 

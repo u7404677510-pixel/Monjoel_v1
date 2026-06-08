@@ -106,7 +106,7 @@ function ProcessSection() {
 function StatsSection() {
   const stats = [
     { value: "30 min", label: "Intervention moyenne" },
-    { value: "947", label: "Avis 5 étoiles" },
+    { value: "Vérifiés", label: "Avis Google" },
     { value: "0€", label: "Majoration nuit" },
     { value: "24h/24", label: "Disponibilité" },
   ];

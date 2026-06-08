@@ -12,7 +12,7 @@
  *   - Eyebrow mono jaune, titre H3 énorme blanc, sous-line opacity-90.
  *   - CTA primary jaune (texte violet pour contraste max sur fond violet).
  *   - CTA secondary outline blanc (devis).
- *   - Trust line bas : 24h/24 · 4.9★ · 947 avis Google · Prix fixe.
+ *   - Trust line bas : 24h/24 · Avis Google vérifiés · Prix fixe.
  *
  * Logique métier :
  *   - useSiteConfig pour téléphone dynamique.
@@ -150,7 +150,7 @@ export default function MidPageCTA({
             <span className="hidden sm:inline text-white/30">·</span>
             <span className="inline-flex items-center gap-1.5">
               <Star size={14} className="fill-joel-yellow text-joel-yellow" />
-              4.9/5 · 947 avis Google
+              Avis Google vérifiés
             </span>
             <span className="hidden sm:inline text-white/30">·</span>
             <span className="inline-flex items-center gap-1.5">

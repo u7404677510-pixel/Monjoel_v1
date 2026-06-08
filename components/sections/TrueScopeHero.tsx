@@ -12,6 +12,7 @@
  *   - Animations safe (initial={false}, opacity:1 dans hidden).
  */
 
+import Link from "next/link";
 import { ArrowRight, Camera, MessageSquare, Zap, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -84,7 +85,7 @@ export default function TrueScopeHero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <a
+            <Link
               href="/app/truescope"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-joel text-white font-bold text-lg rounded-2xl shadow-[0_14px_40px_-10px_rgba(112,85,167,0.45)] hover:shadow-[0_20px_50px_-10px_rgba(112,85,167,0.65)] hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
             >
@@ -94,7 +95,7 @@ export default function TrueScopeHero() {
                 aria-hidden="true"
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Steps card lumineuses */}

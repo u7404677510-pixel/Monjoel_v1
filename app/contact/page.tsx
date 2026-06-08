@@ -11,6 +11,7 @@
  */
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { Send, Mail, MapPin, CheckCircle, Loader2, Phone, Wrench, Truck, FileCheck, ShieldCheck, ChevronDown } from "lucide-react";
 import PhoneButton from "@/components/PhoneButton";
@@ -77,17 +78,37 @@ export default function ContactPage() {
   });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
     setSending(true);
 
-    // Simulate sending (replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    setSending(false);
-    setSent(true);
-    setFormData({ name: "", email: "", requestType: "question", subject: "", message: "" });
+      const data = await res.json().catch(() => ({}));
+
+      // On n'affiche l'écran de succès QUE si la route confirme la prise en
+      // charge. Sinon : message d'erreur + repli téléphone.
+      if (!res.ok) {
+        setError(data.error || "L'envoi a échoué. Appelez-nous au 01 41 69 10 08.");
+        setSending(false);
+        return;
+      }
+
+      setSending(false);
+      setSent(true);
+      setFormData({ name: "", email: "", requestType: "question", subject: "", message: "" });
+    } catch {
+      setError("L'envoi a échoué. Vérifiez votre connexion ou appelez le 01 41 69 10 08.");
+      setSending(false);
+    }
   };
 
   return (
@@ -188,7 +209,7 @@ export default function ContactPage() {
 
                 <div className="pt-4 border-t border-white/20 text-xs text-white/70">
                   <p>Société à responsabilité limitée Joël SAS</p>
-                  <p>Mentions légales complètes : <a href="/mentions-legales" className="underline hover:text-joel-yellow">mentions-legales</a></p>
+                  <p>Mentions légales complètes : <Link href="/mentions-legales" className="underline hover:text-joel-yellow">mentions-legales</Link></p>
                 </div>
               </div>
 
@@ -321,6 +342,22 @@ export default function ContactPage() {
                       placeholder="Décrivez votre demande en quelques lignes — métier concerné, ville, contexte si pertinent."
                     />
                   </div>
+                  {error && (
+                    <div
+                      role="alert"
+                      className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+                    >
+                      <p className="font-medium">{error}</p>
+                      <p className="mt-1 flex items-center gap-1.5 text-red-600">
+                        <Phone size={14} className="shrink-0" />
+                        Une urgence ? Appelez directement le{" "}
+                        <a href="tel:0141691008" className="font-bold underline">
+                          01 41 69 10 08
+                        </a>
+                        .
+                      </p>
+                    </div>
+                  )}
                   <button
                     type="submit"
                     disabled={sending}

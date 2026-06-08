@@ -408,7 +408,7 @@ const heroTitleVariations = {
     "Urgence Plomberie {city} | Intervention 30 min",
     "{city} : Plombier 24h/24 | Même Prix Nuit & WE",
     "Plombier {city} – Devis en 30 secondes | Sans Arnaque",
-    "Plombier Confiance {city} | Artisan Vérifié 4.9/5",
+    "Plombier Confiance {city} | Artisan Vérifié",
   ],
   serrurier: [
     "Serrurier {city} | Prix Fixe 89€ | 20 min",
@@ -433,13 +433,13 @@ const heroTitleVariations = {
 };
 
 const heroSubtitleVariations = [
-  "⭐ 4.9/5 (947 avis) • Intervention 30 min • Prix fixe, zéro arnaque",
+  "Avis Google vérifiés • Intervention 30 min • Prix fixe, zéro arnaque",
   "Artisan chez vous en 20 min • Prix annoncé = prix payé • Sans majoration 24h/24",
   "Prix clair AVANT intervention • 24h/24 7j/7 • Paiement après satisfaction",
   "Fini les arnaques : prix fixe garanti • Intervention express • Artisan certifié",
-  "⭐ 947 clients satisfaits • Devis instantané • Intervention moyenne : 20 min",
+  "Artisan vérifié, prix fixe • Devis instantané • Intervention moyenne : 20 min",
   "Devis en 30 secondes • Pas de frais cachés • Tarif identique nuit/week-end",
-  "Artisans locaux • Notation 4.9/5 • Prix fixe sans surprise",
+  "Artisans locaux • Avis Google vérifiés • Prix fixe sans surprise",
   "Intervention immédiate • Tarif négocié • Paiement après l'intervention",
 ];
 
@@ -503,22 +503,22 @@ export function generateServiceTitle(service: Service, city: City): string {
 export function generateMetaDescription(trade: Trade, city: City): string {
   const metaTemplates: Record<string, string[]> = {
     serrurier: [
-      `Serrurier ${city.name} ⭐ 4.9/5. Ouverture porte 89€, intervention 30 min. Prix fixe garanti, sans majoration 24h/24. 01 41 69 10 08`,
+      `Serrurier ${city.name} — artisan vérifié. Ouverture porte 89€, intervention 30 min. Prix fixe garanti, sans majoration 24h/24. 01 41 69 10 08`,
       `Serrurier urgence ${city.name} 🔐 Prix fixe dès 89€. Porte claquée, serrure bloquée. 20 min, zéro arnaque. Appelez maintenant !`,
-      `${city.name} : Serrurier prix fixe 89€ ⭐ 947 avis. Ouverture porte, changement serrure. 24h/24 sans majoration.`,
+      `${city.name} : Serrurier prix fixe 89€ — avis Google vérifiés. Ouverture porte, changement serrure. 24h/24 sans majoration.`,
       `Serrurier ${city.name} (${city.postalCodes[0]}) ⭐ Sans majoration nuit/WE. Ouverture porte 89€, cylindre 120€. Prix annoncé = prix payé.`,
     ],
     plombier: [
-      `Plombier ${city.name} ⭐ 4.9/5. Fuite, WC bouchés, chauffe-eau dès 79€. Intervention 30 min. Prix fixe, zéro arnaque. 01 41 69 10 08`,
+      `Plombier ${city.name} — artisan vérifié. Fuite, WC bouchés, chauffe-eau dès 79€. Intervention 30 min. Prix fixe, zéro arnaque. 01 41 69 10 08`,
       `Plombier urgence ${city.name} 💧 Prix fixe dès 79€. Dégât des eaux, débouchage WC. 20 min, sans majoration. Appelez !`,
-      `${city.name} : Plombier autour de moi prix fixe 79€ ⭐ 947 avis. Fuite d'eau, débouchage. 24h/24 sans majoration.`,
+      `${city.name} : Plombier autour de moi prix fixe 79€ — avis Google vérifiés. Fuite d'eau, débouchage. 24h/24 sans majoration.`,
       `Plombier pas cher ${city.name} 💧 Tarif réel dès 69€. WC bouché, fuite, ballon. Devis instantané, prix garanti.`,
       `Plombier ${city.name} (${city.postalCodes[0]}) ⭐ Robinet 69€, WC 79€, fuite 89€. Artisan certifié, devis instant.`,
     ],
     electricien: [
-      `Électricien ${city.name} ⭐ 4.9/5. Panne, disjoncteur dès 59€. Intervention 30 min. Prix fixe garanti. 01 41 69 10 08`,
+      `Électricien ${city.name} — artisan vérifié. Panne, disjoncteur dès 59€. Intervention 30 min. Prix fixe garanti. 01 41 69 10 08`,
       `Électricien urgence ${city.name} ⚡ Prix fixe dès 59€. Panne électrique, court-circuit. 20 min, zéro arnaque. Appelez !`,
-      `${city.name} : Électricien prix fixe 59€ ⭐ 947 avis. Panne, tableau électrique. 24h/24 sans majoration.`,
+      `${city.name} : Électricien prix fixe 59€ — avis Google vérifiés. Panne, tableau électrique. 24h/24 sans majoration.`,
       `Électricien ${city.name} (${city.postalCodes[0]}) ⭐ NF C 15-100. Disjoncteur 79€, panne 89€, tableau 129€. Diagnostic inclus.`,
     ],
   };
@@ -997,7 +997,7 @@ export function generateCityHighlights(trade: Trade, city: City): string[] {
     `Paiement après intervention – aucune mauvaise surprise`,
     `Tarif identique nuit et week-end à ${city.name}`,
     `Devis instantané au téléphone`,
-    `Note 4.9/5 sur 947 avis clients`,
+    `Avis Google vérifiés`,
   ];
 
   const tradePool: Record<string, string[]> = {
@@ -1086,7 +1086,7 @@ export function generateCityFAQ(trade: Trade, city: City): FAQItem[] {
     },
     {
       question: `Les prix sont-ils vraiment fixes à ${city.name} ?`,
-      answer: `Oui, le prix annoncé au téléphone est le prix payé à ${city.name} (${postcode}). Aucun frais de déplacement caché, aucune majoration nuit/week-end. C'est notre engagement anti-arnaque, vérifié par 947 avis clients sur l'ensemble du ${city.departmentName}.`,
+      answer: `Oui, le prix annoncé au téléphone est le prix payé à ${city.name} (${postcode}). Aucun frais de déplacement caché, aucune majoration nuit/week-end. C'est notre engagement anti-arnaque sur l'ensemble du ${city.departmentName}.`,
     },
     {
       question: `Intervenez-vous la nuit et le week-end à ${city.name} ?`,

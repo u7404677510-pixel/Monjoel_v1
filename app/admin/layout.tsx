@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "motion/react";
-import { createClient } from "@supabase/supabase-js";
+import { getSupabaseClient } from "@/lib/supabase";
 import Image from "next/image";
 import {
   LayoutDashboard,
@@ -25,13 +25,6 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 
-function getSupabase() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key);
-}
-
 const menuItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/leads", label: "Leads / Devis", icon: Users },
@@ -45,10 +38,6 @@ const menuItems = [
   { href: "/admin/personnalisation", label: "Personnalisation", icon: Settings },
 ];
 
-// ─── Fallback auth (sans Supabase configuré) ─────────────────────────────────
-const FALLBACK_EMAIL = "admin@monjoel.fr";
-const FALLBACK_PASS = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "joel2024!Secure#";
-
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -59,24 +48,23 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const router = useRouter();
 
   const checkAuth = useCallback(async () => {
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
 
-    if (supabase) {
-      // ── Supabase Auth ──────────────────────────────────────────────────────
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session?.user) {
-        setIsAuthenticated(true);
-        setUserEmail(session.user.email || "");
-      } else if (pathname !== "/admin/login") {
-        router.push("/admin/login");
-      }
-    } else {
-      // ── Fallback localStorage (rétrocompatibilité si Supabase non configuré)
-      const token = localStorage.getItem("admin_auth_v2");
-      if (token === "authenticated") {
-        setIsAuthenticated(true);
-        setUserEmail("admin (mode hors-ligne)");
-      }
+    // Sans Supabase configuré, aucun accès admin n'est possible : il n'existe
+    // plus de fallback (mot de passe en dur / token localStorage supprimés).
+    if (!supabase) {
+      if (pathname !== "/admin/login") router.push("/admin/login");
+      setIsLoading(false);
+      return;
+    }
+
+    // ── Supabase Auth — seule source de vérité ──────────────────────────────
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session?.user) {
+      setIsAuthenticated(true);
+      setUserEmail(session.user.email || "");
+    } else if (pathname !== "/admin/login") {
+      router.push("/admin/login");
     }
     setIsLoading(false);
   }, [pathname, router]);
@@ -86,11 +74,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   }, [checkAuth]);
 
   const handleLogout = async () => {
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (supabase) {
       await supabase.auth.signOut();
-    } else {
-      localStorage.removeItem("admin_auth_v2");
     }
     setIsAuthenticated(false);
     router.push("/admin/login");
@@ -267,9 +253,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </motion.div>
         </div>
       </main>
-
-      {/* Fallback auth reference kept — SUPPRIMÉ : joel2024admin remplacé par Supabase Auth */}
-      <span aria-hidden className="sr-only">{FALLBACK_EMAIL}</span>
     </div>
   );
 }

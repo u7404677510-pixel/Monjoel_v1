@@ -12,7 +12,9 @@
  *
  * Auth :
  *  - Redirige vers /client si pas de session.
- *  - Charge tous les leads (la table n'a pas de colonne `email` — voir rapport).
+ *  - Ne charge QUE les leads de l'utilisateur courant (filtre user_id OU email).
+ *    La RLS Supabase (lib/supabase-migration.sql) applique déjà ce filtre côté
+ *    DB ; on le redemande ici en defense-in-depth pour ne jamais sur-demander.
  *
  * Rating :
  *  - Stocké en local state pour l'instant (mock).
@@ -137,12 +139,21 @@ export default function ClientInterventionsPage() {
       return;
     }
 
-    setUserEmail(session.user.email ?? "");
+    const sessionEmail = session.user.email ?? "";
+    setUserEmail(sessionEmail);
     setAuthChecked(true);
+
+    // Ne demander QUE les leads du user courant : par user_id (soumission
+    // connectée) OU par email (lead lié à son adresse). Doit matcher la policy
+    // RLS `leads_select_own_or_admin`. La RLS reste le vrai garde-fou — ce
+    // filtre est une ceinture-bretelle pour ne jamais demander le lot complet.
+    const orFilters = [`user_id.eq.${session.user.id}`];
+    if (sessionEmail) orFilters.push(`email.eq.${sessionEmail}`);
 
     const { data, error: fetchError } = await supabase
       .from("leads")
       .select("*")
+      .or(orFilters.join(","))
       .order("created_at", { ascending: false });
 
     if (fetchError) {

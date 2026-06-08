@@ -505,7 +505,7 @@ export default function TarifsPlomberiePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Star size={20} className="text-joel-yellow fill-joel-yellow" />
-            <span className="font-bold">4.9/5 sur 947 avis Google</span>
+            <span className="font-bold">Avis Google vérifiés</span>
           </div>
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
             Besoin d&apos;un plombier maintenant ?

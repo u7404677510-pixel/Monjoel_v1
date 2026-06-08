@@ -68,7 +68,7 @@ const ACTS: Act[] = [
       "Joël paye chaque intervention à un tarif fixe, indépendant de ce que paye le client. C'est l'inversion d'un modèle classique où l'artisan touche un pourcentage : ici, gonfler la facture ne lui rapporte rien. Tous nos partenaires sont vérifiés (assurance professionnelle décennale, qualifications Qualibat, Qualifelec, A2P selon métier). Un seuil de plaintes au-delà duquel l'artisan sort du réseau, automatique, sans négociation.",
     proof: {
       label: "Réseau",
-      fact: "Sur 947 avis Google, note moyenne 4,9/5.",
+      fact: "Avis Google vérifiés, prix fixe annoncé à l'avance.",
       footnote: "Avis vérifiés Google My Business — non modérables par Joël.",
     },
   },

@@ -37,7 +37,7 @@ export function generatePremiumSchemas(
     ? `${BASE_URL}/${trade.slug}/${city.slug}/${service.slug}`
     : `${BASE_URL}/${trade.slug}/${city.slug}`;
 
-  const schemas: any[] = [];
+  const schemas: Record<string, unknown>[] = [];
 
   // --- Breadcrumb ---
   const breadcrumbItems = [
@@ -94,7 +94,7 @@ export function generatePremiumSchemas(
   // --- LocalBusiness ---
   // areaServed enrichi : ville + département + région — donne une lecture
   // hiérarchique précise à Google plutôt qu'un seul niveau "City".
-  const localBusiness: any = {
+  const localBusiness: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": tradeToLocalBusinessType(trade.slug),
     name: `${COMPANY_NAME} — ${trade.name} ${city.name}`,
