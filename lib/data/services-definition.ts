@@ -374,10 +374,23 @@ export const serrurerieServices: Service[] = [
     keywords: ["serrure multipoints", "serrure 5 points", "serrure 7 points", "serrure haute sécurité", "serrure multipoints prix"],
     metaDescription: "Serrure multipoints à {city}. 3, 5 ou 7 points dès 249€. Installation pro, certification A2P. Devis gratuit.",
   },
-  // Service "reproduction-cles" supprimé le 2026-05-04 — décision business :
-  // Joël ne fait pas de reproduction de clés. Toutes les pages /serrurier/[ville]/reproduction-cles
-  // sont 301-redirigées vers /serrurerie via next.config.mjs. Le hub /serrurier/reproduction-cles
-  // est supprimé. BLOCKED_SERVICES dans premium/registry.ts continue de refuser tout futur fichier.
+  // Service "reproduction-cles" RÉINTÉGRÉ au catalogue le 2026-06-08 (re-ciblage SEO).
+  // Retiré le 2026-05-04, ré-ajouté car 4 pages premium ville existent (enghien-les-bains,
+  // levallois-perret, nanterre, argenteuil) et rankaient en GSC. getServiceBySlug DOIT le
+  // résoudre : sinon ServicePageBody → notFound() (404) AVANT même le check premium.
+  // Routage : proxy.ts (villes premium → 200 ; sinon 308 → /serrurier/[ville]).
+  // Hub /serrurier/reproduction-cles → /serrurerie (next.config.mjs).
+  {
+    slug: "reproduction-cles",
+    name: "Reproduction de clés",
+    shortName: "Repro clés",
+    description: "Reproduction et copie de clés : clés plates, à gorge, clés de sécurité, badges Vigik et clés de boîte aux lettres. Double réalisé sur place, sans rendez-vous.",
+    icon: "KeyRound",
+    priceFrom: 6,
+    urgencyLevel: "low",
+    keywords: ["reproduction clés", "double de clé", "copie clé", "refaire une clé", "clé de sécurité", "badge vigik"],
+    metaDescription: "Reproduction de clés à {city} dès 6€. Clés plates, sécurité, badges Vigik. Copie rapide sans rendez-vous. Serrurier de confiance.",
+  },
   {
     slug: "cylindre-haute-securite",
     name: "Cylindre haute sécurité",
