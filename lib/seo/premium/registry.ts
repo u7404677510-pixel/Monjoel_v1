@@ -13,8 +13,9 @@
  * Le sitemap et les pages [ville] / [service] consultent ce registre via les
  * helpers `isPremiumCity` / `isPremiumService` / `getPremiumContent`.
  *
- * EXCLUSION : le service "reproduction-cles" est BANNI du programme Premium
- * (décision business, monjoel.fr ne cible pas ce business). Voir BLOCKED_SERVICES.
+ * NOTE : "reproduction-cles" a été RÉINTÉGRÉ au programme Premium (2026-06-08) —
+ * la demande GSC le justifie (pos 3-12 + clics réels, top convertisseur organique).
+ * BLOCKED_SERVICES est donc vide ; le mécanisme est conservé pour un blocage futur.
  */
 
 import type { PremiumPageContent } from "./types";
@@ -22,9 +23,9 @@ import type { PremiumPageContent } from "./types";
 // ============================================
 // SERVICES BANNIS DU PROGRAMME PREMIUM
 // ============================================
-// Ces services ne doivent JAMAIS apparaître en page Premium.
-// Si un fichier reproduction-cles est créé par erreur, il sera ignoré au runtime.
-const BLOCKED_SERVICES = new Set<string>(["reproduction-cles"]);
+// Mécanisme de blocage runtime d'un service. VIDE depuis le 2026-06-08
+// (reproduction-cles réintégré, cf. en-tête). Ajouter un slug ici pour réexclure.
+const BLOCKED_SERVICES = new Set<string>([]);
 
 // ============================================
 // IMPORTS DES CONTENUS PREMIUM
@@ -159,6 +160,16 @@ import { content as serrurierParis8 } from "./content/serrurier-paris-8";
 import { content as serrurierParis10 } from "./content/serrurier-paris-10";
 import { content as serrurierParis12 } from "./content/serrurier-paris-12";
 import { content as serrurierParis14 } from "./content/serrurier-paris-14";
+
+// -- Serrurier Batch 16 — services reproduction-cles + coffre-fort × villes (récup SEO GSC, 2026-06-08)
+import { content as serrurierEnghienLesBainsReproductionCles } from "./content/serrurier-enghien-les-bains-reproduction-cles";
+import { content as serrurierLevalloisPerretReproductionCles } from "./content/serrurier-levallois-perret-reproduction-cles";
+import { content as serrurierNanterreReproductionCles } from "./content/serrurier-nanterre-reproduction-cles";
+import { content as serrurierArgenteuilReproductionCles } from "./content/serrurier-argenteuil-reproduction-cles";
+import { content as serrurierAsnieresSurSeineCoffreFort } from "./content/serrurier-asnieres-sur-seine-coffre-fort";
+import { content as serrurierVitrySurSeineCoffreFort } from "./content/serrurier-vitry-sur-seine-coffre-fort";
+import { content as serrurierGennevilliersCoffreFort } from "./content/serrurier-gennevilliers-coffre-fort";
+import { content as serrurierChatouCoffreFort } from "./content/serrurier-chatou-coffre-fort";
 
 // -- Électricien (pages ville)
 import { content as electricienLevalloisPerret } from "./content/electricien-levallois-perret";
@@ -483,6 +494,15 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierCormeillesEnParisis,
   serrurierCormeillesEnParisis,
   electricienCormeillesEnParisis,
+  // Batch 16 — services reproduction-cles + coffre-fort (récup SEO GSC, 2026-06-08)
+  serrurierEnghienLesBainsReproductionCles,
+  serrurierLevalloisPerretReproductionCles,
+  serrurierNanterreReproductionCles,
+  serrurierArgenteuilReproductionCles,
+  serrurierAsnieresSurSeineCoffreFort,
+  serrurierVitrySurSeineCoffreFort,
+  serrurierGennevilliersCoffreFort,
+  serrurierChatouCoffreFort,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
