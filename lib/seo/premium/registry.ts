@@ -75,6 +75,16 @@ import { content as plombierRosnySousBois } from "./content/plombier-rosny-sous-
 import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
 import { content as plombierVilliersSurMarneRechercheFuite } from "./content/plombier-villiers-sur-marne-recherche-fuite";
 import { content as plombierLongjumeauRechercheFuite } from "./content/plombier-longjumeau-recherche-fuite";
+import { content as plombierMontignyLesCormeillesRechercheFuite } from "./content/plombier-montigny-les-cormeilles-recherche-fuite";
+// -- Plombier Batch 17 — recherche-fuite × villes GSC (2026-06-08)
+import { content as plombierMontgeronRechercheFuite } from "./content/plombier-montgeron-recherche-fuite";
+import { content as plombierLaCourneuveRechercheFuite } from "./content/plombier-la-courneuve-recherche-fuite";
+import { content as plombierChevillyLarueRechercheFuite } from "./content/plombier-chevilly-larue-recherche-fuite";
+import { content as plombierCormeillesEnParisisRechercheFuite } from "./content/plombier-cormeilles-en-parisis-recherche-fuite";
+import { content as plombierChoisyLeRoiRechercheFuite } from "./content/plombier-choisy-le-roi-recherche-fuite";
+import { content as plombierHouillesRechercheFuite } from "./content/plombier-houilles-recherche-fuite";
+import { content as plombierChatenayMalabryRechercheFuite } from "./content/plombier-chatenay-malabry-recherche-fuite";
+import { content as plombierMaurepasRechercheFuite } from "./content/plombier-maurepas-recherche-fuite";
 import { content as plombierQuincySousSenartDebouchageCanalisation } from "./content/plombier-quincy-sous-senart-debouchage-canalisation";
 // -- Plombier Batch 7 — pages service Paris fact-checked (capitalisation GSC)
 import { content as plombierParis15DebouchageCanalisation } from "./content/plombier-paris-15-debouchage-canalisation";
@@ -322,6 +332,16 @@ const _allPremiumPages: PremiumPageContent[] = [
   // Batch 5 — pages service fact-checked (capitalisation GSC)
   plombierVilliersSurMarneRechercheFuite,
   plombierLongjumeauRechercheFuite,
+  plombierMontignyLesCormeillesRechercheFuite,
+  // Batch 17 — recherche-fuite × villes GSC (2026-06-08)
+  plombierMontgeronRechercheFuite,
+  plombierLaCourneuveRechercheFuite,
+  plombierChevillyLarueRechercheFuite,
+  plombierCormeillesEnParisisRechercheFuite,
+  plombierChoisyLeRoiRechercheFuite,
+  plombierHouillesRechercheFuite,
+  plombierChatenayMalabryRechercheFuite,
+  plombierMaurepasRechercheFuite,
   plombierQuincySousSenartDebouchageCanalisation,
   // Batch 6 — extension géographique GSC mai 2026
   plombierBoulogneBillancourt,
