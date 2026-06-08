@@ -52,6 +52,10 @@ export const metadata: Metadata = {
   },
 };
 
+// Schema.org Service pour SEO.
+// hasOfferCatalog (Offers porteurs de prix) retiré : sans aggregateRating il
+// déclenche un rich result « produit » vide qui sabote le CTR. Les prix restent
+// affichés dans le contenu visible de la page.
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -61,55 +65,7 @@ const pricingSchema = {
     "name": "Joël",
     "telephone": "+33141691008"
   },
-  "areaServed": "Paris, Île-de-France",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Tarifs Électricité",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Prise / interrupteur HS" },
-        "price": "59",
-        "priceCurrency": "EUR",
-        "description": "Remplacement prise ou interrupteur défaillant"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Disjoncteur qui saute" },
-        "price": "79",
-        "priceCurrency": "EUR",
-        "description": "Diagnostic + réparation cause"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Panne électrique" },
-        "price": "89",
-        "priceCurrency": "EUR",
-        "description": "Diagnostic et remise en service"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Court-circuit" },
-        "price": "99",
-        "priceCurrency": "EUR",
-        "description": "Mise en sécurité immédiate"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Tableau électrique" },
-        "price": "129",
-        "priceCurrency": "EUR",
-        "description": "Dépannage ou remplacement"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Mise aux normes NF C 15-100" },
-        "price": "199",
-        "priceCurrency": "EUR",
-        "description": "Diagnostic complet + travaux"
-      }
-    ]
-  }
+  "areaServed": "Paris, Île-de-France"
 };
 
 const faqSchema = {

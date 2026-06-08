@@ -52,7 +52,10 @@ export const metadata: Metadata = {
   },
 };
 
-// Schema.org PriceSpecification pour SEO
+// Schema.org Service pour SEO.
+// hasOfferCatalog (Offers porteurs de prix) retiré : sans aggregateRating il
+// déclenche un rich result « produit » vide qui sabote le CTR. Les prix restent
+// affichés dans le contenu visible de la page.
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -62,48 +65,7 @@ const pricingSchema = {
     "name": "Joël",
     "telephone": "+33141691008"
   },
-  "areaServed": "Paris, Île-de-France",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Tarifs Serrurerie",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Ouverture porte claquée" },
-        "price": "89",
-        "priceCurrency": "EUR",
-        "description": "Sans perçage, porte non blindée"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Ouverture avec perçage" },
-        "price": "150",
-        "priceCurrency": "EUR",
-        "description": "Cylindre à remplacer"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Changement cylindre" },
-        "price": "120",
-        "priceCurrency": "EUR",
-        "description": "Fourniture standard incluse"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Changement serrure complète" },
-        "price": "180",
-        "priceCurrency": "EUR",
-        "description": "Fourniture standard incluse"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Blindage de porte" },
-        "price": "350",
-        "priceCurrency": "EUR",
-        "description": "À partir de, selon modèle"
-      }
-    ]
-  }
+  "areaServed": "Paris, Île-de-France"
 };
 
 const faqSchema = {

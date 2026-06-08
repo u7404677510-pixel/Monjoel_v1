@@ -128,8 +128,7 @@ export default async function DepartmentPage({ params }: DepartmentPageProps) {
   const localBusinessSchema = generateDepartmentSchema(
     content.trade!.slug,
     content.department.name,
-    content.department.code,
-    content.services
+    content.department.code
   );
 
   // Nom du métier pour affichage

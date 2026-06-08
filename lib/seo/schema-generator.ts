@@ -106,7 +106,6 @@ interface LocalBusiness {
   geo?: GeoCoordinates;
   areaServed: AreaServed;
   openingHoursSpecification: OpeningHours[];
-  hasOfferCatalog?: OfferCatalog;
 }
 
 interface PostalAddress {
@@ -140,27 +139,6 @@ interface OpeningHours {
   closes: string;
 }
 
-interface OfferCatalog {
-  "@type": string;
-  name: string;
-  itemListElement: Offer[];
-}
-
-interface Offer {
-  "@type": string;
-  itemOffered: {
-    "@type": string;
-    name: string;
-    description: string;
-  };
-  priceSpecification: {
-    "@type": string;
-    price: number;
-    priceCurrency: string;
-    priceType: string;
-  };
-}
-
 interface FAQPage {
   "@context": string;
   "@type": string;
@@ -189,31 +167,6 @@ interface BreadcrumbItem {
   item: string;
 }
 
-interface ServiceSchema {
-  "@context": string;
-  "@type": string;
-  name: string;
-  description: string;
-  provider: {
-    "@type": string;
-    name: string;
-    url: string;
-  };
-  areaServed: {
-    "@type": string;
-    name: string;
-  };
-  offers: {
-    "@type": string;
-    priceSpecification: {
-      "@type": string;
-      price: number;
-      priceCurrency: string;
-      priceType: string;
-    };
-  };
-}
-
 // ============================================
 // GÉNÉRATEURS
 // ============================================
@@ -234,10 +187,8 @@ export function generateLocalBusinessSchema(
   };
 
   const basePrice = BASE_PRICES[trade.slug] || 79;
-  const todayISO = new Date().toISOString().split("T")[0];
   const knowsAbout = TRADE_KNOWS_ABOUT[trade.slug] || [];
   const images = TRADE_IMAGES[trade.slug] || [`${BASE_URL}/logo.webp`];
-  const serviceOutput = SERVICE_OUTPUTS[trade.slug] || "Intervention réalisée, attestation fournie.";
 
   return {
     "@context": "https://schema.org",
@@ -330,39 +281,9 @@ export function generateLocalBusinessSchema(
     slogan: "Prix fixe, zéro arnaque",
     paymentAccepted: "Cash, Credit Card, Debit Card, Apple Pay, Google Pay",
     currenciesAccepted: "EUR",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `Services ${trade.name}`,
-      itemListElement: trade.services.slice(0, 8).map((service) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: service.name,
-          description: service.description,
-          serviceType: service.name,
-          serviceOutput,
-          provider: { "@id": ORG_ID },
-          areaServed: { "@type": "City", name: city.name },
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: service.priceFrom,
-          priceCurrency: "EUR",
-          priceType: "MinimumPrice",
-          valueAddedTaxIncluded: true,
-        },
-        availability: "https://schema.org/InStock",
-        validFrom: todayISO,
-        url: `${BASE_URL}/${trade.slug}/${city.slug}/${service.slug}`,
-      })),
-    },
-    makesOffer: trade.services.slice(0, 4).map((service) => ({
-      "@type": "Offer",
-      name: service.name,
-      description: service.description,
-      price: service.priceFrom,
-      priceCurrency: "EUR",
-    })),
+    // hasOfferCatalog / makesOffer retirés : un OfferCatalog/Offer porteur de prix
+    // sans aggregateRating déclenche un rich result « produit » vide qui sabote le CTR.
+    // Les services restent décrits via le schema Service + le contenu visible des pages.
     potentialAction: [
       {
         "@type": "OrderAction",
@@ -397,8 +318,10 @@ export function generateLocalBusinessSchema(
 export function generateDepartmentSchema(
   tradeSlug: string,
   departmentName: string,
-  departmentCode: string,
-  services: { name: string; description: string; priceFrom: number }[]
+  departmentCode: string
+  // Le paramètre `services` a été retiré : le hasOfferCatalog porteur de prix
+  // qui l'utilisait a été supprimé (rich result « produit » vide). Les services
+  // restent décrits dans le contenu visible des pages.
 ): object {
   // Types Schema.org validés par Google Rich Results
   const businessTypes: Record<string, string> = {
@@ -416,8 +339,6 @@ export function generateDepartmentSchema(
   const tradeName = tradeNames[tradeSlug] || "Dépannage";
   const knowsAbout = TRADE_KNOWS_ABOUT[tradeSlug] || [];
   const images = TRADE_IMAGES[tradeSlug] || [`${BASE_URL}/logo.webp`];
-  const serviceOutput = SERVICE_OUTPUTS[tradeSlug] || "Intervention réalisée, attestation fournie.";
-  const todayISO = new Date().toISOString().split("T")[0];
 
   return {
     "@context": "https://schema.org",
@@ -478,30 +399,9 @@ export function generateDepartmentSchema(
     slogan: "Prix fixe, zéro arnaque",
     paymentAccepted: "Cash, Credit Card, Debit Card, Apple Pay, Google Pay",
     currenciesAccepted: "EUR",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `Services ${tradeName}`,
-      itemListElement: services.map((service) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: service.name,
-          description: service.description,
-          serviceType: service.name,
-          serviceOutput,
-          provider: { "@id": ORG_ID },
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: service.priceFrom,
-          priceCurrency: "EUR",
-          priceType: "MinimumPrice",
-          valueAddedTaxIncluded: true,
-        },
-        availability: "https://schema.org/InStock",
-        validFrom: todayISO,
-      })),
-    },
+    // hasOfferCatalog retiré : un OfferCatalog porteur de prix sans aggregateRating
+    // déclenche un rich result « produit » vide qui sabote le CTR. Les services
+    // restent décrits via le contenu visible des pages.
     potentialAction: {
       "@type": "OrderAction",
       target: {
@@ -587,7 +487,6 @@ export function generateServiceSchema(
   service: Service,
   city: City
 ): object {
-  const todayISO = new Date().toISOString().split("T")[0];
   const serviceOutput = SERVICE_OUTPUTS[trade.slug] || "Intervention réalisée, attestation fournie.";
 
   return {
@@ -650,24 +549,9 @@ export function generateServiceSchema(
       closes: "23:59",
       validFrom: "2024-01-01",
     },
-    offers: {
-      "@type": "Offer",
-      name: `${service.name} prix fixe à ${city.name}`,
-      description: `${service.description} Intervention en 30 min. Prix fixe annoncé avant déplacement.`,
-      price: service.priceFrom,
-      priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-      validFrom: todayISO,
-      url: `${BASE_URL}/${trade.slug}/${city.slug}/${service.slug}`,
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        price: service.priceFrom,
-        priceCurrency: "EUR",
-        priceType: "MinimumPrice",
-        valueAddedTaxIncluded: true,
-      },
-      seller: { "@id": ORG_ID },
-    },
+    // offers retiré : un Offer porteur de prix sans aggregateRating déclenche
+    // un rich result « produit » vide qui sabote le CTR. Le prix reste affiché
+    // dans le contenu visible de la page.
     // Pas d'aggregateRating tant qu'on n'a pas d'avis Google réels collectés.
     potentialAction: {
       "@type": "OrderAction",
@@ -712,9 +596,7 @@ export function generateHubSchema(
   const tradeName = tradeNames[tradeSlug] || trade.name;
   const knowsAbout = TRADE_KNOWS_ABOUT[tradeSlug] || [];
   const images = TRADE_IMAGES[tradeSlug] || [`${BASE_URL}/logo.webp`];
-  const serviceOutput = SERVICE_OUTPUTS[tradeSlug] || "Intervention réalisée, attestation fournie.";
   const basePrice = BASE_PRICES[tradeSlug] || 79;
-  const todayISO = new Date().toISOString().split("T")[0];
   const hubUrl = `${BASE_URL}/${hubSlug}`;
 
   // 1. LocalBusiness Hub (couvre toute l'IDF)
@@ -790,30 +672,9 @@ export function generateHubSchema(
     slogan: "Prix fixe, zéro arnaque",
     paymentAccepted: "Cash, Credit Card, Debit Card, Apple Pay, Google Pay",
     currenciesAccepted: "EUR",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `Services ${tradeName}`,
-      itemListElement: trade.services.slice(0, 10).map((service) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: service.name,
-          description: service.description,
-          serviceType: service.name,
-          serviceOutput,
-          provider: { "@id": ORG_ID },
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: service.priceFrom,
-          priceCurrency: "EUR",
-          priceType: "MinimumPrice",
-          valueAddedTaxIncluded: true,
-        },
-        availability: "https://schema.org/InStock",
-        validFrom: todayISO,
-      })),
-    },
+    // hasOfferCatalog retiré : un OfferCatalog porteur de prix sans aggregateRating
+    // déclenche un rich result « produit » vide qui sabote le CTR. Les services
+    // restent décrits via le contenu visible des pages.
     // Pas de Review schema tant qu'on n'a pas d'avis Google réels collectés.
     potentialAction: [
       {
