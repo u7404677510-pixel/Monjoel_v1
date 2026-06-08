@@ -89,6 +89,17 @@ import { content as plombierQuincySousSenartDebouchageCanalisation } from "./con
 // -- Plombier Batch 7 — pages service Paris fact-checked (capitalisation GSC)
 import { content as plombierParis15DebouchageCanalisation } from "./content/plombier-paris-15-debouchage-canalisation";
 import { content as plombierParis17DebouchageWc } from "./content/plombier-paris-17-debouchage-wc";
+// -- Plombier Batch 19 — debouchage-wc × villes GSC (2026-06-08)
+import { content as plombierErmontDebouchageWc } from "./content/plombier-ermont-debouchage-wc";
+import { content as plombierLeKremlinBicetreDebouchageWc } from "./content/plombier-le-kremlin-bicetre-debouchage-wc";
+import { content as plombierNeuillyPlaisanceDebouchageWc } from "./content/plombier-neuilly-plaisance-debouchage-wc";
+import { content as plombierProvinsDebouchageWc } from "./content/plombier-provins-debouchage-wc";
+import { content as plombierArgenteuilDebouchageWc } from "./content/plombier-argenteuil-debouchage-wc";
+import { content as plombierArnouvilleDebouchageWc } from "./content/plombier-arnouville-debouchage-wc";
+import { content as plombierConflansSainteHonorineDebouchageWc } from "./content/plombier-conflans-sainte-honorine-debouchage-wc";
+import { content as plombierDammarieLesLysDebouchageWc } from "./content/plombier-dammarie-les-lys-debouchage-wc";
+import { content as plombierHouillesDebouchageWc } from "./content/plombier-houilles-debouchage-wc";
+import { content as plombierLHayLesRosesDebouchageWc } from "./content/plombier-l-hay-les-roses-debouchage-wc";
 // -- Plombier Batch 9 — extension Vague 3 mai 2026 (banlieues 93/94)
 import { content as plombierSaintDenis } from "./content/plombier-saint-denis";
 import { content as plombierAulnaySousBois } from "./content/plombier-aulnay-sous-bois";
@@ -541,6 +552,17 @@ const _allPremiumPages: PremiumPageContent[] = [
   serrurierVitrySurSeineCoffreFort,
   serrurierGennevilliersCoffreFort,
   serrurierChatouCoffreFort,
+  // Batch 19 — debouchage-wc × villes GSC (2026-06-08)
+  plombierErmontDebouchageWc,
+  plombierLeKremlinBicetreDebouchageWc,
+  plombierNeuillyPlaisanceDebouchageWc,
+  plombierProvinsDebouchageWc,
+  plombierArgenteuilDebouchageWc,
+  plombierArnouvilleDebouchageWc,
+  plombierConflansSainteHonorineDebouchageWc,
+  plombierDammarieLesLysDebouchageWc,
+  plombierHouillesDebouchageWc,
+  plombierLHayLesRosesDebouchageWc,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
