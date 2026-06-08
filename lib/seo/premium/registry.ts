@@ -109,6 +109,14 @@ import { content as plombierMalakoffFuiteEau } from "./content/plombier-malakoff
 import { content as plombierMassyFuiteEau } from "./content/plombier-massy-fuite-eau";
 import { content as plombierNoisielFuiteEau } from "./content/plombier-noisiel-fuite-eau";
 import { content as plombierPuteauxFuiteEau } from "./content/plombier-puteaux-fuite-eau";
+// -- Serrurier Batch 21 — perte-cles (ouverture/lockout) × villes GSC (2026-06-08)
+import { content as serrurierBrevalPerteCles } from "./content/serrurier-breval-perte-cles";
+import { content as serrurierChavillePerteCles } from "./content/serrurier-chaville-perte-cles";
+import { content as serrurierHouillesPerteCles } from "./content/serrurier-houilles-perte-cles";
+import { content as serrurierLeKremlinBicetrePerteCles } from "./content/serrurier-le-kremlin-bicetre-perte-cles";
+import { content as serrurierOrmessonSurMarnePerteCles } from "./content/serrurier-ormesson-sur-marne-perte-cles";
+import { content as serrurierSaintOuenLAumonePerteCles } from "./content/serrurier-saint-ouen-l-aumone-perte-cles";
+import { content as serrurierSevresPerteCles } from "./content/serrurier-sevres-perte-cles";
 // -- Plombier Batch 9 — extension Vague 3 mai 2026 (banlieues 93/94)
 import { content as plombierSaintDenis } from "./content/plombier-saint-denis";
 import { content as plombierAulnaySousBois } from "./content/plombier-aulnay-sous-bois";
@@ -581,6 +589,14 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierMassyFuiteEau,
   plombierNoisielFuiteEau,
   plombierPuteauxFuiteEau,
+  // Serrurier Batch 21 — perte-cles (ouverture/lockout) × villes GSC (2026-06-08)
+  serrurierBrevalPerteCles,
+  serrurierChavillePerteCles,
+  serrurierHouillesPerteCles,
+  serrurierLeKremlinBicetrePerteCles,
+  serrurierOrmessonSurMarnePerteCles,
+  serrurierSaintOuenLAumonePerteCles,
+  serrurierSevresPerteCles,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
