@@ -174,13 +174,10 @@ const nextConfig = {
       destination: "/serrurerie",
       permanent: true,
     });
-    // Pages ville : /serrurier/[ville]/reproduction-cles → /serrurier/[ville]
-    // Garde le contexte géographique (mieux que renvoyer tout vers /serrurerie)
-    redirects.push({
-      source: "/serrurier/:ville/reproduction-cles",
-      destination: "/serrurier/:ville",
-      permanent: true,
-    });
+    // NB : la redirection /serrurier/:ville/reproduction-cles a été RETIRÉE
+    // (2026-06-08) — reproduction-cles est de nouveau premium. Le routage est
+    // désormais piloté par le proxy (villes premium → 200, sinon 308 vers la
+    // page ville, cf. proxy.ts). Le hub /serrurier/reproduction-cles → /serrurerie reste.
 
     return redirects;
   },
