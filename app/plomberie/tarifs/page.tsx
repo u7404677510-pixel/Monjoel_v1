@@ -52,7 +52,10 @@ export const metadata: Metadata = {
   },
 };
 
-// Schema.org PriceSpecification pour SEO
+// Schema.org Service pour SEO.
+// hasOfferCatalog (Offers porteurs de prix) retiré : sans aggregateRating il
+// déclenche un rich result « produit » vide qui sabote le CTR. Les prix restent
+// affichés dans le contenu visible de la page.
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -62,48 +65,7 @@ const pricingSchema = {
     "name": "Joël",
     "telephone": "+33141691008"
   },
-  "areaServed": "Paris, Île-de-France",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Tarifs Plomberie",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Débouchage WC" },
-        "price": "79",
-        "priceCurrency": "EUR",
-        "description": "Débouchage au furet professionnel"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Réparation fuite d'eau" },
-        "price": "89",
-        "priceCurrency": "EUR",
-        "description": "Fuite simple (joint, raccord)"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Débouchage canalisation" },
-        "price": "99",
-        "priceCurrency": "EUR",
-        "description": "Furet ou hydrocurage"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Remplacement ballon eau chaude" },
-        "price": "129",
-        "priceCurrency": "EUR",
-        "description": "Dépose + pose + mise en service"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Recherche de fuite" },
-        "price": "149",
-        "priceCurrency": "EUR",
-        "description": "Détection caméra thermique"
-      }
-    ]
-  }
+  "areaServed": "Paris, Île-de-France"
 };
 
 const faqSchema = {

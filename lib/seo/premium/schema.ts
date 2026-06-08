@@ -184,17 +184,11 @@ export function generatePremiumSchemas(
         opens: "00:00",
         closes: "23:59",
       },
-      offers: {
-        "@type": "Offer",
-        price: service.priceFrom,
-        priceCurrency: "EUR",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: service.priceFrom,
-          priceCurrency: "EUR",
-          valueAddedTaxIncluded: true,
-        },
-      },
+      // Pas d'`offers`/`price` dans ce Service : un Offer avec prix SANS
+      // aggregateRating fait cataloguer la page en rich result « Extrait de
+      // produit » sans étoiles → CTR catastrophique (0,08% mesuré sur ~51k imp).
+      // Le prix reste affiché dans le CONTENU de la page (visible client), mais
+      // plus dans le structured data. (Fix SEO 2026-06-08, cf. audit/seo/PLAN-SEO.md)
       description: service.description,
     });
   }
