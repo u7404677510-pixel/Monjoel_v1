@@ -12,6 +12,18 @@ import { isAllowedAdminEmail } from "@/lib/admin-auth";
 
 const TRADES = new Set(["plombier", "serrurier", "electricien"]);
 
+// Hub métier (nom commun) correspondant à chaque slug métier.
+const HUB_BY_TRADE: Record<string, string> = {
+  plombier: "plomberie",
+  serrurier: "serrurerie",
+  electricien: "electricite",
+};
+
+// Codes départements Île-de-France — miroir de lib/data/departments-idf.ts.
+// Hardcodés ici pour garder le proxy léger (ne pas tirer le dataset villes
+// ~970 entrées dans le bundle middleware).
+const IDF_DEPT_CODES = new Set(["75", "77", "78", "91", "92", "93", "94", "95"]);
+
 /**
  * Slugs des pages services génériques /[trade]/[service] qui ont des routes
  * STATIQUES dans app/. Ces URLs ne sont pas des villes — il ne faut pas les 410.
@@ -80,6 +92,61 @@ function gone(): NextResponse {
       },
     },
   );
+}
+
+function permanentRedirect(request: NextRequest, to: string): NextResponse {
+  // 308 = redirection permanente (équivalent SEO du 301, cohérent avec les
+  // redirects `permanent: true` de next.config.mjs qui émettent aussi du 308).
+  return NextResponse.redirect(new URL(to, request.url), 308);
+}
+
+/**
+ * URLs « legacy » mortes qui CONTOURNENT la logique 410 du proxy — elles ne
+ * passent pas le filtre `TRADES.has(segments[0])` plus bas et finissaient donc
+ * en 404 (app/not-found.tsx, via le catch-all app/[slug]) au lieu d'un signal
+ * de redirection propre. On les renvoie en 308 vers la page la plus pertinente.
+ *
+ * Retourne une réponse, ou null si l'URL n'est pas concernée (flux normal).
+ *
+ *   1. /plombier, /serrurier, /electricien                  → hub (/plomberie…)
+ *   2. /plombier-paris, /serrurier-pas-cher, /plombier-99   → hub métier
+ *      /plombier-92-hauts-de-seine (code dépt IDF détecté)  → /plombier-92
+ *      /plombier-75 (vraie page département)                → laissé en 200
+ *
+ * NON géré ici (volontaire) : les sous-chemins /plomberie/<x> (hors /tarifs) et
+ * les slugs racine non préfixés métier (/depannage-plombier…). Aucune preuve
+ * qu'ils soient indexés ; un 404 y reste sémantiquement correct. À convertir au
+ * cas par cas via next.config.redirects() si GSC en remonte du volume.
+ */
+function redirectLegacyDeadUrl(
+  request: NextRequest,
+  segments: string[],
+): NextResponse | null {
+  if (segments.length !== 1) return null;
+  const slug = segments[0];
+
+  // (1) Nom de métier nu → hub métier.
+  if (HUB_BY_TRADE[slug]) {
+    return permanentRedirect(request, `/${HUB_BY_TRADE[slug]}`);
+  }
+
+  // (2) Slug racine préfixé par un métier (hors vraie page département).
+  const m = slug.match(/^(plombier|serrurier|electricien)-(.+)$/);
+  if (m) {
+    const trade = m[1];
+    const rest = m[2];
+    const codeMatch = rest.match(/^(\d{2})(?:-.*)?$/);
+    if (codeMatch && IDF_DEPT_CODES.has(codeMatch[1])) {
+      // /plombier-75 exact = vraie page département (app/[slug]) → laisser en 200.
+      if (rest === codeMatch[1]) return null;
+      // /plombier-92-hauts-de-seine → page département /plombier-92.
+      return permanentRedirect(request, `/${trade}-${codeMatch[1]}`);
+    }
+    // /plombier-paris, /serrurier-pas-cher, /plombier-99 (dépt hors IDF)… → hub.
+    return permanentRedirect(request, `/${HUB_BY_TRADE[trade]}`);
+  }
+
+  return null;
 }
 
 /**
@@ -201,6 +268,12 @@ export async function proxy(request: NextRequest) {
   }
 
   const segments = pathname.split("/").filter(Boolean);
+
+  // URLs legacy mortes qui contournent la logique 410 ci-dessous (métier nu,
+  // slug racine préfixé métier, ancienne page dépt mal formée) → 308 propre
+  // vers le hub/département pertinent, au lieu d'un 404 (app/not-found.tsx).
+  const legacy = redirectLegacyDeadUrl(request, segments);
+  if (legacy) return legacy;
 
   // Pas la peine d'intervenir hors trade/X(/Y).
   if (segments.length < 2 || !TRADES.has(segments[0])) {
