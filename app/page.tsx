@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-// import Hero from "@/components/sections/Hero"; // ancien Hero carousel — gardé pour rollback
 import HeroCinematic from "@/components/sections/HeroCinematic";
 import TrustStrip from "@/components/sections/TrustStrip";
 import ServicesDeepDive from "@/components/sections/ServicesDeepDive";
