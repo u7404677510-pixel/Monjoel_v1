@@ -186,7 +186,7 @@ function ActStep({ act, index, reducedMotion }: ActStepProps) {
   // Acte 02 = animation split (numéro + texte séparément).
   if (animation.number && animation.text) {
     return (
-      <motion.article
+      <motion.div
         role="listitem"
         aria-label={ariaLabel}
         initial="hidden"
@@ -206,13 +206,13 @@ function ActStep({ act, index, reducedMotion }: ActStepProps) {
         >
           <ActTextBlock h3={act.h3} paragraph={act.paragraph} proof={act.proof} />
         </motion.div>
-      </motion.article>
+      </motion.div>
     );
   }
 
   // Actes 01 et 03 = animation sur le container entier.
   return (
-    <motion.article
+    <motion.div
       role="listitem"
       aria-label={ariaLabel}
       variants={animation.container}
@@ -227,7 +227,7 @@ function ActStep({ act, index, reducedMotion }: ActStepProps) {
       <div className="md:col-span-7 md:pt-4">
         <ActTextBlock h3={act.h3} paragraph={act.paragraph} proof={act.proof} />
       </div>
-    </motion.article>
+    </motion.div>
   );
 }
 
