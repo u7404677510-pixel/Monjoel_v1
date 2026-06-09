@@ -6,8 +6,8 @@ import { generateHubSchema } from "@/lib/seo/schema-generator";
 import { getTradeBySlug } from "@/lib/data/services-definition";
 
 export const metadata: Metadata = {
-  title: "Plombier d'urgence Paris & Île-de-France | Dès 79€",
-  description: "Plombier d'urgence Paris & IDF. Fuite, WC, chauffe-eau. Intervention 30 min, à partir de 79€. Sans majoration. 01 41 69 10 08",
+  title: "Plombier d'urgence Paris & Île-de-France | Dès 69€",
+  description: "Plombier d'urgence Paris & IDF. Fuite, WC, chauffe-eau. Intervention 30 min, à partir de 69€. Sans majoration. 01 41 69 10 08",
   keywords: [
     "plombier urgence Paris",
     "plombier Île-de-France",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr/plomberie",
     siteName: "Joël",
-    title: "Plombier d'urgence Paris | Dès 79€ | Intervention 30 min",
-    description: "Plombier d'urgence à partir de 79€. Intervention en 30 min, zéro arnaque. Appelez le 01 41 69 10 08.",
+    title: "Plombier d'urgence Paris | Dès 69€ | Intervention 30 min",
+    description: "Plombier d'urgence à partir de 69€. Intervention en 30 min, zéro arnaque. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Plombier d'urgence Paris | Dès 79€ | Intervention 30 min",
-    description: "Plombier d'urgence à partir de 79€. Intervention en 30 min. Appelez le 01 41 69 10 08.",
+    title: "Plombier d'urgence Paris | Dès 69€ | Intervention 30 min",
+    description: "Plombier d'urgence à partir de 69€. Intervention en 30 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };
@@ -68,7 +68,7 @@ const hubFaqItems = [
   {
     question: "Combien coûte un plombier d'urgence à Paris ?",
     answer:
-      "Nos tarifs plomberie démarrent à 79€ TTC pour une intervention simple. Le prix exact est annoncé au téléphone avant que l'artisan parte. Ce prix est fixe : ni majoration, ni frais de déplacement cachés.",
+      "Nos tarifs plomberie démarrent à 69€ TTC pour une intervention simple (remplacement de robinet, chasse d'eau, lavabo bouché). Le prix exact est annoncé au téléphone avant que l'artisan parte. Ce prix est fixe : ni majoration, ni frais de déplacement cachés.",
   },
   {
     question: "Intervenez-vous la nuit, le week-end et les jours fériés ?",

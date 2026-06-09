@@ -15,8 +15,10 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import HomeSchema from "@/components/seo/HomeSchema";
 
 export const metadata: Metadata = {
-  title: "Joël - Plombier, Serrurier & Électricien Paris | 24h/24",
-  description: "Dépannage urgence prix fixe à Paris et Île-de-France. Plombier, serrurier, électricien. Intervention 30 min, devis gratuit par IA en 30 secondes. Appelez le 01 41 69 10 08.",
+  // CTR SERP : prix d'appel RÉEL (plancher catalogue 59€ = prise/interrupteur HS)
+  // + wedge « 0 majoration » — les 2 arguments qui font cliquer sur ce marché.
+  title: "Plombier, Serrurier, Électricien Paris | Dès 59€ — Joël",
+  description: "Dépannage urgence Paris & Île-de-France dès 59€. Prix fixe annoncé avant, 0 majoration nuit & week-end. Intervention 30 min, 24h/24. ☎ 01 41 69 10 08",
   keywords: [
     "plombier urgence Paris",
     "serrurier urgence Paris",
@@ -51,14 +53,14 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr",
     siteName: "Joël",
-    title: "Joël - Plombier, Serrurier & Électricien | Paris & Île-de-France",
-    description: "Dépannage d'urgence à prix fixe. Intervention en 30 min, devis instantané, artisans vérifiés. Appelez le 01 41 69 10 08.",
+    title: "Plombier, Serrurier, Électricien Paris | Dès 59€ — Joël",
+    description: "Dépannage d'urgence dès 59€, prix fixe annoncé avant, 0 majoration nuit & week-end. Intervention 30 min. Appelez le 01 41 69 10 08.",
     // images: gérées automatiquement par app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
-    title: "Joël - Plombier, Serrurier & Électricien | Paris & Île-de-France",
-    description: "Dépannage d'urgence à prix fixe. Intervention en 30 min. Appelez le 01 41 69 10 08.",
+    title: "Plombier, Serrurier, Électricien Paris | Dès 59€ — Joël",
+    description: "Dépannage d'urgence dès 59€, 0 majoration nuit & week-end. Intervention 30 min. Appelez le 01 41 69 10 08.",
     // images: Next.js réutilise automatiquement opengraph-image pour Twitter card
   },
   // verification: { google: "..." }, // TODO Mehdi : ajouter le code GSC quand fourni

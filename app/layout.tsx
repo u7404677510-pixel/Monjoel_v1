@@ -60,11 +60,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://monjoel.fr"),
   title: {
-    default: "Joël | Dépannage sans arnaques - Plomberie, Serrurerie, Électricité",
+    default: "Joël | Dépannage dès 59€ sans arnaque - Plomberie, Serrurerie, Électricité",
     template: "%s | Joël",
   },
+  // Prix d'appel RÉEL : plancher catalogue 59€ (prise/interrupteur HS,
+  // services-definition.ts) + wedge « 0 majoration » — fallback de toutes
+  // les pages sans metadata propre.
   description:
-    "Trouvez en quelques clics un artisan de confiance en plomberie, électricité ou serrurerie. Devis instantané, prix fixe, zéro arnaque. Appelez le 01 41 69 10 08.",
+    "Dépannage plomberie, serrurerie, électricité dès 59€ à Paris & Île-de-France. Prix fixe annoncé avant, 0 majoration nuit & week-end. ☎ 01 41 69 10 08",
   keywords: [
     "dépannage",
     "plomberie",

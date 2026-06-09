@@ -73,13 +73,15 @@ const trades: Trade[] = [
     fallbackIcon: Droplet,
     h3: "Fuites, débouchages, chauffe-eau.",
     paragraph:
-      "47% des appels de nuit chez Joël concernent une fuite. Le diagnostic au téléphone (4 questions) suffit dans 9 cas sur 10 à annoncer un prix ferme — déplacement, main d'œuvre, pièces de remplacement standard inclus. Le marché parisien tourne entre 180 et 350 €. Notre départ : 79 €.",
+      "47% des appels de nuit chez Joël concernent une fuite. Le diagnostic au téléphone (4 questions) suffit dans 9 cas sur 10 à annoncer un prix ferme — déplacement, main d'œuvre, pièces de remplacement standard inclus. Le marché parisien tourne entre 180 et 350 €. Notre départ : 69 €.",
     bullets: [
       "Diagnostic gratuit au téléphone",
       "Intervention 30 min Paris intra-muros",
       "Pièces neuves garanties 2 ans",
     ],
-    startingPrice: "79€",
+    // Plancher RÉEL plomberie : remplacement-robinet / chasse-eau / lavabo 69€
+    // (services-definition.ts) — aligné hub /plomberie « Dès 69€ ».
+    startingPrice: "69€",
     priceLabel: "prix de départ fixé à l'avance",
     marketRange: "180-350€",
     spec: ["Plombiers Qualibat", "RC pro à jour"],

@@ -68,7 +68,7 @@ const hubFaqItems = [
   {
     question: "Combien coûte un électricien d'urgence à Paris ?",
     answer:
-      "Nos tarifs démarrent à 59€ TTC pour une intervention simple (remplacement prise/interrupteur). La remise en service d'une panne électrique est à 79€. Le prix est annoncé avant l'intervention, fixe et non modifiable sur place.",
+      "Nos tarifs démarrent à 59€ TTC pour une intervention simple (remplacement prise/interrupteur). La remise en service d'une panne électrique est à 89€. Le prix est annoncé avant l'intervention, fixe et non modifiable sur place.",
   },
   {
     question: "Vos électriciens sont-ils certifiés et habilités ?",
