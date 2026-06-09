@@ -131,8 +131,11 @@ export default function TrustStrip() {
                   alt=""
                   width={140}
                   height={logo.height}
-                  className="trust-logo w-auto"
-                  style={{ height: `${logo.height}px` }}
+                  className="trust-logo"
+                  // height fixe + width:auto explicite ensemble → respecte le
+                  // ratio et coupe le warning Next/Image (« width or height
+                  // modified but not the other ») sur les ~16 logos.
+                  style={{ height: `${logo.height}px`, width: "auto" }}
                   unoptimized // SVG → pas besoin de l'optimiseur Next
                 />
               </div>

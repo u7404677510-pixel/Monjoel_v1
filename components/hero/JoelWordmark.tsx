@@ -405,9 +405,12 @@ export default function JoelWordmark({
                   times,
                 };
               } else if (shouldPlay && entryDone && idleAnim) {
-                // J : idle infinie. CRITIQUE — on inclut explicitement opacity/y/scale
-                // au state final, sinon motion 12 reset ces props à initial et le J
-                // disparaît. Seul `rotate` est animé en boucle.
+                // J : idle infinie. CRITIQUE — opacity/y/scale snappent à leur état
+                // final via la transition `default` (durée 0) ; SEUL `rotate` tourne
+                // en boucle. Sinon le `repeat: Infinity` (durée 7s) traîne AUSSI
+                // opacity/scale dans le tween infini et le J reste figé à ~scale 0.14
+                // (bug "oël" — le J quasi invisible, observé en prod). Transition
+                // par-propriété = fix robuste qui garantit le J toujours plein.
                 currentAnimate = {
                   opacity: 1,
                   y: 0,
@@ -415,9 +418,12 @@ export default function JoelWordmark({
                   rotate: idleAnim.rotate,
                 };
                 currentTransition = {
-                  duration: idleAnim.duration,
-                  ease: "easeInOut",
-                  repeat: Infinity,
+                  default: { duration: 0 },
+                  rotate: {
+                    duration: idleAnim.duration,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                  },
                 };
               } else if (shouldPlay && entryDone) {
                 // Lettres sans idleAnim (o, e, l) : restent posées au state final
