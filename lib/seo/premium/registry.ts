@@ -98,6 +98,15 @@ import { content as plombierNoisyLeSecDebouchageCanalisation } from "./content/p
 import { content as plombierProvinsDebouchageCanalisation } from "./content/plombier-provins-debouchage-canalisation";
 import { content as plombierSenartDebouchageCanalisation } from "./content/plombier-senart-debouchage-canalisation";
 import { content as plombierParis17DebouchageWc } from "./content/plombier-paris-17-debouchage-wc";
+// -- Plombier Batch 23 — wc-bouches × villes GSC (2026-06-08)
+import { content as plombierBezonsWcBouches } from "./content/plombier-bezons-wc-bouches";
+import { content as plombierGarancieresWcBouches } from "./content/plombier-garancieres-wc-bouches";
+import { content as plombierIssyLesMoulineauxWcBouches } from "./content/plombier-issy-les-moulineaux-wc-bouches";
+import { content as plombierLevalloisPerretWcBouches } from "./content/plombier-levallois-perret-wc-bouches";
+import { content as plombierMontrougeWcBouches } from "./content/plombier-montrouge-wc-bouches";
+import { content as plombierNanterreWcBouches } from "./content/plombier-nanterre-wc-bouches";
+import { content as plombierSaintOuenLAumoneWcBouches } from "./content/plombier-saint-ouen-l-aumone-wc-bouches";
+import { content as plombierVillabeWcBouches } from "./content/plombier-villabe-wc-bouches";
 // -- Plombier Batch 19 — debouchage-wc × villes GSC (2026-06-08)
 import { content as plombierErmontDebouchageWc } from "./content/plombier-ermont-debouchage-wc";
 import { content as plombierLeKremlinBicetreDebouchageWc } from "./content/plombier-le-kremlin-bicetre-debouchage-wc";
@@ -421,6 +430,15 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierProvinsDebouchageCanalisation,
   plombierSenartDebouchageCanalisation,
   plombierParis17DebouchageWc,
+  // Batch 23 — wc-bouches × villes GSC (2026-06-08)
+  plombierBezonsWcBouches,
+  plombierGarancieresWcBouches,
+  plombierIssyLesMoulineauxWcBouches,
+  plombierLevalloisPerretWcBouches,
+  plombierMontrougeWcBouches,
+  plombierNanterreWcBouches,
+  plombierSaintOuenLAumoneWcBouches,
+  plombierVillabeWcBouches,
   // Batch 8 — extension serrurier+électricien 4 mai 2026
   // 6 serruriers city + 2 serruriers service Paris (post-suppression reproduction-cles) + 2 électriciens city
   serrurierAntony,
