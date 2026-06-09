@@ -44,6 +44,7 @@ import { ArrowRight, Pause, Phone, Play, Star } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { preload } from "react-dom";
 import JoelWordmark from "@/components/hero/JoelWordmark";
 import { useSiteAsset } from "@/lib/hooks/useSiteAssets";
 import { formatPhoneForTel, useSiteConfig } from "@/lib/hooks/useSiteConfig";
@@ -321,6 +322,14 @@ function HeroPortraitOverlay({ src }: HeroPortraitOverlayProps) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function HeroCinematic() {
+  // LCP : le poster est appliqué en CSS background-image (couche 0c) — le
+  // preload scanner du navigateur ne le voit pas et le découvre tard (après
+  // CSSOM), ce qui plombe le LCP (~4s mesuré). On force sa découverte
+  // immédiate via un <link rel="preload"> émis dès le SSR (React 19 preload,
+  // dédupliqué). `type` AVIF : les navigateurs sans support l'ignorent et
+  // retombent sur le JPEG de l'image-set sans double téléchargement.
+  preload(POSTER, { as: "image", type: "image/avif", fetchPriority: "high" });
+
   const { config } = useSiteConfig();
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [interventionsCount] = useState(12); // statique pour l'instant
@@ -394,7 +403,9 @@ export default function HeroCinematic() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-joel-violet" />
           </span>
           <span className="text-xs font-bold uppercase tracking-[0.12em] text-joel-violet">
-            Urgence 24h/24
+            {/* Prix d'appel RÉEL : plancher catalogue toutes interventions
+                confondues = prise-interrupteur-hs 59€ (services-definition.ts). */}
+            Urgence 24h/24 · Dès 59€
           </span>
         </motion.div>
 
@@ -472,6 +483,8 @@ export default function HeroCinematic() {
           <span>Intervention 30 minutes</span>
           <span className="text-joel-yellow/60" aria-hidden="true">·</span>
           <span>prix fixe annoncé avant l&apos;arrivée</span>
+          <span className="text-joel-yellow/60" aria-hidden="true">·</span>
+          <span className="font-semibold text-white">0 majoration nuit &amp; week-end</span>
           <span className="text-joel-yellow/60" aria-hidden="true">·</span>
           <span className="inline-flex items-center gap-1">
             <Star

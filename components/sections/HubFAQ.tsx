@@ -14,7 +14,7 @@ const faqsByTrade: Record<TradeType, FAQ[]> = {
   plomberie: [
     {
       question: "Combien coûte un plombier d'urgence à Paris ?",
-      answer: "Nos tarifs plomberie démarrent à 79€ TTC pour une intervention simple (débouchage WC). Le prix exact est annoncé au téléphone avant que l'artisan parte. Ce prix est fixe : ni majoration, ni frais de déplacement cachés. Vous ne payez que ce qui a été dit.",
+      answer: "Nos tarifs plomberie démarrent à 69€ TTC pour une intervention simple (remplacement de robinet, chasse d'eau, lavabo bouché). Le prix exact est annoncé au téléphone avant que l'artisan parte. Ce prix est fixe : ni majoration, ni frais de déplacement cachés. Vous ne payez que ce qui a été dit.",
     },
     {
       question: "Intervenez-vous la nuit, le week-end et les jours fériés ?",
@@ -114,7 +114,7 @@ const faqsByTrade: Record<TradeType, FAQ[]> = {
   electricite: [
     {
       question: "Combien coûte un électricien d'urgence à Paris ?",
-      answer: "Nos tarifs démarrent à 59€ TTC pour une intervention simple (remplacement prise/interrupteur). Le diagnostic et la remise en service d'une panne électrique sont à 79€. Le prix est annoncé avant l'intervention, il est fixe et ne peut pas être modifié sur place.",
+      answer: "Nos tarifs démarrent à 59€ TTC pour une intervention simple (remplacement prise/interrupteur). Le diagnostic et la remise en service d'une panne électrique sont à 89€. Le prix est annoncé avant l'intervention, il est fixe et ne peut pas être modifié sur place.",
     },
     {
       question: "Vos électriciens sont-ils certifiés ?",

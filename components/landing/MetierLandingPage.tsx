@@ -114,7 +114,7 @@ const TESTIMONIALS_BY_TRADE: Record<string, Testimonial[]> = {
       name: "Sarah K.",
       city: "Paris 11e",
       service: "Fuite sous évier",
-      text: "Fuite repérée un dimanche soir. Plombier Joël arrivé en 25 minutes. 79€ annoncés au téléphone, 79€ sur la facture. Attestation pour l'assurance reçue par mail dans la soirée.",
+      text: "Fuite repérée un dimanche soir. Plombier Joël arrivé en 25 minutes. 89€ annoncés au téléphone, 89€ sur la facture. Attestation pour l'assurance reçue par mail dans la soirée.",
       avatar: "/images/testimonials/avatar-sarah.png",
     },
     {
@@ -137,7 +137,7 @@ const TESTIMONIALS_BY_TRADE: Record<string, Testimonial[]> = {
       name: "Sarah K.",
       city: "Paris 11e",
       service: "Disjoncteur",
-      text: "Coupure totale à minuit, le frigo plein de courses. Électricien chez moi en 22 minutes. Diagnostic en 10 minutes : différentiel à enclencher. 59€ tout compris, comme annoncé.",
+      text: "Coupure totale à minuit, le frigo plein de courses. Électricien chez moi en 22 minutes. Diagnostic en 10 minutes : différentiel à enclencher. 79€ tout compris, comme annoncé.",
       avatar: "/images/testimonials/avatar-sarah.png",
     },
     {
@@ -320,29 +320,32 @@ interface ActivityEvent {
   time: string;
 }
 
+// ⚠️ LÉGAL : les montants affichés ici doivent être ≥ au plancher catalogue
+// (services-definition.ts) du service correspondant — un « live » sous le
+// plancher = promesse de prix mensongère. Aligné au catalogue le 09/06/2026.
 const ACTIVITY_EVENTS_BY_TRADE: Record<string, ActivityEvent[]> = {
   plomberie: [
-    { initials: "S.K.", city: "Paris 11e", text: "Fuite réparée — 79€", time: "il y a 2 min" },
+    { initials: "S.K.", city: "Paris 11e", text: "Fuite réparée — 89€", time: "il y a 2 min" },
     { initials: "T.R.", city: "Saint-Denis", text: "WC débouchés — 79€", time: "il y a 5 min" },
-    { initials: "L.B.", city: "Boulogne", text: "Chauffe-eau remis en service — 99€", time: "il y a 8 min" },
+    { initials: "L.B.", city: "Boulogne", text: "Chauffe-eau remis en service — 109€", time: "il y a 8 min" },
     { initials: "F.L.", city: "Pantin", text: "Plombier dispatché", time: "il y a 11 min" },
-    { initials: "M.D.", city: "Versailles", text: "Recherche de fuite terminée — 129€", time: "il y a 14 min" },
-    { initials: "C.M.", city: "Asnières", text: "Robinet réparé — 79€", time: "il y a 18 min" },
+    { initials: "M.D.", city: "Versailles", text: "Recherche de fuite terminée — 149€", time: "il y a 14 min" },
+    { initials: "C.M.", city: "Asnières", text: "Robinet réparé — 69€", time: "il y a 18 min" },
   ],
   serrurerie: [
     { initials: "K.D.", city: "Nanterre", text: "Porte ouverte — 89€", time: "il y a 3 min" },
-    { initials: "S.K.", city: "Paris 11e", text: "Cylindre remplacé — 120€", time: "il y a 6 min" },
-    { initials: "I.F.", city: "Versailles", text: "Clé cassée extraite — 95€", time: "il y a 9 min" },
+    { initials: "S.K.", city: "Paris 11e", text: "Cylindre remplacé — 119€", time: "il y a 6 min" },
+    { initials: "I.F.", city: "Versailles", text: "Clé cassée extraite — 79€", time: "il y a 9 min" },
     { initials: "M.T.", city: "Vincennes", text: "Serrurier dispatché", time: "il y a 12 min" },
     { initials: "A.N.", city: "Créteil", text: "Porte sécurisée — 180€", time: "il y a 16 min" },
     { initials: "P.R.", city: "Boulogne", text: "Ouverture sans perçage — 89€", time: "il y a 21 min" },
   ],
   electricite: [
-    { initials: "C.M.", city: "Asnières", text: "Court-circuit réparé — 89€", time: "il y a 2 min" },
-    { initials: "L.B.", city: "Boulogne", text: "Disjoncteur réenclenché — 69€", time: "il y a 5 min" },
-    { initials: "A.P.", city: "Montreuil", text: "Panne réglée — 79€", time: "il y a 8 min" },
+    { initials: "C.M.", city: "Asnières", text: "Court-circuit réparé — 99€", time: "il y a 2 min" },
+    { initials: "L.B.", city: "Boulogne", text: "Disjoncteur réenclenché — 79€", time: "il y a 5 min" },
+    { initials: "A.P.", city: "Montreuil", text: "Panne réglée — 89€", time: "il y a 8 min" },
     { initials: "J.M.", city: "Saint-Denis", text: "Électricien dispatché", time: "il y a 11 min" },
-    { initials: "N.H.", city: "Paris 15e", text: "Tableau remis en service — 149€", time: "il y a 15 min" },
+    { initials: "N.H.", city: "Paris 15e", text: "Tableau remis en service — 129€", time: "il y a 15 min" },
     { initials: "T.D.", city: "Paris 11e", text: "Prise remplacée — 59€", time: "il y a 19 min" },
   ],
 };
@@ -737,12 +740,18 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
                 transition={{ duration: 0.5, ease: EASE_OUT }}
                 className="flex flex-wrap items-center gap-2.5 justify-center lg:justify-start mb-5"
               >
-                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-joel text-white text-xs font-bold uppercase tracking-[0.12em] shadow-md shadow-joel-violet/30">
-                  <Shield size={13} />
-                  Prix fixes garantis
-                </span>
+                {/* Prix d'appel RÉEL en premier — plancher catalogue du métier
+                    (config.priceFrom, aligné services-definition.ts). */}
                 <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-joel-yellow text-joel-violet text-xs font-bold uppercase tracking-[0.12em] shadow-md shadow-joel-yellow/30">
                   <Zap size={13} />
+                  Dès {config.priceFrom}€
+                </span>
+                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-joel text-white text-xs font-bold uppercase tracking-[0.12em] shadow-md shadow-joel-violet/30">
+                  <Shield size={13} />
+                  0 majoration nuit &amp; week-end
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-zinc-700 text-xs font-semibold shadow-xs ring-1 ring-joel-violet/10">
+                  <Zap size={12} className="text-joel-violet" />
                   Intervention 30 min
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-zinc-700 text-xs font-semibold shadow-xs ring-1 ring-joel-violet/10">
@@ -773,9 +782,9 @@ export default function MetierLandingPage({ config }: MetierLandingPageProps) {
                 transition={{ duration: 0.6, delay: 0.2, ease: EASE_OUT }}
                 className="text-base sm:text-lg md:text-xl text-zinc-600 max-w-xl mx-auto lg:mx-0 mb-7 leading-relaxed"
               >
-                Pas de surprise. Pas de supplément. Intervention 24h/24, 7j/7
-                en Île-de-France &mdash; au tarif annoncé au téléphone, sans
-                exception.
+                Pas de surprise, pas de supplément &mdash; ni la nuit, ni le
+                week-end. Intervention 24h/24, 7j/7 en Île-de-France, au tarif
+                annoncé au téléphone, sans exception.
               </motion.p>
 
               {/* CTA duo + indicateur dispo */}

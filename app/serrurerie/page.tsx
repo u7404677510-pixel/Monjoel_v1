@@ -6,8 +6,8 @@ import { generateHubSchema } from "@/lib/seo/schema-generator";
 import { getTradeBySlug } from "@/lib/data/services-definition";
 
 export const metadata: Metadata = {
-  title: "Serrurier d'urgence Paris & Île-de-France | Dès 89€",
-  description: "Serrurier d'urgence Paris & IDF. Intervention 30 min, à partir de 89€. Sans majoration 24h/24. 01 41 69 10 08",
+  title: "Serrurier d'urgence Paris & Île-de-France | Dès 79€",
+  description: "Serrurier d'urgence Paris & IDF. Intervention 30 min, à partir de 79€. Sans majoration 24h/24. 01 41 69 10 08",
   keywords: [
     "serrurier urgence Paris",
     "serrurier Île-de-France",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://monjoel.fr/serrurerie",
     siteName: "Joël",
-    title: "Serrurier d'urgence Paris | Dès 89€ | Intervention 30 min",
-    description: "Serrurier d'urgence à partir de 89€. Intervention en 30 min, zéro arnaque. Appelez le 01 41 69 10 08.",
+    title: "Serrurier d'urgence Paris | Dès 79€ | Intervention 30 min",
+    description: "Serrurier d'urgence à partir de 79€. Intervention en 30 min, zéro arnaque. Appelez le 01 41 69 10 08.",
     images: [
       {
         url: "/og-default.jpg",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Serrurier d'urgence Paris | Dès 89€ | Intervention 30 min",
-    description: "Serrurier d'urgence à partir de 89€. Intervention en 30 min. Appelez le 01 41 69 10 08.",
+    title: "Serrurier d'urgence Paris | Dès 79€ | Intervention 30 min",
+    description: "Serrurier d'urgence à partir de 79€. Intervention en 30 min. Appelez le 01 41 69 10 08.",
     images: ["/og-default.jpg"],
   },
 };

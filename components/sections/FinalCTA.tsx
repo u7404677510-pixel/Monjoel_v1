@@ -72,12 +72,13 @@ export default function FinalCTA() {
 
           {/* Sous-paragraphe */}
           <p className="mt-7 text-base sm:text-lg md:text-xl text-zinc-700 leading-relaxed max-w-2xl mx-auto">
+            {/* Prix d'appel RÉEL : plancher catalogue 59€ (services-definition.ts). */}
             Obtenez un devis instantané et transparent.
             <br className="hidden sm:block" />
             <span className="font-semibold text-zinc-900">
-              Prix fixe garanti
+              Dès 59€, prix fixe garanti
             </span>{" "}
-            avant intervention.
+            avant intervention &mdash; 0 majoration nuit &amp; week-end.
           </p>
 
           {/* CTA dual — composant existant (logique métier intacte) */}

@@ -15,7 +15,8 @@ const WHATSAPP_MESSAGE = encodeURIComponent(
  * Levier #1 de conversion sur le dépannage d'urgence mobile : un bouton d'appel
  * impossible à manquer, présent dès le premier scroll, avec les 3 accroches qui
  * font décrocher le téléphone sur ce marché :
- *   - prix d'appel RÉEL « dès 69€ » (plancher réel du catalogue — honnête),
+ *   - prix d'appel RÉEL « dès 59€ » (plancher réel du catalogue : prise/
+ *     interrupteur HS 59€ dans services-definition.ts — honnête),
  *   - « 0 majoration nuit/week-end » (le wedge tueur : les arnaqueurs majorent ×2),
  *   - « prix fixe annoncé avant ».
  * Tracking GTM (click_to_call / click_whatsapp, placement sticky_mobile) préservé.
@@ -66,7 +67,7 @@ export default function StickyCallButton() {
         <p className="flex items-center justify-center gap-1.5 px-3 py-1 text-[11px] font-bold leading-tight">
           <Zap size={11} className="fill-joel-yellow text-joel-yellow shrink-0" aria-hidden="true" />
           <span>
-            <span className="text-joel-yellow">Dès 69€</span>
+            <span className="text-joel-yellow">Dès 59€</span>
             {" · "}24h/24{" · "}
             <span className="text-joel-yellow">0 majoration</span>{" "}nuit&nbsp;&amp;&nbsp;week-end
           </span>
