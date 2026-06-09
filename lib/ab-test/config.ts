@@ -1,9 +1,8 @@
 /**
- * Configuration A/B Test - 3 métiers x 3 variantes
+ * Configuration des landing par métier (serrurerie / plomberie / électricité).
  */
 
 export type TradeType = "serrurerie" | "plomberie" | "electricite";
-export type VariantType = "A" | "B" | "C";
 
 export interface ServiceItem {
   name: string;
@@ -77,47 +76,5 @@ export const tradeConfigs: Record<TradeType, TradeConfig> = {
       { name: "Prise / Interrupteur HS", price: "59€", description: "Remplacement" },
     ],
     keywords: ["électricien", "panne électrique", "disjoncteur", "court-circuit"],
-  },
-};
-
-/**
- * Configuration des tests A/B par métier
- */
-export interface ABTestConfig {
-  id: string;
-  variants: Array<{
-    id: VariantType;
-    weight: number; // Pourcentage (0-100)
-  }>;
-  active: boolean;
-}
-
-export const abTestConfigs: Record<TradeType, ABTestConfig> = {
-  serrurerie: {
-    id: "serrurerie-landing-2026",
-    variants: [
-      { id: "A", weight: 33 },
-      { id: "B", weight: 33 },
-      { id: "C", weight: 34 },
-    ],
-    active: true,
-  },
-  plomberie: {
-    id: "plomberie-landing-2026",
-    variants: [
-      { id: "A", weight: 33 },
-      { id: "B", weight: 33 },
-      { id: "C", weight: 34 },
-    ],
-    active: true,
-  },
-  electricite: {
-    id: "electricite-landing-2026",
-    variants: [
-      { id: "A", weight: 33 },
-      { id: "B", weight: 33 },
-      { id: "C", weight: 34 },
-    ],
-    active: true,
   },
 };
