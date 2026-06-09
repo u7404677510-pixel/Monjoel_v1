@@ -88,6 +88,15 @@ import { content as plombierMaurepasRechercheFuite } from "./content/plombier-ma
 import { content as plombierQuincySousSenartDebouchageCanalisation } from "./content/plombier-quincy-sous-senart-debouchage-canalisation";
 // -- Plombier Batch 7 — pages service Paris fact-checked (capitalisation GSC)
 import { content as plombierParis15DebouchageCanalisation } from "./content/plombier-paris-15-debouchage-canalisation";
+// -- Plombier Batch 22 — debouchage-canalisation × villes GSC (2026-06-08)
+import { content as plombierBretignySurOrgeDebouchageCanalisation } from "./content/plombier-bretigny-sur-orge-debouchage-canalisation";
+import { content as plombierClamartDebouchageCanalisation } from "./content/plombier-clamart-debouchage-canalisation";
+import { content as plombierCroissyBeaubourgDebouchageCanalisation } from "./content/plombier-croissy-beaubourg-debouchage-canalisation";
+import { content as plombierGambaisDebouchageCanalisation } from "./content/plombier-gambais-debouchage-canalisation";
+import { content as plombierLaFerteGaucherDebouchageCanalisation } from "./content/plombier-la-ferte-gaucher-debouchage-canalisation";
+import { content as plombierNoisyLeSecDebouchageCanalisation } from "./content/plombier-noisy-le-sec-debouchage-canalisation";
+import { content as plombierProvinsDebouchageCanalisation } from "./content/plombier-provins-debouchage-canalisation";
+import { content as plombierSenartDebouchageCanalisation } from "./content/plombier-senart-debouchage-canalisation";
 import { content as plombierParis17DebouchageWc } from "./content/plombier-paris-17-debouchage-wc";
 // -- Plombier Batch 19 — debouchage-wc × villes GSC (2026-06-08)
 import { content as plombierErmontDebouchageWc } from "./content/plombier-ermont-debouchage-wc";
@@ -402,6 +411,15 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierSceaux,
   plombierRosnySousBois,
   plombierParis15DebouchageCanalisation,
+  // Batch 22 — debouchage-canalisation × villes GSC (2026-06-08)
+  plombierBretignySurOrgeDebouchageCanalisation,
+  plombierClamartDebouchageCanalisation,
+  plombierCroissyBeaubourgDebouchageCanalisation,
+  plombierGambaisDebouchageCanalisation,
+  plombierLaFerteGaucherDebouchageCanalisation,
+  plombierNoisyLeSecDebouchageCanalisation,
+  plombierProvinsDebouchageCanalisation,
+  plombierSenartDebouchageCanalisation,
   plombierParis17DebouchageWc,
   // Batch 8 — extension serrurier+électricien 4 mai 2026
   // 6 serruriers city + 2 serruriers service Paris (post-suppression reproduction-cles) + 2 électriciens city
