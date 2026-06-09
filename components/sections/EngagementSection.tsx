@@ -218,7 +218,7 @@ function PillarCard({ pillar, delay, reducedMotion, className = "" }: PillarCard
     : { duration: 0.7, ease: EASE, delay };
 
   return (
-    <motion.article
+    <motion.div
       role="listitem"
       initial="hidden"
       whileInView="visible"
@@ -263,7 +263,7 @@ function PillarCard({ pillar, delay, reducedMotion, className = "" }: PillarCard
           {pillar.paragraph}
         </p>
       </div>
-    </motion.article>
+    </motion.div>
   );
 }
 

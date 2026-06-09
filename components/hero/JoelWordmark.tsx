@@ -478,6 +478,7 @@ export default function JoelWordmark({
         {/* ─── Phase 4 : Tagline typewriter ─────────────────────────────── */}
         {!hideTagline && (
           <span
+            role="img"
             aria-label={taglineText}
             className="font-display font-medium mt-2"
             style={{

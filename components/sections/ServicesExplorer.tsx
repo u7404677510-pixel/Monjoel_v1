@@ -155,6 +155,10 @@ export default function ServicesExplorer() {
                   key={service.id}
                   role="tab"
                   aria-selected={isActive}
+                  // Nom accessible toujours présent : sur mobile le <span> du libellé
+                  // est `hidden` (icône seule) → sans aria-label le bouton n'a aucun
+                  // nom pour les lecteurs d'écran (violation a11y button-name).
+                  aria-label={service.name}
                   onClick={() => setActiveService(service)}
                   className={`relative flex items-center justify-center gap-2 sm:gap-3 min-h-[44px] px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 ease-in-out ${
                     isActive
