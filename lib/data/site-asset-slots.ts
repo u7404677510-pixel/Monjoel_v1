@@ -255,7 +255,7 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     aspect: "16:9",
     path: "/images/metier-mains/plombier.png",
     category: "Métier mains",
-    description: "Macro mains plombier sur tuyau cuivre + clé chrome. Pour MetierTrust ou nouveau composant proof.",
+    description: "Macro mains plombier sur tuyau cuivre + clé chrome. Pour bloc proof / réassurance métier.",
   },
   {
     id: "metier-mains-electricien",
@@ -264,7 +264,7 @@ export const SITE_ASSET_SLOTS: readonly SiteAssetSlot[] = [
     aspect: "16:9",
     path: "/images/metier-mains/electricien.png",
     category: "Métier mains",
-    description: "Macro mains électricien tournevis tableau Schneider + sticker MonJoël. Pour MetierTrust.",
+    description: "Macro mains électricien tournevis tableau Schneider + sticker MonJoël. Pour bloc proof / réassurance métier.",
   },
 
   // ── Before/After — paires interventions ──────────────────────────────────
