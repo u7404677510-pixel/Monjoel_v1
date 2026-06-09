@@ -374,8 +374,14 @@ export default function HeroCinematic() {
         className="absolute inset-0 z-10 pointer-events-none"
         aria-hidden="true"
         style={{
+          // Scrim de lisibilité texte (teinte violet foncé on-brand, pas noir pur).
+          // Le fond illustration étant lumineux (ciel/immeubles clairs), on garde
+          // le haut clair (chip URGENCE + illustration visibles) puis on assombrit
+          // progressivement la zone du contenu (wordmark, baseline jaune, sous-titres,
+          // CTA) pour un contraste WCAG AA du texte clair. Évite la régression de
+          // lisibilité introduite par le passage au visuel clair.
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.10) 60%, rgba(0,0,0,0.55) 100%)",
+            "linear-gradient(180deg, rgba(18,10,35,0.04) 0%, rgba(18,10,35,0.16) 26%, rgba(18,10,35,0.40) 50%, rgba(14,8,28,0.50) 78%, rgba(10,6,20,0.62) 100%)",
         }}
       />
 
