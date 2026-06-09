@@ -58,17 +58,14 @@ const QuickQuoteForm = dynamic(() => import("@/components/QuickQuoteForm"), {
 // Constantes
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Vidéo locale par défaut RETIRÉE (2026-06-09) : le footage local (hero.*.mp4) et
-// son poster montraient une silhouette gantée de noir façon "cambrioleur dans une
-// cage d'escalier" — contre-productif pour une marque de confiance anti-arnaque,
-// et en contradiction directe avec la DA documentée plus bas (« lumineux, chaleureux,
-// premium »). Le fond par défaut est désormais l'illustration de marque on-brand
-// (camionnette Joël + artisan qui arrive aider, baseline « Comment je peux vous
-// aider ? »). Une vidéo ne joue QUE si un master on-brand est uploadé via
-// /admin/medias (slot home-hero-video → dynamicHeroUrl).
+const VIDEO_SOURCES = [
+  { src: "/videos/hero.av1.mp4", type: 'video/mp4; codecs="av01.0.05M.08"' },
+  { src: "/videos/hero.hevc.mp4", type: 'video/mp4; codecs="hvc1"' },
+  { src: "/videos/hero.h264.mp4", type: 'video/mp4; codecs="avc1.4D401E"' },
+] as const;
 
-const POSTER = "/hero-illustration-f.webp";
-const POSTER_FALLBACK = "/hero-illustration-f.webp";
+const POSTER = "/videos/hero-poster.avif";
+const POSTER_FALLBACK = "/videos/hero-poster.jpg";
 
 // Grain SVG inline (anti-AI-polish, donne de la matière au gradient violet).
 // Encodé en data URI pour éviter une requête réseau.
@@ -203,9 +200,9 @@ function HeroBackgroundMedia({ onPlayingChange, videoRef }: HeroBackgroundMediaP
       <div
         className="absolute inset-0"
         style={{
-          // Fond par défaut = illustration de marque on-brand (POSTER_FALLBACK).
-          // Si Mehdi a uploadé un poster custom via /admin/medias, il prime.
-          backgroundImage: `url("${dynamicPoster.url || POSTER_FALLBACK}")`,
+          backgroundImage: dynamicPoster.url && dynamicPoster.url !== POSTER_FALLBACK
+            ? `url("${dynamicPoster.url}")`
+            : `image-set(url("${POSTER}") type("image/avif"), url("${POSTER_FALLBACK}") type("image/jpeg"))`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -232,10 +229,9 @@ function HeroBackgroundMedia({ onPlayingChange, videoRef }: HeroBackgroundMediaP
           className="absolute inset-0 h-full w-full object-cover opacity-[0.85]"
         >
           {dynamicHeroUrl && <source src={dynamicHeroUrl} />}
-          {/* Cascade vidéo locale (footage "cambrioleur") retirée — cf. note en tête
-             de fichier. Sans master uploadé (dynamicHeroUrl vide), la <video> n'a
-             aucune source : elle reste sur son poster (l'illustration on-brand) et
-             le fond illustration domine. */}
+          {VIDEO_SOURCES.map((s) => (
+            <source key={s.src} src={s.src} type={s.type} />
+          ))}
         </video>
       )}
 
@@ -374,14 +370,8 @@ export default function HeroCinematic() {
         className="absolute inset-0 z-10 pointer-events-none"
         aria-hidden="true"
         style={{
-          // Scrim de lisibilité texte (teinte violet foncé on-brand, pas noir pur).
-          // Le fond illustration étant lumineux (ciel/immeubles clairs), on garde
-          // le haut clair (chip URGENCE + illustration visibles) puis on assombrit
-          // progressivement la zone du contenu (wordmark, baseline jaune, sous-titres,
-          // CTA) pour un contraste WCAG AA du texte clair. Évite la régression de
-          // lisibilité introduite par le passage au visuel clair.
           background:
-            "linear-gradient(180deg, rgba(18,10,35,0.04) 0%, rgba(18,10,35,0.16) 26%, rgba(18,10,35,0.40) 50%, rgba(14,8,28,0.50) 78%, rgba(10,6,20,0.62) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.10) 60%, rgba(0,0,0,0.55) 100%)",
         }}
       />
 
