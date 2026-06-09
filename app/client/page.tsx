@@ -15,7 +15,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { createClient } from "@supabase/supabase-js";
+import { getSupabaseClient } from "@/lib/supabase";
 import { AnimatePresence, motion } from "motion/react";
 import { z } from "zod";
 import {
@@ -32,13 +32,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 type Step = "landing" | "login" | "sent" | "checking";
-
-function getSupabase() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key);
-}
 
 const emailSchema = z
   .string()
@@ -75,7 +68,7 @@ export default function ClientHomePage() {
 
   // On mount: if already logged → redirect to interventions
   useEffect(() => {
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (!supabase) {
       setStep("landing");
       return;
@@ -99,7 +92,7 @@ export default function ClientHomePage() {
       return;
     }
 
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (!supabase) {
       setError("Service temporairement indisponible. Réessayez dans un instant.");
       return;
@@ -109,7 +102,10 @@ export default function ClientHomePage() {
     const { error: authError } = await supabase.auth.signInWithOtp({
       email: parsed.data,
       options: {
-        emailRedirectTo: `${window.location.origin}/client/interventions`,
+        // PKCE : passage par /auth/callback (route publique) qui échange le
+        // code et pose les cookies de session avant de rediriger vers la page
+        // protégée — sinon le proxy bloque /client/interventions (cookie absent).
+        emailRedirectTo: `${window.location.origin}/auth/callback?next=/client/interventions`,
       },
     });
     setLoading(false);

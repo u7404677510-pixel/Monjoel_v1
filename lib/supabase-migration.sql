@@ -177,6 +177,22 @@ CREATE POLICY "leads_select_own_or_admin" ON leads
     OR (email   IS NOT NULL AND email   = auth.email())
   );
 
+-- Un artisan peut lire le lead RATTACHÉ À UNE DE SES interventions (et lui
+-- seul) — nécessaire pour afficher le contact/problème client sur SA facture
+-- (/artisan/facture/[id]). Policy permissive (OR avec celle ci-dessus) : elle
+-- n'élargit l'accès qu'aux leads des interventions dont il est propriétaire,
+-- jamais au lot complet.
+DROP POLICY IF EXISTS "leads_artisan_read_own_interventions" ON leads;
+CREATE POLICY "leads_artisan_read_own_interventions" ON leads
+  FOR SELECT USING (
+    id IN (
+      SELECT i.lead_id FROM interventions i
+      WHERE i.artisan_id IN (
+        SELECT a.id FROM artisans a WHERE a.email = auth.email()
+      )
+    )
+  );
+
 DROP POLICY IF EXISTS "public_insert_leads" ON leads;
 DROP POLICY IF EXISTS "leads_public_insert" ON leads;
 CREATE POLICY "leads_public_insert" ON leads

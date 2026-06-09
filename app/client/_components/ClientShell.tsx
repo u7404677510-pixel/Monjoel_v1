@@ -19,7 +19,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { createClient } from "@supabase/supabase-js";
+import { getSupabaseClient } from "@/lib/supabase";
 import {
   HelpCircle,
   ListChecks,
@@ -29,13 +29,6 @@ import {
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-function getSupabase() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key);
-}
 
 const NAV = [
   { href: "/client/interventions", label: "Mes demandes", icon: ListChecks },
@@ -51,7 +44,7 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
   // Read session once on mount — we don't subscribe to auth changes here:
   // sub-pages (login flow, interventions) own the authoritative state.
   useEffect(() => {
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (!supabase) return;
     supabase.auth.getSession().then(({ data: { session } }) => {
       setAuthed(!!session);
@@ -71,7 +64,7 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
   }, [mobileOpen]);
 
   const handleLogout = async () => {
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (supabase) await supabase.auth.signOut();
     setMobileOpen(false);
     setAuthed(false);
