@@ -73,6 +73,12 @@ import { content as plombierRosnySousBois } from "./content/plombier-rosny-sous-
 
 // -- Plombier (pages service)
 import { content as plombierEvryCourcouronnesChauffeEauPanne } from "./content/plombier-evry-courcouronnes-chauffe-eau-panne";
+// -- Plombier Batch 24 — chauffe-eau-panne × villes GSC (2026-06-08)
+import { content as plombierAcheresChauffeEauPanne } from "./content/plombier-acheres-chauffe-eau-panne";
+import { content as plombierLouvresChauffeEauPanne } from "./content/plombier-louvres-chauffe-eau-panne";
+import { content as plombierMaisonsAlfortChauffeEauPanne } from "./content/plombier-maisons-alfort-chauffe-eau-panne";
+import { content as plombierTremblayEnFranceChauffeEauPanne } from "./content/plombier-tremblay-en-france-chauffe-eau-panne";
+import { content as plombierVilleparisisChauffeEauPanne } from "./content/plombier-villeparisis-chauffe-eau-panne";
 import { content as plombierVilliersSurMarneRechercheFuite } from "./content/plombier-villiers-sur-marne-recherche-fuite";
 import { content as plombierLongjumeauRechercheFuite } from "./content/plombier-longjumeau-recherche-fuite";
 import { content as plombierMontignyLesCormeillesRechercheFuite } from "./content/plombier-montigny-les-cormeilles-recherche-fuite";
@@ -189,6 +195,13 @@ import { content as serrurierIvrySurSeine } from "./content/serrurier-ivry-sur-s
 // -- Serrurier Batch 8 — pages service Paris (post-suppression reproduction-cles)
 import { content as serrurierParis11ChangementCylindre } from "./content/serrurier-paris-11-changement-cylindre";
 import { content as serrurierParis15OuvertureSansPercage } from "./content/serrurier-paris-15-ouverture-sans-percage";
+// -- Serrurier Batch 25 — ouverture porte claquée + après-effraction × villes GSC (2026-06-08)
+import { content as serrurierCharentonLePontOuvertureSansPercage } from "./content/serrurier-charenton-le-pont-ouverture-sans-percage";
+import { content as serrurierElancourtOuvertureSansPercage } from "./content/serrurier-elancourt-ouverture-sans-percage";
+import { content as serrurierVanvesOuvertureSansPercage } from "./content/serrurier-vanves-ouverture-sans-percage";
+import { content as serrurierAblisApresEffraction } from "./content/serrurier-ablis-apres-effraction";
+import { content as serrurierBretignySurOrgeApresEffraction } from "./content/serrurier-bretigny-sur-orge-apres-effraction";
+import { content as serrurierLaChapelleEnVexinApresEffraction } from "./content/serrurier-la-chapelle-en-vexin-apres-effraction";
 // -- Serrurier Batch 9 — extension Vague 3 mai 2026 (partiel)
 import { content as serrurierAsnieresSurSeine } from "./content/serrurier-asnieres-sur-seine";
 import { content as serrurierVersailles } from "./content/serrurier-versailles";
@@ -372,6 +385,12 @@ const _allPremiumPages: PremiumPageContent[] = [
   electricienCourbevoie,
   // Batch 3 — pages service Premium
   plombierEvryCourcouronnesChauffeEauPanne,
+  // Batch 24 — chauffe-eau-panne × villes GSC (2026-06-08)
+  plombierAcheresChauffeEauPanne,
+  plombierLouvresChauffeEauPanne,
+  plombierMaisonsAlfortChauffeEauPanne,
+  plombierTremblayEnFranceChauffeEauPanne,
+  plombierVilleparisisChauffeEauPanne,
   // Batch 4 — pages ville
   plombierNanterre,
   plombierAsnieresSurSeine,
@@ -449,6 +468,13 @@ const _allPremiumPages: PremiumPageContent[] = [
   serrurierIvrySurSeine,
   serrurierParis11ChangementCylindre,
   serrurierParis15OuvertureSansPercage,
+  // Batch 25 — ouverture porte claquée + après-effraction × villes GSC (2026-06-08)
+  serrurierCharentonLePontOuvertureSansPercage,
+  serrurierElancourtOuvertureSansPercage,
+  serrurierVanvesOuvertureSansPercage,
+  serrurierAblisApresEffraction,
+  serrurierBretignySurOrgeApresEffraction,
+  serrurierLaChapelleEnVexinApresEffraction,
   electricienRueilMalmaison,
   electricienAntony,
   // Batch 9 — extension Vague 3 (4 mai 2026, partiel post-crash agents)
