@@ -391,6 +391,35 @@ import { content as plombierAubervilliersBallonEauChaude } from "./content/plomb
 import { content as plombierBannostVillegagnon } from "./content/plombier-bannost-villegagnon";
 import { content as plombierBannostVillegagnonRechercheFuite } from "./content/plombier-bannost-villegagnon-recherche-fuite";
 
+// -- Batch 20 — Vague 2 GSC tier2 (9 juin 2026, 27 plombier)
+import { content as plombierBezonsEvierBouche } from "./content/plombier-bezons-evier-bouche";
+import { content as plombierBobignyTarifs } from "./content/plombier-bobigny-tarifs";
+import { content as plombierBondyRemplacementRobinet } from "./content/plombier-bondy-remplacement-robinet";
+import { content as plombierBoulancourtRechercheFuite } from "./content/plombier-boulancourt-recherche-fuite";
+import { content as plombierBoussySaintAntoine } from "./content/plombier-boussy-saint-antoine";
+import { content as plombierBrieComteRobertTarifs } from "./content/plombier-brie-comte-robert-tarifs";
+import { content as plombierBrunoyChasseEau } from "./content/plombier-brunoy-chasse-eau";
+import { content as plombierBussySaintGeorgesBallonEauChaude } from "./content/plombier-bussy-saint-georges-ballon-eau-chaude";
+import { content as plombierCarrieresSurSeineRechercheFuite } from "./content/plombier-carrieres-sur-seine-recherche-fuite";
+import { content as plombierCesson } from "./content/plombier-cesson";
+import { content as plombierCessonInstallationWc } from "./content/plombier-cesson-installation-wc";
+import { content as plombierChavilleRemplacementRobinet } from "./content/plombier-chaville-remplacement-robinet";
+import { content as plombierChavilleUrgence24h } from "./content/plombier-chaville-urgence-24h";
+import { content as plombierCitryUrgence24h } from "./content/plombier-citry-urgence-24h";
+import { content as plombierClichyRechercheFuite } from "./content/plombier-clichy-recherche-fuite";
+import { content as plombierConchesSurGondoireRechercheFuite } from "./content/plombier-conches-sur-gondoire-recherche-fuite";
+import { content as plombierConflansSainteHonorineInstallationWc } from "./content/plombier-conflans-sainte-honorine-installation-wc";
+import { content as plombierCorbeilEssonnesInstallationWc } from "./content/plombier-corbeil-essonnes-installation-wc";
+import { content as plombierCorbeilEssonnesTarifs } from "./content/plombier-corbeil-essonnes-tarifs";
+import { content as plombierCoubronRechercheFuite } from "./content/plombier-coubron-recherche-fuite";
+import { content as plombierCoulommiersBallonEauChaude } from "./content/plombier-coulommiers-ballon-eau-chaude";
+import { content as plombierCourbevoieTarifs } from "./content/plombier-courbevoie-tarifs";
+import { content as plombierCrecyLaChapelleBallonEauChaude } from "./content/plombier-crecy-la-chapelle-ballon-eau-chaude";
+import { content as plombierCregyLesMeauxInstallationWc } from "./content/plombier-cregy-les-meaux-installation-wc";
+import { content as plombierDeuilLaBarreInstallationWc } from "./content/plombier-deuil-la-barre-installation-wc";
+import { content as plombierDeuilLaBarreRechercheFuite } from "./content/plombier-deuil-la-barre-recherche-fuite";
+import { content as plombierDomontDegatDesEaux } from "./content/plombier-domont-degat-des-eaux";
+
 // ============================================
 // REGISTRE
 // ============================================
@@ -742,6 +771,34 @@ const _allPremiumPages: PremiumPageContent[] = [
   plombierAubervilliersBallonEauChaude,
   plombierBannostVillegagnon,
   plombierBannostVillegagnonRechercheFuite,
+  // Batch 20 — Vague 2 GSC tier2 (9 juin 2026, 27 plombier)
+  plombierBezonsEvierBouche,
+  plombierBobignyTarifs,
+  plombierBondyRemplacementRobinet,
+  plombierBoulancourtRechercheFuite,
+  plombierBoussySaintAntoine,
+  plombierBrieComteRobertTarifs,
+  plombierBrunoyChasseEau,
+  plombierBussySaintGeorgesBallonEauChaude,
+  plombierCarrieresSurSeineRechercheFuite,
+  plombierCesson,
+  plombierCessonInstallationWc,
+  plombierChavilleRemplacementRobinet,
+  plombierChavilleUrgence24h,
+  plombierCitryUrgence24h,
+  plombierClichyRechercheFuite,
+  plombierConchesSurGondoireRechercheFuite,
+  plombierConflansSainteHonorineInstallationWc,
+  plombierCorbeilEssonnesInstallationWc,
+  plombierCorbeilEssonnesTarifs,
+  plombierCoubronRechercheFuite,
+  plombierCoulommiersBallonEauChaude,
+  plombierCourbevoieTarifs,
+  plombierCrecyLaChapelleBallonEauChaude,
+  plombierCregyLesMeauxInstallationWc,
+  plombierDeuilLaBarreInstallationWc,
+  plombierDeuilLaBarreRechercheFuite,
+  plombierDomontDegatDesEaux,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
