@@ -349,6 +349,48 @@ import { content as plombierCormeillesEnParisis } from "./content/plombier-corme
 import { content as serrurierCormeillesEnParisis } from "./content/serrurier-cormeilles-en-parisis";
 import { content as electricienCormeillesEnParisis } from "./content/electricien-cormeilles-en-parisis";
 
+// -- Batch 19 — Vague 1 GSC tier2 (9 juin 2026, 32 électricien + 8 plombier)
+import { content as electricienBagnoletPriseInterrupteurHs } from "./content/electricien-bagnolet-prise-interrupteur-hs";
+import { content as electricienBallancourtSurEssonnePanneElectrique } from "./content/electricien-ballancourt-sur-essonne-panne-electrique";
+import { content as electricienBruyeresLeChatel } from "./content/electricien-bruyeres-le-chatel";
+import { content as electricienChateauLandon } from "./content/electricien-chateau-landon";
+import { content as electricienClamartMiseAuxNormes } from "./content/electricien-clamart-mise-aux-normes";
+import { content as electricienConchesSurGondoire } from "./content/electricien-conches-sur-gondoire";
+import { content as electricienCoupvrayPanneElectrique } from "./content/electricien-coupvray-panne-electrique";
+import { content as electricienCroissySurSeine } from "./content/electricien-croissy-sur-seine";
+import { content as electricienDammartinSurTigeaux } from "./content/electricien-dammartin-sur-tigeaux";
+import { content as electricienEgligny } from "./content/electricien-egligny";
+import { content as electricienElancourt } from "./content/electricien-elancourt";
+import { content as electricienGaillonSurMontcientPriseInterrupteurHs } from "./content/electricien-gaillon-sur-montcient-prise-interrupteur-hs";
+import { content as electricienGenainville } from "./content/electricien-genainville";
+import { content as electricienGuerchevillePanneElectrique } from "./content/electricien-guercheville-panne-electrique";
+import { content as electricienGuyancourtMiseAuxNormes } from "./content/electricien-guyancourt-mise-aux-normes";
+import { content as electricienHericy } from "./content/electricien-hericy";
+import { content as electricienHondevilliersPriseInterrupteurHs } from "./content/electricien-hondevilliers-prise-interrupteur-hs";
+import { content as electricienJanvilleSurJuine } from "./content/electricien-janville-sur-juine";
+import { content as electricienMantesLaVilleMiseAuxNormes } from "./content/electricien-mantes-la-ville-mise-aux-normes";
+import { content as electricienMoignySurEcole } from "./content/electricien-moigny-sur-ecole";
+import { content as electricienPantinPanneElectrique } from "./content/electricien-pantin-panne-electrique";
+import { content as electricienParis11MiseAuxNormes } from "./content/electricien-paris-11-mise-aux-normes";
+import { content as electricienProvinsDisjoncteurSaute } from "./content/electricien-provins-disjoncteur-saute";
+import { content as electricienPuiseuxEnFrancePanneElectrique } from "./content/electricien-puiseux-en-france-panne-electrique";
+import { content as electricienRambouillet } from "./content/electricien-rambouillet";
+import { content as electricienSaintClairSurEpteTableauElectrique } from "./content/electricien-saint-clair-sur-epte-tableau-electrique";
+import { content as electricienSaintMichelSurOrgeCourtCircuit } from "./content/electricien-saint-michel-sur-orge-court-circuit";
+import { content as electricienTaverny } from "./content/electricien-taverny";
+import { content as electricienVairesSurMarnePanneElectrique } from "./content/electricien-vaires-sur-marne-panne-electrique";
+import { content as electricienVilleDAvrayPanneElectrique } from "./content/electricien-ville-d-avray-panne-electrique";
+import { content as electricienVillebonSurYvetteTableauElectrique } from "./content/electricien-villebon-sur-yvette-tableau-electrique";
+import { content as electricienVillepinte } from "./content/electricien-villepinte";
+import { content as plombierArgenteuilWcBouches } from "./content/plombier-argenteuil-wc-bouches";
+import { content as plombierArnouvilleRechercheFuite } from "./content/plombier-arnouville-recherche-fuite";
+import { content as plombierArpajonChasseEau } from "./content/plombier-arpajon-chasse-eau";
+import { content as plombierAsnieresSurSeineChasseEau } from "./content/plombier-asnieres-sur-seine-chasse-eau";
+import { content as plombierAubepierreOzouerLeReposTarifs } from "./content/plombier-aubepierre-ozouer-le-repos-tarifs";
+import { content as plombierAubervilliersBallonEauChaude } from "./content/plombier-aubervilliers-ballon-eau-chaude";
+import { content as plombierBannostVillegagnon } from "./content/plombier-bannost-villegagnon";
+import { content as plombierBannostVillegagnonRechercheFuite } from "./content/plombier-bannost-villegagnon-recherche-fuite";
+
 // ============================================
 // REGISTRE
 // ============================================
@@ -659,6 +701,47 @@ const _allPremiumPages: PremiumPageContent[] = [
   serrurierOrmessonSurMarnePerteCles,
   serrurierSaintOuenLAumonePerteCles,
   serrurierSevresPerteCles,
+  // Batch 19 — Vague 1 GSC tier2 (9 juin 2026, 32 électricien + 8 plombier)
+  electricienBagnoletPriseInterrupteurHs,
+  electricienBallancourtSurEssonnePanneElectrique,
+  electricienBruyeresLeChatel,
+  electricienChateauLandon,
+  electricienClamartMiseAuxNormes,
+  electricienConchesSurGondoire,
+  electricienCoupvrayPanneElectrique,
+  electricienCroissySurSeine,
+  electricienDammartinSurTigeaux,
+  electricienEgligny,
+  electricienElancourt,
+  electricienGaillonSurMontcientPriseInterrupteurHs,
+  electricienGenainville,
+  electricienGuerchevillePanneElectrique,
+  electricienGuyancourtMiseAuxNormes,
+  electricienHericy,
+  electricienHondevilliersPriseInterrupteurHs,
+  electricienJanvilleSurJuine,
+  electricienMantesLaVilleMiseAuxNormes,
+  electricienMoignySurEcole,
+  electricienPantinPanneElectrique,
+  electricienParis11MiseAuxNormes,
+  electricienProvinsDisjoncteurSaute,
+  electricienPuiseuxEnFrancePanneElectrique,
+  electricienRambouillet,
+  electricienSaintClairSurEpteTableauElectrique,
+  electricienSaintMichelSurOrgeCourtCircuit,
+  electricienTaverny,
+  electricienVairesSurMarnePanneElectrique,
+  electricienVilleDAvrayPanneElectrique,
+  electricienVillebonSurYvetteTableauElectrique,
+  electricienVillepinte,
+  plombierArgenteuilWcBouches,
+  plombierArnouvilleRechercheFuite,
+  plombierArpajonChasseEau,
+  plombierAsnieresSurSeineChasseEau,
+  plombierAubepierreOzouerLeReposTarifs,
+  plombierAubervilliersBallonEauChaude,
+  plombierBannostVillegagnon,
+  plombierBannostVillegagnonRechercheFuite,
 ];
 
 // Application du filtre BLOCKED_SERVICES (sécurité runtime)
