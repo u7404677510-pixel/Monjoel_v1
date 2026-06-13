@@ -173,7 +173,7 @@ Pour les installations 1971-1990 dominantes à Neuilly-sur-Marne, **un ou plusie
 
 2° **Refuser tout paiement comptant sans facture détaillée** mentionnant le SIRET, le nom de l'artisan, le détail des prestations et la TVA.
 
-3° **Exiger systématiquement un devis écrit pour toute intervention au-delà du forfait diagnostic** — l'arrêté du 22 décembre 2017 sur l'information du consommateur en matière de dépannage rend ce devis obligatoire au-delà de 150 €.
+3° **Exiger systématiquement un devis écrit détaillé avant toute intervention, y compris pour le simple dépannage** — l'arrêté du 24 janvier 2017 sur l'information du consommateur en matière de dépannage rend ce devis obligatoire avant toute prestation, quel que soit le montant, même en urgence. L'ancien seuil de 150 € a été supprimé depuis le 1er avril 2017 : un opérateur qui l'invoque pour s'en dispenser vous trompe.
 
 4° **Ne jamais autoriser de remplacement majeur de tableau ou de mise aux normes complète à chaud, sous pression**, sans avoir pris le temps de réfléchir et éventuellement de demander un second devis. Un tableau électrique ou une mise aux normes ne sont jamais des urgences absolues : on peut toujours couper le disjoncteur général, attendre 24 à 48 heures, comparer deux ou trois devis.
 

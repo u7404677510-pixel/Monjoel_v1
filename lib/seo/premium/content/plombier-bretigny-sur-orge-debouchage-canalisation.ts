@@ -123,7 +123,7 @@ Dans tous les cas, le tarif Joël reste **dès 99€ TTC** pour le débouchage d
 
 **Mes quatre réflexes anti-arnaque pour les Brétignolais :**
 
-- **Un.** Exigez TOUJOURS un devis écrit AVANT toute intervention au-delà de 100€. C'est une obligation légale depuis l'arrêté du 24 janvier 2017 sur les prestations de dépannage.
+- **Un.** Exigez TOUJOURS un devis écrit AVANT toute intervention, quel que soit le montant. C'est une obligation légale depuis l'arrêté du 24 janvier 2017 sur les prestations de dépannage — l'ancien seuil de 150€ a été supprimé depuis le 1er avril 2017, le devis est dû même pour la plus petite intervention, même en urgence.
 - **Deux.** Vérifiez le SIRET de l'entreprise sur Pappers ou sur l'annuaire Sirene (30 secondes, gratuit, depuis votre téléphone).
 - **Trois.** Refusez tout paiement comptant sans facture détaillée mentionnant la TVA, la nature de la prestation et les coordonnées de l'artisan.
 - **Quatre.** Si on vous propose un hydrocurage d'emblée sans avoir tenté le furet, raccrochez et appelez Joël au 01 41 69 10 08.
@@ -177,7 +177,7 @@ Avec ces gestes, beaucoup de mes clients de Brétigny ne me rappellent plus pend
 
 **Quatre, en copropriété, sachez qui paie.** Bouchon privatif : à vous. Colonne commune (refoulement, plusieurs appartements touchés) : à la copropriété. Ne payez pas des débouchages individuels à répétition pour un problème collectif.
 
-**Cinq, méfiez-vous des arnaques classiques** : appât téléphonique, hydrocurage gonflé, majoration fictive, chiffre rond. Devis écrit obligatoire au-delà de 100€, vérification du SIRET, refus du comptant sans facture.
+**Cinq, méfiez-vous des arnaques classiques** : appât téléphonique, hydrocurage gonflé, majoration fictive, chiffre rond. Devis écrit obligatoire avant toute intervention quel que soit le montant, vérification du SIRET, refus du comptant sans facture.
 
 Chez Joël, à Brétigny-sur-Orge comme dans tout le Val d'Orge, le prix est **annoncé avant** que l'artisan arrive : **dès 99€ TTC** pour un débouchage de canalisation, **149-199€** pour une intervention complexe justifiée et documentée par devis, **24h/24 et 7j/7 sans majoration** nuit, dimanche ou jour férié.
 

@@ -76,7 +76,7 @@ Maintenant, les parades. Elles tiennent sur un post-it.
 
 **Deux : la nuit et le week-end ne justifient aucune majoration** chez un réseau sérieux. « 0 majoration nuit & week-end », ce n'est pas un slogan, c'est un test : tous ceux qui doublent le tarif le dimanche échouent au test.
 
-**Trois : au-delà de 150 € de travaux, le devis écrit préalable est une obligation réglementaire** (arrêté du 24 janvier 2017 sur la publicité des prix des prestations de dépannage). Pas de devis, pas de travaux.
+**Trois : avant toute intervention, le devis écrit détaillé est une obligation réglementaire — quel que soit le montant, même en urgence** (arrêté du 24 janvier 2017 sur la publicité des prix des prestations de dépannage ; l'ancien seuil de 150 € a été supprimé depuis le 1er avril 2017, ne laissez personne vous le ressortir). Pas de devis, pas de travaux.
 
 **Quatre : un vrai professionnel a un SIRET** vérifiable en trente secondes sur l'annuaire des entreprises. Un faux a un numéro de portable et beaucoup d'aplomb.
 

@@ -76,7 +76,7 @@ D'abord, le mécanisme, étape par étape, tel que je l'ai vécu au téléphone 
 Maintenant, le bouclier. Cinq règles, toutes vérifiables en quelques minutes même en pleine nuit :
 
 - **Exige un prix total TTC AVANT le déplacement.** Pas un « tarif d'appel », pas un « à partir de » évasif : le prix de TON intervention, déplacement compris. Refus = au revoir. C'est la règle numéro un, celle qui tue 90% des arnaques dans l'œuf.
-- **Le devis écrit est un droit, pas une faveur.** L'**arrêté du 24 janvier 2017** impose un devis avant tout dépannage à domicile dont le montant dépasse 150€. Quelqu'un qui rechigne à écrire son prix t'annonce, en creux, qu'il compte le changer.
+- **Le devis écrit est un droit, pas une faveur.** L'**arrêté du 24 janvier 2017** impose un devis détaillé AVANT toute prestation de dépannage à domicile, quel que soit le montant — l'ancien seuil de 150€ a été supprimé depuis le 1er avril 2017, donc le coup du « pas besoin de devis pour une petite intervention » ne tient plus. Quelqu'un qui rechigne à écrire son prix t'annonce, en creux, qu'il compte le changer.
 - **Vérifie le SIRET** sur sirene.fr ou Pappers pendant que tu as l'opérateur en ligne. Société créée il y a quatre mois, domiciliée à 300 km, sans nom d'artisan ? Tu sais ce qu'il te reste à faire.
 - **Jamais d'espèces sans facture détaillée.** Nom, SIRET, TVA, nature exacte de la prestation. Pas de facture, pas de recours.
 - **Si c'est déjà trop tard :** tu disposes de **14 jours de rétractation** pour un contrat signé à domicile, tu peux signaler sur signal.conso.gouv.fr (la plateforme de la DGCCRF) et saisir une association de consommateurs. Garde tout : devis, facture, vidéos.
@@ -185,7 +185,7 @@ Face à ça, le modèle Joël est d'une simplicité presque vexante pour les arn
       question:
         "Le devis avant intervention est-il obligatoire même pour un dépannage de nuit à Citry ?",
       answer:
-        "Oui. L'arrêté du 24 janvier 2017 impose un devis écrit avant tout dépannage à domicile dépassant 150€, urgence ou pas — et le professionnel doit t'informer de tes droits avant que tu signes quoi que ce soit. Un intervenant qui refuse d'écrire son prix la nuit te prépare une facture surprise. Chez Joël, le principe va plus loin : le prix total TTC est annoncé dès l'appel au 01 41 69 10 08, avant même le départ de l'artisan, et il ne change pas sur place.",
+        "Oui. L'arrêté du 24 janvier 2017 impose un devis écrit avant tout dépannage à domicile, quel qu'en soit le montant, urgence ou pas (l'ancien seuil de 150€ a été supprimé) — et le professionnel doit t'informer de tes droits avant que tu signes quoi que ce soit. Un intervenant qui refuse d'écrire son prix la nuit te prépare une facture surprise. Chez Joël, le principe va plus loin : le prix total TTC est annoncé dès l'appel au 01 41 69 10 08, avant même le départ de l'artisan, et il ne change pas sur place.",
     },
   ],
   temoignages: [

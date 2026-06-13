@@ -32,7 +32,7 @@ Et un repère ferme pour comparer : le réseau Joël réalise la visite de confo
 
 **Troisième temps : la dramatisation.** « Vous risquez l'incendie », « avec des enfants, je ne dormirais pas tranquille », « votre assurance ne vous couvrira pas ». Ce vocabulaire de l'urgence anxiogène est un marqueur de pratique abusive documenté de longue date par la DGCCRF. Un professionnel sérieux hiérarchise les risques ; un vendeur de peur les agite.
 
-**Quatrième temps : la signature à chaud.** Le devis — quand il existe — est griffonné sur place : 6 000, 9 000, parfois 14 000 € pour une « remise aux normes complète urgente ». On vous presse de signer le soir même, souvent avec un acompte par chèque ou par virement immédiat. Rappel utile : pour toute prestation de dépannage ou de travaux supérieure à 150 €, un devis écrit préalable est obligatoire (arrêté du 24 janvier 2017), et un contrat signé à domicile ouvre un délai de rétractation de 14 jours.
+**Quatrième temps : la signature à chaud.** Le devis — quand il existe — est griffonné sur place : 6 000, 9 000, parfois 14 000 € pour une « remise aux normes complète urgente ». On vous presse de signer le soir même, souvent avec un acompte par chèque ou par virement immédiat. Rappel utile : un devis détaillé écrit est obligatoire avant toute prestation de dépannage, de réparation ou d'entretien, quel que soit le montant — l'arrêté du 24 janvier 2017 a précisément supprimé, au 1er avril 2017, l'ancien seuil de 150 € derrière lequel s'abritaient les fraudeurs —, et un contrat signé à domicile ouvre un délai de rétractation de 14 jours.
 
 **Cinquième temps : la disparition.** Travaux bâclés ou partiels, facture sans détail, société introuvable six mois plus tard. Le schéma de la société-écran, que j'ai cartographié des dizaines de fois : siège dans un centre de domiciliation, gérant de paille, enseigne commerciale qui change de nom dès que les avis négatifs s'accumulent.
 
@@ -92,7 +92,7 @@ Deux règles transversales pour finir. La première : un prix fixe annoncé avan
 
 **1. Vérifiez l'existence légale de l'entreprise.** SIRET sur sirene.fr ou Pappers : date de création, adresse réelle, activité déclarée. Une société créée il y a huit mois, domiciliée dans un centre d'affaires à l'autre bout de l'Île-de-France, qui prétend être « l'électricien de Guyancourt depuis 20 ans » : dossier classé.
 
-**2. Exigez le devis écrit avant tout commencement.** C'est une obligation réglementaire au-delà de 150 € (arrêté du 24 janvier 2017), pas une faveur. Le devis doit détailler chaque poste : matériel (marque, référence), main-d'œuvre, TVA, délai. Un montant global rond — « ce sera 7 000 € » — sans décomposition est un signal d'alerte à lui seul.
+**2. Exigez le devis écrit avant tout commencement.** C'est une obligation réglementaire pour toute prestation, quel que soit le montant, urgence comprise (arrêté du 24 janvier 2017), pas une faveur. Le devis doit détailler chaque poste : matériel (marque, référence), main-d'œuvre, TVA, délai. Un montant global rond — « ce sera 7 000 € » — sans décomposition est un signal d'alerte à lui seul.
 
 **3. Refusez la signature le jour même.** Aucune installation qui a tenu quarante ans ne brûlera cette nuit parce que vous prenez 48 heures de réflexion. La pression temporelle est l'outil central de la vente forcée ; la neutraliser, c'est désamorcer l'essentiel du dispositif. Si le risque était réellement immédiat, le professionnel procéderait à une mise hors tension du circuit concerné — geste simple — et non à une vente.
 

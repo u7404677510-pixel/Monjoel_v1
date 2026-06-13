@@ -42,7 +42,7 @@ Voici donc, poste par poste, ce que coûte un plombier Joël à Courbevoie. Tous
 - **Ballon d'eau chaude — intervention lourde ou remplacement** : **dès 129€**
 - **Recherche de fuite non destructive** (caméra thermique, gaz traceur) : **dès 149€**
 
-Trois précisions d'importance. Premièrement, le « dès » n'est pas un appât : il désigne le cas standard, qui représente l'immense majorité des interventions. Si votre situation s'annonce plus complexe — colonne encastrée, accès difficile, pièce introuvable —, l'écart vous est expliqué et chiffré **avant** tout démarrage, par un devis écrit. La réglementation l'exige du reste : l'arrêté du 24 janvier 2017 impose un devis préalable pour tout dépannage en bâtiment au-delà de 150€ TTC. Un intervenant qui s'en dispense est déjà en faute.
+Trois précisions d'importance. Premièrement, le « dès » n'est pas un appât : il désigne le cas standard, qui représente l'immense majorité des interventions. Si votre situation s'annonce plus complexe — colonne encastrée, accès difficile, pièce introuvable —, l'écart vous est expliqué et chiffré **avant** tout démarrage, par un devis écrit. La réglementation l'exige du reste : l'arrêté du 24 janvier 2017 impose un devis détaillé avant toute prestation de dépannage, de réparation ou d'entretien en bâtiment, quel que soit le montant — l'ancien seuil de 150€ TTC a été supprimé depuis le 1er avril 2017. Un intervenant qui s'en dispense est déjà en faute.
 
 Deuxièmement, ces tarifs sont **identiques de jour comme de nuit, en semaine comme le dimanche**. J'y consacre une section entière plus bas, car c'est, avec le prix annoncé d'avance, le second pilier de la démarche.
 
@@ -93,7 +93,7 @@ Si un dépanneur vous annonce qu'« avec le calcaire de Courbevoie, tout est à 
 
 **4. Le remplacement d'office.** On vous condamne un mécanisme, un robinet, un ballon sans avoir tenté ni démontage ni réparation. En bâti ancien, c'est le réflexe que je combats le plus : le diagnostic précède la décision, toujours.
 
-**5. L'absence de devis écrit au-delà de 150€.** L'arrêté du 24 janvier 2017 l'impose avant travaux. Celui qui commence sans signer s'est déjà placé hors la loi ; ce qu'il fera ensuite suivra la même pente.
+**5. L'absence de devis écrit avant travaux.** L'arrêté du 24 janvier 2017 l'impose pour toute prestation de dépannage, quel qu'en soit le montant — le seuil de 150€ que certains invoquent encore a été supprimé depuis le 1er avril 2017. Celui qui commence sans signer s'est déjà placé hors la loi ; ce qu'il fera ensuite suivra la même pente.
 
 **6. Le paiement en espèces sans facture.** Pas de facture avec SIRET, TVA et détail de prestation : pas de recours, pas de garantie, pas d'assurance. Et fort probablement pas d'entreprise — une coquille éphémère.
 
@@ -194,7 +194,7 @@ Voilà, je crois, l'essentiel. Une grille publique qui commence à **69€**, un
       question:
         "Un dépanneur peut-il légalement commencer des travaux sans devis à Courbevoie ?",
       answer:
-        "Au-delà de 150€ TTC, non : l'arrêté du 24 janvier 2017 impose un devis écrit et signé avant tout dépannage, réparation ou entretien en bâtiment. Chez Joël, le prix est de toute façon annoncé au téléphone et confirmé sur place ; si le diagnostic révèle une complexité supérieure au cas standard, un devis écrit est établi avant de poursuivre. Un intervenant qui commence « pour voir » sans rien signer est déjà hors du cadre légal — refusez et signalez sur signal.conso.gouv.fr.",
+        "Non, quel que soit le montant : l'arrêté du 24 janvier 2017 impose un devis écrit et signé avant tout dépannage, réparation ou entretien en bâtiment — l'ancien seuil de 150€ TTC a été supprimé depuis le 1er avril 2017. Chez Joël, le prix est de toute façon annoncé au téléphone et confirmé sur place ; si le diagnostic révèle une complexité supérieure au cas standard, un devis écrit est établi avant de poursuivre. Un intervenant qui commence « pour voir » sans rien signer est déjà hors du cadre légal — refusez et signalez sur signal.conso.gouv.fr.",
     },
     {
       question:

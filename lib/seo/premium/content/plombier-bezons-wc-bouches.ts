@@ -117,7 +117,7 @@ En 28 ans, j'ai appris une chose simple : un client qui sait combien il va payer
 **Le faux "il faut tout casser".** Le grand classique sur les WC. Le gars vous explique gravement qu'il faut démonter la cuvette, voire "casser pour accéder à la canalisation", pour un bouchon qu'un furet souple aurait réglé en quinze minutes. Le démontage de cuvette existe — je le fais quand c'est vraiment nécessaire, pour un objet coincé par exemple — mais ce n'est JAMAIS la première intention sur un bouchon de papier. Si on vous propose de casser avant même d'avoir passé un furet, raccrochez.
 
 **Comment vous protéger, concrètement :**
-1. **Exigez un devis écrit avant toute intervention** dès que ça dépasse 100€. C'est une obligation légale pour les dépannages à domicile, pas une faveur.
+1. **Exigez un devis détaillé avant toute intervention**, quel que soit le montant — même pour un débouchage à 79€, même en urgence un dimanche soir. Depuis le 1er avril 2017, c'est une obligation légale pour tout dépannage à domicile (l'ancien seuil de 150€ a été supprimé), pas une faveur.
 2. **Vérifiez le SIRET** de l'entreprise sur Pappers ou sur l'annuaire Sirene. Trente secondes, gratuit, depuis votre téléphone.
 3. **Méfiez-vous du chiffre rond.** Un vrai devis détaille à l'euro près. "600€ forfait", sans détail, c'est un signal.
 4. **Refusez le paiement comptant sans facture détaillée** mentionnant TVA, nature de la prestation et coordonnées de l'artisan.

@@ -141,24 +141,21 @@ Une effraction réussie signifie une chose : votre serrure était au-dessous du 
     },
     {
       anchor: "serrurier-colombes-vulnerabilites-scannees",
-      title: "Les 7 vulnérabilités qu'un voleur scanne en 10 secondes",
-      body: `Un cambrioleur expérimenté n'attaque jamais au hasard. Il scanne. Voici les sept points qu'il identifie en moins de 10 secondes devant votre porte palière ou votre pavillon colombien, et que vous pouvez corriger.
+      title: "Repérage avant cambriolage : détecter l'équipe qui prépare son passage dans votre rue",
+      body: `Dans la plupart des séries de cambriolages que j'ai instruites en boucle nord des Hauts-de-Seine, l'effraction n'était que la dernière étape d'un travail entamé parfois plusieurs semaines plus tôt : le repérage. À Colombes, ville de navetteurs dont les rues se vident vers Saint-Lazare et La Défense dès 8h30, cette observation suit des routines reconnaissables.
 
-1° **Le type de cylindre.** Cylindre Européen standard sans certification = signal vert. Cylindre A2P 2 ou 3 étoiles avec marque visible = il passe au logement suivant. Posez un cylindre haute sécurité dont la marque est lisible côté palier : c'est dissuasif.
+**Comment une équipe travaille un secteur colombien.** Une voiture banalisée parcourt lentement les rues pavillonnaires calmes — Champaret, Audra, les perpendiculaires de l'avenue Henri-Barbusse — et note les maisons sans véhicule devant le portail en milieu de journée. Un complice sonne parfois sous un prétexte : recherche d'adresse, travaux de toiture, relevé de compteur. Quelqu'un répond, l'adresse est rayée ; personne deux passages de suite, la maison monte dans la liste. D'où ma première consigne : ne laissez jamais entrer un démarcheur non sollicité — la fausse qualité est un classique du repérage.
 
-2° **La protection du cylindre.** Si le cylindre dépasse de plus de 3 millimètres du canon de la serrure, il est vulnérable au casse-cylindre (technique d'arrachement à la pince-monseigneur en moins de 30 secondes). Solution : protecteur de cylindre certifié A2P, environ 40 à 80€ posé.
+**Les marquages sur les portails.** Sur plusieurs séries de la boucle nord, nous avons relevé des signes tracés à la craie ou au feutre sur les piliers de portail : trait vertical, croix, petit rond. Ils transmettent l'information du repéreur à l'équipe d'exécution. Si vous découvrez un signe inexpliqué, photographiez-le, effacez-le, signalez-le au commissariat de Colombes. Un marquage effacé oblige l'équipe à refaire son travail — et une équipe qui se sent observée change de commune.
 
-3° **Le nombre de points de fermeture.** 1 point = 1 minute de résistance. 3 points = 3 à 5 minutes. 5 points avec A2P = 10 à 15 minutes. Sur les portes Petit-Colombes des années 70, vérifiez ce point — c'est rarement signalé clairement.
+**Pourquoi Colombes intéresse les équipes mobiles.** Trois facteurs de géographie, vus d'enquêteur. L'A86 et le pont de Bezons d'abord : on quitte un pavillon du Petit-Colombes et on bascule dans le Val-d'Oise en quelques minutes. Les gares de la ligne J (Colombes, Le Stade) et le tramway T2 ensuite : ils vident les rues aux heures de bureau, ouvrant des créneaux sans témoins. Le parcellaire enfin : des rues courtes, peu passantes, où une voiture stationnée dix minutes passe inaperçue.
 
-4° **Le chambranle et la gâche.** Une serrure 5 points sur un chambranle en pin tendre = aucune protection réelle. Le chambranle doit être renforcé ou la gâche encastrée doit être métallique blindée. Coût : 80 à 200€ selon configuration.
+**Trois réflexes qui cassent un repérage.**
+- 1° Notez la plaque de tout véhicule qui repasse lentement plusieurs fois dans votre rue et transmettez-la au commissariat. En flagrance — escalade de portail, individu qui force une porte — composez le 17.
+- 2° Avant un départ prolongé, inscrivez-vous à l'Opération Tranquillité Vacances : des patrouilles passent gratuitement à votre domicile. Inscription au commissariat de Colombes ou sur service-public.fr.
+- 3° Parlez à vos voisins immédiats. Dans mes affaires résolues, le témoignage décisif venait presque toujours d'un riverain qui avait "trouvé bizarre" un détail sans oser appeler.
 
-5° **Le judas et l'entrebâilleur.** Absence de judas grand angle = signal de logement potentiellement vide en journée. Présence de chaîne d'entrebâilleur visible = signal de précaution = effet dissuasif marginal mais réel.
-
-6° **Le numéro de porte et le nom sur la sonnette ou le portail.** Étiquette visible, plaque nominative ostensible : permet aux auteurs de se renseigner (réseaux sociaux, annuaire inversé). Soyez discret sur l'identité affichée, particulièrement sur les portails de pavillons.
-
-7° **Les indices d'absence.** Boîte aux lettres pleine, lumières systématiquement éteintes en soirée, paillasson encombré de prospectus, volets fermés toute la journée = signal d'absence prolongée. Programmez une lumière d'ambiance sur prise temporisée pendant vos vacances. Coût : 15€.
-
-Ces sept points sont la check-list que je transmets en formation copropriété et en réunion de quartier. Aucun ne coûte cher individuellement. Tous ensemble, ils transforment une cible facile en cible difficile, et un cambrioleur professionnel cherche toujours la facilité.`,
+Le repérage sélectionne les adresses où l'intrusion sera rapide ; une équipe dérangée ou signalée renonce. Pour savoir ce que vaut votre porte face à ce tri, Joël réalise un audit serrurerie sur place, devis gratuit, au 01 41 69 10 08.`,
     },
     {
       anchor: "serrurier-colombes-arnaques",
