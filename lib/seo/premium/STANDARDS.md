@@ -3,6 +3,16 @@
 > Décision : **Option C — vision long terme ultra premium fact-checked**
 > Date : 27 avril 2026
 
+## ⚠️ FAITS JURIDIQUES À NE JAMAIS SE TROMPER (vérifiés Légifrance/INC/FFB)
+
+Erreurs récurrentes constatées sur 115 pages (corrigées le 09/06/2026). Tout agent rédacteur/vérificateur DOIT respecter ceci :
+
+1. **Devis obligatoire — AUCUN seuil de montant.** L'**arrêté du 24 janvier 2017** (en vigueur 01/04/2017) impose la remise d'un devis détaillé **avant TOUTE prestation** de dépannage/réparation/entretien dans le bâtiment, **quel que soit le montant, urgence comprise**. Il a **supprimé** le seuil de 150 € de l'ancien arrêté du 2 mars 1990. ❌ Ne JAMAIS écrire « devis obligatoire au-delà de 150 € / 100 € ».
+2. **Déclaration catastrophe naturelle = 30 jours** à compter de la publication de l'arrêté au JO (loi n° 2021-1837, depuis le 01/01/2023). ❌ Plus « 10 jours ». (Sinistre hors cat-nat : 5 jours ouvrés.)
+3. **Rétractation 14 j** : l'exception « travaux urgents » (art. L221-28 8° code conso) joue de plein droit pour la réparation urgente **expressément sollicitée** (pas besoin d'écrit), et ne couvre PAS les prestations additionnelles vendues sur place.
+4. **Médiateur de la consommation** (art. R616-1) : coordonnées sur le **site / CGV / bon de commande**, PAS sur la facture.
+5. **Litige facture ≤ 10 000 €** : **tribunal judiciaire** (chambre de proximité), sans avocat ; conciliation préalable obligatoire ≤ 5 000 €. Le **juge des contentieux de la protection** ne couvre PAS les litiges de dépannage (seulement crédit conso, baux, surendettement).
+
 ## Niveau de qualité par type de page
 
 ### Pages `/[trade]/[ville]` — extension géographique
