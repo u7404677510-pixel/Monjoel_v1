@@ -131,29 +131,34 @@ export default function RootLayout({
     <html lang="fr" className={`${poppins.variable} ${chillax.variable}`}>
       <head>
         {/* ========================================
-            1. CONSENT MODE V2 - DEFAULTS (AVANT TOUT)
-            Script officiel Cookiebot pour Google Consent Mode
-            Doit être chargé AVANT Cookiebot et GTM
+            1. CONSENT MODE V2 DEFAULTS + 2. COOKIEBOT CMP (UN SEUL SCRIPT)
+            Le consent default DOIT s'exécuter avant Cookiebot et GTM.
+            Or React 19 hoiste les <script async src> AVANT les scripts
+            inline dans le <head> servi (l'ordre JSX n'est pas préservé) :
+            uc.js pouvait donc s'exécuter avant le consent default (constaté
+            en dev : developer_id poussé par uc.js en tête de dataLayer).
+            → On chaîne les deux dans UN SEUL script inline : defaults
+            d'abord, puis injection dynamique de uc.js (mêmes attributs
+            id/data-cbid/data-blockingmode="auto"). Ordre garanti.
+            Le preload compense la découverte tardive de uc.js ; le blocage
+            auto reste effectif : GTM (afterInteractive) et les analytics
+            (lazyOnload) se chargent bien après.
+
+            suppressHydrationWarning (ici + scripts ci-dessous) : Cookiebot
+            en blockingmode="auto" réécrit les attributs de ces balises
+            (type → text/plain, ajout data-cookieconsent) AVANT l'hydratation
+            React → mismatch serveur/client sur toutes les pages. La prop est
+            React-only (pas sérialisée dans le HTML) : HTML émis inchangé.
+            Elle empêche aussi React 19 de "réparer" les attributs divergents,
+            ce qui ré-activerait des scripts bloqués par Cookiebot.
             ======================================== */}
+        <link rel="preload" href="https://consent.cookiebot.com/uc.js" as="script" />
         <script
           data-cookieconsent="ignore"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
-            __html: "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_personalization:'denied',ad_storage:'denied',ad_user_data:'denied',analytics_storage:'denied',functionality_storage:'denied',personalization_storage:'denied',security_storage:'granted',wait_for_update:500});gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',false);"
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_personalization:'denied',ad_storage:'denied',ad_user_data:'denied',analytics_storage:'denied',functionality_storage:'denied',personalization_storage:'denied',security_storage:'granted',wait_for_update:500});gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',false);(function(d){var s=d.createElement('script');s.id='Cookiebot';s.src='https://consent.cookiebot.com/uc.js';s.setAttribute('data-cbid','${COOKIEBOT_ID}');s.setAttribute('data-blockingmode','auto');s.async=true;d.head.appendChild(s);})(document);`
           }}
-        />
-
-        {/* ========================================
-            2. COOKIEBOT CMP - Bannière de consentement
-            Gère l'affichage de la bannière et envoie
-            les signaux de consentement à Google
-            ======================================== */}
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid={COOKIEBOT_ID}
-          data-blockingmode="auto"
-          type="text/javascript"
-          async
         />
 
         {/* Cookie Declaration - pour afficher la liste des cookies */}
@@ -162,6 +167,7 @@ export default function RootLayout({
           src={`https://consent.cookiebot.com/${COOKIEBOT_ID}/cd.js`}
           type="text/javascript"
           async
+          suppressHydrationWarning
         />
 
         {/* GTM is loaded via Script component in body with afterInteractive strategy */}
@@ -214,6 +220,7 @@ export default function RootLayout({
             ======================================== */}
         <script
           type="speculationrules"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               prerender: [
