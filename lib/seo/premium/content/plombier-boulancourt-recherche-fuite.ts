@@ -10,10 +10,10 @@ export const content: PremiumPageContent = {
   metaTitle: "Recherche de fuite Boulancourt (77) : dès 149€, 24h/24",
   metaDescription:
     "Fuite invisible à Boulancourt ? Recherche de fuite dès 149€ TTC, prix annoncé avant, 0 majoration nuit & week-end, 24h/24. Appelez le 01 41 69 10 08.",
-  h1: "Recherche de fuite à Boulancourt : quand ta facture d'eau dérape dans le village le plus au sud du 77",
+  h1: "Recherche de fuite à Boulancourt : quand ta facture d'eau dérape dans le village le plus au sud-ouest du 77",
   introParagraph: `### Je vais te raconter un truc.
 
-L'an dernier, pour mon dossier de master sur le bâti rural du Gâtinais, j'ai passé une semaine à arpenter la vallée de l'Essonne, carnet de croquis sous le bras. Boulancourt, j'y suis restée deux jours : un village de **350 habitants environ (recensement INSEE 2023)** posé à la pointe sud de la Seine-et-Marne, là où l'Île-de-France touche le Loiret, au cœur du Parc naturel régional du Gâtinais français. Des longères en moellons, des granges réhabilitées, une église du XIIe siècle, l'Essonne qui longe l'ouest du village. Le genre d'endroit où l'on n'imagine pas qu'une facture d'eau puisse exploser.
+L'an dernier, pour mon dossier de master sur le bâti rural du Gâtinais, j'ai passé une semaine à arpenter la vallée de l'Essonne, carnet de croquis sous le bras. Boulancourt, j'y suis restée deux jours : un village de **350 habitants environ (recensement INSEE 2023)** posé à la pointe sud-ouest de la Seine-et-Marne, là où l'Île-de-France touche le Loiret, au cœur du Parc naturel régional du Gâtinais français. Des longères en moellons, des granges réhabilitées, une église du XIIe siècle, l'Essonne qui longe l'ouest du village. Le genre d'endroit où l'on n'imagine pas qu'une facture d'eau puisse exploser.
 
 Et pourtant. La dame qui m'hébergeait venait de recevoir la sienne : presque le triple de d'habitude. Aucune flaque, aucun bruit, aucun mur trempé. Juste un compteur, dans son regard au fond du jardin, qui tournait tout seul depuis des semaines. Une fuite enterrée, quelque part entre la limite de propriété et la maison. Invisible. Silencieuse. Chère.
 
@@ -62,7 +62,7 @@ Moralité : ici, une fuite ne se voit pas, elle se déduit. Compteur, facture, e
       title: "Qui distribue ton eau (et pourquoi le calcaire du Gâtinais use tes tuyaux)",
       body: `Petit détour utile, parce que savoir d'où vient ton eau aide à comprendre tes fuites — et à savoir qui appeler selon l'endroit où ça fuit.
 
-À Boulancourt, l'eau potable ne dépend ni d'Eau de Paris ni du SEDIF : la commune fait partie des **23 communes du Syndicat Mixte de l'Eau et de l'Assainissement du Pays de Nemours (SMEAPN)**, et l'exploitation y est déléguée à **Veolia Eau**. Le règlement de service du secteur historique (l'ancien SMERB) regroupe d'ailleurs Boulancourt avec ses voisines immédiates : Augerville-la-Rivière, Buthiers et Nanteau-sur-Essonne. C'est ce délégataire qui gère le réseau public **jusqu'à ton compteur** — au-delà, on en reparle dans la section loi Warsmann, c'est pour toi.
+À Boulancourt, l'eau potable ne dépend ni d'Eau de Paris ni du SEDIF : la commune fait partie des **23 communes du Syndicat Mixte d'Eau et d'Assainissement du Pays de Nemours (SMEAPN)**, et l'exploitation y est déléguée à **Veolia Eau**. Le règlement de service du secteur historique (l'ancien SMERB) regroupe d'ailleurs Boulancourt avec ses voisines immédiates : Augerville-la-Rivière, Buthiers et Nanteau-sur-Essonne. C'est ce délégataire qui gère le réseau public **jusqu'à ton compteur** — au-delà, on en reparle dans la section loi Warsmann, c'est pour toi.
 
 Côté qualité, les analyses réglementaires de l'Agence Régionale de Santé sont publiques et consultables commune par commune sur le portail du ministère de la Santé (orobnat.sante.gouv.fr). Je ne vais pas te balancer un chiffre de dureté précis — il varie selon les campagnes de mesure — mais la tendance régionale, elle, ne fait débat pour personne : le bassin parisien est un socle calcaire, et les eaux souterraines qui alimentent le sud Seine-et-Marne sont **dures à très dures**, comme le rappellent les comparatifs nationaux de dureté de l'eau. Traduction pour tes canalisations :
 
@@ -175,7 +175,7 @@ Les engagements, noir sur blanc : **recherche de fuite dès 149€ TTC**, prix *
       question:
         "La fuite est dans le regard du compteur, en limite de propriété : c'est à moi de payer ou à Veolia ?",
       answer:
-        "Tout dépend du côté du compteur. À Boulancourt, l'eau est gérée par le SMEAPN (Syndicat de l'Eau et de l'Assainissement du Pays de Nemours) avec Veolia comme délégataire : le réseau public jusqu'au compteur inclus relève du service des eaux — une fuite avant compteur se signale, elle ne se paie pas. Après le compteur, le branchement qui traverse ton terrain t'appartient : recherche et réparation sont à ta charge, avec le filet de sécurité de la loi Warsmann sur la facture d'eau.",
+        "Tout dépend du côté du compteur. À Boulancourt, l'eau est gérée par le SMEAPN (Syndicat Mixte d'Eau et d'Assainissement du Pays de Nemours) avec Veolia comme délégataire : le réseau public jusqu'au compteur inclus relève du service des eaux — une fuite avant compteur se signale, elle ne se paie pas. Après le compteur, le branchement qui traverse ton terrain t'appartient : recherche et réparation sont à ta charge, avec le filet de sécurité de la loi Warsmann sur la facture d'eau.",
     },
     {
       question:

@@ -135,7 +135,7 @@ J'ai accompagné une dame retraitée, du côté de Trivaux, qui avait réglé **
 
 Voici mes quatre réflexes, ceux que je répète à chaque permanence :
 
-**Un.** Exigez un **devis écrit avant** toute intervention au-delà de 100€. C'est une obligation légale depuis l'arrêté du 24 janvier 2017 sur les dépannages à domicile.
+**Un.** Exigez un **devis détaillé écrit avant** toute intervention, **quel que soit le montant**. C'est une obligation légale de l'arrêté du 24 janvier 2017 sur les dépannages à domicile : depuis le 1er avril 2017, l'ancien seuil de 150€ a été supprimé, et le devis est dû même pour la plus petite prestation, même en urgence un dimanche soir.
 
 **Deux.** Vérifiez le **SIRET** de l'entreprise sur Pappers ou sur l'annuaire Sirene. Trente secondes, gratuit. Une société-écran a souvent une adresse qui ne correspond à rien.
 

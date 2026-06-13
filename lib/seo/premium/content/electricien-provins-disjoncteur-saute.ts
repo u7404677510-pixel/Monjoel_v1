@@ -124,7 +124,7 @@ Concrètement, pour un disjoncteur qui saute à Provins :
 
 **Tes trois boucliers légaux, à connaître par cœur :**
 
-1. **Le devis écrit préalable est obligatoire** pour les prestations de dépannage à domicile au-delà de 150€ (arrêté du 24 janvier 2017). Pas de devis = pas de travaux. Quelqu'un qui commence à démonter ton tableau sans rien t'avoir fait signer est déjà hors des clous.
+1. **Le devis écrit préalable est obligatoire** pour toute prestation de dépannage à domicile, quel que soit le montant, urgence ou pas (arrêté du 24 janvier 2017 — l'ancien seuil de 150€ a été supprimé depuis le 1er avril 2017, ne laisse personne te raconter le contraire). Pas de devis = pas de travaux. Quelqu'un qui commence à démonter ton tableau sans rien t'avoir fait signer est déjà hors des clous.
 2. **La fausse urgence ne supprime pas tes droits.** Pour un contrat conclu à domicile, tu disposes en principe d'un délai de rétractation de 14 jours. Les dépanneurs véreux font signer une mention de renonciation en jouant sur la panique — lis ce que tu signes, même à 23h, même en pyjama.
 3. **Les recours existent et fonctionnent** : signalement sur signal.conso.gouv.fr (DGCCRF), dossier auprès d'une association de consommateurs, et chargeback bancaire si paiement par carte. Garde tout : devis, facture, photos du tableau avant/après, échanges de messages.
 

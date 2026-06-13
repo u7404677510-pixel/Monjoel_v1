@@ -109,7 +109,7 @@ Pourquoi insister là-dessus ? Parce que le dépannage sanitaire est l'un des se
 
 Vos protections, elles existent, et elles sont simples :
 
-**Le devis écrit avant travaux.** L'arrêté du 24 janvier 2017 impose un devis préalable pour les prestations de dépannage et de réparation au-delà de 150 €. Quiconque refuse de poser le prix par écrit avant de commencer vous dit déjà tout ce que vous devez savoir.
+**Le devis écrit avant travaux.** L'arrêté du 24 janvier 2017 impose un devis détaillé avant toute prestation de dépannage, de réparation ou d'entretien — quel que soit le montant, même en urgence, même pour une petite intervention. L'ancien seuil de 150 € a été supprimé depuis le 1er avril 2017 : un poseur qui l'invoque pour démarrer sans rien écrire vous récite un droit qui n'existe plus. Quiconque refuse de poser le prix par écrit avant de commencer vous dit déjà tout ce que vous devez savoir.
 
 **Le prix complet au téléphone.** Exigez un montant tout compris — déplacement, main-d'œuvre, fournitures courantes — et faites-le confirmer. « On verra sur place » n'est pas un prix, c'est un piège.
 

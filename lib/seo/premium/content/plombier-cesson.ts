@@ -55,7 +55,7 @@ Mon conseil de conseillère budget : inscrivez l'entretien du ballon et la véri
 
 **Question 1 : le prix est-il annoncé AVANT le début des travaux ?** C'est le critère qui sépare les professionnels des autres. Un prix lâché après démontage n'est plus un devis, c'est une prise d'otage : votre installation est ouverte, vous n'êtes plus en position de refuser. Le réseau Joël annonce son prix fixe au téléphone, au **01 41 69 10 08**, avant même que l'artisan ne prenne la route.
 
-**Question 2 : le devis est-il écrit ?** La réglementation sur l'information du consommateur en matière de dépannage à domicile (arrêté du 24 janvier 2017) impose un devis écrit avant toute prestation au-delà de 150€. Un intervenant qui « n'a pas le temps » de l'établir vous dit, en réalité, tout ce que vous devez savoir sur lui.
+**Question 2 : le devis est-il écrit ?** La réglementation sur l'information du consommateur en matière de dépannage à domicile (arrêté du 24 janvier 2017) impose un devis détaillé avant toute prestation de dépannage, de réparation ou d'entretien — quel que soit le montant, urgence comprise. Je le rappelle à chaque atelier, car l'idée reçue a la vie dure : l'ancien seuil de 150€ a été supprimé depuis le 1er avril 2017, et aucun intervenant ne peut s'en prévaloir pour s'en dispenser. Celui qui « n'a pas le temps » de l'établir vous dit, en réalité, tout ce que vous devez savoir sur lui.
 
 **Question 3 : la TVA et le déplacement sont-ils inclus ?** C'est ma question signature, et elle fait tomber la moitié des devis pièges. Un « 90€ » hors TVA et hors déplacement devient vite un 180€ une fois la facture éditée. Exigez la mention « TTC, déplacement compris » noir sur blanc.
 
@@ -83,7 +83,7 @@ La meilleure défense reste néanmoins la plus simple : avoir, avant la panne, l
     {
       anchor: "aides-budget-depannage-cesson",
       title: "Trop lourd pour ce mois-ci ? Les solutions à activer avant de renoncer à réparer",
-      body: `C'est la partie de cette page qui me tient le plus à cœur, parce que c'est mon métier depuis quatorze ans : aucune urgence de plomberie ne doit mettre une famille en difficulté durable. Si la réparation nécessaire dépasse ce que votre budget peut absorber ce mois-ci, voici, dans l'ordre, les leviers à examiner.
+      body: `C'est la partie de cette page qui me tient le plus à cœur, parce que c'est mon métier depuis plus de vingt ans — quatorze ans à la CAF, puis en cabinet : aucune urgence de plomberie ne doit mettre une famille en difficulté durable. Si la réparation nécessaire dépasse ce que votre budget peut absorber ce mois-ci, voici, dans l'ordre, les leviers à examiner.
 
 **1. Vérifiez d'abord qui doit payer.** Si vous êtes locataire, le décret n° 87-712 du 26 août 1987 répartit les rôles : les menues réparations et l'entretien courant (joints, flotteur de chasse d'eau, débouchage simple) sont à votre charge, mais la vétusté et les gros équipements (ballon en fin de vie, canalisation percée) relèvent du propriétaire. Beaucoup de locataires du quartier de la gare paient des réparations qui n'auraient jamais dû leur incomber. Un appel au bailleur avant d'engager les frais peut transférer toute la facture.
 

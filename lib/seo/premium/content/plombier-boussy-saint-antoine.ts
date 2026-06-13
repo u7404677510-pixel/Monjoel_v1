@@ -68,7 +68,7 @@ Dernier point, et c'est l'ancien enquêteur qui parle : l'entartrage est le **pr
 
 **Phase 4 : l'évaporation.** Facture illisible ou absente, SIRET fantaisiste, numéro injoignable dès le lendemain. Le recours civil s'épuise contre une coquille vide.
 
-La riposte tient en quatre points de droit. 1° L'**arrêté du 24 janvier 2017** impose un devis écrit avant tous travaux de dépannage au-delà de 150€ : exigez-le, c'est votre pièce maîtresse. 2° Pour un contrat conclu à domicile, le **délai de rétractation de 14 jours** s'applique, sauf urgence réelle que vous auriez expressément demandée par écrit. 3° Tout litige se signale sur **signal.conso.gouv.fr** (DGCCRF) — chaque signalement alimente les enquêtes. 4° En cas de manœuvre caractérisée (fausse qualité, pression sur personne vulnérable), c'est une **plainte**, pas une réclamation : déposez-la.
+La riposte tient en quatre points de droit. 1° L'**arrêté du 24 janvier 2017** impose un devis détaillé avant toute prestation de dépannage, de réparation ou d'entretien, quel que soit le montant — le texte a supprimé, au 1er avril 2017, l'ancien seuil de 150€ derrière lequel s'abritaient les fraudeurs : exigez-le, c'est votre pièce maîtresse. 2° Pour un contrat conclu à domicile, le **délai de rétractation de 14 jours** s'applique, sauf travaux urgents que vous avez expressément sollicités (art. L221-28 8° du Code de la consommation) — et l'exception ne couvre que la réparation urgente elle-même, pas les prestations additionnelles vendues sur place. 3° Tout litige se signale sur **signal.conso.gouv.fr** (DGCCRF) — chaque signalement alimente les enquêtes. 4° En cas de manœuvre caractérisée (fausse qualité, pression sur personne vulnérable), c'est une **plainte**, pas une réclamation : déposez-la.
 
 Le contre-modèle est simple et vérifiable en un appel : au 01 41 69 10 08, Joël annonce le prix total avant de déplacer un artisan, le confirme sur place avant de toucher au moindre écrou, et applique **zéro majoration de nuit comme de week-end**. Un opérateur qui accepte d'être engagé par son prix n'a rien à cacher. C'est le test le plus rapide que je connaisse.`,
     },
@@ -101,7 +101,7 @@ Un mot sur les caves du bas de Boussy, côté rivière : si la vôtre a déjà p
 
 2° **Le prix total, annoncé avant le déplacement.** Pas un « tarif d'appel » qui ne couvre que le trajet. La question à poser, mot pour mot : « Quel est le montant total, déplacement et main-d'œuvre compris, pour cette intervention précise ? » Une réponse évasive vaut un refus.
 
-3° **Le devis écrit au-delà de 150€.** C'est l'arrêté du 24 janvier 2017, pas une faveur commerciale. Aucune signature, aucuns travaux.
+3° **Le devis écrit avant toute intervention, quel que soit le montant.** C'est l'arrêté du 24 janvier 2017 — qui a supprimé l'ancien seuil de 150€ —, pas une faveur commerciale. Aucune signature, aucuns travaux.
 
 4° **Aucun démontage avant accord.** L'outil qui sort avant le prix, c'est la phase 2 du mode opératoire décrit plus haut. Interrompez immédiatement.
 
@@ -201,7 +201,7 @@ Je conclus en militaire : récapitulatif. Une eau dure de 15 à 30 °f qui use v
       question:
         "Comment vérifier en deux minutes que le dépanneur qui sonne chez moi à Boussy est légitime ?",
       answer:
-        "Trois contrôles éclair : 1° demandez le nom exact de l'entreprise et son SIRET, vérifiez-le sur l'annuaire Sirene de l'INSEE depuis votre téléphone ; 2° exigez le prix total — déplacement et main-d'œuvre compris — avant qu'il ne sorte un outil, et un devis écrit au-delà de 150€ (arrêté du 24 janvier 2017) ; 3° s'il commence à démonter avant votre accord, interrompez et faites-le sortir. En cas de litige, signalez sur signal.conso.gouv.fr. Et comparez toujours avec un étalon : le 01 41 69 10 08 annonce son tarif immédiatement.",
+        "Trois contrôles éclair : 1° demandez le nom exact de l'entreprise et son SIRET, vérifiez-le sur l'annuaire Sirene de l'INSEE depuis votre téléphone ; 2° exigez le prix total — déplacement et main-d'œuvre compris — avant qu'il ne sorte un outil, et un devis écrit quel que soit le montant, même en urgence (arrêté du 24 janvier 2017, qui a supprimé l'ancien seuil de 150€) ; 3° s'il commence à démonter avant votre accord, interrompez et faites-le sortir. En cas de litige, signalez sur signal.conso.gouv.fr. Et comparez toujours avec un étalon : le 01 41 69 10 08 annonce son tarif immédiatement.",
     },
   ],
   temoignages: [

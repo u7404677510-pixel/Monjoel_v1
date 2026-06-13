@@ -86,7 +86,7 @@ Voici la méthode que je fais répéter aux familles que j'accompagne. Cinq ques
 
 **2. « Le déplacement jusqu'au 78250 est-il inclus ? »** C'est LA ligne magique des factures gonflées en zone rurale : 50 à 120€ de « frais kilométriques » découverts à la fin. La réponse correcte est oui, inclus, sans condition.
 
-**3. « M'enverrez-vous un devis écrit avant de commencer ? »** Pour toute prestation de dépannage à domicile dépassant 150€, le devis écrit préalable est une obligation légale (arrêté du 24 janvier 2017 sur les prestations de dépannage et d'entretien dans le bâtiment). Un professionnel qui rechigne à écrire ce qu'il annonce prépare une facture différente de sa promesse.
+**3. « M'enverrez-vous un devis écrit avant de commencer ? »** Le devis détaillé préalable est une obligation légale pour toute prestation de dépannage à domicile, quel que soit le montant — même 59€, même en pleine nuit (arrêté du 24 janvier 2017 sur les prestations de dépannage et d'entretien dans le bâtiment ; l'ancien seuil de 150€ a été supprimé depuis le 1er avril 2017). Un professionnel qui rechigne à écrire ce qu'il annonce prépare une facture différente de sa promesse.
 
 **4. « Quel est le nom de l'entreprise et son numéro SIRET ? »** Trente secondes sur sirene.fr ou annuaire-entreprises.data.gouv.fr suffisent à vérifier que la société existe, qu'elle n'a pas été créée le mois dernier, et qu'elle exerce bien dans l'électricité. Les sociétés-écrans du dépannage, régulièrement épinglées par la DGCCRF, ne survivent pas à cette vérification.
 

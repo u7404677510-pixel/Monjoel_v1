@@ -106,7 +106,7 @@ Maintenant, faites le même calcul pour un opérateur qui annonce "dépannage ch
 
 Trois protections juridiques à connaître, avec leurs références exactes :
 
-**Le devis préalable est obligatoire.** L'arrêté du 24 janvier 2017 impose un devis écrit avant toute prestation de dépannage en plomberie au-delà de 150€, et l'information claire sur les prix dans tous les cas. Un intervenant qui commence à démonter sans avoir annoncé son prix viole une obligation réglementaire — vous êtes en droit de l'arrêter.
+**Le devis préalable est obligatoire, quel que soit le montant.** L'arrêté du 24 janvier 2017 impose la remise d'un devis détaillé avant toute prestation de dépannage en plomberie, même en urgence, sans aucune condition de montant : il a précisément supprimé, depuis le 1er avril 2017, l'ancien seuil de 150€ hérité de l'arrêté de 1990. L'information claire sur les prix s'impose, elle aussi, dans tous les cas. Un intervenant qui commence à démonter sans avoir annoncé son prix viole une obligation réglementaire — vous êtes en droit de l'arrêter.
 
 **Le démarchage à domicile ouvre un droit de rétractation.** Si l'on vous a fait signer sous pression un document qui s'apparente à un contrat hors établissement, le Code de la consommation prévoit des protections spécifiques. Conservez tout document remis.
 
