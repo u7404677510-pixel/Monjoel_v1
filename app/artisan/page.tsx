@@ -161,7 +161,10 @@ function LoginHero() {
     setLoading(true);
     const { error: authError } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/artisan` },
+      // PKCE : le lien magique passe par /auth/callback (route publique) qui
+      // échange le code et pose les cookies de session lisibles par le proxy,
+      // puis redirige vers /artisan.
+      options: { emailRedirectTo: `${window.location.origin}/auth/callback?next=/artisan` },
     });
     if (authError) {
       setError("Erreur. Vérifiez l'email ou contactez Joël.");

@@ -25,7 +25,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { createClient } from "@supabase/supabase-js";
+import { getSupabaseClient } from "@/lib/supabase";
 import { AnimatePresence, motion } from "motion/react";
 import {
   AlertCircle,
@@ -57,13 +57,6 @@ import {
   type Lead,
   type LeadStatus,
 } from "../_components/util";
-
-function getSupabase() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key);
-}
 
 const TRADE_ICONS: Record<string, React.ElementType> = {
   Plomberie: Droplets,
@@ -122,7 +115,7 @@ export default function ClientInterventionsPage() {
   }, []);
 
   const fetchLeads = useCallback(async () => {
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (!supabase) {
       setError("Service indisponible. Réessayez plus tard.");
       setLoading(false);
@@ -207,7 +200,7 @@ export default function ClientInterventionsPage() {
       /* fail silent */
     }
     // Tentative INSERT sur table `ratings` (best-effort, ne casse pas le UX si absente)
-    const supabase = getSupabase();
+    const supabase = getSupabaseClient();
     if (supabase) {
       try {
         const { error: insertError } = await supabase.from("ratings").insert({
